@@ -1,0 +1,51 @@
+@import '@fontsource/vt323';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 18px; /* Increas base font size */
+}
+
+@layer base {
+  body {
+    @apply bg-win98-bg text-win98-text font-pixel antialiased;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 1.1rem; /* Slightly larger text by default */
+    line-height: 1.4;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar - retro Windows 98 style */
+  .custom-scroll::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border: 1px solid #808080;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #404040;
+    border-right: 2px solid #404040;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #d4d0c8;
+  }
+  .custom-scroll::-webkit-scrollbar-button {
+    background: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #404040;
+    border-right: 2px solid #404040;
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+}
