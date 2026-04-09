@@ -1,0 +1,277 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Brand {
+  id   Int     @id @default(autoincrement())
+  name String 
+  logo String?
+  cars Car[]
+}
+
+model Car {
+  id           Int      @id @default(autoincrement())
+  name         String
+  brandId      Int?
+  brand        Brand?   @relation(fields: [brandId], references: [id])
+  year         Int
+  cv           Int
+  nm           Int
+  cc           Int
+  kg           Int
+  driveType    String
+  velMax       Int
+  zeroToHundred Float   
+  engineType   String
+  wheelBase    Int
+  width        Int
+  brakeFront   Int
+  brakeRear    Int
+  wheelSize    Int
+  tyreFront    Int
+  tyreRear     Int
+  category     String
+  image        String
+  speed        Float
+  acceleration Float
+  revving      Float
+  transmission Float
+  turnSlow     Float
+  turnFast     Float
+  brake        Float
+  traction     Float
+  price        Float
+  
+  garages      Garage[]
+}
+
+model Class {
+  id            Int    @id @default(autoincrement())
+  name          String
+  braveStart    Int
+  cleanStart    Int
+  reflexStart   Int
+  acroStart     Int
+  turnStart     Int
+  brakeStart    Int
+  throttleStart Int
+  shiftStart    Int
+}
+
+model User {
+  id         Int       @id @default(autoincrement())
+  username   String
+  password   String
+  mail       String
+  lastLogin  DateTime?
+  avatar     String?
+  level      Int       @default(1)
+  exp        Int       @default(0)
+  money      Int       @default(0)
+  brave      Int
+  clean      Int
+  reflex     Int
+  acro       Int
+  turn       Int
+  brake      Int
+  throttle   Int
+  shift      Int
+  carDrive   Int
+  class      String?
+  
+  garages    Garage[]
+}
+
+model Garage {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  user         User     @relation(fields: [userId], references: [id])
+  carId        Int
+  car          Car      @relation(fields: [carId], references: [id])
+  cv           Int
+  nm           Int
+  kg           Int
+  speed        Float
+  acceleration Float
+  revving      Float
+  transmission Float
+  turnSlow     Float
+  turnFast     Float
+  brake        Float
+  traction     Float
+  km           Int      @default(0)
+  sellPrice    Float    @default(0.0)
+  
+  mods         Mod[]
+}
+
+model Level {
+  id     Int @id @default(autoincrement())
+  expCap Int
+}
+
+model Part {
+  id            Int     @id @default(autoincrement())
+  name          String
+  description   String
+  category      String
+  level         Int
+  price         Float
+  speedBonus    Float
+  accelBonus    Float
+  revvBonus     Float
+  transBonus    Float
+  turnSlowBonus Float
+  turnFastBonus Float
+  brakeBonus    Float
+  tractBonus    Float
+  image         String
+  cvBonus       Float
+  nmBonus       Float
+  kgBonus       Float
+  
+  mods          Mod[]
+}
+
+model Mod {
+  id            Int    @id @default(autoincrement())
+  garageId      Int    
+  garage        Garage @relation(fields: [garageId], references: [id])
+  partId        Int
+  part          Part   @relation(fields: [partId], references: [id])
+  speedValue    Float
+  accelValue    Float
+  revvValue     Float
+  transValue    Float
+  turnSlowValue Float
+  turnFastValue Float
+  brakeValue    Float
+  tractValue    Float
+  cvValue       Float
+  nmValue       Float
+  kgValue       Float
+}
+
+model TrackType {
+  id     Int     @id @default(autoincrement())
+  name   String
+  image  String
+  tracks Track[]
+}
+
+model TrackSurface {
+  id     Int     @id @default(autoincrement())
+  name   String
+  tracks Track[]
+}
+
+model TrackMeteo {
+  id     Int     @id @default(autoincrement())
+  name   String
+  stat   String
+  tracks Track[]
+}
+
+model Track {
+  id         Int           @id @default(autoincrement())
+  name       String
+  typeId     Int           
+  type       TrackType     @relation(fields: [typeId], references: [id])
+  lenght     Int
+  elevation  Int
+  surfaceId  Int           
+  surface    TrackSurface  @relation(fields: [surfaceId], references: [id])
+  meteoId    Int           
+  meteo      TrackMeteo    @relation(fields: [meteoId], references: [id])
+  
+  builds            TrackBuild[]
+  championshipRaces ChampionshipRace[]
+  trainingSessions  TrainingSession[]
+}
+
+model TrackSection {
+  id          Int          @id @default(autoincrement())
+  name        String
+  image       String
+  carStat     String
+  carTech     String
+  driverStat  String
+  driverTech  String
+  
+  builds      TrackBuild[]
+}
+
+model TrackBuild {
+  id        Int          @id @default(autoincrement())
+  trackId   Int          
+  track     Track        @relation(fields: [trackId], references: [id])
+  sectionId Int          
+  section   TrackSection @relation(fields: [sectionId], references: [id])
+  level     Int
+  ord       Int
+}
+
+// ─── CHAMPIONSHIPS ──────────────────────────────────────────────────────
+
+model Championship {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+  category    String // "N/A", "Turbo", "GT", "Leggenda", "Open"
+  image       String @default("track.png")
+
+  // Car requirements
+  minCv       Int    @default(0)
+  maxCv       Int    @default(9999)
+  minPerfIndex Int   @default(0)   // Indice prestazioni minimo (media stat gara)
+  allowedDrive String @default("any")  // "FF", "FR", "AWD", "any"
+
+  // Pilot requirements
+  minLevel    Int    @default(1)
+  minBrave    Int    @default(0)
+  minClean    Int    @default(0)
+  minReflex   Int    @default(0)
+  minShift    Int    @default(0)
+
+  entryFee    Int    @default(0)
+  rewardMoney Int    @default(0)
+  rewardXp    Int    @default(0)
+
+  rounds      ChampionshipRace[]
+}
+
+model ChampionshipRace {
+  id                  Int          @id @default(autoincrement())
+  championshipId      Int
+  championship        Championship @relation(fields: [championshipId], references: [id])
+  trackId             Int
+  track               Track        @relation(fields: [trackId], references: [id])
+  ord                 Int          // Round order (1, 2, 3...)
+  opponentName        String
+  opponentCarName     String
+  opponentDifficulty  Float        @default(1.0) // 0.8 easy → 1.5 hard
+}
+
+// ─── TRAINING SESSIONS ──────────────────────────────────────────────────
+
+model TrainingSession {
+  id           Int    @id @default(autoincrement())
+  name         String
+  description  String
+  category     String // "stat" | "move"
+  targetStat   String @default("")  // "brake", "reflex", "brave", "clean", "shift"
+  targetMove   String @default("")  // Nome mossa da sbloccare (se category = "move")
+  statGain     Int    @default(1)
+  xpReward     Int    @default(100)
+  cost         Int    @default(500)
+  minLevel     Int    @default(1)
+  trackId      Int
+  track        Track  @relation(fields: [trackId], references: [id])
+  image        String @default("track.png")
+}
+
