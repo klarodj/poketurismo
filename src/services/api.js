@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = `http://${window.location.hostname}:3001/api`;
 
 export const fetchPlayer = async (id = 1) => {
   const res = await fetch(`${BASE_URL}/player/${id}`);
