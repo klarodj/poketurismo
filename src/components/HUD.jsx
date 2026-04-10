@@ -38,8 +38,8 @@ export default function HUD() {
         </button>
         
         <div className="font-bold flex items-center gap-1 sm:gap-2">
-          <span className="text-xl sm:text-2xl">💰</span>
-          <span className="text-sm sm:text-xl tracking-tight sm:tracking-wider text-green-800 bg-white px-1 sm:px-2 py-0.5 border border-win98-darkerGray shadow-win98-inset">
+          <span className="hidden sm:inline text-xl sm:text-2xl">💰</span>
+          <span className="text-[13px] sm:text-xl tracking-tight sm:tracking-wider text-green-800 bg-white px-1 sm:px-2 py-0.5 border border-win98-darkerGray shadow-win98-inset">
             €{money.toLocaleString()}
           </span>
         </div>
@@ -49,12 +49,11 @@ export default function HUD() {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 sm:gap-4 overflow-hidden">
+      <div className="flex items-center gap-1.5 sm:gap-4 overflow-hidden">
         {equippedCar ? (
           <>
-            <div className="bg-win98-blue text-white px-2 py-1 font-bold border-2 border-t-win98-darkGray border-l-win98-darkGray border-b-white border-r-white text-xs sm:text-sm whitespace-nowrap truncate max-w-[80px] sm:max-w-none">
-              <span className="sm:hidden">🚗</span>
-              <span className="hidden sm:inline">🚗 {equippedCar.name}</span>
+            <div className="bg-win98-blue text-white px-1.5 sm:px-2 py-0.5 sm:py-1 font-bold border-2 border-t-win98-darkGray border-l-win98-darkGray border-b-white border-r-white text-[11px] sm:text-sm whitespace-nowrap truncate max-w-[100px] sm:max-w-none">
+              🚗 {equippedCar.name}
             </div>
             <FuelGauge currentFuel={equippedCar.currentFuel} maxFuel={equippedCar.fuelCapacity} />
           </>
