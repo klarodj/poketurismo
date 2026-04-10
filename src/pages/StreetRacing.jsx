@@ -24,14 +24,21 @@ const STAT_LABELS = {
   turnSlow: 'Curva Lenta',
   turnFast: 'Curva Veloce',
   shift: 'Cambiata',
-  reflex: 'Riflessi'
+  reflex: 'Riflessi',
+  brave: 'Fegato',
+  clean: 'Pulizia'
 };
+
+const OPPONENT_NAMES = [
+  "Marco il Pazzo", "Sere Speed", "Luca Nitro", "Giulia Drift", 
+  "Andrea Turbo", "Elena Shift", "Matteo Redline", "Sofia Torque"
+];
 
 export default function StreetRacing() {
   const navigate = useNavigate();
   
   // Stores
-  const { money, stats: pilotStats, addMoney, removeMoney } = usePlayerStore();
+  const { money, stats: pilotStats, addMoney, removeMoney, level: playerLevel } = usePlayerStore();
   const { cars, updateCarFuel, applyWear } = useGarageStore();
   const { moves, equippedMoves } = useInventoryStore();
   const { equippedCarId, triggerEvent } = useGameStore();
@@ -81,10 +88,17 @@ export default function StreetRacing() {
       const oppPilot = {
         shift: Math.round(pilotStats.shift * (0.8 + Math.random() * 0.4)),
         reflex: Math.round(pilotStats.reflex * (0.8 + Math.random() * 0.4)),
+        brave: Math.round(pilotStats.brave * (0.8 + Math.random() * 0.4)),
+        clean: Math.round(pilotStats.clean * (0.8 + Math.random() * 0.4)),
       };
+
+      const oppLevel = Math.max(1, playerLevel + (Math.floor(Math.random() * 3) - 1));
+      const pilotName = OPPONENT_NAMES[Math.floor(Math.random() * OPPONENT_NAMES.length)];
 
       setOpponent({
         name: (playerCar.brand || "") + " " + (playerCar.name || "") + suffix,
+        pilotName,
+        level: oppLevel,
         stats: oppStats,
         pilot: oppPilot,
         image: playerCar.image
@@ -241,13 +255,15 @@ export default function StreetRacing() {
                 <div className="w-full h-24 bg-gradient-to-b from-blue-900 to-black border-2 border-blue-500 p-1">
                   <img src={`/images/car/${playerCar?.image}`} className="w-full h-full object-contain" alt="mycar" />
                 </div>
-                <p className="text-[10px] mt-1 text-blue-400 font-bold uppercase">{playerCar?.name}</p>
+                <p className="text-[10px] mt-1 text-blue-400 font-bold uppercase leading-tight">{playerCar?.name}</p>
+                <p className="text-[9px] text-gray-400 font-bold uppercase underline">TU (Lv. {playerLevel})</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-full h-24 bg-gradient-to-b from-red-900 to-black border-2 border-red-500 p-1">
                   <img src={`/images/car/${opponent.image}`} className="w-full h-full object-contain brightness-90 sepia-[.3]" alt="oppcar" />
                 </div>
-                <p className="text-[10px] mt-1 text-red-500 font-bold uppercase">{opponent.name}</p>
+                <p className="text-[10px] mt-1 text-red-500 font-bold uppercase leading-tight">{opponent.name}</p>
+                <p className="text-[9px] text-yellow-500 font-bold uppercase underline">{opponent.pilotName} (Lv. {opponent.level})</p>
               </div>
             </div>
 
@@ -266,7 +282,9 @@ export default function StreetRacing() {
                 { label: 'Curva L', key: 'turnSlow' },
                 { label: 'Curva V', key: 'turnFast' },
                 { label: 'Cambiata', key: 'shift', pilot: true },
-                { label: 'Riflessi', key: 'reflex', pilot: true }
+                { label: 'Riflessi', key: 'reflex', pilot: true },
+                { label: 'Fegato', key: 'brave', pilot: true },
+                { label: 'Pulizia', key: 'clean', pilot: true }
               ].map((s, i) => {
                 const myVal = s.pilot ? pilotStats[s.key] : playerCarStats[s.key];
                 const oppVal = s.pilot ? opponent.pilot[s.key] : opponent.stats[s.key];
