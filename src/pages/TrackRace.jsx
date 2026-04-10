@@ -23,11 +23,6 @@ export default function TrackRace() {
   const car = cars.find(c => c.id === equippedCarId);
   const playerMoves = moves.filter(m => equippedMoves.includes(m.id));
 
-  useEffect(() => {
-    if (!trackId) {
-       navigate('/racing');
-       return;
-    }
   const STAT_LABELS = {
     speed: 'Velocità',
     acceleration: 'Accelerazione',
@@ -49,27 +44,27 @@ export default function TrackRace() {
 
   useEffect(() => {
     if (!trackId) {
-       navigate('/racing');
-       return;
+      navigate('/racing');
+      return;
     }
+    
+    setLoading(true);
     fetchTracks().then(allTracks => {
       const found = allTracks.find(t => t.id === parseInt(trackId));
-      if (found) {
+      if (found && car) {
         // Map Prisma structure to local Race structure
         const mappedSections = found.builds.map(b => ({
           id: b.section.id,
           name: b.section.name,
           image: b.section.image,
-          // All 4 requirements
           carStat: b.section.carStat,
           carTech: b.section.carTech,
           driverStat: b.section.driverStat,
           driverTech: b.section.driverTech,
-          // Legacy support for move triggers
           type: b.section.carStat, 
         }));
 
-        // Generate Competitive Opponent based on Player Car
+        // Generate Competitive Opponent
         const playerCarStats = calculateRaceStats(car);
         const oppCarStats = {};
         Object.keys(playerCarStats).forEach(key => {
