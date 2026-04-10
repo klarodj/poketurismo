@@ -59,7 +59,7 @@ export default function GarageCarDetail() {
 
   return (
     <Win98Window title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/garage.png">
-      <div className="flex flex-col h-[750px] overflow-hidden bg-win98-gray text-black">
+      <div className="flex flex-col bg-win98-gray text-black">
         
         {/* Navigation Tabs (Consistent with Garage Home) */}
         <div className="flex gap-1 p-2 bg-win98-gray border-b-2 border-win98-darkerGray">
@@ -90,10 +90,10 @@ export default function GarageCarDetail() {
            </div>
         </div>
 
-        <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+        <div className="flex flex-col lg:flex-row">
           
           {/* Left: Giant Image & Big Stats */}
-          <div className="w-full lg:w-1/2 flex flex-col p-4 border-r-2 border-win98-darkerGray overflow-y-auto bg-gray-100">
+          <div className="w-full lg:w-1/2 flex flex-col p-4 border-r-2 border-win98-darkerGray bg-gray-100">
              <div className="bg-white border-2 border-win98-darkerGray shadow-win98-inset p-4 mb-4 flex items-center justify-center min-h-[400px]">
                 <img 
                   src={`/images/car/${car.image}`} 
@@ -125,7 +125,7 @@ export default function GarageCarDetail() {
           </div>
 
           {/* Right: Management Area */}
-          <div className="flex-1 flex flex-col bg-white border-l-2 border-win98-darkerGray shadow-win98-inset overflow-hidden">
+          <div className="flex-1 flex flex-col bg-white border-l-2 border-win98-darkerGray shadow-win98-inset">
              
              {/* Tabs Toggle */}
              <div className="flex bg-win98-gray p-1 gap-1 border-b-2 border-win98-darkerGray">
@@ -143,7 +143,7 @@ export default function GarageCarDetail() {
                 </button>
              </div>
 
-             <div className="flex-1 p-4 overflow-y-auto">
+             <div className="flex-1 p-4">
                 {activeTab === 'installed' ? (
                    <div className="space-y-4">
                       {car.mods && car.mods.length > 0 ? car.mods.map(mod => (

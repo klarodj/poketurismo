@@ -97,7 +97,7 @@ export default function PartsShop() {
 
   return (
     <Win98Window title="Negozio Ricambi ed Elaborazioni" imageUrl="/images/shop.png">
-      <div className="flex flex-col h-[750px] bg-win98-gray text-black overflow-hidden select-none">
+      <div className="flex flex-col bg-win98-gray text-black select-none">
         
         {/* Categories Tabs */}
         <div className="flex bg-win98-gray p-1 gap-1 border-b-2 border-win98-darkerGray">
@@ -116,7 +116,7 @@ export default function PartsShop() {
           ))}
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 custom-scroll">
+        <div className="p-4">
            {loading ? (
              <div className="flex items-center justify-center h-full italic text-lg">Sfogliando il catalogo cartaceo...</div>
            ) : Object.keys(groupedParts).length === 0 ? (

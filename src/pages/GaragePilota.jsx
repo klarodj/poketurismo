@@ -13,7 +13,7 @@ export default function GaragePilota() {
 
   return (
     <Win98Window title="Profilo Pilota">
-      <div className="flex flex-col h-full bg-win98-gray text-black overflow-hidden">
+      <div className="flex flex-col bg-win98-gray text-black">
         
         {/* Navigation Tabs */}
         <div className="flex gap-1 p-2 bg-win98-gray border-b-2 border-win98-darkerGray">
@@ -31,7 +31,7 @@ export default function GaragePilota() {
            </button>
         </div>
 
-        <div className="p-4 flex flex-col md:flex-row gap-6 flex-1 overflow-auto">
+        <div className="p-4 flex flex-col md:flex-row gap-6">
         
           {/* Left: Pilot Info & Stats */}
           <div className="flex-1 space-y-4">

@@ -7,7 +7,7 @@ export default function Meet() {
 
   return (
     <Win98Window title="Car Meet (Piazzale)" imageUrl="/images/meet.png">
-      <div className="flex flex-col items-center justify-center p-8 bg-black h-full border-4 border-gray-700 text-white font-pixel">
+      <div className="flex flex-col items-center p-8 bg-black border-4 border-gray-700 text-white font-pixel">
         <h1 className="text-4xl text-yellow-400 mb-4 animate-pulse uppercase tracking-widest text-center">NIGHT RIDERZ MEET</h1>
         
         <p className="text-center text-sm mb-8 text-gray-300">

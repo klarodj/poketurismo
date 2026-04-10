@@ -314,7 +314,7 @@ export default function Racing() {
 
   return (
     <Win98Window title="Autodromo — Centro Corse" imageUrl="/images/track.png">
-      <div className="flex flex-col h-full bg-win98-gray text-black overflow-hidden">
+      <div className="flex flex-col bg-win98-gray text-black">
 
         {/* Top Tab Navigation */}
         <div className="flex bg-win98-gray p-1 gap-1 border-b-2 border-win98-darkerGray">
@@ -347,7 +347,7 @@ export default function Racing() {
             Caricamento calendatio eventi...
           </div>
         ) : (
-          <div className="flex-1 overflow-y-auto p-4 custom-scroll">
+          <div className="p-4">
 
             {/* ── COMPETITIONS TAB ── */}
             {activeTab === 'competitions' && (

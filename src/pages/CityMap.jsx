@@ -29,7 +29,7 @@ export default function CityMap() {
   return (
     <Win98Window title="Mappa della Città">
       <div 
-        className="p-3 flex flex-col h-full bg-cover bg-center"
+        className="p-3 flex flex-col bg-cover bg-center"
         style={{ backgroundImage: "url('/images/city.png')" }}
       >
 

@@ -44,7 +44,7 @@ export default function GarageAuto() {
 
   return (
     <Win98Window title="Gestione Parco Auto" imageUrl="/images/garage.png">
-      <div className="flex flex-col h-full bg-win98-gray text-black overflow-hidden">
+      <div className="flex flex-col bg-win98-gray text-black">
         
         {/* Navigation Tabs */}
         <div className="flex gap-1 p-2 bg-win98-gray border-b-2 border-win98-darkerGray">
@@ -62,12 +62,12 @@ export default function GarageAuto() {
            </button>
         </div>
 
-        <div className="p-4 flex flex-col lg:flex-row gap-4 flex-1 overflow-hidden min-h-0">
+        <div className="p-4 flex flex-col lg:flex-row gap-4">
           
           {/* Left: Car List Master */}
-          <div className="w-full lg:w-1/3 flex flex-col bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-3 shadow-win98-inset h-full min-h-0">
+          <div className="w-full lg:w-1/3 flex flex-col bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-3 shadow-win98-inset">
              <h3 className="font-bold bg-win98-darkerGray text-white px-2 py-1.5 mb-2 text-base">Veicoli Posseduti ({cars.length})</h3>
-             <div className="flex-1 overflow-y-auto space-y-2 pr-1">
+             <div className="space-y-2 pr-1">
                {cars.map(car => (
                   <div 
                     key={car.id} 
@@ -85,7 +85,7 @@ export default function GarageAuto() {
         </div>
 
         {/* Right: Detailed View */}
-        <div className="w-full md:w-2/3 flex flex-col bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 shadow-win98-inset h-full overflow-y-auto">
+        <div className="w-full md:w-2/3 flex flex-col bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 shadow-win98-inset">
           {selectedCar ? (
             <div className="flex flex-col h-full">
                <h2 className="text-xl font-bold bg-win98-blue text-white px-2 py-1 mb-2 flex justify-between">

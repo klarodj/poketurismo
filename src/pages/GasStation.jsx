@@ -73,7 +73,7 @@ export default function GasStation() {
   };
 
   return (
-    <div className="w-full h-full bg-[#3e3e3e] flex flex-col items-center justify-center p-4">
+    <div className="w-full bg-[#3e3e3e] flex flex-col items-center p-4">
       {/* Pump Machine UI */}
       <div className="bg-gray-200 border-8 border-gray-400 rounded-t-3xl shadow-2xl flex flex-col items-center max-w-sm w-full relative overflow-hidden">
         

@@ -77,7 +77,7 @@ export default function Workshop() {
         {/* Right Side: Garage Inventory */}
         <div className="w-full lg:w-80 flex flex-col">
           <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Il Tuo Piazzale</h2>
-          <div className="flex-1 bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 min-h-[300px] overflow-auto shadow-win98-inset">
+          <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 shadow-win98-inset">
             <div className="space-y-2">
               {cars.map(car => (
                 <div 

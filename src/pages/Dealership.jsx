@@ -97,7 +97,7 @@ export default function Dealership() {
 
   return (
     <Win98Window title="Concessionaria - Gran Turismo Auto" imageUrl="/images/dealer.png">
-      <div className="flex flex-col h-[600px] bg-win98-gray text-black overflow-hidden font-sans">
+      <div className="flex flex-col bg-win98-gray text-black font-sans">
         
         {/* Toolbar */}
         <div className="p-1 bg-win98-gray border-b-2 border-win98-darkGray flex gap-2">
@@ -115,7 +115,7 @@ export default function Dealership() {
            </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4">
+        <div className="p-4 flex-grow">
           {loading ? (
             <div className="p-10 text-center font-bold italic">
                <p>Connessione al database centrale in corso...</p>
