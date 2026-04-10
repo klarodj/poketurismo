@@ -28,6 +28,30 @@ export default function TrackRace() {
        navigate('/racing');
        return;
     }
+  const STAT_LABELS = {
+    speed: 'Velocità',
+    acceleration: 'Accelerazione',
+    revving: 'Giri Motore',
+    transmission: 'Cambio',
+    turnSlow: 'Curva Lenta',
+    turnFast: 'Curva Veloce',
+    brake: 'Frenata',
+    braking: 'Frenata',
+    traction: 'Trazione',
+    brave: 'Fegato',
+    clean: 'Pulizia',
+    reflex: 'Riflessi',
+    acro: 'Acrobazia',
+    turn: 'Abilità Curva',
+    throttle: 'Parzializzazione',
+    shift: 'Cambiata'
+  };
+
+  useEffect(() => {
+    if (!trackId) {
+       navigate('/racing');
+       return;
+    }
     fetchTracks().then(allTracks => {
       const found = allTracks.find(t => t.id === parseInt(trackId));
       if (found) {
@@ -35,18 +59,46 @@ export default function TrackRace() {
         const mappedSections = found.builds.map(b => ({
           id: b.section.id,
           name: b.section.name,
-          type: b.section.carStat, // Map 'carStat' to 'type' for trigger logic
           image: b.section.image,
-          opponentScore: 40 + (Math.random() * 20), // Placeholder opponent logic
+          // All 4 requirements
+          carStat: b.section.carStat,
+          carTech: b.section.carTech,
+          driverStat: b.section.driverStat,
+          driverTech: b.section.driverTech,
+          // Legacy support for move triggers
+          type: b.section.carStat, 
         }));
+
+        // Generate Competitive Opponent based on Player Car
+        const playerCarStats = calculateRaceStats(car);
+        const oppCarStats = {};
+        Object.keys(playerCarStats).forEach(key => {
+          if (typeof playerCarStats[key] === 'number') {
+            oppCarStats[key] = Math.round(playerCarStats[key] * (0.85 + Math.random() * 0.25));
+          }
+        });
+        const oppPilot = {
+          brave: Math.round(pilotStats.brave * (0.8 + Math.random() * 0.4)),
+          clean: Math.round(pilotStats.clean * (0.8 + Math.random() * 0.4)),
+          reflex: Math.round(pilotStats.reflex * (0.8 + Math.random() * 0.4)),
+          shift: Math.round(pilotStats.shift * (0.8 + Math.random() * 0.4)),
+          acro: Math.round(pilotStats.acro * (0.8 + Math.random() * 0.4)),
+          turn: Math.round(pilotStats.turn * (0.8 + Math.random() * 0.4)),
+          brake: Math.round(pilotStats.brake * (0.8 + Math.random() * 0.4)),
+          throttle: Math.round(pilotStats.throttle * (0.8 + Math.random() * 0.4)),
+        };
         
         setTrack({
           ...found,
           sections: mappedSections,
           weather: found.meteo.name,
-          reward: 500, // Placeholder
-          xp: 100, // Placeholder
-          opponent: { name: 'Rival', carName: 'Auto Di Sere' }
+          reward: 500,
+          xp: 100,
+          opponent: { 
+            name: 'Rival tuned', 
+            carName: 'Sere Speedster',
+            stats: { ...oppCarStats, pilot: oppPilot }
+          }
         });
       }
       setLoading(false);
@@ -54,7 +106,7 @@ export default function TrackRace() {
       console.error(err);
       setLoading(false);
     });
-  }, [trackId, navigate]);
+  }, [trackId, navigate, car, pilotStats]);
 
   // Check valid car
   useEffect(() => {
@@ -195,10 +247,16 @@ export default function TrackRace() {
         {phase === 'racing' && (
           <div className="flex flex-col h-full">
              {/* Race HUD */}
-             <div className="bg-black text-green-500 font-pixel p-2 mb-2 border-2 border-gray-600 flex justify-between">
-               <div>GAP: <span className={gap > 0 ? 'text-blue-400' : 'text-red-400'}>{gap > 0 ? '+' : ''}{gap}</span></div>
-               <div>Benzina: {car.currentFuel.toFixed(1)}L</div>
-               <div>Sezione {currentSectionIndex + 1}/{track.sections.length}</div>
+             <div className="bg-black text-green-500 font-pixel p-2 mb-2 border-2 border-gray-600 flex flex-col gap-1">
+               <div className="flex justify-between border-b border-green-900 pb-1">
+                 <div>GAP: <span className={gap > 0 ? 'text-blue-400' : 'text-red-400'}>{gap > 0 ? '+' : ''}{gap}m</span></div>
+                 <div>Benzina: {car.currentFuel.toFixed(1)}L</div>
+                 <div>Sezione {currentSectionIndex + 1}/{track.sections.length}</div>
+               </div>
+               <div className="flex justify-between text-[10px] italic pt-1">
+                 <div className="text-blue-300">Auto: {STAT_LABELS[track.sections[currentSectionIndex].carStat]} + {STAT_LABELS[track.sections[currentSectionIndex].carTech]}</div>
+                 <div className="text-yellow-300 text-right">Pilota: {STAT_LABELS[track.sections[currentSectionIndex].driverStat]} + {STAT_LABELS[track.sections[currentSectionIndex].driverTech]}</div>
+               </div>
              </div>
              
              {/* Log Terminal */}
@@ -206,7 +264,8 @@ export default function TrackRace() {
                {logs.map((log, i) => (
                  <div key={i} className="mb-1 text-gray-300 capitalize">{log}</div>
                ))}
-               <div className="text-white mt-2 animate-pulse">&gt; In attesa di input per: {track.sections[currentSectionIndex].name} ({track.sections[currentSectionIndex].type})...</div>
+               <div className="text-white mt-2 animate-pulse">&gt; In attesa di input per: {track.sections[currentSectionIndex].name}</div>
+               <div className="text-[9px] text-gray-500 italic pl-2">Requisiti: {STAT_LABELS[track.sections[currentSectionIndex].carStat]}, {STAT_LABELS[track.sections[currentSectionIndex].carTech]} | {STAT_LABELS[track.sections[currentSectionIndex].driverStat]}, {STAT_LABELS[track.sections[currentSectionIndex].driverTech]}</div>
              </div>
              
              {/* Action Bar (Cards) */}

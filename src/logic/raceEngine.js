@@ -36,6 +36,8 @@ export const calculateRaceStats = (car) => {
     traction: Math.max(10, Math.round(traction)),
     turnSlow: Math.max(10, Math.round(turnSlow)),
     turnFast: Math.max(10, Math.round(turnFast)),
+    revving: car.revving || 50,
+    transmission: car.transmission || 50,
   };
 };
 
@@ -55,32 +57,41 @@ export const savingThrow = (pilotStats, event) => {
   return reflexSave > 15; // Success threshold
 };
 
+/**
+ * Resolves a race turn based on the 4 requirements defined in the DB:
+ * carStat, carTech, driverStat, driverTech
+ */
 export const resolveTurn = (section, carStats, pilotStats, move, opponentStats, rngEvent, saved) => {
   let pScore = 0;
   let oScore = 0;
 
-  // Apply base requirements
-  if (section.type === 'Rettilineo') {
-    pScore += carStats.speed + carStats.acceleration;
-    oScore += opponentStats.speed + opponentStats.acceleration;
-  } else if (section.type === 'Tornante' || section.type === 'Chicane') {
-    pScore += carStats.turnSlow + carStats.brake + carStats.traction;
-    oScore += opponentStats.turnSlow + opponentStats.brake + opponentStats.traction;
-  } else if (section.type === 'Misto') {
-    pScore += carStats.turnFast + carStats.acceleration;
-    oScore += opponentStats.turnFast + opponentStats.acceleration;
-  }
+  // Stat mapping to bridge DB names and Code names
+  const mapping = {
+    braking: 'brake'
+  };
+
+  const getStatKey = (key) => mapping[key] || key;
+
+  // 1. Car Stats (carStat + carTech)
+  const csKey = getStatKey(section.carStat);
+  const ctKey = getStatKey(section.carTech);
+  
+  pScore += (carStats[csKey] || 0) + (carStats[ctKey] || 0);
+  oScore += (opponentStats[csKey] || 0) + (opponentStats[ctKey] || 0);
+
+  // 2. Pilot Stats (driverStat + driverTech)
+  const dsKey = getStatKey(section.driverStat);
+  const dtKey = getStatKey(section.driverTech);
+
+  pScore += (pilotStats[dsKey] || 0) + (pilotStats[dtKey] || 0);
+  oScore += (opponentStats.pilot?.[dsKey] || 0) + (opponentStats.pilot?.[dtKey] || 0);
 
   // Apply Moves
   if (move && move.bonus) {
-    if (move.bonus.speed) pScore += move.bonus.speed;
-    if (move.bonus.acceleration) pScore += move.bonus.acceleration;
-    if (move.bonus.turnSlow) pScore += move.bonus.turnSlow;
-    if (move.bonus.brake) pScore += move.bonus.brake;
+    Object.entries(move.bonus).forEach(([k, v]) => {
+      pScore += v;
+    });
   }
-
-  // Apply Pilot modifiers
-  pScore += pilotStats.shift * 2; // general bonus
 
   // Apply RNG malus if not saved
   if (rngEvent && !saved) {

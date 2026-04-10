@@ -12,6 +12,10 @@ const usePlayerStore = create((set) => ({
     clean: 0,
     reflex: 0,
     shift: 0,
+    acro: 0,
+    turn: 0,
+    brake: 0,
+    throttle: 0,
   },
   carDrive: null,
   isLoading: false,
@@ -32,6 +36,10 @@ const usePlayerStore = create((set) => ({
           clean: data.clean,
           reflex: data.reflex,
           shift: data.shift,
+          acro: data.acro,
+          turn: data.turn,
+          brake: data.brake,
+          throttle: data.throttle,
         },
         isLoading: false
       });
