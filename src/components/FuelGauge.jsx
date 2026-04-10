@@ -9,7 +9,7 @@ export default function FuelGauge({ currentFuel, maxFuel }) {
       <span className="text-white font-bold text-lg select-none">E</span>
       
       {/* Gauge Container */}
-      <div className="relative w-32 h-4 bg-gray-900 border border-gray-700 mx-1 overflow-hidden">
+      <div className="relative w-20 sm:w-32 h-4 bg-gray-900 border border-gray-700 mx-1 overflow-hidden">
         {/* Progress Fill */}
         <div 
           className={`h-full transition-all duration-500 ease-in-out ${
