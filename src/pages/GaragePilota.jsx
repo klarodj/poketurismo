@@ -12,7 +12,7 @@ export default function GaragePilota() {
   const playerMoves = moves.filter(m => equippedMoves.includes(m.id));
 
   return (
-    <Win98Window title="Profilo Pilota">
+    <Win98Window title="Profilo Pilota" imageUrl="/images/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
         {/* Navigation Tabs */}
