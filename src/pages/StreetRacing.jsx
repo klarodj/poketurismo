@@ -188,7 +188,7 @@ export default function StreetRacing() {
 
   return (
     <Win98Window title="Street Racing - Viale Industriale" imageUrl="/images/street.png">
-      <div className="flex flex-col items-center justify-start p-2 bg-black border-4 border-gray-800 h-full text-white font-pixel shadow-[inset_0_10px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+      <div className="flex flex-col items-center justify-start p-2 bg-black border-4 border-gray-800 text-white font-pixel shadow-[inset_0_10px_50px_rgba(0,0,0,0.8)] min-h-[400px]">
         
         {/* IDLE / MATCHING */}
         {(gameState === 'idle' || gameState === 'matching') && (

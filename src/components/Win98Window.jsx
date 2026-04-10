@@ -7,7 +7,7 @@ export default function Win98Window({ title, children, onClose, noShadow = false
       bg-win98-gray 
       border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray
       ${!noShadow ? 'shadow-[2px_2px_0_0_#000000]' : ''} 
-      p-1 flex flex-col w-full h-full
+      p-1 flex flex-col w-full min-h-0
     `}>
       {/* Title Bar - Gradient Background */}
       <div className="bg-gradient-to-r from-win98-blue to-win98-lightBlue px-1 py-[2px] mb-1 flex justify-between items-center text-white h-7 select-none">
@@ -38,7 +38,7 @@ export default function Win98Window({ title, children, onClose, noShadow = false
       </div>
 
       {/* Window Body */}
-      <div className="flex-1 bg-win98-gray p-1 overflow-hidden flex flex-col min-h-0">
+      <div className="bg-win98-gray p-1 flex flex-col">
         {imageUrl && (
           <div className="w-full h-32 md:h-48 border-2 border-win98-darkerGray mb-2 relative overflow-hidden shrink-0 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] bg-black">
             <img src={imageUrl} alt={title} className="w-full h-full object-cover opacity-80 mix-blend-screen" onError={(e) => e.target.style.display='none'} />
@@ -49,7 +49,7 @@ export default function Win98Window({ title, children, onClose, noShadow = false
             <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)] pointer-events-none mix-blend-overlay"></div>
           </div>
         )}
-        <div className="flex-1 overflow-y-auto w-full custom-scroll">
+        <div className="w-full">
           {children}
         </div>
       </div>

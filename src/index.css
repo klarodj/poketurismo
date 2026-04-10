@@ -12,7 +12,7 @@ html {
     @apply bg-win98-bg text-win98-text font-pixel antialiased;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     font-size: 1.1rem; /* Slightly larger text by default */
     line-height: 1.4;
   }

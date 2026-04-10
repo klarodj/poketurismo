@@ -37,7 +37,7 @@ export default function Layout() {
   const localNavLinks = getSubMenus();
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center p-4 bg-win98-bg overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg">
       <NokiaModal />
       <Win98ErrorDialog />
 
@@ -46,15 +46,13 @@ export default function Layout() {
         <HUD />
       </div>
 
-      {/* Main Container - fills remaining height */}
-      <div className="w-full max-w-5xl bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-[2px_2px_0_0_#000000] flex flex-col flex-1 min-h-0 overflow-hidden">
+      {/* Main Container - expands with content */}
+      <div className="w-full max-w-5xl bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-[2px_2px_0_0_#000000] flex flex-col">
         {/* Main Execution Area */}
-        <div className="flex-1 flex overflow-hidden min-h-0">
+        <div className="flex flex-col">
           {/* Content View */}
-          <div className="flex-1 overflow-hidden min-h-0">
-            <div className="w-full h-full bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white shadow-[inset_1px_1px_0_0_#000000] overflow-y-auto">
-              <Outlet />
-            </div>
+          <div className="w-full bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white shadow-[inset_1px_1px_0_0_#000000]">
+            <Outlet />
           </div>
         </div>
       </div>
