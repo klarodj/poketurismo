@@ -5,11 +5,11 @@ export default function FuelGauge({ currentFuel, maxFuel }) {
   const isReserve = percentage < 15;
 
   return (
-    <div className="flex items-center gap-1.5 sm:gap-2 bg-black px-1.5 sm:px-3 py-1 border-2 border-win98-darkerGray shadow-win98-inset">
-      <span className="text-white font-bold text-xs sm:text-lg select-none">E</span>
+    <div className="flex items-center gap-1 sm:gap-2 bg-black px-1 sm:px-3 py-0.5 sm:py-1 border-2 border-win98-darkerGray shadow-win98-inset">
+      <span className="hidden sm:inline text-white font-bold text-lg select-none">E</span>
       
       {/* Gauge Container */}
-      <div className="relative w-12 sm:w-32 h-3 sm:h-4 bg-gray-900 border border-gray-700 mx-0.5 sm:mx-1 overflow-hidden">
+      <div className="relative w-12 sm:w-32 h-2.5 sm:h-4 bg-gray-900 border border-gray-700 mx-0.5 sm:mx-1 overflow-hidden">
         {/* Progress Fill */}
         <div 
           className={`h-full transition-all duration-500 ease-in-out ${
@@ -28,10 +28,10 @@ export default function FuelGauge({ currentFuel, maxFuel }) {
         </div>
       </div>
       
-      <span className="text-white font-bold text-xs sm:text-lg select-none">F</span>
+      <span className="hidden sm:inline text-white font-bold text-lg select-none">F</span>
       
       {/* Reserve Indicator Light */}
-      <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ml-0.5 border border-black shadow-[inset_0_1px_2px_rgba(255,255,255,0.4)] ${isReserve ? 'bg-yellow-400 animate-pulse shadow-[0_0_8px_4px_rgba(250,204,21,0.6)]' : 'bg-stone-800'}`} />
+      <div className={`w-1.5 h-1.5 sm:w-3 sm:h-3 rounded-full ml-0.5 border border-black shadow-[inset_0_1px_2px_rgba(255,255,255,0.4)] ${isReserve ? 'bg-yellow-400 animate-pulse shadow-[0_0_8px_4px_rgba(250,204,21,0.6)]' : 'bg-stone-800'}`} />
     </div>
   );
 }

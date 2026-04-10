@@ -49,10 +49,10 @@ export default function HUD() {
         </div>
       </div>
 
-      <div className="flex items-center gap-1.5 sm:gap-4 overflow-hidden">
+      <div className="flex items-center gap-1 sm:gap-4 overflow-hidden">
         {equippedCar ? (
           <>
-            <div className="bg-win98-blue text-white px-1.5 sm:px-2 py-0.5 sm:py-1 font-bold border-2 border-t-win98-darkGray border-l-win98-darkGray border-b-white border-r-white text-[11px] sm:text-sm whitespace-nowrap truncate max-w-[100px] sm:max-w-none">
+            <div className="bg-win98-blue text-white px-1.5 sm:px-2 py-0.5 sm:py-1 font-bold border-2 border-t-win98-darkGray border-l-win98-darkGray border-b-white border-r-white text-[11px] sm:text-sm whitespace-nowrap truncate max-w-[130px] sm:max-w-none">
               🚗 {equippedCar.name}
             </div>
             <FuelGauge currentFuel={equippedCar.currentFuel} maxFuel={equippedCar.fuelCapacity} />
