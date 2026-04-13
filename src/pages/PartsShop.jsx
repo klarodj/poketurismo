@@ -6,6 +6,8 @@ import useGarageStore from '../store/garageStore';
 import Win98Window from '../components/Win98Window';
 import { fetchParts } from '../services/api';
 
+import { CAR_STAT_LABELS } from '../logic/raceEngine';
+
 export default function PartsShop() {
   const { money, removeMoney } = usePlayerStore();
   const { addPart } = useInventoryStore();
@@ -207,9 +209,9 @@ export default function PartsShop() {
                     {selectedPart.cvBonus > 0 && <p className="text-green-600 font-bold">+{selectedPart.cvBonus} CV</p>}
                     {selectedPart.nmBonus > 0 && <p className="text-green-600 font-bold">+{selectedPart.nmBonus} NM</p>}
                     {selectedPart.kgBonus > 0 && <p className="text-green-600 font-bold">-{selectedPart.kgBonus} KG (Riduzione Peso)</p>}
-                    {selectedPart.speedBonus > 0 && <p className="text-green-800">+{selectedPart.speedBonus} Vel. Max</p>}
-                    {selectedPart.accelBonus > 0 && <p className="text-green-800">+{selectedPart.accelBonus} Accelerazione</p>}
-                    {selectedPart.brakeBonus > 0 && <p className="text-green-800">+{selectedPart.brakeBonus} Frenata</p>}
+                    {selectedPart.speedBonus > 0 && <p className="text-green-800">+{selectedPart.speedBonus} {CAR_STAT_LABELS.speed}</p>}
+                    {selectedPart.accelBonus > 0 && <p className="text-green-800">+{selectedPart.accelBonus} {CAR_STAT_LABELS.acceleration}</p>}
+                    {selectedPart.brakeBonus > 0 && <p className="text-green-800">+{selectedPart.brakeBonus} {CAR_STAT_LABELS.brake}</p>}
                   </div>
                 </div>
 

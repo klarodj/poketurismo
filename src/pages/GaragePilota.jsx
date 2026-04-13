@@ -4,6 +4,8 @@ import usePlayerStore from '../store/playerStore';
 import useInventoryStore from '../store/inventoryStore';
 import Win98Window from '../components/Win98Window';
 
+import { PILOT_STAT_LABELS } from '../logic/raceEngine';
+
 export default function GaragePilota() {
   const navigate = useNavigate();
   const { username, money, level, xp, stats } = usePlayerStore();
@@ -49,23 +51,35 @@ export default function GaragePilota() {
               </div>
             </div>
 
-            <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
-              <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Statistiche Pilota (Saving Throws)</h2>
-              <div className="bg-win98-gray p-2 border border-gray-400 font-bold text-base space-y-2">
-                 <div className="flex justify-between border-b border-gray-300 pb-1">
-                   <span>💪 Brave (Coraggio)</span> <span>{stats.brave}</span>
-                 </div>
-                 <div className="flex justify-between border-b border-gray-300 pb-1">
-                   <span>🧼 Clean (Pulizia)</span> <span>{stats.clean}</span>
-                 </div>
-                 <div className="flex justify-between border-b border-gray-300 pb-1">
-                   <span>⚡ Reflex (Riflessi)</span> <span>{stats.reflex}</span>
-                 </div>
-                 <div className="flex justify-between">
-                   <span>⚙️ Shift (Cambiata)</span> <span>{stats.shift}</span>
-                 </div>
+              <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
+                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2>
+                <div className="bg-win98-gray p-2 border border-gray-400 font-bold text-base space-y-1.5 uppercase font-pixel">
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>💪 {PILOT_STAT_LABELS.brave}</span> <span>{stats.brave}</span>
+                   </div>
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>🧼 {PILOT_STAT_LABELS.clean}</span> <span>{stats.clean}</span>
+                   </div>
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>⚡ {PILOT_STAT_LABELS.reflex}</span> <span>{stats.reflex}</span>
+                   </div>
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>🤸 {PILOT_STAT_LABELS.acro}</span> <span>{stats.acro}</span>
+                   </div>
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>🎯 {PILOT_STAT_LABELS.turn}</span> <span>{stats.turn}</span>
+                   </div>
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>🛑 {PILOT_STAT_LABELS.brake}</span> <span>{stats.brake}</span>
+                   </div>
+                   <div className="flex justify-between border-b border-gray-300 pb-0.5">
+                     <span>🚀 {PILOT_STAT_LABELS.throttle}</span> <span>{stats.throttle}</span>
+                   </div>
+                   <div className="flex justify-between">
+                     <span>⚙️ {PILOT_STAT_LABELS.shift}</span> <span>{stats.shift}</span>
+                   </div>
+                </div>
               </div>
-            </div>
           </div>
 
           {/* Right: Known Moves & Loadout */}

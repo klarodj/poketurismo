@@ -5,7 +5,15 @@ import useGarageStore from '../store/garageStore';
 import useInventoryStore from '../store/inventoryStore';
 import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
-import { calculateRaceStats, resolveTurn, consumeSectionFuel, rollDungeonMaster, savingThrow } from '../logic/raceEngine';
+import { 
+  calculateRaceStats, 
+  resolveTurn, 
+  consumeSectionFuel, 
+  rollDungeonMaster, 
+  savingThrow,
+  CAR_STAT_LABELS,
+  PILOT_STAT_LABELS
+} from '../logic/raceEngine';
 import { fetchTracks } from '../services/api';
 
 export default function TrackRace() {
@@ -23,24 +31,6 @@ export default function TrackRace() {
   const car = cars.find(c => c.id === equippedCarId);
   const playerMoves = moves.filter(m => equippedMoves.includes(m.id));
 
-  const STAT_LABELS = {
-    speed: 'Velocità',
-    acceleration: 'Accelerazione',
-    revving: 'Giri Motore',
-    transmission: 'Cambio',
-    turnSlow: 'Curva Lenta',
-    turnFast: 'Curva Veloce',
-    brake: 'Frenata',
-    braking: 'Frenata',
-    traction: 'Trazione',
-    brave: 'Fegato',
-    clean: 'Pulizia',
-    reflex: 'Riflessi',
-    acro: 'Acrobazia',
-    turn: 'Abilità Curva',
-    throttle: 'Parzializzazione',
-    shift: 'Cambiata'
-  };
 
   useEffect(() => {
     if (!trackId) {
@@ -249,8 +239,8 @@ export default function TrackRace() {
                  <div>Sezione {currentSectionIndex + 1}/{track.sections.length}</div>
                </div>
                <div className="flex justify-between text-[10px] italic pt-1">
-                 <div className="text-blue-300">Auto: {STAT_LABELS[track.sections[currentSectionIndex].carStat]} + {STAT_LABELS[track.sections[currentSectionIndex].carTech]}</div>
-                 <div className="text-yellow-300 text-right">Pilota: {STAT_LABELS[track.sections[currentSectionIndex].driverStat]} + {STAT_LABELS[track.sections[currentSectionIndex].driverTech]}</div>
+                 <div className="text-blue-300">Auto: {CAR_STAT_LABELS[track.sections[currentSectionIndex].carStat]} + {CAR_STAT_LABELS[track.sections[currentSectionIndex].carTech]}</div>
+                 <div className="text-yellow-300 text-right">Pilota: {PILOT_STAT_LABELS[track.sections[currentSectionIndex].driverStat]} + {PILOT_STAT_LABELS[track.sections[currentSectionIndex].driverTech]}</div>
                </div>
              </div>
              
@@ -260,7 +250,7 @@ export default function TrackRace() {
                  <div key={i} className="mb-1 text-gray-300 capitalize">{log}</div>
                ))}
                <div className="text-white mt-2 animate-pulse">&gt; In attesa di input per: {track.sections[currentSectionIndex].name}</div>
-               <div className="text-[9px] text-gray-500 italic pl-2">Requisiti: {STAT_LABELS[track.sections[currentSectionIndex].carStat]}, {STAT_LABELS[track.sections[currentSectionIndex].carTech]} | {STAT_LABELS[track.sections[currentSectionIndex].driverStat]}, {STAT_LABELS[track.sections[currentSectionIndex].driverTech]}</div>
+               <div className="text-[9px] text-gray-500 italic pl-2">Requisiti: {CAR_STAT_LABELS[track.sections[currentSectionIndex].carStat]}, {CAR_STAT_LABELS[track.sections[currentSectionIndex].carTech]} | {PILOT_STAT_LABELS[track.sections[currentSectionIndex].driverStat]}, {PILOT_STAT_LABELS[track.sections[currentSectionIndex].driverTech]}</div>
              </div>
              
              {/* Action Bar (Cards) */}

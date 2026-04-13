@@ -1,3 +1,26 @@
+export const CAR_STAT_LABELS = {
+  speed: 'Velocità',
+  acceleration: 'Accelerazione',
+  revving: 'Ripresa',
+  transmission: 'Cambio',
+  turnSlow: 'Curve Lente',
+  turnFast: 'Curve Veloci',
+  brake: 'Freni',
+  braking: 'Freni',
+  traction: 'Trazione'
+};
+
+export const PILOT_STAT_LABELS = {
+  brave: 'Coraggio',
+  clean: 'Pulizia',
+  reflex: 'Riflessi',
+  acro: 'Acrobazia',
+  turn: 'Curva',
+  brake: 'Frenata',
+  throttle: 'Accelerata',
+  shift: 'Cambiata'
+};
+
 export const calculateDynamicWeight = (baseKG, currentFuelLiters) => {
   // Fuel density approx 0.75 KG per liter
   return Math.round(baseKG + (currentFuelLiters * 0.75));

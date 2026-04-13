@@ -5,29 +5,46 @@ import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
 import useInventoryStore from '../store/inventoryStore';
 import useGameStore from '../store/gameStore';
-import { calculateRaceStats } from '../logic/raceEngine';
+import { 
+  calculateRaceStats, 
+  resolveTurn,
+  CAR_STAT_LABELS,
+  PILOT_STAT_LABELS
+} from '../logic/raceEngine';
 
-// Hardcoded track sections based on SQL data
+// Hardcoded track sections aligned with DB structure (2 car + 2 pilot requirements)
 const TRACK_POOL = [
-  { id: 1, name: 'Semaforo', type: 'Rettilineo', reqStat: 'acceleration', desc: 'Partenza bruciante al semaforo!' },
-  { id: 2, name: 'Rettilineo Industriale', type: 'Rettilineo', reqStat: 'speed', desc: 'Gas a martello sul lungo dritto.' },
-  { id: 3, name: 'Rotonda Centro Comm.', type: 'Tornante', reqStat: 'turnSlow', desc: 'Gira stretto intorno alla rotonda.' },
-  { id: 4, name: 'Svincolo Tangenziale', type: 'Chicane', reqStat: 'turnFast', desc: 'Curvone veloce in appoggio.' },
-  { id: 5, name: 'Inversione a U', type: 'Tornante', reqStat: 'turnSlow', desc: 'Freno a mano e via!' },
+  { 
+    id: 1, name: 'Semaforo', 
+    carStat: 'acceleration', carTech: 'traction', 
+    driverStat: 'reflex', driverTech: 'shift',
+    type: 'Rettilineo', desc: 'Partenza bruciante al semaforo!' 
+  },
+  { 
+    id: 2, name: 'Rettilineo Industriale', 
+    carStat: 'speed', carTech: 'traction', 
+    driverStat: 'brave', driverTech: 'shift',
+    type: 'Rettilineo', desc: 'Gas a martello sul lungo dritto.' 
+  },
+  { 
+    id: 3, name: 'Rotonda Centro Comm.', 
+    carStat: 'revving', carTech: 'turnSlow', 
+    driverStat: 'clean', driverTech: 'turn',
+    type: 'Tornante', desc: 'Gira stretto intorno alla rotonda.' 
+  },
+  { 
+    id: 4, name: 'Svincolo Tangenziale', 
+    carStat: 'speed', carTech: 'turnFast', 
+    driverStat: 'clean', driverTech: 'turn',
+    type: 'Chicane', desc: 'Curvone veloce in appoggio.' 
+  },
+  { 
+    id: 5, name: 'Inversione a U', 
+    carStat: 'revving', carTech: 'braking', 
+    driverStat: 'acro', driverTech: 'brake',
+    type: 'Tornante', desc: 'Freno a mano e via!' 
+  },
 ];
-
-const STAT_LABELS = {
-  speed: 'Velocità',
-  acceleration: 'Accelerazione',
-  brake: 'Frenata',
-  traction: 'Trazione',
-  turnSlow: 'Curva Lenta',
-  turnFast: 'Curva Veloce',
-  shift: 'Cambiata',
-  reflex: 'Riflessi',
-  brave: 'Fegato',
-  clean: 'Pulizia'
-};
 
 const OPPONENT_NAMES = [
   "Marco il Pazzo", "Sere Speed", "Luca Nitro", "Giulia Drift", 
@@ -90,6 +107,10 @@ export default function StreetRacing() {
         reflex: Math.round(pilotStats.reflex * (0.8 + Math.random() * 0.4)),
         brave: Math.round(pilotStats.brave * (0.8 + Math.random() * 0.4)),
         clean: Math.round(pilotStats.clean * (0.8 + Math.random() * 0.4)),
+        acro: Math.round(pilotStats.acro * (0.8 + Math.random() * 0.4)),
+        turn: Math.round(pilotStats.turn * (0.8 + Math.random() * 0.4)),
+        brake: Math.round(pilotStats.brake * (0.8 + Math.random() * 0.4)),
+        throttle: Math.round(pilotStats.throttle * (0.8 + Math.random() * 0.4)),
       };
 
       const oppLevel = Math.max(1, playerLevel + (Math.floor(Math.random() * 3) - 1));
@@ -150,14 +171,12 @@ export default function StreetRacing() {
     setTotalTireWear(prev => prev + (move.costGrip || 1));
     setTotalEngineWear(prev => prev + (move.costHealth || 0.5));
 
-    // Opponent Score
-    const oppScore = (opponent.stats[reqStat] || 0) + (opponent.pilot.shift * 2) + Math.floor(Math.random() * 16);
-
-    const delta = myScore - oppScore;
+    // Use centralized resolveTurn
+    const delta = resolveTurn(section, playerCarStats, pilotStats, move, opponent, null, false);
     const newGap = gap + delta;
 
     setGap(newGap);
-    addLog(`${section.name}: ${move.name}. ${delta > 0 ? 'Guadagnati' : 'Persi'} ${Math.abs(delta)}m su ${STAT_LABELS[reqStat]}. ${logMsg}`);
+    addLog(`${section.name}: ${move.name}. ${delta > 0 ? 'Guadagnati' : 'Persi'} ${Math.abs(delta)}m. Requisiti: ${CAR_STAT_LABELS[section.carStat]} + ${PILOT_STAT_LABELS[section.driverStat]}. ${logMsg}`);
 
     if (currentStep < track.length - 1) {
       setCurrentStep(prev => prev + 1);
@@ -196,7 +215,7 @@ export default function StreetRacing() {
   const getMoveBonusText = (move) => {
     if (!move.bonus) return "";
     return Object.entries(move.bonus)
-      .map(([k, v]) => `${v > 0 ? '+' : ''}${v} ${STAT_LABELS[k] || k}`)
+      .map(([k, v]) => `${v > 0 ? '+' : ''}${v} ${CAR_STAT_LABELS[k] || PILOT_STAT_LABELS[k] || k}`)
       .join(", ");
   };
 
@@ -275,16 +294,22 @@ export default function StreetRacing() {
                 <span>LUI</span>
               </div>
               {[
-                { label: 'Velocità', key: 'speed' },
-                { label: 'Accelerazione', key: 'acceleration' },
-                { label: 'Frenata', key: 'brake' },
-                { label: 'Trazione', key: 'traction' },
-                { label: 'Curva L', key: 'turnSlow' },
-                { label: 'Curva V', key: 'turnFast' },
-                { label: 'Cambiata', key: 'shift', pilot: true },
-                { label: 'Riflessi', key: 'reflex', pilot: true },
-                { label: 'Fegato', key: 'brave', pilot: true },
-                { label: 'Pulizia', key: 'clean', pilot: true }
+                { label: CAR_STAT_LABELS.speed, key: 'speed' },
+                { label: CAR_STAT_LABELS.acceleration, key: 'acceleration' },
+                { label: CAR_STAT_LABELS.revving, key: 'revving' },
+                { label: CAR_STAT_LABELS.transmission, key: 'transmission' },
+                { label: CAR_STAT_LABELS.brake, key: 'brake' },
+                { label: CAR_STAT_LABELS.traction, key: 'traction' },
+                { label: CAR_STAT_LABELS.turnSlow, key: 'turnSlow' },
+                { label: CAR_STAT_LABELS.turnFast, key: 'turnFast' },
+                { label: PILOT_STAT_LABELS.brave, key: 'brave', pilot: true },
+                { label: PILOT_STAT_LABELS.clean, key: 'clean', pilot: true },
+                { label: PILOT_STAT_LABELS.reflex, key: 'reflex', pilot: true },
+                { label: PILOT_STAT_LABELS.acro, key: 'acro', pilot: true },
+                { label: PILOT_STAT_LABELS.turn, key: 'turn', pilot: true },
+                { label: PILOT_STAT_LABELS.brake, key: 'brake', pilot: true },
+                { label: PILOT_STAT_LABELS.throttle, key: 'throttle', pilot: true },
+                { label: PILOT_STAT_LABELS.shift, key: 'shift', pilot: true }
               ].map((s, i) => {
                 const myVal = s.pilot ? pilotStats[s.key] : playerCarStats[s.key];
                 const oppVal = s.pilot ? opponent.pilot[s.key] : opponent.stats[s.key];
@@ -318,9 +343,14 @@ export default function StreetRacing() {
                    {gap > 0 ? '+' : ''}{gap}m
                  </p>
                </div>
-               <div className="flex flex-col items-center justify-center border-l border-r border-gray-700">
-                  <p className="text-[8px] text-yellow-500 font-bold">REQUISITO</p>
-                  <p className="text-[10px] text-white uppercase text-center">{STAT_LABELS[track[currentStep]?.reqStat]}</p>
+               <div className="flex flex-col items-center justify-center border-l border-r border-gray-700 px-2 min-w-[120px]">
+                  <p className="text-[7px] text-yellow-500 font-bold">REQUISITI</p>
+                  <p className="text-[9px] text-blue-400 uppercase text-center leading-none mb-1">
+                    {CAR_STAT_LABELS[track[currentStep]?.carStat]} + {CAR_STAT_LABELS[track[currentStep]?.carTech]}
+                  </p>
+                  <p className="text-[9px] text-yellow-500 uppercase text-center leading-none">
+                    {PILOT_STAT_LABELS[track[currentStep]?.driverStat]} + {PILOT_STAT_LABELS[track[currentStep]?.driverTech]}
+                  </p>
                </div>
                <div className="text-right bg-black/60 p-1 border border-red-500/30">
                  <p className="text-[8px] text-gray-500">SETTORE {currentStep + 1}/{track.length}</p>

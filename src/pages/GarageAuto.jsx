@@ -6,6 +6,8 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 import { sellCar, equipCar } from '../services/api';
 
+import { CAR_STAT_LABELS } from '../logic/raceEngine';
+
 export default function GarageAuto() {
   const { id: userId, initialize: refreshPlayer } = usePlayerStore();
   const { cars, getCarStats, initialize: refreshGarage } = useGarageStore();
@@ -128,13 +130,15 @@ export default function GarageAuto() {
                <div className="bg-win98-bg text-white p-2 border-2 border-t-gray-500 border-l-gray-500 border-b-white border-r-white mb-4">
                   <h3 className="font-bold font-pixel text-sm mb-1 text-yellow-300 border-b border-gray-500 pb-1">Telemetria e Setup</h3>
                   {raceStats && (
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs font-bold font-pixel px-1 mt-2">
-                       <p>Speed: {raceStats.speed}</p>
-                       <p>Accel: {raceStats.acceleration}</p>
-                       <p>Brake: {raceStats.brake}</p>
-                       <p>Turn S: {raceStats.turnSlow}</p>
-                       <p>Turn F: {raceStats.turnFast}</p>
-                       <p>Traction: {raceStats.traction}</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2 text-[10px] font-bold font-pixel px-1 mt-2 uppercase">
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.speed}</span> <span className="text-white">{raceStats.speed}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.acceleration}</span> <span className="text-white">{raceStats.acceleration}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.revving}</span> <span className="text-white">{raceStats.revving}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.transmission}</span> <span className="text-white">{raceStats.transmission}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.brake}</span> <span className="text-white">{raceStats.brake}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.traction}</span> <span className="text-white">{raceStats.traction}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.turnSlow}</span> <span className="text-white">{raceStats.turnSlow}</span></p>
+                       <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.turnFast}</span> <span className="text-white">{raceStats.turnFast}</span></p>
                     </div>
                   )}
                   <div className="mt-4 p-2 bg-win98-darkerGray border border-gray-400 font-pixel text-[10px] text-white">

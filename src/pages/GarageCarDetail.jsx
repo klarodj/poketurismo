@@ -7,6 +7,8 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 import { unmountPart, mountPart } from '../services/api';
 
+import { CAR_STAT_LABELS } from '../logic/raceEngine';
+
 export default function GarageCarDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -113,11 +115,11 @@ export default function GarageCarDetail() {
                 <div className="bg-win98-darkerGray text-white p-4 border-2 border-win98-gray">
                    <h4 className="text-base font-bold border-b border-gray-500 mb-3 uppercase">Telemetria</h4>
                    {stats && (
-                     <div className="space-y-2 text-sm font-bold">
-                        <div className="flex justify-between border-b border-white/10 pb-1"><span>VEL</span> <span>{stats.speed}</span></div>
-                        <div className="flex justify-between border-b border-white/10 pb-1"><span>ACC</span> <span>{stats.acceleration}</span></div>
-                        <div className="flex justify-between border-b border-white/10 pb-1"><span>BRK</span> <span>{stats.brake}</span></div>
-                        <div className="flex justify-between"><span>TRC</span> <span>{stats.traction}</span></div>
+                     <div className="space-y-2 text-sm font-bold uppercase">
+                        <div className="flex justify-between border-b border-white/10 pb-1"><span>{CAR_STAT_LABELS.speed}</span> <span>{stats.speed}</span></div>
+                        <div className="flex justify-between border-b border-white/10 pb-1"><span>{CAR_STAT_LABELS.acceleration}</span> <span>{stats.acceleration}</span></div>
+                        <div className="flex justify-between border-b border-white/10 pb-1"><span>{CAR_STAT_LABELS.brake}</span> <span>{stats.brake}</span></div>
+                        <div className="flex justify-between"><span>{CAR_STAT_LABELS.traction}</span> <span>{stats.traction}</span></div>
                      </div>
                    )}
                 </div>

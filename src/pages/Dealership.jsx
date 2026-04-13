@@ -5,6 +5,8 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 import { fetchCars, fetchBrands, purchaseCar } from '../services/api';
 
+import { CAR_STAT_LABELS } from '../logic/raceEngine';
+
 export default function Dealership() {
   const { id: userId, money, initialize: refreshPlayer } = usePlayerStore();
   const { initialize: refreshGarage } = useGarageStore();
@@ -73,10 +75,10 @@ export default function Dealership() {
           
           <h3 className="font-bold text-center text-sm mb-2">{car.brand.name} {car.name}</h3>
           
-          <div className="w-full text-[10px] bg-black text-green-400 p-2 font-pixel border border-gray-600 mb-3">
-             <p>POWER: {car.cv} CV | NM: {car.nm}</p>
-             <p>WEIGHT: {car.kg} KG | {car.driveType}</p>
-             <p className="text-yellow-400 mt-1">PRICE: €{car.price.toLocaleString()}</p>
+          <div className="w-full text-[10px] bg-black text-green-400 p-2 font-pixel border border-gray-600 mb-3 uppercase">
+             <p>POTENZA: {car.cv} CV | COPPIA: {car.nm} NM</p>
+             <p>PESO: {car.kg} KG | {car.driveType}</p>
+             <p className="text-yellow-400 mt-1">PREZZO: €{car.price.toLocaleString()}</p>
           </div>
 
           <button 
