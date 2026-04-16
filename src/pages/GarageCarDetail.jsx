@@ -114,14 +114,18 @@ export default function GarageCarDetail() {
                 </div>
                 <div className="bg-win98-darkerGray text-white p-4 border-2 border-win98-gray">
                    <h4 className="text-base font-bold border-b border-gray-500 mb-3 uppercase">Telemetria</h4>
-                   {stats && (
-                     <div className="space-y-2 text-sm font-bold uppercase">
-                        <div className="flex justify-between border-b border-white/10 pb-1"><span>{CAR_STAT_LABELS.speed}</span> <span>{stats.speed}</span></div>
-                        <div className="flex justify-between border-b border-white/10 pb-1"><span>{CAR_STAT_LABELS.acceleration}</span> <span>{stats.acceleration}</span></div>
-                        <div className="flex justify-between border-b border-white/10 pb-1"><span>{CAR_STAT_LABELS.brake}</span> <span>{stats.brake}</span></div>
-                        <div className="flex justify-between"><span>{CAR_STAT_LABELS.traction}</span> <span>{stats.traction}</span></div>
-                     </div>
-                   )}
+                    {stats && (
+                      <div className="space-y-1 text-[10px] font-bold uppercase">
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.speed}</span><span>{stats.speed}</span></div>
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.acceleration}</span><span>{stats.acceleration}</span></div>
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.revving}</span><span>{stats.revving}</span></div>
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.transmission}</span><span>{stats.transmission}</span></div>
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.brake}</span><span>{stats.brake}</span></div>
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.traction}</span><span>{stats.traction}</span></div>
+                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.turnSlow}</span><span>{stats.turnSlow}</span></div>
+                         <div className="flex justify-between"><span>{CAR_STAT_LABELS.turnFast}</span><span>{stats.turnFast}</span></div>
+                      </div>
+                    )}
                 </div>
              </div>
           </div>

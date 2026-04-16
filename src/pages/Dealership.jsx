@@ -5,7 +5,7 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 import { fetchCars, fetchBrands, purchaseCar } from '../services/api';
 
-import { CAR_STAT_LABELS } from '../logic/raceEngine';
+import { calculateRaceStats, CAR_STAT_LABELS } from '../logic/raceEngine';
 
 export default function Dealership() {
   const { id: userId, money, initialize: refreshPlayer } = usePlayerStore();
@@ -60,6 +60,14 @@ export default function Dealership() {
     return allCars.filter(c => c.brandId === selectedBrand.id);
   }, [allCars, selectedBrand]);
 
+  // Standardized perf stats assuming empty tank and 100% condition
+  const getStdStats = (car) => calculateRaceStats({
+    ...car,
+    currentFuel: 0,
+    tireGrip: 100,
+    engineHealth: 100,
+  });
+
   const renderCarGrid = (carsToRender) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {carsToRender.map(car => (
@@ -75,11 +83,23 @@ export default function Dealership() {
           
           <h3 className="font-bold text-center text-sm mb-2">{car.brand.name} {car.name}</h3>
           
-          <div className="w-full text-[10px] bg-black text-green-400 p-2 font-pixel border border-gray-600 mb-3 uppercase">
-             <p>POTENZA: {car.cv} CV | COPPIA: {car.nm} NM</p>
-             <p>PESO: {car.kg} KG | {car.driveType}</p>
-             <p className="text-yellow-400 mt-1">PREZZO: €{car.price.toLocaleString()}</p>
-          </div>
+          <div className="w-full text-[9px] bg-black text-green-400 p-2 font-mono border border-gray-600 mb-3 uppercase">
+             <p className="mb-1">POTENZA: {car.cv} CV | COPPIA: {car.nm} NM</p>
+             <p className="mb-1">PESO: {car.kg} KG | {car.driveType}</p>
+             <p className="text-yellow-400 mb-2">PREZZO: €{car.price.toLocaleString()}</p>
+             {(() => { const s = getStdStats(car); return (
+               <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 border-t border-green-800 pt-1 mt-1">
+                 <span>{CAR_STAT_LABELS.speed}: <span className="text-white">{s.speed}</span></span>
+                 <span>{CAR_STAT_LABELS.acceleration}: <span className="text-white">{s.acceleration}</span></span>
+                 <span>{CAR_STAT_LABELS.revving}: <span className="text-white">{s.revving}</span></span>
+                 <span>{CAR_STAT_LABELS.transmission}: <span className="text-white">{s.transmission}</span></span>
+                 <span>{CAR_STAT_LABELS.brake}: <span className="text-white">{s.brake}</span></span>
+                 <span>{CAR_STAT_LABELS.traction}: <span className="text-white">{s.traction}</span></span>
+                 <span>{CAR_STAT_LABELS.turnSlow}: <span className="text-white">{s.turnSlow}</span></span>
+                 <span>{CAR_STAT_LABELS.turnFast}: <span className="text-white">{s.turnFast}</span></span>
+               </div>
+             ); })()}
+           </div>
 
           <button 
             onClick={() => handleBuy(car)}
