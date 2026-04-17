@@ -1,4 +1,8 @@
-const BASE_URL = `http://${window.location.hostname}:3001/api`;
+// Capisce da solo se sei in locale o su internet tramite Tailscale
+const isFunnel = window.location.hostname.includes('ts.net');
+const BASE_URL = isFunnel 
+  ? `https://${window.location.hostname}/api` 
+  : `http://${window.location.hostname}:3001/api`;
 
 export const fetchPlayer = async (id = 1) => {
   const res = await fetch(`${BASE_URL}/player/${id}`);
