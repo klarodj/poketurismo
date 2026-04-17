@@ -230,8 +230,8 @@ export default function StreetRacing() {
         
         {/* IDLE / MATCHING */}
         {(gameState === 'idle' || gameState === 'matching') && (
-          <div className="flex flex-col items-center gap-6 mt-10">
-            <div className="w-80 h-40 border-4 border-red-900 bg-gray-900 overflow-hidden relative shadow-lg">
+          <div className="flex flex-col items-center gap-6 mt-10 w-full px-2">
+            <div className="w-full max-w-[320px] aspect-video border-4 border-red-900 bg-gray-900 overflow-hidden relative shadow-lg">
               <img src="/images/street.png" className="w-full h-full object-cover opacity-60" alt="street" />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 {gameState === 'matching' ? (
@@ -241,24 +241,24 @@ export default function StreetRacing() {
                   </>
                 ) : (
                   <>
-                    <h2 className="text-2xl font-black italic text-red-500 mb-2">UNDERGROUND HUB</h2>
+                    <h2 className="text-xl md:text-2xl font-black italic text-red-500 mb-2">UNDERGROUND HUB</h2>
                     <p className="text-[10px] text-gray-300">Trova una sfida. Rischia tutto. Diventa leggenda.</p>
                   </>
                 )}
               </div>
             </div>
             
-            <div className="flex gap-4">
+            <div className="flex gap-2 w-full max-w-[320px]">
               <button 
                 onClick={findOpponent}
                 disabled={gameState === 'matching'}
-                className="bg-win98-gray text-black px-8 py-3 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold hover:bg-gray-200 active:translate-y-1"
+                className="flex-1 bg-win98-gray text-black py-2 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold hover:bg-gray-200 active:translate-y-1 text-xs sm:text-sm flex items-center justify-center text-center leading-tight"
               >
                 Cerca Avversario
               </button>
               <button 
                 onClick={() => navigate('/map')}
-                className="bg-gray-800 text-white px-8 py-3 border-2 border-gray-500 font-bold hover:bg-gray-700"
+                className="flex-1 bg-gray-800 text-white py-2 border-2 border-gray-500 font-bold hover:bg-gray-700 text-xs sm:text-sm flex items-center justify-center"
               >
                 Vai Via
               </button>
@@ -405,12 +405,12 @@ export default function StreetRacing() {
 
         {/* RESULT PHASE */}
         {gameState === 'result' && (
-          <div className="flex flex-col items-center justify-center h-full gap-4 text-center p-4">
-            <h2 className={`text-5xl font-black italic drop-shadow-[4px_4px_0_rgba(0,0,0,1)] ${gap > 0 ? 'text-green-500' : 'text-red-600'}`}>
+          <div className="flex flex-col items-center justify-center h-full gap-4 text-center p-4 w-full">
+            <h2 className={`text-3xl sm:text-5xl font-black italic drop-shadow-[4px_4px_0_rgba(0,0,0,1)] ${gap > 0 ? 'text-green-500' : 'text-red-600'}`}>
               {gap > 0 ? 'DOMINIO' : 'KO TECNICO'}
             </h2>
             
-            <div className="bg-gray-900 border-4 border-double border-white/20 p-4 w-72 shadow-2xl">
+            <div className="bg-gray-900 border-4 border-double border-white/20 p-4 w-full max-w-[288px] shadow-2xl">
               <p className="text-[10px] text-gray-500 mb-2 font-bold tracking-widest uppercase">Rapporto di Gara</p>
               <div className="flex justify-between border-b border-white/10 py-2 text-sm">
                 <span className="text-gray-400">Distacco:</span>
@@ -429,7 +429,7 @@ export default function StreetRacing() {
 
             <button 
               onClick={() => setGameState('idle')}
-              className="bg-win98-gray text-black px-16 py-4 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold text-lg hover:bg-gray-200 shadow-xl active:translate-y-1"
+              className="w-full max-w-[288px] bg-win98-gray text-black py-4 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold text-lg hover:bg-gray-200 shadow-xl active:translate-y-1"
             >
               RITORNA AL HUB
             </button>
