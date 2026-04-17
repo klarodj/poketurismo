@@ -27,40 +27,27 @@ export const calculateDynamicWeight = (baseKG, currentFuelLiters) => {
 };
 
 export const calculateRaceStats = (car) => {
-  const dynamicKG = calculateDynamicWeight(car.kg, car.currentFuel);
+  const dynamicKG = calculateDynamicWeight(car.kg, car.currentFuel || 0);
   
-  // Base formulas (simplified for game mechanics)
-  // Higher weight hurts speed/accel/braking but helps traction, TurnSlow and TurnFast depend on grip and weight.
-  // CV is horsepower, NM is torque.
+  // Moltiplicatori basati sullo stato dell'auto (100 = 1.0)
+  const gripFactor = (car.tireGrip ?? 100) / 100;
+  const healthFactor = (car.engineHealth ?? 100) / 100;
   
-  const powerToWeight = car.cv / dynamicKG;
-  const torqueToWeight = car.nm / dynamicKG;
-  const gripFactor = car.tireGrip / 100;
-  const healthFactor = car.engineHealth / 100;
-  
-  const speed = Math.round((car.cv * 1.5) - (dynamicKG * 0.1)) * healthFactor;
-  const acceleration = Math.round((torqueToWeight * 1000) * gripFactor) * healthFactor;
-  
-  // Braking is worse with more weight, better with grip
-  const brake = Math.round(500 - (dynamicKG * 0.2) + (car.tireGrip * 2));
-  
-  // Traction is better with weight (to a point) and grip
-  const traction = Math.round((dynamicKG * 0.05) + (car.tireGrip * 3));
-  
-  // Handling
-  const turnSlow = Math.round(200 - (dynamicKG * 0.1) + (car.tireGrip * 2));
-  const turnFast = Math.round(300 - (dynamicKG * 0.05) + (car.tireGrip * 1.5));
+  // Utilizziamo le statistiche base provenienti dal DB, che sono già bilanciate per ogni componente (circa 10-100 come valori decimali)
+  // Applichiamo i malus per usura pneumatici o stato motore:
+  // - La salute del motore impatta velocità, accelerazione e cambio
+  // - L'usura gomme impatta frenata, trazione e tenuta di strada
   
   return {
     dynamicKG,
-    speed: Math.max(10, Math.round(speed)),
-    acceleration: Math.max(10, Math.round(acceleration)),
-    brake: Math.max(10, Math.round(brake)),
-    traction: Math.max(10, Math.round(traction)),
-    turnSlow: Math.max(10, Math.round(turnSlow)),
-    turnFast: Math.max(10, Math.round(turnFast)),
-    revving: car.revving || 50,
-    transmission: car.transmission || 50,
+    speed: Number((car.speed * healthFactor).toFixed(2)) || 20,
+    acceleration: Number((car.acceleration * gripFactor * healthFactor).toFixed(2)) || 20,
+    revving: Number((car.revving * healthFactor).toFixed(2)) || 20,
+    transmission: Number((car.transmission * healthFactor).toFixed(2)) || 20,
+    turnSlow: Number((car.turnSlow * gripFactor).toFixed(2)) || 20,
+    turnFast: Number((car.turnFast * gripFactor).toFixed(2)) || 20,
+    brake: Number((car.brake * gripFactor).toFixed(2)) || 20,
+    traction: Number((car.traction * gripFactor).toFixed(2)) || 20,
   };
 };
 
@@ -81,51 +68,78 @@ export const savingThrow = (pilotStats, event) => {
 };
 
 /**
- * Resolves a race turn based on the 4 requirements defined in the DB:
- * carStat, carTech, driverStat, driverTech
+ * Resolves a race turn using NORMALIZED scores to avoid stat-scale dominance.
+ * Each stat is scored relatively: the winner of each parameter gets +1, loser gets 0
+ * (with fractional advantage based on the ratio), then converted to meters.
+ * 
+ * Max gain/loss per section: ~30m. Typical competitive gap: -10 to +10m per section.
  */
 export const resolveTurn = (section, carStats, pilotStats, move, opponentStats, rngEvent, saved) => {
-  let pScore = 0;
-  let oScore = 0;
-
   // Stat mapping to bridge DB names and Code names
-  const mapping = {
-    braking: 'brake'
-  };
-
+  const mapping = { braking: 'brake' };
   const getStatKey = (key) => mapping[key] || key;
 
-  // 1. Car Stats (carStat + carTech)
+  // Helper: compare two stat values and return a normalized advantage [-1, +1]
+  // Uses ratio so that 300 vs 200 = same advantage as 600 vs 400 (50% edge)
+  const compareStats = (myVal, oppVal) => {
+    const my = Math.max(1, myVal);
+    const opp = Math.max(1, oppVal);
+    const total = my + opp;
+    // Returns a value in [-1, +1] where 0 means equal
+    return (my - opp) / total;
+  };
+
+  // 1. Car Stat advantage (carStat)
   const csKey = getStatKey(section.carStat);
+  const myCarStat = carStats[csKey] || 0;
+  const oppCarStat = opponentStats[csKey] || 0;
+  const carStatAdv = compareStats(myCarStat, oppCarStat);
+
+  // 2. Car Tech advantage (carTech)
   const ctKey = getStatKey(section.carTech);
-  
-  pScore += (carStats[csKey] || 0) + (carStats[ctKey] || 0);
-  oScore += (opponentStats[csKey] || 0) + (opponentStats[ctKey] || 0);
+  const myCarTech = carStats[ctKey] || 0;
+  const oppCarTech = opponentStats[ctKey] || 0;
+  const carTechAdv = compareStats(myCarTech, oppCarTech);
 
-  // 2. Pilot Stats (driverStat + driverTech)
+  // 3. Driver Stat advantage (driverStat)
   const dsKey = getStatKey(section.driverStat);
+  const myDriverStat = pilotStats[dsKey] || 0;
+  const oppDriverStat = opponentStats.pilot?.[dsKey] || 0;
+  const driverStatAdv = compareStats(myDriverStat, oppDriverStat);
+
+  // 4. Driver Tech advantage (driverTech)
   const dtKey = getStatKey(section.driverTech);
+  const myDriverTech = pilotStats[dtKey] || 0;
+  const oppDriverTech = opponentStats.pilot?.[dtKey] || 0;
+  const driverTechAdv = compareStats(myDriverTech, oppDriverTech);
 
-  pScore += (pilotStats[dsKey] || 0) + (pilotStats[dtKey] || 0);
-  oScore += (opponentStats.pilot?.[dsKey] || 0) + (opponentStats.pilot?.[dtKey] || 0);
+  // Combined normalized advantage: average of 4 components → range [-1, +1]
+  let combinedAdv = (carStatAdv + carTechAdv + driverStatAdv + driverTechAdv) / 4;
 
-  // Apply Moves
+  // Apply Move bonus: move bonuses are small values (+5 to +20) on specific stats
+  // Normalize them against a reference baseline of 100 so they have limited impact
+  const MOVE_BONUS_BASELINE = 100;
   if (move && move.bonus) {
-    Object.entries(move.bonus).forEach(([k, v]) => {
-      pScore += v;
-    });
+    let moveBonusSum = 0;
+    Object.values(move.bonus).forEach(v => { moveBonusSum += v; });
+    combinedAdv += (moveBonusSum / MOVE_BONUS_BASELINE) * 0.15; // max ~15% extra adv
   }
 
-  // Apply RNG malus if not saved
+  // Apply RNG malus if not saved (penalties reduce advantage)
   if (rngEvent && !saved) {
-    if (rngEvent.penalty.speed) pScore += rngEvent.penalty.speed;
-    if (rngEvent.penalty.acceleration) pScore += rngEvent.penalty.acceleration;
-    if (rngEvent.penalty.turnSlow) pScore += rngEvent.penalty.turnSlow;
-    if (rngEvent.penalty.turnFast) pScore += rngEvent.penalty.turnFast;
+    combinedAdv -= 0.2; // fixed -20% normalized penalty for uncontrolled events
   }
 
-  // Calculate Delta Gap
-  return Math.round(pScore - oScore);
+  // Opponent random luck factor: adds ±10% unpredictability even between similar racers
+  const oppLuck = (Math.random() - 0.5) * 0.20;
+  combinedAdv += oppLuck;
+
+  // Clamp to [-1, +1]
+  combinedAdv = Math.max(-1, Math.min(1, combinedAdv));
+
+  // Convert normalized advantage to meters: max ±25m per section
+  const METERS_PER_SECTION = 25;
+  return Math.round(combinedAdv * METERS_PER_SECTION);
 };
 
 export const consumeSectionFuel = (car, move) => {

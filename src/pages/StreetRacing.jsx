@@ -8,6 +8,8 @@ import useGameStore from '../store/gameStore';
 import { 
   calculateRaceStats, 
   resolveTurn,
+  rollDungeonMaster,
+  savingThrow,
   CAR_STAT_LABELS,
   PILOT_STAT_LABELS
 } from '../logic/raceEngine';
@@ -95,22 +97,24 @@ export default function StreetRacing() {
       const isZarra = Math.random() > 0.5;
       const suffix = isZarra ? " Zarra" : " Tuned";
       
-      const oppStats = {};
+      // Car stats: random variance ±15% around player's car stats
+      const oppCarStats = {};
       Object.keys(playerCarStats).forEach(key => {
         if (typeof playerCarStats[key] === 'number') {
-          oppStats[key] = Math.round(playerCarStats[key] * (0.9 + Math.random() * 0.25));
+          oppCarStats[key] = Math.round(playerCarStats[key] * (0.88 + Math.random() * 0.24));
         }
       });
 
+      // Pilot stats: random variance ±20% around player's pilot stats
       const oppPilot = {
-        shift: Math.round(pilotStats.shift * (0.8 + Math.random() * 0.4)),
-        reflex: Math.round(pilotStats.reflex * (0.8 + Math.random() * 0.4)),
-        brave: Math.round(pilotStats.brave * (0.8 + Math.random() * 0.4)),
-        clean: Math.round(pilotStats.clean * (0.8 + Math.random() * 0.4)),
-        acro: Math.round(pilotStats.acro * (0.8 + Math.random() * 0.4)),
-        turn: Math.round(pilotStats.turn * (0.8 + Math.random() * 0.4)),
-        brake: Math.round(pilotStats.brake * (0.8 + Math.random() * 0.4)),
-        throttle: Math.round(pilotStats.throttle * (0.8 + Math.random() * 0.4)),
+        shift:    Math.round(pilotStats.shift    * (0.82 + Math.random() * 0.36)),
+        reflex:   Math.round(pilotStats.reflex   * (0.82 + Math.random() * 0.36)),
+        brave:    Math.round(pilotStats.brave    * (0.82 + Math.random() * 0.36)),
+        clean:    Math.round(pilotStats.clean    * (0.82 + Math.random() * 0.36)),
+        acro:     Math.round(pilotStats.acro     * (0.82 + Math.random() * 0.36)),
+        turn:     Math.round(pilotStats.turn     * (0.82 + Math.random() * 0.36)),
+        brake:    Math.round(pilotStats.brake    * (0.82 + Math.random() * 0.36)),
+        throttle: Math.round(pilotStats.throttle * (0.82 + Math.random() * 0.36)),
       };
 
       const oppLevel = Math.max(1, playerLevel + (Math.floor(Math.random() * 3) - 1));
@@ -120,8 +124,10 @@ export default function StreetRacing() {
         name: (playerCar.brand || "") + " " + (playerCar.name || "") + suffix,
         pilotName,
         level: oppLevel,
-        stats: oppStats,
+        stats: oppCarStats,
         pilot: oppPilot,
+        // Flat structure for resolveTurn: { ...carStats, pilot: { ...pilotStats } }
+        raceStats: { ...oppCarStats, pilot: oppPilot },
         image: playerCar.image
       });
 
@@ -149,20 +155,17 @@ export default function StreetRacing() {
   const handleMove = (moveId) => {
     const move = moves.find(m => m.id === moveId) || { name: 'Guida Normale', bonus: {}, aggressiveness: 1, costGrip: 1, costHealth: 0.5 };
     const section = track[currentStep];
-    const reqStat = section.reqStat;
     
-    // Player Score
-    let myScore = playerCarStats[reqStat] + (move.bonus[reqStat] || 0) + (pilotStats.shift * 2);
-    
-    // DM RNG
+    // DM RNG events (10% chance per section)
     let logMsg = "";
-    if (Math.random() < 0.10) {
-      const dice = Math.random() * 20 + pilotStats.reflex;
-      if (dice > 15) {
-        logMsg = "⚠️ Pericolo evitato! Riflessi pronti!";
+    const event = Math.random() < 0.10 ? rollDungeonMaster() : null;
+    let saved = false;
+    if (event) {
+      saved = savingThrow(pilotStats, event);
+      if (saved) {
+        logMsg = `⚠️ ${event.type}! Riflessi pronti, schivato!`;
       } else {
-        myScore -= 20;
-        logMsg = "❌ Errore sotto pressione! Perdi terreno.";
+        logMsg = `❌ ${event.type}! Subisci il malus.`;
       }
     }
 
@@ -171,12 +174,14 @@ export default function StreetRacing() {
     setTotalTireWear(prev => prev + (move.costGrip || 1));
     setTotalEngineWear(prev => prev + (move.costHealth || 0.5));
 
-    // Use centralized resolveTurn
-    const delta = resolveTurn(section, playerCarStats, pilotStats, move, opponent, null, false);
+    // Use centralized resolveTurn — pass opponent.raceStats (flat { ...carStats, pilot })
+    const opponentRaceStats = opponent?.raceStats || {};
+    const delta = resolveTurn(section, playerCarStats, pilotStats, move, opponentRaceStats, event, saved);
     const newGap = gap + delta;
 
+    const gapIcon = delta > 0 ? '▲' : delta < 0 ? '▼' : '=';
+    addLog(`${gapIcon} ${section.name} [${move.name}]: ${delta > 0 ? '+' : ''}${delta}m — Req: ${CAR_STAT_LABELS[section.carStat]} + ${PILOT_STAT_LABELS[section.driverStat]}. ${logMsg}`);
     setGap(newGap);
-    addLog(`${section.name}: ${move.name}. ${delta > 0 ? 'Guadagnati' : 'Persi'} ${Math.abs(delta)}m. Requisiti: ${CAR_STAT_LABELS[section.carStat]} + ${PILOT_STAT_LABELS[section.driverStat]}. ${logMsg}`);
 
     if (currentStep < track.length - 1) {
       setCurrentStep(prev => prev + 1);
