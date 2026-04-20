@@ -401,6 +401,102 @@ app.post('/api/training-sessions/:id/complete', async (req, res) => {
   }
 });
 
+// ─── DEV SANDBOX ────────────────────────────────────────────────────────
+
+app.get('/api/track-sections', async (req, res) => {
+  try {
+    const sections = await prisma.trackSection.findMany();
+    res.json(sections);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/dev/opponents', async (req, res) => {
+  try {
+    const opponents = await prisma.customOpponent.findMany({
+      include: { car: { include: { brand: true } } }
+    });
+    res.json(opponents);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/dev/opponents', async (req, res) => {
+  try {
+    const data = req.body;
+    const opponent = await prisma.customOpponent.create({
+      data: {
+        name: data.name,
+        carId: parseInt(data.carId),
+        level: parseInt(data.level),
+        shift: parseInt(data.shift),
+        reflex: parseInt(data.reflex),
+        brave: parseInt(data.brave),
+        clean: parseInt(data.clean),
+        acro: parseInt(data.acro),
+        turn: parseInt(data.turn),
+        brake: parseInt(data.brake),
+        throttle: parseInt(data.throttle)
+      }
+    });
+    res.json({ success: true, opponent });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/dev/tracks', async (req, res) => {
+  try {
+    const tracks = await prisma.customTrack.findMany({
+      include: {
+        sections: {
+          include: { section: true },
+          orderBy: { ord: 'asc' }
+        }
+      }
+    });
+    res.json(tracks);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/dev/tracks', async (req, res) => {
+  try {
+    const { name, sections } = req.body; // sections is an array of sectionIds
+    
+    const track = await prisma.customTrack.create({
+      data: { name }
+    });
+
+    for (let i = 0; i < sections.length; i++) {
+      await prisma.customTrackSection.create({
+        data: {
+          customTrackId: track.id,
+          sectionId: parseInt(sections[i]),
+          ord: i + 1
+        }
+      });
+    }
+
+    const fullTrack = await prisma.customTrack.findUnique({
+      where: { id: track.id },
+      include: {
+        sections: {
+          include: { section: true },
+          orderBy: { ord: 'asc' }
+        }
+      }
+    });
+
+    res.json({ success: true, track: fullTrack });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`PokeTurismo Backend running on http://localhost:${PORT}`);
 });

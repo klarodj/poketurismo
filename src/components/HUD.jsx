@@ -36,6 +36,17 @@ export default function HUD() {
         >
           📱
         </button>
+        <button 
+          onClick={() => {
+            if (travel('/dev-sandbox', 0)) {
+               navigate('/dev-sandbox');
+            }
+          }}
+          className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white text-lg sm:text-xl"
+          title="Dev Sandbox"
+        >
+          🔧
+        </button>
         
         <div className="font-bold flex items-center gap-1 sm:gap-2">
           <span className="hidden sm:inline text-xl sm:text-2xl">💰</span>

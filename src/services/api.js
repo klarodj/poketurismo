@@ -116,3 +116,42 @@ export const completeTraining = async (sessionId, userId) => {
   return res.json();
 };
 
+// --- DEV SANDBOX ---
+export const fetchTrackSections = async () => {
+  const res = await fetch(`${BASE_URL}/track-sections`);
+  if (!res.ok) throw new Error('Failed to fetch track sections');
+  return res.json();
+};
+
+export const fetchCustomOpponents = async () => {
+  const res = await fetch(`${BASE_URL}/dev/opponents`);
+  if (!res.ok) throw new Error('Failed to fetch custom opponents');
+  return res.json();
+};
+
+export const createCustomOpponent = async (opponentData) => {
+  const res = await fetch(`${BASE_URL}/dev/opponents`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(opponentData)
+  });
+  if (!res.ok) throw new Error('Failed to create opponent');
+  return res.json();
+};
+
+export const fetchCustomTracks = async () => {
+  const res = await fetch(`${BASE_URL}/dev/tracks`);
+  if (!res.ok) throw new Error('Failed to fetch custom tracks');
+  return res.json();
+};
+
+export const createCustomTrack = async (trackData) => {
+  const res = await fetch(`${BASE_URL}/dev/tracks`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(trackData)
+  });
+  if (!res.ok) throw new Error('Failed to create track');
+  return res.json();
+};
+

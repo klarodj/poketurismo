@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { fetchCars, fetchTracks, fetchCustomTracks, fetchCustomOpponents } from '../services/api';
 import Win98Window from '../components/Win98Window';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
@@ -73,6 +74,29 @@ export default function StreetRacing() {
   const [totalTireWear, setTotalTireWear] = useState(0);
   const [totalEngineWear, setTotalEngineWear] = useState(0);
 
+  // --- NEW STATES FOR DB TRACKS & OPPONENTS ---
+  const [allCars, setAllCars] = useState([]);
+  const [dbTracks, setDbTracks] = useState([]);
+  const [customTracks, setCustomTracks] = useState([]);
+  const [customOpponents, setCustomOpponents] = useState([]);
+
+  // Selection states
+  const [selectedTrackId, setSelectedTrackId] = useState('random');
+  const [selectedOpponentId, setSelectedOpponentId] = useState('');
+
+  const [showDebugLog, setShowDebugLog] = useState(false);
+  const [debugLogArray, setDebugLogArray] = useState([]);
+
+  useEffect(() => {
+    fetchCars().then(setAllCars).catch(console.error);
+    fetchTracks().then(setDbTracks).catch(console.error);
+    fetchCustomTracks().then(setCustomTracks).catch(console.error);
+    fetchCustomOpponents().then(data => {
+      setCustomOpponents(data);
+      if (data.length > 0) setSelectedOpponentId(data[0].id.toString());
+    }).catch(console.error);
+  }, []);
+
   // Get current car data
   const playerCar = useMemo(() => cars.find(c => c.id === equippedCarId), [cars, equippedCarId]);
   const playerCarStats = useMemo(() => playerCar ? calculateRaceStats(playerCar) : null, [playerCar]);
@@ -85,58 +109,115 @@ export default function StreetRacing() {
   const addLog = (msg) => setBattleLog(prev => [msg, ...prev].slice(0, 15));
 
   // --- 1. SEARCH OPPONENT ---
-  const findOpponent = () => {
+  const findOpponent = (mode) => {
     if (!playerCar) return;
+    if (mode === 'specific' && !selectedOpponentId) return;
 
     setGameState('matching');
     setTotalFuelCost(0);
     setTotalTireWear(0);
     setTotalEngineWear(0);
+    setDebugLogArray([]);
     
     setTimeout(() => {
-      const isZarra = Math.random() > 0.5;
-      const suffix = isZarra ? " Zarra" : " Tuned";
-      
-      // Car stats: random variance ±15% around player's car stats
-      const oppCarStats = {};
-      Object.keys(playerCarStats).forEach(key => {
-        if (typeof playerCarStats[key] === 'number') {
-          oppCarStats[key] = Math.round(playerCarStats[key] * (0.88 + Math.random() * 0.24));
+      // TRACK SELECTION
+      let raceTrack = [];
+      if (selectedTrackId === 'random') {
+        const shuffled = [...TRACK_POOL].sort(() => 0.5 - Math.random());
+        raceTrack = shuffled.slice(0, 3 + Math.floor(Math.random() * 2));
+      } else if (selectedTrackId.startsWith('db_')) {
+        const id = parseInt(selectedTrackId.replace('db_', ''));
+        const dbTrack = dbTracks.find(t => t.id === id);
+        raceTrack = dbTrack ? dbTrack.builds.map(b => b.section) : TRACK_POOL.slice(0, 3);
+      } else if (selectedTrackId.startsWith('custom_')) {
+        const id = parseInt(selectedTrackId.replace('custom_', ''));
+        const cTrack = customTracks.find(t => t.id === id);
+        raceTrack = cTrack ? cTrack.sections.map(s => s.section) : TRACK_POOL.slice(0, 3);
+      }
+      setTrack(raceTrack);
+
+      // OPPONENT SELECTION
+      let oppCarStats = {};
+      let oppPilot = {};
+      let oppLevel = 1;
+      let oppName = "";
+      let oppPilotName = OPPONENT_NAMES[Math.floor(Math.random() * OPPONENT_NAMES.length)];
+      let oppImage = "";
+
+      if (mode === 'similar') {
+        const isZarra = Math.random() > 0.5;
+        const suffix = isZarra ? " Zarra" : " Tuned";
+        const brandName = typeof playerCar.brand === 'object' ? playerCar.brand?.name : playerCar.brand;
+        oppName = (brandName || "") + " " + (playerCar.name || "") + suffix;
+        oppImage = playerCar.image;
+        oppLevel = Math.max(1, playerLevel + (Math.floor(Math.random() * 3) - 1));
+
+        Object.keys(playerCarStats).forEach(key => {
+          if (typeof playerCarStats[key] === 'number') {
+            oppCarStats[key] = Math.round(playerCarStats[key] * (0.88 + Math.random() * 0.24));
+          }
+        });
+
+        oppPilot = {
+          shift:    Math.round(pilotStats.shift    * (0.82 + Math.random() * 0.36)),
+          reflex:   Math.round(pilotStats.reflex   * (0.82 + Math.random() * 0.36)),
+          brave:    Math.round(pilotStats.brave    * (0.82 + Math.random() * 0.36)),
+          clean:    Math.round(pilotStats.clean    * (0.82 + Math.random() * 0.36)),
+          acro:     Math.round(pilotStats.acro     * (0.82 + Math.random() * 0.36)),
+          turn:     Math.round(pilotStats.turn     * (0.82 + Math.random() * 0.36)),
+          brake:    Math.round(pilotStats.brake    * (0.82 + Math.random() * 0.36)),
+          throttle: Math.round(pilotStats.throttle * (0.82 + Math.random() * 0.36)),
+        };
+      } 
+      else if (mode === 'random') {
+        const randomCar = allCars[Math.floor(Math.random() * allCars.length)] || playerCar;
+        const brandName = typeof randomCar.brand === 'object' ? randomCar.brand?.name : randomCar.brand;
+        oppName = (brandName || "") + " " + (randomCar.name || "") + " (Random)";
+        oppImage = randomCar.image;
+        oppLevel = Math.max(1, Math.floor(Math.random() * 50) + 1);
+
+        const baseStats = calculateRaceStats(randomCar);
+        Object.keys(baseStats).forEach(key => {
+          if (typeof baseStats[key] === 'number') {
+            oppCarStats[key] = Math.round(baseStats[key] * (0.8 + Math.random() * 0.4));
+          }
+        });
+
+        const statBase = 10 + (oppLevel * 2);
+        const randStat = () => Math.max(1, Math.round(statBase * (0.5 + Math.random())));
+        oppPilot = {
+          shift: randStat(), reflex: randStat(), brave: randStat(), clean: randStat(),
+          acro: randStat(), turn: randStat(), brake: randStat(), throttle: randStat()
+        };
+      }
+      else if (mode === 'specific') {
+        const specOpp = customOpponents.find(o => o.id === parseInt(selectedOpponentId));
+        if (specOpp && specOpp.car) {
+          const brandName = typeof specOpp.car.brand === 'object' ? specOpp.car.brand?.name : specOpp.car.brand;
+          oppName = (brandName || "") + " " + (specOpp.car.name || "");
+          oppImage = specOpp.car.image;
+          oppLevel = specOpp.level;
+          oppPilotName = specOpp.name;
+          oppCarStats = calculateRaceStats(specOpp.car);
+          oppPilot = {
+            shift: specOpp.shift, reflex: specOpp.reflex, brave: specOpp.brave, clean: specOpp.clean,
+            acro: specOpp.acro, turn: specOpp.turn, brake: specOpp.brake, throttle: specOpp.throttle
+          };
         }
-      });
-
-      // Pilot stats: random variance ±20% around player's pilot stats
-      const oppPilot = {
-        shift:    Math.round(pilotStats.shift    * (0.82 + Math.random() * 0.36)),
-        reflex:   Math.round(pilotStats.reflex   * (0.82 + Math.random() * 0.36)),
-        brave:    Math.round(pilotStats.brave    * (0.82 + Math.random() * 0.36)),
-        clean:    Math.round(pilotStats.clean    * (0.82 + Math.random() * 0.36)),
-        acro:     Math.round(pilotStats.acro     * (0.82 + Math.random() * 0.36)),
-        turn:     Math.round(pilotStats.turn     * (0.82 + Math.random() * 0.36)),
-        brake:    Math.round(pilotStats.brake    * (0.82 + Math.random() * 0.36)),
-        throttle: Math.round(pilotStats.throttle * (0.82 + Math.random() * 0.36)),
-      };
-
-      const oppLevel = Math.max(1, playerLevel + (Math.floor(Math.random() * 3) - 1));
-      const pilotName = OPPONENT_NAMES[Math.floor(Math.random() * OPPONENT_NAMES.length)];
+      }
 
       setOpponent({
-        name: (playerCar.brand || "") + " " + (playerCar.name || "") + suffix,
-        pilotName,
+        name: oppName,
+        pilotName: oppPilotName,
         level: oppLevel,
         stats: oppCarStats,
         pilot: oppPilot,
-        // Flat structure for resolveTurn: { ...carStats, pilot: { ...pilotStats } }
         raceStats: { ...oppCarStats, pilot: oppPilot },
-        image: playerCar.image
+        image: oppImage
       });
 
-      const shuffled = [...TRACK_POOL].sort(() => 0.5 - Math.random());
-      const raceTrack = shuffled.slice(0, 3 + Math.floor(Math.random() * 2));
-      setTrack(raceTrack);
-
       setGameState('setup');
-    }, 1500);
+    }, 1000);
   };
 
   // --- 2. START RACE ---
@@ -174,10 +255,12 @@ export default function StreetRacing() {
     setTotalTireWear(prev => prev + (move.costGrip || 1));
     setTotalEngineWear(prev => prev + (move.costHealth || 0.5));
 
-    // Use centralized resolveTurn — pass opponent.raceStats (flat { ...carStats, pilot })
+    // Use centralized resolveTurn
     const opponentRaceStats = opponent?.raceStats || {};
-    const delta = resolveTurn(section, playerCarStats, pilotStats, move, opponentRaceStats, event, saved);
+    const { delta, debugLog } = resolveTurn(section, playerCarStats, pilotStats, move, opponentRaceStats, event, saved);
     const newGap = gap + delta;
+
+    setDebugLogArray(prev => [...prev, debugLog]);
 
     const gapIcon = delta > 0 ? '▲' : delta < 0 ? '▼' : '=';
     addLog(`${gapIcon} ${section.name} [${move.name}]: ${delta > 0 ? '+' : ''}${delta}m — Req: ${CAR_STAT_LABELS[section.carStat]} + ${PILOT_STAT_LABELS[section.driverStat]}. ${logMsg}`);
@@ -210,6 +293,21 @@ export default function StreetRacing() {
     updateCarFuel(equippedCarId, -fCost); 
   };
 
+  const fastRematch = () => {
+    if (money < 500) {
+      triggerEvent({ type: 'error', title: 'Povertà', message: 'Non hai nemmeno 500€ per scommettere!' });
+      return;
+    }
+    setGap(0);
+    setCurrentStep(0);
+    setBattleLog(["🏁 Gara iniziata! Le gomme stridono sull'asfalto freddo!"]);
+    setTotalFuelCost(0);
+    setTotalTireWear(0);
+    setTotalEngineWear(0);
+    setDebugLogArray([]);
+    setGameState('racing');
+  };
+
   const isMoveDisabled = (move) => {
     if (move.trigger === 'always') return false;
     if (move.trigger === track[currentStep]?.type) return false;
@@ -225,13 +323,13 @@ export default function StreetRacing() {
   };
 
   return (
-    <Win98Window title="Street Racing - Viale Industriale" imageUrl="/images/street.png">
+    <Win98Window title="Street Racing - Clandestino" imageUrl="/images/street.png">
       <div className="flex flex-col items-center justify-start p-2 bg-black border-4 border-gray-800 text-white font-pixel shadow-[inset_0_10px_50px_rgba(0,0,0,0.8)] min-h-[400px]">
         
         {/* IDLE / MATCHING */}
         {(gameState === 'idle' || gameState === 'matching') && (
           <div className="flex flex-col items-center gap-6 mt-10 w-full px-2">
-            <div className="w-full max-w-[320px] aspect-video border-4 border-red-900 bg-gray-900 overflow-hidden relative shadow-lg">
+            <div className="w-full max-w-[320px] aspect-video border-4 border-red-900 bg-gray-900 overflow-hidden relative shadow-lg mb-4">
               <img src="/images/street.png" className="w-full h-full object-cover opacity-60" alt="street" />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 {gameState === 'matching' ? (
@@ -242,27 +340,65 @@ export default function StreetRacing() {
                 ) : (
                   <>
                     <h2 className="text-xl md:text-2xl font-black italic text-red-500 mb-2">UNDERGROUND HUB</h2>
-                    <p className="text-[10px] text-gray-300">Trova una sfida. Rischia tutto. Diventa leggenda.</p>
+                    <p className="text-[10px] text-gray-300">Scegli il tracciato e l'avversario. Rischia 500€.</p>
                   </>
                 )}
               </div>
             </div>
             
-            <div className="flex gap-2 w-full max-w-[320px]">
-              <button 
-                onClick={findOpponent}
-                disabled={gameState === 'matching'}
-                className="flex-1 bg-win98-gray text-black py-2 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold hover:bg-gray-200 active:translate-y-1 text-xs sm:text-sm flex items-center justify-center text-center leading-tight"
-              >
-                Cerca Avversario
-              </button>
-              <button 
-                onClick={() => navigate('/map')}
-                className="flex-1 bg-gray-800 text-white py-2 border-2 border-gray-500 font-bold hover:bg-gray-700 text-xs sm:text-sm flex items-center justify-center"
-              >
-                Vai Via
-              </button>
-            </div>
+            {gameState === 'idle' && (
+              <div className="flex flex-col w-full max-w-[320px] bg-win98-gray p-2 border-4 border-t-white border-l-white border-b-gray-600 border-r-gray-600 text-black shadow-lg">
+                <div className="bg-blue-800 text-white px-2 py-1 font-bold text-xs mb-3 shadow-inner">
+                  1. SELEZIONA TRACCIATO
+                </div>
+                <select 
+                  value={selectedTrackId} 
+                  onChange={(e) => setSelectedTrackId(e.target.value)}
+                  className="w-full border-2 border-gray-400 p-2 mb-4 bg-white text-xs font-bold font-mono"
+                >
+                  <option value="random">Tracciato Casuale (Città)</option>
+                  {(dbTracks.length > 0 || customTracks.length > 0) && (
+                    <optgroup label="Tracciati Disponibili">
+                      {dbTracks.map(t => <option key={`db_${t.id}`} value={`db_${t.id}`}>{t.name}</option>)}
+                      {customTracks.map(t => <option key={`custom_${t.id}`} value={`custom_${t.id}`}>{t.name}</option>)}
+                    </optgroup>
+                  )}
+                </select>
+
+                <div className="bg-blue-800 text-white px-2 py-1 font-bold text-xs mb-3 shadow-inner">
+                  2. SELEZIONA AVVERSARIO
+                </div>
+                <div className="flex flex-col gap-2 font-mono">
+                  <button onClick={() => findOpponent('similar')} className="bg-gray-300 text-black py-2 border-2 border-t-white border-l-white border-b-gray-600 border-r-gray-600 font-bold hover:bg-gray-200 active:translate-y-px text-xs">
+                    Avversario Simile
+                  </button>
+                  <button onClick={() => findOpponent('random')} className="bg-gray-300 text-black py-2 border-2 border-t-white border-l-white border-b-gray-600 border-r-gray-600 font-bold hover:bg-gray-200 active:translate-y-px text-xs">
+                    Avversario Casuale
+                  </button>
+                  
+                  {customOpponents.length > 0 && (
+                    <div className="flex border-2 border-gray-500 mt-2 bg-white p-1 gap-1">
+                      <select 
+                        value={selectedOpponentId} 
+                        onChange={(e) => setSelectedOpponentId(e.target.value)}
+                        className="flex-1 bg-transparent text-[10px] outline-none"
+                      >
+                        {customOpponents.map(opp => (
+                          <option key={opp.id} value={opp.id}>{opp.name} ({typeof opp.car.brand === 'object' ? opp.car.brand?.name : opp.car.brand} {opp.car.name})</option>
+                        ))}
+                      </select>
+                      <button onClick={() => findOpponent('specific')} className="bg-win98-gray px-2 py-1 border-2 border-t-white border-l-white border-b-gray-600 border-r-gray-600 font-bold text-[10px] hover:bg-gray-200 active:translate-y-px">
+                        SFIDA
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                <button onClick={() => navigate('/map')} className="bg-gray-800 text-white py-2 border-2 border-gray-500 font-bold hover:bg-gray-700 text-sm mt-4">
+                  Torna alla Mappa
+                </button>
+              </div>
+            )}
           </div>
         )}
 
@@ -339,7 +475,7 @@ export default function StreetRacing() {
 
         {/* RACING PHASE */}
         {gameState === 'racing' && (
-          <div className="w-full flex flex-col h-full">
+          <div className="w-full flex flex-col h-full relative">
             {/* HUD */}
             <div className="grid grid-cols-3 gap-2 mb-2 p-2 bg-gray-900 border-b-2 border-red-600 relative overflow-hidden">
                <div className="bg-black/60 p-1 border border-blue-500/30">
@@ -374,6 +510,30 @@ export default function StreetRacing() {
             </div>
 
             {/* ACTION CENTER */}
+            <div className="flex justify-between items-center bg-gray-900 border-t border-gray-700 p-1 mb-1">
+              <button 
+                onClick={() => setShowDebugLog(!showDebugLog)} 
+                className="text-[9px] text-gray-400 underline hover:text-white"
+              >
+                {showDebugLog ? "Nascondi Log DM" : "Mostra Log DM"}
+              </button>
+            </div>
+            
+            {showDebugLog && (
+              <div className="absolute top-12 left-0 w-full h-[80%] bg-black/95 border-2 border-red-500 z-50 flex flex-col p-2 overflow-y-auto custom-scroll shadow-2xl">
+                <div className="flex justify-between items-center mb-2 border-b border-red-500 pb-1">
+                  <span className="text-red-500 font-bold text-xs tracking-widest">DM DEBUG LOGGING</span>
+                  <button onClick={() => setShowDebugLog(false)} className="text-white bg-red-900 px-2 border border-red-500 text-xs font-bold hover:bg-red-700">X</button>
+                </div>
+                {debugLogArray.length === 0 && <span className="text-gray-500 text-[10px]">Ancora nessun log...</span>}
+                {debugLogArray.map((log, i) => (
+                  <pre key={i} className="text-[9px] text-green-400 font-mono mb-3 whitespace-pre-wrap bg-green-900/20 p-1 border border-green-800/30">
+                    {log}
+                  </pre>
+                ))}
+              </div>
+            )}
+
             <div className="grid grid-cols-1 gap-1 pb-1">
                <button 
                  onClick={() => handleMove(null)}
@@ -427,12 +587,20 @@ export default function StreetRacing() {
               </div>
             </div>
 
-            <button 
-              onClick={() => setGameState('idle')}
-              className="w-full max-w-[288px] bg-win98-gray text-black py-4 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold text-lg hover:bg-gray-200 shadow-xl active:translate-y-1"
-            >
-              RITORNA AL HUB
-            </button>
+              <button 
+                onClick={fastRematch}
+                className="w-full max-w-[288px] mb-2 bg-blue-800 text-white py-3 border-4 border-t-blue-400 border-l-blue-400 border-b-blue-900 border-r-blue-900 font-bold text-lg hover:bg-blue-700 shadow-xl active:translate-y-1"
+              >
+                RIVINCITA ISTANTANEA (PAGA 500€)
+              </button>
+              <button 
+                onClick={() => {
+                  setGameState('idle');
+                }}
+                className="w-full max-w-[288px] bg-win98-gray text-black py-3 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold text-lg hover:bg-gray-200 shadow-xl active:translate-y-1"
+              >
+                RITORNA AL HUB
+              </button>
           </div>
         )}
 

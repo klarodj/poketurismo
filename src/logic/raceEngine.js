@@ -139,7 +139,17 @@ export const resolveTurn = (section, carStats, pilotStats, move, opponentStats, 
 
   // Convert normalized advantage to meters: max ±25m per section
   const METERS_PER_SECTION = 25;
-  return Math.round(combinedAdv * METERS_PER_SECTION);
+  const delta = Math.round(combinedAdv * METERS_PER_SECTION);
+
+  const debugLogStr = `[${section.name}]
+CarStat (${csKey}): Tu ${myCarStat} vs Lui ${oppCarStat} -> ${(carStatAdv > 0 ? '+' : '')}${carStatAdv.toFixed(2)}
+CarTech (${ctKey}): Tu ${myCarTech} vs Lui ${oppCarTech} -> ${(carTechAdv > 0 ? '+' : '')}${carTechAdv.toFixed(2)}
+PilotStat (${dsKey}): Tu ${myDriverStat} vs Lui ${oppDriverStat} -> ${(driverStatAdv > 0 ? '+' : '')}${driverStatAdv.toFixed(2)}
+PilotTech (${dtKey}): Tu ${myDriverTech} vs Lui ${oppDriverTech} -> ${(driverTechAdv > 0 ? '+' : '')}${driverTechAdv.toFixed(2)}
+Luck RNG: ${(oppLuck > 0 ? '+' : '')}${oppLuck.toFixed(2)}
+Delta Finale: ${delta}m`;
+
+  return { delta, debugLog: debugLogStr };
 };
 
 export const consumeSectionFuel = (car, move) => {

@@ -48,6 +48,7 @@ model Car {
   price        Float
   
   garages      Garage[]
+  customOpponents CustomOpponent[]
 }
 
 model Class {
@@ -204,6 +205,7 @@ model TrackSection {
   driverTech  String
   
   builds      TrackBuild[]
+  customBuilds CustomTrackSection[]
 }
 
 model TrackBuild {
@@ -273,5 +275,38 @@ model TrainingSession {
   trackId      Int
   track        Track  @relation(fields: [trackId], references: [id])
   image        String @default("track.png")
+}
+
+// ─── DEV SANDBOX ────────────────────────────────────────────────────────
+
+model CustomOpponent {
+  id        Int    @id @default(autoincrement())
+  name      String
+  carId     Int
+  car       Car    @relation(fields: [carId], references: [id])
+  level     Int
+  shift     Int
+  reflex    Int
+  brave     Int
+  clean     Int
+  acro      Int
+  turn      Int
+  brake     Int
+  throttle  Int
+}
+
+model CustomTrack {
+  id       Int    @id @default(autoincrement())
+  name     String
+  sections CustomTrackSection[]
+}
+
+model CustomTrackSection {
+  id            Int          @id @default(autoincrement())
+  customTrackId Int
+  customTrack   CustomTrack  @relation(fields: [customTrackId], references: [id], onDelete: Cascade)
+  sectionId     Int
+  section       TrackSection @relation(fields: [sectionId], references: [id])
+  ord           Int
 }
 

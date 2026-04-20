@@ -15,6 +15,7 @@ import GarageAuto from './pages/GarageAuto';
 import GarageCarDetail from './pages/GarageCarDetail';
 import Meet from './pages/Meet';
 import StreetRacing from './pages/StreetRacing';
+import DevSandbox from './pages/DevSandbox';
 
 import { useEffect } from 'react';
 import usePlayerStore from './store/playerStore';
@@ -67,6 +68,7 @@ function App() {
           <Route path="track-race" element={<TrackRace />} />
           <Route path="meet" element={<Meet />} />
           <Route path="street-racing" element={<StreetRacing />} />
+          <Route path="dev-sandbox" element={<DevSandbox />} />
         </Route>
       </Routes>
     </BrowserRouter>
