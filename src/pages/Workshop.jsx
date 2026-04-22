@@ -1,42 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
+import { performCarService } from '../services/api';
 
 export default function Workshop() {
-  const { money, removeMoney } = usePlayerStore();
+  const { money, id: userId, initialize: refreshPlayer } = usePlayerStore();
   const { equippedCarId, triggerEvent } = useGameStore();
-  const { cars, restoreWear, setEquippedCarId } = useGarageStore();
+  const { cars, initialize: refreshGarage, setEquippedCarId } = useGarageStore();
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const equippedCar = cars.find(c => c.id === equippedCarId);
 
+  // Helper to calculate KM malus level
+  const getKmMalusLabel = (car) => {
+    if (!car) return null;
+    const diffKm = car.km - (car.serviceKm || 0);
+    if (diffKm >= 400000) return { label: 'CRITICO (100%)', color: 'text-red-600' };
+    if (diffKm >= 300000) return { label: 'GRAVE (50%)', color: 'text-red-600' };
+    if (diffKm >= 200000) return { label: 'ELEVATO (10%)', color: 'text-orange-600' };
+    if (diffKm >= 100000) return { label: 'LIEVE (1%)', color: 'text-yellow-600' };
+    return { label: 'NESSUNO', color: 'text-green-600' };
+  };
+
   const SERVICES = [
-    { id: 'engine', name: 'Tagliando', desc: 'Sostituzione olio e filtri. Ripristina salute motore.', price: 150, image: 'oil.png' },
+    { id: 'engine', name: 'Tagliando', desc: 'Olio, filtri e reset KM malus. Ripristina salute motore.', price: 150, image: 'oil.png' },
     { id: 'tires', name: 'Cambio Gomme', desc: 'Nuova mescola per massimo grip.', price: 500, image: 'tyre.png' },
-    { id: 'rebuild', name: 'Rifare Motore', desc: 'Revisione completa del blocco motore.', price: 2500, image: 'rebuild.png' },
-    { id: 'full', name: 'Riparare Auto', desc: 'Ripristino totale meccanica e carrozzeria.', price: 3500, image: 'repair.png' },
+    { id: 'rebuild', name: 'Rifare Motore', desc: 'Revisione completa. Necessario se il motore è fuso (0%).', price: 2500, image: 'rebuild.png' },
+    { id: 'full', name: 'Riparare Auto', desc: 'Ripristino totale (Motore, Gomme e KM malus).', price: 3500, image: 'repair.png' },
   ];
 
-  const handleMaintenance = (service) => {
+  const handleMaintenance = async (service) => {
     if (!equippedCar) {
       triggerEvent({ type: 'error', title: 'Nessuna Auto', message: 'Scegli un\'auto dal piazzale.' });
       return;
     }
 
-    const currentHealth = service.id === 'tires' ? equippedCar.tireGrip : (service.id === 'full' ? Math.min(equippedCar.engineHealth, equippedCar.tireGrip) : equippedCar.engineHealth);
+    if (isProcessing) return;
 
-    if (currentHealth === 100 && service.id !== 'full') {
+    // Logic for "is it already at 100%?"
+    const diffKm = equippedCar.km - (equippedCar.serviceKm || 0);
+    const needsKmReset = (service.id === 'engine' || service.id === 'full' || service.id === 'rebuild') && diffKm >= 100000;
+    const needsEngineHealth = (service.id === 'engine' || service.id === 'full' || service.id === 'rebuild') && equippedCar.engineHealth < 100;
+    const needsTires = (service.id === 'tires' || service.id === 'full') && equippedCar.tireGrip < 100;
+
+    if (!needsKmReset && !needsEngineHealth && !needsTires) {
       triggerEvent({ type: 'info', title: 'A posto', message: 'Questo componente è già in perfette condizioni.' });
       return;
     }
 
-    if (money >= service.price) {
-      removeMoney(service.price);
-      restoreWear(equippedCarId, service.id);
-      triggerEvent({ type: 'info', title: 'Lavoro Eseguito', message: `Hai speso €${service.price} per ${service.name}.` });
-    } else {
+    if (money < service.price) {
       triggerEvent({ type: 'error', title: 'Fondi Insufficienti', message: 'Il meccanico non ti fa credito.' });
+      return;
+    }
+
+    try {
+      setIsProcessing(true);
+      const res = await performCarService(equippedCar.id, userId, service.id, service.price);
+      
+      if (res.success) {
+        await refreshPlayer(userId);
+        await refreshGarage(userId);
+        triggerEvent({ type: 'info', title: 'Lavoro Eseguito', message: `Hai speso €${service.price} per ${service.name}.` });
+      }
+    } catch (err) {
+      triggerEvent({ type: 'error', title: 'Errore Officina', message: 'Il meccanico ha avuto un problema con la fattura.' });
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -65,7 +96,8 @@ export default function Workshop() {
                 </div>
                 <button 
                   onClick={() => handleMaintenance(service)}
-                  className="bg-win98-gray h-10 px-4 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white font-bold whitespace-nowrap"
+                  disabled={isProcessing}
+                  className={`bg-win98-gray h-10 px-4 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white font-bold whitespace-nowrap ${isProcessing ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   €{service.price}
                 </button>
@@ -78,32 +110,47 @@ export default function Workshop() {
         <div className="w-full lg:w-80 flex flex-col">
           <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Il Tuo Piazzale</h2>
           <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 shadow-win98-inset">
-            <div className="space-y-2">
-              {cars.map(car => (
-                <div 
-                  key={car.id} 
-                  className={`p-2 border-2 cursor-pointer ${car.id === equippedCarId ? 'bg-win98-blue text-white font-bold' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-black'}`}
-                  onClick={() => setEquippedCarId(car.id)}
-                >
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="truncate mr-2">{car.name}</span>
-                    <span className="text-xs opacity-80">{car.km.toLocaleString()} KM</span>
-                  </div>
-                  <div className="text-xs mt-1 grid grid-cols-2 gap-x-2">
-                    <div className="flex justify-between">
-                      <span>Motore:</span>
-                      <span className={car.engineHealth < 50 ? (car.id === equippedCarId ? 'text-yellow-300' : 'text-red-600') : ''}>{car.engineHealth}%</span>
+            <div className="space-y-2 max-h-[400px] overflow-y-auto">
+              {cars.map(car => {
+                const kmMalus = getKmMalusLabel(car);
+                return (
+                  <div 
+                    key={car.id} 
+                    className={`p-2 border-2 cursor-pointer ${car.id === equippedCarId ? 'bg-win98-blue text-white font-bold' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-black'}`}
+                    onClick={() => setEquippedCarId(car.id)}
+                  >
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="truncate mr-2">{car.name}</span>
+                      <span className="text-xs opacity-80">{car.km.toLocaleString()} KM</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Gomme:</span>
-                      <span className={car.tireGrip < 50 ? (car.id === equippedCarId ? 'text-yellow-300' : 'text-red-600') : ''}>{car.tireGrip}%</span>
+                    <div className="text-[10px] mt-1 grid grid-cols-2 gap-x-2">
+                      <div className="flex justify-between">
+                        <span>Motore:</span>
+                        <span className={car.engineHealth < 50 ? (car.id === equippedCarId ? 'text-yellow-300' : 'text-red-600') : ''}>
+                          {car.engineHealth === 0 ? 'FUSO' : `${car.engineHealth}%`}
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Gomme:</span>
+                        <span className={car.tireGrip < 50 ? (car.id === equippedCarId ? 'text-yellow-300' : 'text-red-600') : ''}>{car.tireGrip}%</span>
+                      </div>
+                      <div className="col-span-2 flex justify-between mt-1 border-t border-black/10 pt-1">
+                        <span>Usura KM:</span>
+                        <span className={kmMalus.color}>{kmMalus.label}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
               {cars.length === 0 && <p className="p-4 italic text-gray-400">Piazzale vuoto.</p>}
             </div>
           </div>
+          {equippedCar && equippedCar.engineHealth === 0 && (
+             <div className="mt-4 bg-red-600 text-white p-2 font-bold text-center border-2 border-white animate-pulse">
+                ATTENZIONE: MOTORE FUSO!<br/>
+                L'AUTO NON PUÒ GAREGGIARE.
+             </div>
+          )}
         </div>
 
       </div>

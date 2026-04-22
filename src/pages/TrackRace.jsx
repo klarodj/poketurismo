@@ -11,10 +11,11 @@ import {
   consumeSectionFuel, 
   rollDungeonMaster, 
   savingThrow,
+  calculateEngineRisk,
   CAR_STAT_LABELS,
   PILOT_STAT_LABELS
 } from '../logic/raceEngine';
-import { fetchTracks } from '../services/api';
+import { fetchTracks, saveCarStats } from '../services/api';
 
 export default function TrackRace() {
   const navigate = useNavigate();
@@ -119,6 +120,10 @@ export default function TrackRace() {
   if (!car) return null;
 
   const handleStartRace = () => {
+    if (car.engineHealth <= 0) {
+      triggerEvent({ type: 'error', title: 'Motore Fuso', message: 'Il motore è distrutto! Vai dal meccanico per rifarlo.' });
+      return;
+    }
     setPhase('racing');
     addLog(`🚩 Partenza dal ${track.name}! Il meteo è ${track.weather}.`);
   };
@@ -156,8 +161,23 @@ export default function TrackRace() {
 
     // 3. Resolve Gap
     const delta = resolveTurn(section, currentStats, pilotStats, move, track.opponent.stats, event, saved);
-    setGap(prev => prev + delta);
-    addLog(`Divario turno: ${delta > 0 ? '+' : ''}${delta}. Gap totale: ${gap + delta}.`);
+    const newGap = gap + delta;
+
+    // 3.5 CHECK FOR ENGINE KO (Spaccare il motore)
+    const riskMultiplier = move && move.costHealth > 1 ? 1.5 : 1;
+    const koChance = calculateEngineRisk(car, riskMultiplier);
+    const koRoll = Math.random();
+    
+    if (koRoll < koChance) {
+      addLog(`🔥 FUMO DAL COFANO! IL MOTORE È ESPLOSO! 💀`);
+      handleFinishRace(-999, 
+        100 // Instant 100% wear
+      );
+      return;
+    }
+
+    setGap(newGap);
+    addLog(`Divario turno: ${delta > 0 ? '+' : ''}${delta}. Gap totale: ${newGap}.`);
 
     // 4. Consume Fuel & Apply Wear (Push your luck)
     const fuelBurn = consumeSectionFuel(car, move);
@@ -175,7 +195,7 @@ export default function TrackRace() {
     }
   };
 
-  const handleFinishRace = (finalGap) => {
+  const handleFinishRace = (finalGap, engineOverrideWear = null) => {
     setPhase('result');
     if (finalGap > 0) {
       addLog(`🏆 VITTORIA CONTRO ${track.opponent.name}!`);
@@ -194,6 +214,17 @@ export default function TrackRace() {
         message: `Hai Perso. Gap Finale: ${finalGap}. L'avversario era troppo veloce.`
       });
     }
+
+    // PERSIST STATS
+    const addedKm = track.sections.length * 10;
+    const finalEngineHealth = engineOverrideWear !== null ? 0 : Math.max(0, car.engineHealth);
+    const finalTireGrip = Math.max(0, car.tireGrip);
+
+    saveCarStats(car.id, {
+      km: addedKm,
+      engineHealth: finalEngineHealth,
+      tireGrip: finalTireGrip
+    }).catch(err => console.error("Failed to persist stats:", err));
   };
 
   return (

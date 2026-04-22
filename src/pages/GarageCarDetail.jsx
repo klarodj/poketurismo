@@ -116,14 +116,26 @@ export default function GarageCarDetail() {
                    <h4 className="text-base font-bold border-b border-gray-500 mb-3 uppercase">Telemetria</h4>
                     {stats && (
                       <div className="space-y-1 text-[10px] font-bold uppercase">
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.speed}</span><span>{stats.speed}</span></div>
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.acceleration}</span><span>{stats.acceleration}</span></div>
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.revving}</span><span>{stats.revving}</span></div>
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.transmission}</span><span>{stats.transmission}</span></div>
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.brake}</span><span>{stats.brake}</span></div>
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.traction}</span><span>{stats.traction}</span></div>
-                         <div className="flex justify-between border-b border-white/10 pb-0.5"><span>{CAR_STAT_LABELS.turnSlow}</span><span>{stats.turnSlow}</span></div>
-                         <div className="flex justify-between"><span>{CAR_STAT_LABELS.turnFast}</span><span>{stats.turnFast}</span></div>
+                         {[
+                           { key: 'speed', label: CAR_STAT_LABELS.speed },
+                           { key: 'acceleration', label: CAR_STAT_LABELS.acceleration },
+                           { key: 'revving', label: CAR_STAT_LABELS.revving },
+                           { key: 'transmission', label: CAR_STAT_LABELS.transmission },
+                           { key: 'brake', label: CAR_STAT_LABELS.brake },
+                           { key: 'traction', label: CAR_STAT_LABELS.traction },
+                           { key: 'turnSlow', label: CAR_STAT_LABELS.turnSlow },
+                           { key: 'turnFast', label: CAR_STAT_LABELS.turnFast }
+                         ].map(({ key, label }) => (
+                           <div key={key} className="flex justify-between border-b border-white/10 pb-0.5">
+                             <span>{label}</span>
+                             <span>
+                               {stats[key]}
+                               {stats.malusInfo && stats.malusInfo[key] > 0 && (
+                                 <span className="text-red-500 ml-1">(-{stats.malusInfo[key]})</span>
+                               )}
+                             </span>
+                           </div>
+                         ))}
                       </div>
                     )}
                 </div>

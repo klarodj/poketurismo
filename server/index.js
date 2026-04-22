@@ -263,6 +263,51 @@ app.delete('/api/garage/:garageId/mods/:modId', async (req, res) => {
   }
 });
 
+app.post('/api/garage/:garageId/service', async (req, res) => {
+  try {
+    const { garageId } = req.params;
+    const { serviceType, price, userId } = req.body;
+    
+    // Check funds
+    const user = await prisma.user.findUnique({ where: { id: parseInt(userId) } });
+    if (user.money < price) {
+      return res.status(400).json({ error: 'Fondi insufficienti' });
+    }
+
+    // Deduct money
+    await prisma.user.update({
+      where: { id: parseInt(userId) },
+      data: { money: { decrement: price } }
+    });
+
+    const garage = await prisma.garage.findUnique({ where: { id: parseInt(garageId) } });
+    let updateData = {};
+
+    if (serviceType === 'tires') {
+      updateData.tireGrip = 100;
+    } else if (serviceType === 'engine') {
+      updateData.engineHealth = 100;
+      updateData.serviceKm = garage.km;
+    } else if (serviceType === 'rebuild') {
+      updateData.engineHealth = 100;
+      updateData.serviceKm = garage.km;
+    } else if (serviceType === 'full') {
+      updateData.engineHealth = 100;
+      updateData.tireGrip = 100;
+      updateData.serviceKm = garage.km;
+    }
+
+    const updatedGarage = await prisma.garage.update({
+      where: { id: parseInt(garageId) },
+      data: updateData
+    });
+
+    res.json({ success: true, updatedGarage, money: user.money - price });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.post('/api/purchase', async (req, res) => {
   try {
     const { userId, carId, price } = req.body;
@@ -299,6 +344,28 @@ app.post('/api/purchase', async (req, res) => {
     });
 
     res.json({ user, newGarageItem });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/garage/:garageId/stats', async (req, res) => {
+  try {
+    const { garageId } = req.params;
+    const { km, engineHealth, tireGrip, currentFuel } = req.body;
+    
+    const updated = await prisma.garage.update({
+      where: { id: parseInt(garageId) },
+      data: {
+        km: km !== undefined ? { increment: km } : undefined,
+        engineHealth: engineHealth !== undefined ? Math.max(0, engineHealth) : undefined,
+        tireGrip: tireGrip !== undefined ? Math.max(0, tireGrip) : undefined,
+        // fuel is currently not in DB but managed locally in store, 
+        // but if we want to persist it we'd need to add it to schema.
+        // For now let's just persist what we have.
+      }
+    });
+    res.json({ success: true, updated });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

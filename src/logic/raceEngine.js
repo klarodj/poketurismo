@@ -29,26 +29,69 @@ export const calculateDynamicWeight = (baseKG, currentFuelLiters) => {
 export const calculateRaceStats = (car) => {
   const dynamicKG = calculateDynamicWeight(car.kg, car.currentFuel || 0);
   
-  // Moltiplicatori basati sullo stato dell'auto (100 = 1.0)
   const gripFactor = (car.tireGrip ?? 100) / 100;
   const healthFactor = (car.engineHealth ?? 100) / 100;
   
-  // Utilizziamo le statistiche base provenienti dal DB, che sono già bilanciate per ogni componente (circa 10-100 come valori decimali)
-  // Applichiamo i malus per usura pneumatici o stato motore:
-  // - La salute del motore impatta velocità, accelerazione e cambio
-  // - L'usura gomme impatta frenata, trazione e tenuta di strada
-  
-  return {
+  let diffKm = (car.km || 0) - (car.serviceKm || 0);
+  let kmMalusPercent = 0;
+  if (diffKm >= 400000) kmMalusPercent = 1.0;
+  else if (diffKm >= 300000) kmMalusPercent = 0.50;
+  else if (diffKm >= 200000) kmMalusPercent = 0.10;
+  else if (diffKm >= 100000) kmMalusPercent = 0.01;
+
+  const kmFactor = 1.0 - kmMalusPercent;
+
+  const finalStats = {
     dynamicKG,
-    speed: Number((car.speed * healthFactor).toFixed(2)) || 20,
-    acceleration: Number((car.acceleration * gripFactor * healthFactor).toFixed(2)) || 20,
-    revving: Number((car.revving * healthFactor).toFixed(2)) || 20,
-    transmission: Number((car.transmission * healthFactor).toFixed(2)) || 20,
-    turnSlow: Number((car.turnSlow * gripFactor).toFixed(2)) || 20,
-    turnFast: Number((car.turnFast * gripFactor).toFixed(2)) || 20,
-    brake: Number((car.brake * gripFactor).toFixed(2)) || 20,
-    traction: Number((car.traction * gripFactor).toFixed(2)) || 20,
+    speed: Number((car.speed * healthFactor * kmFactor).toFixed(2)) || 20,
+    acceleration: Number((car.acceleration * gripFactor * healthFactor * kmFactor).toFixed(2)) || 20,
+    revving: Number((car.revving * healthFactor * kmFactor).toFixed(2)) || 20,
+    transmission: Number((car.transmission * healthFactor * kmFactor).toFixed(2)) || 20,
+    turnSlow: Number((car.turnSlow * gripFactor * kmFactor).toFixed(2)) || 20,
+    turnFast: Number((car.turnFast * gripFactor * kmFactor).toFixed(2)) || 20,
+    brake: Number((car.brake * gripFactor * kmFactor).toFixed(2)) || 20,
+    traction: Number((car.traction * gripFactor * kmFactor).toFixed(2)) || 20,
   };
+
+  const malusInfo = {
+    speed: Number((car.speed - finalStats.speed).toFixed(2)),
+    acceleration: Number((car.acceleration - finalStats.acceleration).toFixed(2)),
+    revving: Number((car.revving - finalStats.revving).toFixed(2)),
+    transmission: Number((car.transmission - finalStats.transmission).toFixed(2)),
+    turnSlow: Number((car.turnSlow - finalStats.turnSlow).toFixed(2)),
+    turnFast: Number((car.turnFast - finalStats.turnFast).toFixed(2)),
+    brake: Number((car.brake - finalStats.brake).toFixed(2)),
+    traction: Number((car.traction - finalStats.traction).toFixed(2)),
+  };
+
+  return { ...finalStats, malusInfo };
+};
+
+/**
+ * Calculates the probability of the engine breaking (KO).
+ * Base 1%, grows exponentially with wear and KM malus.
+ * Total Risk = (Wear%) + (KM Malus%)
+ * Chance = 0.01 + (Risk ^ 2) * 0.5
+ */
+export const calculateEngineRisk = (car, moveRiskMultiplier = 1) => {
+  const engineWear = (100 - (car.engineHealth ?? 100)) / 100; // 0 to 1
+  
+  let diffKm = (car.km || 0) - (car.serviceKm || 0);
+  let kmMalusPercent = 0;
+  if (diffKm >= 400000) kmMalusPercent = 1.0;
+  else if (diffKm >= 300000) kmMalusPercent = 0.50;
+  else if (diffKm >= 200000) kmMalusPercent = 0.10;
+  else if (diffKm >= 100000) kmMalusPercent = 0.01;
+
+  const totalRisk = Math.min(1, engineWear + kmMalusPercent);
+  
+  // Exponential growth: 1% base + risk^2 * 50%
+  // If Risk=0.5 (50% wear), Chance = 1% + 0.25*50% = 13.5%
+  // If Risk=1.0 (100% wear), Chance = 1% + 50% = 51%
+  const chance = 0.01 + (Math.pow(totalRisk, 2) * 0.5);
+  
+  // Move can increase this risk for the current section
+  return chance * moveRiskMultiplier;
 };
 
 export const rollDungeonMaster = () => {

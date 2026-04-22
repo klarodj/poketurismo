@@ -107,6 +107,9 @@ model Garage {
   traction     Float
   km           Int      @default(0)
   sellPrice    Float    @default(0.0)
+  engineHealth Int      @default(100)
+  tireGrip     Int      @default(100)
+  serviceKm    Int      @default(0)
   
   mods         Mod[]
 }

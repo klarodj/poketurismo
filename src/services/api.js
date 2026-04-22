@@ -116,6 +116,26 @@ export const completeTraining = async (sessionId, userId) => {
   return res.json();
 };
 
+export const performCarService = async (garageId, userId, serviceType, price) => {
+  const res = await fetch(`${BASE_URL}/garage/${garageId}/service`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, serviceType, price })
+  });
+  if (!res.ok) throw new Error('Service failed');
+  return res.json();
+};
+
+export const saveCarStats = async (garageId, stats) => {
+  const res = await fetch(`${BASE_URL}/garage/${garageId}/stats`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(stats)
+  });
+  if (!res.ok) throw new Error('Failed to save stats');
+  return res.json();
+};
+
 // --- DEV SANDBOX ---
 export const fetchTrackSections = async () => {
   const res = await fetch(`${BASE_URL}/track-sections`);

@@ -8,15 +8,23 @@ const calculateRaceStats = (car) => {
   const gripFactor = (car.tireGrip ?? 100) / 100;
   const healthFactor = (car.engineHealth ?? 100) / 100;
   
+  // KM Malus Logic
+  let kmMalus = 1.0;
+  const diffKm = (car.km || 0) - (car.serviceKm || 0);
+  if (diffKm >= 400000) kmMalus = 0;
+  else if (diffKm >= 300000) kmMalus = 0.50;
+  else if (diffKm >= 200000) kmMalus = 0.90;
+  else if (diffKm >= 100000) kmMalus = 0.99;
+
   return {
-    speed: Number((car.speed * healthFactor).toFixed(2)) || 20,
-    acceleration: Number((car.acceleration * gripFactor * healthFactor).toFixed(2)) || 20,
-    revving: Number((car.revving * healthFactor).toFixed(2)) || 20,
-    transmission: Number((car.transmission * healthFactor).toFixed(2)) || 20,
-    turnSlow: Number((car.turnSlow * gripFactor).toFixed(2)) || 20,
-    turnFast: Number((car.turnFast * gripFactor).toFixed(2)) || 20,
-    brake: Number((car.brake * gripFactor).toFixed(2)) || 20,
-    traction: Number((car.traction * gripFactor).toFixed(2)) || 20,
+    speed: Number((car.speed * healthFactor * kmMalus).toFixed(2)) || 20,
+    acceleration: Number((car.acceleration * gripFactor * healthFactor * kmMalus).toFixed(2)) || 20,
+    revving: Number((car.revving * healthFactor * kmMalus).toFixed(2)) || 20,
+    transmission: Number((car.transmission * healthFactor * kmMalus).toFixed(2)) || 20,
+    turnSlow: Number((car.turnSlow * gripFactor * kmMalus).toFixed(2)) || 20,
+    turnFast: Number((car.turnFast * gripFactor * kmMalus).toFixed(2)) || 20,
+    brake: Number((car.brake * gripFactor * kmMalus).toFixed(2)) || 20,
+    traction: Number((car.traction * gripFactor * kmMalus).toFixed(2)) || 20,
   };
 };
 

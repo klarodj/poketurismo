@@ -29,8 +29,9 @@ const useGarageStore = create((set, get) => ({
         turnFast: item.turnFast,
         brake: item.brake,
         traction: item.traction,
-        tireGrip: 100, // Still mapping locally for now, db might need health fields
-        engineHealth: 100,
+        tireGrip: item.tireGrip ?? 100,
+        engineHealth: item.engineHealth ?? 100,
+        serviceKm: item.serviceKm ?? 0,
         fuelCapacity: 45, 
         currentFuel: 20,
         fuelType: 'Normale',

@@ -11,9 +11,11 @@ import {
   resolveTurn,
   rollDungeonMaster,
   savingThrow,
+  calculateEngineRisk,
   CAR_STAT_LABELS,
   PILOT_STAT_LABELS
 } from '../logic/raceEngine';
+import { saveCarStats } from '../services/api';
 
 // Hardcoded track sections aligned with DB structure (2 car + 2 pilot requirements)
 const TRACK_POOL = [
@@ -226,6 +228,10 @@ export default function StreetRacing() {
       triggerEvent({ type: 'error', title: 'Povertà', message: 'Non hai nemmeno 500€ per scommettere!' });
       return;
     }
+    if (playerCar.engineHealth <= 0) {
+      triggerEvent({ type: 'error', title: 'Motore Fuso', message: 'Il motore è distrutto! Vai dal meccanico per rifarlo.' });
+      return;
+    }
     setGap(0);
     setCurrentStep(0);
     setBattleLog(["🏁 Gara iniziata! Le gomme stridono sull'asfalto freddo!"]);
@@ -255,12 +261,26 @@ export default function StreetRacing() {
     setTotalTireWear(prev => prev + (move.costGrip || 1));
     setTotalEngineWear(prev => prev + (move.costHealth || 0.5));
 
-    // Use centralized resolveTurn
+    // Resolve Turn
     const opponentRaceStats = opponent?.raceStats || {};
     const { delta, debugLog } = resolveTurn(section, playerCarStats, pilotStats, move, opponentRaceStats, event, saved);
     const newGap = gap + delta;
-
     setDebugLogArray(prev => [...prev, debugLog]);
+
+    // 2. CHECK FOR ENGINE KO (Spaccare il motore)
+    const riskMultiplier = move.costHealth > 1 ? 1.5 : 1;
+    const koChance = calculateEngineRisk(playerCar, riskMultiplier);
+    const koRoll = Math.random();
+    
+    if (koRoll < koChance) {
+      addLog(`🔥 FUMO DAL COFANO! IL MOTORE È ESPLOSO! 💀`);
+      finishRace(-999, 
+        totalFuelCost + (move.aggressiveness || 1) * 2, 
+        totalTireWear + (move.costGrip || 1), 
+        100 // Instant 100% wear
+      );
+      return;
+    }
 
     const gapIcon = delta > 0 ? '▲' : delta < 0 ? '▼' : '=';
     addLog(`${gapIcon} ${section.name} [${move.name}]: ${delta > 0 ? '+' : ''}${delta}m — Req: ${CAR_STAT_LABELS[section.carStat]} + ${PILOT_STAT_LABELS[section.driverStat]}. ${logMsg}`);
@@ -291,6 +311,17 @@ export default function StreetRacing() {
 
     applyWear(equippedCarId, tWear, eWear); 
     updateCarFuel(equippedCarId, -fCost); 
+
+    // PERSIST TO DB
+    const finalEngineHealth = Math.max(0, playerCar.engineHealth - eWear);
+    const finalTireGrip = Math.max(0, playerCar.tireGrip - tWear);
+    const addedKm = track.length * 10;
+
+    saveCarStats(equippedCarId, {
+      km: addedKm,
+      engineHealth: finalEngineHealth,
+      tireGrip: finalTireGrip
+    }).catch(err => console.error("Failed to persist race stats:", err));
   };
 
   const fastRematch = () => {
