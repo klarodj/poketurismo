@@ -100,6 +100,40 @@ export const fetchChampionships = async () => {
   return res.json();
 };
 
+export const fetchActiveChampionshipEntry = async (userId) => {
+  const res = await fetch(`${BASE_URL}/championship-entries/active/${userId}`);
+  if (!res.ok) throw new Error('Failed to fetch active championship');
+  return res.json();
+};
+
+export const fetchChampionshipEntry = async (entryId, userId) => {
+  const res = await fetch(`${BASE_URL}/championship-entries/${entryId}?userId=${userId}`);
+  if (!res.ok) throw new Error('Failed to fetch championship progress');
+  return res.json();
+};
+
+export const enterChampionship = async (championshipId, userId) => {
+  const res = await fetch(`${BASE_URL}/championships/${championshipId}/enter`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Championship entry failed');
+  return data;
+};
+
+export const recordChampionshipRoundResult = async (entryId, result) => {
+  const res = await fetch(`${BASE_URL}/championship-entries/${entryId}/results`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(result)
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to save championship result');
+  return data;
+};
+
 export const fetchTrainingSessions = async () => {
   const res = await fetch(`${BASE_URL}/training-sessions`);
   if (!res.ok) throw new Error('Failed to fetch training sessions');
@@ -174,4 +208,3 @@ export const createCustomTrack = async (trackData) => {
   if (!res.ok) throw new Error('Failed to create track');
   return res.json();
 };
-
