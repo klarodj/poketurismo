@@ -21,6 +21,16 @@ export const PILOT_STAT_LABELS = {
   shift: 'Cambiata'
 };
 
+export const getSectionType = (section) => {
+  if (section?.type) return section.type;
+
+  const name = (section?.name || '').toLowerCase();
+  if (/tornant|hairpin|curva|parabolica/.test(name)) return 'Tornante';
+  if (/chicane|variante|esse/.test(name)) return 'Chicane';
+  if (/rettifil|rettiline|straight|semaforo/.test(name)) return 'Rettilineo';
+  return 'Misto';
+};
+
 export const calculateDynamicWeight = (baseKG, currentFuelLiters) => {
   // Fuel density approx 0.75 KG per liter
   return Math.round(baseKG + (currentFuelLiters * 0.75));
@@ -93,6 +103,10 @@ export const calculateEngineRisk = (car, moveRiskMultiplier = 1) => {
   // Move can increase this risk for the current section
   return chance * moveRiskMultiplier;
 };
+
+export const rollEngineFailure = (car, moveRiskMultiplier = 1) => (
+  Math.random() < calculateEngineRisk(car, moveRiskMultiplier)
+);
 
 export const rollDungeonMaster = () => {
   // Simulates rolling an invisible 20-sided die
