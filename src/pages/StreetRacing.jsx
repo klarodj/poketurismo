@@ -12,6 +12,7 @@ import {
   rollDungeonMaster,
   savingThrow,
   calculateEngineRisk,
+  getSectionType,
   CAR_STAT_LABELS,
   PILOT_STAT_LABELS
 } from '../logic/raceEngine';
@@ -341,7 +342,7 @@ export default function StreetRacing() {
 
   const isMoveDisabled = (move) => {
     if (move.trigger === 'always') return false;
-    if (move.trigger === track[currentStep]?.type) return false;
+    if (move.trigger.toLowerCase() === getSectionType(track[currentStep]).toLowerCase()) return false;
     if (move.trigger === 'Gap-Negative' && gap < 0) return false;
     return true;
   };
