@@ -16,7 +16,13 @@ import {
   CAR_STAT_LABELS,
   PILOT_STAT_LABELS
 } from '../logic/raceEngine';
-import { fetchTracks, saveCarStats } from '../services/api';
+import {
+  fetchTracks,
+  saveCarStats,
+  fetchChampionshipEntry,
+  recordChampionshipRoundResult,
+  fetchPlayer
+} from '../services/api';
 
 const formatStat = (labels, stat) => labels[stat] || stat || '—';
 const formatMoveBonus = (move) => Object.entries(move?.bonus || {})
@@ -41,7 +47,10 @@ export default function TrackRace() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const trackId = searchParams.get('id');
-  const { addMoney, addXp, stats: pilotStats } = usePlayerStore();
+  const entryIdParam = searchParams.get('entryId');
+  const championshipEntryId = entryIdParam ? Number(entryIdParam) : null;
+  const roundNumber = Number(searchParams.get('round') || 0);
+  const { id: userId, addMoney, addXp, setWallet, stats: pilotStats } = usePlayerStore();
   const { cars, isLoading: garageLoading, updateCarFuel, applyWear } = useGarageStore();
   const { moves, equippedMoves } = useInventoryStore();
   const { equippedCarId, triggerEvent } = useGameStore();
@@ -49,6 +58,10 @@ export default function TrackRace() {
   const carId = car?.id;
 
   const [track, setTrack] = useState(null);
+  const [championshipEntry, setChampionshipEntry] = useState(null);
+  const [championshipResult, setChampionshipResult] = useState(null);
+  const [championshipSaveError, setChampionshipSaveError] = useState('');
+  const [savingChampionshipResult, setSavingChampionshipResult] = useState(false);
   const [loadError, setLoadError] = useState('');
   const [readyRaceKey, setReadyRaceKey] = useState('');
   const [phase, setPhase] = useState('loadout');
@@ -60,10 +73,11 @@ export default function TrackRace() {
   const [engineFailed, setEngineFailed] = useState(false);
   const loadedRaceKeyRef = useRef('');
   const raceStartCondition = useRef(null);
+  const finishedRaceRef = useRef(null);
   const playerMoves = moves.filter((move) => equippedMoves.includes(move.id));
   const currentSection = track?.sections[currentSectionIndex];
   const gapPosition = Math.max(8, Math.min(92, 50 + gap / 2));
-  const raceKey = trackId && carId ? `${trackId}:${carId}` : '';
+  const raceKey = trackId && carId ? `${trackId}:${carId}:${championshipEntryId || 'single'}:${roundNumber}` : '';
   const loading = Boolean(car && raceKey && readyRaceKey !== raceKey);
 
   useEffect(() => {
@@ -73,16 +87,32 @@ export default function TrackRace() {
     }
     if (!carId) return;
 
-    const raceKey = `${trackId}:${carId}`;
+    const raceKey = `${trackId}:${carId}:${championshipEntryId || 'single'}:${roundNumber}`;
     if (loadedRaceKeyRef.current === raceKey) return;
     loadedRaceKeyRef.current = raceKey;
 
     let cancelled = false;
     const playerCar = useGarageStore.getState().cars.find((item) => item.id === carId);
     const playerStats = usePlayerStore.getState().stats;
-    fetchTracks().then((allTracks) => {
+    Promise.all([
+      fetchTracks(),
+      championshipEntryId ? fetchChampionshipEntry(championshipEntryId, userId) : Promise.resolve(null)
+    ]).then(([allTracks, entry]) => {
       if (cancelled) return;
       setLoadError('');
+      if (championshipEntryId && (
+        !entry ||
+        entry.status !== 'active' ||
+        entry.currentRound !== roundNumber
+      )) {
+        setLoadError('Questo round non è più quello attivo del campionato. Torna al Centro Corse e riprendi la gara corrente.');
+        return;
+      }
+      const championshipRound = entry?.championship.rounds.find((item) => item.ord === roundNumber);
+      if (championshipEntryId && (!championshipRound || championshipRound.trackId !== Number(trackId))) {
+        setLoadError('Il tracciato non corrisponde al round attivo del campionato.');
+        return;
+      }
       const found = allTracks.find((item) => item.id === Number(trackId));
       if (!found) {
         setLoadError('Questo tracciato non è disponibile. Torna al Centro Corse e scegline un altro.');
@@ -99,16 +129,18 @@ export default function TrackRace() {
 
       const playerCarStats = calculateRaceStats(playerCar);
       const opponentCarStats = {};
+      const difficultyMultiplier = 1 + ((championshipRound?.opponentDifficulty || 1) - 1) * 0.3;
       Object.keys(playerCarStats).forEach((key) => {
         if (typeof playerCarStats[key] === 'number') {
-          opponentCarStats[key] = Math.round(playerCarStats[key] * (0.85 + Math.random() * 0.25));
+          opponentCarStats[key] = Math.round(playerCarStats[key] * (0.85 + Math.random() * 0.25) * difficultyMultiplier);
         }
       });
       const opponentPilot = {};
       Object.keys(playerStats).forEach((key) => {
-        opponentPilot[key] = Math.round(playerStats[key] * (0.8 + Math.random() * 0.4));
+        opponentPilot[key] = Math.round(playerStats[key] * (0.8 + Math.random() * 0.4) * difficultyMultiplier);
       });
 
+      setChampionshipEntry(entry);
       setTrack({
         ...found,
         sections,
@@ -116,8 +148,8 @@ export default function TrackRace() {
         reward: 500,
         xp: 100,
         opponent: {
-          name: 'Rival tuned',
-          carName: 'Sere Speedster',
+          name: championshipRound?.opponentName || 'Rival tuned',
+          carName: championshipRound?.opponentCarName || 'Sere Speedster',
           stats: { ...opponentCarStats, pilot: opponentPilot }
         }
       });
@@ -132,7 +164,7 @@ export default function TrackRace() {
     return () => {
       cancelled = true;
     };
-  }, [trackId, navigate, carId]);
+  }, [trackId, navigate, carId, championshipEntryId, roundNumber, userId]);
 
   const addLog = (message) => setLogs((previous) => [...previous, message]);
 
@@ -158,12 +190,71 @@ export default function TrackRace() {
     setPhase('racing');
   };
 
-  const handleFinishRace = (finalGap, engineBroken, tireWear, engineWear) => {
+  const saveChampionshipResult = async (raceResult) => {
+    setSavingChampionshipResult(true);
+    setChampionshipSaveError('');
+    try {
+      const result = await recordChampionshipRoundResult(championshipEntryId, {
+        userId,
+        round: roundNumber,
+        trackId: Number(track.id),
+        gap: raceResult.gap,
+        engineBroken: raceResult.engineBroken
+      });
+      setChampionshipEntry(result.entry);
+      setChampionshipResult(result);
+      setWallet(result.user.money, result.user.exp);
+      const roundPoints = result.roundResult;
+      addLog(`🏁 ${roundPoints.outcome === 'win' ? 'VITTORIA' : roundPoints.outcome === 'draw' ? 'PAREGGIO' : 'SCONFITTA'}: ${roundPoints.playerPoints}-${roundPoints.opponentPoints} punti.`);
+      triggerEvent({
+        type: 'info',
+        title: result.completed ? (result.champion ? 'Campionato vinto!' : 'Campionato concluso') : 'Round registrato',
+        message: result.completed
+          ? `${result.champion ? 'Sei il campione!' : 'Hai completato il campionato.'} Classifica ${result.entry.playerPoints}-${result.entry.opponentPoints}. Premio: €${result.rewardMoney} e ${result.rewardXp} XP.`
+          : `Round ${roundNumber} registrato: ${result.entry.playerPoints}-${result.entry.opponentPoints}. Preparati per il round ${result.entry.currentRound}.`
+      });
+    } catch (error) {
+      console.error('Failed to record championship race result:', error);
+      try {
+        const latestEntry = await fetchChampionshipEntry(championshipEntryId, userId);
+        const recordedResult = latestEntry.results.find((item) => item.round === roundNumber);
+        if (recordedResult) {
+          const playerIsChampion = latestEntry.playerPoints > latestEntry.opponentPoints ||
+            (latestEntry.playerPoints === latestEntry.opponentPoints && latestEntry.gapDifference >= 0);
+          const player = await fetchPlayer(userId);
+          const completed = latestEntry.status === 'completed';
+          setChampionshipEntry(latestEntry);
+          setChampionshipResult({
+            entry: latestEntry,
+            roundResult: recordedResult,
+            completed,
+            champion: completed ? playerIsChampion : null,
+            rewardMoney: completed
+              ? playerIsChampion ? latestEntry.championship.rewardMoney : Math.floor(latestEntry.championship.rewardMoney * 0.25)
+              : 0,
+            rewardXp: completed
+              ? playerIsChampion ? latestEntry.championship.rewardXp : Math.floor(latestEntry.championship.rewardXp * 0.5)
+              : 0,
+            user: player
+          });
+          setWallet(player.money, player.exp);
+          return;
+        }
+      } catch (reconcileError) {
+        console.error('Failed to reconcile championship result:', reconcileError);
+      }
+      setChampionshipSaveError('Il risultato della gara non è stato confermato dal server. Riprova prima di lasciare questa schermata.');
+    } finally {
+      setSavingChampionshipResult(false);
+    }
+  };
+
+  const handleFinishRace = async (finalGap, engineBroken, tireWear, engineWear) => {
     setPhase('result');
     setGap(finalGap);
     setEngineFailed(engineBroken);
     const won = finalGap > 0 && !engineBroken;
-    if (won) {
+    if (won && !championshipEntryId) {
       addLog(`🏆 VITTORIA CONTRO ${track.opponent.name}!`);
       addMoney(track.reward);
       addXp(track.xp);
@@ -172,7 +263,7 @@ export default function TrackRace() {
         title: 'Gara Conclusa',
         message: `Hai vinto! Gap finale: +${finalGap}m. Premio: €${track.reward} e ${track.xp} XP.`
       });
-    } else {
+    } else if (!championshipEntryId) {
       addLog(`❌ SCONFITTA. ${track.opponent.name} ti ha battuto.`);
       triggerEvent({
         type: 'info',
@@ -194,6 +285,11 @@ export default function TrackRace() {
         message: 'La gara è terminata, ma i dati di usura non sono stati salvati sul server.'
       });
     });
+
+    if (championshipEntryId) {
+      finishedRaceRef.current = { gap: finalGap, engineBroken };
+      await saveChampionshipResult(finishedRaceRef.current);
+    }
   };
 
   const handlePlayTurn = (move) => {
@@ -297,7 +393,9 @@ export default function TrackRace() {
                 <p className="text-white">AVVERSARIO IN GRIGLIA</p>
                 <p className="text-lg">{track.opponent.name}</p>
                 <p>{track.opponent.carName}</p>
-                <p className="text-yellow-300">Premio: €{track.reward} · {track.xp} XP</p>
+                {championshipEntry
+                  ? <p className="text-yellow-300">Campionato · Round {roundNumber}/{championshipEntry.championship.rounds.length}</p>
+                  : <p className="text-yellow-300">Premio gara: €{track.reward} · {track.xp} XP</p>}
               </div>
             </div>
 
@@ -402,13 +500,58 @@ export default function TrackRace() {
           <div className="bg-win98-gray text-black p-6 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray flex flex-col items-center text-center">
             <div className="text-4xl mb-3 font-bold">{engineFailed ? '💥 RITIRO!' : gap > 0 ? '🏆 VITTORIA!' : '🏁 SCONFITTA'}</div>
             <div className="text-lg mb-1">Gap al ritiro: {gap > 0 ? '+' : ''}{gap}m</div>
-            <div className="mb-5">{!engineFailed && gap > 0 ? `Premio: €${track.reward} e ${track.xp} XP` : 'Rimettiti in sesto e torna a sfidare il rivale.'}</div>
+            <div className="mb-5">{championshipEntry
+              ? `Round ${roundNumber}: ${track.opponent.name}`
+              : !engineFailed && gap > 0 ? `Premio: €${track.reward} e ${track.xp} XP` : 'Rimettiti in sesto e torna a sfidare il rivale.'}</div>
+            {championshipEntry && (
+              <div className="w-full max-w-sm bg-[#101820] text-white border-2 border-gray-600 p-3 text-left text-sm mb-5">
+                <div className="font-bold text-yellow-300 mb-1">{championshipEntry.championship.name}</div>
+                {championshipResult ? (
+                  <>
+                    <div>Classifica: {championshipResult.entry.playerPoints} — {championshipResult.entry.opponentPoints}</div>
+                    <div>Round completati: {championshipResult.entry.results.length}/{championshipEntry.championship.rounds.length}</div>
+                    {championshipResult.completed
+                      ? <div className="mt-2 text-green-300">{championshipResult.champion ? '🏆 CAMPIONE' : '🥈 SECONDO POSTO'} · Premio €{championshipResult.rewardMoney} · {championshipResult.rewardXp} XP</div>
+                      : <div className="mt-2 text-cyan-200">Prossimo: Round {championshipResult.entry.currentRound}</div>}
+                  </>
+                ) : savingChampionshipResult
+                  ? <div className="text-yellow-200">Salvataggio del risultato e aggiornamento classifica...</div>
+                  : <div className="text-red-300">{championshipSaveError || 'Risultato in attesa di conferma.'}</div>}
+              </div>
+            )}
             <div className="w-full max-w-sm bg-white border border-gray-400 p-3 text-left text-sm mb-5">
               <div>Gomme consumate: {totalTireWear}%</div>
               <div>Usura motore: {totalEngineWear}%</div>
               <div>Settori completati: {Math.min(currentSectionIndex + (engineFailed ? 0 : 1), track.sections.length)}/{track.sections.length}</div>
             </div>
-            <button onClick={() => navigate('/racing')} className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray px-8 py-2 font-bold hover:bg-gray-200">
+            {championshipEntry && championshipResult?.completed === false && (
+              <button
+                disabled={savingChampionshipResult}
+                onClick={() => {
+                  const nextRound = championshipResult.entry.championship.rounds.find(
+                    (item) => item.ord === championshipResult.entry.currentRound
+                  );
+                  if (nextRound) navigate(`/track-race?id=${nextRound.trackId}&entryId=${championshipEntry.id}&round=${nextRound.ord}`);
+                }}
+                className="mb-2 bg-green-700 text-white border-2 border-t-green-400 border-l-green-400 border-b-green-950 border-r-green-950 px-8 py-2 font-bold hover:bg-green-600 disabled:opacity-50"
+              >
+                CONTINUA · ROUND {championshipResult.entry.currentRound}
+              </button>
+            )}
+            {championshipEntry && !championshipResult && championshipSaveError && (
+              <button
+                disabled={savingChampionshipResult}
+                onClick={() => finishedRaceRef.current && saveChampionshipResult(finishedRaceRef.current)}
+                className="mb-2 bg-yellow-300 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray px-8 py-2 font-bold disabled:opacity-50"
+              >
+                {savingChampionshipResult ? 'SALVATAGGIO...' : 'RIPROVA A SALVARE IL RISULTATO'}
+              </button>
+            )}
+            <button
+              disabled={savingChampionshipResult || (championshipEntry && !championshipResult)}
+              onClick={() => navigate('/racing')}
+              className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray px-8 py-2 font-bold hover:bg-gray-200 disabled:opacity-50"
+            >
               Torna al Centro Corse
             </button>
           </div>

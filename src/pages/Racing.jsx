@@ -5,7 +5,13 @@ import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import usePlayerStore from '../store/playerStore';
 import useInventoryStore from '../store/inventoryStore';
-import { fetchChampionships, fetchTrainingSessions, completeTraining } from '../services/api';
+import {
+  fetchChampionships,
+  fetchTrainingSessions,
+  completeTraining,
+  fetchActiveChampionshipEntry,
+  enterChampionship
+} from '../services/api';
 
 // ─── HELPERS ────────────────────────────────────────────────────────────────
 
@@ -49,12 +55,13 @@ function checkPilotRequirements(stats, level, champ) {
 
 // ─── CHAMPIONSHIP CARD ───────────────────────────────────────────────────────
 
-function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, playerMoney, onEnter }) {
+function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, playerMoney, activeEntry, joining, onEnter }) {
   const [expanded, setExpanded] = useState(false);
+  const isActive = activeEntry?.championshipId === champ.id;
   const carErrors = checkCarRequirements(equippedCar, champ);
   const pilotErrors = checkPilotRequirements(playerStats, playerLevel, champ);
   const allErrors = [...carErrors, ...pilotErrors];
-  const canEnter = allErrors.length === 0 && playerMoney >= champ.entryFee;
+  const canEnter = isActive || (!activeEntry && allErrors.length === 0 && playerMoney >= champ.entryFee);
   const catColor = CATEGORY_COLORS[champ.category] || 'bg-gray-700';
 
   return (
@@ -97,7 +104,7 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
             <div className="font-bold text-sm mb-2 uppercase text-gray-700">📋 Round del Campionato:</div>
             <div className="space-y-1">
               {champ.rounds?.map(r => (
-                <div key={r.id} className="flex justify-between items-center bg-white border border-gray-300 px-3 py-1.5 text-sm">
+                <div key={r.id} className="flex justify-between items-center gap-2 bg-white border border-gray-300 px-3 py-1.5 text-sm">
                   <span className="font-bold text-blue-900">Round {r.ord}: {r.track?.name || '—'}</span>
                   <span className="text-gray-500">vs <span className="font-bold text-red-700">{r.opponentName}</span> ({r.opponentCarName})</span>
                   <span className={`text-xs font-bold px-2 py-0.5 ${r.opponentDifficulty >= 1.3 ? 'bg-red-200 text-red-800' : r.opponentDifficulty >= 1.0 ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}`}>
@@ -106,6 +113,17 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
                 </div>
               ))}
             </div>
+            {isActive && (
+              <div className="mt-3 bg-blue-50 border border-blue-300 p-2 text-xs">
+                <strong>Classifica in corso: {activeEntry.playerPoints} — {activeEntry.opponentPoints}</strong>
+                {activeEntry.results.map((result) => (
+                  <div key={result.round} className="flex justify-between gap-2 mt-1">
+                    <span>Round {result.round} · {result.trackName} vs {result.opponentName}</span>
+                    <span className="font-bold uppercase">{result.outcome} ({result.playerPoints}-{result.opponentPoints})</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -115,7 +133,12 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
             {allErrors.map((e, i) => <div key={i} className="text-red-700">⛔ {e}</div>)}
           </div>
         )}
-        {!canEnter && playerMoney < champ.entryFee && allErrors.length === 0 && (
+        {!canEnter && activeEntry && !isActive && (
+          <div className="bg-yellow-50 border border-yellow-300 p-2 mb-2 text-xs text-yellow-700">
+            🏁 Completa prima il campionato {activeEntry.championship.name}.
+          </div>
+        )}
+        {!canEnter && !activeEntry && playerMoney < champ.entryFee && allErrors.length === 0 && (
           <div className="bg-yellow-50 border border-yellow-300 p-2 mb-2 text-xs text-yellow-700">
             💰 Iscrizione: €{champ.entryFee.toLocaleString()} (hai €{playerMoney.toLocaleString()})
           </div>
@@ -123,7 +146,7 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
 
         {/* Action */}
         <button
-          onClick={() => canEnter && onEnter(champ)}
+          onClick={() => canEnter && !joining && onEnter(champ)}
           disabled={!canEnter}
           className={`w-full py-2 font-bold border-2 text-sm transition-colors ${
             canEnter
@@ -131,7 +154,10 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
               : 'bg-gray-200 border-gray-400 text-gray-500 cursor-not-allowed'
           }`}
         >
-          {canEnter ? `🏁 Iscriviti (€${champ.entryFee.toLocaleString()})` : '🔒 Requisiti non soddisfatti'}
+          {joining ? '⌛ Iscrizione...' : isActive
+            ? `▶ CONTINUA · ROUND ${activeEntry.currentRound}/${champ.rounds.length}`
+            : canEnter ? `🏁 Iscriviti (€${champ.entryFee.toLocaleString()})`
+              : activeEntry ? '🔒 Altro campionato in corso' : '🔒 Requisiti non soddisfatti'}
         </button>
       </div>
     </div>
@@ -229,28 +255,34 @@ export default function Racing() {
 
   const [activeTab, setActiveTab] = useState('competitions');
   const [championships, setChampionships] = useState([]);
+  const [activeEntry, setActiveEntry] = useState(null);
   const [trainingSessions, setTrainingSessions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [joining, setJoining] = useState(false);
   const [filterCategory, setFilterCategory] = useState('all');
 
   const equippedCar = cars.find(c => c.id === equippedCarId);
 
   useEffect(() => {
-    Promise.all([fetchChampionships(), fetchTrainingSessions()])
-      .then(([champData, trainData]) => {
+    if (!userId) return undefined;
+    Promise.all([fetchChampionships(), fetchTrainingSessions(), fetchActiveChampionshipEntry(userId)])
+      .then(([champData, trainData, entry]) => {
         setChampionships(champData);
         setTrainingSessions(trainData);
+        setActiveEntry(entry);
         setLoading(false);
       })
       .catch(err => {
         console.error(err);
         setLoading(false);
       });
-  }, []);
+    return undefined;
+  }, [userId]);
 
   const alreadyHasMove = (moveName) => moves.some(m => m.name === moveName);
 
-  const handleEnterChampionship = (champ) => {
+  const handleEnterChampionship = async (champ) => {
+    if (joining) return;
     if (!equippedCar) {
       triggerEvent({ type: 'error', title: 'Nessuna Auto', message: 'Equipaggia prima un\'auto nel garage!' });
       return;
@@ -259,8 +291,33 @@ export default function Racing() {
       triggerEvent({ type: 'error', title: 'Carburante', message: 'Hai poco carburante. Fai il pieno prima di gareggiare.' });
       return;
     }
-    if (champ.rounds && champ.rounds.length > 0) {
-      navigate(`/track-race?id=${champ.rounds[0].trackId}&champId=${champ.id}&round=1`);
+    if (activeEntry) {
+      if (activeEntry.championshipId !== champ.id) {
+        triggerEvent({ type: 'error', title: 'Campionato in corso', message: `Completa prima ${activeEntry.championship.name}.` });
+        return;
+      }
+      const nextRound = activeEntry.championship.rounds.find((round) => round.ord === activeEntry.currentRound);
+      if (nextRound) navigate(`/track-race?id=${nextRound.trackId}&entryId=${activeEntry.id}&round=${nextRound.ord}`);
+      return;
+    }
+    if (!champ.rounds?.length) {
+      triggerEvent({ type: 'error', title: 'Calendario non disponibile', message: 'Questo campionato non ha round configurati.' });
+      return;
+    }
+
+    setJoining(true);
+    try {
+      const { entry, user } = await enterChampionship(champ.id, userId);
+      setActiveEntry(entry);
+      usePlayerStore.getState().setWallet(user.money, user.exp);
+      const firstRound = entry.championship.rounds.find((round) => round.ord === entry.currentRound);
+      if (!firstRound) throw new Error('The first championship round is missing.');
+      navigate(`/track-race?id=${firstRound.trackId}&entryId=${entry.id}&round=${firstRound.ord}`);
+    } catch (error) {
+      console.error('Championship entry failed:', error);
+      triggerEvent({ type: 'error', title: 'Iscrizione non riuscita', message: error.message });
+    } finally {
+      setJoining(false);
     }
   };
 
@@ -302,7 +359,7 @@ export default function Racing() {
         });
       }
       await refreshPlayer(userId);
-    } catch (e) {
+    } catch {
       triggerEvent({ type: 'error', title: 'Errore', message: 'Allenamento fallito. Riprova.' });
     }
   };
@@ -338,7 +395,7 @@ export default function Racing() {
           <span>💰 €{money.toLocaleString()}</span>
           <span>🚗 {equippedCar ? `${equippedCar.brand} ${equippedCar.name} (${equippedCar.cv} CV)` : <span className="text-red-400">Nessuna auto equipaggiata</span>}</span>
           <span className="ml-auto font-pixel text-yellow-300 text-xs">
-            💡 {activeTab === 'competitions' ? 'Seleziona un campionato e iscriviti ai round.' : 'Investi in allenamento per migliorare le stat del pilota.'}
+            💡 {activeTab === 'competitions' ? 'Vinci round, accumula punti e punta al titolo.' : 'Investi in allenamento per migliorare le stat del pilota.'}
           </span>
         </div>
 
@@ -352,6 +409,28 @@ export default function Racing() {
             {/* ── COMPETITIONS TAB ── */}
             {activeTab === 'competitions' && (
               <div>
+                {activeEntry && (
+                  <div className="bg-[#101820] text-white border-2 border-yellow-400 p-4 mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
+                    <div className="flex-1">
+                      <div className="font-bold text-yellow-300 uppercase">🏁 Campionato in corso</div>
+                      <div className="text-lg">{activeEntry.championship.name} · Round {activeEntry.currentRound}/{activeEntry.championship.rounds.length}</div>
+                      <div className="text-sm text-cyan-200">
+                        Classifica: {activeEntry.playerPoints} — {activeEntry.opponentPoints} punti
+                        {' · '}Gap cumulativo: {activeEntry.gapDifference > 0 ? '+' : ''}{activeEntry.gapDifference}m
+                      </div>
+                      <div className="h-2 bg-gray-700 mt-2">
+                        <div className="h-full bg-green-400" style={{ width: `${(activeEntry.results.length / activeEntry.championship.rounds.length) * 100}%` }} />
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => handleEnterChampionship(activeEntry.championship)}
+                      disabled={joining}
+                      className="bg-green-700 text-white px-4 py-2 border-2 border-t-green-400 border-l-green-400 border-b-green-950 border-r-green-950 font-bold disabled:opacity-50"
+                    >
+                      RIPRENDI LA GARA
+                    </button>
+                  </div>
+                )}
                 {/* Category Filter */}
                 <div className="flex gap-1 mb-4 flex-wrap">
                   {categories.map(cat => (
@@ -377,6 +456,8 @@ export default function Racing() {
                         playerStats={stats}
                         playerLevel={level}
                         playerMoney={money}
+                        activeEntry={activeEntry}
+                        joining={joining}
                         onEnter={handleEnterChampionship}
                       />
                     ))}
