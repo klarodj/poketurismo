@@ -399,6 +399,223 @@ app.get('/api/tracks', async (req, res) => {
 });
 
 // --- CHAMPIONSHIPS ---
+const championshipEntryInclude = {
+  championship: {
+    include: {
+      rounds: {
+        include: { track: { include: { type: true, surface: true, meteo: true } } },
+        orderBy: { ord: 'asc' }
+      }
+    }
+  }
+};
+
+const serializeChampionshipEntry = (entry) => ({
+  ...entry,
+  results: JSON.parse(entry.results)
+});
+
+app.get('/api/championship-entries/active/:userId', async (req, res) => {
+  try {
+    const userId = Number(req.params.userId);
+    if (!Number.isSafeInteger(userId) || userId <= 0) {
+      return res.status(400).json({ error: 'Invalid user id' });
+    }
+
+    const entry = await prisma.championshipEntry.findFirst({
+      where: { userId, status: 'active' },
+      include: championshipEntryInclude,
+      orderBy: { createdAt: 'desc' }
+    });
+    res.json(entry ? serializeChampionshipEntry(entry) : null);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/championship-entries/:entryId', async (req, res) => {
+  try {
+    const entryId = Number(req.params.entryId);
+    const userId = Number(req.query.userId);
+    if (!Number.isSafeInteger(entryId) || entryId <= 0 || !Number.isSafeInteger(userId) || userId <= 0) {
+      return res.status(400).json({ error: 'Invalid championship entry or user id' });
+    }
+
+    const entry = await prisma.championshipEntry.findFirst({
+      where: { id: entryId, userId },
+      include: championshipEntryInclude
+    });
+    if (!entry) return res.status(404).json({ error: 'Championship entry not found' });
+    res.json(serializeChampionshipEntry(entry));
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/championships/:championshipId/enter', async (req, res) => {
+  try {
+    const championshipId = Number(req.params.championshipId);
+    const userId = Number(req.body.userId);
+    if (!Number.isSafeInteger(championshipId) || championshipId <= 0 || !Number.isSafeInteger(userId) || userId <= 0) {
+      return res.status(400).json({ error: 'Invalid championship or user id' });
+    }
+
+    const result = await prisma.$transaction(async (tx) => {
+      const championship = await tx.championship.findUnique({
+        where: { id: championshipId },
+        include: { rounds: { orderBy: { ord: 'asc' } } }
+      });
+      if (!championship) return { status: 404, error: 'Championship not found' };
+      if (championship.rounds.length === 0) return { status: 400, error: 'Championship has no rounds' };
+
+      const user = await tx.user.findUnique({ where: { id: userId } });
+      if (!user) return { status: 404, error: 'Player not found' };
+
+      const activeEntry = await tx.championshipEntry.findFirst({
+        where: { userId, status: 'active' }
+      });
+      if (activeEntry) return { status: 409, error: 'Finish or abandon your active championship first' };
+
+      const charge = await tx.user.updateMany({
+        where: { id: userId, money: { gte: championship.entryFee } },
+        data: { money: { decrement: championship.entryFee } }
+      });
+      if (charge.count !== 1) return { status: 400, error: 'Insufficient funds for championship entry' };
+
+      const entry = await tx.championshipEntry.create({
+        data: { userId, championshipId },
+        include: championshipEntryInclude
+      });
+      const updatedUser = await tx.user.findUnique({
+        where: { id: userId },
+        select: { money: true, exp: true, level: true }
+      });
+      return { entry, user: updatedUser };
+    });
+
+    if (result.error) return res.status(result.status).json({ error: result.error });
+    res.status(201).json({
+      entry: serializeChampionshipEntry(result.entry),
+      user: result.user
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/championship-entries/:entryId/results', async (req, res) => {
+  try {
+    const entryId = Number(req.params.entryId);
+    const userId = Number(req.body.userId);
+    const round = Number(req.body.round);
+    const trackId = Number(req.body.trackId);
+    const gap = Number(req.body.gap);
+    const engineBroken = req.body.engineBroken;
+    if (
+      !Number.isSafeInteger(entryId) || entryId <= 0 ||
+      !Number.isSafeInteger(userId) || userId <= 0 ||
+      !Number.isSafeInteger(round) || round <= 0 ||
+      !Number.isSafeInteger(trackId) || trackId <= 0 ||
+      !Number.isFinite(gap) ||
+      typeof engineBroken !== 'boolean'
+    ) {
+      return res.status(400).json({ error: 'Invalid championship round result' });
+    }
+
+    const result = await prisma.$transaction(async (tx) => {
+      const entry = await tx.championshipEntry.findFirst({
+        where: { id: entryId, userId },
+        include: championshipEntryInclude
+      });
+      if (!entry) return { status: 404, error: 'Championship entry not found' };
+      if (entry.status !== 'active') return { status: 409, error: 'Championship is already complete' };
+      if (entry.currentRound !== round) return { status: 409, error: 'This round has already been recorded or is not next' };
+
+      const roundData = entry.championship.rounds.find((item) => item.ord === round);
+      if (!roundData || roundData.trackId !== trackId) {
+        return { status: 400, error: 'Track does not match the current championship round' };
+      }
+
+      const playerWon = !engineBroken && gap > 0;
+      const tied = !engineBroken && gap === 0;
+      const playerRoundPoints = playerWon || tied ? (playerWon ? 3 : 1) : 0;
+      const opponentRoundPoints = playerWon ? 0 : tied ? 1 : 3;
+      const gapForStandings = engineBroken ? -Math.max(1, Math.abs(Math.trunc(gap))) : Math.trunc(gap);
+      const isFinalRound = round === entry.championship.rounds.length;
+      const playerPoints = entry.playerPoints + playerRoundPoints;
+      const opponentPoints = entry.opponentPoints + opponentRoundPoints;
+      const gapDifference = entry.gapDifference + gapForStandings;
+      const playerIsChampion = playerPoints > opponentPoints ||
+        (playerPoints === opponentPoints && gapDifference >= 0);
+      const results = [
+        ...JSON.parse(entry.results),
+        {
+          round,
+          trackId,
+          trackName: roundData.track.name,
+          opponentName: roundData.opponentName,
+          gap: Math.trunc(gap),
+          outcome: playerWon ? 'win' : tied ? 'draw' : 'loss',
+          playerPoints: playerRoundPoints,
+          opponentPoints: opponentRoundPoints
+        }
+      ];
+      const rewardMoney = isFinalRound
+        ? playerIsChampion
+          ? entry.championship.rewardMoney
+          : Math.floor(entry.championship.rewardMoney * 0.25)
+        : 0;
+      const rewardXp = isFinalRound
+        ? playerIsChampion
+          ? entry.championship.rewardXp
+          : Math.floor(entry.championship.rewardXp * 0.5)
+        : 0;
+      const player = await tx.user.findUnique({ where: { id: userId } });
+      if (!player) return { status: 404, error: 'Player not found' };
+
+      const updatedEntry = await tx.championshipEntry.update({
+        where: { id: entry.id },
+        data: {
+          currentRound: isFinalRound ? round : round + 1,
+          playerPoints,
+          opponentPoints,
+          gapDifference,
+          results: JSON.stringify(results),
+          status: isFinalRound ? 'completed' : 'active'
+        },
+        include: championshipEntryInclude
+      });
+      const user = await tx.user.update({
+        where: { id: userId },
+        data: {
+          money: { increment: rewardMoney },
+          exp: { increment: rewardXp },
+          level: Math.floor((player.exp + rewardXp) / 1000) + 1
+        },
+        select: { money: true, exp: true, level: true }
+      });
+
+      return {
+        entry: updatedEntry,
+        user,
+        roundResult: results[results.length - 1],
+        completed: isFinalRound,
+        champion: isFinalRound ? playerIsChampion : null,
+        rewardMoney,
+        rewardXp
+      };
+    });
+
+    if (result.error) return res.status(result.status).json({ error: result.error });
+    res.json({
+      ...result,
+      entry: serializeChampionshipEntry(result.entry)
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.get('/api/championships', async (req, res) => {
   try {
     const championships = await prisma.championship.findMany({
@@ -567,4 +784,3 @@ app.post('/api/dev/tracks', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`PokeTurismo Backend running on http://localhost:${PORT}`);
 });
-
