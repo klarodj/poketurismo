@@ -51,6 +51,11 @@ const usePlayerStore = create((set) => ({
   
   addMoney: (amount) => set((state) => ({ money: state.money + amount })),
   removeMoney: (amount) => set((state) => ({ money: Math.max(0, state.money - amount) })),
+  setWallet: (money, xp) => set((state) => ({
+    money,
+    xp,
+    level: Math.floor(xp / 1000) + 1 || state.level
+  })),
   
   addXp: (amount) => set((state) => {
     const newXp = state.xp + amount;
