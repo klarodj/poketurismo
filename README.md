@@ -6,6 +6,8 @@ React/Vite/Tailwind/Zustand per il frontend; Express/Prisma/SQLite per il backen
 
 Dal 21 ottobre 2026 la direzione di lavoro è una sola istanza sviluppo/test sulla **5174**, seguita dalla migrazione a un PostgreSQL condiviso da Supabase Auth e gioco. Il [piano di consolidamento](docs/AMBIENTE_UNICO.md) distingue configurazione attuale, operazioni ancora da eseguire e migrazione futura. Il checkout legacy va conservato anche dopo lo spegnimento dei suoi container.
 
+Per consolidare dal terminale del server: `python3 scripts/consolidate-dev.py --apply`. Il comando verifica prima disponibilità e backup; senza `--apply` esegue soltanto i controlli. Richiede accesso a Docker (eventualmente tramite sudo), systemd e rete. Il rapporto locale è `.preview/consolidation.json`; PostgreSQL e account personali restano il passaggio successivo.
+
 ## Prova sul server attuale
 
 Richiede Node **24**, npm, Python 3 e curl. Le dipendenze sono già presenti nella copia di lavoro attuale.

@@ -37,6 +37,22 @@ Con una sola istanza, gli aggiornamenti e i riavvii coinvolgono anche gli amici 
 
 ## Consolidamento operativo sul server
 
+È disponibile il comando automatico, da eseguire come `klaro` nel terminale del server:
+
+```sh
+python3 /home/klaro/poketurismo-work/scripts/consolidate-dev.py --apply
+```
+
+Senza `--apply` effettua soltanto i controlli. Può chiedere la password sudo per accedere a Docker. Richiede un checkout di sviluppo pulito e già salvato in Git. Prima di modificare alcunché controlla servizi, identità dei container, salute della 5174, credenziali e build del link pubblico. Crea backup SQLite verificati e conserva le configurazioni e il diff locale legacy in una nuova directory privata sotto `/home/klaro/.backups/poketurismo/`.
+
+Poi sostituisce il vecchio updater con uno script senza operazioni (archiviando l'originale), imposta `restart: "no"` nel Compose legacy, disabilita il riavvio automatico dei due container verificati e li ferma per identificativo. Non cambia crontab, altre applicazioni, il checkout legacy, il servizio 5174 o il gateway. Una vecchia invocazione pianificata dell'updater diventa quindi innocua e non invia notifiche.
+
+Il controllo finale verifica container fermi, porte 5173/3001 libere e salute dell'istanza pubblica e locale. Il rapporto è in `.preview/consolidation.json` e nella directory di backup. Solo `stage: "complete"` conferma il consolidamento; un'interruzione non viene presentata come successo. Il comando è ripetibile e conserva i backup precedenti. Prima di installare PostgreSQL verificare il successo di questo passaggio: non avviare un altro runtime del gioco.
+
+I test automatici esercitano il procedimento con database SQLite reali temporanei e comandi Docker/HTTP simulati, inclusi identità errata, playtest indisponibile, job in corso, backup fallito, file modificati durante l'operazione, arresto fallito e seconda esecuzione. Non sostituiscono il controllo sul server. L'agente non ha eseguito l'arresto reale perché l'accesso a Docker e systemd è bloccato nel suo ambiente.
+
+### Procedura manuale alternativa
+
 Eseguire dal terminale del server. I controlli iniziali devono riuscire prima di fermare la versione legacy. Questi comandi non sono stati eseguiti dall'agente.
 
 1. Verificare l'istanza che rimarrà e identificare i container:

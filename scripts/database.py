@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """SQLite backups and versioned SQL migrations. Never defaults to the live database."""
 import argparse
+from contextlib import closing
 import hashlib
 import os
 from pathlib import Path
@@ -25,8 +26,8 @@ def backup(source, destination):
     fd, temporary = tempfile.mkstemp(dir=destination.parent, suffix='.db')
     os.close(fd)
     try:
-        with sqlite3.connect(source.as_uri() + '?mode=ro', uri=True, timeout=30) as original:
-            with sqlite3.connect(temporary) as target:
+        with closing(sqlite3.connect(source.as_uri() + '?mode=ro', uri=True, timeout=30)) as original:
+            with closing(sqlite3.connect(temporary)) as target:
                 original.backup(target)
                 check(target)
         os.replace(temporary, destination)
@@ -54,7 +55,7 @@ def migrate(database):
         destination = database.parent / 'backups' / f'{database.stem}-{stamp}.db'
         backup(database, destination)
         print(f'Backup: {destination}')
-    with sqlite3.connect(database, timeout=30) as connection:
+    with closing(sqlite3.connect(database, timeout=30)) as connection, connection:
         connection.execute('PRAGMA foreign_keys=OFF')
         connection.execute('BEGIN IMMEDIATE')
         try:
