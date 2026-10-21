@@ -56,6 +56,7 @@ class ConsolidationTest(unittest.TestCase):
         patch.object(self.task, 'http', side_effect=self.http).start()
         patch.object(self.task, 'ports_free').start()
         patch('builtins.print').start()
+        patch.object(consolidate.time, 'sleep').start()
 
     def command(self, args, timeout=30):
         self.commands.append(args)
@@ -213,6 +214,21 @@ class ConsolidationTest(unittest.TestCase):
         self.assertIn(url, str(caught.exception))
         self.assertIn('tailscale funnel status', str(caught.exception))
         self.assertNotIn(header, str(caught.exception))
+
+    def test_transient_tls_eof_retries_but_invalid_certificates_do_not(self):
+        url = consolidate.PUBLIC_URL + '/'
+        with patch.object(consolidate, 'build_opener') as opener:
+            response = unittest.mock.MagicMock()
+            response.__enter__.return_value.status = 401
+            response.__enter__.return_value.read.return_value = b'authentication required'
+            opener.return_value.open.side_effect = [URLError(ssl.SSLEOFError(8, 'EOF')), response]
+            self.assertEqual(consolidate.Consolidation.http(self.task, url)[0], 401)
+            self.assertEqual(opener.return_value.open.call_count, 2)
+            opener.return_value.open.reset_mock()
+            opener.return_value.open.side_effect = URLError(ssl.SSLCertVerificationError(1, 'invalid certificate'))
+            with self.assertRaises(consolidate.Stop):
+                consolidate.Consolidation.http(self.task, url)
+            self.assertEqual(opener.return_value.open.call_count, 1)
 
     def test_public_tls_failure_does_not_retire_updater_or_stop_containers(self):
         original_http = self.http

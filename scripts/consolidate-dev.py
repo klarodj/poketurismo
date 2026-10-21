@@ -12,8 +12,10 @@ import re
 import shlex
 import shutil
 import socket
+import ssl
 import subprocess
 import tempfile
+import time
 from datetime import datetime, timezone
 from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
@@ -138,17 +140,23 @@ class Consolidation:
     def http(self, url, authorization=None):
         request = Request(url, headers={'Authorization': authorization} if authorization else {})
         opener = build_opener(ProxyHandler({}), NoRedirect())
-        try:
-            with opener.open(request, timeout=10) as response:
-                return response.status, response.read(1024 * 1024)
-        except HTTPError as error:
-            with error:
-                return error.code, error.read(1024)
-        except (URLError, OSError) as error:
-            reason = getattr(error, 'reason', error)
-            hint = (' Verificare `tailscale funnel status` e l\'inoltro HTTPS 8443 verso '
-                    'http://127.0.0.1:5184; non usare `tailscale funnel reset`.') if url.startswith(PUBLIC_URL + '/') else ''
-            raise Stop(f'Connessione fallita a {url}: {reason}.{hint}') from None
+        for attempt in range(4):
+            try:
+                with opener.open(request, timeout=10) as response:
+                    return response.status, response.read(1024 * 1024)
+            except HTTPError as error:
+                with error:
+                    return error.code, error.read(1024)
+            except (URLError, OSError) as error:
+                reason = getattr(error, 'reason', error)
+                transient = isinstance(reason, (ssl.SSLEOFError, ConnectionResetError, ConnectionAbortedError, TimeoutError))
+                if transient and attempt < 3:
+                    print(f'Connessione interrotta a {url}; nuovo tentativo {attempt + 2}/4.', flush=True)
+                    time.sleep(0.3 * (attempt + 1))
+                    continue
+                hint = (' Verificare `tailscale funnel status` e l\'inoltro HTTPS 8443 verso '
+                        'http://127.0.0.1:5184; non usare `tailscale funnel reset`.') if url.startswith(PUBLIC_URL + '/') else ''
+                raise Stop(f'Connessione fallita a {url}: {reason}.{hint}') from None
 
     def health(self, url, authorization=None):
         status, content = self.http(url, authorization)
