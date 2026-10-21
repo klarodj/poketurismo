@@ -19,6 +19,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
 
 from database import backup
+from funnel_diagnostics import legacy_routes
 
 PUBLIC_URL = 'https://server-klaro.tail6c534c.ts.net:8443'
 SERVICES = ('webapp-frontend', 'webapp-backend')
@@ -181,6 +182,11 @@ class Consolidation:
             print(f'Gateway, autenticazione e build verificati: {origin}', flush=True)
 
     def preflight(self):
+        routes = legacy_routes(json.loads(run(['tailscale', 'funnel', 'status', '--json'])))
+        if routes:
+            details = '; '.join(item['route'] + ' → ' + item['target'] for item in routes)
+            raise Stop('Funnel usa ancora i servizi da spegnere: ' + details +
+                       '. Prima migrare questi inoltri al gateway 5184; nessun container è stato fermato.')
         self.availability()
         self.updater_processes()
         for file in (self.compose, self.updater):

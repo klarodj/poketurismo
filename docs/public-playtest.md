@@ -2,6 +2,8 @@
 
 URL: https://server-klaro.tail6c534c.ts.net:8443/
 
+Aggiornamento del 22 ottobre 2026: la 443 preesistente punta anch'essa a Poketurismo, ma alla vecchia istanza 5173/3001. Non spegnere quei container prima di aver migrato anche gli inoltri della 443. Il gateway accetta attualmente come origine soltanto la 8443: occorre adeguarlo e verificarlo prima di servire il gioco anche sulla 443.
+
 Il Funnel HTTPS 8443 inoltra al gateway su `127.0.0.1:5184`.
 La configurazione Funnel 443 preesistente resta invariata. Non occorrono
 port forwarding sul FortiGate o accessi alla tailnet per i visitatori.
@@ -43,6 +45,14 @@ sudo tailscale funnel --https=8443 off
 ```
 
 Non usare `tailscale funnel reset`: cancellerebbe anche l'altro sito.
+
+Diagnosi senza modificare servizi, inviare password o disabilitare la verifica TLS:
+
+```sh
+python3 /home/klaro/poketurismo-work/scripts/funnel_diagnostics.py
+```
+
+Il rapporto mostra stato Tailscale essenziale, inoltri e dipendenze legacy, DNS locale e risultati curl con TLS normale e TLS 1.2. Non raccoglie l'elenco dei peer o le credenziali del playtest. Serve a distinguere un problema TLS generale da una differenza fra client; non prova l'accesso da una rete esterna. Non ripetere la ripubblicazione del Funnel se non cambia il risultato.
 
 Se il controllo HTTPS fallisce con `UNEXPECTED_EOF_WHILE_READING`, la connessione TLS si è interrotta prima della risposta HTTP. Non disabilitare la verifica dei certificati. Controllare prima `tailscale funnel status` e la salute locale su `http://127.0.0.1:5174/api/health`; lo script di consolidamento verifica anche password, salute e build direttamente sul gateway 5184 prima di provare HTTPS.
 

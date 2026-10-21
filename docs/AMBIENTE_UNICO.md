@@ -21,6 +21,8 @@ I test automatici e le prove di migrazione usano database temporanei isolati, el
 
 ## Stato osservato e istanza da conservare
 
+**Aggiornamento del 22 ottobre 2026:** l'output del server mostra che il Funnel 443 usa ancora `5173` per `/` e `3001/api` per `/api/`. Non è un sito indipendente: spegnere subito i container interromperebbe quell'indirizzo. Migrare esplicitamente gli inoltri e verificare l'origine consentita dal gateway prima dell'arresto. Il comando automatico ora rileva queste dipendenze e interrompe il preflight senza modificare servizi o configurazioni. Non eseguire neppure la procedura manuale di arresto finché questa dipendenza resta presente.
+
 | Componente | Configurazione trovata | Destinazione |
 | --- | --- | --- |
 | `webapp-frontend` | Docker, porta 5173, checkout legacy | Arrestare e disabilitare il riavvio automatico |

@@ -50,6 +50,7 @@ class ConsolidationTest(unittest.TestCase):
         self.unhealthy = False
         self.wrong_public_page = False
         self.fail_stop = False
+        self.funnel = {}
         self.addCleanup(patch.stopall)
         patch.object(consolidate, 'run', side_effect=self.command).start()
         patch.object(self.task, 'http', side_effect=self.http).start()
@@ -62,6 +63,8 @@ class ConsolidationTest(unittest.TestCase):
             return 'active\n' if args[1] == 'is-active' else 'enabled\n'
         if args[0] == 'ps':
             return self.processes
+        if args[:3] == ['tailscale', 'funnel', 'status']:
+            return json.dumps(self.funnel)
         if args[0] == 'git':
             return '' if 'status' in args else 'saved legacy changes\n'
         if args[:2] == ['docker', 'inspect']:
@@ -99,6 +102,25 @@ class ConsolidationTest(unittest.TestCase):
         self.assert_no_mutations()
         self.assertFalse(self.task.archives.exists())
         self.task.http.assert_any_call(consolidate.PUBLIC_URL + '/api/health', unittest.mock.ANY)
+
+    def test_funnel_still_using_legacy_on_443_prevents_container_shutdown(self):
+        self.funnel = {'Web': {'server.ts.net:443': {'Handlers': {
+            '/': {'Proxy': 'http://127.0.0.1:5173'}, '/api/': {'Proxy': 'http://127.0.0.1:3001/api'}}}}}
+        with self.assertRaisesRegex(consolidate.Stop, 'Funnel usa ancora') as caught:
+            self.task.apply()
+        self.assertIn('443', str(caught.exception))
+        self.assertIn('3001', str(caught.exception))
+        self.assert_no_mutations()
+
+    def test_gateway_routes_and_unrelated_apps_are_not_legacy_dependencies(self):
+        config = {'Web': {'server.ts.net:8443': {'Handlers': {'/': {'Proxy': 'http://127.0.0.1:5184'}}},
+                          'server.ts.net:10000': {'Handlers': {'/': {'Proxy': 'http://127.0.0.1:9000'}}}}}
+        self.assertEqual(consolidate.legacy_routes(config), [])
+
+    def test_foreground_legacy_routes_are_also_detected(self):
+        config = {'Foreground': {'session': {'Web': {'server.ts.net:443': {'Handlers': {
+            '/': {'Proxy': 'http://127.0.0.1:5173'}}}}}}}
+        self.assertEqual(len(consolidate.legacy_routes(config)), 1)
 
     def test_unhealthy_primary_or_wrong_public_build_prevents_all_changes(self):
         for attribute in ('unhealthy', 'wrong_public_page'):
