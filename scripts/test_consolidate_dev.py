@@ -5,9 +5,11 @@ import importlib.util
 import json
 from pathlib import Path
 import sqlite3
+import ssl
 import tempfile
 import unittest
 from unittest.mock import patch
+from urllib.error import URLError
 
 spec = importlib.util.spec_from_file_location('consolidate_dev', Path(__file__).with_name('consolidate-dev.py'))
 consolidate = importlib.util.module_from_spec(spec)
@@ -79,7 +81,7 @@ class ConsolidationTest(unittest.TestCase):
         raise AssertionError(f'Unexpected command: {args}')
 
     def http(self, url, authorization=None):
-        if url.startswith(consolidate.PUBLIC_URL) and not authorization:
+        if url.startswith((consolidate.PUBLIC_URL, 'http://127.0.0.1:5184')) and not authorization:
             return 401, b'authentication required'
         if url.endswith('/api/health'):
             if self.unhealthy:
@@ -178,6 +180,29 @@ class ConsolidationTest(unittest.TestCase):
             socket.return_value.__enter__.return_value.connect_ex.return_value = errno.EACCES
             with self.assertRaises(consolidate.Stop):
                 consolidate.Consolidation.ports_free(self.task)
+
+    def test_tls_failure_identifies_public_url_without_exposing_credentials(self):
+        url = consolidate.PUBLIC_URL + '/api/health'
+        header = 'Basic private-test-header'
+        with patch.object(consolidate, 'build_opener') as opener:
+            opener.return_value.open.side_effect = URLError(ssl.SSLEOFError(8, 'UNEXPECTED_EOF_WHILE_READING'))
+            with self.assertRaises(consolidate.Stop) as caught:
+                consolidate.Consolidation.http(self.task, url, header)
+        self.assertIn(url, str(caught.exception))
+        self.assertIn('tailscale funnel status', str(caught.exception))
+        self.assertNotIn(header, str(caught.exception))
+
+    def test_public_tls_failure_does_not_retire_updater_or_stop_containers(self):
+        original_http = self.http
+        def public_unavailable(url, authorization=None):
+            if url.startswith(consolidate.PUBLIC_URL):
+                raise consolidate.Stop('Connessione fallita: TLS EOF')
+            return original_http(url, authorization)
+        self.task.http.side_effect = public_unavailable
+        with self.assertRaisesRegex(consolidate.Stop, 'TLS EOF'):
+            self.task.apply()
+        self.task.http.assert_any_call('http://127.0.0.1:5184/api/health', unittest.mock.ANY)
+        self.assert_no_mutations()
 
 
 if __name__ == '__main__':

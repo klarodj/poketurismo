@@ -15,7 +15,7 @@ import socket
 import subprocess
 import tempfile
 from datetime import datetime, timezone
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
 
 from database import backup
@@ -141,7 +141,13 @@ class Consolidation:
             with opener.open(request, timeout=10) as response:
                 return response.status, response.read(1024 * 1024)
         except HTTPError as error:
-            return error.code, error.read(1024)
+            with error:
+                return error.code, error.read(1024)
+        except (URLError, OSError) as error:
+            reason = getattr(error, 'reason', error)
+            hint = (' Verificare `tailscale funnel status` e l\'inoltro HTTPS 8443 verso '
+                    'http://127.0.0.1:5184; non usare `tailscale funnel reset`.') if url.startswith(PUBLIC_URL + '/') else ''
+            raise Stop(f'Connessione fallita a {url}: {reason}.{hint}') from None
 
     def health(self, url, authorization=None):
         status, content = self.http(url, authorization)
@@ -162,15 +168,17 @@ class Consolidation:
         if not access.get('username') or not access.get('password'):
             raise Stop('Credenziali del playtest mancanti.')
         authorization = 'Basic ' + base64.b64encode(f'{access["username"]}:{access["password"]}'.encode()).decode()
-        for path in ('/', '/api/health'):
-            if self.http(PUBLIC_URL + path)[0] != 401:
-                raise Stop('Il playtest pubblico non richiede le credenziali: ' + path)
-        self.health('http://127.0.0.1:5184/api/health', authorization)
-        self.health(PUBLIC_URL + '/api/health', authorization)
-        status, page = self.http(PUBLIC_URL + '/', authorization)
         expected = (self.root / '.preview/public-dist/index.html').read_bytes()
-        if status != 200 or hashlib.sha256(page).digest() != hashlib.sha256(expected).digest():
-            raise Stop('La pagina pubblica non corrisponde alla build del playtest.')
+        # Distinguish gateway failures from TLS/Funnel failures before any legacy mutation.
+        for origin in ('http://127.0.0.1:5184', PUBLIC_URL):
+            for path in ('/', '/api/health'):
+                if self.http(origin + path)[0] != 401:
+                    raise Stop('Il gateway non richiede le credenziali: ' + origin + path)
+            self.health(origin + '/api/health', authorization)
+            status, page = self.http(origin + '/', authorization)
+            if status != 200 or hashlib.sha256(page).digest() != hashlib.sha256(expected).digest():
+                raise Stop('La pagina non corrisponde alla build del playtest: ' + origin)
+            print(f'Gateway, autenticazione e build verificati: {origin}', flush=True)
 
     def preflight(self):
         self.availability()

@@ -44,6 +44,17 @@ sudo tailscale funnel --https=8443 off
 
 Non usare `tailscale funnel reset`: cancellerebbe anche l'altro sito.
 
+Se il controllo HTTPS fallisce con `UNEXPECTED_EOF_WHILE_READING`, la connessione TLS si è interrotta prima della risposta HTTP. Non disabilitare la verifica dei certificati. Controllare prima `tailscale funnel status` e la salute locale su `http://127.0.0.1:5174/api/health`; lo script di consolidamento verifica anche password, salute e build direttamente sul gateway 5184 prima di provare HTTPS.
+
+Per ripubblicare la configurazione prevista soltanto sulla 8443, dal terminale del server:
+
+```sh
+sudo tailscale funnel --bg --https=8443 http://127.0.0.1:5184
+tailscale funnel status
+```
+
+Non modificare la 443. `--bg` mantiene il Funnel dopo l'uscita del comando. La ripubblicazione non garantisce la risoluzione di problemi di connettività Tailscale: ripetere il controllo HTTPS prima di consolidare. Se persiste, conservare l'output di `tailscale funnel status` per la diagnosi. Un errore di preflight interrompe il consolidamento prima di modificare updater, Compose o container.
+
 Verifica: senza credenziali pagina/API devono rispondere 401; con credenziali
 pagina, bundle e `/api/health` rispondono 200, `/.env` e `/server/index.js` 404,
 le scritture `/api/dev` 403. Verificare anche tramite l'URL HTTPS pubblico.
