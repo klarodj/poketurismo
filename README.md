@@ -4,6 +4,8 @@ Gestionale automobilistico con gare tattiche a turni, garage, tuning e campionat
 
 React/Vite/Tailwind/Zustand per il frontend; Express/Prisma/SQLite per il backend. Una sola implementazione delle regole in `shared/raceEngine.mjs`: il server decide e salva i turni; il browser mostra le scelte e i confronti.
 
+Dal 21 ottobre 2026 la direzione di lavoro è una sola istanza sviluppo/test sulla **5174**, seguita dalla migrazione a un PostgreSQL condiviso da Supabase Auth e gioco. Il [piano di consolidamento](docs/AMBIENTE_UNICO.md) distingue configurazione attuale, operazioni ancora da eseguire e migrazione futura. Il checkout legacy va conservato anche dopo lo spegnimento dei suoi container.
+
 ## Prova sul server attuale
 
 Richiede Node **24**, npm, Python 3 e curl. Le dipendenze sono già presenti nella copia di lavoro attuale.
@@ -47,9 +49,9 @@ python3 scripts/database.py migrate /nuovo/percorso/game.db
 
 Le migrazioni SQL versionate sono in `server/prisma/migrations` e vengono gestite dal runner Python, con checksum e transazione. Il runner completa le tabelle mancanti della versione precedente e converte il saldo legacy in centesimi una sola volta. **Non alternare questo runner a `prisma db push` o `prisma migrate deploy` su un salvataggio esistente.**
 
-## Produzione preparata
+## Template Docker alternativo
 
-`Dockerfile` e `compose.yml` costruiscono frontend e backend insieme, con un volume dati esterno al repository. Il frontend compilato viene servito da Express sulla stessa origine delle API. La configurazione proposta usa la porta **5180**, distinta dall'app attuale. Non è stata avviata durante lo sviluppo.
+`Dockerfile` e `compose.yml` costruiscono frontend e backend insieme, con un volume dati esterno al repository. Il frontend compilato viene servito da Express sulla stessa origine delle API. Il template usa ancora la porta **5180** e SQLite; non avviarlo come istanza aggiuntiva. Se adottato per il nuovo ambiente unico, va aggiornato e deve sostituire il runtime sulla 5174 dopo il passaggio dei dati. Non è stato avviato durante lo sviluppo.
 
 Prima del primo avvio, copiare il salvataggio nel percorso host scelto, come descritto in [TESTING.md](docs/TESTING.md), e impostare `POKETURISMO_DATA_DIR` copiando `.env.example` in `.env`. Solo dopo la preparazione dei dati, il comando di pubblicazione è `docker compose up -d --build`. L'immagine applica le migrazioni e i backup all'avvio; una migrazione fallita impedisce l'avvio del server.
 

@@ -1,5 +1,7 @@
 # Poketurismo: stato e prossime priorità
 
+Aggiornamento del 21 ottobre 2026: il playtest coinvolge un amico, quindi **identità personale e isolamento dei salvataggi precedono l'espansione della carriera**. Prima consolidare sviluppo/test sulla 5174 e salvare il lavoro in Git; poi migrare a un solo PostgreSQL per Auth e gioco. Procedura, limiti operativi e criteri di verifica sono in [AMBIENTE_UNICO.md](AMBIENTE_UNICO.md). Gli account e la migrazione non sono ancora implementati.
+
 ## Direzione
 
 Carriera automobilistica individuale con collezione, tuning e gare tattiche a turni. Conservare l'identità Windows 98/Nokia/forum. Primo traguardo di prodotto: prima auto → prima gara → primo potenziamento → primo campionato.
