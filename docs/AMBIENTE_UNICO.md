@@ -2,6 +2,20 @@
 
 Piano aggiornato il 21 ottobre 2026 dopo la richiesta di consolidare le istanze e salvare il lavoro in Git. La migrazione PostgreSQL e gli account personali non sono ancora implementati.
 
+## Consolidamento eseguito il 22 ottobre 2026
+
+- Dopo l'attivazione di Full Access è stato verificato l'accesso effettivo a Docker, systemd, sudo e Tailscale.
+- Backup iniziale di entrambi i database, configurazione Funnel, crontab, updater, Compose e modifiche legacy in `/home/klaro/.backups/poketurismo/consolidation-20261021T223325193420Z`.
+- Il gateway è stato adeguato per accettare le due origini HTTPS previste (443 e 8443), respingendo origini estranee. Il servizio pubblico è stato riavviato e verificato.
+- Entrambi gli indirizzi Funnel inoltrano ora soltanto a `127.0.0.1:5184`. Il vecchio inoltro `/api/` della 443 verso 3001 è stato rimosso. Non restano dipendenze Funnel dalle porte legacy.
+- Il comando di consolidamento ha completato controlli, backup coerenti, disattivazione dell'updater, aggiornamento del Compose e arresto dei container. Backup finali e configurazioni in `/home/klaro/.backups/poketurismo/consolidamento-6at13xgi`; rapporto in `.preview/consolidation.json`, `stage: complete`.
+- `webapp-frontend` e `webapp-backend` risultano fermi con `restart: no`; porte 5173 e 3001 libere anche su IPv6. Checkout e dipendenze condivise sono conservati.
+- Rimosso dal crontab di klaro soltanto il job delle 04:00 di `update_poketurismo.sh`, conservando tutti gli altri job e una copia del crontab originale nella directory di backup finale.
+- `poketurismo-dev` e `poketurismo-public` sono attivi e abilitati al boot; UFW consente la 5174 su IPv4 e IPv6.
+- Google OAuth e SMTP non sono ancora configurati, come confermato dall'utente. Non dichiarare attivi gli account personali o PostgreSQL.
+
+La diagnostica ha rilevato TLS valido collegandosi direttamente al nodo, ma chiusure intermittenti nell'ingresso pubblico. Dopo il riavvio di tailscaled due dei tre indirizzi IPv4 pubblici rispondevano, mentre `185.40.234.198` falliva. I controlli GET ora riprovano soltanto errori transitori; gli errori di verifica del certificato restano bloccanti. La disponibilità di un singolo relay va distinta dal corretto funzionamento dell'app e non viene risolta modificando il database.
+
 ## Decisione architetturale proposta
 
 Usare un solo PostgreSQL persistente per Supabase Auth e dati di Poketurismo. Gli schemi sono contenitori di tabelle nello stesso database, non due server:
