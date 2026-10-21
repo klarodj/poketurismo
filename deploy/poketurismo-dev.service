@@ -10,6 +10,7 @@ WorkingDirectory=/home/klaro/poketurismo-work
 Environment=PATH=/home/klaro/.npm-global/bin:/usr/local/bin:/usr/bin:/bin
 Environment=POKETURISMO_PREVIEW_PORT=5174
 Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/home/klaro/poketurismo-work/.preview/accounts-runtime.env
 ExecStart=/usr/bin/python3 /home/klaro/poketurismo-work/scripts/dev-supervisor.py
 Restart=always
 RestartSec=5

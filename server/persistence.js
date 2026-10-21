@@ -10,7 +10,7 @@ function canonical(value) {
 }
 async function transaction(prisma, action) {
   for (let attempt = 0; ; attempt++) {
-    try { return await prisma.$transaction(action, { maxWait: 10000, timeout: 15000 }); }
+    try { return await prisma.$transaction(action, { maxWait: 10000, timeout: 15000, isolationLevel: 'Serializable' }); }
     catch (error) {
       if (attempt >= 3 || !['P2034', 'P1008', 'P2028', 'P2002'].includes(error.code)) throw error;
       await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 30));

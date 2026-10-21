@@ -52,7 +52,7 @@ Completamento: un giocatore nuovo arriva al primo campionato vinto e a un potenz
 
 ## Punto 4: identità e accesso personale
 
-Da anticipare se si invitano altri giocatori: login, password con hash, sessioni, proprietà dei dati ricavata dall'identità autenticata, protezione degli strumenti di sviluppo e limiti alle richieste. Il giocatore attuale resta ID 1; passare un `userId` non dimostra l'identità dell'utente.
+Anticipato su richiesta dell'utente: Google e codice email con Supabase Auth, PostgreSQL unico per identità e gioco, proprietà dei dati ricavata dall'identità verificata e strumenti amministrativi protetti. Il codice è preparato nel branch `feat/accounts-postgres` e collaudato in isolamento; il servizio pubblico resta sul profilo condiviso finché i provider non sono configurati e il passaggio non è verificato. Nuovi piloti con €10.000 e nessuna auto; salvataggio ID 1 assegnato esplicitamente al proprietario. Stato, prove e procedura in [ACCOUNT_E_POSTGRES.md](ACCOUNT_E_POSTGRES.md).
 
 ## Punto 5: funzioni sociali
 

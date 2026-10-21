@@ -8,6 +8,7 @@ Type=simple
 User=klaro
 Group=klaro
 WorkingDirectory=/home/klaro/poketurismo-work
+EnvironmentFile=-/home/klaro/poketurismo-work/.preview/accounts-gateway.env
 ExecStart=/usr/bin/node /home/klaro/poketurismo-work/scripts/public-preview.mjs
 Restart=on-failure
 RestartSec=3

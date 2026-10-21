@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 const saved = new Map();
 Object.defineProperty(globalThis, 'window', { configurable: true, value: { location: { hostname: '192.168.1.10' } } });
 Object.defineProperty(globalThis, 'sessionStorage', { configurable: true, value: { getItem: key => saved.get(key) || null, setItem: (key, value) => saved.set(key, value) } });
-const { action, setSnapshotHandler, newOperationId } = await import('../src/services/api.js');
+const { action, setSnapshotHandler, newOperationId, configureIdentity } = await import('../src/services/api.js');
 const { default: useRequestStore } = await import('../src/store/requestStore.js');
 const response = body => ({ ok: true, json: async () => body });
 
@@ -37,4 +37,24 @@ test('stale-version conflicts expose the message without offering an invalid ret
   t.mock.method(globalThis, 'fetch', async () => ({ ok: false, status: 409, json: async () => ({ error: 'Settore già giocato' }) }));
   await assert.rejects(action('/races/test/turns', { userId: 1, version: 0, moveId: null }), /già giocato/);
   assert.equal(useRequestStore.getState().retry, null); assert.equal(useRequestStore.getState().pending, 0);
+});
+
+test('logout and account change discard late replies and never apply another pilot snapshot', async t => {
+  configureIdentity('first-user', async () => 'first-token');
+  let deliver;
+  const applied = [];
+  setSnapshotHandler(data => applied.push(data));
+  t.mock.method(globalThis, 'fetch', async (_url, options) => {
+    assert.equal(options.headers.Authorization, 'Bearer first-token');
+    return new Promise(resolve => { deliver = resolve; });
+  });
+  const operation = action('/parts/purchase', { userId: 1, partId: 1 });
+  await new Promise(resolve => setImmediate(resolve));
+  configureIdentity('second-user', async () => 'second-token');
+  deliver(response({ player: { id: 1, money: 10000 } }));
+  await assert.rejects(operation, error => error.status === 499);
+  assert.deepEqual(applied, []);
+  assert.equal(useRequestStore.getState().pending, 0);
+  assert.equal(useRequestStore.getState().retry, null);
+  configureIdentity('legacy', null);
 });

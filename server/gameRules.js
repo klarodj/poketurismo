@@ -24,6 +24,8 @@ function publicPlayer(user) {
   const result = { ...user };
   delete result.password;
   delete result.mail;
+  delete result.authUserId;
+  delete result.usernameKey;
   result.money = user.moneyCents / 100;
   return result;
 }

@@ -1,3 +1,4 @@
+import useGameStore from '../store/gameStore';
 import useDevelopmentStore from '../store/developmentStore';
 import { setSnapshotHandler } from './api';
 import usePlayerStore from '../store/playerStore';
@@ -13,3 +14,7 @@ export function applyGameState(data) {
   if (data.inventory) useInventoryStore.getState().accept(data.inventory);
 }
 setSnapshotHandler(applyGameState);
+
+export function resetGameState() {
+  for (const store of [usePlayerStore, useGarageStore, useRaceStore, useInventoryStore, useDevelopmentStore, useGameStore]) store.setState(store.getInitialState(), true);
+}

@@ -7,7 +7,9 @@
     "test": "npm --prefix .. test",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "generate": "prisma generate"
+    "generate": "prisma generate",
+    "generate:postgres": "prisma generate --schema prisma/postgres/schema.prisma",
+    "migrate:postgres": "prisma migrate deploy --schema prisma/postgres/schema.prisma"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +19,8 @@
     "@prisma/client": "^5.22.0",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.23.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14",

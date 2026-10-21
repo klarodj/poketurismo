@@ -7,10 +7,11 @@ import { fileURLToPath } from 'node:url';
 
 const require = createRequire(new URL('../server/package.json', import.meta.url));
 const express = require('express');
-const root = fileURLToPath(new URL('../.preview/public-dist/', import.meta.url));
-const access = JSON.parse(readFileSync(new URL('../.preview/public-access.json', import.meta.url)));
+const accountMode = process.env.POKETURISMO_AUTH_ENABLED === '1';
+const root = fileURLToPath(new URL(accountMode ? '../dist/' : '../.preview/public-dist/', import.meta.url));
+const access = accountMode ? null : JSON.parse(readFileSync(new URL('../.preview/public-access.json', import.meta.url)));
 const digest = value => createHash('sha256').update(value).digest();
-const expected = digest(`Basic ${Buffer.from(`${access.username}:${access.password}`).toString('base64')}`);
+const expected = access ? digest(`Basic ${Buffer.from(`${access.username}:${access.password}`).toString('base64')}`) : null;
 const origins = new Set(['https://server-klaro.tail6c534c.ts.net', 'https://server-klaro.tail6c534c.ts.net:8443']);
 const app = express();
 app.disable('x-powered-by');
@@ -19,7 +20,7 @@ app.use((req, res, next) => {
   res.set('X-Frame-Options', 'DENY');
   res.set('Referrer-Policy', 'same-origin');
   res.set('Cache-Control', 'no-store');
-  if (!timingSafeEqual(expected, digest(req.headers.authorization || ''))) {
+  if (!accountMode && !timingSafeEqual(expected, digest(req.headers.authorization || ''))) {
     res.set('WWW-Authenticate', 'Basic realm="Poketurismo playtest", charset="UTF-8"');
     return res.status(401).send('Accesso riservato al playtest.');
   }
@@ -36,20 +37,27 @@ app.use((req, res, next) => {
   if (path.split('/').some(part => part.startsWith('.')) ||
       /^\/(?:src|server|scripts|node_modules|@fs|@vite|@id)(?:\/|$)/.test(path) ||
       /\.(?:db|sqlite|map)(?:$|\/)/i.test(path)) return res.sendStatus(404);
-  if (!/^\/api(?:\/|$)/.test(path)) return next();
+  const authRequest = accountMode && /^\/auth\/v1(?:\/|$)/.test(path);
+  if (!/^\/api(?:\/|$)/.test(path) && !authRequest) return next();
+  if (authRequest && /^\/auth\/v1\/admin(?:\/|$)/.test(path)) return res.sendStatus(404);
   // Development editors remain read-only from the public endpoint.
   if (/^\/api\/dev(?:\/|$)/.test(path) && !['GET', 'HEAD'].includes(req.method)) {
     return res.status(403).json({ error: 'Editor disabilitato nel playtest pubblico' });
   }
   const headers = { ...req.headers, host: '127.0.0.1:5174' };
-  delete headers.authorization;
-  delete headers.cookie;
+  if (!accountMode) delete headers.authorization;
+  if (!authRequest) delete headers.cookie;
+  headers['x-forwarded-proto'] = 'https';
+  headers['x-forwarded-for'] = req.socket.remoteAddress;
   delete headers.connection;
-  const upstream = http.request({ hostname: '127.0.0.1', port: 5174,
-    path: req.originalUrl, method: req.method, headers, timeout: 20000 }, response => {
+  const target = authRequest ? new URL(process.env.AUTH_INTERNAL_URL || 'http://127.0.0.1:9999') : new URL('http://127.0.0.1:5174');
+  const upstreamPath = authRequest ? req.originalUrl.replace(/^\/auth\/v1(?=\/|\?|$)/, '') || '/' : req.originalUrl;
+  headers.host = target.host;
+  const upstream = http.request({ hostname: target.hostname, port: target.port,
+    path: upstreamPath, method: req.method, headers, timeout: 20000 }, response => {
     const forwarded = { ...response.headers };
     for (const key of Object.keys(forwarded)) {
-      if (key.startsWith('access-control-') || ['connection', 'set-cookie', 'x-powered-by'].includes(key)) delete forwarded[key];
+      if (key.startsWith('access-control-') || ['connection', 'x-powered-by'].includes(key) || (key === 'set-cookie' && !authRequest)) delete forwarded[key];
     }
     forwarded['cache-control'] = 'no-store';
     res.writeHead(response.statusCode, forwarded);
@@ -65,4 +73,5 @@ app.use((req, res, next) => {
 });
 app.use(express.static(root, { dotfiles: 'deny', index: 'index.html' }));
 app.get('/{*path}', (req, res) => res.sendFile('index.html', { root }));
-app.listen(5184, '127.0.0.1', () => console.log('Public playtest gateway ready on 127.0.0.1:5184'));
+export { app };
+if (import.meta.main) app.listen(5184, '127.0.0.1', () => console.log('Public playtest gateway ready on 127.0.0.1:5184'));

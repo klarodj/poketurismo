@@ -1,3 +1,4 @@
+import AccountGate from './components/AccountGate';
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
@@ -19,21 +20,13 @@ import DevSandbox from './pages/DevSandbox';
 
 import { useEffect } from 'react';
 import usePlayerStore from './store/playerStore';
-import { applyGameState } from './services/gameState';
-import { fetchState } from './services/api';
 import useGameStore from './store/gameStore';
 
 function App() {
-  const [startupError, setStartupError] = React.useState('');
   const carDrive = usePlayerStore(state => state.carDrive);
   const equippedCarId = useGameStore(state => state.equippedCarId);
   const setEquippedCarId = useGameStore(state => state.setEquippedCarId);
 
-  useEffect(() => {
-    let cancelled = false;
-    fetchState(1).then(data => { if (!cancelled) applyGameState(data); }).catch(error => { if (!cancelled) setStartupError(error.message); });
-    return () => { cancelled = true; };
-  }, []);
 
   useEffect(() => {
     if (carDrive !== null && carDrive !== equippedCarId) {
@@ -41,7 +34,6 @@ function App() {
     }
   }, [carDrive, equippedCarId, setEquippedCarId]);
 
-  if (startupError) return <div className="p-6 text-white" role="alert">Impossibile caricare il salvataggio: {startupError}<button className="block mt-4 underline" onClick={() => window.location.reload()}>Riprova</button></div>;
   return (
     <BrowserRouter>
       <Routes>
@@ -69,4 +61,4 @@ function App() {
   );
 }
 
-export default App;
+export default function AuthenticatedApp() { return <AccountGate><App /></AccountGate>; }

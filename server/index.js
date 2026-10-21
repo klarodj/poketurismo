@@ -1,7 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { PrismaClient } = require('@prisma/client');
-require('dotenv').config();
+const { PrismaClient } = require('./database');
 const { SERVICE_PRICES, PILOT_STATS, fail, positiveId, publicPlayer, restoredHandlingStats, partChanges, checkChampionship, charge, cents } = require('./gameRules');
 const { operation, transaction, inventory, addPart, consumePart, garageInclude } = require('./persistence');
 const { startRace, turnRace, snapshot, presentRace } = require('./races');
@@ -9,6 +9,7 @@ const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
 const { BASE_MOVES, trainingMove } = require('./raceEngine');
 const app = express();
 const prisma = new PrismaClient();
+const accounts = require('./accounts');
 app.use(cors());
 app.use(express.json({ limit: '100kb' }));
 const endpoint = handler => async (req, res) => {
@@ -22,9 +23,10 @@ const endpoint = handler => async (req, res) => {
 function mutate(path, kind, action, method = 'post', idle = true) {
   app[method](path, endpoint(req => {
     const { operationId, userId, ...body } = req.body;
-    return operation(prisma, userId, operationId, kind, { ...body, params: req.params }, (tx, id) => action(tx, id, body, req.params), idle);
+    return operation(prisma, accounts.playerId(req, userId), operationId, kind, { ...body, params: req.params }, (tx, id) => action(tx, id, body, req.params), idle);
   }));
 }
+accounts.install(app, prisma, endpoint);
 async function ownGarage(tx, userId, id, include = garageInclude) {
   const garage = await tx.garage.findFirst({ where: { id: positiveId(id), userId }, include });
   if (!garage) fail(403, 'Auto non posseduta');
@@ -32,14 +34,14 @@ async function ownGarage(tx, userId, id, include = garageInclude) {
 }
 app.get('/api/health', endpoint(async () => { await prisma.$queryRaw`SELECT 1`; return { ok: true, service: 'poketurismo', version: 2 }; }));
 app.get('/api/player/:id', endpoint(async req => {
-  const user = await prisma.user.findUnique({ where: { id: positiveId(req.params.id) } });
+  const user = await prisma.user.findUnique({ where: { id: accounts.playerId(req, req.params.id) } });
   if (!user) fail(404, 'Giocatore inesistente');
   return publicPlayer(user);
 }));
-app.get('/api/state/:userId', endpoint(req => transaction(prisma, tx => snapshot(tx, positiveId(req.params.userId)))));
-app.get('/api/inventory/:userId', endpoint(req => inventory(prisma, positiveId(req.params.userId))));
+app.get('/api/state/:userId', endpoint(req => transaction(prisma, tx => snapshot(tx, accounts.playerId(req, req.params.userId)))));
+app.get('/api/inventory/:userId', endpoint(req => inventory(prisma, accounts.playerId(req, req.params.userId))));
 app.get('/api/garage/:userId', endpoint(async req => {
-  const items = await prisma.garage.findMany({ where: { userId: positiveId(req.params.userId) }, include: garageInclude });
+  const items = await prisma.garage.findMany({ where: { userId: accounts.playerId(req, req.params.userId) }, include: garageInclude });
   return items.map(item => ({ ...item, ...restoredHandlingStats(item) }));
 }));
 app.get('/api/cars', endpoint(() => prisma.car.findMany({ include: { brand: true }, orderBy: { id: 'asc' } })));
@@ -174,9 +176,9 @@ mutate('/api/training-sessions/:id/complete', 'training', async (tx, userId, bod
 const championshipInclude = { championship: { include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } } } };
 const serializeEntry = entry => entry ? { ...entry, results: JSON.parse(entry.results) } : null;
 app.get('/api/championships', endpoint(() => prisma.championship.findMany({ include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })));
-app.get('/api/championship-entries/active/:userId', endpoint(async req => serializeEntry(await prisma.championshipEntry.findFirst({ where: { userId: positiveId(req.params.userId), status: 'active' }, include: championshipInclude, orderBy: { createdAt: 'desc' } }))));
+app.get('/api/championship-entries/active/:userId', endpoint(async req => serializeEntry(await prisma.championshipEntry.findFirst({ where: { userId: accounts.playerId(req, req.params.userId), status: 'active' }, include: championshipInclude, orderBy: { createdAt: 'desc' } }))));
 app.get('/api/championship-entries/:entryId', endpoint(async req => {
-  const entry = await prisma.championshipEntry.findFirst({ where: { id: positiveId(req.params.entryId), userId: positiveId(req.query.userId) }, include: championshipInclude });
+  const entry = await prisma.championshipEntry.findFirst({ where: { id: positiveId(req.params.entryId), userId: accounts.playerId(req, req.query.userId) }, include: championshipInclude });
   if (!entry) fail(404, 'Campionato inesistente');
   return serializeEntry(entry);
 }));
@@ -193,11 +195,11 @@ mutate('/api/championships/:championshipId/enter', 'enter-championship', async (
   return { ...state, entry: serializeEntry(entry), user: state.player };
 });
 app.get('/api/races/active/:userId', endpoint(async req => {
-  const race = await prisma.raceSession.findFirst({ where: { userId: positiveId(req.params.userId), status: 'active' }, orderBy: { createdAt: 'desc' } });
+  const race = await prisma.raceSession.findFirst({ where: { userId: accounts.playerId(req, req.params.userId), status: 'active' }, orderBy: { createdAt: 'desc' } });
   return race ? presentRace(race) : null;
 }));
 app.get('/api/races/:raceId', endpoint(async req => {
-  const userId = positiveId(req.query.userId);
+  const userId = accounts.playerId(req, req.query.userId);
   const race = await prisma.raceSession.findFirst({ where: { id: req.params.raceId, userId } });
   if (!race) fail(404, 'Gara inesistente');
   return snapshot(prisma, userId, race);

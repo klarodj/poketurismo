@@ -8,6 +8,7 @@ RUN npm --prefix server ci
 COPY . .
 ENV DATABASE_URL=file:/data/game.db
 RUN npm --prefix server run generate
+RUN DATABASE_URL=postgresql://build@localhost/build npm --prefix server run generate:postgres
 RUN VITE_API_BASE_URL=/api npm run build
 RUN npm --prefix server prune --omit=dev
 

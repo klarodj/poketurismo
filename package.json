@@ -10,14 +10,16 @@
     "preview": "vite preview",
     "test": "node --test --test-isolation=none tests/*.test.js",
     "balance": "node scripts/race-balance.mjs 1000",
-    "postbuild": "node scripts/restart-dev.mjs"
+    "postbuild": "node scripts/restart-dev.mjs",
+    "test:accounts": "node --test tests/accounts.test.cjs tests/accounts-gateway.test.mjs"
   },
   "dependencies": {
     "@fontsource/vt323": "^5.2.7",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.2",
-    "zustand": "^5.0.12"
+    "zustand": "^5.0.12",
+    "@supabase/auth-js": "2.118.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",

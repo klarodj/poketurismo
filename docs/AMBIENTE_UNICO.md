@@ -119,6 +119,8 @@ Per ripristinare soltanto la disponibilità legacy, riattivare i due container c
 
 ## Passaggio successivo a PostgreSQL e utenti
 
+La preparazione implementata e le verifiche isolate sono descritte in [ACCOUNT_E_POSTGRES.md](ACCOUNT_E_POSTGRES.md). Il servizio pubblico non è ancora migrato: Google OAuth e SMTP risultano entrambi da configurare.
+
 1. Preparare una copia di migrazione temporanea, schema `game`, ruoli e vincoli; importare il salvataggio di sviluppo verificando conteggi, centesimi, inventario, gare e progressi. Adeguare SQL specifico SQLite e test di concorrenza a PostgreSQL.
 2. Implementare Google e codice email, identità verificata, proprietà di tutte le risorse e protezione degli strumenti amministrativi.
 3. Creare il percorso iniziale: nickname, avatar, distribuzione delle statistiche, budget verificato sul catalogo, garage vuoto e scuola guida disponibile senza auto. Collegare esplicitamente il salvataggio storico al proprietario; non assegnarlo al primo iscritto.

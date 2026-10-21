@@ -4,18 +4,36 @@ const BASE_URL = import.meta.env?.VITE_API_BASE_URL || (isFunnel ? '/api' : `htt
 let snapshotHandler = () => {};
 export const setSnapshotHandler = handler => { snapshotHandler = handler; };
 const inFlight = new Map();
-const storageKey = 'poketurismo-pending-operations-v2';
+let storageKey = 'poketurismo-pending-operations-v2';
+let contextVersion = 0;
+let tokenProvider = null;
+export function configureIdentity(subject, getToken) {
+  contextVersion++;
+  tokenProvider = subject && subject !== 'legacy' ? getToken : null;
+  inFlight.clear();
+  storageKey = 'poketurismo-pending-operations-v3:' + (subject || 'signed-out');
+  try { pendingKeys = JSON.parse(sessionStorage.getItem(storageKey) || '{}'); } catch { pendingKeys = {}; }
+  if (!pendingKeys || typeof pendingKeys !== 'object' || Array.isArray(pendingKeys)) pendingKeys = {};
+  useRequestStore.setState({ pending: 0, error: '', retry: null });
+}
+function accountChanged() { const error = new Error('Account cambiato: risposta precedente ignorata'); error.status = 499; return error; }
 let pendingKeys;
 try { pendingKeys = JSON.parse(sessionStorage.getItem(storageKey) || '{}'); if (!pendingKeys || typeof pendingKeys !== 'object' || Array.isArray(pendingKeys)) pendingKeys = {}; } catch { pendingKeys = {}; }
 function savePending() { try { sessionStorage.setItem(storageKey, JSON.stringify(pendingKeys)); } catch { /* Requests remain safe during this session. */ } }
 async function request(path, method = 'GET', body) {
-  const response = await fetch(`${BASE_URL}${path}`, { method, ...(body ? { headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : {}) });
+  const version = contextVersion;
+  const headers = body ? { 'Content-Type': 'application/json' } : {};
+  if (tokenProvider) { const token = await tokenProvider(); if (token) headers.Authorization = 'Bearer ' + token; }
+  if (version !== contextVersion) throw accountChanged();
+  const response = await fetch(`${BASE_URL}${path}`, { method, headers, ...(body ? { body: JSON.stringify(body) } : {}) });
   const data = await response.json();
+  if (version !== contextVersion) throw accountChanged();
   if (!response.ok) { const error = new Error(data.error || 'Operazione non riuscita'); error.status = response.status; throw error; }
   return data;
 }
 export const newOperationId = (provider = crypto) => typeof provider.randomUUID === 'function' ? provider.randomUUID() : Array.from(provider.getRandomValues(new Uint8Array(24)), byte => byte.toString(16).padStart(2, '0')).join('');
 export function action(path, body, method = 'POST') {
+  const version = contextVersion;
   const fingerprint = JSON.stringify({ path, method, body });
   if (inFlight.has(fingerprint)) return inFlight.get(fingerprint);
   pendingKeys[fingerprint] ||= newOperationId();
@@ -23,12 +41,15 @@ export function action(path, body, method = 'POST') {
   const payload = { ...body, operationId: pendingKeys[fingerprint] };
   useRequestStore.setState(state => ({ pending: state.pending + 1, error: '', retry: null }));
   const promise = request(path, method, payload).then(data => {
+    if (version !== contextVersion) throw accountChanged();
     delete pendingKeys[fingerprint]; savePending(); snapshotHandler(data); return data;
   }).catch(error => {
+    if (version !== contextVersion || error.status === 499) throw error;
     if (error.status && error.status < 500) { delete pendingKeys[fingerprint]; savePending(); }
     useRequestStore.setState({ error: error.message, retry: !error.status || error.status >= 500 ? () => action(path, body, method).catch(() => {}) : null });
     throw error;
   }).finally(() => {
+    if (version !== contextVersion) return;
     inFlight.delete(fingerprint);
     useRequestStore.setState(state => ({ pending: Math.max(0, state.pending - 1) }));
   });
@@ -65,9 +86,13 @@ export const startRace = (userId, setup) => action('/races', { userId, ...setup 
 export const playRaceTurn = (id, userId, version, moveId, decision) => action(`/races/${id}/turns`, { userId, version, moveId, ...(decision ? { decision } : {}) });
 export const abandonRace = (id, userId, version) => action(`/races/${id}/abandon`, { userId, version });
 export const fetchTrackSections = () => request('/track-sections');
-export const fetchCustomOpponents = () => request('/dev/opponents');
-export const fetchCustomTracks = () => request('/dev/tracks');
+export const fetchCustomOpponents = () => request('/dev/opponents').catch(error => { if (error.status === 403) return []; throw error; });
+export const fetchCustomTracks = () => request('/dev/tracks').catch(error => { if (error.status === 403) return []; throw error; });
 export const createCustomOpponent = body => request('/dev/opponents', 'POST', body);
 export const createCustomTrack = body => request('/dev/tracks', 'POST', body);
 
 export const readDrivingLesson = userId => action('/driver/lesson', { userId });
+
+export const fetchAuthConfig = () => request('/auth/config');
+export const fetchAccount = () => request('/account/me');
+export const createPilot = body => request('/account/pilot', 'POST', body);

@@ -40,3 +40,6 @@ __pycache__/
 
 # Writable Vite cache, isolated from the shared node_modules
 .vite-cache/
+
+# Generated Prisma client for PostgreSQL
+server/generated/
