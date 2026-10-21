@@ -11,7 +11,7 @@ const root = fileURLToPath(new URL('../.preview/public-dist/', import.meta.url))
 const access = JSON.parse(readFileSync(new URL('../.preview/public-access.json', import.meta.url)));
 const digest = value => createHash('sha256').update(value).digest();
 const expected = digest(`Basic ${Buffer.from(`${access.username}:${access.password}`).toString('base64')}`);
-const origin = 'https://server-klaro.tail6c534c.ts.net:8443';
+const origins = new Set(['https://server-klaro.tail6c534c.ts.net', 'https://server-klaro.tail6c534c.ts.net:8443']);
 const app = express();
 app.disable('x-powered-by');
 app.use((req, res, next) => {
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   }
   if (!['GET', 'HEAD', 'OPTIONS'].includes(req.method) &&
       (req.headers['sec-fetch-site'] === 'cross-site' ||
-       (req.headers.origin && req.headers.origin !== origin))) {
+       (req.headers.origin && !origins.has(req.headers.origin)))) {
     return res.status(403).json({ error: 'Origine non consentita' });
   }
   next();
