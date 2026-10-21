@@ -2,6 +2,7 @@
 
 - Lavorare in questa copia. Dal 21 ottobre 2026 la direzione richiesta dall’utente è una sola istanza di sviluppo/test sulla porta 5174, dismettendo la vecchia 5173 e il suo backend 3001 dopo verifica e backup. La procedura e lo stato effettivo sono in `docs/AMBIENTE_UNICO.md`.
 - Conservare il checkout `/home/klaro/docker-server/webapp/app`: contiene il repository Git comune a questo worktree e i `node_modules` condivisi. Spegnere i vecchi container non autorizza a cancellare la directory o i salvataggi.
+- Consolidamento completato e verificato il 22 ottobre 2026: container legacy fermi con `restart: no`, job cron legacy rimosso e updater reso innocuo. I Funnel 443 e 8443 puntano entrambi al gateway 5184 e quindi alla stessa istanza 5174. Dettagli e backup in `docs/AMBIENTE_UNICO.md` e `.preview/consolidation.json`. Non riattivare i container legacy o l'hard reset automatico.
 - Preferenza esplicita dell’utente: tenere il gioco di sviluppo sempre attivo sulla porta 5174, accessibile a tutti, e riavviarlo a ogni ricompilazione.
 - Il servizio preparato è `poketurismo-dev.service`. Il supervisore riavvia l’anteprima quando cambiano sorgenti o build; `npm run build` invia un segnale tramite `postbuild`.
 - Dopo modifiche, verificare il servizio e il riavvio quando l’ambiente permette systemd e rete. Se tali operazioni sono bloccate, dirlo: non dichiarare il servizio attivo o il firewall aperto senza verificarlo.

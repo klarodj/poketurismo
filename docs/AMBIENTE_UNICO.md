@@ -14,7 +14,7 @@ Piano aggiornato il 21 ottobre 2026 dopo la richiesta di consolidare le istanze 
 - `poketurismo-dev` e `poketurismo-public` sono attivi e abilitati al boot; UFW consente la 5174 su IPv4 e IPv6.
 - Google OAuth e SMTP non sono ancora configurati, come confermato dall'utente. Non dichiarare attivi gli account personali o PostgreSQL.
 
-La diagnostica ha rilevato TLS valido collegandosi direttamente al nodo, ma chiusure intermittenti nell'ingresso pubblico. Dopo il riavvio di tailscaled due dei tre indirizzi IPv4 pubblici rispondevano, mentre `185.40.234.198` falliva. I controlli GET ora riprovano soltanto errori transitori; gli errori di verifica del certificato restano bloccanti. La disponibilità di un singolo relay va distinta dal corretto funzionamento dell'app e non viene risolta modificando il database.
+La diagnostica ha rilevato TLS valido collegandosi direttamente al nodo, ma chiusure intermittenti nell'ingresso pubblico. Dopo il riavvio di tailscaled la registrazione è tornata disponibile gradualmente: inizialmente rispondevano due indirizzi IPv4 pubblici, mentre `185.40.234.198` falliva; nell'ultimo controllo tutti e tre (`185.40.234.55`, `.75`, `.198`) rispondono correttamente 401 senza credenziali sulla 8443 con verifica TLS attiva. I controlli GET ora riprovano soltanto errori transitori; gli errori di verifica del certificato restano bloccanti. La disponibilità dei relay va distinta dal corretto funzionamento dell'app.
 
 ## Decisione architetturale proposta
 

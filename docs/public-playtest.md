@@ -4,10 +4,7 @@ URL: https://server-klaro.tail6c534c.ts.net:8443/
 
 Stato effettivo del 22 ottobre 2026, dopo il consolidamento: anche `https://server-klaro.tail6c534c.ts.net/` inoltra allo stesso gateway 5184. Entrambi gli indirizzi richiedono le credenziali del playtest e usano la stessa partita sulla 5174. Il vecchio inoltro `/api/` verso 3001 è stato rimosso; i container legacy sono fermi. Il gateway accetta ora entrambe le origini previste. I paragrafi sulla dipendenza della 443 riportano il problema precedente al passaggio.
 
-Aggiornamento del 22 ottobre 2026: la 443 preesistente punta anch'essa a Poketurismo, ma alla vecchia istanza 5173/3001. Non spegnere quei container prima di aver migrato anche gli inoltri della 443. Il gateway accetta attualmente come origine soltanto la 8443: occorre adeguarlo e verificarlo prima di servire il gioco anche sulla 443.
-
-Il Funnel HTTPS 8443 inoltra al gateway su `127.0.0.1:5184`.
-La configurazione Funnel 443 preesistente resta invariata. Non occorrono
+I Funnel HTTPS 443 e 8443 inoltrano al gateway su `127.0.0.1:5184`. Non occorrono
 port forwarding sul FortiGate o accessi alla tailnet per i visitatori.
 
 Il servizio `poketurismo-public.service` esegue `scripts/public-preview.mjs`:
@@ -46,7 +43,7 @@ tailscale funnel status
 sudo tailscale funnel --https=8443 off
 ```
 
-Non usare `tailscale funnel reset`: cancellerebbe anche l'altro sito.
+Non usare `tailscale funnel reset`: cancellerebbe entrambi gli indirizzi del playtest.
 
 Diagnosi senza modificare servizi, inviare password o disabilitare la verifica TLS:
 
