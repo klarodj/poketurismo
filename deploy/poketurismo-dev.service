@@ -1,0 +1,21 @@
+[Unit]
+Description=Poketurismo development preview on port 5174
+After=network.target
+
+[Service]
+Type=simple
+User=klaro
+Group=klaro
+WorkingDirectory=/home/klaro/poketurismo-work
+Environment=PATH=/home/klaro/.npm-global/bin:/usr/local/bin:/usr/bin:/bin
+Environment=POKETURISMO_PREVIEW_PORT=5174
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /home/klaro/poketurismo-work/scripts/dev-supervisor.py
+Restart=always
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=20
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

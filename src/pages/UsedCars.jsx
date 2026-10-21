@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import usePlayerStore from '../store/playerStore';
-import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import ForumPost from '../components/ForumPost';
 import { fetchMarket, purchaseCar } from '../services/api';
 
 export default function UsedCars() {
-  const { id: userId, money, initialize: refreshPlayer } = usePlayerStore();
-  const { initialize: refreshGarage } = useGarageStore();
+  const { id: userId, money } = usePlayerStore();
   const { triggerEvent } = useGameStore();
   const [marketCars, setMarketCars] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,9 +24,7 @@ export default function UsedCars() {
     // Note: car here is the "market" garage item
     if (money >= car.sellPrice) {
       try {
-        await purchaseCar(userId, car.carId, car.sellPrice);
-        await refreshPlayer(userId);
-        await refreshGarage(userId);
+        await purchaseCar(userId, car.carId, car.id);
         
         triggerEvent({
           type: 'info',
@@ -38,7 +34,7 @@ export default function UsedCars() {
         
         // Remove from local market list
         setMarketCars(prev => prev.filter(c => c.id !== car.id));
-      } catch (err) {
+      } catch {
         triggerEvent({
           type: 'error',
           title: 'Errore Forum',
@@ -89,8 +85,8 @@ export default function UsedCars() {
               ...item.car,
               brand: item.car.brand.name,
               km: item.km,
-              engineHealth: 95, // Mocking wear for now as it's not in garages table
-              tireGrip: 88,
+              engineHealth: item.engineHealth,
+              tireGrip: item.tireGrip,
             }}
             price={item.sellPrice}
             onBuy={() => handleBuy(item)}

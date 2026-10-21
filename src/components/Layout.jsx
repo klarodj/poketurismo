@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import { Outlet, useNavigate, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import useGameStore from '../store/gameStore';
 import HUD from './HUD';
+import useRequestStore from '../store/requestStore';
 import NokiaModal from './NokiaModal';
 import Win98ErrorDialog from './Win98ErrorDialog';
 
 export default function Layout() {
-  const navigate = useNavigate();
   const location = useLocation();
+  const { pending, error, retry } = useRequestStore();
   const currentLocation = useGameStore(state => state.currentLocation);
   const setLocation = useGameStore(state => state.setLocation);
-  const travel = useGameStore(state => state.travel);
 
   useEffect(() => {
     // Sync store with the router's current path (single source of truth)
@@ -19,22 +19,7 @@ export default function Layout() {
     }
   }, [location.pathname, currentLocation, setLocation]);
 
-  // Determine submenus based on path
-  const getSubMenus = () => {
-    const path = location.pathname;
-    if (path.includes('dealership')) {
-      return [{ label: 'Nuovo Ordine', path: '/dealership' }, { label: 'Brands', path: '#' }];
-    }
-    if (path.includes('workshop')) {
-      return [{ label: 'Riparazioni', path: '/workshop' }, { label: 'Tagliando', path: '#' }];
-    }
-    if (path.includes('garage')) {
-      return [{ label: '👤 Pilota', path: '/garage/pilota' }, { label: '🚗 Auto', path: '/garage/auto' }];
-    }
-    return [{ label: 'Nessuna Azione', path: '#' }];
-  };
 
-  const localNavLinks = getSubMenus();
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg">
@@ -52,7 +37,9 @@ export default function Layout() {
         <div className="flex flex-col">
           {/* Content View */}
           <div className="w-full bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white shadow-[inset_1px_1px_0_0_#000000]">
-            <Outlet />
+            {error && <div role="alert" className="bg-red-100 text-red-900 p-3">{error} {retry && <button disabled={pending > 0} className="underline font-bold" onClick={retry}>Riprova operazione</button>}</div>}
+            {pending > 0 && <div role="status" className="bg-yellow-100 text-black p-2">Salvataggio in corso…</div>}
+            <fieldset disabled={pending > 0} className="min-w-0"><Outlet /></fieldset>
           </div>
         </div>
       </div>

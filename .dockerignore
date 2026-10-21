@@ -1,0 +1,15 @@
+.git
+node_modules
+server/node_modules
+.preview
+.data
+**/backups
+**/*.db
+**/*.db-*
+**/__pycache__
+.env
+.env.*
+dist
+tests
+
+.vite-cache

@@ -20,52 +20,14 @@ const usePlayerStore = create((set) => ({
   carDrive: null,
   isLoading: false,
 
+  accept: (data) => set({ id: data.id, username: data.username, money: data.money, xp: data.exp, level: data.level,
+    carDrive: data.carDrive, isLoading: false, stats: Object.fromEntries(['brave', 'clean', 'reflex', 'shift', 'acro', 'turn', 'brake', 'throttle'].map(key => [key, data[key]])) }),
   initialize: async (playerId = 1) => {
     set({ isLoading: true });
-    try {
-      const data = await fetchPlayer(playerId);
-      set({
-        id: data.id,
-        username: data.username,
-        money: data.money,
-        xp: data.exp,
-        level: data.level,
-        carDrive: data.carDrive,
-        stats: {
-          brave: data.brave,
-          clean: data.clean,
-          reflex: data.reflex,
-          shift: data.shift,
-          acro: data.acro,
-          turn: data.turn,
-          brake: data.brake,
-          throttle: data.throttle,
-        },
-        isLoading: false
-      });
-    } catch (err) {
-      console.error('Player init failed:', err);
-      set({ isLoading: false });
-    }
+    try { const data = await fetchPlayer(playerId); usePlayerStore.getState().accept(data); }
+    catch (error) { set({ isLoading: false }); throw error; }
   },
-  
-  addMoney: (amount) => set((state) => ({ money: state.money + amount })),
-  removeMoney: (amount) => set((state) => ({ money: Math.max(0, state.money - amount) })),
-  setWallet: (money, xp) => set((state) => ({
-    money,
-    xp,
-    level: Math.floor(xp / 1000) + 1 || state.level
-  })),
-  
-  addXp: (amount) => set((state) => {
-    const newXp = state.xp + amount;
-    const newLevel = Math.floor(newXp / 1000) + 1;
-    return { xp: newXp, level: newLevel };
-  }),
-  
-  updateStat: (statName, value) => set((state) => ({
-    stats: { ...state.stats, [statName]: state.stats[statName] + value }
-  }))
+
 }));
 
 export default usePlayerStore;

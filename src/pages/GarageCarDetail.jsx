@@ -12,9 +12,9 @@ import { CAR_STAT_LABELS } from '../logic/raceEngine';
 export default function GarageCarDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { cars, getCarStats, initialize: refreshGarage } = useGarageStore();
+  const { cars, getCarStats } = useGarageStore();
   const { id: userId } = usePlayerStore();
-  const { parts: inventoryParts, removePart } = useInventoryStore();
+  const { parts: inventoryParts } = useInventoryStore();
   const { triggerEvent } = useGameStore();
 
   const [activeTab, setActiveTab] = useState('installed');
@@ -27,33 +27,30 @@ export default function GarageCarDetail() {
   const handleAction = async (type, partId, partName) => {
       if (type === 'unmount') {
          try {
-            const res = await unmountPart(car.id, partId);
+            const res = await unmountPart(car.id, partId, userId);
             if (res.success) {
-               triggerEvent({ type: 'info', title: 'Meccanico', message: `Hai rimosso "${partName}". L'auto ha perso i bonus corrispondenti.`});
-               await refreshGarage(userId);
-            }
-         } catch(e) {
+               triggerEvent({ type: 'info', title: 'Meccanico', message: `Hai rimosso "${partName}". Il ricambio è tornato in inventario.`});
+               }
+         } catch {
             triggerEvent({ type: 'error', title: 'Errore Officina', message: 'Impossibile smontare il pezzo.'});
          }
       } else if (type === 'mount') {
          try {
-            const samePartMounted = car.mods?.find(m => m.id === partId);
+            const samePartMounted = car.mods?.find(m => m.partId === partId);
             if (samePartMounted) {
                triggerEvent({ type: 'warning', title: 'Già Installato', message: 'Questo pezzo è già montato su questa vettura.'});
                return;
             }
 
-            const res = await mountPart(car.id, partId);
+            const res = await mountPart(car.id, partId, userId);
             if (res.success) {
-               removePart(partId);
                triggerEvent({ 
                  type: 'success', 
                  title: 'Montaggio Completato', 
                  message: `Hai installato "${partName}". Le prestazioni sono state aggiornate.`
                });
-               await refreshGarage(userId);
-            }
-         } catch(e) {
+               }
+         } catch {
             triggerEvent({ type: 'error', title: 'Errore Officina', message: 'Impossibile montare il pezzo.'});
          }
       }
@@ -208,7 +205,7 @@ export default function GarageCarDetail() {
                         ⚠️ NOTA: Installare un pezzo dello stesso tipo (es: Scarico) sostituirà automaticamente quello attualmente montato, indipendentemente dal livello.
                       </p>
                       {inventoryParts.length > 0 ? inventoryParts.map(part => (
-                        <div key={part.id || part.instanceId} className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray p-3 flex gap-3 shadow-win98-outset hover:border-blue-500">
+                        <div key={part.instanceId || part.id} className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray p-3 flex gap-3 shadow-win98-outset hover:border-blue-500">
                            <div className="w-16 h-16 bg-white border border-gray-400 shrink-0 p-1 relative">
                               <span className="absolute -top-1 -left-1 bg-win98-blue text-white text-[9px] px-1 font-bold border border-white">Lvl {part.level}</span>
                               <img 

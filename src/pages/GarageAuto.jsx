@@ -9,8 +9,8 @@ import { sellCar, equipCar } from '../services/api';
 import { CAR_STAT_LABELS } from '../logic/raceEngine';
 
 export default function GarageAuto() {
-  const { id: userId, initialize: refreshPlayer } = usePlayerStore();
-  const { cars, getCarStats, initialize: refreshGarage } = useGarageStore();
+  const { id: userId } = usePlayerStore();
+  const { cars, getCarStats } = useGarageStore();
   const { equippedCarId, setEquippedCarId, triggerEvent } = useGameStore();
   const navigate = useNavigate();
 
@@ -35,11 +35,9 @@ export default function GarageAuto() {
         const res = await sellCar(userId, selectedCar.id);
         if (res.success) {
             triggerEvent({ type: 'info', title: 'Vendita Completata', message: `Hai incassato €${res.sellValue.toLocaleString()}. L'auto ora si trova al mercato usato.`});
-            await refreshGarage(userId);
-            await refreshPlayer(userId);
             setSelectedCarId(equippedCarId);
         }
-    } catch(e) {
+    } catch {
         triggerEvent({ type: 'error', title: 'Errore', message: 'Il passaggio di proprietà ha fallito.'});
     }
   };
@@ -158,8 +156,7 @@ export default function GarageAuto() {
                        try {
                            await equipCar(userId, selectedCar.id);
                            setEquippedCarId(selectedCar.id);
-                           refreshPlayer(userId);
-                       } catch(e) {
+                       } catch {
                            triggerEvent({ type: 'error', title: 'Errore', message: 'Errore durante equipaggiamento.'});
                        }
                     }}

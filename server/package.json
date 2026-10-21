@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm --prefix .. test",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "generate": "prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,8 @@
   "devDependencies": {
     "nodemon": "^3.1.14",
     "prisma": "^5.22.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

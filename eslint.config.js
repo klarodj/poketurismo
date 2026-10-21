@@ -5,9 +5,9 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', '.vite-cache/**', '.preview/**']),
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,mjs}'],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
@@ -25,5 +25,13 @@ export default defineConfig([
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
+  },
+  {
+    files: ['server/**/*.js'],
+    languageOptions: { globals: globals.node, sourceType: 'commonjs' },
+  },
+  {
+    files: ['debug-count.js', 'vite.config.js', 'tests/**/*.js', 'scripts/**/*.mjs'],
+    languageOptions: { globals: globals.node },
   },
 ])

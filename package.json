@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test --test-isolation=none tests/*.test.js",
+    "balance": "node scripts/race-balance.mjs 1000",
+    "postbuild": "node scripts/restart-dev.mjs"
   },
   "dependencies": {
     "@fontsource/vt323": "^5.2.7",

@@ -1,0 +1,18 @@
+services:
+  poketurismo:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${POKETURISMO_PORT:-5180}:3001"
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: file:/data/game.db
+      PORT: 3001
+    volumes:
+      # External to the Git checkout: code updates cannot delete saves or backups.
+      - ${POKETURISMO_DATA_DIR:-../poketurismo-data}:/data
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

@@ -4,6 +4,7 @@ import Win98Window from '../components/Win98Window';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import usePlayerStore from '../store/playerStore';
+import useDevelopmentStore from '../store/developmentStore';
 import useInventoryStore from '../store/inventoryStore';
 import {
   fetchChampionships,
@@ -38,6 +39,8 @@ function checkCarRequirements(car, champ) {
   if (!car) return ['Nessuna auto equipaggiata'];
   if (car.cv < champ.minCv) errors.push(`CV min: ${champ.minCv} (hai: ${car.cv})`);
   if (car.cv > champ.maxCv) errors.push(`CV max: ${champ.maxCv} (hai: ${car.cv})`);
+  const perfIndex = ['speed', 'acceleration', 'revving', 'transmission', 'turnSlow', 'turnFast', 'brake', 'traction'].reduce((sum, key) => sum + car[key], 0) / 8;
+  if (perfIndex < champ.minPerfIndex) errors.push(`Indice prestazioni min: ${champ.minPerfIndex}`);
   if (champ.allowedDrive !== 'any' && car.driveType !== champ.allowedDrive)
     errors.push(`Trazione richiesta: ${champ.allowedDrive} (hai: ${car.driveType})`);
   return errors;
@@ -166,11 +169,14 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
 
 // ─── TRAINING CARD ──────────────────────────────────────────────────────────
 
-function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onComplete }) {
+function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onComplete, uses = 0 }) {
   const canAfford = playerMoney >= session.cost;
   const levelOk = playerLevel >= session.minLevel;
   const moveAlreadyUnlocked = session.category === 'move' && alreadyHasMove(session.targetMove);
-  const canDo = canAfford && levelOk && !moveAlreadyUnlocked;
+  const assimilated = session.category === 'stat' && uses >= 3;
+  const factor = session.category === 'stat' ? [1, 0.5, 0.25, 0][Math.min(3, uses)] : 1;
+  const statGain = assimilated || session.statGain <= 0 ? 0 : Math.max(1, Math.floor(session.statGain * factor));
+  const canDo = canAfford && levelOk && !moveAlreadyUnlocked && !assimilated;
 
   return (
     <div className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-md">
@@ -182,7 +188,7 @@ function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onCom
           </span>
         </div>
         <div className="text-sm">
-          <span className="text-yellow-300 font-bold">+{session.xpReward} XP</span>
+          <span className="text-yellow-300 font-bold">+{Math.floor(session.xpReward * factor)} XP</span>
         </div>
       </div>
 
@@ -202,7 +208,7 @@ function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onCom
             <div className="text-gray-500">Ricompensa</div>
             <div className="font-bold text-green-700">
               {session.category === 'stat'
-                ? `+${session.statGain} ${STAT_LABELS[session.targetStat] || session.targetStat}`
+                ? `+${statGain} ${STAT_LABELS[session.targetStat] || session.targetStat}`
                 : `🎴 ${session.targetMove}`}
             </div>
           </div>
@@ -212,6 +218,7 @@ function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onCom
           📍 Tracciato: <span className="font-bold">{session.track?.name || '—'}</span>
         </div>
 
+        {session.category === 'stat' && <p className="text-xs mb-2">{assimilated ? 'Corso assimilato: prova un altro allenamento.' : `Sessioni svolte: ${uses}/3. I benefici diminuiscono ripetendo lo stesso corso.`}</p>}
         {moveAlreadyUnlocked && (
           <div className="bg-green-50 border border-green-300 p-2 mb-2 text-xs text-green-700">
             ✅ Mossa già nel tuo Grimorio!
@@ -237,7 +244,7 @@ function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onCom
               : 'bg-gray-200 border-gray-400 text-gray-500 cursor-not-allowed'
           }`}
         >
-          {moveAlreadyUnlocked ? '✅ Già sbloccata' : canDo ? '🎓 Inizia Allenamento' : '🔒 Non disponibile'}
+          {assimilated ? 'Corso assimilato' : moveAlreadyUnlocked ? '✅ Già sbloccata' : canDo ? '🎓 Inizia Allenamento' : '🔒 Non disponibile'}
         </button>
       </div>
     </div>
@@ -250,8 +257,9 @@ export default function Racing() {
   const navigate = useNavigate();
   const { cars } = useGarageStore();
   const { equippedCarId, triggerEvent } = useGameStore();
-  const { id: userId, money, level, stats, removeMoney, addXp, updateStat, initialize: refreshPlayer } = usePlayerStore();
-  const { moves, addMove } = useInventoryStore();
+  const { id: userId, money, level, stats } = usePlayerStore();
+  const { moves } = useInventoryStore();
+  const development = useDevelopmentStore(state => state.development);
 
   const [activeTab, setActiveTab] = useState('competitions');
   const [championships, setChampionships] = useState([]);
@@ -307,9 +315,8 @@ export default function Racing() {
 
     setJoining(true);
     try {
-      const { entry, user } = await enterChampionship(champ.id, userId);
+      const { entry } = await enterChampionship(champ.id, userId);
       setActiveEntry(entry);
-      usePlayerStore.getState().setWallet(user.money, user.exp);
       const firstRound = entry.championship.rounds.find((round) => round.ord === entry.currentRound);
       if (!firstRound) throw new Error('The first championship round is missing.');
       navigate(`/track-race?id=${firstRound.trackId}&entryId=${entry.id}&round=${firstRound.ord}`);
@@ -327,40 +334,12 @@ export default function Racing() {
       return;
     }
     try {
-      await completeTraining(session.id, userId);
-      removeMoney(session.cost);
-      addXp(session.xpReward);
-
-      if (session.category === 'stat' && session.targetStat) {
-        updateStat(session.targetStat, session.statGain);
-        triggerEvent({
-          type: 'success',
-          title: '🎓 Allenamento Completato!',
-          message: `${STAT_LABELS[session.targetStat] || session.targetStat} aumentato di +${session.statGain}. +${session.xpReward} XP guadagnati!`
-        });
-      } else if (session.category === 'move' && session.targetMove) {
-        // Add move to inventory if not already present
-        if (!alreadyHasMove(session.targetMove)) {
-          addMove({
-            id: `m_${session.targetMove.replace(/\s/g, '_').toLowerCase()}_${Date.now()}`,
-            name: session.targetMove,
-            description: session.description,
-            trigger: 'always',
-            bonus: {},
-            costGrip: 0,
-            costHealth: 0,
-            aggressiveness: 2
-          });
-        }
-        triggerEvent({
-          type: 'success',
-          title: '🎴 Nuova Mossa Sbloccata!',
-          message: `Hai imparato "${session.targetMove}"! La trovi nel tuo Grimorio in Garage. +${session.xpReward} XP!`
-        });
-      }
-      await refreshPlayer(userId);
-    } catch {
-      triggerEvent({ type: 'error', title: 'Errore', message: 'Allenamento fallito. Riprova.' });
+      const data = await completeTraining(session.id, userId);
+      triggerEvent({ type: 'success', title: 'Allenamento completato', message: session.category === 'move'
+        ? `Hai imparato ${session.targetMove}. Gestisci le mosse dal profilo pilota.`
+        : `${STAT_LABELS[session.targetStat] || session.targetStat}: +${data.training.statGain}. Esperienza e saldo salvati.` });
+    } catch (error) {
+      triggerEvent({ type: 'error', title: 'Allenamento non riuscito', message: error.message });
     }
   };
 
@@ -470,7 +449,7 @@ export default function Racing() {
             {activeTab === 'training' && (
               <div>
                 <div className="mb-4 bg-[#FFFFE1] border-2 border-win98-darkerGray p-3 text-sm">
-                  <strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
+                  <button className="underline font-bold" onClick={() => navigate('/garage/pilota')}>Scuola guida: lezione e prova pratica della frenata ↗</button><br /><strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
                   Le sessioni <span className="font-bold text-purple-700">MOSSA</span> sbloccano nuove tecniche di guida nel tuo Grimorio.
                 </div>
 
@@ -483,6 +462,7 @@ export default function Racing() {
                       playerMoney={money}
                       alreadyHasMove={alreadyHasMove}
                       onComplete={handleCompleteTraining}
+                      uses={development?.trainingCourses[session.id] || 0}
                     />
                   ))}
                   {trainingSessions.length === 0 && (

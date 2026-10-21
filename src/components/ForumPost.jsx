@@ -22,7 +22,7 @@ export default function ForumPost({ author, avatar, date, title, carDetails, pri
             )}
           </div>
           <div className="text-[10px] text-gray-600 text-center w-full">
-            Messaggi: {Math.floor(Math.random() * 5000)}<br/>
+            Messaggi: —<br/>
             Iscritto: 2001
           </div>
         </div>

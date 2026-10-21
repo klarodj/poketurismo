@@ -1,72 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import usePlayerStore from '../store/playerStore';
-import useInventoryStore from '../store/inventoryStore';
 import useGameStore from '../store/gameStore';
 import useGarageStore from '../store/garageStore';
 import Win98Window from '../components/Win98Window';
-import { fetchParts } from '../services/api';
+import { fetchParts, purchasePart } from '../services/api';
 
 import { CAR_STAT_LABELS } from '../logic/raceEngine';
-
-export default function PartsShop() {
-  const { money, removeMoney } = usePlayerStore();
-  const { addPart } = useInventoryStore();
-  const { triggerEvent } = useGameStore();
-  const { equippedCarId } = useGameStore();
-  const { cars } = useGarageStore();
-  
-  const [parts, setParts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('Motore');
-  const [selectedPart, setSelectedPart] = useState(null);
-
-  const equippedCar = cars.find(c => c.id === equippedCarId);
-
-  useEffect(() => {
-    fetchParts().then(data => {
-      setParts(data);
-      setLoading(false);
-    }).catch(err => {
-      console.error(err);
-      setLoading(false);
-    });
-  }, []);
-
-  const engineParts = parts.filter(p => p.category === 'Engine');
-  const chassisParts = parts.filter(p => p.category === 'Dynamic');
-
-  const handleBuy = (part) => {
-    if (money >= part.price) {
-      removeMoney(part.price);
-      addPart({ ...part, instanceId: `part_${Date.now()}` });
-      setSelectedPart(null);
-      triggerEvent({
-        type: 'success',
-        title: 'Ricambio Acquistato',
-        message: `Hai comprato ${part.name}. Lo trovi nel tuo inventario ricambi.`
-      });
-    } else {
-      triggerEvent({
-        type: 'error',
-        title: 'Fondi Insufficienti',
-        message: 'Non puoi permetterti questo pezzo speciale.'
-      });
-    }
-  };
-
-  const displayedParts = activeTab === 'Motore' ? engineParts : chassisParts;
-
-  // Group parts by name
-  const groupedParts = displayedParts.reduce((acc, part) => {
-    if (!acc[part.name]) acc[part.name] = [];
-    acc[part.name].push(part);
-    return acc;
-  }, {});
-
-  // Sort each group by level
-  Object.keys(groupedParts).forEach(name => {
-    groupedParts[name].sort((a, b) => a.level - b.level);
-  });
 
   const StatComparison = ({ label, current, bonus }) => {
     if (!bonus || bonus === 0) return null;
@@ -96,6 +35,57 @@ export default function PartsShop() {
       </div>
     );
   };
+
+
+export default function PartsShop() {
+  const { id: userId } = usePlayerStore();
+  const { triggerEvent } = useGameStore();
+  const { equippedCarId } = useGameStore();
+  const { cars } = useGarageStore();
+  
+  const [parts, setParts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('Motore');
+  const [selectedPart, setSelectedPart] = useState(null);
+
+  const equippedCar = cars.find(c => c.id === equippedCarId);
+
+  useEffect(() => {
+    fetchParts().then(data => {
+      setParts(data);
+      setLoading(false);
+    }).catch(err => {
+      console.error(err);
+      setLoading(false);
+    });
+  }, []);
+
+  const engineParts = parts.filter(p => p.category === 'Engine');
+  const chassisParts = parts.filter(p => p.category === 'Dynamic');
+
+  const handleBuy = async (part) => {
+    try {
+      await purchasePart(userId, part.id);
+      setSelectedPart(null);
+      triggerEvent({ type: 'success', title: 'Ricambio acquistato', message: `${part.name} è nel tuo inventario salvato.` });
+    } catch (error) {
+      triggerEvent({ type: 'error', title: 'Acquisto non riuscito', message: error.message });
+    }
+  };
+
+  const displayedParts = activeTab === 'Motore' ? engineParts : chassisParts;
+
+  // Group parts by name
+  const groupedParts = displayedParts.reduce((acc, part) => {
+    if (!acc[part.name]) acc[part.name] = [];
+    acc[part.name].push(part);
+    return acc;
+  }, {});
+
+  // Sort each group by level
+  Object.keys(groupedParts).forEach(name => {
+    groupedParts[name].sort((a, b) => a.level - b.level);
+  });
 
   return (
     <Win98Window title="Negozio Ricambi ed Elaborazioni" imageUrl="/images/shop.png">

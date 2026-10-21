@@ -6,9 +6,9 @@ import Win98Window from '../components/Win98Window';
 import { performCarService } from '../services/api';
 
 export default function Workshop() {
-  const { money, id: userId, initialize: refreshPlayer } = usePlayerStore();
-  const { equippedCarId, triggerEvent } = useGameStore();
-  const { cars, initialize: refreshGarage, setEquippedCarId } = useGarageStore();
+  const { money, id: userId } = usePlayerStore();
+  const { equippedCarId, triggerEvent, setEquippedCarId } = useGameStore();
+  const { cars } = useGarageStore();
   const [isProcessing, setIsProcessing] = useState(false);
 
   const equippedCar = cars.find(c => c.id === equippedCarId);
@@ -38,6 +38,10 @@ export default function Workshop() {
     }
 
     if (isProcessing) return;
+    if (service.id === 'engine' && equippedCar.engineHealth <= 0) {
+      triggerEvent({ type: 'error', title: 'Motore fuso', message: 'Serve una revisione completa del motore.' });
+      return;
+    }
 
     // Logic for "is it already at 100%?"
     const diffKm = equippedCar.km - (equippedCar.serviceKm || 0);
@@ -57,14 +61,12 @@ export default function Workshop() {
 
     try {
       setIsProcessing(true);
-      const res = await performCarService(equippedCar.id, userId, service.id, service.price);
+      const res = await performCarService(equippedCar.id, userId, service.id);
       
       if (res.success) {
-        await refreshPlayer(userId);
-        await refreshGarage(userId);
         triggerEvent({ type: 'info', title: 'Lavoro Eseguito', message: `Hai speso €${service.price} per ${service.name}.` });
       }
-    } catch (err) {
+    } catch {
       triggerEvent({ type: 'error', title: 'Errore Officina', message: 'Il meccanico ha avuto un problema con la fattura.' });
     } finally {
       setIsProcessing(false);

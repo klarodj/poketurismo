@@ -1,210 +1,73 @@
-// Capisce da solo se sei in locale o su internet tramite Tailscale
+import useRequestStore from '../store/requestStore.js';
 const isFunnel = window.location.hostname.includes('ts.net');
-const BASE_URL = isFunnel 
-  ? `https://${window.location.hostname}/api` 
-  : `http://${window.location.hostname}:3001/api`;
-
-export const fetchPlayer = async (id = 1) => {
-  const res = await fetch(`${BASE_URL}/player/${id}`);
-  if (!res.ok) throw new Error('Failed to fetch player');
-  return res.json();
-};
-
-export const equipCar = async (userId, garageId) => {
-  const res = await fetch(`${BASE_URL}/player/${userId}/equip`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ carDrive: garageId })
-  });
-  if (!res.ok) throw new Error('Failed to equip car');
-  return res.json();
-};
-
-export const fetchCars = async () => {
-  const res = await fetch(`${BASE_URL}/cars`);
-  if (!res.ok) throw new Error('Failed to fetch cars');
-  return res.json();
-};
-
-export const fetchBrands = async () => {
-  const res = await fetch(`${BASE_URL}/brands`);
-  if (!res.ok) throw new Error('Failed to fetch brands');
-  return res.json();
-};
-
-export const fetchGarage = async (userId = 1) => {
-  const res = await fetch(`${BASE_URL}/garage/${userId}`);
-  if (!res.ok) throw new Error('Failed to fetch garage');
-  return res.json();
-};
-
-export const fetchTracks = async () => {
-  const res = await fetch(`${BASE_URL}/tracks`);
-  if (!res.ok) throw new Error('Failed to fetch tracks');
-  return res.json();
-};
-
-export const fetchMarket = async () => {
-  const res = await fetch(`${BASE_URL}/market`);
-  if (!res.ok) throw new Error('Failed to fetch market');
-  return res.json();
-};
-
-export const purchaseCar = async (userId, carId, price) => {
-  const res = await fetch(`${BASE_URL}/purchase`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, carId, price })
-  });
-  if (!res.ok) throw new Error('Purchase failed');
-  return res.json();
-};
-
-export const fetchParts = async () => {
-  const res = await fetch(`${BASE_URL}/parts`);
-  if (!res.ok) throw new Error('Failed to fetch parts');
-  return res.json();
-};
-
-export const sellCar = async (userId, garageId) => {
-  const res = await fetch(`${BASE_URL}/market/sell`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, garageId })
-  });
-  if (!res.ok) throw new Error('Failed to sell car');
-  return res.json();
-};
-
-export const unmountPart = async (garageId, modId) => {
-  const res = await fetch(`${BASE_URL}/garage/${garageId}/mods/${modId}`, {
-    method: 'DELETE'
-  });
-  if (!res.ok) throw new Error('Unmount failed');
-  return res.json();
-};
-
-export const mountPart = async (garageId, partId) => {
-  const res = await fetch(`${BASE_URL}/garage/${garageId}/mount`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ partId })
-  });
-  if (!res.ok) throw new Error('Mount failed');
-  return res.json();
-};
-
-export const fetchChampionships = async () => {
-  const res = await fetch(`${BASE_URL}/championships`);
-  if (!res.ok) throw new Error('Failed to fetch championships');
-  return res.json();
-};
-
-export const fetchActiveChampionshipEntry = async (userId) => {
-  const res = await fetch(`${BASE_URL}/championship-entries/active/${userId}`);
-  if (!res.ok) throw new Error('Failed to fetch active championship');
-  return res.json();
-};
-
-export const fetchChampionshipEntry = async (entryId, userId) => {
-  const res = await fetch(`${BASE_URL}/championship-entries/${entryId}?userId=${userId}`);
-  if (!res.ok) throw new Error('Failed to fetch championship progress');
-  return res.json();
-};
-
-export const enterChampionship = async (championshipId, userId) => {
-  const res = await fetch(`${BASE_URL}/championships/${championshipId}/enter`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId })
-  });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || 'Championship entry failed');
+const BASE_URL = import.meta.env?.VITE_API_BASE_URL || (isFunnel ? '/api' : `http://${window.location.hostname}:3001/api`);
+let snapshotHandler = () => {};
+export const setSnapshotHandler = handler => { snapshotHandler = handler; };
+const inFlight = new Map();
+const storageKey = 'poketurismo-pending-operations-v2';
+let pendingKeys;
+try { pendingKeys = JSON.parse(sessionStorage.getItem(storageKey) || '{}'); if (!pendingKeys || typeof pendingKeys !== 'object' || Array.isArray(pendingKeys)) pendingKeys = {}; } catch { pendingKeys = {}; }
+function savePending() { try { sessionStorage.setItem(storageKey, JSON.stringify(pendingKeys)); } catch { /* Requests remain safe during this session. */ } }
+async function request(path, method = 'GET', body) {
+  const response = await fetch(`${BASE_URL}${path}`, { method, ...(body ? { headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : {}) });
+  const data = await response.json();
+  if (!response.ok) { const error = new Error(data.error || 'Operazione non riuscita'); error.status = response.status; throw error; }
   return data;
-};
-
-export const recordChampionshipRoundResult = async (entryId, result) => {
-  const res = await fetch(`${BASE_URL}/championship-entries/${entryId}/results`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(result)
+}
+export const newOperationId = (provider = crypto) => typeof provider.randomUUID === 'function' ? provider.randomUUID() : Array.from(provider.getRandomValues(new Uint8Array(24)), byte => byte.toString(16).padStart(2, '0')).join('');
+export function action(path, body, method = 'POST') {
+  const fingerprint = JSON.stringify({ path, method, body });
+  if (inFlight.has(fingerprint)) return inFlight.get(fingerprint);
+  pendingKeys[fingerprint] ||= newOperationId();
+  savePending();
+  const payload = { ...body, operationId: pendingKeys[fingerprint] };
+  useRequestStore.setState(state => ({ pending: state.pending + 1, error: '', retry: null }));
+  const promise = request(path, method, payload).then(data => {
+    delete pendingKeys[fingerprint]; savePending(); snapshotHandler(data); return data;
+  }).catch(error => {
+    if (error.status && error.status < 500) { delete pendingKeys[fingerprint]; savePending(); }
+    useRequestStore.setState({ error: error.message, retry: !error.status || error.status >= 500 ? () => action(path, body, method).catch(() => {}) : null });
+    throw error;
+  }).finally(() => {
+    inFlight.delete(fingerprint);
+    useRequestStore.setState(state => ({ pending: Math.max(0, state.pending - 1) }));
   });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || 'Failed to save championship result');
-  return data;
-};
+  inFlight.set(fingerprint, promise);
+  return promise;
+}
+export const fetchState = (id = 1) => request(`/state/${id}`);
+export const fetchPlayer = (id = 1) => request(`/player/${id}`);
+export const fetchGarage = (id = 1) => request(`/garage/${id}`);
+export const fetchInventory = (id = 1) => request(`/inventory/${id}`);
+export const fetchCars = () => request('/cars');
+export const fetchBrands = () => request('/brands');
+export const fetchMarket = () => request('/market');
+export const fetchParts = () => request('/parts');
+export const fetchTracks = () => request('/tracks');
+export const fetchChampionships = () => request('/championships');
+export const fetchTrainingSessions = () => request('/training-sessions');
+export const fetchActiveChampionshipEntry = id => request(`/championship-entries/active/${id}`);
+export const fetchChampionshipEntry = (id, userId) => request(`/championship-entries/${id}?userId=${userId}`);
+export const equipCar = (userId, carDrive) => action(`/player/${userId}/equip`, { userId, carDrive }, 'PUT');
+export const purchaseCar = (userId, carId, marketGarageId) => action('/purchase', { userId, ...(marketGarageId ? { marketGarageId } : { carId }) });
+export const sellCar = (userId, garageId) => action('/market/sell', { userId, garageId });
+export const purchasePart = (userId, partId) => action('/parts/purchase', { userId, partId });
+export const mountPart = (garageId, partId, userId) => action(`/garage/${garageId}/mount`, { userId, partId });
+export const unmountPart = (garageId, modId, userId) => action(`/garage/${garageId}/mods/${modId}`, { userId }, 'DELETE');
+export const performCarService = (garageId, userId, serviceType) => action(`/garage/${garageId}/service`, { userId, serviceType });
+export const refuelCar = (garageId, userId, liters, fuelType) => action(`/garage/${garageId}/refuel`, { userId, liters, fuelType });
+export const equipMoves = (userId, moveIds) => action(`/player/${userId}/moves`, { userId, moveIds }, 'PUT');
+export const enterChampionship = (championshipId, userId) => action(`/championships/${championshipId}/enter`, { userId });
+export const completeTraining = (id, userId) => action(`/training-sessions/${id}/complete`, { userId });
+export const fetchActiveRace = userId => request(`/races/active/${userId}`);
+export const fetchRace = (id, userId) => request(`/races/${id}?userId=${userId}`);
+export const startRace = (userId, setup) => action('/races', { userId, ...setup });
+export const playRaceTurn = (id, userId, version, moveId, decision) => action(`/races/${id}/turns`, { userId, version, moveId, ...(decision ? { decision } : {}) });
+export const abandonRace = (id, userId, version) => action(`/races/${id}/abandon`, { userId, version });
+export const fetchTrackSections = () => request('/track-sections');
+export const fetchCustomOpponents = () => request('/dev/opponents');
+export const fetchCustomTracks = () => request('/dev/tracks');
+export const createCustomOpponent = body => request('/dev/opponents', 'POST', body);
+export const createCustomTrack = body => request('/dev/tracks', 'POST', body);
 
-export const fetchTrainingSessions = async () => {
-  const res = await fetch(`${BASE_URL}/training-sessions`);
-  if (!res.ok) throw new Error('Failed to fetch training sessions');
-  return res.json();
-};
-
-export const completeTraining = async (sessionId, userId) => {
-  const res = await fetch(`${BASE_URL}/training-sessions/${sessionId}/complete`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId })
-  });
-  if (!res.ok) throw new Error('Training completion failed');
-  return res.json();
-};
-
-export const performCarService = async (garageId, userId, serviceType, price) => {
-  const res = await fetch(`${BASE_URL}/garage/${garageId}/service`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, serviceType, price })
-  });
-  if (!res.ok) throw new Error('Service failed');
-  return res.json();
-};
-
-export const saveCarStats = async (garageId, stats) => {
-  const res = await fetch(`${BASE_URL}/garage/${garageId}/stats`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(stats)
-  });
-  if (!res.ok) throw new Error('Failed to save stats');
-  return res.json();
-};
-
-// --- DEV SANDBOX ---
-export const fetchTrackSections = async () => {
-  const res = await fetch(`${BASE_URL}/track-sections`);
-  if (!res.ok) throw new Error('Failed to fetch track sections');
-  return res.json();
-};
-
-export const fetchCustomOpponents = async () => {
-  const res = await fetch(`${BASE_URL}/dev/opponents`);
-  if (!res.ok) throw new Error('Failed to fetch custom opponents');
-  return res.json();
-};
-
-export const createCustomOpponent = async (opponentData) => {
-  const res = await fetch(`${BASE_URL}/dev/opponents`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(opponentData)
-  });
-  if (!res.ok) throw new Error('Failed to create opponent');
-  return res.json();
-};
-
-export const fetchCustomTracks = async () => {
-  const res = await fetch(`${BASE_URL}/dev/tracks`);
-  if (!res.ok) throw new Error('Failed to fetch custom tracks');
-  return res.json();
-};
-
-export const createCustomTrack = async (trackData) => {
-  const res = await fetch(`${BASE_URL}/dev/tracks`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(trackData)
-  });
-  if (!res.ok) throw new Error('Failed to create track');
-  return res.json();
-};
+export const readDrivingLesson = userId => action('/driver/lesson', { userId });

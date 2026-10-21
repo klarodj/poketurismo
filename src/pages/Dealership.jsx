@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import usePlayerStore from '../store/playerStore';
-import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 import { fetchCars, fetchBrands, purchaseCar } from '../services/api';
@@ -8,8 +7,7 @@ import { fetchCars, fetchBrands, purchaseCar } from '../services/api';
 import { calculateRaceStats, CAR_STAT_LABELS } from '../logic/raceEngine';
 
 export default function Dealership() {
-  const { id: userId, money, initialize: refreshPlayer } = usePlayerStore();
-  const { initialize: refreshGarage } = useGarageStore();
+  const { id: userId, money } = usePlayerStore();
   const { triggerEvent } = useGameStore();
 
   const [allCars, setAllCars] = useState([]);
@@ -19,16 +17,14 @@ export default function Dealership() {
   const [loading, setLoading] = useState(true);
 
   // Pick 6 random cars only once when data is loaded
-  const randomCars = useMemo(() => {
-    if (allCars.length === 0) return [];
-    return [...allCars].sort(() => 0.5 - Math.random()).slice(0, 6);
-  }, [allCars]);
+  const [randomCars, setRandomCars] = useState([]);
 
   useEffect(() => {
     async function loadData() {
        try {
           const [carsData, brandsData] = await Promise.all([fetchCars(), fetchBrands()]);
           setAllCars(carsData);
+          setRandomCars([...carsData].sort(() => Math.random() - 0.5).slice(0, 6));
           // Sort brands alphabetically
           setAllBrands(brandsData.sort((a, b) => a.name.localeCompare(b.name)));
           setLoading(false);
@@ -43,11 +39,9 @@ export default function Dealership() {
   const handleBuy = async (car) => {
     if (money >= car.price) {
       try {
-        await purchaseCar(userId, car.id, car.price);
-        await refreshPlayer(userId);
-        await refreshGarage(userId);
+        await purchaseCar(userId, car.id);
         triggerEvent({ type: 'info', title: 'Acquisto Completato', message: `Hai acquistato una bellissima ${car.name}! La trovi nel tuo Garage.` });
-      } catch (err) {
+      } catch {
         triggerEvent({ type: 'error', title: 'Errore Sistema', message: 'L\'ufficio pratiche auto ha riscontrato un errore nel trasferimento.' });
       }
     } else {

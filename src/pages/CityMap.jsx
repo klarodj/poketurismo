@@ -80,7 +80,7 @@ export default function CityMap() {
 
         {/* Footer tip */}
         <div className="mt-3 p-2 bg-win98-bg text-white text-xs font-pixel border-2 border-win98-darkerGray shrink-0">
-          💡 Ogni spostamento consuma carburante. Fai il pieno al Benzinaio!
+          💡 Controlla carburante e stato del motore prima di gareggiare.
         </div>
 
       </div>

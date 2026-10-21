@@ -9,7 +9,6 @@ export default function GarageHome() {
   const { cars, getCarStats } = useGarageStore();
   const { equippedCarId, setEquippedCarId } = useGameStore();
 
-  const equippedCar = cars.find(c => c.id === equippedCarId);
 
   return (
     <Win98Window title="Garage / Casa" imageUrl="/images/garage.png">

@@ -6,15 +6,12 @@ const useGarageStore = create((set, get) => ({
   cars: [],
   isLoading: false,
 
-  initialize: async (userId = 1) => {
-    set({ isLoading: true });
-    try {
-      const data = await fetchGarage(userId);
+  accept: (data) => {
       const mappedCars = data.map(item => ({
         id: item.id,
         dbId: item.carId,
         name: item.car.name,
-        brand: item.car.brand.name,
+        brand: item.car.brand?.name || 'Sconosciuta',
         cv: item.cv,
         nm: item.nm,
         kg: item.kg,
@@ -33,11 +30,12 @@ const useGarageStore = create((set, get) => ({
         engineHealth: item.engineHealth ?? 100,
         serviceKm: item.serviceKm ?? 0,
         fuelCapacity: 45, 
-        currentFuel: 20,
-        fuelType: 'Normale',
+        currentFuel: item.currentFuel,
+        fuelType: item.fuelType,
         image: item.car.image,
         mods: item.mods.map(m => ({
           id: m.id,
+          partId: m.partId,
           name: m.part.name,
           category: m.part.category,
           image: m.part.image,
@@ -53,60 +51,20 @@ const useGarageStore = create((set, get) => ({
           }
         }))
       }));
-      set({ cars: mappedCars, isLoading: false });
-    } catch (err) {
-      console.error('Garage init failed:', err);
-      set({ isLoading: false });
-    }
+    set({ cars: mappedCars, isLoading: false });
   },
-  
+  initialize: async (userId = 1) => {
+    set({ isLoading: true });
+    try { const data = await fetchGarage(userId); useGarageStore.getState().accept(data); }
+    catch (error) { set({ isLoading: false }); throw error; }
+  },
+
   getCarStats: (carId) => {
     const car = get().cars.find(c => c.id === carId);
     if (!car) return null;
     return calculateRaceStats(car);
   },
 
-  addCar: (car) => set((state) => ({ cars: [...state.cars, car] })),
-  
-  updateCarFuel: (carId, amount, fuelType = 'Normale') => set((state) => ({
-    cars: state.cars.map(car => 
-      car.id === carId 
-        ? { 
-            ...car, 
-            currentFuel: Math.min(car.fuelCapacity, Math.max(0, car.currentFuel + amount)),
-            fuelType: amount > 0 ? fuelType : car.fuelType 
-          }
-        : car
-    )
-  })),
-
-  addKM: (carId, amount) => set((state) => ({
-    cars: state.cars.map(car => 
-      car.id === carId ? { ...car, km: car.km + amount } : car
-    )
-  })),
-
-  applyWear: (carId, tireWear, engineWear) => set((state) => ({
-    cars: state.cars.map(car => 
-      car.id === carId 
-        ? { 
-            ...car, 
-            tireGrip: Math.max(0, car.tireGrip - tireWear),
-            engineHealth: Math.max(0, car.engineHealth - engineWear)
-          } 
-        : car
-    )
-  })),
-  
-  restoreWear: (carId, type) => set((state) => ({
-    cars: state.cars.map(car => {
-      if (car.id !== carId) return car;
-      if (type === 'tires') return { ...car, tireGrip: 100 };
-      if (type === 'engine' || type === 'rebuild') return { ...car, engineHealth: 100 };
-      if (type === 'full') return { ...car, tireGrip: 100, engineHealth: 100 };
-      return car;
-    })
-  }))
 }));
 
 export default useGarageStore;

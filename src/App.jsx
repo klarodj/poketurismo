@@ -19,35 +19,29 @@ import DevSandbox from './pages/DevSandbox';
 
 import { useEffect } from 'react';
 import usePlayerStore from './store/playerStore';
-import useGarageStore from './store/garageStore';
+import { applyGameState } from './services/gameState';
+import { fetchState } from './services/api';
 import useGameStore from './store/gameStore';
 
 function App() {
-  const initializePlayer = usePlayerStore(state => state.initialize);
-  const initializeGarage = useGarageStore(state => state.initialize);
+  const [startupError, setStartupError] = React.useState('');
   const carDrive = usePlayerStore(state => state.carDrive);
   const equippedCarId = useGameStore(state => state.equippedCarId);
   const setEquippedCarId = useGameStore(state => state.setEquippedCarId);
 
-  const isInitialized = React.useRef(false);
+  useEffect(() => {
+    let cancelled = false;
+    fetchState(1).then(data => { if (!cancelled) applyGameState(data); }).catch(error => { if (!cancelled) setStartupError(error.message); });
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
-    if (isInitialized.current) return;
-    isInitialized.current = true;
-
-    async function init() {
-      await initializePlayer(1);
-      await initializeGarage(1);
-    }
-    init();
-  }, [initializePlayer, initializeGarage]);
-
-  useEffect(() => {
-    if (carDrive && carDrive !== equippedCarId) {
+    if (carDrive !== null && carDrive !== equippedCarId) {
       setEquippedCarId(carDrive);
     }
   }, [carDrive, equippedCarId, setEquippedCarId]);
 
+  if (startupError) return <div className="p-6 text-white" role="alert">Impossibile caricare il salvataggio: {startupError}<button className="block mt-4 underline" onClick={() => window.location.reload()}>Riprova</button></div>;
   return (
     <BrowserRouter>
       <Routes>

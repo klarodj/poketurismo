@@ -73,7 +73,8 @@ model User {
   avatar     String?
   level      Int       @default(1)
   exp        Int       @default(0)
-  money      Int       @default(0)
+  money      Int       @default(0) // Legacy import value; runtime uses moneyCents.
+  moneyCents Int       @default(0)
   brave      Int
   clean      Int
   reflex     Int
@@ -85,6 +86,11 @@ model User {
   carDrive   Int
   class      String?
   
+  development DriverDevelopment?
+  progress PlayerProgress?
+  inventory InventoryPart[]
+  races RaceSession[]
+  operations GameOperation[]
   garages    Garage[]
   championshipEntries ChampionshipEntry[]
 }
@@ -108,9 +114,11 @@ model Garage {
   traction     Float
   km           Int      @default(0)
   sellPrice    Float    @default(0.0)
-  engineHealth Int      @default(100)
-  tireGrip     Int      @default(100)
+  engineHealth Float      @default(100)
+  tireGrip     Float      @default(100)
   serviceKm    Int      @default(0)
+  currentFuel  Float    @default(20)
+  fuelType     String   @default("Normale")
   
   mods         Mod[]
 }
@@ -140,6 +148,7 @@ model Part {
   nmBonus       Float
   kgBonus       Float
   
+  inventory     InventoryPart[]
   mods          Mod[]
 }
 
@@ -329,4 +338,60 @@ model CustomTrackSection {
   sectionId     Int
   section       TrackSection @relation(fields: [sectionId], references: [id])
   ord           Int
+}
+
+model PlayerProgress {
+  userId Int @id
+  user User @relation(fields: [userId], references: [id])
+  learnedMoves String @default("[]")
+  equippedMoves String @default("[\"m1\",\"m2\",\"m3\"]")
+}
+
+model InventoryPart {
+  userId Int
+  partId Int
+  quantity Int @default(1)
+  user User @relation(fields: [userId], references: [id])
+  part Part @relation(fields: [partId], references: [id])
+  @@id([userId, partId])
+}
+
+model GameOperation {
+  userId Int
+  key String
+  kind String
+  fingerprint String
+  response String
+  createdAt DateTime @default(now())
+  user User @relation(fields: [userId], references: [id])
+  @@id([userId, key])
+}
+
+model RaceSession {
+  id String @id @default(cuid())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  garageId Int
+  mode String
+  status String @default("active")
+  seed Int
+  version Int @default(0)
+  state String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([userId, status])
+}
+
+
+model DriverDevelopment {
+  userId Int @id
+  user User @relation(fields: [userId], references: [id])
+  earlyPractice Int @default(0)
+  referencePractice Int @default(0)
+  latePractice Int @default(0)
+  techniquePractice Int @default(0)
+  lessonRead Boolean @default(false)
+  lessonPassed Boolean @default(false)
+  routePractice String @default("{}")
+  trainingCourses String @default("{}")
 }

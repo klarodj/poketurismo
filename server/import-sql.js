@@ -5,7 +5,8 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('Starting DB migration from db_old.sql...');
+  if (await prisma.user.count() > 0) throw new Error('Importazione consentita solo su un database senza utenti: i progressi esistenti non vengono sovrascritti');
+  console.log('Importazione iniziale da db_old.sql...');
   const sqlPath = path.join(__dirname, '..', 'db_old.sql');
   const sqlContent = fs.readFileSync(sqlPath, 'utf8');
 
@@ -105,6 +106,7 @@ async function main() {
         }
         obj[finalCol] = row[idx];
       });
+      if (tableName === 'users') obj.moneyCents = Math.round(Number(obj.money || 0) * 100);
       return obj;
     });
 
@@ -112,7 +114,7 @@ async function main() {
     if (!modelName || !prisma[modelName]) continue;
 
     console.log(`Table ${tableName}: parsed ${dataObjects.length} records. Models accessor: ${modelName}`);
-    if (dataObjects.length > 0) console.log('Sample record:', JSON.stringify(dataObjects[0], null, 2));
+    if (dataObjects.length > 0 && tableName !== 'users') console.log('Sample record:', JSON.stringify(dataObjects[0], null, 2));
 
     let count = 0;
     const failedIds = [];

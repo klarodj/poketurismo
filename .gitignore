@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Isolated local preview data
+.preview/
+
+# Runtime data and local configuration never belong to a release
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+.data/
+backups/
+.env
+.env.*
+!.env.example
+__pycache__/
+
+# Writable Vite cache, isolated from the shared node_modules
+.vite-cache/
