@@ -52,7 +52,7 @@ Completamento: un giocatore nuovo arriva al primo campionato vinto e a un potenz
 
 ## Punto 4: identità e accesso personale
 
-Anticipato su richiesta dell'utente: Google e codice email con Supabase Auth, PostgreSQL unico per identità e gioco, proprietà dei dati ricavata dall'identità verificata e strumenti amministrativi protetti. Codice integrato e Google attivo sull’istanza pubblica dal 22 ottobre 2026, con collaudo di migrazione, reset e isolamento. Il primo login interattivo dell’utente resta da verificare; email OTP disabilitato finché SMTP non è configurato. Nuovi piloti con €10.000 e nessuna auto; salvataggio storico azzerato su richiesta e ruolo amministratore assegnato all’email verificata configurata privatamente. Stato, prove e procedura in [ACCOUNT_E_POSTGRES.md](ACCOUNT_E_POSTGRES.md).
+Anticipato su richiesta dell'utente: Google e codice email con Supabase Auth, PostgreSQL unico per identità e gioco, proprietà dei dati ricavata dall'identità verificata e strumenti amministrativi protetti. Codice integrato e Google attivo sull’istanza pubblica dal 22 ottobre 2026, con collaudo di migrazione, reset e isolamento. Primo login Google e creazione pilota confermati dall’utente; email OTP disabilitato finché SMTP non è configurato. Nuovi piloti con €10.000 e nessuna auto; salvataggio storico azzerato su richiesta e ruolo amministratore assegnato all’email verificata configurata privatamente. Stato, prove e procedura in [ACCOUNT_E_POSTGRES.md](ACCOUNT_E_POSTGRES.md).
 
 ## Punto 5: funzioni sociali
 

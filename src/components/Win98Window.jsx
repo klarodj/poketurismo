@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Props: title (string), children (ReactNode), onClose (fn), noShadow (boolean), imageUrl (string)
-export default function Win98Window({ title, children, onClose, noShadow = false, imageUrl }) {
+export default function Win98Window({ title, children, onClose, noShadow = false, imageUrl, showControls = true }) {
   return (
     <div className={`
       bg-win98-gray 
@@ -21,7 +21,7 @@ export default function Win98Window({ title, children, onClose, noShadow = false
         </div>
 
         {/* Window Controls */}
-        <div className="flex gap-1 h-5">
+        {showControls && <div className="flex gap-1 h-5">
           <button className="w-5 h-5 bg-win98-gray border border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray flex items-center justify-center text-black font-bold text-xs pb-1 active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white">
             _
           </button>
@@ -34,7 +34,7 @@ export default function Win98Window({ title, children, onClose, noShadow = false
           >
             ×
           </button>
-        </div>
+        </div>}
       </div>
 
       {/* Window Body */}
