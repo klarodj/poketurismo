@@ -2,6 +2,8 @@
 
 Il piazzale sostituisce la schermata «prossimamente» con esposizioni volontarie e tempi condivisi. Accessibile dalla mappa anche senza auto, sempre dopo il login. Nessuna puntata, premio, addebito o sfida PvP in questa versione.
 
+Pubblicato nell'istanza condivisa il 22 ottobre 2026. Dopo la migrazione verificati utenti, auto, ricambi montati, progressi, iscrizioni e gare invariati; esposizione inizialmente disattivata per tutti. Backup completo prima e dopo l'applicazione, pagina e API disponibili, lettura del raduno protetta dal login.
+
 ## Esposizione
 
 Ogni giocatore può scegliere una sola auto posseduta. «Esponi e condividi i tempi» rende visibili agli altri iscritti nome pilota, livello, auto, dati tecnici e pezzi installati, insieme ai suoi tempi validi in pista. Nessuna esposizione automatica alla migrazione o alla registrazione. «Ritira dal raduno» nasconde sia la vettura sia i tempi condivisi; i record personali rimangono disponibili nell'Autodromo.
