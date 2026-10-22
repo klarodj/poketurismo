@@ -29,7 +29,7 @@ Calendario e avversari vengono congelati all'iscrizione in `ChampionshipEntry.co
 
 ## Prove a tempo
 
-Un giro senza quota o premi, con consumo e usura reali, nessuna azione di duello. Viene salvato soltanto un tempo completato valido; ritiri e tentativi incompleti non sostituiscono il record. Il miglior tempo personale per circuito include vettura, CV e IP iniziale. È un record assoluto personale: auto e preparazioni differenti non sono normalizzate né considerate equivalenti. Nessuna classifica pubblica o condivisione tra utenti in questa versione. I record derivano dalle sessioni già salvate, non da tempi inviati dal browser.
+Un giro senza quota o premi, con consumo e usura reali, nessuna azione di duello. Viene salvato soltanto un tempo completato valido; ritiri e tentativi incompleti non sostituiscono il record. Il miglior tempo personale per circuito include vettura, CV e IP iniziale. È un record assoluto personale: auto e preparazioni differenti non sono normalizzate né considerate equivalenti. La condivisione tra iscritti è ora disponibile nel Car Meet, soltanto per chi sceglie di esporre un’auto: vedi docs/CAR_MEET.md. I record derivano dalle sessioni già salvate, non da tempi inviati dal browser.
 
 ## Aggiornamento dei dati e compatibilità
 

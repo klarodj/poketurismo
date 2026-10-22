@@ -12,6 +12,7 @@ const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
 const { streetHub, encounter } = require('./streetRacing');
 const { publicEntry, createContract } = require('./championships');
 const { championshipInfo } = require('../shared/championshipCatalog.mjs');
+const carMeet = require('./carMeet');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -57,6 +58,9 @@ app.get('/api/market', endpoint(async () => {
   const cars = await prisma.garage.findMany({ where: { userId: -1 }, include: garageInclude });
   return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item) })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
 }));
+app.get('/api/meet', endpoint(req => transaction(prisma, tx => carMeet.meet(tx, accounts.playerId(req, req.query.userId)))));
+app.get('/api/meet/leaderboard', endpoint(req => transaction(prisma, tx => carMeet.leaderboard(tx, req.query))));
+mutate('/api/meet/showcase', 'meet-showcase', carMeet.displayCar, 'post', false);
 mutate('/api/player/:id/equip', 'equip', async (tx, userId, body, params) => {
   if (positiveId(params.id) !== userId) fail(403, 'Giocatore non corrispondente');
   const car = await ownGarage(tx, userId, body.carDrive);

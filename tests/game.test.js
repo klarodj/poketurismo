@@ -725,3 +725,61 @@ test('time trial mode rejects street routes and cannot be combined with a paid o
  const type=await prisma.trackType.create({data:{name:'Touge',image:''}});await prisma.track.update({where:{id:track.id},data:{typeId:type.id}});
  assert.equal((await post('/races',{mode:'track',timeTrial:true,trackId:track.id})).status,400);
 });
+
+test('Car Meet is opt-in, exposes only public game fields and does not alter funds or car stats',async()=>{
+ assert.deepEqual((await get('/meet?userId=1')).data.showcases,[]);
+ const before=await prisma.garage.findUnique({where:{id:garage.id}}),money=await wallet();
+ const shown=await post('/meet/showcase',{garageId:garage.id});assert.equal(shown.status,200);assert.equal(shown.data.meet.myGarageId,garage.id);
+ const publicData=(await get('/meet?userId=2')).data;assert.equal(publicData.showcases.length,1);assert.equal(publicData.myGarageId,null);
+ const pilot=publicData.showcases[0].pilot;assert.deepEqual(Object.keys(pilot).sort(),['id','level','name']);
+ for(const secret of ['private@example.org','secret','moneyCents','authUserId','usernameKey','password'])assert.ok(!JSON.stringify(publicData).includes(secret));
+ assert.equal(await wallet(),money);assert.deepEqual(await prisma.garage.findUnique({where:{id:garage.id}}),before);
+});
+test('Car Meet rejects foreign cars, missing choices and forged public metadata',async()=>{
+ assert.equal((await post('/meet/showcase',{garageId:otherGarage.id})).status,403);
+ assert.equal((await post('/meet/showcase',{})).status,400);
+ assert.equal((await post('/meet/showcase',{garageId:garage.id,username:'Falso'})).status,400);
+ assert.deepEqual((await get('/meet?userId=1')).data.showcases,[]);
+});
+test('showcase retries return current visibility and withdrawing preserves personal records',async()=>{
+ const key=randomUUID();await post('/meet/showcase',{garageId:garage.id},key);
+ const race=await begin('track',{timeTrial:true});await post(`/races/${race.id}/turns`,{version:0,moveId:null});
+ const privateRecords=(await get('/time-trials/1')).data;
+ assert.equal((await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data.records.length,1);
+ await post('/meet/showcase',{garageId:null});
+ assert.equal((await post('/meet/showcase',{garageId:garage.id},key)).data.meet.showcases.length,0);
+ assert.equal((await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data.records.length,0);
+ assert.deepEqual((await get('/time-trials/1')).data,privateRecords);
+});
+test('showcase settings are safe to change during a race without overwriting driving progress',async()=>{
+ const race=await begin();await prisma.playerProgress.upsert({where:{userId:1},create:{userId:1,streetState:'{"parking":{"reputation":12}}'},update:{streetState:'{"parking":{"reputation":12}}'}});
+ const displayed=await post('/meet/showcase',{garageId:garage.id});assert.equal(displayed.status,200);assert.equal(displayed.data.activeRace.id,race.id);
+ assert.equal(JSON.parse((await prisma.playerProgress.findUnique({where:{userId:1}})).streetState).parking.reputation,12);
+ assert.equal((await post(`/races/${race.id}/turns`,{version:0,moveId:null})).status,200);
+});
+test('selling an exhibited car removes its display and shared records without exposing the new owner',async()=>{
+ await post('/meet/showcase',{garageId:garage.id});const race=await begin('track',{timeTrial:true});await post(`/races/${race.id}/turns`,{version:0,moveId:null});
+ assert.equal((await post('/market/sell',{garageId:garage.id})).status,200);
+ assert.equal((await get('/meet?userId=1')).data.showcases.length,0);
+ assert.equal((await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data.records.length,0);
+ assert.equal((await get('/time-trials/1')).data.length,1);
+});
+test('shared records use completed time trials only, one best per visible pilot and model',async()=>{
+ await post('/meet/showcase',{garageId:garage.id});
+ const one=await begin('track',{timeTrial:true});const first=await post(`/races/${one.id}/turns`,{version:0,moveId:null,timeMs:1});assert.equal(first.status,200);
+ const second=await begin('track',{timeTrial:true});const result=await post(`/races/${second.id}/turns`,{version:0,moveId:null});assert.equal(result.status,200);
+ const normal=await begin();await post(`/races/${normal.id}/turns`,{version:0,moveId:null});
+ const failed=await begin('track',{timeTrial:true});await post(`/races/${failed.id}/abandon`,{version:0});
+ const data=(await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data;
+ assert.equal(data.records.length,1);assert.equal(data.records[0].timeMs,Math.round(Math.min(first.data.race.playerTime,result.data.race.playerTime)*1000));assert.equal(data.records[0].position,1);
+ assert.equal(data.records[0].configuration.currentFuel,(first.data.race.playerTime<=result.data.race.playerTime?one:second).trialSetup.configuration.currentFuel);
+ for(const name of ['rng','moneyCents','password','authUserId','raceId'])assert.ok(!JSON.stringify(data).includes(`"${name}"`));
+});
+test('leaderboards do not mix track layouts, weather or car models',async()=>{
+ await post('/meet/showcase',{garageId:garage.id});const race=await begin('track',{timeTrial:true});await post(`/races/${race.id}/turns`,{version:0,moveId:null});
+ const url=`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`;assert.equal((await get(url)).data.records.length,1);
+ const{id:_id,...model}=car;const another=await prisma.car.create({data:{...model,name:'Another model'}});assert.equal((await get(`/meet/leaderboard?trackId=${track.id}&modelId=${another.id}`)).data.records.length,0);
+ await prisma.trackMeteo.update({where:{id:track.meteoId},data:{name:'Rainy'}});assert.equal((await get(url)).data.records.length,0);
+ await prisma.trackMeteo.update({where:{id:track.meteoId},data:{name:'Dry'}});const build=await prisma.trackBuild.findFirst({where:{trackId:track.id}});await prisma.trackBuild.create({data:{trackId:track.id,sectionId:build.sectionId,level:1,ord:2}});assert.equal((await get(url)).data.records.length,0);
+ assert.equal((await get('/time-trials/1')).data.length,1);
+});

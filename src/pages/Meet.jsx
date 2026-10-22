@@ -1,29 +1,28 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import Win98Window from '../components/Win98Window';
-import { useNavigate } from 'react-router-dom';
-
-export default function Meet() {
-  const navigate = useNavigate();
-
-  return (
-    <Win98Window title="Car Meet (Piazzale)" imageUrl="/images/meet.png">
-      <div className="flex flex-col items-center p-8 bg-black border-4 border-gray-700 text-white font-pixel">
-        <h1 className="text-4xl text-yellow-400 mb-4 animate-pulse uppercase tracking-widest text-center">NIGHT RIDERZ MEET</h1>
-        
-        <p className="text-center text-sm mb-8 text-gray-300">
-          Il piazzale è pieno di auto modificate. Senti puzza di gomma bruciata e musica a palla.<br/><br/>
-          (Questa funzione multigiocatore asincrona per sfidare altri utenti o mostrare i propri veicoli sarà disponibile prossimamente).
-        </p>
-
-        <div className="flex gap-4">
-          <button 
-            onClick={() => navigate('/map')}
-            className="bg-win98-gray text-black px-6 py-2 border-4 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray font-bold"
-          >
-            Torna alla Mappa
-          </button>
-        </div>
-      </div>
-    </Win98Window>
-  );
+import RaceDetailDialog from '../components/RaceDetailDialog';
+import {MeetShowcaseCard,MeetCarDetails} from '../components/MeetShowcase';
+import MeetLeaderboard from '../components/MeetLeaderboard';
+import usePlayerStore from '../store/playerStore';
+import useGarageStore from '../store/garageStore';
+import useGameStore from '../store/gameStore';
+import useRequestStore from '../store/requestStore';
+import {fetchMeet,displayMeetCar,fetchMeetLeaderboard,fetchTracks,fetchCars} from '../services/api';
+import '../components/race-ui.css';
+import '../components/meet.css';
+export default function Meet(){
+ const navigate=useNavigate();const userId=usePlayerStore(state=>state.id);const cars=useGarageStore(state=>state.cars);const equipped=useGameStore(state=>state.equippedCarId);const pending=useRequestStore(state=>state.pending);
+ const [data,setData]=useState(null),[tracks,setTracks]=useState([]),[models,setModels]=useState([]),[tab,setTab]=useState('showroom'),[selected,setSelected]=useState(null),[garageId,setGarageId]=useState(cars[0]?.id||''),[trackId,setTrackId]=useState(''),[modelId,setModelId]=useState(cars.find(car=>car.id===equipped)?.dbId||''),[board,setBoard]=useState(null),[boardLoading,setBoardLoading]=useState(false),[error,setError]=useState(''),[revision,setRevision]=useState(0),[notice,setNotice]=useState('');
+ const ownCar=cars.find(car=>car.id===equipped);
+ useEffect(()=>{let current=true;Promise.all([fetchMeet(userId),fetchTracks(),fetchCars()]).then(([meet,allTracks,allCars])=>{if(!current)return;setData(meet);const circuits=allTracks.filter(track=>track.catalog?.format==='circuit'||track.type.name==='Track');setTracks(circuits);setModels(allCars.slice().sort((a,b)=>`${a.brand.name} ${a.name}`.localeCompare(`${b.brand.name} ${b.name}`)));setTrackId(previous=>previous||circuits.find(track=>track.name==='Tsukuba · Ibaraki')?.id||circuits[0]?.id||'');setModelId(previous=>previous||meet.showcases[0]?.car.modelId||allCars.find(car=>car.name==='Seicento Sporting')?.id||allCars[0]?.id||'');setGarageId(previous=>meet.myGarageId||previous);}).catch(e=>{if(current)setError(e.message);});return()=>{current=false;};},[userId,revision]);
+ useEffect(()=>{let current=true;if(tab!=='times'||!trackId||!modelId)return;fetchMeetLeaderboard(trackId,modelId).then(result=>{if(current){setBoard(result);setBoardLoading(false);}}).catch(e=>{if(current){setError(e.message);setBoardLoading(false);}});return()=>{current=false;};},[tab,trackId,modelId,revision]);
+ const save=async id=>{try{setError('');const result=await displayMeetCar(userId,id);setData(result.meet);setNotice(id===null?'Hai ritirato l’esposizione e i tempi dal raduno.':'Auto esposta: i tuoi tempi validi sono ora condivisi nel raduno.');setBoard(null);setRevision(value=>value+1);}catch(e){setError(e.message);}};
+ const changeTrack=id=>{setTrackId(id);setBoard(null);setBoardLoading(true);};const changeModel=id=>{setModelId(id);setBoard(null);setBoardLoading(true);};
+ return <Win98Window title="Car Meet — Night Riderz" imageUrl="/images/meet.png"><div className="meet-page"><header className="meet-header"><p>Night Riderz · il piazzale</p><h1>Le vostre auto, le vostre storie</h1><span>Esponi la tua preparazione e trova un tempo da battere.</span></header>{error&&<p role="alert" className="meet-error">{error}</p>}{notice&&<p role="status" className="meet-notice">{notice}</p>}
+ <section className="meet-display"><h2>Il tuo posto al raduno</h2><p>Esponendo un’auto condividi con gli altri iscritti nome del pilota, livello, vettura, pezzi installati e tempi completati. Puoi ritirare tutto dal raduno quando vuoi; i record personali rimangono salvati.</p>{cars.length?<div className="meet-display-actions"><label>Auto da esporre<select value={garageId} onChange={event=>setGarageId(event.target.value)}>{cars.map(car=><option key={car.id} value={car.id}>{car.brand} {car.name}</option>)}</select></label><button className="win98-btn" disabled={pending>0||!garageId} onClick={()=>save(Number(garageId))}>{data?.myGarageId?'Aggiorna esposizione':'Esponi e condividi i tempi'}</button>{data?.myGarageId&&<button className="win98-btn" disabled={pending>0} onClick={()=>save(null)}>Ritira dal raduno</button>}</div>:<button className="win98-btn" onClick={()=>navigate('/used-cars')}>Trova la tua prima auto</button>}</section>
+ <nav className="meet-tabs" aria-label="Sezioni del Car Meet"><button aria-pressed={tab==='showroom'} onClick={()=>setTab('showroom')}>Piazzale · {data?.showcases.length??0} auto</button><button aria-pressed={tab==='times'} onClick={()=>{if(tab!=='times'){setTab('times');setBoardLoading(true);}}}>Tempi in pista</button><button onClick={()=>{setError('');setBoard(null);setBoardLoading(true);setRevision(value=>value+1);}}>Aggiorna</button></nav>
+ {tab==='showroom'?data?<div className="meet-grid">{data.showcases.length?data.showcases.map(showcase=><MeetShowcaseCard key={showcase.pilot.id} showcase={showcase} mine={showcase.pilot.id===userId} onOpen={()=>setSelected(showcase)}/>):<p className="meet-empty">Il piazzale è ancora vuoto. Esponi la tua auto e invita gli altri piloti a fare lo stesso.</p>}</div>:<p>Caricamento del piazzale…</p>:<section className="meet-leaderboard"><h2>Un giro da battere</h2><p>Confronto sullo stesso circuito, con lo stesso modello e lo stesso meteo. Preparazione, condizioni dell’auto e abilità del pilota possono cambiare il risultato: guarda i dettagli prima di confrontare i tempi.</p><div className="meet-filters"><label>Circuito<select value={trackId} onChange={event=>changeTrack(event.target.value)}>{tracks.map(track=><option key={track.id} value={track.id}>{track.name}</option>)}</select></label><label>Modello<select value={modelId} onChange={event=>changeModel(event.target.value)}>{models.map(model=><option key={model.id} value={model.id}>{model.brand.name} {model.name}</option>)}</select></label></div>{boardLoading?<p aria-live="polite">Caricamento dei tempi…</p>:board&&<MeetLeaderboard board={board} userId={userId}/>}<div className="meet-display-actions"><button className="win98-btn" disabled={!trackId} onClick={()=>navigate(`/track-race?id=${trackId}&trial=1`)}>Vai a provare il circuito</button><button className="win98-btn" onClick={()=>navigate('/time-trials')}>Tutti i tuoi record personali</button></div><p className="meet-small">Un solo miglior tempo per pilota e modello. Compaiono soltanto prove a tempo completate da chi espone un’auto, senza gare singole, campionati o ritiri. Nessuna puntata o ricompensa.</p></section>}
+ {selected&&<RaceDetailDialog title={`L’auto di ${selected.pilot.name}`} onClose={()=>setSelected(null)} closeLabel="Torna al piazzale"><MeetCarDetails showcase={selected} ownCar={ownCar}/><button className="win98-btn mt-4" onClick={()=>{changeModel(selected.car.modelId);setTab('times');setSelected(null);}}>Vedi i tempi di questo modello</button></RaceDetailDialog>}
+ </div></Win98Window>;
 }

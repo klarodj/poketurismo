@@ -22,7 +22,7 @@ const useGameStore = create((set, get) => ({
   // City navigation is free; race distances and fuel are recorded by the server.
   travel: destinationPath => {
     if (destinationPath === '/garage' || destinationPath.startsWith('/garage/')) return true;
-    if (['/map', '/', '/garage', '/dealership', '/used-cars', '/racing', '/autodrome', '/time-trials'].includes(destinationPath)) return true;
+    if (['/map', '/', '/garage', '/dealership', '/used-cars', '/racing', '/autodrome', '/time-trials', '/meet'].includes(destinationPath)) return true;
     const car = useGarageStore.getState().cars.find(car => car.id === get().equippedCarId);
     if (car) return true;
     set({ activeEvent: { type: 'error', title: 'Nessuna auto', message: 'Equipaggia prima una vettura dal garage.' } });

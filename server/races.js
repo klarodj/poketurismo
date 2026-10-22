@@ -14,6 +14,7 @@ const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
 const { acceptEncounter, settleStreet } = require('./streetRacing');
 const { readContract, gridOpponent, settleGrid } = require('./championships');
 const { performanceIndex } = require('../shared/vehiclePerformance.mjs');
+const { trialConfiguration } = require('./carMeet');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
@@ -152,7 +153,7 @@ async function startRace(tx, userId, body) {
     moves: inv.moves.filter(move => inv.equippedMoves.includes(move.id)), index: 0, gap: 0, logs: [], rng: seed,
     finished: false, sandbox, entryId: entry?.id || null, round: round?.ord || null,
     wager: streetMatch?.wager || 0,
-    ...(body.timeTrial ? {timeTrial:true,trialSetup:{carName:`${garage.car.brand?.name||''} ${garage.car.name}`.trim(),cv:garage.cv,performanceIndex:performanceIndex(garage)}} : {}),
+    ...(body.timeTrial ? {timeTrial:true,trialSetup:{carName:`${garage.car.brand?.name||''} ${garage.car.name}`.trim(),cv:garage.cv,performanceIndex:performanceIndex(garage),configuration:trialConfiguration(garage)}} : {}),
     ...(gridMatch ? {gridOpponentId:gridMatch.driver.id,gridSeed:seed} : {}),
     ...(streetMatch ? { street: streetMatch.street } : {})
   };

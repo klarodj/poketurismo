@@ -121,3 +121,15 @@ test('driving school renders all fifty techniques with contexts, prerequisites a
   assert.ok(markup.includes('Tornante innevato'));assert.ok(markup.includes('Punta-tacco'));
   assert.ok(markup.includes('Da imparare ora'));assert.ok(markup.includes('Leggi la lezione'));
 });
+
+test('Car Meet cards and detail show actual photos, installed parts and a comparison',async()=>{
+ const Card=await component('MeetShowcase','MeetShowcaseCard');const Details=await component('MeetShowcase','MeetCarDetails');
+ const showcase={pilot:{id:1,name:'Pilota Uno',level:2},car:{id:1,name:'Seicento',brand:'Fiat',image:'fiat.png',year:1998,cv:55,nm:90,kg:735,driveType:'FF',engineType:'NA',km:80000,engineHealth:90,tireGrip:82,performanceIndex:40,tier:'Primi passi',parts:[{id:1,name:'Filtro sportivo',description:'Aspirazione migliorata',level:1}]}};
+ const card=renderToStaticMarkup(React.createElement(Card,{showcase,mine:true,onOpen(){}}));assert.ok(card.includes('Pilota Uno'));assert.ok(card.includes('/images/car/fiat.png'));assert.ok(card.includes('1 pezzi installati'));
+ const details=renderToStaticMarkup(React.createElement(Details,{showcase,ownCar:showcase.car}));assert.ok(details.includes('Filtro sportivo'));assert.ok(details.includes('Confronto con la tua auto'));
+});
+test('shared timing UI explains missing legacy conditions and renders a useful empty state',async()=>{
+ const Board=await component('MeetLeaderboard');const empty=renderToStaticMarkup(React.createElement(Board,{board:{records:[]},userId:1}));assert.ok(empty.includes('Nessun giro condiviso'));
+ const board={total:1,model:{name:'Seicento',brand:'Fiat'},track:{name:'Tsukuba'},records:[{pilot:{id:1,name:'Pilota Uno'},position:1,timeMs:123456,gapMs:0,car:{cv:55,kg:735,performanceIndex:40},configuration:null}]};
+ const html=renderToStaticMarkup(React.createElement(Board,{board,userId:1}));assert.ok(html.includes('123.456'));assert.ok(html.includes('Giro precedente'));assert.ok(html.includes('(tu)'));
+});

@@ -390,11 +390,12 @@ model CustomTrackSection {
 }
 
 model PlayerProgress {
-  userId        Int    @id
-  user          User   @relation(fields: [userId], references: [id])
-  learnedMoves  String @default("[]")
-  equippedMoves String @default("[]")
-  streetState   String @default("{}")
+  userId           Int    @id
+  user             User   @relation(fields: [userId], references: [id])
+  learnedMoves     String @default("[]")
+  equippedMoves    String @default("[]")
+  streetState      String @default("{}")
+  showcaseGarageId Int?
 
   @@schema("game")
 }
