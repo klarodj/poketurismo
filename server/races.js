@@ -10,6 +10,7 @@ const { development, settleDevelopment } = require('./driverDevelopment');
 const { fundamentals, lessonFeedback } = require('../shared/driverDevelopment.mjs');
 const { requireTrial } = require('./techniqueSchool');
 const { createTechniqueLesson, techniqueLessonFeedback } = require('../shared/techniqueLessons.mjs');
+const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
@@ -73,7 +74,10 @@ async function startRace(tx, userId, body) {
     track = await tx.track.findUnique({ where: { id: trackId }, include: { builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true } });
     if (!track) fail(404, 'Tracciato inesistente');
   } else {
-    const all = await tx.track.findMany({ include: { builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true }, orderBy: { id: 'asc' } });
+    const all = (await tx.track.findMany({ include: { builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true }, orderBy: { id: 'asc' } })).filter(track => {
+      const catalog = trackCatalogInfo(track.name);
+      return !catalog || catalog.format === (mode === 'street' ? 'point-to-point' : 'circuit');
+    });
     if (!all.length) fail(400, 'Nessun tracciato disponibile');
     track = all[mode === 'street' ? randomInt(all.length) : 0];
     trackId = track.id;

@@ -8,6 +8,7 @@ const { startRace, turnRace, snapshot, presentRace } = require('./races');
 const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
 const { readTechnique } = require('./techniqueSchool');
 const { newCarPrice, marketAskingPrice, usedRetailPrice, tradeInValue, publicMarketItem } = require('../shared/carEconomy.mjs');
+const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -48,7 +49,7 @@ app.get('/api/garage/:userId', endpoint(async req => {
 app.get('/api/cars', endpoint(async () => (await prisma.car.findMany({ include: { brand: true }, orderBy: { id: 'asc' } })).map(car => ({ ...car, price: newCarPrice(car) }))));
 app.get('/api/brands', endpoint(() => prisma.brand.findMany({ orderBy: { name: 'asc' } })));
 app.get('/api/parts', endpoint(() => prisma.part.findMany({ orderBy: { id: 'asc' } })));
-app.get('/api/tracks', endpoint(() => prisma.track.findMany({ include: { type: true, surface: true, meteo: true, builds: { include: { section: true }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })));
+app.get('/api/tracks', endpoint(async () => (await prisma.track.findMany({ include: { type: true, surface: true, meteo: true, builds: { include: { section: true }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })).map(track => ({ ...track, catalog: trackCatalogInfo(track.name) }))));
 app.get('/api/market', endpoint(async () => {
   const cars = await prisma.garage.findMany({ where: { userId: -1 }, include: garageInclude });
   return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item) })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);

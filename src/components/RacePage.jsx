@@ -47,7 +47,7 @@ export default function RacePage({ mode }) {
       requestedId ? fetchRace(requestedId, userId) : fetchActiveRace(userId).then(active => active ? fetchRace(active.id, userId) : null)
     ]).then(([allTracks, customs, rivals, data]) => {
       if (cancelled) return;
-      setTracks(allTracks); setCustomTracks(customs); setOpponents(rivals);
+      setTracks(allTracks.filter(track => !track.catalog || track.catalog.format === (mode === 'street' ? 'point-to-point' : 'circuit'))); setCustomTracks(customs); setOpponents(rivals);
       if (data) applyGameState(data); else useRaceStore.setState({ race: null });
       setLoaded(true); setError('');
     }).catch(error => { if (!cancelled) { setError(error.message); setLoaded(true); } });
@@ -97,13 +97,18 @@ export default function RacePage({ mode }) {
         {!entryId && <label className="block font-bold">Tracciato<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event => setTrackChoice(event.target.value)}>
           {mode === 'track' && <option value="demo">Circuito Scuola · 8 decisioni · prova gratuita</option>}
           <option value="">{mode === 'street' ? 'Tracciato casuale' : 'Primo circuito disponibile'}</option>
-          {tracks.map(track => <option key={track.id} value={`db-${track.id}`}>{track.name}</option>)}
+          {tracks.map(track => <option key={track.id} value={`db-${track.id}`}>{track.name}{track.catalog ? ` · difficoltà ${track.catalog.difficulty}/5` : ''}</option>)}
           {customTracks.map(track => <option key={`custom-${track.id}`} value={`custom-${track.id}`}>{track.name} · allenamento senza premi</option>)}
         </select></label>}
         {trackChoice === 'demo' && !entryId && <div className="bg-blue-100 border border-blue-800 p-3 space-y-2">
           <p className="font-bold">Laboratorio tattico · 3,04 km</p><p className="text-sm">Otto decisioni fra rettilinei, tornanti e curve. Prova gratuita senza premi, con consumo e usura salvati sulla tua auto.</p>
           <label className="block font-bold">Confronto<select className="block w-full p-2 bg-white border" value={demoPreset} onChange={event => setDemoPreset(event.target.value)}><option value="matched">Auto equivalente · pilota intermedio</option><option value="rookie">Auto più potente · principiante</option><option value="trained">Auto più potente · pilota preparato</option><option value="superior">Auto nettamente superiore · pilota preparato</option></select></label>
           <p className="text-xs">Le vetture vengono scelte dal catalogo per rapporto potenza/peso. Il confronto dipende anche dalla tua auto e dalle abilità del tuo pilota.</p>
+        </div>}
+        {!entryId && trackChoice !== 'demo' && selectedTrack?.catalog && <div className="bg-white border border-gray-500 p-3 space-y-1 text-sm">
+          <p className="font-bold">{selectedTrack.catalog.location} · {selectedTrack.catalog.format === 'circuit' ? 'Circuito' : 'Punto a punto'} · difficoltà {selectedTrack.catalog.difficulty}/5</p>
+          <p>{previewDistance.toLocaleString('it-IT')} km · dislivello {selectedTrack.elevation} m · meteo: {({sunny:'sereno',rainy:'pioggia',snowy:'neve',night:'notte',foggy:'nebbia'})[selectedTrack.meteo?.name] || selectedTrack.meteo?.name}</p>
+          <p>{selectedTrack.catalog.description}</p><p className="text-xs text-gray-600">Interpretazione di gioco del luogo reale; settori e mappa sono semplificati.</p>
         </div>}
         {!entryId && <TrackPreview sections={previewSections} paths={trackChoice === 'demo' ? DEMO_TRACK.mapPaths : null} profile={previewProfile} />}
         {!entryId && mode === 'street' && !previewSections.length && <p className="text-sm">Scegli un percorso per vedere i settori prima della partenza. Con la scelta casuale li scoprirai all’avvio.</p>}
