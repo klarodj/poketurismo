@@ -132,7 +132,7 @@ export default function RacePage({ mode }) {
           <p>Accreditati €{(race.reward?.money || 0).toFixed(2)} · +{race.reward?.xp || 0} XP. Risultato e condizioni della vettura salvati.</p>
           <DevelopmentSummary summary={race.developmentSummary} />
           {race.championship && <p>Campionato: {race.championship.playerPoints}–{race.championship.opponentPoints}. {race.championship.completed ? race.championship.champion ? 'Sei il campione!' : 'Campionato concluso.' : `Prossimo round: ${race.championship.nextRound}.`}</p>}
-          <div className="flex flex-wrap gap-2"><button className={button} onClick={() => navigate(race.lesson ? '/garage/pilota' : '/racing')}>{race.lesson ? 'Profilo pilota e tecniche' : 'Centro Corse'}</button><button className={button} onClick={newRace}>Nuova gara</button><button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
+          <div className="flex flex-wrap gap-2"><button className={button} onClick={() => navigate(race.lesson ? '/garage/scuola-guida' : '/racing')}>{race.lesson ? 'Torna alla scuola guida' : 'Centro Corse'}</button><button className={button} onClick={newRace}>Nuova gara</button><button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
         </div>}
       </RaceDashboard>}
 

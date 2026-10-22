@@ -1,31 +1,21 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
 import useInventoryStore from '../store/inventoryStore';
 import Win98Window from '../components/Win98Window';
+import GarageTabs from '../components/GarageTabs';
 
-import useDevelopmentStore from '../store/developmentStore';
 import useRequestStore from '../store/requestStore';
 import useRaceStore from '../store/raceStore';
-import DriverDevelopmentPanel from '../components/DriverDevelopmentPanel';
-import { equipMoves, readDrivingLesson, startRace } from '../services/api';
+import { equipMoves } from '../services/api';
 import { PILOT_STAT_LABELS } from '../logic/raceEngine';
 
 export default function GaragePilota() {
-  const navigate = useNavigate();
   const { id: userId, username, money, level, xp, stats } = usePlayerStore();
   const { moves, equippedMoves } = useInventoryStore();
 
   const playerMoves = moves;
-  const development = useDevelopmentStore(state => state.development);
   const pending = useRequestStore(state => state.pending);
   const activeRace = useRaceStore(state => state.activeRace);
-  const beginLesson = async () => {
-    try {
-      const data = await startRace(userId, { mode: 'track', lesson: 'braking-basics' });
-      navigate(`/track-race?raceId=${data.race.id}`);
-    } catch { /* The shared request banner reports errors. */ }
-  };
   const toggleMove = async id => {
     const selected = equippedMoves.includes(id);
     if (!selected && equippedMoves.length >= 4) return;
@@ -37,23 +27,8 @@ export default function GaragePilota() {
     <Win98Window title="Profilo Pilota" imageUrl="/images/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
-        {/* Navigation Tabs */}
-        <div className="flex gap-1 p-2 bg-win98-gray border-b-2 border-win98-darkerGray">
-           <button 
-             onClick={() => navigate('/garage/pilota')}
-             className="px-6 py-2 bg-white border-2 border-win98-darkerGray shadow-win98-inset font-bold text-base flex items-center gap-2"
-           >
-             👤 PILOTA
-           </button>
-           <button 
-             onClick={() => navigate('/garage/auto')}
-             className="px-6 py-2 bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white font-bold text-base flex items-center gap-2"
-           >
-             🚗 AUTO
-           </button>
-        </div>
+        <GarageTabs />
 
-        <div className="p-4 pb-0"><DriverDevelopmentPanel development={development} pending={pending} activeRace={activeRace} onRead={() => readDrivingLesson(userId)} onStart={beginLesson} /></div>
         <div className="p-4 flex flex-col md:flex-row gap-6">
         
           {/* Left: Pilot Info & Stats */}

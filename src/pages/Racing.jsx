@@ -449,7 +449,7 @@ export default function Racing() {
             {activeTab === 'training' && (
               <div>
                 <div className="mb-4 bg-[#FFFFE1] border-2 border-win98-darkerGray p-3 text-sm">
-                  <button className="underline font-bold" onClick={() => navigate('/garage/pilota')}>Scuola guida: lezione e prova pratica della frenata ↗</button><br /><strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
+                  <button className="underline font-bold" onClick={() => navigate('/garage/scuola-guida')}>Scuola guida: lezione e prova pratica della frenata ↗</button><br /><strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
                   Le sessioni <span className="font-bold text-purple-700">MOSSA</span> sbloccano nuove tecniche di guida nel tuo Grimorio.
                 </div>
 

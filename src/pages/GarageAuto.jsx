@@ -4,6 +4,7 @@ import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
+import GarageTabs from '../components/GarageTabs';
 import { sellCar, equipCar } from '../services/api';
 
 import { CAR_STAT_LABELS } from '../logic/raceEngine';
@@ -46,21 +47,7 @@ export default function GarageAuto() {
     <Win98Window title="Gestione Parco Auto" imageUrl="/images/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
-        {/* Navigation Tabs */}
-        <div className="flex gap-1 p-2 bg-win98-gray border-b-2 border-win98-darkerGray">
-           <button 
-             onClick={() => navigate('/garage/pilota')}
-             className="px-6 py-2 bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white font-bold text-base flex items-center gap-2"
-           >
-             👤 PILOTA
-           </button>
-           <button 
-             onClick={() => navigate('/garage/auto')}
-             className={`px-6 py-2 bg-white border-2 border-win98-darkerGray shadow-win98-inset font-bold text-base flex items-center gap-2`}
-           >
-             🚗 AUTO
-           </button>
-        </div>
+        <GarageTabs />
 
         <div className="p-4 flex flex-col lg:flex-row gap-4">
           

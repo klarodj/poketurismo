@@ -5,6 +5,7 @@ import usePlayerStore from '../store/playerStore';
 import useInventoryStore from '../store/inventoryStore';
 import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
+import GarageTabs from '../components/GarageTabs';
 import { unmountPart, mountPart } from '../services/api';
 
 import { CAR_STAT_LABELS } from '../logic/raceEngine';
@@ -60,21 +61,7 @@ export default function GarageCarDetail() {
     <Win98Window title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
-        {/* Navigation Tabs (Consistent with Garage Home) */}
-        <div className="flex gap-1 p-2 bg-win98-gray border-b-2 border-win98-darkerGray">
-           <button 
-             onClick={() => navigate('/garage/pilota')}
-             className="px-6 py-1.5 bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white font-bold text-sm flex items-center gap-2"
-           >
-             👤 PILOTA
-           </button>
-           <button 
-             onClick={() => navigate('/garage/auto')}
-             className="px-6 py-1.5 bg-white border-2 border-win98-darkerGray shadow-win98-inset font-bold text-sm flex items-center gap-2"
-           >
-             🚗 AUTO
-           </button>
-        </div>
+        <GarageTabs />
 
         {/* Sub-header Navigation */}
         <div className="p-2 border-b border-win98-darkGray flex justify-between items-center bg-win98-blue text-white">

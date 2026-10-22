@@ -4,7 +4,7 @@ La crescita ha tre livelli distinti: esperienza di carriera, pratica dei fondame
 
 ## Percorso giocabile
 
-Dal **Garage → Pilota → Scuola guida**:
+Dal **Garage → Scuola guida**:
 
 1. Leggere la lezione «Frenare con criterio» e confermare la lettura. Non vengono assegnati XP o statistiche per il solo clic.
 2. Avviare la prova di quattro esercizi, riprendibile come una gara normale. Si usa un'auto scuola fissa, senza consumare o usurare la vettura del giocatore; è disponibile anche senza un'auto equipaggiata.
