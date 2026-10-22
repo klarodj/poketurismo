@@ -1,0 +1,26 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{createRequire}=require('node:module');const requireServer=createRequire(path.resolve(__dirname,'../server/package.json'));
+if(!process.env.ACCOUNTS_VALIDATION_ENV_FILE)throw Error('File privato del database di collaudo richiesto');const env=requireServer('dotenv').parse(fs.readFileSync(process.env.ACCOUNTS_VALIDATION_ENV_FILE)),url=new URL(env.DATABASE_URL);
+if(!['127.0.0.1','localhost'].includes(url.hostname)||!url.pathname.endsWith('_validation'))throw Error('Usare soltanto un database locale *_validation');process.env.DATABASE_URL=env.DATABASE_URL;process.env.POKETURISMO_AUTH_ENABLED='0';
+const {app,prisma}=require('../server/index');const{PILOT_STATS}=require('../server/raceEngine');let server,base;
+async function request(endpoint,userId,body,key=crypto.randomUUID()){const response=await fetch(base+'/api'+endpoint,{method:body?'POST':'GET',headers:{'Content-Type':'application/json'},...(body?{body:JSON.stringify({userId,operationId:key,...body})}:{})});return{status:response.status,data:await response.json()};}
+async function main(){
+ const before={};for(const model of ['user','garage','mod','playerProgress','driverDevelopment','raceSession','championshipEntry'])before[model]=await prisma[model].findMany();
+ const car=await prisma.car.findFirst({where:{name:'Seicento Sporting'}});assert.ok(car);
+ const fields=['cv','nm','kg','speed','acceleration','revving','transmission','turnSlow','turnFast','brake','traction'];
+ const make=()=>prisma.user.create({data:{username:'Workshop validation '+crypto.randomUUID(),usernameKey:crypto.randomUUID(),password:'test-only',mail:'validation@example.invalid',moneyCents:0,carDrive:0,...Object.fromEntries(PILOT_STATS.map(key=>[key,100]))}});
+ const user=await make();const garage=await prisma.garage.create({data:{userId:user.id,carId:car.id,...Object.fromEntries(fields.map(key=>[key,car[key]])),engineHealth:0,tireGrip:20,currentFuel:0}});await prisma.user.update({where:{id:user.id},data:{carDrive:garage.id}});
+ server=app.listen(0,'127.0.0.1');await new Promise(resolve=>server.once('listening',resolve));base='http://127.0.0.1:'+server.address().port;
+ let plan=(await request('/workshop/'+user.id)).data.recovery;assert.equal(plan.kind,'repair');assert.ok(plan.advanceCents>0);
+ const key=crypto.randomUUID();const concurrent=await Promise.all([request('/workshop/recover',user.id,{quoteKey:plan.key},key),request('/workshop/recover',user.id,{quoteKey:plan.key})]);assert.deepEqual(concurrent.map(r=>r.status).sort(),[200,400]);
+ let fixed=await prisma.garage.findUnique({where:{id:garage.id}});assert.equal(fixed.engineHealth,60);assert.equal(fixed.tireGrip,60);assert.equal(fixed.currentFuel,8);assert.equal((await prisma.user.findUnique({where:{id:user.id}})).moneyCents,0);
+ assert.equal((await request('/workshop/recover',user.id,{quoteKey:plan.key},key)).status,200);assert.equal((await request('/market/sell',user.id,{garageId:garage.id})).status,400);
+ // Validate debt withholding inside a real PostgreSQL transaction, including returned stakes.
+ const {withholdReward}=require('../server/workshop');const debt=plan.advanceCents;const reward={money:200},state={wager:100};await prisma.$transaction(tx=>withholdReward(tx,user.id,state,reward));assert.equal(reward.money,150);assert.equal(state.recoveryRepayment.paidCents,5000);
+ assert.equal((await request('/workshop/'+user.id)).data.recovery.debtCents,debt-5000);
+ await prisma.user.update({where:{id:user.id},data:{moneyCents:2000000}});assert.equal((await request('/workshop/repay',user.id,{amount:(debt-5000)/100})).status,200);assert.deepEqual((await request('/workshop/'+user.id)).data.recovery.lockedCarIds,[]);
+ let quote=(await request('/workshop/'+user.id)).data.cars[0].services.find(s=>s.id==='engine');assert.ok(quote.enabled);assert.equal((await request('/garage/'+garage.id+'/service',user.id,{serviceType:'engine',quoteKey:quote.key})).status,200);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).engineHealth,70);assert.equal((await request('/garage/'+garage.id+'/service',user.id,{serviceType:'engine',quoteKey:quote.key})).status,409);
+ const other=await make();plan=(await request('/workshop/'+other.id)).data.recovery;assert.equal(plan.kind,'car');assert.equal((await request('/workshop/recover',other.id,{quoteKey:plan.key})).status,200);assert.equal(await prisma.garage.count({where:{userId:other.id}}),1);assert.equal((await prisma.user.findUnique({where:{id:other.id}})).moneyCents,0);
+ for(const [model,rows]of Object.entries(before)){const all=await prisma[model].findMany();for(const old of rows){const current=all.find(row=>['playerProgress','driverDevelopment'].includes(model)?row.userId===old.userId:row.id===old.id);assert.deepEqual(current,old,model+' precedente invariato');}}
+ console.log('PostgreSQL: migrazione, preventivi e tagliando, anticipo in natura, concorrenza e idempotenza, blocco vendita, rimborso escluse puntate, saldo manuale e vettura da ripartenza verificati. Dati precedenti invariati.');
+}
+main().catch(error=>{console.error(error.message);process.exitCode=1}).finally(async()=>{await prisma.$disconnect();if(server){server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}});

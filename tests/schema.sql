@@ -380,3 +380,5 @@ ALTER TABLE "PlayerProgress" ADD COLUMN "streetState" TEXT NOT NULL DEFAULT '{}'
 ALTER TABLE "ChampionshipEntry" ADD COLUMN "contract" TEXT NOT NULL DEFAULT '{}';
 
 ALTER TABLE "PlayerProgress" ADD COLUMN "showcaseGarageId" INTEGER;
+
+ALTER TABLE "PlayerProgress" ADD COLUMN "recoveryState" TEXT NOT NULL DEFAULT '{}';

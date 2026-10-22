@@ -15,6 +15,7 @@ const { acceptEncounter, settleStreet } = require('./streetRacing');
 const { readContract, gridOpponent, settleGrid } = require('./championships');
 const { performanceIndex } = require('../shared/vehiclePerformance.mjs');
 const { trialConfiguration } = require('./carMeet');
+const {withholdReward}=require('./workshop');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
@@ -206,6 +207,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     // Participation XP is smaller than a win and excludes sandboxes, failures and incomplete races.
     if (!state.street && state.developmentVersion === 1 && !state.sandbox && !state.failure && state.index === state.sections.length && reward.xp === 0) reward.xp = 20;
     reward.xp += growth.xp;
+    await withholdReward(tx,userId,state,reward);
     const user = await tx.user.findUnique({ where: { id: userId } });
     await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(reward.money) }, exp: { increment: reward.xp }, level: Math.floor((user.exp + reward.xp) / 1000) + 1 } });
     state.reward = reward;

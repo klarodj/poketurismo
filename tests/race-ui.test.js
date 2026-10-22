@@ -133,3 +133,6 @@ test('shared timing UI explains missing legacy conditions and renders a useful e
  const board={total:1,model:{name:'Seicento',brand:'Fiat'},track:{name:'Tsukuba'},records:[{pilot:{id:1,name:'Pilota Uno'},position:1,timeMs:123456,gapMs:0,car:{cv:55,kg:735,performanceIndex:40},configuration:null}]};
  const html=renderToStaticMarkup(React.createElement(Board,{board,userId:1}));assert.ok(html.includes('123.456'));assert.ok(html.includes('Giro precedente'));assert.ok(html.includes('(tu)'));
 });
+test('workshop services show the actual quote, before/after effects and disabled unnecessary work',async()=>{
+ const Panel=await component('WorkshopServices');const html=renderToStaticMarkup(React.createElement(Panel,{car:{engineHealth:50,tireGrip:80,performanceIndex:35,services:[{id:'rebuild',name:'Revisione motore',description:'Ripristina motore',enabled:true,price:820,after:{engineHealth:100,tireGrip:80,performanceIndex:44}},{id:'tires',name:'Gomme',description:'Già a posto',enabled:false,reason:'Gomme già al 100%.',price:0}]},money:100,onService(){},disabled:false}));assert.ok(html.includes('Revisione motore'));assert.ok(html.includes('820,00'));assert.ok(html.includes('Mancano'));assert.ok(html.includes('50.0% → 100.0%'));assert.ok(html.includes('Gomme già al 100%.'));assert.ok(html.includes('disabled'));
+});

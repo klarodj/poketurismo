@@ -1,5 +1,4 @@
 const {championshipCarErrors}=require('../shared/championshipCatalog.mjs');
-const SERVICE_PRICES = Object.freeze({ engine: 150, tires: 500, rebuild: 2500, full: 3500 });
 const PILOT_STATS = ['brave', 'clean', 'reflex', 'shift', 'acro', 'turn', 'brake', 'throttle'];
 const PART_STATS = {
   cv: ['cvBonus', true], nm: ['nmBonus', true], kg: ['kgBonus', true, -1],
@@ -57,4 +56,4 @@ async function charge(tx, userId, price) {
   });
   if (user.count !== 1) fail(400, 'Giocatore inesistente o fondi insufficienti');
 }
-module.exports = { SERVICE_PRICES, PILOT_STATS, fail, positiveId, publicPlayer, restoredHandlingStats, partChanges, checkChampionship, charge, cents };
+module.exports = { PILOT_STATS, fail, positiveId, publicPlayer, restoredHandlingStats, partChanges, checkChampionship, charge, cents };

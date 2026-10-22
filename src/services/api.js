@@ -82,7 +82,10 @@ export const sellCar = (userId, garageId) => action('/market/sell', { userId, ga
 export const purchasePart = (userId, partId) => action('/parts/purchase', { userId, partId });
 export const mountPart = (garageId, partId, userId) => action(`/garage/${garageId}/mount`, { userId, partId });
 export const unmountPart = (garageId, modId, userId) => action(`/garage/${garageId}/mods/${modId}`, { userId }, 'DELETE');
-export const performCarService = (garageId, userId, serviceType) => action(`/garage/${garageId}/service`, { userId, serviceType });
+export const fetchWorkshop = userId => request(`/workshop/${userId}`);
+export const recoverAtWorkshop = (userId, quoteKey) => action('/workshop/recover', {userId,quoteKey});
+export const repayWorkshop = (userId, amount) => action('/workshop/repay', {userId,amount});
+export const performCarService = (garageId, userId, serviceType, quoteKey) => action(`/garage/${garageId}/service`, { userId, serviceType, quoteKey });
 export const refuelCar = (garageId, userId, liters, fuelType) => action(`/garage/${garageId}/refuel`, { userId, liters, fuelType });
 export const equipMoves = (userId, moveIds) => action(`/player/${userId}/moves`, { userId, moveIds }, 'PUT');
 export const enterChampionship = (championshipId, userId) => action(`/championships/${championshipId}/enter`, { userId });

@@ -125,8 +125,9 @@ test('refueling keeps exact cents, grade and quantity and retries do not charge 
 test('maintenance uses server cost and oil change cannot repair a broken engine', async () => {
   await prisma.garage.update({ where: { id: garage.id }, data: { engineHealth: 0 } });
   assert.equal((await post(`/garage/${garage.id}/service`, { serviceType: 'engine', price: 0 })).status, 400);
-  assert.equal((await post(`/garage/${garage.id}/service`, { serviceType: 'rebuild', price: 0 })).status, 200);
-  assert.equal(await wallet(), 9750000);
+  const quote=(await get('/workshop/1')).data.cars.find(c=>c.id===garage.id).services.find(s=>s.id==='rebuild');
+  assert.equal((await post(`/garage/${garage.id}/service`, { serviceType: 'rebuild', price: 0, quoteKey:quote.key })).status, 200);
+  assert.equal(await wallet(), 10000000-quote.price*100);
 });
 test('stat training updates once while techniques require a driving-school trial', async () => {
   const key = randomUUID(); await post(`/training-sessions/${training.id}/complete`, {}, key); await post(`/training-sessions/${training.id}/complete`, {}, key);
@@ -782,4 +783,53 @@ test('leaderboards do not mix track layouts, weather or car models',async()=>{
  await prisma.trackMeteo.update({where:{id:track.meteoId},data:{name:'Rainy'}});assert.equal((await get(url)).data.records.length,0);
  await prisma.trackMeteo.update({where:{id:track.meteoId},data:{name:'Dry'}});const build=await prisma.trackBuild.findFirst({where:{trackId:track.id}});await prisma.trackBuild.create({data:{trackId:track.id,sectionId:build.sectionId,level:1,ord:2}});assert.equal((await get(url)).data.records.length,0);
  assert.equal((await get('/time-trials/1')).data.length,1);
+});
+
+test('workshop previews are authoritative, reject stale or missing quotes and do not charge for perfect parts',async()=>{
+ assert.equal((await post(`/garage/${garage.id}/service`,{serviceType:'tires'})).status,400);
+ await prisma.garage.update({where:{id:garage.id},data:{engineHealth:70}});
+ const quote=(await get('/workshop/1')).data.cars[0].services.find(s=>s.id==='engine');
+ assert.equal((await post(`/garage/${garage.id}/service`,{serviceType:'engine'})).status,409);
+ const key=randomUUID();const result=await post(`/garage/${garage.id}/service`,{serviceType:'engine',quoteKey:quote.key,price:0},key);assert.equal(result.status,200);assert.equal(result.data.service.price,quote.price);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).engineHealth,80);
+ await post(`/garage/${garage.id}/service`,{serviceType:'engine',quoteKey:quote.key,price:0},key);assert.equal(await wallet(),10000000-quote.price*100);
+ assert.equal((await post(`/garage/${garage.id}/service`,{serviceType:'engine',quoteKey:quote.key})).status,409);
+});
+test('recovery fixes a bankrupt broken car, locks sale and cannot be applied twice',async()=>{
+ await prisma.user.update({where:{id:1},data:{moneyCents:0}});await prisma.garage.update({where:{id:garage.id},data:{engineHealth:0,tireGrip:20,currentFuel:0}});
+ const plan=(await get('/workshop/1')).data.recovery;assert.equal(plan.available,true);assert.ok(plan.advanceCents>0);
+ const key=randomUUID();const result=await post('/workshop/recover',{quoteKey:plan.key},key);assert.equal(result.status,200);assert.equal(await wallet(),0);assert.equal(result.data.recoveryReceipt.debtCents,plan.advanceCents);
+ const repaired=await prisma.garage.findUnique({where:{id:garage.id}});assert.equal(repaired.engineHealth,60);assert.equal(repaired.tireGrip,60);assert.equal(repaired.currentFuel,8);
+ await post('/workshop/recover',{quoteKey:plan.key},key);assert.equal((await get('/workshop/1')).data.recovery.debtCents,plan.advanceCents);
+ assert.equal((await post('/workshop/recover',{quoteKey:plan.key})).status,400);
+ assert.equal((await post('/market/sell',{garageId:garage.id})).status,400);
+});
+test('recovery uses an existing ready car instead of granting another advance',async()=>{
+ assert.equal((await get('/workshop/1')).data.recovery.available,false);assert.equal((await post('/workshop/recover',{quoteKey:'fake'})).status,400);
+ await prisma.garage.update({where:{id:garage.id},data:{engineHealth:0,currentFuel:0}});await prisma.garage.create({data:{userId:1,carId:car.id,cv:car.cv,nm:car.nm,kg:car.kg,...stats}});
+ assert.equal((await get('/workshop/1')).data.recovery.available,false);
+});
+test('a carless bankrupt player can finance a starter, while the normal starting budget cannot request one',async()=>{
+ await prisma.car.update({where:{id:car.id},data:{cv:55,kg:735,velMax:153,zeroToHundred:13.5,price:8500}});await prisma.garage.delete({where:{id:garage.id}});await prisma.user.update({where:{id:1},data:{carDrive:0,moneyCents:1000000}});
+ assert.equal((await get('/workshop/1')).data.recovery.available,false);
+ await prisma.user.update({where:{id:1},data:{moneyCents:0}});const plan=(await get('/workshop/1')).data.recovery;assert.equal(plan.kind,'car');
+ const results=await Promise.all([post('/workshop/recover',{quoteKey:plan.key}),post('/workshop/recover',{quoteKey:plan.key})]);assert.deepEqual(results.map(r=>r.status).sort(),[200,400]);
+ assert.equal(await prisma.garage.count({where:{userId:1}}),1);assert.equal(await wallet(),0);const user=await prisma.user.findUnique({where:{id:1}});assert.ok(user.carDrive>0);assert.ok((await get('/workshop/1')).data.recovery.lockedCarIds.includes(user.carDrive));
+});
+test('half of prize money repays the mechanic atomically and remaining debt unlocks after full payment',async()=>{
+ await prisma.playerProgress.create({data:{userId:1,recoveryState:JSON.stringify({debtCents:100000,carIds:[garage.id]})}});
+ const race=await begin();const key=randomUUID();const first=await post(`/races/${race.id}/turns`,{version:0,moveId:null},key);assert.equal(first.data.race.outcome,'win');assert.equal(first.data.race.reward.money,250);assert.equal(first.data.race.recoveryRepayment.paidCents,25000);assert.equal((await get('/workshop/1')).data.recovery.debtCents,75000);
+ await post(`/races/${race.id}/turns`,{version:0,moveId:null},key);assert.equal((await get('/workshop/1')).data.recovery.debtCents,75000);
+ assert.equal((await post('/workshop/repay',{amount:750})).status,200);assert.deepEqual((await get('/workshop/1')).data.recovery.lockedCarIds,[]);assert.equal((await post('/market/sell',{garageId:garage.id})).status,200);
+});
+test('stake refunds are excluded from debt repayment and only net winnings contribute',async()=>{
+ await prisma.playerProgress.create({data:{userId:1,recoveryState:JSON.stringify({debtCents:100000,carIds:[garage.id]})}});
+ const {withholdReward}=require('../server/workshop');const refund={money:100};await withholdReward(prisma,1,{wager:100},refund);assert.equal(refund.money,100);assert.equal((await get('/workshop/1')).data.recovery.debtCents,100000);
+ const race=await begin('street');const result=await post(`/races/${race.id}/turns`,{version:0,moveId:null});assert.equal(result.data.race.outcome,'win');assert.equal(result.data.race.reward.money,150);assert.equal(result.data.race.recoveryRepayment.paidCents,5000);assert.equal(result.data.race.streetResult.netMoney,50);
+});
+test('recovery and repayment reject stale plans, forged amounts and changes during a race',async()=>{
+ await prisma.garage.update({where:{id:garage.id},data:{engineHealth:0,currentFuel:0}});await prisma.user.update({where:{id:1},data:{moneyCents:0}});const plan=(await get('/workshop/1')).data.recovery;
+ assert.equal((await post('/workshop/recover',{quoteKey:plan.key,advanceCents:1})).status,400);
+ await prisma.user.update({where:{id:1},data:{moneyCents:100}});assert.equal((await post('/workshop/recover',{quoteKey:plan.key})).status,409);
+ for(const amount of [-1,0,999999])assert.equal((await post('/workshop/repay',{amount})).status,400);
+ await prisma.garage.update({where:{id:garage.id},data:{engineHealth:100,currentFuel:20}});const race=await begin();assert.equal((await post('/workshop/recover',{quoteKey:plan.key})).status,409);await post(`/races/${race.id}/abandon`,{version:0});
 });

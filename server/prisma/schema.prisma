@@ -348,6 +348,7 @@ model PlayerProgress {
   equippedMoves    String @default("[]")
   streetState      String @default("{}")
   showcaseGarageId Int?
+  recoveryState    String @default("{}")
 }
 
 model InventoryPart {

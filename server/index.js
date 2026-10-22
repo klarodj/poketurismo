@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { PrismaClient } = require('./database');
-const { SERVICE_PRICES, PILOT_STATS, fail, positiveId, publicPlayer, restoredHandlingStats, partChanges, checkChampionship, charge, cents } = require('./gameRules');
+const { PILOT_STATS, fail, positiveId, publicPlayer, restoredHandlingStats, partChanges, checkChampionship, charge, cents } = require('./gameRules');
 const { operation, transaction, inventory, addPart, consumePart, garageInclude } = require('./persistence');
 const { startRace, turnRace, snapshot, presentRace } = require('./races');
 const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
@@ -13,6 +13,7 @@ const { streetHub, encounter } = require('./streetRacing');
 const { publicEntry, createContract } = require('./championships');
 const { championshipInfo } = require('../shared/championshipCatalog.mjs');
 const carMeet = require('./carMeet');
+const workshop = require('./workshop');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -86,6 +87,8 @@ mutate('/api/purchase', 'purchase-car', async (tx, userId, body) => {
 });
 mutate('/api/market/sell', 'sell-car', async (tx, userId, body) => {
   const item = await ownGarage(tx, userId, body.garageId);
+  const debt=await workshop.recoveryState(tx,userId);
+  if(debt.lockedCarIds.includes(item.id))fail(400,'Salda l’anticipo del meccanico prima di vendere questa auto');
   const sellValue = tradeInValue(item.car, item);
   const askingPrice = usedRetailPrice(item.car, item);
   await tx.user.upsert({ where: { id: -1 }, update: {}, create: { id: -1, username: 'Mercato', password: '', mail: '', carDrive: 0, ...Object.fromEntries(PILOT_STATS.map(key => [key, 0])) } });
@@ -128,17 +131,10 @@ mutate('/api/garage/:garageId/mods/:modId', 'unmount-part', async (tx, userId, b
   await addPart(tx, userId, mod.partId);
   return snapshot(tx, userId);
 }, 'delete');
-mutate('/api/garage/:garageId/service', 'service', async (tx, userId, body, params) => {
-  const garage = await ownGarage(tx, userId, params.garageId);
-  if (!Object.hasOwn(SERVICE_PRICES, body.serviceType)) fail(400, 'Servizio non valido');
-  if (body.serviceType === 'engine' && garage.engineHealth <= 0) fail(400, 'Il motore richiede una revisione completa');
-  await charge(tx, userId, SERVICE_PRICES[body.serviceType]);
-  const data = {};
-  if (body.serviceType !== 'tires') { data.engineHealth = 100; data.serviceKm = garage.km; }
-  if (body.serviceType === 'tires' || body.serviceType === 'full') data.tireGrip = 100;
-  await tx.garage.update({ where: { id: garage.id }, data });
-  return snapshot(tx, userId);
-});
+app.get('/api/workshop/:userId', endpoint(req => transaction(prisma,tx => workshop.workshop(tx,accounts.playerId(req,req.params.userId)))));
+mutate('/api/garage/:garageId/service','service',workshop.service);
+mutate('/api/workshop/recover','workshop-recover',workshop.recover);
+mutate('/api/workshop/repay','workshop-repay',workshop.repay);
 mutate('/api/garage/:garageId/refuel', 'refuel', async (tx, userId, body, params) => {
   const garage = await ownGarage(tx, userId, params.garageId);
   if (!['Normale', 'Premium'].includes(body.fuelType) || typeof body.liters !== 'number' || !Number.isFinite(body.liters) || body.liters <= 0 || body.liters > 45) fail(400, 'Rifornimento non valido');
