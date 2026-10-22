@@ -6,7 +6,7 @@ import Win98Window from '../components/Win98Window';
 const LOCATIONS = [
   { path: '/garage',        name: 'Garage / Casa',      id: 'garage',    image: '/images/garage.png', desc: 'Il tuo quartier generale' },
   { path: '/dealership',    name: 'Concessionario',     id: 'dealership',image: '/images/dealer.png', desc: 'Auto nuove di zecca' },
-  { path: '/track-race',    name: 'Autodromo',          id: 'track',     image: '/images/track.png', desc: 'Gare ufficiali in pista' },
+  { path: '/autodrome',    name: 'Autodromo',          id: 'track',     image: '/images/track.png', desc: 'Gare ufficiali in pista' },
   { path: '/workshop',      name: 'Meccanico',          id: 'workshop',  image: '/images/workshop.png', desc: 'Riparazioni e tagliandi' },
   { path: '/parts-shop',    name: 'Negozio Tuning',     id: 'parts',     image: '/images/shop.png',  desc: 'Potenzia il tuo bolide' },
   { path: '/used-cars',     name: 'Auto Usate',         id: 'used',      image: '/images/used.png', desc: 'Forum compravendita' },

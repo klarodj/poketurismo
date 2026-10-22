@@ -20,6 +20,7 @@ function CarCard({ car, label, pilot, rival, onClick }) {
   </button>;
 }
 function TimingDetail({ race }) {
+  if(race.timeTrial)return <div className="space-y-3"><p className="font-bold">Tempo personale: {formatRaceTime(race.playerTime)}</p><table className="race-table"><thead><tr><th>Settore</th><th>Tempo</th></tr></thead><tbody>{race.logs.map((log,index)=><tr key={index}><td>{log.section}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'} s</td></tr>)}</tbody></table></div>;
   return <div className="space-y-4">
     <RaceTiming race={race} />
     <div className="overflow-x-auto"><table className="race-table"><caption>Tempi per settore · secondi</caption><thead><tr><th>Settore</th><th>Tu</th><th>Rivale</th><th>Guadagno</th></tr></thead><tbody>{race.logs.map((log, i) => <tr key={i}><td>{log.section}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'}</td><td>{log.opponentSeconds?.toFixed(3) ?? '—'}</td><td>{(log.deltaSeconds || 0) > 0 ? '+' : ''}{(log.deltaSeconds || 0).toFixed(3)}</td></tr>)}</tbody></table></div>
@@ -39,16 +40,16 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
   const position = gap > level ? 'Sei davanti' : gap < -level ? 'Sei dietro' : 'Affiancati';
   const titles = { player: 'La tua auto e il pilota', opponent: 'Avversario · auto e pilota', track: 'Pista e condizioni', sector: 'Dettaglio del settore', timing: 'Tempi e confronto', history: 'Cronologia della gara', session: 'Sessione di gara' };
   return <div className="race-dashboard">
-    <header className="race-heading"><div><p className="race-eyebrow">{race.lesson ? 'Scuola guida · Prova pratica' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{race.environment.weather} · {race.environment.surface}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
-    <section className={`race-stage ${race.mode === 'street' ? 'race-stage-street' : ''}`} aria-label="Duello e posizione">
+    <header className="race-heading"><div><p className="race-eyebrow">{race.lesson ? 'Scuola guida · Prova pratica' : race.timeTrial ? 'Prova a tempo personale' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{race.environment.weather} · {race.environment.surface}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
+    <section className={`race-stage ${race.mode === 'street' ? 'race-stage-street' : ''} ${race.timeTrial ? 'race-stage-trial' : ''}`} aria-label="Duello e posizione">
       <CarCard car={race.car} label="La tua auto" onClick={() => setDetail('player')} />
       <button type="button" className={`race-position ${gap < -level ? 'race-position-behind' : ''}`} onClick={() => setDetail('timing')} aria-label="Apri dettaglio: tempi e distacco">
-        <span className="race-eyebrow">{position}</span>
-        <strong aria-live="polite">{Math.abs(gap).toFixed(tactical ? 3 : 0)} <small>{tactical ? 's' : 'm'}</small></strong>
+        <span className="race-eyebrow">{race.timeTrial ? 'Tempo personale' : position}</span>
+        <strong aria-live="polite">{race.timeTrial ? race.playerTime.toFixed(3) : Math.abs(gap).toFixed(tactical ? 3 : 0)} <small>{tactical ? 's' : 'm'}</small></strong>
         <span className="race-timing-mini">{tactical ? formatRaceTime(race.playerTime) : 'Sfida in corso'}</span>
         <span className="race-detail-link">Tempi e confronto ↗</span>
       </button>
-      <CarCard car={race.opponent.car} label="Auto rivale" pilot={race.opponent.name} rival onClick={() => setDetail('opponent')} />
+      {!race.timeTrial && <CarCard car={race.opponent.car} label="Auto rivale" pilot={race.opponent.name} rival onClick={() => setDetail('opponent')} />}
     </section>
     <nav className="race-instruments" aria-label="Esplora i dettagli della gara">
       <button type="button" onClick={() => setDetail('track')}><span>Pista ↗</span><strong>{race.distanceKm.toFixed(2)} km</strong></button>
@@ -72,7 +73,7 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
       {detail === 'sector' && <SectorDetail race={race} />}
       {detail === 'timing' && (tactical ? <TimingDetail race={race} /> : <p>{position} · {Math.abs(gap)} m</p>)}
       {detail === 'history' && <RaceHistory race={race} />}
-      {detail === 'session' && <div className="space-y-4"><p>{race.lesson ? 'Prova su auto scuola in prestito. La tua auto rimane invariata. La prima promozione assegna pratica, tecnica e 40 XP; le ripetizioni non danno altri premi.' : race.sandbox ? 'Allenamento senza premi economici o XP. Carburante e usura vengono salvati.' : race.street && race.wager === 0 ? 'Sfida senza puntata: nessun premio in denaro, esperienza e reputazione secondo il confronto e i precedenti.' : race.wager > 0 ? `Quota versata: €${race.wager}. Abbandonando la gara perdi la quota.` : 'La gara assegna i premi previsti alla conclusione.'}</p><p>Puoi uscire dalla pagina e riprendere la sessione. Durante una gara attiva le modifiche a pilota e vetture sono bloccate.</p>{active && <button type="button" className="race-button race-abandon" disabled={pending > 0} onClick={() => { setDetail(null); onAbandon(); }}>Abbandona gara{race.wager > 0 ? ' · quota persa' : ''}</button>}</div>}
+      {detail === 'session' && <div className="space-y-4"><p>{race.lesson ? 'Prova su auto scuola in prestito. La tua auto rimane invariata. La prima promozione assegna pratica, tecnica e 40 XP; le ripetizioni non danno altri premi.' : race.timeTrial ? 'Prova a tempo: nessun premio o XP, il tempo valido viene conservato tra i record personali. Consumi e usura vengono salvati.' : race.sandbox ? 'Allenamento senza premi economici o XP. Carburante e usura vengono salvati.' : race.street && race.wager === 0 ? 'Sfida senza puntata: nessun premio in denaro, esperienza e reputazione secondo il confronto e i precedenti.' : race.wager > 0 ? `Quota versata: €${race.wager}. Abbandonando la gara perdi la quota.` : 'La gara assegna i premi previsti alla conclusione.'}</p><p>Puoi uscire dalla pagina e riprendere la sessione. Durante una gara attiva le modifiche a pilota e vetture sono bloccate.</p>{active && <button type="button" className="race-button race-abandon" disabled={pending > 0} onClick={() => { setDetail(null); onAbandon(); }}>Abbandona gara{race.wager > 0 ? ' · quota persa' : ''}</button>}</div>}
     </RaceDetailDialog>}
   </div>;
 }

@@ -3,7 +3,7 @@ const {STREET_ZONES,STREET_STYLES,streetPerformance,streetPilot,streetReward,rep
 const {buildTacticalTrack}=require('../shared/trackGeometry.mjs');
 const {routeProfileFor}=require('../shared/raceContext.mjs');
 const {simulateBlock,DEFAULT_DECISION}=require('../shared/tacticalRace.mjs');
-const {performance,PILOT_STATS}=require('./raceEngine');
+const {PILOT_STATS}=require('./raceEngine');
 const {fundamentals}=require('../shared/driverDevelopment.mjs');
 const {fail,restoredHandlingStats}=require('./gameRules');
 const {garageInclude}=require('./persistence');
@@ -21,7 +21,7 @@ function access(zone,ctx){
   const reasons=[];
   if(ctx.user.level<zone.minLevel)reasons.push(`Livello pilota ${zone.minLevel}`);
   if(!ctx.garage)reasons.push('Equipaggia un’auto');
-  else if(streetPerformance(performance(ctx.garage))<zone.minPerformance)reasons.push(`Indice prestazioni attuale ${zone.minPerformance}`);
+  else if(streetPerformance(ctx.garage)<zone.minPerformance)reasons.push(`Indice prestazioni attuale ${zone.minPerformance}`);
   if(zone.previousZone&&(ctx.state[zone.previousZone]?.reputation||0)<zone.minReputation)reasons.push(`${zone.minReputation} reputazione in ${STREET_ZONES.find(item=>item.id===zone.previousZone).name}`);
   if(zone.technique&&!ctx.growth?.lessonPassed)reasons.push('Scuola guida: Rilascio progressivo');
   return reasons;
@@ -47,7 +47,7 @@ async function describeOffer(tx,ctx,zone,offer){
   const bankroll=Math.max(0,Math.min(Math.floor(ctx.user.moneyCents/100*0.15),Math.floor(ctx.user.moneyCents/100)-1000));
   const maximum=Math.min(bankroll,Math.floor(zone.maxWager*(easy?0.25:1)*repeatFactor(wins)));
   const wagers=[...new Set([0,...[Math.floor(maximum/4),Math.floor(maximum/2),maximum].filter(value=>value>0)])];
-  return {id:offer.id,zoneId:zone.id,rival:{id:rival.id,name:rival.name,style:STREET_STYLES[rival.style],skill:rival.skill,car:{id:car.id,name:car.name,brand:car.brand?.name||'',image:car.image,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,cv:car.cv,kg:car.kg,performance:streetPerformance(performance(rivalCar(car,rival)))}},
+  return {id:offer.id,zoneId:zone.id,rival:{id:rival.id,name:rival.name,style:STREET_STYLES[rival.style],skill:rival.skill,car:{id:car.id,name:car.name,brand:car.brand?.name||'',image:car.image,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,cv:car.cv,kg:car.kg,performance:streetPerformance(rivalCar(car,rival))}},
     track:{id:track.id,name:track.name,distanceKm,weather:track.meteo.name,surface:track.surface.name,builds:track.builds},
     challenge:ratio>1.1?'Sei favorito':ratio<0.9?'Avversario impegnativo':'Sfida equilibrata',easy,races,rewardFactor:repeatFactor(wins)*(easy?0.2:1),wagers,maxWager:maximum,
     record:ctx.state[zone.id]?.rivals?.[rival.id]||{races:0,wins:0,losses:0,draws:0},
@@ -57,7 +57,7 @@ async function streetHub(tx,userId){
   const ctx=await context(tx,userId);
   const zones=[];
   for(const zone of STREET_ZONES){const reasons=access(zone,ctx);const saved=ctx.state[zone.id]||{};zones.push({id:zone.id,name:zone.name,description:zone.description,minLevel:zone.minLevel,minPerformance:zone.minPerformance,maxWager:zone.maxWager,unlocked:!reasons.length,reasons,reputation:saved.reputation||0,wins:saved.wins||0,losses:saved.losses||0,draws:saved.draws||0,rivalCount:zone.rivals.filter(r=>findCar(ctx,r)).length,offer:!reasons.length&&saved.offer?await describeOffer(tx,ctx,zone,saved.offer):null});}
-  return {zones,performance:ctx.garage?streetPerformance(performance(ctx.garage)):null};
+  return {zones,performance:ctx.garage?streetPerformance(ctx.garage):null};
 }
 async function encounter(tx,userId,body){
   if(Object.keys(body).some(key=>!['zoneId','replace','offerId'].includes(key)))fail(400,'Richiesta incontro non valida');

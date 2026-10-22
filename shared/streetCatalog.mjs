@@ -1,3 +1,4 @@
+import {performanceIndex} from './vehiclePerformance.mjs';
 // Fixed identities and catalogue cars: no opponent scaling with the player's upgrades.
 const definitions = [
   ['parking','Parcheggio del centro commerciale','Le prime sfide dopo la chiusura. Auto piccole, percorsi brevi e puntate contenute.',1,0,null,0,100,['Amalfitana · Maiori → Minori'],
@@ -13,7 +14,7 @@ const definitions = [
 ];
 export const STREET_ZONES=definitions.map(([id,name,description,minLevel,minPerformance,previousZone,minReputation,maxWager,tracks,rivals])=>({id,name,description,minLevel,minPerformance,previousZone,minReputation,maxWager,tracks,technique:id==='mountain'?'progressive-release':null,rivals:rivals.map(([name,carName,style,skill],index)=>({id:`${id}-${index+1}`,name,carName,style,skill,engineHealth:id==='parking'?[84,86,86,95,86,92,80,90][index]:96,tireGrip:id==='parking'?[78,80,80,92,80,88,74,80][index]:96}))}));
 export const STREET_STYLES={prudente:'Prudente',preciso:'Preciso',tecnico:'Specialista delle curve',aggressivo:'Aggressivo'};
-export function streetPerformance(car){return Math.round(['speed','acceleration','turnSlow','turnFast','brake','traction'].reduce((sum,key)=>sum+(Number(car?.[key])||0),0)/6);}
+export const streetPerformance=performanceIndex;
 export function streetPilot(rival){const pilot=Object.fromEntries(['brave','clean','reflex','acro','turn','brake','throttle','shift'].map(key=>[key,rival.skill]));const bonuses={prudente:{clean:4,brake:3,brave:-2},preciso:{clean:4,reflex:3},tecnico:{turn:5,throttle:3},aggressivo:{brave:5,shift:3,clean:-3}};for(const[key,bonus]of Object.entries(bonuses[rival.style]||{}))pilot[key]=Math.max(1,pilot[key]+bonus);return pilot;}
 export function repeatFactor(races=0){return [1,0.6,0.3,0.1,0][Math.min(4,Math.max(0,races))];}
 export function streetReward({outcome,failure,completed,races=0,wins=races,easy=false,wager=0}){

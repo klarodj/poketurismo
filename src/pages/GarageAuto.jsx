@@ -1,3 +1,4 @@
+import {performanceIndex} from '../../shared/vehiclePerformance.mjs';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
@@ -19,7 +20,7 @@ export default function GarageAuto() {
 
   const selectedCar = cars.find(c => c.id === selectedCarId);
   const raceStats = selectedCar ? getCarStats(selectedCar.id) : null;
-  const perfIndex = raceStats ? Math.round((raceStats.speed + raceStats.acceleration + raceStats.turnSlow + raceStats.turnFast + raceStats.brake + raceStats.traction) / 6) : 0;
+  const perfIndex = performanceIndex(selectedCar);
   
   const estimatedValue = selectedCar?.resaleValue ?? 0;
 

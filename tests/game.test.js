@@ -647,7 +647,7 @@ test('street access enforces level, performance, reputation and school on the se
   assert.equal((await get('/street/1')).data.zones.find(z=>z.id==='mountain').unlocked,false);
   await prisma.driverDevelopment.create({data:{userId:1,lessonPassed:true}});
   assert.ok((await get('/street/1')).data.zones.every(z=>z.unlocked));
-  await prisma.garage.update({where:{id:garage.id},data:{speed:0,acceleration:0,turnSlow:0,turnFast:0,brake:0,traction:0}});
+  await prisma.garage.update({where:{id:garage.id},data:{cv:10,engineHealth:1,speed:0,acceleration:0,turnSlow:0,turnFast:0,brake:0,traction:0}});
   assert.equal((await post('/street/encounter',{zoneId:'highway'})).status,403);
   assert.equal((await post('/street/encounter',{zoneId:'parking',reputation:99999})).status,400);
 });
@@ -676,4 +676,52 @@ test('a familiar street rival has no remaining rewards or stakes and does not re
   const race=(await post('/races',setup)).data.race;
   const result=await post(`/races/${race.id}/turns`,{version:0,moveId:null});assert.equal(result.status,200);
   assert.equal(result.data.race.reward.xp,0);assert.equal(result.data.race.streetResult.reputation,0);
+});
+
+async function modernCup(){
+  const {CHAMPIONSHIP_CATALOG}=await import('../shared/championshipCatalog.mjs');const spec=CHAMPIONSHIP_CATALOG[0];
+  for(const name of new Set(spec.rivals.map(r=>r.carName))){if(!await prisma.car.findFirst({where:{name}})){const{id:_id,...data}=car;await prisma.car.create({data:{...data,name,cv:55}});}}
+  await prisma.garage.update({where:{id:garage.id},data:{cv:55}});
+  await prisma.championship.update({where:{id:championship.id},data:{name:spec.name,minCv:40,maxCv:85,entryFee:300,rewardMoney:1800,rewardXp:350}});
+  for(let ord=2;ord<=3;ord++)await prisma.championshipRace.create({data:{championshipId:championship.id,trackId:track.id,ord,opponentName:'Catalogued driver',opponentCarName:'Seicento Sporting'}});
+  const response=await post(`/championships/${championship.id}/enter`,{});assert.equal(response.status,200,JSON.stringify(response.data));return response.data.entry;
+}
+test('new championships freeze the complete calendar, cars and rewards and score eight entrants',async()=>{
+  const entry=await modernCup();assert.equal(entry.format,'grid');assert.equal(entry.standings.length,8);assert.equal(entry.championship.rounds.length,3);
+  await prisma.championship.update({where:{id:championship.id},data:{rewardMoney:999999,minCv:9000}});
+  await prisma.championshipRace.updateMany({where:{championshipId:championship.id},data:{opponentCarName:'Missing car'}});
+  let last;
+  for(let round=1;round<=3;round++){
+    const race=await begin('championship',{entryId:entry.id});assert.equal(race.opponent.car.name,['Seicento Sporting','Cinquecento Sporting','Seicento Sporting'][round-1]);
+    last=await post(`/races/${race.id}/turns`,{version:0,moveId:null});assert.equal(last.status,200,JSON.stringify(last.data));
+    assert.equal(last.data.race.championship.classification.length,8);assert.equal(last.data.race.championship.standings.length,8);
+    if(round<3)assert.equal(last.data.race.reward.money,0);
+  }
+  assert.equal(last.data.race.championship.completed,true);assert.ok(last.data.race.reward.money<=1800);assert.equal((await get('/championship-entries/active/1')).data,null);
+  const saved=(await get(`/championship-entries/${entry.id}?userId=1`)).data;assert.equal(saved.results.length,3);assert.equal(saved.championship.rewardMoney,1800);
+});
+test('all-abandoned championships score retirements and cannot manufacture prize money or XP',async()=>{
+  const entry=await modernCup();let final;
+  for(let round=1;round<=3;round++){const race=await begin('championship',{entryId:entry.id});final=await post(`/races/${race.id}/abandon`,{version:0});const player=final.data.race.championship.classification.find(r=>r.id==='player');assert.equal(player.points,0);assert.equal(player.failure,'abandoned');assert.ok(final.data.race.championship.classification.filter(r=>r.id!=='player').every(r=>r.timeMs>0));}
+  assert.equal(final.data.race.reward.money,0);assert.equal(final.data.race.reward.xp,0);assert.equal(await wallet(),9970000);
+});
+test('new grid final-turn retries cannot score a second round or award a second prize',async()=>{
+ const entry=await modernCup();const race=await begin('championship',{entryId:entry.id});const key=randomUUID();const body={version:0,moveId:null};
+ const first=await post(`/races/${race.id}/turns`,body,key);assert.equal(first.status,200);
+ assert.equal((await post(`/races/${race.id}/turns`,body,key)).status,200);
+ assert.equal((await post(`/races/${race.id}/turns`,body)).status,409);
+ assert.equal((await get(`/championship-entries/${entry.id}?userId=1`)).data.results.length,1);
+});
+test('time trials save only server-computed completed records and never pay money or XP',async()=>{
+ const race=await begin('track',{timeTrial:true});assert.equal(race.timeTrial,true);assert.equal(race.sandbox,true);assert.equal(race.wager,0);
+ const result=await post(`/races/${race.id}/turns`,{version:0,moveId:null,time:1});assert.equal(result.status,200);
+ assert.equal(result.data.race.reward.money,0);assert.equal(result.data.race.reward.xp,0);assert.equal(await wallet(),10000000);
+ const records=(await get('/time-trials/1')).data;assert.equal(records.length,1);assert.equal(records[0].timeMs,Math.round(result.data.race.playerTime*1000));assert.equal((await get('/time-trials/2')).data.length,0);
+ const abandoned=await begin('track',{timeTrial:true});await post(`/races/${abandoned.id}/abandon`,{version:0});assert.deepEqual((await get('/time-trials/1')).data,records);
+});
+test('time trial mode rejects street routes and cannot be combined with a paid or school session',async()=>{
+ assert.equal((await post('/races',{mode:'street',timeTrial:true})).status,400);
+ assert.equal((await post('/races',{mode:'track',timeTrial:true,demo:true})).status,400);
+ const type=await prisma.trackType.create({data:{name:'Touge',image:''}});await prisma.track.update({where:{id:track.id},data:{typeId:type.id}});
+ assert.equal((await post('/races',{mode:'track',timeTrial:true,trackId:track.id})).status,400);
 });

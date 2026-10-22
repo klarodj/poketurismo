@@ -1,3 +1,5 @@
+import ChampionshipTable from '../components/ChampionshipTable';
+import {championshipCarErrors} from '../../shared/championshipCatalog.mjs';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Win98Window from '../components/Win98Window';
@@ -8,6 +10,7 @@ import useDevelopmentStore from '../store/developmentStore';
 import useInventoryStore from '../store/inventoryStore';
 import {
   fetchChampionships,
+  fetchChampionshipHistory,
   fetchTrainingSessions,
   completeTraining,
   fetchActiveChampionshipEntry,
@@ -20,6 +23,7 @@ const CATEGORY_COLORS = {
   'N/A':       'bg-gray-700',
   'Aspirato':  'bg-green-800',
   'GT':        'bg-blue-800',
+  'Supercar': 'bg-red-900',
   'Turbo':     'bg-red-800',
   'Leggenda':  'bg-yellow-700',
   'Open':      'bg-purple-800',
@@ -35,15 +39,7 @@ const STAT_LABELS = {
 
 // Check if player's car meets championship requirements
 function checkCarRequirements(car, champ) {
-  const errors = [];
-  if (!car) return ['Nessuna auto equipaggiata'];
-  if (car.cv < champ.minCv) errors.push(`CV min: ${champ.minCv} (hai: ${car.cv})`);
-  if (car.cv > champ.maxCv) errors.push(`CV max: ${champ.maxCv} (hai: ${car.cv})`);
-  const perfIndex = ['speed', 'acceleration', 'revving', 'transmission', 'turnSlow', 'turnFast', 'brake', 'traction'].reduce((sum, key) => sum + car[key], 0) / 8;
-  if (perfIndex < champ.minPerfIndex) errors.push(`Indice prestazioni min: ${champ.minPerfIndex}`);
-  if (champ.allowedDrive !== 'any' && car.driveType !== champ.allowedDrive)
-    errors.push(`Trazione richiesta: ${champ.allowedDrive} (hai: ${car.driveType})`);
-  return errors;
+  return championshipCarErrors(car,champ);
 }
 
 function checkPilotRequirements(stats, level, champ) {
@@ -101,6 +97,11 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
           </div>
         </div>
 
+        <p className="text-xs mb-2">{champ.format === 'grid' ? 'Otto partecipanti · punti 10–8–6–5–4–3–2–1. Premi finali: 100% / 60% / 35% sul podio, 15% agli altri classificati.' : 'Campionato storico a duelli'}</p>
+        {champ.rules?.engineTypes && <p className="text-xs mb-2">Solo motori aspirati</p>}
+        {champ.rules?.brands && <p className="text-xs mb-2">Solo marchi italiani</p>}
+        {champ.rules?.drives && <p className="text-xs mb-2">Trazioni ammesse: {champ.rules.drives.join(', ')}</p>}
+        {expanded && champ.drivers && <div className="text-xs bg-white p-2 mb-3 border border-gray-400"><strong>Partecipanti oltre a te</strong><ul className="mt-1 space-y-1">{champ.drivers.map(driver=><li key={driver.id}>{driver.name} · {driver.carName} · abilità {driver.skill}</li>)}</ul></div>}
         {/* Rounds (expandable) */}
         {expanded && (
           <div className="mb-3 border-t-2 border-win98-darkerGray pt-2">
@@ -109,7 +110,7 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
               {champ.rounds?.map(r => (
                 <div key={r.id} className="flex justify-between items-center gap-2 bg-white border border-gray-300 px-3 py-1.5 text-sm">
                   <span className="font-bold text-blue-900">Round {r.ord}: {r.track?.name || '—'}</span>
-                  <span className="text-gray-500">vs <span className="font-bold text-red-700">{r.opponentName}</span> ({r.opponentCarName})</span>
+                  <span className="text-gray-500">Rivale in evidenza: <span className="font-bold text-red-700">{r.opponentName}</span> ({r.opponentCarName})</span>
                   <span className={`text-xs font-bold px-2 py-0.5 ${r.opponentDifficulty >= 1.3 ? 'bg-red-200 text-red-800' : r.opponentDifficulty >= 1.0 ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}`}>
                     {r.opponentDifficulty >= 1.3 ? '🔥 HARD' : r.opponentDifficulty >= 1.0 ? '⚡ MED' : '✅ EASY'}
                   </span>
@@ -118,11 +119,11 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
             </div>
             {isActive && (
               <div className="mt-3 bg-blue-50 border border-blue-300 p-2 text-xs">
-                <strong>Classifica in corso: {activeEntry.playerPoints} — {activeEntry.opponentPoints}</strong>
+                <strong>Classifica in corso: {activeEntry.playerPoints} punti {activeEntry.format === 'duel' ? `— ${activeEntry.opponentPoints}` : ''}</strong>
                 {activeEntry.results.map((result) => (
                   <div key={result.round} className="flex justify-between gap-2 mt-1">
                     <span>Round {result.round} · {result.trackName} vs {result.opponentName}</span>
-                    <span className="font-bold uppercase">{result.outcome} ({result.playerPoints}-{result.opponentPoints})</span>
+                    <span className="font-bold uppercase">{result.classification ? `${result.position}° posto · ${result.playerPoints} punti` : `${result.outcome} (${result.playerPoints}-${result.opponentPoints})`}</span>
                   </div>
                 ))}
               </div>
@@ -263,6 +264,7 @@ export default function Racing() {
 
   const [activeTab, setActiveTab] = useState('competitions');
   const [championships, setChampionships] = useState([]);
+  const [history,setHistory]=useState([]);
   const [activeEntry, setActiveEntry] = useState(null);
   const [trainingSessions, setTrainingSessions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -273,11 +275,12 @@ export default function Racing() {
 
   useEffect(() => {
     if (!userId) return undefined;
-    Promise.all([fetchChampionships(), fetchTrainingSessions(), fetchActiveChampionshipEntry(userId)])
-      .then(([champData, trainData, entry]) => {
+    Promise.all([fetchChampionships(), fetchTrainingSessions(), fetchActiveChampionshipEntry(userId), fetchChampionshipHistory(userId)])
+      .then(([champData, trainData, entry, previous]) => {
         setChampionships(champData);
         setTrainingSessions(trainData);
         setActiveEntry(entry);
+        setHistory(previous);
         setLoading(false);
       })
       .catch(err => {
@@ -295,7 +298,7 @@ export default function Racing() {
       triggerEvent({ type: 'error', title: 'Nessuna Auto', message: 'Equipaggia prima un\'auto nel garage!' });
       return;
     }
-    if (equippedCar.currentFuel < 5) {
+    if (equippedCar.currentFuel <= 0) {
       triggerEvent({ type: 'error', title: 'Carburante', message: 'Hai poco carburante. Fai il pieno prima di gareggiare.' });
       return;
     }
@@ -352,6 +355,7 @@ export default function Racing() {
     <Win98Window title="Autodromo — Centro Corse" imageUrl="/images/track.png">
       <div className="flex flex-col bg-win98-gray text-black">
 
+        <button className="win98-btn m-2" onClick={()=>navigate('/autodrome')}>Torna all’Autodromo</button>
         {/* Top Tab Navigation */}
         <div className="flex bg-win98-gray p-1 gap-1 border-b-2 border-win98-darkerGray">
           <button
@@ -394,8 +398,7 @@ export default function Racing() {
                       <div className="font-bold text-yellow-300 uppercase">🏁 Campionato in corso</div>
                       <div className="text-lg">{activeEntry.championship.name} · Round {activeEntry.currentRound}/{activeEntry.championship.rounds.length}</div>
                       <div className="text-sm text-cyan-200">
-                        Classifica: {activeEntry.playerPoints} — {activeEntry.opponentPoints} punti
-                        {' · '}Gap cumulativo: {activeEntry.gapDifference > 0 ? '+' : ''}{activeEntry.gapDifference}m
+                        {activeEntry.format === 'grid' ? `Punti: ${activeEntry.playerPoints} · otto partecipanti` : `Classifica: ${activeEntry.playerPoints} — ${activeEntry.opponentPoints} punti`}
                       </div>
                       <div className="h-2 bg-gray-700 mt-2">
                         <div className="h-full bg-green-400" style={{ width: `${(activeEntry.results.length / activeEntry.championship.rounds.length) * 100}%` }} />
@@ -410,6 +413,8 @@ export default function Racing() {
                     </button>
                   </div>
                 )}
+                {activeEntry?.format === 'grid' && <ChampionshipTable rows={activeEntry.standings}/>}
+                {history.length > 0 && <details className="border border-gray-500 bg-white p-3 my-3"><summary className="cursor-pointer font-bold">Campionati conclusi ({history.length})</summary>{history.map(entry=><details key={entry.id} className="border-t border-gray-300 mt-3 pt-2"><summary className="cursor-pointer">{entry.championship.name} · {entry.playerPoints} punti</summary>{entry.format==='grid'?<ChampionshipTable rows={entry.standings}/>:<p className="text-sm">Classifica storica: {entry.playerPoints} — {entry.opponentPoints}</p>}</details>)}</details>}
                 {/* Category Filter */}
                 <div className="flex gap-1 mb-4 flex-wrap">
                   {categories.map(cat => (
@@ -450,7 +455,7 @@ export default function Racing() {
               <div>
                 <div className="mb-4 bg-[#FFFFE1] border-2 border-win98-darkerGray p-3 text-sm">
                   <button className="underline font-bold" onClick={() => navigate('/garage/scuola-guida')}>Scuola guida: lezione e prova pratica della frenata ↗</button><br /><strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
-                  Le sessioni <span className="font-bold text-purple-700">MOSSA</span> sbloccano nuove tecniche di guida nel tuo Grimorio.
+                  Le tecniche si apprendono nella Scuola guida, con lezioni e prove pratiche.
                 </div>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">

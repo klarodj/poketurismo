@@ -207,7 +207,7 @@ function advanceTacticalRace(input, moveId, rawDecision) {
       car.engineHealth = result.broken ? 0 : round(Math.max(0, car.engineHealth - result.engine), 4); car.km += result.km;
     }
     if (player.broken || state.car.engineHealth <= 0) { state.failure = 'engine'; state.finished = true; log.event = 'Motore fuori uso: gara interrotta.'; }
-    if (opponent.broken || state.opponent.car.engineHealth <= 0 || opponentOutOfFuel) { state.opponentFailure = 'retired'; state.finished = true; log.explanations.push('Il rivale si è ritirato per un problema alla vettura.'); }
+    if (opponent.broken || state.opponent.car.engineHealth <= 0 || opponentOutOfFuel) { state.opponentFailure = 'retired'; if(!state.timeTrial&&!state.gridOpponentId)state.finished = true; log.explanations.push('Il rivale si è ritirato per un problema alla vettura.'); }
     log.fuel = player.fuel; log.tires = player.tires; log.engine = player.engine;
     log.deltaSeconds = round(state.gapSeconds - previousGap); log.delta = Math.round(log.deltaSeconds * 1000);
     log.playerSeconds = round(state.playerTime - previousPlayerTime); log.opponentSeconds = round(state.opponentTime - previousOpponentTime);

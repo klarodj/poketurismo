@@ -1,3 +1,4 @@
+const {championshipCarErrors}=require('../shared/championshipCatalog.mjs');
 const SERVICE_PRICES = Object.freeze({ engine: 150, tires: 500, rebuild: 2500, full: 3500 });
 const PILOT_STATS = ['brave', 'clean', 'reflex', 'shift', 'acro', 'turn', 'brake', 'throttle'];
 const PART_STATS = {
@@ -35,13 +36,10 @@ function partChanges(part, direction = 1) {
     return [stat, { increment: value * sign * direction }];
   }));
 }
-function checkChampionship(user, car, championship) {
+function checkChampionship(user, car, championship, legacy = false) {
   if (!car || car.userId !== user.id) fail(400, 'Equipaggia una tua auto');
-  if (car.cv < championship.minCv || car.cv > championship.maxCv) fail(400, 'Potenza auto non ammessa');
-  if (championship.allowedDrive !== 'any' && car.car.driveType !== championship.allowedDrive) fail(400, 'Trazione non ammessa');
-  const index = ['speed', 'acceleration', 'revving', 'transmission', 'turnSlow', 'turnFast', 'brake', 'traction']
-    .reduce((sum, key) => sum + car[key], 0) / 8;
-  if (index < championship.minPerfIndex) fail(400, 'Indice prestazioni insufficiente');
+  const errors=legacy ? [car.cv<championship.minCv||car.cv>championship.maxCv?'Potenza auto non ammessa':null, championship.allowedDrive!=='any'&&car.car.driveType!==championship.allowedDrive?'Trazione non ammessa':null, ['speed','acceleration','revving','transmission','turnSlow','turnFast','brake','traction'].reduce((sum,key)=>sum+car[key],0)/8<championship.minPerfIndex?'Indice prestazioni insufficiente':null].filter(Boolean) : championshipCarErrors(car,championship);
+  if(errors.length)fail(400,errors.join(' · '));
   if (user.level < championship.minLevel) fail(400, 'Livello insufficiente');
   for (const stat of ['brave', 'clean', 'reflex', 'shift']) {
     if (user[stat] < championship[`min${stat[0].toUpperCase()}${stat.slice(1)}`]) fail(400, 'Abilità pilota insufficienti');

@@ -1,3 +1,4 @@
+import ChampionshipTable from './ChampionshipTable';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Win98Window from './Win98Window';
@@ -27,6 +28,7 @@ export default function RacePage({ mode }) {
   const requestedId = params.get('raceId');
   const entryId = params.get('entryId');
   const initialTrack = params.get('id') || '';
+  const timeTrial=mode==='track'&&params.get('trial')==='1'&&!entryId;
   const { id: userId } = usePlayerStore();
   const { cars } = useGarageStore();
   const { equippedCarId } = useGameStore();
@@ -35,7 +37,7 @@ export default function RacePage({ mode }) {
   const [tracks, setTracks] = useState([]);
   const [customTracks, setCustomTracks] = useState([]);
   const [opponents, setOpponents] = useState([]);
-  const [trackChoice, setTrackChoice] = useState(initialTrack ? `db-${initialTrack}` : mode === 'track' && !entryId ? 'demo' : '');
+  const [trackChoice, setTrackChoice] = useState(initialTrack ? `db-${initialTrack}` : mode === 'track' && !entryId && !timeTrial ? 'demo' : '');
   const [demoPreset, setDemoPreset] = useState('matched');
   const [opponentChoice, setOpponentChoice] = useState('similar');
   const [loaded, setLoaded] = useState(false);
@@ -48,7 +50,7 @@ export default function RacePage({ mode }) {
       requestedId ? fetchRace(requestedId, userId) : fetchActiveRace(userId).then(active => active ? fetchRace(active.id, userId) : null)
     ]).then(([allTracks, customs, rivals, data]) => {
       if (cancelled) return;
-      setTracks(allTracks.filter(track => !track.catalog || track.catalog.format === (mode === 'street' ? 'point-to-point' : 'circuit'))); setCustomTracks(customs); setOpponents(rivals);
+      setTracks(allTracks.filter(track => track.catalog ? track.catalog.format === (mode === 'street' ? 'point-to-point' : 'circuit') : mode === 'street' || track.type?.name === 'Track')); setCustomTracks(customs); setOpponents(rivals);
       if (data) applyGameState(data); else useRaceStore.setState({ race: null });
       setLoaded(true); setError('');
     }).catch(error => { if (!cancelled) { setError(error.message); setLoaded(true); } });
@@ -56,7 +58,7 @@ export default function RacePage({ mode }) {
   }, [userId, mode, requestedId]);
   const begin = async () => {
     try {
-      const setup = { mode: entryId ? 'championship' : mode, ...(entryId ? { entryId: Number(entryId) } : {}) };
+      const setup = { ...(timeTrial?{timeTrial:true}:{}), mode: entryId ? 'championship' : mode, ...(entryId ? { entryId: Number(entryId) } : {}) };
       if (trackChoice === 'demo' && !entryId) { setup.demo = true; setup.demoPreset = demoPreset; }
       if (trackChoice.startsWith('db-')) setup.trackId = Number(trackChoice.slice(3));
       if (trackChoice.startsWith('custom-')) setup.customTrackId = Number(trackChoice.slice(7));
@@ -96,10 +98,10 @@ export default function RacePage({ mode }) {
         <StreetMeetups onStarted={data => {setParams({raceId:data.race.id},{replace:true});setError('');}} />
         {(customTracks.length > 0 || opponents.length > 0) && <details className="border border-gray-500 p-3"><summary className="cursor-pointer font-bold">Prove personalizzate · senza premi e scommesse</summary><div className="space-y-3 mt-3"><label className="block">Percorso<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event=>setTrackChoice(event.target.value)}><option value="">Percorso casuale per allenamento</option>{tracks.map(track=><option key={track.id} value={`db-${track.id}`}>{track.name}</option>)}{customTracks.map(track=><option key={track.id} value={`custom-${track.id}`}>{track.name}</option>)}</select></label><label className="block">Rivale<select className="block w-full p-2 bg-white border" value={opponentChoice} onChange={event=>setOpponentChoice(event.target.value)}><option value="similar">Auto simile per allenamento</option>{opponents.map(opponent=><option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name}</option>)}</select></label><button className={button} disabled={!car||pending>0||(!trackChoice.startsWith('custom-')&&!opponentChoice.startsWith('custom-'))} onClick={begin}>Avvia prova personalizzata</button></div></details>}
       </> : <>
-        <h1 className="font-bold text-2xl">{entryId ? 'Round del campionato' : mode === 'street' ? 'Prepara la sfida' : 'Gara singola'}</h1>
+        <h1 className="font-bold text-2xl">{entryId ? 'Round del campionato' : timeTrial ? 'Prova a tempo' : mode === 'street' ? 'Prepara la sfida' : 'Gara singola'}</h1>
         {car ? <p>Auto: <strong>{car.brand} {car.name}</strong> · {car.currentFuel.toFixed(2)} L · motore {car.engineHealth.toFixed(1)}% · gomme {car.tireGrip.toFixed(1)}%</p> : <button className={button} onClick={() => navigate('/garage/auto')}>Equipaggia un’auto</button>}
         {!entryId && <label className="block font-bold">Tracciato<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event => setTrackChoice(event.target.value)}>
-          {mode === 'track' && <option value="demo">Circuito Scuola · 8 decisioni · prova gratuita</option>}
+          {mode === 'track' && !timeTrial && <option value="demo">Circuito Scuola · 8 decisioni · prova gratuita</option>}
           <option value="">{mode === 'street' ? 'Tracciato casuale' : 'Primo circuito disponibile'}</option>
           {tracks.map(track => <option key={track.id} value={`db-${track.id}`}>{track.name}{track.catalog ? ` · difficoltà ${track.catalog.difficulty}/5` : ''}</option>)}
           {customTracks.map(track => <option key={`custom-${track.id}`} value={`custom-${track.id}`}>{track.name} · allenamento senza premi</option>)}
@@ -120,7 +122,7 @@ export default function RacePage({ mode }) {
           <option value="similar">Auto di categoria simile dal catalogo</option><option value="random">Auto casuale dal catalogo</option>
           {opponents.map(opponent => <option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name} · {opponent.car.name} · allenamento senza premi</option>)}
         </select></label>}
-        <p className="text-sm">{trackChoice === 'demo' && !entryId ? 'Allenamento gratuito: nessun premio economico o XP. Per riparare o cambiare auto, termina o abbandona la sessione.' : mode === 'street' ? 'Sfida: quota €500 alla partenza. Vittoria: €1.500 restituiti (guadagno netto €1.000). Pareggio: quota restituita. Avversari e tracciati personalizzati: allenamento gratuito senza premi.' : entryId ? 'Il server registra il round e assegna i premi al termine del campionato.' : 'Vittoria: €500 e 100 XP. Usura e carburante vengono salvati dopo ogni settore.'}</p>
+        <p className="text-sm">{timeTrial ? 'Prova a tempo personale: nessun premio o XP. Consumi e usura reali.' : trackChoice === 'demo' && !entryId ? 'Allenamento gratuito: nessun premio economico o XP. Per riparare o cambiare auto, termina o abbandona la sessione.' : mode === 'street' ? 'Sfida: quota €500 alla partenza. Vittoria: €1.500 restituiti (guadagno netto €1.000). Pareggio: quota restituita. Avversari e tracciati personalizzati: allenamento gratuito senza premi.' : entryId ? 'Il server registra il round e assegna i premi al termine del campionato.' : 'Vittoria: €500 e 100 XP. Usura e carburante vengono salvati dopo ogni settore.'}</p>
         <button className={button} disabled={!car || pending > 0} onClick={begin}>Inizia gara</button>
       </> : <RaceDashboard race={race} pending={pending} onAbandon={abandon}>
         {race.status === 'active' && section ? <>
@@ -136,13 +138,14 @@ export default function RacePage({ mode }) {
           <p className="text-sm">Le mosse migliorano soltanto le statistiche richieste dal settore. Peso e carburante influenzano le prestazioni; pioggia, neve e sterrato riducono l’aderenza. Le mosse aggressive aumentano consumo e rischio motore.</p>
           </>}
         </> : <div className="bg-yellow-100 border border-yellow-600 p-4 space-y-3">
-          <h2 className="text-2xl font-bold">{race.lesson ? race.developmentSummary?.lesson?.passed ? 'Prova superata!' : 'Prova da ripetere' : race.outcome === 'win' ? 'Vittoria!' : race.outcome === 'draw' ? 'Pareggio' : 'Sconfitta'}</h2>
+          <h2 className="text-2xl font-bold">{race.lesson ? race.developmentSummary?.lesson?.passed ? 'Prova superata!' : 'Prova da ripetere' : race.timeTrial && !race.failure ? 'Prova a tempo completata' : race.championship?.format === 'grid' ? `Round concluso · posizione ${race.championship.position}` : race.outcome === 'win' ? 'Vittoria!' : race.outcome === 'draw' ? 'Pareggio' : 'Sconfitta'}</h2>
           {race.failure && <p>{race.failure === 'engine' ? 'Motore fuori uso.' : race.failure === 'fuel' ? 'Carburante insufficiente.' : 'Gara abbandonata.'}</p>}
           <p>Accreditati €{(race.reward?.money || 0).toFixed(2)} · +{race.reward?.xp || 0} XP. Risultato e condizioni della vettura salvati.</p>
           {race.streetResult && <p className="bg-blue-50 border border-blue-500 p-3">{race.street.zoneName}: +{race.streetResult.reputation} reputazione · totale {race.streetResult.totalReputation}. Bilancio della scommessa: {race.streetResult.netMoney >= 0 ? '+' : '−'}€{Math.abs(race.streetResult.netMoney).toLocaleString('it-IT')}. Precedenti con {race.opponent.name}: {race.streetResult.record.wins} vittorie, {race.streetResult.record.losses} sconfitte, {race.streetResult.record.draws} pareggi.</p>}
           <DevelopmentSummary summary={race.developmentSummary} />
-          {race.championship && <p>Campionato: {race.championship.playerPoints}–{race.championship.opponentPoints}. {race.championship.completed ? race.championship.champion ? 'Sei il campione!' : 'Campionato concluso.' : `Prossimo round: ${race.championship.nextRound}.`}</p>}
-          <div className="flex flex-wrap gap-2"><button className={button} onClick={() => navigate(race.lesson ? '/garage/scuola-guida' : '/racing')}>{race.lesson ? 'Torna alla scuola guida' : 'Centro Corse'}</button><button className={button} onClick={newRace}>Nuova gara</button><button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
+          {race.championship?.format === 'grid' && <><ChampionshipTable rows={race.championship.classification} round/><ChampionshipTable rows={race.championship.standings}/><p>{race.championship.completed ? `Campionato concluso: ${race.championship.championshipPosition}° posto.` : `Prossimo round: ${race.championship.nextRound}.`}</p></>}
+          {race.championship && race.championship.format !== 'grid' && <p>Campionato: {race.championship.playerPoints}–{race.championship.opponentPoints}. {race.championship.completed ? race.championship.champion ? 'Sei il campione!' : 'Campionato concluso.' : `Prossimo round: ${race.championship.nextRound}.`}</p>}
+          <div className="flex flex-wrap gap-2"><button className={button} onClick={() => navigate(race.lesson ? '/garage/scuola-guida' : race.timeTrial ? '/time-trials' : race.mode === 'street' ? '/street-racing' : '/autodrome')}>{race.lesson ? 'Torna alla scuola guida' : race.timeTrial ? 'I tuoi tempi' : race.mode === 'street' ? 'Torna al ritrovo' : 'Centro Corse'}</button><button className={button} onClick={newRace}>Nuova gara</button><button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
         </div>}
       </RaceDashboard>}
 

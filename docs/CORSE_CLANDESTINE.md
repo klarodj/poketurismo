@@ -12,7 +12,7 @@ Pubblicato nell'istanza condivisa il 22 ottobre 2026. Verifica successiva: cinqu
 | Passo di montagna | 4 | 45 | 30 al lungomare + Rilascio progressivo | €1000 |
 | Raduno della tangenziale | 6 | 48 | 40 al passo | €2000 |
 
-L'indice usa la stessa media delle sei prestazioni del garage, considerando usura, peso e carburante. Serve un'auto equipaggiata. Le vecchie zone rimangono accessibili con auto migliori. I requisiti sono verificati sia all'incontro sia alla partenza dal server.
+L'indice condiviso con garage e campionati considera potenza/peso, velocità raggiungibile e tenuta attuale, includendo usura, modifiche e carburante. La formula è in shared/vehiclePerformance.mjs. Serve un'auto equipaggiata. Le vecchie zone rimangono accessibili con auto migliori. I requisiti sono verificati sia all'incontro sia alla partenza dal server.
 
 ## Incontri
 

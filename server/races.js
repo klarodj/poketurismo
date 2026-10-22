@@ -12,11 +12,14 @@ const { requireTrial } = require('./techniqueSchool');
 const { createTechniqueLesson, techniqueLessonFeedback } = require('../shared/techniqueLessons.mjs');
 const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
 const { acceptEncounter, settleStreet } = require('./streetRacing');
+const { readContract, gridOpponent, settleGrid } = require('./championships');
+const { performanceIndex } = require('../shared/vehiclePerformance.mjs');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
   delete state.rng;
   delete state.incidentPlan;
+  delete state.gridSeed;
   return { ...state, ...(state.rulesVersion === 3 ? { decisionOptions: DECISION_OPTIONS, preview: decisionPreview(state), nextSectionName: state.sections[state.index + 1]?.name || null } : {}), id: row.id, mode: row.mode, status: row.status, version: row.version };
 }
 async function snapshot(tx, userId, race) {
@@ -35,6 +38,7 @@ function carSnapshot(garage) {
 async function startRace(tx, userId, body) {
   const mode = body.mode;
   if (!['street', 'track', 'championship'].includes(mode)) fail(400, 'Modalità gara non valida');
+  if(body.timeTrial!==undefined&&(body.timeTrial!==true||mode!=='track'||body.demo||body.lesson||body.entryId))fail(400,'Prova a tempo non valida');
   const user = await tx.user.findUnique({ where: { id: userId } });
   const growth = await tx.driverDevelopment.findUnique({ where: { userId } });
   const pilot = { ...Object.fromEntries(PILOT_STATS.map(key => [key, user[key]])), fundamentals: fundamentals(growth) };
@@ -54,19 +58,25 @@ async function startRace(tx, userId, body) {
   const streetMatch = mode === 'street' && body.customTrackId === undefined && body.opponentId === undefined ? await acceptEncounter(tx, userId, body) : null;
   if (mode === 'street' && !streetMatch && (body.zoneId !== undefined || body.wager !== undefined || body.offerId !== undefined)) fail(400, 'Le prove personalizzate non accettano scommesse o incontri');
   let entry, round, trackId = body.trackId === undefined ? null : positiveId(body.trackId);
+  let gridMatch;
   if (mode === 'championship') {
     entry = await tx.championshipEntry.findFirst({ where: { id: positiveId(body.entryId), userId, status: 'active' }, include: includeChampionship });
     if (!entry) fail(404, 'Campionato attivo non trovato');
-    checkChampionship(user, garage, entry.championship);
+    const contract=readContract(entry);
+    if(contract.version===1)entry.championship=contract.championship;
+    checkChampionship(user, garage, entry.championship, contract.version!==1);
     round = entry.championship.rounds.find(round => round.ord === entry.currentRound);
     if (!round) fail(400, 'Calendario non valido');
+    gridMatch=gridOpponent(entry,round);
     trackId = round.trackId;
   }
   // A championship already scored with the old rules finishes under those rules.
   const rulesVersion = entry && JSON.parse(entry.results).some(result => result.gapMs === undefined) ? 2 : 3;
   const demo = body.demo === true && mode === 'track';
   let track;
-  if (streetMatch) {
+  if (gridMatch) {
+    track=gridMatch.track;
+  } else if (streetMatch) {
     track = streetMatch.track;
     trackId = track.id;
   } else if (demo) {
@@ -77,11 +87,12 @@ async function startRace(tx, userId, body) {
     if (!custom) fail(404, 'Tracciato personalizzato inesistente');
     track = { name: custom.name, lenght: custom.sections.length * 1000, builds: custom.sections };
   } else if (trackId) {
-    track = await tx.track.findUnique({ where: { id: trackId }, include: { builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true } });
+    track = await tx.track.findUnique({ where: { id: trackId }, include: { type:true, builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true } });
     if (!track) fail(404, 'Tracciato inesistente');
   } else {
-    const all = (await tx.track.findMany({ include: { builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true }, orderBy: { id: 'asc' } })).filter(track => {
+    const all = (await tx.track.findMany({ include: { type:true, builds: { include: { section: true }, orderBy: { ord: 'asc' } }, meteo: true, surface: true }, orderBy: { id: 'asc' } })).filter(track => {
       const catalog = trackCatalogInfo(track.name);
+      if(body.timeTrial)return catalog?.format==='circuit'||['Track','Circuit'].includes(track.type.name);
       return !catalog || catalog.format === (mode === 'street' ? 'point-to-point' : 'circuit');
     });
     if (!all.length) fail(400, 'Nessun tracciato disponibile');
@@ -89,13 +100,18 @@ async function startRace(tx, userId, body) {
     trackId = track.id;
   }
   const sections = track.builds.map(build => build.section);
+  if(body.timeTrial&&trackCatalogInfo(track.name)?.format!=='circuit'&&!['Track','Circuit'].includes(track.type?.name))fail(400,'Le prove a tempo richiedono un circuito');
   if (!sections.length || sections.length > 200) fail(400, 'Il tracciato deve avere da 1 a 200 settori');
   for (const section of demo ? [] : sections) {
     const carKeys = [section.carStat, section.carTech].map(key => key === 'braking' ? 'brake' : key);
     if (!carKeys.every(key => CAR_STATS.includes(key)) || ![section.driverStat, section.driverTech].every(key => PILOT_STATS.includes(key))) fail(400, 'Il tracciato contiene statistiche non riconosciute');
   }
-  let opponentCar, opponentPilot, opponentName, sandbox = demo;
-  if (streetMatch) {
+  let opponentCar, opponentPilot, opponentName, sandbox = demo || body.timeTrial===true;
+  if (gridMatch) {
+    opponentCar=gridMatch.driver.car;
+    opponentPilot=gridMatch.driver.pilot;
+    opponentName=gridMatch.driver.name;
+  } else if (streetMatch) {
     ({ opponentCar, opponentPilot, opponentName } = streetMatch);
   } else if (mode === 'street' && body.opponentId !== undefined) {
     const opponent = await tx.customOpponent.findUnique({ where: { id: positiveId(body.opponentId) }, include: { car: { include: { brand: true } } } });
@@ -132,10 +148,12 @@ async function startRace(tx, userId, body) {
     rulesVersion, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
     car: carSnapshot(garage), pilot,
-    opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
+    opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
     moves: inv.moves.filter(move => inv.equippedMoves.includes(move.id)), index: 0, gap: 0, logs: [], rng: seed,
     finished: false, sandbox, entryId: entry?.id || null, round: round?.ord || null,
     wager: streetMatch?.wager || 0,
+    ...(body.timeTrial ? {timeTrial:true,trialSetup:{carName:`${garage.car.brand?.name||''} ${garage.car.name}`.trim(),cv:garage.cv,performanceIndex:performanceIndex(garage)}} : {}),
+    ...(gridMatch ? {gridOpponentId:gridMatch.driver.id,gridSeed:seed} : {}),
     ...(streetMatch ? { street: streetMatch.street } : {})
   };
   const race = await tx.raceSession.create({ data: { userId, garageId: garage.id, mode, seed, state: JSON.stringify(state) } });
@@ -144,6 +162,7 @@ async function startRace(tx, userId, body) {
 async function settleChampionship(tx, userId, state) {
   const entry = await tx.championshipEntry.findFirst({ where: { id: state.entryId, userId, status: 'active', currentRound: state.round }, include: includeChampionship });
   if (!entry) fail(409, 'Il round non è più attivo');
+  if(readContract(entry).version===1)return settleGrid(tx,userId,state,entry);
   const win = state.outcome === 'win', draw = state.outcome === 'draw';
   const points = entry.playerPoints + (win ? 3 : draw ? 1 : 0);
   const opponentPoints = entry.opponentPoints + (win ? 0 : draw ? 1 : 3);

@@ -114,3 +114,5 @@
   .race-dialog-window { max-height: calc(100dvh - .6rem); }
   .race-dialog-body { padding: .65rem; }
 }
+
+.race-stage-trial { grid-template-columns: minmax(0, 1fr) minmax(130px, 1fr); }
