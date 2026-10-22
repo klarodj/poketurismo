@@ -184,7 +184,8 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
   if (race.status !== 'active') fail(409, 'Gara già conclusa');
   if (!Number.isSafeInteger(body.version) || race.version !== body.version) fail(409, 'Il settore è già stato giocato. Ricarica la gara.');
   let state = JSON.parse(race.state);
-  if (abandon) { state.finished = true; state.outcome = 'loss'; state.failure = 'abandoned'; }
+  if(state.meetTrial&&+new Date(state.meetChallenge.expiresAt)<=Date.now()){state.finished=true;state.outcome='loss';state.failure='expired';}
+  else if (abandon) { state.finished = true; state.outcome = 'loss'; state.failure = 'abandoned'; }
   else {
     if (body.moveId !== null && typeof body.moveId !== 'string') fail(400, 'Scegli una mossa o la guida normale');
     try { state = advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
@@ -192,12 +193,13 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
   if (state.lesson) {
     if (!abandon) state.logs.at(-1).instructor = state.courseTechniqueId ? techniqueLessonFeedback(state) : lessonFeedback(state);
     if (state.courseTechniqueId && !state.finished) state.gapSeconds = state.sections[state.index].scenarioGap;
-  } else {
+  } else if(!state.meetTrial) {
     const garage = await tx.garage.findFirst({ where: { id: race.garageId, userId } });
     if (!garage) fail(409, 'La vettura della gara non è più disponibile');
     await tx.garage.update({ where: { id: garage.id }, data: { km: Math.round(state.car.km), currentFuel: state.car.currentFuel, tireGrip: state.car.tireGrip, engineHealth: state.car.engineHealth } });
   }
-  if (state.finished) {
+  if(state.finished&&state.meetTrial){await require('./meetSocial').settleAttempt(tx,userId,state,race.id);state.reward={money:0,xp:0};}
+  else if (state.finished) {
     let reward = { money: 0, xp: 0 };
     if (state.street) reward = await settleStreet(tx, userId, state);
     else if (race.mode === 'championship') reward = await settleChampionship(tx, userId, state);

@@ -15,6 +15,7 @@ const { championshipInfo } = require('../shared/championshipCatalog.mjs');
 const carMeet = require('./carMeet');
 const workshop = require('./workshop');
 const tuning=require('./tuning');
+const meetSocial=require('./meetSocial');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -63,6 +64,17 @@ app.get('/api/market', endpoint(async () => {
 }));
 app.get('/api/meet', endpoint(req => transaction(prisma, tx => carMeet.meet(tx, accounts.playerId(req, req.query.userId)))));
 app.get('/api/meet/leaderboard', endpoint(req => transaction(prisma, tx => carMeet.leaderboard(tx, req.query))));
+app.get('/api/meet/social/:userId',endpoint(req=>transaction(prisma,tx=>meetSocial.hub(tx,accounts.playerId(req,req.params.userId)))));
+app.get('/api/meet/conversation/:peerId',endpoint(req=>transaction(prisma,tx=>meetSocial.conversation(tx,accounts.playerId(req,req.query.userId),req.params.peerId,req.query.before))));
+app.get('/api/meet/reports/:userId',endpoint(req=>transaction(prisma,tx=>meetSocial.reports(tx,accounts.playerId(req,req.params.userId)))));
+mutate('/api/meet/message','meet-message',meetSocial.send,'post',false);
+mutate('/api/meet/read','meet-read',meetSocial.read,'post',false);
+mutate('/api/meet/block','meet-block',meetSocial.block,'post',false);
+mutate('/api/meet/report','meet-report',meetSocial.report,'post',false);
+mutate('/api/meet/report/resolve','meet-report-resolve',meetSocial.resolveReport,'post',false);
+mutate('/api/meet/challenge','meet-invite',meetSocial.invite,'post',false);
+mutate('/api/meet/challenge/respond','meet-respond',meetSocial.respond,'post',false);
+mutate('/api/meet/challenge/start','meet-start',meetSocial.start);
 mutate('/api/meet/showcase', 'meet-showcase', carMeet.displayCar, 'post', false);
 mutate('/api/player/:id/equip', 'equip', async (tx, userId, body, params) => {
   if (positiveId(params.id) !== userId) fail(403, 'Giocatore non corrispondente');

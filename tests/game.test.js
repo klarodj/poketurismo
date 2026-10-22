@@ -33,7 +33,7 @@ before(async () => {
   for (const sql of readFileSync(new URL('./schema.sql', import.meta.url), 'utf8').split(';')) if (sql.trim()) await prisma.$executeRawUnsafe(sql);
 });
 beforeEach(async () => {
-  for (const table of ['DriverDevelopment', 'GameOperation', 'RaceSession', 'InventoryPart', 'PlayerProgress', 'ChampionshipEntry', 'ChampionshipRace', 'Championship', 'TrainingSession', 'TrackBuild', 'Track', 'TrackType', 'TrackSurface', 'TrackMeteo', 'CustomTrackSection', 'CustomTrack', 'TrackSection', 'CustomOpponent', 'Mod', 'Garage', 'Part', 'Car', 'Brand', 'User']) await prisma.$executeRawUnsafe(`DELETE FROM "${table}"`);
+  for (const table of ['MeetReport','MeetMessage','MeetBlock','MeetChallenge','DriverDevelopment', 'GameOperation', 'RaceSession', 'InventoryPart', 'PlayerProgress', 'ChampionshipEntry', 'ChampionshipRace', 'Championship', 'TrainingSession', 'TrackBuild', 'Track', 'TrackType', 'TrackSurface', 'TrackMeteo', 'CustomTrackSection', 'CustomTrack', 'TrackSection', 'CustomOpponent', 'Mod', 'Garage', 'Part', 'Car', 'Brand', 'User']) await prisma.$executeRawUnsafe(`DELETE FROM "${table}"`);
   await prisma.user.create({ data: { id: 1, username: 'Test', password: 'secret', mail: 'private@example.org', moneyCents: 10000000, carDrive: 0, ...pilot } });
   await prisma.user.create({ data: { id: 2, username: 'Other', password: 'secret', mail: '', moneyCents: 100, carDrive: 0, ...pilot } });
   const brand = await prisma.brand.create({ data: { name: 'Test brand' } });
@@ -857,4 +857,71 @@ test('tuning access warnings use championship limits and all street requirements
 });
 test('a carless player can browse and buy inventory without a misleading car preview',async()=>{
  await prisma.user.update({where:{id:1},data:{carDrive:0}});await prisma.garage.delete({where:{id:garage.id}});const view=(await get('/tuning/1')).data;assert.equal(view.garageId,null);assert.equal(view.parts[0].preview,null);assert.equal((await post('/parts/purchase',{partId:part.id})).status,200);
+});
+
+async function socialSetup(){
+ for(const[userId,id]of [[1,garage.id],[2,otherGarage.id]])await prisma.playerProgress.upsert({where:{userId},create:{userId,showcaseGarageId:id},update:{showcaseGarageId:id}});
+ const mine=(await get('/meet/social/1')).data,other=(await get('/meet/social/2')).data;return {mine,other};
+}
+async function socialInvite(format='model'){
+ const{mine,other}=await socialSetup();const sent=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:mine.cars[0].quoteKey,trackId:track.id,format});assert.equal(sent.status,200,JSON.stringify(sent.data));return {challenge:sent.data.challenge,mine,other};
+}
+async function socialAccept(){const setup=await socialInvite();const accepted=await post('/meet/challenge/respond',{userId:2,challengeId:setup.challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:setup.other.cars[0].quoteKey});assert.equal(accepted.status,200,JSON.stringify(accepted.data));return accepted.data.challenge;}
+async function finishSocial(userId,race){while(race.status==='active'){const response=await post(`/races/${race.id}/turns`,{userId,version:race.version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'}});assert.equal(response.status,200,JSON.stringify(response.data));race=response.data.race;}return race;}
+test('meet messages are private, idempotent and read only through the last displayed incoming message',async()=>{
+ await socialSetup();const key=randomUUID();const body={peerId:2,text:'Ciao <script>test</script>!'};assert.equal((await post('/meet/message',body,key)).status,200);assert.equal((await post('/meet/message',body,key)).status,200);assert.equal(await prisma.meetMessage.count(),1);
+ let hub=(await get('/meet/social/2')).data;assert.equal(hub.unread,1);assert.equal(hub.conversations[0].peer.name,'Test');const thread=(await get('/meet/conversation/1?userId=2')).data;assert.equal(thread.messages[0].text,body.text);assert.ok(!JSON.stringify(hub).includes('secret'));assert.ok(!JSON.stringify(hub).includes('private@example'));
+ await post('/meet/message',{peerId:2,text:'Secondo'});assert.equal((await post('/meet/read',{userId:2,peerId:1,throughId:thread.messages[0].id})).status,200);assert.equal((await get('/meet/social/2')).data.unread,1);
+ await prisma.user.create({data:{id:3,username:'Third',password:'secret',mail:'',carDrive:0,...pilot}});assert.equal((await get('/meet/conversation/1?userId=3')).data.messages.length,0);assert.equal((await post('/meet/read',{userId:3,peerId:1,throughId:thread.messages[0].id})).status,404);
+});
+test('meet first contacts require a visible pilot and message text and rate limits are enforced',async()=>{
+ assert.equal((await post('/meet/message',{peerId:2,text:'Ciao'})).status,403);await socialSetup();assert.equal((await post('/meet/message',{peerId:1,text:'Ciao'})).status,400);
+ for(const text of ['', 'x'.repeat(801),'bad\u0000text'])assert.equal((await post('/meet/message',{peerId:2,text})).status,400);
+ for(let i=0;i<10;i++)assert.equal((await post('/meet/message',{peerId:2,text:'messaggio '+i})).status,200);assert.equal((await post('/meet/message',{peerId:2,text:'troppi'})).status,429);assert.equal(await prisma.meetMessage.count(),10);
+});
+test('meet blocking is reciprocal, survives withdrawing a showcase and allows history and own unblock only',async()=>{
+ await socialSetup();await post('/meet/message',{peerId:2,text:'Ciao'});assert.equal((await post('/meet/block',{userId:2,peerId:1,blocked:true})).status,200);
+ assert.equal((await post('/meet/message',{peerId:2,text:'No'})).status,403);assert.equal((await post('/meet/message',{userId:2,peerId:1,text:'No'})).status,403);assert.equal((await get('/meet/conversation/1?userId=2')).data.messages.length,1);
+ await post('/meet/block',{peerId:2,blocked:false});assert.equal((await post('/meet/message',{peerId:2,text:'No'})).status,403);await post('/meet/showcase',{garageId:null});await post('/meet/block',{userId:2,peerId:1,blocked:false});assert.equal((await post('/meet/message',{peerId:2,text:'Ancora'})).status,200);
+});
+test('reports reference received messages only and only administrators can view and review them',async()=>{
+ await socialSetup();const sent=await post('/meet/message',{peerId:2,text:'Da segnalare'});assert.equal((await post('/meet/report',{peerId:2,messageId:sent.data.message.id,reason:'Test'})).status,403);
+ assert.equal((await post('/meet/report',{userId:2,peerId:1,messageId:sent.data.message.id,reason:'Comportamento scorretto'})).status,200);assert.equal((await get('/meet/reports/2')).status,403);await prisma.user.update({where:{id:1},data:{isAdmin:true}});const list=(await get('/meet/reports/1')).data;assert.equal(list[0].message,'Da segnalare');assert.ok(!JSON.stringify(list).includes('secret'));assert.equal((await post('/meet/report/resolve',{reportId:list[0].id})).status,200);assert.equal((await get('/meet/reports/1')).data[0].status,'reviewed');
+});
+test('challenge contracts require owned quoted cars, consent and compatible models or IP bands',async()=>{
+ const{challenge,other}=await socialInvite();assert.equal(challenge.status,'pending');assert.equal((await post('/meet/challenge/start',{challengeId:challenge.id})).status,409);assert.equal((await post('/meet/challenge/respond',{challengeId:challenge.id,action:'accept',garageId:garage.id,quoteKey:other.cars[0].quoteKey})).status,403);
+ assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'accept',garageId:garage.id,quoteKey:other.cars[0].quoteKey})).status,403);
+ await prisma.garage.update({where:{id:garage.id},data:{cv:110}});assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:other.cars[0].quoteKey})).status,409);assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'decline'})).status,200);
+ const setup=await socialInvite('ip');await prisma.garage.update({where:{id:otherGarage.id},data:{cv:800}});const refreshed=(await get('/meet/social/2')).data;assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:setup.challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:refreshed.cars[0].quoteKey})).status,400);
+});
+test('meet attempts freeze cars and pilots, complete asynchronously with a ghost and never alter career or personal records',async()=>{
+ await prisma.garage.update({where:{id:garage.id},data:{engineHealth:0,tireGrip:20,currentFuel:0}});const challenge=await socialAccept();const initial={users:await prisma.user.findMany(),garages:await prisma.garage.findMany(),development:await prisma.driverDevelopment.findMany(),progress:await prisma.playerProgress.findMany()};
+ const key=randomUUID();const first=await post('/meet/challenge/start',{challengeId:challenge.id},key);assert.equal(first.status,200,JSON.stringify(first.data));assert.equal(first.data.race.car.engineHealth,100);assert.equal(first.data.race.car.currentFuel,20);assert.equal(first.data.race.meetGhost,null);assert.equal('rng'in first.data.race,false);assert.equal((await post('/meet/challenge/start',{challengeId:challenge.id},key)).data.race.id,first.data.race.id);assert.equal((await post('/meet/challenge/start',{challengeId:challenge.id})).status,409);
+ const done=await finishSocial(1,first.data.race);assert.deepEqual(done.reward,{money:0,xp:0});const second=await post('/meet/challenge/start',{userId:2,challengeId:challenge.id});assert.equal(second.status,200,JSON.stringify(second.data));assert.ok(second.data.race.meetGhost.splits.length);const otherDone=await finishSocial(2,second.data.race);assert.equal(done.playerTime,otherDone.playerTime);
+ const hub=(await get('/meet/social/1')).data;assert.equal(hub.challenges[0].status,'completed');assert.equal(hub.challenges[0].draw,true);assert.equal(hub.record.total,1);assert.equal((await get('/time-trials/1')).data.length,0);assert.deepEqual(await prisma.user.findMany(),initial.users);assert.deepEqual(await prisma.garage.findMany(),initial.garages);assert.deepEqual(await prisma.driverDevelopment.findMany(),initial.development);assert.deepEqual(await prisma.playerProgress.findMany(),initial.progress);
+});
+test('accepted meet preparations remain usable after later tuning or selling and results cannot be forged',async()=>{
+ const challenge=await socialAccept();await prisma.garage.update({where:{id:garage.id},data:{cv:900}});await prisma.user.update({where:{id:1},data:{brave:999}});await post('/market/sell',{garageId:garage.id});
+ const started=await post('/meet/challenge/start',{challengeId:challenge.id});assert.equal(started.status,200);assert.equal(started.data.race.car.cv,100);assert.equal(started.data.race.pilot.brave,30);assert.equal((await post('/meet/challenge/start',{userId:2,challengeId:challenge.id,timeMs:1})).status,400);assert.equal((await finishSocial(1,started.data.race)).meetResult.status,'finished');
+});
+test('meet deadlines and retirements settle once, and expired running attempts can be closed',async()=>{
+ const challenge=await socialAccept();const first=await post('/meet/challenge/start',{challengeId:challenge.id});const key=randomUUID();const abandoned=await post(`/races/${first.data.race.id}/abandon`,{version:0},key);assert.equal(abandoned.data.race.meetResult.status,'retired');await post(`/races/${first.data.race.id}/abandon`,{version:0},key);assert.equal((await get('/meet/social/1')).data.record.total,0);
+ const second=await post('/meet/challenge/start',{userId:2,challengeId:challenge.id});await prisma.meetChallenge.update({where:{id:challenge.id},data:{expiresAt:new Date(Date.now()-1000)}});const raw=await prisma.raceSession.findUnique({where:{id:second.data.race.id}}),state=JSON.parse(raw.state);state.meetChallenge.expiresAt=new Date(Date.now()-1000).toISOString();await prisma.raceSession.update({where:{id:raw.id},data:{state:JSON.stringify(state)}});
+ const closed=await post(`/races/${raw.id}/turns`,{userId:2,version:0,moveId:null});assert.equal(closed.status,200);assert.equal(closed.data.activeRace,null);assert.equal(closed.data.race.failure,'expired');assert.equal((await get('/meet/social/1')).data.challenges[0].status,'completed');
+});
+test('blocking cancels pending and running meet challenges atomically without touching career races',async()=>{
+ const challenge=await socialAccept();const started=await post('/meet/challenge/start',{challengeId:challenge.id});const block=await post('/meet/block',{userId:2,peerId:1,blocked:true});assert.equal(block.status,200);assert.equal((await prisma.raceSession.findUnique({where:{id:started.data.race.id}})).status,'abandoned');assert.equal((await get('/meet/social/1')).data.challenges[0].status,'cancelled');assert.equal((await post('/meet/challenge/start',{userId:2,challengeId:challenge.id})).status,409);
+});
+test('challenge starts are single-use under concurrency and inaccessible to third parties',async()=>{
+ const challenge=await socialAccept();await prisma.user.create({data:{id:3,username:'Third',password:'',mail:'',carDrive:0,...pilot}});assert.equal((await post('/meet/challenge/start',{userId:3,challengeId:challenge.id})).status,404);
+ const started=await Promise.all([post('/meet/challenge/start',{challengeId:challenge.id}),post('/meet/challenge/start',{challengeId:challenge.id})]);assert.deepEqual(started.map(r=>r.status).sort(),[200,409]);assert.equal(await prisma.raceSession.count({where:{userId:1}}),1);
+});
+
+test('meet conversation pagination keeps older messages private and accessible after showcase withdrawal',async()=>{
+ await socialSetup();for(let i=0;i<35;i++)await prisma.meetMessage.create({data:{senderId:1,recipientId:2,text:'Test '+i,createdAt:new Date(1700000000000+i*1000)}});await post('/meet/showcase',{garageId:null});
+ const first=(await get('/meet/conversation/1?userId=2')).data;assert.equal(first.messages.length,30);assert.equal(first.hasMore,true);const second=(await get(`/meet/conversation/1?userId=2&before=${first.nextBefore}`)).data;assert.equal(second.messages.length,5);assert.equal(second.hasMore,false);assert.equal(new Set([...first.messages,...second.messages].map(m=>m.id)).size,35);assert.equal((await get('/meet/social/2')).data.conversations[0].unread,35);
+});
+test('expired meet invitations cannot be accepted and completed deadline results survive a later block',async()=>{
+ const pending=await socialInvite();await prisma.meetChallenge.update({where:{id:pending.challenge.id},data:{expiresAt:new Date(Date.now()-1000)}});assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:pending.challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:pending.other.cars[0].quoteKey})).status,409);
+ const challenge=await socialAccept();const first=await post('/meet/challenge/start',{challengeId:challenge.id});await finishSocial(1,first.data.race);await prisma.meetChallenge.update({where:{id:challenge.id},data:{expiresAt:new Date(Date.now()-1000)}});let result=(await get('/meet/social/1')).data.challenges.find(c=>c.id===challenge.id);assert.equal(result.winnerId,1);assert.equal(result.status,'completed');await post('/meet/block',{peerId:2,blocked:true});result=(await get('/meet/social/1')).data.challenges.find(c=>c.id===challenge.id);assert.equal(result.winnerId,1);assert.equal(result.status,'completed');
 });

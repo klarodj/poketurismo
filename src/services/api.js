@@ -109,3 +109,15 @@ export const fetchAccount = () => request('/account/me');
 export const createPilot = body => request('/account/pilot', 'POST', body);
 
 export const readTechniqueLesson = (userId, techniqueId) => action('/driver/techniques/read', { userId, techniqueId });
+
+export const fetchMeetSocial=userId=>request(`/meet/social/${userId}`);
+export const fetchMeetConversation=(userId,peerId,before)=>request(`/meet/conversation/${peerId}?userId=${userId}${before?`&before=${encodeURIComponent(before)}`:''}`);
+export const sendMeetMessage=(userId,peerId,text)=>action('/meet/message',{userId,peerId,text});
+export const readMeetMessages=(userId,peerId,throughId)=>action('/meet/read',{userId,peerId,throughId});
+export const blockMeetPilot=(userId,peerId,blocked)=>action('/meet/block',{userId,peerId,blocked});
+export const reportMeetPilot=(userId,peerId,reason,messageId)=>action('/meet/report',{userId,peerId,reason,...(messageId?{messageId}:{})});
+export const inviteMeetChallenge=(userId,setup)=>action('/meet/challenge',{userId,...setup});
+export const respondMeetChallenge=(userId,setup)=>action('/meet/challenge/respond',{userId,...setup});
+export const startMeetChallenge=(userId,challengeId)=>action('/meet/challenge/start',{userId,challengeId});
+export const fetchMeetReports=userId=>request(`/meet/reports/${userId}`);
+export const resolveMeetReport=(userId,reportId)=>action('/meet/report/resolve',{userId,reportId});

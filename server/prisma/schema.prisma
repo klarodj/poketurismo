@@ -65,6 +65,15 @@ model Class {
 }
 
 model User {
+  sentMeetMessages       MeetMessage[]   @relation("MeetSender")
+  receivedMeetMessages   MeetMessage[]   @relation("MeetRecipient")
+  meetBlocks             MeetBlock[]     @relation("MeetBlocker")
+  meetBlockedBy          MeetBlock[]     @relation("MeetBlocked")
+  meetReports            MeetReport[]    @relation("MeetReporter")
+  meetReportedBy         MeetReport[]    @relation("MeetReported")
+  sentMeetChallenges     MeetChallenge[] @relation("MeetChallenger")
+  receivedMeetChallenges MeetChallenge[] @relation("MeetChallenged")
+
   id         Int       @id @default(autoincrement())
   username   String
   password   String
@@ -85,6 +94,7 @@ model User {
   shift      Int
   carDrive   Int
   class      String?
+  isAdmin    Boolean   @default(false)
 
   development         DriverDevelopment?
   progress            PlayerProgress?
@@ -401,4 +411,60 @@ model DriverDevelopment {
   lessonPassed      Boolean @default(false)
   routePractice     String  @default("{}")
   trainingCourses   String  @default("{}")
+}
+
+model MeetMessage {
+  id          String    @id @default(cuid())
+  senderId    Int
+  recipientId Int
+  text        String
+  createdAt   DateTime  @default(now())
+  readAt      DateTime?
+  sender      User      @relation("MeetSender", fields: [senderId], references: [id])
+  recipient   User      @relation("MeetRecipient", fields: [recipientId], references: [id])
+
+  @@index([recipientId, createdAt])
+  @@index([senderId, recipientId, createdAt])
+}
+
+model MeetBlock {
+  blockerId Int
+  blockedId Int
+  createdAt DateTime @default(now())
+  blocker   User     @relation("MeetBlocker", fields: [blockerId], references: [id])
+  blocked   User     @relation("MeetBlocked", fields: [blockedId], references: [id])
+
+  @@id([blockerId, blockedId])
+}
+
+model MeetReport {
+  id         String   @id @default(cuid())
+  reporterId Int
+  reportedId Int
+  messageId  String?
+  reason     String
+  status     String   @default("open")
+  createdAt  DateTime @default(now())
+  reporter   User     @relation("MeetReporter", fields: [reporterId], references: [id])
+  reported   User     @relation("MeetReported", fields: [reportedId], references: [id])
+
+  @@index([status, createdAt])
+}
+
+model MeetChallenge {
+  id              String   @id @default(cuid())
+  senderId        Int
+  recipientId     Int
+  status          String   @default("pending")
+  contract        String
+  results         String   @default("{}")
+  senderRaceId    String?  @unique
+  recipientRaceId String?  @unique
+  createdAt       DateTime @default(now())
+  expiresAt       DateTime
+  sender          User     @relation("MeetChallenger", fields: [senderId], references: [id])
+  recipient       User     @relation("MeetChallenged", fields: [recipientId], references: [id])
+
+  @@index([senderId, status])
+  @@index([recipientId, status])
 }
