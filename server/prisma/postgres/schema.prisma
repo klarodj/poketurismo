@@ -393,6 +393,7 @@ model PlayerProgress {
   user          User   @relation(fields: [userId], references: [id])
   learnedMoves  String @default("[]")
   equippedMoves String @default("[]")
+  streetState   String @default("{}")
 
   @@schema("game")
 }

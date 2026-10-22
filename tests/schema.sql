@@ -375,3 +375,4 @@ CREATE TABLE "DriverDevelopment" (
   "trainingCourses" TEXT NOT NULL DEFAULT '{}',
   CONSTRAINT "DriverDevelopment_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
+ALTER TABLE "PlayerProgress" ADD COLUMN "streetState" TEXT NOT NULL DEFAULT '{}';

@@ -11,6 +11,7 @@ const { fundamentals, lessonFeedback } = require('../shared/driverDevelopment.mj
 const { requireTrial } = require('./techniqueSchool');
 const { createTechniqueLesson, techniqueLessonFeedback } = require('../shared/techniqueLessons.mjs');
 const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
+const { acceptEncounter, settleStreet } = require('./streetRacing');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
@@ -50,6 +51,8 @@ async function startRace(tx, userId, body) {
   garage = { ...garage, ...restoredHandlingStats(garage) };
   if (garage.engineHealth <= 0) fail(400, 'Ripara il motore prima di gareggiare');
   if (garage.currentFuel <= 0) fail(400, 'Fai rifornimento prima di gareggiare');
+  const streetMatch = mode === 'street' && body.customTrackId === undefined && body.opponentId === undefined ? await acceptEncounter(tx, userId, body) : null;
+  if (mode === 'street' && !streetMatch && (body.zoneId !== undefined || body.wager !== undefined || body.offerId !== undefined)) fail(400, 'Le prove personalizzate non accettano scommesse o incontri');
   let entry, round, trackId = body.trackId === undefined ? null : positiveId(body.trackId);
   if (mode === 'championship') {
     entry = await tx.championshipEntry.findFirst({ where: { id: positiveId(body.entryId), userId, status: 'active' }, include: includeChampionship });
@@ -63,7 +66,10 @@ async function startRace(tx, userId, body) {
   const rulesVersion = entry && JSON.parse(entry.results).some(result => result.gapMs === undefined) ? 2 : 3;
   const demo = body.demo === true && mode === 'track';
   let track;
-  if (demo) {
+  if (streetMatch) {
+    track = streetMatch.track;
+    trackId = track.id;
+  } else if (demo) {
     track = { name: DEMO_TRACK.name, lenght: DEMO_TRACK.distanceKm * 1000, builds: DEMO_TRACK.sections.map(section => ({ section })) };
     trackId = null;
   } else if (mode === 'street' && body.customTrackId !== undefined) {
@@ -89,7 +95,9 @@ async function startRace(tx, userId, body) {
     if (!carKeys.every(key => CAR_STATS.includes(key)) || ![section.driverStat, section.driverTech].every(key => PILOT_STATS.includes(key))) fail(400, 'Il tracciato contiene statistiche non riconosciute');
   }
   let opponentCar, opponentPilot, opponentName, sandbox = demo;
-  if (mode === 'street' && body.opponentId !== undefined) {
+  if (streetMatch) {
+    ({ opponentCar, opponentPilot, opponentName } = streetMatch);
+  } else if (mode === 'street' && body.opponentId !== undefined) {
     const opponent = await tx.customOpponent.findUnique({ where: { id: positiveId(body.opponentId) }, include: { car: { include: { brand: true } } } });
     if (!opponent) fail(404, 'Avversario personalizzato inesistente');
     opponentCar = opponent.car;
@@ -113,7 +121,7 @@ async function startRace(tx, userId, body) {
     opponentName = demo ? preset.skill === 5 ? 'Principiante · auto più potente' : preset.ratio >= 2 ? 'Pilota preparato · auto superiore' : preset.ratio > 1 ? 'Pilota preparato · auto più potente' : 'Pilota equivalente' : round?.opponentName || 'Pilota rivale';
   }
   if (mode === 'street' && body.customTrackId !== undefined) sandbox = true;
-  if (mode === 'street' && !sandbox) await charge(tx, userId, 500);
+  if (streetMatch && streetMatch.wager > 0) await charge(tx, userId, streetMatch.wager);
   const inv = await inventory(tx, userId);
   const seed = randomInt(1, 2147483647);
   const distanceKm = demo ? DEMO_TRACK.distanceKm : Math.max(1, Number(track.lenght || sections.length) / (Number(track.lenght) >= 100 ? 1000 : 1));
@@ -124,10 +132,11 @@ async function startRace(tx, userId, body) {
     rulesVersion, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
     car: carSnapshot(garage), pilot,
-    opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale' }, pilot: opponentPilot },
+    opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
     moves: inv.moves.filter(move => inv.equippedMoves.includes(move.id)), index: 0, gap: 0, logs: [], rng: seed,
     finished: false, sandbox, entryId: entry?.id || null, round: round?.ord || null,
-    wager: mode === 'street' && !sandbox ? 500 : 0
+    wager: streetMatch?.wager || 0,
+    ...(streetMatch ? { street: streetMatch.street } : {})
   };
   const race = await tx.raceSession.create({ data: { userId, garageId: garage.id, mode, seed, state: JSON.stringify(state) } });
   return snapshot(tx, userId, race);
@@ -169,12 +178,13 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
   }
   if (state.finished) {
     let reward = { money: 0, xp: 0 };
-    if (race.mode === 'championship') reward = await settleChampionship(tx, userId, state);
+    if (state.street) reward = await settleStreet(tx, userId, state);
+    else if (race.mode === 'championship') reward = await settleChampionship(tx, userId, state);
     else if (!state.sandbox && state.outcome === 'win') reward = race.mode === 'street' ? { money: 1500, xp: 150 } : { money: 500, xp: 100 };
     else if (!state.sandbox && race.mode === 'street' && state.outcome === 'draw') reward = { money: 500, xp: 50 };
     const growth = await settleDevelopment(tx, userId, state);
     // Participation XP is smaller than a win and excludes sandboxes, failures and incomplete races.
-    if (state.developmentVersion === 1 && !state.sandbox && !state.failure && state.index === state.sections.length && reward.xp === 0) reward.xp = 20;
+    if (!state.street && state.developmentVersion === 1 && !state.sandbox && !state.failure && state.index === state.sections.length && reward.xp === 0) reward.xp = 20;
     reward.xp += growth.xp;
     const user = await tx.user.findUnique({ where: { id: userId } });
     await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(reward.money) }, exp: { increment: reward.xp }, level: Math.floor((user.exp + reward.xp) / 1000) + 1 } });

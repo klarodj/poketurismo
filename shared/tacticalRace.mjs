@@ -94,8 +94,8 @@ function aiDecision(state) {
   const manoeuvre = context.allowed.manoeuvre.includes('overtake') && context.behind ? 'overtake'
     : context.canDefend ? 'defend' : context.allowed.manoeuvre.includes('prepare') ? 'prepare' : 'hold';
   return contextualDecision(state, { ...DEFAULT_DECISION,
-    pace: state.lesson ? 'balanced' : state.incidentCue || state.opponent.car.tireGrip < 35 ? 'save' : context.behind && Math.abs(state.gapSeconds) < 2 && state.index >= state.sections.length - 3 ? 'attack' : 'balanced',
-    line: defendCorner ? 'defend' : 'exit', manoeuvre }, 'opponent');
+    pace: state.lesson ? 'balanced' : state.incidentCue || state.opponent.car.tireGrip < 35 ? 'save' : state.street?.style === 'prudente' && context.hasCorner ? 'save' : state.street?.style === 'aggressivo' && state.index % 3 === 2 ? 'attack' : context.behind && Math.abs(state.gapSeconds) < 2 && state.index >= state.sections.length - 3 ? 'attack' : 'balanced',
+    line: defendCorner ? 'defend' : state.street?.style === 'tecnico' && context.hasCorner && !context.nextStraight ? 'apex' : 'exit', manoeuvre }, 'opponent');
 }
 function mistakeRisk(skills, decision, section, next, environment, familiarity = 0) {
   const curve = section.segments.some(segment => segment.radiusM > 0) || (next?.segments[0]?.radiusM || 0) > 0;

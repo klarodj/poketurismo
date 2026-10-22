@@ -7,6 +7,7 @@ import { routeProfileFor } from '../../shared/raceContext.mjs';
 import TacticalControls from './TacticalControls';
 import DevelopmentSummary from './DevelopmentSummary';
 import RaceDashboard from './RaceDashboard';
+import StreetMeetups from './StreetMeetups';
 import './race-ui.css';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
@@ -91,7 +92,10 @@ export default function RacePage({ mode }) {
   return <Win98Window title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? '/images/street.png' : '/images/track.png') : undefined}>
     <div className={`${race ? 'p-1 sm:p-3' : 'p-4'} space-y-4 text-black`}>
       {error && <div role="alert" className="bg-red-100 border border-red-500 p-3">{error} <button className="underline" onClick={() => window.location.reload()}>Ricarica salvataggio</button></div>}
-      {!loaded || !userId ? <p>Caricamento gara e salvataggio…</p> : !race ? <>
+      {!loaded || !userId ? <p>Caricamento gara e salvataggio…</p> : !race ? mode === 'street' && !entryId ? <>
+        <StreetMeetups onStarted={data => {setParams({raceId:data.race.id},{replace:true});setError('');}} />
+        {(customTracks.length > 0 || opponents.length > 0) && <details className="border border-gray-500 p-3"><summary className="cursor-pointer font-bold">Prove personalizzate · senza premi e scommesse</summary><div className="space-y-3 mt-3"><label className="block">Percorso<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event=>setTrackChoice(event.target.value)}><option value="">Percorso casuale per allenamento</option>{tracks.map(track=><option key={track.id} value={`db-${track.id}`}>{track.name}</option>)}{customTracks.map(track=><option key={track.id} value={`custom-${track.id}`}>{track.name}</option>)}</select></label><label className="block">Rivale<select className="block w-full p-2 bg-white border" value={opponentChoice} onChange={event=>setOpponentChoice(event.target.value)}><option value="similar">Auto simile per allenamento</option>{opponents.map(opponent=><option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name}</option>)}</select></label><button className={button} disabled={!car||pending>0||(!trackChoice.startsWith('custom-')&&!opponentChoice.startsWith('custom-'))} onClick={begin}>Avvia prova personalizzata</button></div></details>}
+      </> : <>
         <h1 className="font-bold text-2xl">{entryId ? 'Round del campionato' : mode === 'street' ? 'Prepara la sfida' : 'Gara singola'}</h1>
         {car ? <p>Auto: <strong>{car.brand} {car.name}</strong> · {car.currentFuel.toFixed(2)} L · motore {car.engineHealth.toFixed(1)}% · gomme {car.tireGrip.toFixed(1)}%</p> : <button className={button} onClick={() => navigate('/garage/auto')}>Equipaggia un’auto</button>}
         {!entryId && <label className="block font-bold">Tracciato<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event => setTrackChoice(event.target.value)}>
@@ -108,7 +112,7 @@ export default function RacePage({ mode }) {
         {!entryId && trackChoice !== 'demo' && selectedTrack?.catalog && <div className="bg-white border border-gray-500 p-3 space-y-1 text-sm">
           <p className="font-bold">{selectedTrack.catalog.location} · {selectedTrack.catalog.format === 'circuit' ? 'Circuito' : 'Punto a punto'} · difficoltà {selectedTrack.catalog.difficulty}/5</p>
           <p>{previewDistance.toLocaleString('it-IT')} km · dislivello {selectedTrack.elevation} m · meteo: {({sunny:'sereno',rainy:'pioggia',snowy:'neve',night:'notte',foggy:'nebbia'})[selectedTrack.meteo?.name] || selectedTrack.meteo?.name}</p>
-          <p>{selectedTrack.catalog.description}</p><p className="text-xs text-gray-600">Interpretazione di gioco del luogo reale; settori e mappa sono semplificati.</p>
+          <p>{selectedTrack.catalog.description}</p><p className="text-xs text-gray-600">{selectedTrack.catalog.interpretation ? 'Interpretazione di gioco del luogo reale; settori e mappa sono semplificati.' : 'Percorso originale di gioco; mappa schematica.'}</p>
         </div>}
         {!entryId && <TrackPreview sections={previewSections} paths={trackChoice === 'demo' ? DEMO_TRACK.mapPaths : null} profile={previewProfile} />}
         {!entryId && mode === 'street' && !previewSections.length && <p className="text-sm">Scegli un percorso per vedere i settori prima della partenza. Con la scelta casuale li scoprirai all’avvio.</p>}
@@ -135,6 +139,7 @@ export default function RacePage({ mode }) {
           <h2 className="text-2xl font-bold">{race.lesson ? race.developmentSummary?.lesson?.passed ? 'Prova superata!' : 'Prova da ripetere' : race.outcome === 'win' ? 'Vittoria!' : race.outcome === 'draw' ? 'Pareggio' : 'Sconfitta'}</h2>
           {race.failure && <p>{race.failure === 'engine' ? 'Motore fuori uso.' : race.failure === 'fuel' ? 'Carburante insufficiente.' : 'Gara abbandonata.'}</p>}
           <p>Accreditati €{(race.reward?.money || 0).toFixed(2)} · +{race.reward?.xp || 0} XP. Risultato e condizioni della vettura salvati.</p>
+          {race.streetResult && <p className="bg-blue-50 border border-blue-500 p-3">{race.street.zoneName}: +{race.streetResult.reputation} reputazione · totale {race.streetResult.totalReputation}. Bilancio della scommessa: {race.streetResult.netMoney >= 0 ? '+' : '−'}€{Math.abs(race.streetResult.netMoney).toLocaleString('it-IT')}. Precedenti con {race.opponent.name}: {race.streetResult.record.wins} vittorie, {race.streetResult.record.losses} sconfitte, {race.streetResult.record.draws} pareggi.</p>}
           <DevelopmentSummary summary={race.developmentSummary} />
           {race.championship && <p>Campionato: {race.championship.playerPoints}–{race.championship.opponentPoints}. {race.championship.completed ? race.championship.champion ? 'Sei il campione!' : 'Campionato concluso.' : `Prossimo round: ${race.championship.nextRound}.`}</p>}
           <div className="flex flex-wrap gap-2"><button className={button} onClick={() => navigate(race.lesson ? '/garage/scuola-guida' : '/racing')}>{race.lesson ? 'Torna alla scuola guida' : 'Centro Corse'}</button><button className={button} onClick={newRace}>Nuova gara</button><button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>

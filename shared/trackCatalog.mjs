@@ -1,4 +1,5 @@
 // Interpretations for gameplay, not surveyed replicas. Distances are playable metres.
+import { STREET_TRACKS } from './streetCatalog.mjs';
 const rows = [
   ['Mugello · Toscana', 'Scarperia, Italia', 'Track', 5245, 41, 'sunny', 3, 'Rettifilo veloce e cambi di direzione sulle colline.', [2,5,6,3,4,10,5,6,9,11,5,3,2]],
   ['Imola · Emilia-Romagna', 'Imola, Italia', 'Track', 4909, 35, 'sunny', 3, 'Varianti, saliscendi e frenate da preparare.', [2,11,1,11,10,3,1,12,9,5,6,11,2]],
@@ -23,8 +24,8 @@ const rows = [
 ];
 export const TRACK_CATALOG = rows.map(([name, location, type, distanceM, elevation, weather, difficulty, description, sections]) => ({name,location,type,distanceM,elevation,weather,difficulty,description,sections,format:type === 'Track' ? 'circuit' : 'point-to-point'}));
 export function trackCatalogInfo(name) {
-  const entry = TRACK_CATALOG.find(track => track.name === name);
+  const entry = [...TRACK_CATALOG, ...STREET_TRACKS].find(track => track.name === name);
   if (!entry) return null;
   const {location,difficulty,description,format}=entry;
-  return {location,difficulty,description,format,interpretation:true};
+  return {location,difficulty,description,format,interpretation:!STREET_TRACKS.includes(entry)};
 }

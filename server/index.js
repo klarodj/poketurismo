@@ -9,6 +9,7 @@ const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
 const { readTechnique } = require('./techniqueSchool');
 const { newCarPrice, marketAskingPrice, usedRetailPrice, tradeInValue, publicMarketItem } = require('../shared/carEconomy.mjs');
 const { trackCatalogInfo } = require('../shared/trackCatalog.mjs');
+const { streetHub, encounter } = require('./streetRacing');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -203,6 +204,8 @@ app.get('/api/races/:raceId', endpoint(async req => {
   return snapshot(prisma, userId, race);
 }));
 mutate('/api/races', 'start-race', startRace);
+app.get('/api/street/:userId', endpoint(req => transaction(prisma, tx => streetHub(tx, accounts.playerId(req, req.params.userId)))));
+mutate('/api/street/encounter', 'street-encounter', encounter);
 mutate('/api/races/:raceId/turns', 'race-turn', (tx, userId, body, params) => turnRace(tx, userId, body, params.raceId), 'post', false);
 mutate('/api/races/:raceId/abandon', 'abandon-race', (tx, userId, body, params) => turnRace(tx, userId, body, params.raceId, true), 'post', false);
 // Legacy write endpoints must never accept client-computed wear, winners or rewards.

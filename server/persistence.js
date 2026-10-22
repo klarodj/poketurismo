@@ -36,7 +36,7 @@ async function operation(prisma, userId, key, kind, payload, action, idle = true
         entry = await tx.championshipEntry.findUnique({ where: { id: saved.entry.id }, include: { championship: { include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } } } } });
         if (entry) entry = { ...entry, results: JSON.parse(entry.results) };
       }
-      return { ...saved, ...fresh, ...(saved.user ? { user: fresh.player } : {}), ...(entry ? { entry } : {}) };
+      return { ...saved, ...fresh, ...(saved.street ? { street: await require('./streetRacing').streetHub(tx, userId) } : {}), ...(saved.user ? { user: fresh.player } : {}), ...(entry ? { entry } : {}) };
     }
     if (!await tx.user.findUnique({ where: { id: userId } })) fail(404, 'Giocatore inesistente');
     if (idle) await assertIdle(tx, userId);

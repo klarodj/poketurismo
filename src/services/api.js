@@ -65,6 +65,8 @@ export const fetchBrands = () => request('/brands');
 export const fetchMarket = () => request('/market');
 export const fetchParts = () => request('/parts');
 export const fetchTracks = () => request('/tracks');
+export const fetchStreetHub = userId => request(`/street/${userId}`);
+export const findStreetOpponent = (userId, setup) => action('/street/encounter', { userId, ...setup });
 export const fetchChampionships = () => request('/championships');
 export const fetchTrainingSessions = () => request('/training-sessions');
 export const fetchActiveChampionshipEntry = id => request(`/championship-entries/active/${id}`);

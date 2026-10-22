@@ -53,8 +53,20 @@ beforeEach(async () => {
   championship = await prisma.championship.create({ data: { name: 'Test cup', description: '', category: 'Open', entryFee: 100, rewardMoney: 1000, rewardXp: 500, rounds: { create: { trackId: track.id, ord: 1, opponentName: 'Test', opponentCarName: 'Test car' } } } });
 });
 after(async () => { await prisma.$disconnect(); rmSync(directory, { recursive: true, force: true }); });
+async function streetSetup(wager = 100) {
+  const { STREET_ZONES } = await import('../shared/streetCatalog.mjs');
+  for (const name of new Set(STREET_ZONES[0].rivals.map(r=>r.carName))) {
+    if (!await prisma.car.findFirst({where:{name}})) { const {id: _id,...data}=car; await prisma.car.create({data:{...data,name}}); }
+  }
+  await prisma.track.update({where:{id:track.id},data:{name:'Parcheggio · anello dei magazzini'}});
+  const found=await post('/street/encounter',{zoneId:'parking'});
+  assert.equal(found.status,200,JSON.stringify(found.data));
+  const offer=found.data.street.zones[0].offer;
+  return {mode:'street',zoneId:'parking',offerId:offer.id,wager};
+}
 async function begin(mode = 'track', extra = {}) {
-  const response = await post('/races', { mode, trackId: track.id, ...extra });
+  const setup = mode === 'street' && extra.opponentId === undefined && extra.customTrackId === undefined ? {...await streetSetup(), ...extra} : { mode, trackId: track.id, ...extra };
+  const response = await post('/races', setup);
   assert.equal(response.status, 200, JSON.stringify(response.data));
   const race = response.data.race;
   const row = await prisma.raceSession.findUnique({ where: { id: race.id } });
@@ -161,14 +173,14 @@ test('active races block edits, refuels, training, loadout changes and a second 
   assert.equal((await request('/player/1/moves', { userId: 1, moveIds: [] }, 'PUT')).status, 409);
 });
 test('street wager is charged once at start and settled once at completion', async () => {
-  const race = await begin('street'); assert.equal(await wallet(), 9950000);
+  const race = await begin('street'); assert.equal(await wallet(), 9990000);
   const response = await post(`/races/${race.id}/turns`, { version: 0, moveId: null });
-  assert.equal(response.data.race.outcome, 'win'); assert.equal(await wallet(), 10100000);
+  assert.equal(response.data.race.outcome, 'win'); assert.equal(await wallet(), 10010000);
 });
 test('abandoning is a saved loss and cannot refund a street wager', async () => {
   const race = await begin('street'); const key = randomUUID();
-  const result = await post(`/races/${race.id}/abandon`, { version: 0 }, key); assert.equal(result.data.race.status, 'abandoned'); assert.equal(await wallet(), 9950000);
-  await post(`/races/${race.id}/abandon`, { version: 0 }, key); assert.equal(await wallet(), 9950000); assert.equal((await get('/races/active/1')).data, null);
+  const result = await post(`/races/${race.id}/abandon`, { version: 0 }, key); assert.equal(result.data.race.status, 'abandoned'); assert.equal(await wallet(), 9990000);
+  await post(`/races/${race.id}/abandon`, { version: 0 }, key); assert.equal(await wallet(), 9990000); assert.equal((await get('/races/active/1')).data, null);
 });
 test('insufficient fuel causes a persisted loss without negative fuel or a prize', async () => {
   await prisma.garage.update({ where: { id: garage.id }, data: { currentFuel: 0.01 } });
@@ -233,9 +245,10 @@ test('retired instant training cannot grant a technique or XP even with no money
   assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).exp, 0);
 });
 test('concurrent starts with distinct request IDs create one active race and debit one wager', async () => {
-  const responses = await Promise.all([post('/races', { mode: 'street', trackId: track.id }), post('/races', { mode: 'street', trackId: track.id })]);
+  const setup=await streetSetup();
+  const responses = await Promise.all([post('/races', setup), post('/races', setup)]);
   assert.deepEqual(responses.map(response => response.status).sort(), [200, 409]);
-  assert.equal(await prisma.raceSession.count({ where: { userId: 1, status: 'active' } }), 1); assert.equal(await wallet(), 9950000);
+  assert.equal(await prisma.raceSession.count({ where: { userId: 1, status: 'active' } }), 1); assert.equal(await wallet(), 9990000);
 });
 test('engine exhaustion is saved as a loss with zero health and no reward', async () => {
   await prisma.garage.update({ where: { id: garage.id }, data: { engineHealth: 0.01 } });
@@ -594,4 +607,73 @@ test('trade-in quote matches the UI and buying back an unchanged car cannot gene
   const listing=(await get('/market')).data.find(item=>item.id===garage.id);assert.ok(listing.sellPrice>quote);
   const key=randomUUID();await post('/purchase',{marketGarageId:garage.id},key);await post('/purchase',{marketGarageId:garage.id},key);
   assert.equal(await wallet(),before+(quote-listing.sellPrice)*100);assert.ok(await wallet()<before);
+});
+
+test('street encounters persist and cycle all eight rivals before repeating for free',async()=>{
+  await streetSetup(0);
+  let hub=(await get('/street/1')).data;let offer=hub.zones[0].offer;
+  const first=offer.id;const ids=[offer.rival.id];
+  assert.equal((await post('/street/encounter',{zoneId:'parking'})).data.street.zones[0].offer.id,first);
+  for(let i=1;i<8;i++){const result=await post('/street/encounter',{zoneId:'parking',replace:true,offerId:offer.id});assert.equal(result.status,200);offer=result.data.street.zones[0].offer;ids.push(offer.rival.id);}
+  assert.equal(new Set(ids).size,8);assert.equal(await wallet(),10000000);
+  assert.equal((await get('/street/1')).data.zones[0].offer.id,offer.id);
+});
+test('normal street starts require a valid server encounter and reject forged setup and stakes',async()=>{
+  assert.equal((await post('/races',{mode:'street',trackId:track.id})).status,400);
+  const setup=await streetSetup(0);
+  for(const forged of [{...setup,wager:-1},{...setup,wager:99999},{...setup,trackId:track.id},{...setup,offerId:'inventato'}])assert.ok((await post('/races',forged)).status>=400);
+  assert.equal(await wallet(),10000000);assert.equal(await prisma.raceSession.count(),0);
+  assert.equal((await post('/races',setup)).status,200);
+});
+test('changing rival invalidates the old offer and requires the current token to skip again',async()=>{
+  const setup=await streetSetup(0);
+  const next=await post('/street/encounter',{zoneId:'parking',replace:true,offerId:setup.offerId});assert.equal(next.status,200);
+  assert.equal((await post('/races',setup)).status,409);
+  assert.equal((await post('/street/encounter',{zoneId:'parking',replace:true,offerId:setup.offerId})).status,409);
+});
+test('changing the equipped car condition invalidates an encounter instead of changing the accepted challenge',async()=>{
+  const setup=await streetSetup(0);await prisma.garage.update({where:{id:garage.id},data:{cv:500}});
+  assert.equal((await post('/races',setup)).status,409);
+  assert.equal((await get('/street/1')).data.zones[0].offer,null);
+  assert.equal((await post('/street/encounter',{zoneId:'parking'})).status,200);
+});
+test('street access enforces level, performance, reputation and school on the server',async()=>{
+  await streetSetup(0);
+  assert.equal((await post('/street/encounter',{zoneId:'industrial'})).status,403);
+  await prisma.user.update({where:{id:1},data:{level:6,exp:5000}});
+  const row=await prisma.playerProgress.findUnique({where:{userId:1}});const saved=JSON.parse(row.streetState);
+  for(const id of ['parking','industrial','coast','mountain'])saved[id]={...saved[id],reputation:100};
+  await prisma.playerProgress.update({where:{userId:1},data:{streetState:JSON.stringify(saved)}});
+  assert.equal((await get('/street/1')).data.zones.find(z=>z.id==='mountain').unlocked,false);
+  await prisma.driverDevelopment.create({data:{userId:1,lessonPassed:true}});
+  assert.ok((await get('/street/1')).data.zones.every(z=>z.unlocked));
+  await prisma.garage.update({where:{id:garage.id},data:{speed:0,acceleration:0,turnSlow:0,turnFast:0,brake:0,traction:0}});
+  assert.equal((await post('/street/encounter',{zoneId:'highway'})).status,403);
+  assert.equal((await post('/street/encounter',{zoneId:'parking',reputation:99999})).status,400);
+});
+test('street stakes preserve cash reserve and cannot be charged after the wallet changed',async()=>{
+  const setup=await streetSetup(100);
+  await prisma.user.update({where:{id:1},data:{moneyCents:105000}});
+  const result=await post('/races',setup);assert.equal(result.status,400);assert.equal(await wallet(),105000);
+  assert.ok((await get('/street/1')).data.zones[0].offer.wagers.every(value=>value<=50));
+  assert.equal(await prisma.raceSession.count(),0);
+});
+test('unstaked street wins award no money and reputation settles once across final-turn retries',async()=>{
+  const race=await begin('street',{wager:0});const key=randomUUID();
+  const result=await post(`/races/${race.id}/turns`,{version:0,moveId:null},key);
+  assert.equal(result.status,200);assert.equal(result.data.race.reward.money,0);assert.equal(await wallet(),10000000);
+  const reputation=result.data.race.streetResult.totalReputation;assert.ok(reputation>0);
+  const xp=result.data.player.exp;
+  const retry=await post(`/races/${race.id}/turns`,{version:0,moveId:null},key);assert.equal(retry.status,200);assert.equal(retry.data.player.exp,xp);
+  assert.equal((await post(`/races/${race.id}/turns`,{version:0,moveId:null})).status,409);
+  assert.equal((await get('/street/1')).data.zones[0].reputation,reputation);
+});
+test('a familiar street rival has no remaining rewards or stakes and does not regain participation XP',async()=>{
+  const setup=await streetSetup(0);const hub=(await get('/street/1')).data;const rivalId=hub.zones[0].offer.rival.id;
+  const row=await prisma.playerProgress.findUnique({where:{userId:1}});const saved=JSON.parse(row.streetState);saved.parking.rivals={[rivalId]:{races:4,wins:4,losses:0,draws:0}};
+  await prisma.playerProgress.update({where:{userId:1},data:{streetState:JSON.stringify(saved)}});
+  assert.deepEqual((await get('/street/1')).data.zones[0].offer.wagers,[0]);
+  const race=(await post('/races',setup)).data.race;
+  const result=await post(`/races/${race.id}/turns`,{version:0,moveId:null});assert.equal(result.status,200);
+  assert.equal(result.data.race.reward.xp,0);assert.equal(result.data.race.streetResult.reputation,0);
 });
