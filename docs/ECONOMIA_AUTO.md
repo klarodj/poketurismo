@@ -2,6 +2,8 @@
 
 Budget iniziale confermato: **€10.000**, senza modificare i saldi dei giocatori esistenti. Prima fornitura: **32 auto**, di cui **8 da ingresso**. Prezzi virtuali progettati per la progressione del gioco.
 
+Attivo nell'istanza condivisa dal 22 ottobre 2026. Verificati dopo la pubblicazione: 32 annunci, 8 acquistabili col budget iniziale, prezzi dei 200 modelli coerenti con le fasce, saldi e garage personali invariati, specifiche delle auto invariate. Backup completo prima e dopo l'applicazione; gateway pubblico e API disponibili.
+
 ## Fasce e protezione del budget
 
 La classe dipende congiuntamente da CV, CV/tonnellata, accelerazione 0–100 e velocità massima; si considera anche la potenza/peso modificata. Una vettura usurata mantiene la propria fascia.
