@@ -2,6 +2,8 @@
 
 Cinque ritrovi con otto piloti ricorrenti ciascuno. Auto, abilità, stile e stato delle vetture sono fissi: nessun adeguamento alle modifiche del giocatore. Catalogo in `shared/streetCatalog.mjs`, regole e persistenza in `server/streetRacing.js`, schermata in `StreetMeetups.jsx`.
 
+Pubblicato nell'istanza condivisa il 22 ottobre 2026. Verifica successiva: cinque ritrovi con quaranta rivali risolti, tre percorsi aggiunti e dati precedenti di utenti, garage, progressi, gare e tracciati invariati. Backup completo prima e dopo la pubblicazione; API pubblica disponibile e ritrovi protetti dall'accesso personale.
+
 | Ritrovo | Livello | IP attuale minimo | Reputazione richiesta | Puntata massima di zona |
 |---|---:|---:|---|---:|
 | Parcheggio del centro commerciale | 1 | 0 | Nessuna | €100 |
