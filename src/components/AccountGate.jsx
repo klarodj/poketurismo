@@ -27,6 +27,14 @@ export default function AccountGate({ children }) {
     let subscription;
     fetchAuthConfig().then(async data => {
       if (stopped) return;
+      if (data.enabled && data.publicUrl) {
+        const canonical = new URL(data.publicUrl);
+        const alternate = new URL(data.publicUrl); alternate.port = '8443';
+        if (![canonical.origin, alternate.origin].includes(window.location.origin)) {
+          window.location.replace(canonical.origin + window.location.pathname + window.location.search);
+          return;
+        }
+      }
       setConfig(data);
       setStats(data.profiles.balanced);
       if (!data.enabled) {

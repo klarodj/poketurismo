@@ -3,6 +3,9 @@ const { transaction } = require('./persistence');
 const enabled = process.env.POKETURISMO_AUTH_ENABLED === '1';
 const initialMoneyCents = 1_000_000;
 const avatars = ['blue', 'red', 'green', 'yellow'];
+function configuredAdmin(user) {
+  return (process.env.ADMIN_EMAILS || '').split(',').map(email => email.trim().toLowerCase()).filter(Boolean).includes(user.email?.toLowerCase());
+}
 const profiles = {
   balanced: Object.fromEntries(PILOT_STATS.map(key => [key, 11])),
   methodical: { ...Object.fromEntries(PILOT_STATS.map(key => [key, 10])), clean: 14, brake: 14 },
@@ -11,7 +14,7 @@ const profiles = {
 };
 function config() {
   return { enabled, google: process.env.AUTH_GOOGLE_ENABLED === 'true', email: process.env.AUTH_EMAIL_ENABLED === 'true',
-    publicKey: enabled ? process.env.SUPABASE_ANON_KEY || '' : '', initialMoney: initialMoneyCents / 100,
+    publicKey: enabled ? process.env.SUPABASE_ANON_KEY || '' : '', publicUrl: process.env.PUBLIC_URL || '', initialMoney: initialMoneyCents / 100,
     baseStat: 10, extraPoints: 8, maxStat: 14, stats: PILOT_STATS, profiles, avatars };
 }
 async function identity(req) {
@@ -70,7 +73,7 @@ function install(app, prisma, endpoint) {
         const existing = await tx.user.findUnique({ where: { authUserId: req.identity.id } });
         if (existing) return { player: publicPlayer(existing), created: false };
         const player = await tx.user.create({ data: { username: name, usernameKey: name.toLowerCase(), authUserId: req.identity.id,
-          avatar, password: '', mail: '', carDrive: 0, moneyCents: initialMoneyCents, ...stats,
+          avatar, password: '', mail: '', carDrive: 0, isAdmin: configuredAdmin(req.identity), moneyCents: initialMoneyCents, ...stats,
           progress: { create: {} }, development: { create: {} } } });
         return { player: publicPlayer(player), created: true };
       });

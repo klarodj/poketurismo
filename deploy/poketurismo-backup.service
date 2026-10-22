@@ -1,0 +1,9 @@
+[Unit]
+Description=Back up Poketurismo authentication and game database
+Requires=postgresql@18-poketurismo.service
+After=postgresql@18-poketurismo.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /home/klaro/poketurismo-work/scripts/backup-postgres.sh
+UMask=0077

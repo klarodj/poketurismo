@@ -9,6 +9,8 @@ const { Client, types } = requireServer('pg');
 types.setTypeParser(1114, value => new Date(value.replace(' ', 'T') + 'Z'));
 const { Prisma } = require('../server/generated/postgres');
 const source = process.argv[2];
+const freshStart = process.argv.includes('--fresh-start');
+const playerTables = new Set(['User','Garage','Mod','ChampionshipEntry','PlayerProgress','InventoryPart','GameOperation','RaceSession','DriverDevelopment']);
 if (!source || !/^postgres(?:ql)?:/.test(process.env.DATABASE_URL || '')) throw new Error('Specificare il database SQLite sorgente e configurare DATABASE_URL PostgreSQL');
 const tables = ['Brand','Car','Class','User','Garage','Level','Part','Mod','TrackType','TrackSurface','TrackMeteo','Track','TrackSection','TrackBuild','Championship','ChampionshipRace','ChampionshipEntry','TrainingSession','CustomOpponent','CustomTrack','CustomTrackSection','PlayerProgress','InventoryPart','GameOperation','RaceSession','DriverDevelopment'];
 const quote = value => '"' + value.replaceAll('"','""') + '"';
@@ -33,7 +35,7 @@ async function main() {
       const model = Prisma.dmmf.datamodel.models.find(model => model.name === table);
       const target = `game.${quote(table)}`;
       if (Number((await connection.query(`SELECT count(*) FROM ${target}`)).rows[0].count)) throw new Error('Destinazione non vuota: ' + table);
-      const originals = data[table] || [];
+      const originals = freshStart && playerTables.has(table) ? [] : data[table] || [];
       const fields = model.fields.filter(field => field.kind === 'scalar' && field.name in (originals[0] || {}));
       const rows = originals.map(original => {
         const row = Object.fromEntries(fields.map(field => [field.name, field.type === 'DateTime' ? normalizeDate(original[field.name]) : field.type === 'Boolean' ? Boolean(original[field.name]) : original[field.name]]));
@@ -58,7 +60,7 @@ async function main() {
       report[table] = { count: rows.length, verified: true };
     }
     await connection.query('COMMIT');
-    console.log(JSON.stringify({ imported: true, source: path.resolve(source), schema: 'game', tables: report }, null, 2));
+    console.log(JSON.stringify({ imported: true, freshStart, source: path.resolve(source), schema: 'game', tables: report }, null, 2));
   } catch (error) {
     await connection.query('ROLLBACK');
     throw error;

@@ -7,6 +7,7 @@ process.env.POKETURISMO_AUTH_ENABLED = '1';
 process.env.DATABASE_URL = 'postgresql://contract-test@127.0.0.1/unused';
 process.env.SUPABASE_ANON_KEY = 'public-test-key';
 process.env.LEGACY_OWNER_EMAIL = '';
+process.env.ADMIN_EMAILS = 'two@example.invalid';
 const { install, playerId } = require('../server/accounts');
 const identities = {
   'valid-token-one': { id: '11111111-1111-4111-8111-111111111111', email: 'one@example.invalid', email_confirmed_at: '2026-01-01' },
@@ -85,4 +86,12 @@ test('URL and body user IDs cannot select another pilot; tools remain administra
   assert.equal((await request('/state/2', 'valid-token-two')).status, 403);
   assert.equal((await request('/purchase', 'valid-token-two', { userId: 2 })).status, 403);
   assert.equal((await request('/dev/opponents', 'valid-token-one')).status, 403);
+});
+test('only the configured verified email receives admin privileges on a fresh pilot', async () => {
+  const me = await request('/account/me', 'valid-token-two');
+  assert.equal(me.data.player.isAdmin, true);
+  assert.equal(me.data.player.money, 10000);
+  assert.equal(me.data.player.carDrive, 0);
+  assert.equal((await request('/dev/opponents', 'valid-token-two')).status, 200);
+  assert.equal(rows[0].authUserId, null);
 });

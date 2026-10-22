@@ -1,6 +1,7 @@
 [Unit]
 Description=Poketurismo development preview on port 5174
-After=network.target
+After=network.target postgresql@18-poketurismo.service poketurismo-auth.service
+Wants=poketurismo-auth.service
 
 [Service]
 Type=simple

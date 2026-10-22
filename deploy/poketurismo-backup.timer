@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Poketurismo PostgreSQL backup
+
+[Timer]
+OnCalendar=*-*-* 04:15:00
+RandomizedDelaySec=5m
+Persistent=true
+Unit=poketurismo-backup.service
+
+[Install]
+WantedBy=timers.target

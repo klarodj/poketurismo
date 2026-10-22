@@ -40,8 +40,8 @@ app.use((req, res, next) => {
   const authRequest = accountMode && /^\/auth\/v1(?:\/|$)/.test(path);
   if (!/^\/api(?:\/|$)/.test(path) && !authRequest) return next();
   if (authRequest && /^\/auth\/v1\/admin(?:\/|$)/.test(path)) return res.sendStatus(404);
-  // Development editors remain read-only from the public endpoint.
-  if (/^\/api\/dev(?:\/|$)/.test(path) && !['GET', 'HEAD'].includes(req.method)) {
+  // Legacy shared access stays read-only; personal accounts use the backend admin check.
+  if (!accountMode && /^\/api\/dev(?:\/|$)/.test(path) && !['GET', 'HEAD'].includes(req.method)) {
     return res.status(403).json({ error: 'Editor disabilitato nel playtest pubblico' });
   }
   const headers = { ...req.headers, host: '127.0.0.1:5174' };

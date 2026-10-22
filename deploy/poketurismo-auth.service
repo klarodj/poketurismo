@@ -1,0 +1,15 @@
+[Unit]
+Description=Poketurismo Supabase Auth
+Requires=docker.service postgresql@18-poketurismo.service
+After=docker.service postgresql@18-poketurismo.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/home/klaro/poketurismo-work
+ExecStart=/usr/bin/docker compose --env-file /home/klaro/poketurismo-data/accounts/accounts.env -f compose.auth.yml up -d
+ExecStop=/usr/bin/docker compose --env-file /home/klaro/poketurismo-data/accounts/accounts.env -f compose.auth.yml stop
+TimeoutStartSec=90
+
+[Install]
+WantedBy=multi-user.target

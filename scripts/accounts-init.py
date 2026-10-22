@@ -40,7 +40,7 @@ def main():
         'SUPABASE_ANON_KEY': jwt(secret, 'anon'), 'SUPABASE_SERVICE_KEY': jwt(secret, 'service_role'),
         'AUTH_INTERNAL_URL': 'http://127.0.0.1:9999', 'AUTH_EMAIL_ENABLED': 'false', 'AUTH_GOOGLE_ENABLED': 'false',
         'GOOGLE_CLIENT_ID': '', 'GOOGLE_CLIENT_SECRET': '', 'SMTP_HOST': '', 'SMTP_PORT': '587',
-        'SMTP_USER': '', 'SMTP_PASS': '', 'SMTP_FROM': '', 'LEGACY_OWNER_EMAIL': '',
+        'SMTP_USER': '', 'SMTP_PASS': '', 'SMTP_FROM': '', 'LEGACY_OWNER_EMAIL': '', 'ADMIN_EMAILS': '',
     }
     descriptor = os.open(config, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     with os.fdopen(descriptor, 'w') as target:
