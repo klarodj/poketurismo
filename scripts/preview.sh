@@ -5,6 +5,12 @@ cd "$PROJECT_DIR"
 PREVIEW_DIR="$PROJECT_DIR/.preview"
 FRONTEND_PORT="${POKETURISMO_PREVIEW_PORT:-5174}"
 mkdir -p "$PREVIEW_DIR"
+# Reuse installed Prisma engines; startup must not depend on an external download.
+ENGINE_DIR="$PROJECT_DIR/server/node_modules/@prisma/engines"
+if [[ -f "$ENGINE_DIR/schema-engine-debian-openssl-3.0.x" && -f "$ENGINE_DIR/libquery_engine-debian-openssl-3.0.x.so.node" ]]; then
+  export PRISMA_SCHEMA_ENGINE_BINARY="$ENGINE_DIR/schema-engine-debian-openssl-3.0.x"
+  export PRISMA_QUERY_ENGINE_LIBRARY="$ENGINE_DIR/libquery_engine-debian-openssl-3.0.x.so.node"
+fi
 if [[ "${DATABASE_URL:-}" == postgres://* || "${DATABASE_URL:-}" == postgresql://* ]]; then
   if ! cmp -s server/prisma/postgres/schema.prisma server/generated/postgres/schema.prisma; then
     npm --prefix server run generate:postgres

@@ -33,6 +33,9 @@ class SupervisorTest(unittest.TestCase):
             initial = supervisor.fingerprint(root)
             (root / 'server/node_modules/library/index.js').write_text('dependency')
             self.assertEqual(supervisor.fingerprint(root), initial)
+            (root / 'server/generated/postgres').mkdir(parents=True)
+            (root / 'server/generated/postgres/index.js').write_text('generated client')
+            self.assertEqual(supervisor.fingerprint(root), initial)
 
 if __name__ == '__main__':
     unittest.main()

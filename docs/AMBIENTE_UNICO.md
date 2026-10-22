@@ -119,7 +119,7 @@ Per ripristinare soltanto la disponibilità legacy, riattivare i due container c
 
 ## Passaggio successivo a PostgreSQL e utenti
 
-La preparazione implementata e le verifiche isolate sono descritte in [ACCOUNT_E_POSTGRES.md](ACCOUNT_E_POSTGRES.md). Il servizio pubblico non è ancora migrato: Google OAuth e SMTP risultano entrambi da configurare.
+Passaggio completato il 22 ottobre 2026: PostgreSQL 18.6 e Google Auth attivi sull’istanza unica; il salvataggio storico non è stato importato su richiesta dell’utente. La procedura, il collaudo e il limite della prima prova interattiva sono in [ACCOUNT_E_POSTGRES.md](ACCOUNT_E_POSTGRES.md). SMTP resta disabilitato. La sequenza seguente documenta il piano eseguito; per l’installazione effettiva usare compose.auth.yml con il cluster nativo, non il Compose PostgreSQL alternativo.
 
 1. Preparare una copia di migrazione temporanea, schema `game`, ruoli e vincoli; importare il salvataggio di sviluppo verificando conteggi, centesimi, inventario, gare e progressi. Adeguare SQL specifico SQLite e test di concorrenza a PostgreSQL.
 2. Implementare Google e codice email, identità verificata, proprietà di tutte le risorse e protezione degli strumenti amministrativi.

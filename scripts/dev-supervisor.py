@@ -9,7 +9,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 FOLDERS = ('src', 'shared', 'server', 'scripts', 'public', 'dist')
 ROOT_FILES = ('package.json', 'package-lock.json', 'vite.config.js', 'tailwind.config.js', 'postcss.config.js', '.env')
-EXCLUDED = {'node_modules', '.git', '__pycache__', 'backups', '.preview', '.vite-cache'}
+EXCLUDED = {'node_modules', 'generated', '.git', '__pycache__', 'backups', '.preview', '.vite-cache'}
 
 def fingerprint(root=ROOT):
     files = [root / name for name in ROOT_FILES]
