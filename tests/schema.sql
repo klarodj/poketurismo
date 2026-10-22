@@ -363,7 +363,8 @@ CREATE INDEX "RaceSession_userId_status_idx" ON "RaceSession"("userId", "status"
 CREATE UNIQUE INDEX "RaceSession_one_active_per_user" ON "RaceSession"("userId") WHERE "status" = 'active';
 
 CREATE TABLE "DriverDevelopment" (
-  "userId" INTEGER NOT NULL PRIMARY KEY,
+  "techniqueProgress" TEXT NOT NULL DEFAULT '{}',
+    "userId" INTEGER NOT NULL PRIMARY KEY,
   "earlyPractice" INTEGER NOT NULL DEFAULT 0 CHECK ("earlyPractice" BETWEEN 0 AND 120),
   "referencePractice" INTEGER NOT NULL DEFAULT 0 CHECK ("referencePractice" BETWEEN 0 AND 120),
   "latePractice" INTEGER NOT NULL DEFAULT 0 CHECK ("latePractice" BETWEEN 0 AND 120),

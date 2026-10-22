@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
 import useInventoryStore from '../store/inventoryStore';
 import Win98Window from '../components/Win98Window';
@@ -92,6 +93,7 @@ export default function GaragePilota() {
                       <span className="text-xs bg-red-800 text-white px-1 leading-tight">{move.mastery || (move.trigger === 'always' ? 'Sempre utilizzabile' : move.trigger === 'Braking-Zone' ? 'Zona di frenata' : move.trigger === 'Gap-Negative' ? 'In recupero' : move.trigger)}</span>
                     </div>
                     <p className="text-sm mb-1 italic text-gray-800">{move.description}</p>
+                    {move.contextDescription && <p className="text-xs mb-2 text-blue-900">Uso: {move.contextDescription}</p>}
                     
                     <div className="flex gap-2 text-xs flex-wrap">
                       {move.bonus && Object.entries(move.bonus).map(([stat, val]) => (
@@ -102,7 +104,7 @@ export default function GaragePilota() {
                     </div>
                   </div>
                 ))}
-                {playerMoves.length === 0 && <p className="p-4 italic text-gray-500">Nessuna mossa padroneggiata.</p>}
+                {playerMoves.length === 0 && <div className="p-4 space-y-3"><p>Nessuna tecnica appresa. Le azioni base di guida sono sempre disponibili.</p><Link className="win98-btn" to="/garage/scuola-guida">Vai alla scuola guida</Link></div>}
               </div>
             </div>
           </div>

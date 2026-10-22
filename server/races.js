@@ -6,7 +6,9 @@ const { DEMO_TRACK, buildTacticalTrack } = require('../shared/trackGeometry.mjs'
 const { DECISION_OPTIONS, decisionPreview } = require('../shared/tacticalRace.mjs');
 const { routeProfileFor, incidentPlan, incidentCue } = require('../shared/raceContext.mjs');
 const { development, settleDevelopment } = require('./driverDevelopment');
-const { fundamentals, createLessonState, LESSON_ID, lessonFeedback } = require('../shared/driverDevelopment.mjs');
+const { fundamentals, lessonFeedback } = require('../shared/driverDevelopment.mjs');
+const { requireTrial } = require('./techniqueSchool');
+const { createTechniqueLesson, techniqueLessonFeedback } = require('../shared/techniqueLessons.mjs');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
@@ -34,10 +36,10 @@ async function startRace(tx, userId, body) {
   const growth = await tx.driverDevelopment.findUnique({ where: { userId } });
   const pilot = { ...Object.fromEntries(PILOT_STATS.map(key => [key, user[key]])), fundamentals: fundamentals(growth) };
   if (body.lesson !== undefined) {
-    if (mode !== 'track' || body.lesson !== LESSON_ID || Object.keys(body).some(key => !['mode', 'lesson'].includes(key))) fail(400, 'Prova didattica non valida');
-    if (!growth?.lessonRead) fail(409, 'Leggi prima la lezione dal profilo pilota');
+    if (mode !== 'track' || typeof body.lesson !== 'string' || Object.keys(body).some(key => !['mode', 'lesson'].includes(key))) fail(400, 'Prova didattica non valida');
+    const technique = requireTrial(growth, user.level, body.lesson);
     const seed = randomInt(1, 2147483647);
-    const state = createLessonState(pilot, seed);
+    const state = createTechniqueLesson(technique, pilot, seed);
     const race = await tx.raceSession.create({ data: { userId, garageId: 0, mode: 'track', seed, state: JSON.stringify(state) } });
     return snapshot(tx, userId, race);
   }
@@ -153,7 +155,8 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     try { state = advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
   }
   if (state.lesson) {
-    if (!abandon) state.logs.at(-1).instructor = lessonFeedback(state);
+    if (!abandon) state.logs.at(-1).instructor = state.courseTechniqueId ? techniqueLessonFeedback(state) : lessonFeedback(state);
+    if (state.courseTechniqueId && !state.finished) state.gapSeconds = state.sections[state.index].scenarioGap;
   } else {
     const garage = await tx.garage.findFirst({ where: { id: race.garageId, userId } });
     if (!garage) fail(409, 'La vettura della gara non è più disponibile');

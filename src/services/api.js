@@ -96,3 +96,5 @@ export const readDrivingLesson = userId => action('/driver/lesson', { userId });
 export const fetchAuthConfig = () => request('/auth/config');
 export const fetchAccount = () => request('/account/me');
 export const createPilot = body => request('/account/pilot', 'POST', body);
+
+export const readTechniqueLesson = (userId, techniqueId) => action('/driver/techniques/read', { userId, techniqueId });

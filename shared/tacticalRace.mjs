@@ -135,7 +135,8 @@ function decisionPreview(state, decision = DEFAULT_DECISION, moveId = null) {
   const section = state.sections[state.index];
   if (!section) return null;
   const selected = contextualDecision(state, validateDecision(decision)), next = state.sections[state.index + 1];
-  const move = moveId === null ? null : state.moves.find(move => move.id === moveId);
+  const candidate = moveId === null ? null : state.moves.find(move => move.id === moveId);
+  const move = candidate && tacticalMovePlayable(candidate, section, next, state.gapSeconds, state, selected) ? candidate : null;
   const expected = simulateBlock(state.car, state.pilot, move, selected, section, next, state.playerSpeed || 0, { ...state.environment, routeKind: state.routeProfile?.kind }, false, state.prepared);
   const km = section.segments.reduce((sum, segment) => sum + segment.lengthM, 0) / 1000;
   const aggression = selected.pace === 'save' ? 0.78 : selected.pace === 'attack' ? 1.3 : 1;
@@ -156,10 +157,10 @@ function advanceTacticalRace(input, moveId, rawDecision) {
   if (requested.manoeuvre === 'overtake' && !tacticalContext(state).allowed.manoeuvre.includes('overtake')) throw new Error('Non c’è spazio o visibilità per sorpassare in questo settore');
   const move = moveId === null ? null : state.moves.find(move => move.id === moveId);
   if (moveId !== null && !move) throw new Error('Mossa non disponibile');
-  if (move && !tacticalMovePlayable(move, section, state.sections[state.index + 1], state.gapSeconds)) throw new Error('Mossa non disponibile in questo settore');
+  if (move && !tacticalMovePlayable(move, section, state.sections[state.index + 1], state.gapSeconds, state, decision)) throw new Error('Tecnica non disponibile con queste condizioni e scelte');
   const next = state.sections[state.index + 1], opponentDecision = aiDecision(state, section);
   const player = drive(state, 'player', move, decision, section, next), opponent = drive(state, 'opponent', null, opponentDecision, section, next);
-  const log = { section: section.name, move: move?.name || 'Guida normale', moveId, decision, opponentDecision, fuel: 0, tires: 0, engine: 0, delta: 0, comparisons: [], explanations: [] };
+  const log = { contextGapSeconds: state.gapSeconds || 0, section: section.name, move: move?.name || 'Guida normale', moveId, decision, opponentDecision, fuel: 0, tires: 0, engine: 0, delta: 0, comparisons: [], explanations: [] };
   if (state.car.currentFuel + 0.000001 < player.fuel) { state.finished = true; state.failure = 'fuel'; log.event = 'Carburante insufficiente: gara interrotta.'; }
   else {
     const previousGap = state.gapSeconds || 0;

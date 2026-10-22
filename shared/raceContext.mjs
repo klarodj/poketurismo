@@ -23,11 +23,12 @@ function tacticalContext(state, side = 'player') {
   const gap = (state.gapSeconds || 0) * (side === 'player' ? 1 : -1);
   const behind = gap < -0.01, ahead = gap > 0.01, alongside = !behind && !ahead;
   const close = Math.abs(gap) <= 1.2;
-  const canDefend = !state.lesson && ahead && close && features.visibilityM >= 80;
+  const allowDuels = !state.lesson || state.trainingDuel;
+  const canDefend = allowDuels && ahead && close && features.visibilityM >= 80;
   const manoeuvres = ['hold'];
-  if (!state.lesson && behind && Math.abs(gap) <= 3 && next && features.nextStraight) manoeuvres.push('prepare');
-  if (!state.lesson && behind && close && features.hasStraight) manoeuvres.push('slipstream');
-  if (!state.lesson && (behind || alongside) && close && features.passingSpace) manoeuvres.push('overtake');
+  if (allowDuels && behind && Math.abs(gap) <= 3 && next && features.nextStraight) manoeuvres.push('prepare');
+  if (allowDuels && behind && close && features.hasStraight) manoeuvres.push('slipstream');
+  if (allowDuels && (behind || alongside) && close && features.passingSpace) manoeuvres.push('overtake');
   if (canDefend && !features.hasCorner) manoeuvres.push('defend');
   return { ...features, behind, ahead, alongside, close, canDefend, profile,
     allowed: { pace: ['save', 'balanced', 'attack'], braking: features.hasBrakingZone ? ['early', 'optimal', 'late'] : ['optimal'],
@@ -55,7 +56,25 @@ function incidentCue(plan, index) {
     slowVehicle: 'Veicolo lento segnalato nel settore: prepara un passaggio prudente.' };
   return { kind: plan.kind, description: descriptions[plan.kind] };
 }
-function tacticalMovePlayable(move, section, next, gap) {
+function tacticalMovePlayable(move, section, next, gap, state, decision) {
+  if (move.conditions) return techniqueContextMatches(move.conditions, section, next, gap, state, decision);
   return move.trigger === 'always' || move.trigger === section.type || (move.trigger === 'Gap-Negative' && gap < 0) || (move.trigger === 'Braking-Zone' && sectionFeatures(section, next).hasBrakingZone);
 }
-export { tacticalMovePlayable, routeProfileFor, sectionFeatures, tacticalContext, contextualDecision, incidentPlan, incidentCue };
+function techniqueContextMatches(c, section, next, gap = 0, state, decision) {
+  if (!state) return false;
+  const features = sectionFeatures(section, next, state.routeProfile), segments = section.segments || [];
+  const weather = (state.environment?.weather || '').toLowerCase(), surface = (state.environment?.surface || '').toLowerCase();
+  const wet = /rain|piogg|wet|bagn/.test(weather), snow = /snow|neve|ghiacc/.test(weather);
+  const geometry = { braking: features.hasBrakingZone, corner: features.hasCorner, slowCorner: segments.some(s => s.radiusM > 0 && s.radiusM <= 40),
+    fastCorner: segments.some(s => s.radiusM >= 90), chicane: segments.filter(s => s.radiusM > 0).length >= 2 || /chicane|variante|esse/i.test(section.type || section.name),
+    straight: features.hasStraight, uphill: segments.some(s => s.grade > 0.01), downhill: segments.some(s => s.grade < -0.01) };
+  if (c.geometry && !geometry[c.geometry]) return false;
+  if (c.weather && !({ dry: !wet && !snow && !/fog|nebbia|night|notte/.test(weather), wet, snow, lowVisibility: /fog|nebbia|night|notte/.test(weather) })[c.weather]) return false;
+  if (c.surface === 'loose' && !/terra|sterr|gravel|dirt|ghiaia/.test(surface)) return false;
+  if (c.route && c.route !== state.routeProfile?.kind) return false;
+  if (c.visibility === 'limited' && features.visibilityM > 120) return false;
+  if (c.position === 'behind' && gap >= -0.01) return false;
+  if (['pace', 'braking', 'line', 'manoeuvre'].some(key => c[key] && c[key] !== decision?.[key])) return false;
+  return true;
+}
+export { tacticalMovePlayable, techniqueContextMatches, routeProfileFor, sectionFeatures, tacticalContext, contextualDecision, incidentPlan, incidentCue };

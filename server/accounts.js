@@ -74,7 +74,7 @@ function install(app, prisma, endpoint) {
         if (existing) return { player: publicPlayer(existing), created: false };
         const player = await tx.user.create({ data: { username: name, usernameKey: name.toLowerCase(), authUserId: req.identity.id,
           avatar, password: '', mail: '', carDrive: 0, isAdmin: configuredAdmin(req.identity), moneyCents: initialMoneyCents, ...stats,
-          progress: { create: {} }, development: { create: {} } } });
+          progress: { create: { equippedMoves: '[]' } }, development: { create: {} } } });
         return { player: publicPlayer(player), created: true };
       });
     } catch (error) {

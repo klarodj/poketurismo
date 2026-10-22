@@ -37,7 +37,7 @@ test('braking familiarity has no free effect on a straight without a braking zon
 });
 test('new technique is contextual, has bounded mastery and never changes physical engine output', () => {
   const state = makeRace(), learned = learnedTechnique(), mastered = learnedTechnique(999999);
-  assert.deepEqual(mastered.skillBonus, { brake: 4, clean: 3 });
+  assert.deepEqual(mastered.skillBonus, { brake: 3, clean: 2 });
   assert.deepEqual(learnedTechnique(60), mastered);
   assert.ok(tacticalMovePlayable(learned, state.sections[0], state.sections[1], 0));
   assert.equal(tacticalMovePlayable(learned, state.sections[7], null, 0), false);

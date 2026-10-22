@@ -116,14 +116,13 @@ test('maintenance uses server cost and oil change cannot repair a broken engine'
   assert.equal((await post(`/garage/${garage.id}/service`, { serviceType: 'rebuild', price: 0 })).status, 200);
   assert.equal(await wallet(), 9750000);
 });
-test('training updates level and stats once; learned moves and loadout survive a new connection', async () => {
+test('stat training updates once while techniques require a driving-school trial', async () => {
   const key = randomUUID(); await post(`/training-sessions/${training.id}/complete`, {}, key); await post(`/training-sessions/${training.id}/complete`, {}, key);
   const user = await prisma.user.findUnique({ where: { id: 1 } }); assert.equal(user.brake, 32); assert.equal(user.level, 2); assert.equal(user.moneyCents, 9950000);
-  await post(`/training-sessions/${moveTraining.id}/complete`, {});
-  const inv = (await get('/inventory/1')).data; const learned = inv.moves.find(move => move.name === 'Trail Braking'); assert.equal(learned.bonus.brake, 12);
-  const response = await request('/player/1/moves', { userId: 1, moveIds: [learned.id] }, 'PUT'); assert.equal(response.status, 200);
-  const fresh = new PrismaClient(); try { assert.deepEqual(JSON.parse((await fresh.playerProgress.findUnique({ where: { userId: 1 } })).equippedMoves), [learned.id]); } finally { await fresh.$disconnect(); }
-  assert.equal((await post(`/training-sessions/${moveTraining.id}/complete`, {})).status, 409);
+  assert.equal((await post(`/training-sessions/${moveTraining.id}/complete`, {})).status,410);
+  const inv = (await get('/inventory/1')).data;
+  assert.deepEqual(inv.moves,[]);assert.deepEqual(inv.equippedMoves,[]);
+  assert.equal((await request('/player/1/moves', { userId: 1, moveIds: ['m1'] }, 'PUT')).status,400);
 });
 test('used car ownership transfer preserves modifications and condition and listing sells once', async () => {
   await post('/parts/purchase', { partId: part.id }); await post(`/garage/${garage.id}/mount`, { partId: part.id });
@@ -136,12 +135,12 @@ test('used car ownership transfer preserves modifications and condition and list
 });
 test('race checkpoint persists and final turn cannot duplicate money, XP, fuel or kilometers', async () => {
   const race = await begin(); assert.equal(race.distanceKm, 5); assert.equal('rng' in race, false); assert.equal('seed' in race, false);
-  const key = randomUUID(); const a = await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1', gap: 999999, rewardMoney: 999999 }, key);
+  const key = randomUUID(); const a = await post(`/races/${race.id}/turns`, { version: 0, moveId: null, gap: 999999, rewardMoney: 999999 }, key);
   assert.equal(a.status, 200, JSON.stringify(a.data)); assert.equal(a.data.race.status, 'completed'); assert.equal(a.data.race.outcome, 'win');
   const money = await wallet(), updated = await prisma.garage.findUnique({ where: { id: garage.id } });
   assert.equal(money, 10050000); assert.equal(updated.km, 5); assert.ok(updated.currentFuel < 20); assert.equal(updated.engineHealth, 99.75);
-  assert.deepEqual(await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1', gap: 999999, rewardMoney: 999999 }, key), a);
-  assert.equal((await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1' })).status, 409); assert.equal(await wallet(), money);
+  assert.deepEqual(await post(`/races/${race.id}/turns`, { version: 0, moveId: null, gap: 999999, rewardMoney: 999999 }, key), a);
+  assert.equal((await post(`/races/${race.id}/turns`, { version: 0, moveId: null })).status, 409); assert.equal(await wallet(), money);
   const fresh = new PrismaClient(); try { assert.equal((await fresh.raceSession.findUnique({ where: { id: race.id } })).status, 'completed'); assert.equal((await fresh.garage.findUnique({ where: { id: garage.id } })).currentFuel, updated.currentFuel); } finally { await fresh.$disconnect(); }
 });
 test('a race resumes after a sector and rejects stale versions and unplayable moves', async () => {
@@ -163,7 +162,7 @@ test('active races block edits, refuels, training, loadout changes and a second 
 });
 test('street wager is charged once at start and settled once at completion', async () => {
   const race = await begin('street'); assert.equal(await wallet(), 9950000);
-  const response = await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1' });
+  const response = await post(`/races/${race.id}/turns`, { version: 0, moveId: null });
   assert.equal(response.data.race.outcome, 'win'); assert.equal(await wallet(), 10100000);
 });
 test('abandoning is a saved loss and cannot refund a street wager', async () => {
@@ -184,7 +183,7 @@ test('championship requirements and round prizes are enforced and client results
   const entry = (await post(`/championships/${championship.id}/enter`, {})).data.entry;
   assert.equal((await post(`/championship-entries/${entry.id}/results`, { gap: 99999 })).status, 410);
   const race = await begin('championship', { entryId: entry.id });
-  const key = randomUUID(), body = { version: 0, moveId: 'm1' };
+  const key = randomUUID(), body = { version: 0, moveId: null };
   const result = await post(`/races/${race.id}/turns`, body, key); assert.equal(result.status, 200); assert.equal(result.data.race.championship.champion, true);
   assert.equal(await wallet(), 10090000); await post(`/races/${race.id}/turns`, body, key); assert.equal(await wallet(), 10090000);
   assert.equal((await prisma.championshipEntry.findUnique({ where: { id: entry.id } })).status, 'completed');
@@ -227,9 +226,9 @@ test('a delayed retry returns the current wallet and inventory instead of a stal
   const retry = await post('/parts/purchase', { partId: part.id }, key);
   assert.equal(retry.status, 200); assert.equal(retry.data.inventory.parts.length, 2); assert.equal(retry.data.player.money, 99800); assert.equal(await stock(), 2);
 });
-test('training rollback does not unlock a move if the debit fails', async () => {
+test('retired instant training cannot grant a technique or XP even with no money', async () => {
   await prisma.user.update({ where: { id: 1 }, data: { moneyCents: 0 } });
-  assert.equal((await post(`/training-sessions/${moveTraining.id}/complete`, {})).status, 400);
+  assert.equal((await post(`/training-sessions/${moveTraining.id}/complete`, {})).status, 410);
   assert.equal(await prisma.playerProgress.count({ where: { userId: 1 } }), 0);
   assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).exp, 0);
 });
@@ -247,17 +246,17 @@ test('engine exhaustion is saved as a loss with zero health and no reward', asyn
 test('custom sandbox opponents cannot mint money or XP and catalogue opponent stats stay fixed', async () => {
   const opponent = await prisma.customOpponent.create({ data: { name: 'Sandbox', carId: car.id, level: 1, ...Object.fromEntries(PILOT_STATS.map(key => [key, 0])) } });
   const race = await begin('street', { opponentId: opponent.id }); assert.equal(race.sandbox, true); assert.equal(await wallet(), 10000000);
-  const result = await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1' }); assert.equal(result.data.race.reward.money, 0); assert.equal(result.data.race.reward.xp, 0);
+  const result = await post(`/races/${race.id}/turns`, { version: 0, moveId: null }); assert.equal(result.data.race.reward.money, 0); assert.equal(result.data.race.reward.xp, 0);
   const standard = await begin(); assert.equal(standard.opponent.car.speed, car.speed); assert.equal(standard.opponent.pilot.brave, 24);
 });
 test('championship progress survives intermediate rounds and only the final round awards prizes', async () => {
   await prisma.championshipRace.create({ data: { championshipId: championship.id, trackId: track.id, ord: 2, opponentName: 'Second', opponentCarName: 'Test car', opponentDifficulty: 1 } });
   const entry = (await post(`/championships/${championship.id}/enter`, {})).data.entry;
   let race = await begin('championship', { entryId: entry.id });
-  const first = await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1' }); assert.equal(first.data.race.championship.nextRound, 2); assert.equal(await wallet(), 9990000);
+  const first = await post(`/races/${race.id}/turns`, { version: 0, moveId: null }); assert.equal(first.data.race.championship.nextRound, 2); assert.equal(await wallet(), 9990000);
   const checkpoint = (await get('/championship-entries/active/1')).data; assert.equal(checkpoint.currentRound, 2); assert.equal(checkpoint.results.length, 1);
   race = await begin('championship', { entryId: entry.id });
-  const second = await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1' }); assert.equal(second.data.race.championship.completed, true); assert.equal(await wallet(), 10090000);
+  const second = await post(`/races/${race.id}/turns`, { version: 0, moveId: null }); assert.equal(second.data.race.championship.completed, true); assert.equal(await wallet(), 10090000);
 });
 
 test('the authored demo saves eight timed tactical decisions without entry fees or rewards', async () => {
@@ -294,7 +293,7 @@ test('a saved legacy race continues with its original snapshots and metre-based 
   state.sections = [(await prisma.trackBuild.findFirst({ where: { trackId: track.id }, include: { section: true } })).section];
   state.moves = BASE_MOVES;
   await prisma.raceSession.update({ where: { id: race.id }, data: { state: JSON.stringify(state) } });
-  const response = await post(`/races/${race.id}/turns`, { version: 0, moveId: 'm1' });
+  const response = await post(`/races/${race.id}/turns`, { version: 0, moveId: null });
   assert.equal(response.status, 200); assert.equal(response.data.race.status, 'completed'); assert.equal(response.data.race.rulesVersion, undefined);
   assert.equal(response.data.race.logs[0].comparisons.length, 4); assert.equal(response.data.race.logs[0].playerSeconds, undefined);
 });
@@ -487,4 +486,88 @@ test('a failed course payment cannot consume a repetition or grant experience', 
   assert.equal(result.status, 400);
   assert.equal(await prisma.driverDevelopment.count({ where: { userId: 1 } }), 0);
   assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).exp, 0);
+});
+
+test('fresh inventory contains no free techniques, even with a legacy default loadout', async () => {
+  await prisma.playerProgress.create({ data: { userId: 1, equippedMoves: '["m1","m2","m3"]' } });
+  const state = (await get('/state/1')).data;
+  assert.deepEqual(state.inventory.moves, []); assert.deepEqual(state.inventory.equippedMoves, []);
+  assert.equal(state.development.curriculum.length, 50);
+  assert.equal(state.development.curriculum.some(item => item.learned), false);
+});
+test('school rejects forged progress, unread exams, insufficient level and missing prerequisites', async () => {
+  assert.equal((await post('/driver/techniques/read', { techniqueId: 'smooth-driving', passed: true })).status, 400);
+  assert.equal((await post('/races', { mode: 'track', lesson: 'course-smooth-driving' })).status, 409);
+  assert.equal((await post('/driver/techniques/read', { techniqueId: 'trail-braking' })).status, 403);
+  await prisma.user.update({ where: { id: 1 }, data: { level: 99, exp: 98000 } });
+  assert.equal((await post('/driver/techniques/read', { techniqueId: 'trail-braking' })).status, 403);
+  const read = await post('/driver/techniques/read', { techniqueId: 'smooth-driving' });
+  assert.equal(read.status, 200);assert.equal(read.data.development.curriculum.find(item=>item.id==='smooth-driving').read,true);
+  assert.deepEqual(read.data.inventory.moves, []);
+  assert.equal((await request('/player/1/moves', { userId: 1, moveIds: ['smooth-driving'] }, 'PUT')).status, 400);
+});
+async function curriculumTrial(id, wrong = false) {
+  const { TECHNIQUE_BY_ID } = require('../shared/techniqueCatalog.mjs');
+  const technique = TECHNIQUE_BY_ID[id];
+  let result = await post('/driver/techniques/read', { techniqueId: id });
+  assert.equal(result.status,200,JSON.stringify(result.data));
+  result = await post('/races', { mode: 'track', lesson: technique.lessonId });
+  assert.equal(result.status,200,JSON.stringify(result.data));
+  while(result.data.race.status==='active') {
+    const race=result.data.race, section=race.sections[race.index];
+    const decision = section.goal || { braking: section.braking, line: 'exit', pace: 'balanced' };
+    result=await post(`/races/${race.id}/turns`, { version: race.version, moveId: null, decision: wrong ? { ...decision, pace: 'attack' } : decision });
+    assert.equal(result.status,200,JSON.stringify(result.data));
+  }
+  return result;
+}
+test('all fifty courses can actually be read and passed through the server and survive a new database connection', async () => {
+  const { TECHNIQUES } = require('../shared/techniqueCatalog.mjs');
+  await prisma.user.update({ where: { id: 1 }, data: { level: 99, exp: 98000, carDrive: 0 } });
+  for (const technique of TECHNIQUES) {
+    const result=await curriculumTrial(technique.id);
+    assert.equal(result.data.race.developmentSummary.lesson.passed,true,technique.id);
+    assert.equal(result.data.race.reward.xp,technique.xp,technique.id);
+    assert.equal(result.data.inventory.moves.some(move=>move.id===technique.id),true,technique.id);
+    assert.ok(result.data.inventory.equippedMoves.length<=4);
+  }
+  assert.equal((await get('/inventory/1')).data.moves.length,50);
+  const fresh=new PrismaClient();try {
+    const row=await fresh.driverDevelopment.findUnique({where:{userId:1}});
+    assert.equal(Object.values(JSON.parse(row.techniqueProgress)).filter(item=>item.passed).length,49);
+    assert.equal(row.lessonPassed,true);
+  } finally { await fresh.$disconnect(); }
+});
+test('new course failures give no unlock; repetitions and final-turn retries cannot mint XP', async () => {
+  const failed=await curriculumTrial('smooth-driving',true);
+  assert.equal(failed.data.race.developmentSummary.lesson.passed,false);
+  assert.equal(failed.data.inventory.moves.some(move=>move.id==='smooth-driving'),false);
+  const first=await curriculumTrial('smooth-driving');assert.equal(first.data.race.reward.xp,40);
+  const xp=first.data.player.exp;
+  const repeat=await curriculumTrial('smooth-driving');assert.equal(repeat.data.race.reward.xp,0);
+  assert.equal(repeat.data.player.exp,xp);
+  assert.equal(repeat.data.development.curriculum.find(item=>item.id==='smooth-driving').practice,1);
+  const final=repeat.data.race;
+  assert.equal((await post(`/races/${final.id}/turns`,{version:final.version-1,moveId:null})).status,409);
+  assert.equal((await prisma.user.findUnique({where:{id:1}})).exp,xp);
+});
+
+test('modern technique practice requires actual completed use, respects its cap and excludes custom races', async () => {
+  const { TECHNIQUE_BY_ID, techniqueMove }=require('../shared/techniqueCatalog.mjs');
+  const { createTechniqueLesson }=require('../shared/techniqueLessons.mjs');
+  const { settleDevelopment }=require('../server/driverDevelopment');
+  const technique=TECHNIQUE_BY_ID['exit-line'];
+  const records={'exit-line':{read:true,passed:true,practice:58}};
+  await prisma.driverDevelopment.create({data:{userId:1,techniqueProgress:JSON.stringify(records)}});
+  let state=createTechniqueLesson(technique,pilot,12345);
+  delete state.lesson;delete state.courseTechniqueId;state.sandbox=false;state.trackId=track.id;state.moves=[techniqueMove(technique)];
+  while(!state.finished)state=advanceRace(state,technique.id,state.sections[state.index].goal);
+  const result=await prisma.$transaction(tx=>settleDevelopment(tx,1,state));
+  assert.equal(result.techniqueGains['exit-line'],2);
+  assert.equal(JSON.parse((await prisma.driverDevelopment.findUnique({where:{userId:1}})).techniqueProgress)['exit-line'].practice,60);
+  records['exit-line'].practice=0;await prisma.driverDevelopment.update({where:{userId:1},data:{techniqueProgress:JSON.stringify(records)}});
+  state.sandbox=true;await prisma.$transaction(tx=>settleDevelopment(tx,1,state));
+  assert.equal(JSON.parse((await prisma.driverDevelopment.findUnique({where:{userId:1}})).techniqueProgress)['exit-line'].practice,0);
+  state.sandbox=false;state.failure='abandoned';await prisma.$transaction(tx=>settleDevelopment(tx,1,state));
+  assert.equal(JSON.parse((await prisma.driverDevelopment.findUnique({where:{userId:1}})).techniqueProgress)['exit-line'].practice,0);
 });

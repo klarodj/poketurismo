@@ -6,7 +6,7 @@ const { SERVICE_PRICES, PILOT_STATS, fail, positiveId, publicPlayer, restoredHan
 const { operation, transaction, inventory, addPart, consumePart, garageInclude } = require('./persistence');
 const { startRace, turnRace, snapshot, presentRace } = require('./races');
 const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
-const { BASE_MOVES, trainingMove } = require('./raceEngine');
+const { readTechnique } = require('./techniqueSchool');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -148,10 +148,12 @@ mutate('/api/player/:id/moves', 'equip-moves', async (tx, userId, body, params) 
   return snapshot(tx, userId);
 }, 'put');
 mutate('/api/driver/lesson', 'read-driving-lesson', async (tx, userId, body) => { await readLesson(tx, userId, body); return snapshot(tx, userId); });
-app.get('/api/training-sessions', endpoint(() => prisma.trainingSession.findMany({ include: { track: { include: { type: true, meteo: true } } }, orderBy: { minLevel: 'asc' } })));
+mutate('/api/driver/techniques/read', 'read-technique', async (tx, userId, body) => { await readTechnique(tx, userId, body); return snapshot(tx, userId); });
+app.get('/api/training-sessions', endpoint(() => prisma.trainingSession.findMany({ where: { category: 'stat' }, include: { track: { include: { type: true, meteo: true } } }, orderBy: { minLevel: 'asc' } })));
 mutate('/api/training-sessions/:id/complete', 'training', async (tx, userId, body, params) => {
   const session = await tx.trainingSession.findUnique({ where: { id: positiveId(params.id) } });
   if (!session) fail(404, 'Allenamento inesistente');
+  if (session.category === 'move') fail(410, 'Le tecniche si apprendono con lezioni e prove nella scuola guida');
   const user = await tx.user.findUnique({ where: { id: userId } });
   if (user.level < session.minLevel) fail(400, 'Livello insufficiente');
   const factor = session.category === 'stat' ? await legacyTrainingUse(tx, userId, session) : 1;
@@ -161,13 +163,6 @@ mutate('/api/training-sessions/:id/complete', 'training', async (tx, userId, bod
   if (session.category === 'stat') {
     if (!PILOT_STATS.includes(session.targetStat)) fail(400, 'Abilità non valida');
     data[session.targetStat] = { increment: statGain };
-  } else if (session.category === 'move') {
-    const progress = await tx.playerProgress.upsert({ where: { userId }, create: { userId }, update: {} });
-    const learned = JSON.parse(progress.learnedMoves);
-    if (learned.includes(session.id) || BASE_MOVES.some(move => move.name === session.targetMove)) fail(409, 'Mossa già conosciuta');
-    const equipped = JSON.parse(progress.equippedMoves);
-    if (equipped.length < 4) equipped.push(trainingMove(session).id);
-    await tx.playerProgress.update({ where: { userId }, data: { learnedMoves: JSON.stringify([...learned, session.id]), equippedMoves: JSON.stringify(equipped) } });
   } else fail(400, 'Tipo allenamento non valido');
   await charge(tx, userId, session.cost);
   await tx.user.update({ where: { id: userId }, data });

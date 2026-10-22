@@ -392,7 +392,7 @@ model PlayerProgress {
   userId        Int    @id
   user          User   @relation(fields: [userId], references: [id])
   learnedMoves  String @default("[]")
-  equippedMoves String @default("[\"m1\",\"m2\",\"m3\"]")
+  equippedMoves String @default("[]")
 
   @@schema("game")
 }
@@ -439,6 +439,7 @@ model RaceSession {
 }
 
 model DriverDevelopment {
+  techniqueProgress String  @default("{}")
   userId            Int     @id
   user              User    @relation(fields: [userId], references: [id])
   earlyPractice     Int     @default(0)

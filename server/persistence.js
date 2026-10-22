@@ -1,7 +1,8 @@
 const { createHash } = require('node:crypto');
 const { fail, positiveId } = require('./gameRules');
-const { BASE_MOVES, trainingMove } = require('./raceEngine');
+const { trainingMove } = require('./raceEngine');
 const { learnedTechnique } = require('../shared/driverDevelopment.mjs');
+const { TECHNIQUES, techniqueRecords, techniqueMove } = require('../shared/techniqueCatalog.mjs');
 const garageInclude = { car: { include: { brand: true } }, mods: { include: { part: true } } };
 function canonical(value) {
   if (Array.isArray(value)) return value.map(canonical);
@@ -58,9 +59,11 @@ async function inventory(tx, userId) {
   const progress = await tx.playerProgress.findUnique({ where: { userId } });
   const sessions = await tx.trainingSession.findMany({ where: { id: { in: JSON.parse(progress?.learnedMoves || '[]') } } });
   const development = await tx.driverDevelopment.findUnique({ where: { userId } });
-  const moves = [...BASE_MOVES, ...sessions.map(trainingMove), ...(development?.lessonPassed ? [learnedTechnique(development.techniquePractice)] : [])];
+  const records = techniqueRecords(development);
+  const moves = [...sessions.map(trainingMove), ...(development?.lessonPassed ? [learnedTechnique(development.techniquePractice)] : []),
+    ...TECHNIQUES.filter(item => item.id !== 'progressive-release' && records[item.id]?.passed).map(item => techniqueMove(item, records[item.id].practice))];
   const items = await tx.inventoryPart.findMany({ where: { userId, quantity: { gt: 0 } }, include: { part: true }, orderBy: { partId: 'asc' } });
-  return { moves, equippedMoves: JSON.parse(progress?.equippedMoves || '["m1","m2","m3"]'),
+  return { moves, equippedMoves: JSON.parse(progress?.equippedMoves || '[]').filter(id => moves.some(move => move.id === id)),
     parts: items.flatMap(item => Array.from({ length: item.quantity }, (_, index) => ({ ...item.part, instanceId: `${item.partId}-${index}` }))) };
 }
 async function addPart(tx, userId, partId) {

@@ -9,45 +9,45 @@ generator client {
 
 model Brand {
   id   Int     @id @default(autoincrement())
-  name String 
+  name String
   logo String?
   cars Car[]
 }
 
 model Car {
-  id           Int      @id @default(autoincrement())
-  name         String
-  brandId      Int?
-  brand        Brand?   @relation(fields: [brandId], references: [id])
-  year         Int
-  cv           Int
-  nm           Int
-  cc           Int
-  kg           Int
-  driveType    String
-  velMax       Int
-  zeroToHundred Float   
-  engineType   String
-  wheelBase    Int
-  width        Int
-  brakeFront   Int
-  brakeRear    Int
-  wheelSize    Int
-  tyreFront    Int
-  tyreRear     Int
-  category     String
-  image        String
-  speed        Float
-  acceleration Float
-  revving      Float
-  transmission Float
-  turnSlow     Float
-  turnFast     Float
-  brake        Float
-  traction     Float
-  price        Float
-  
-  garages      Garage[]
+  id            Int    @id @default(autoincrement())
+  name          String
+  brandId       Int?
+  brand         Brand? @relation(fields: [brandId], references: [id])
+  year          Int
+  cv            Int
+  nm            Int
+  cc            Int
+  kg            Int
+  driveType     String
+  velMax        Int
+  zeroToHundred Float
+  engineType    String
+  wheelBase     Int
+  width         Int
+  brakeFront    Int
+  brakeRear     Int
+  wheelSize     Int
+  tyreFront     Int
+  tyreRear      Int
+  category      String
+  image         String
+  speed         Float
+  acceleration  Float
+  revving       Float
+  transmission  Float
+  turnSlow      Float
+  turnFast      Float
+  brake         Float
+  traction      Float
+  price         Float
+
+  garages         Garage[]
   customOpponents CustomOpponent[]
 }
 
@@ -85,22 +85,22 @@ model User {
   shift      Int
   carDrive   Int
   class      String?
-  
-  development DriverDevelopment?
-  progress PlayerProgress?
-  inventory InventoryPart[]
-  races RaceSession[]
-  operations GameOperation[]
-  garages    Garage[]
+
+  development         DriverDevelopment?
+  progress            PlayerProgress?
+  inventory           InventoryPart[]
+  races               RaceSession[]
+  operations          GameOperation[]
+  garages             Garage[]
   championshipEntries ChampionshipEntry[]
 }
 
 model Garage {
-  id           Int      @id @default(autoincrement())
+  id           Int    @id @default(autoincrement())
   userId       Int
-  user         User     @relation(fields: [userId], references: [id])
+  user         User   @relation(fields: [userId], references: [id])
   carId        Int
-  car          Car      @relation(fields: [carId], references: [id])
+  car          Car    @relation(fields: [carId], references: [id])
   cv           Int
   nm           Int
   kg           Int
@@ -112,15 +112,15 @@ model Garage {
   turnFast     Float
   brake        Float
   traction     Float
-  km           Int      @default(0)
-  sellPrice    Float    @default(0.0)
-  engineHealth Float      @default(100)
-  tireGrip     Float      @default(100)
-  serviceKm    Int      @default(0)
-  currentFuel  Float    @default(20)
-  fuelType     String   @default("Normale")
-  
-  mods         Mod[]
+  km           Int    @default(0)
+  sellPrice    Float  @default(0.0)
+  engineHealth Float  @default(100)
+  tireGrip     Float  @default(100)
+  serviceKm    Int    @default(0)
+  currentFuel  Float  @default(20)
+  fuelType     String @default("Normale")
+
+  mods Mod[]
 }
 
 model Level {
@@ -129,7 +129,7 @@ model Level {
 }
 
 model Part {
-  id            Int     @id @default(autoincrement())
+  id            Int    @id @default(autoincrement())
   name          String
   description   String
   category      String
@@ -147,14 +147,14 @@ model Part {
   cvBonus       Float
   nmBonus       Float
   kgBonus       Float
-  
-  inventory     InventoryPart[]
-  mods          Mod[]
+
+  inventory InventoryPart[]
+  mods      Mod[]
 }
 
 model Mod {
   id            Int    @id @default(autoincrement())
-  garageId      Int    
+  garageId      Int
   garage        Garage @relation(fields: [garageId], references: [id])
   partId        Int
   part          Part   @relation(fields: [partId], references: [id])
@@ -192,40 +192,40 @@ model TrackMeteo {
 }
 
 model Track {
-  id         Int           @id @default(autoincrement())
-  name       String
-  typeId     Int           
-  type       TrackType     @relation(fields: [typeId], references: [id])
-  lenght     Int
-  elevation  Int
-  surfaceId  Int           
-  surface    TrackSurface  @relation(fields: [surfaceId], references: [id])
-  meteoId    Int           
-  meteo      TrackMeteo    @relation(fields: [meteoId], references: [id])
-  
+  id        Int          @id @default(autoincrement())
+  name      String
+  typeId    Int
+  type      TrackType    @relation(fields: [typeId], references: [id])
+  lenght    Int
+  elevation Int
+  surfaceId Int
+  surface   TrackSurface @relation(fields: [surfaceId], references: [id])
+  meteoId   Int
+  meteo     TrackMeteo   @relation(fields: [meteoId], references: [id])
+
   builds            TrackBuild[]
   championshipRaces ChampionshipRace[]
   trainingSessions  TrainingSession[]
 }
 
 model TrackSection {
-  id          Int          @id @default(autoincrement())
-  name        String
-  image       String
-  carStat     String
-  carTech     String
-  driverStat  String
-  driverTech  String
-  
-  builds      TrackBuild[]
+  id         Int    @id @default(autoincrement())
+  name       String
+  image      String
+  carStat    String
+  carTech    String
+  driverStat String
+  driverTech String
+
+  builds       TrackBuild[]
   customBuilds CustomTrackSection[]
 }
 
 model TrackBuild {
   id        Int          @id @default(autoincrement())
-  trackId   Int          
+  trackId   Int
   track     Track        @relation(fields: [trackId], references: [id])
-  sectionId Int          
+  sectionId Int
   section   TrackSection @relation(fields: [sectionId], references: [id])
   level     Int
   ord       Int
@@ -241,92 +241,92 @@ model Championship {
   image       String @default("track.png")
 
   // Car requirements
-  minCv       Int    @default(0)
-  maxCv       Int    @default(9999)
-  minPerfIndex Int   @default(0)   // Indice prestazioni minimo (media stat gara)
-  allowedDrive String @default("any")  // "FF", "FR", "AWD", "any"
+  minCv        Int    @default(0)
+  maxCv        Int    @default(9999)
+  minPerfIndex Int    @default(0) // Indice prestazioni minimo (media stat gara)
+  allowedDrive String @default("any") // "FF", "FR", "AWD", "any"
 
   // Pilot requirements
-  minLevel    Int    @default(1)
-  minBrave    Int    @default(0)
-  minClean    Int    @default(0)
-  minReflex   Int    @default(0)
-  minShift    Int    @default(0)
+  minLevel  Int @default(1)
+  minBrave  Int @default(0)
+  minClean  Int @default(0)
+  minReflex Int @default(0)
+  minShift  Int @default(0)
 
-  entryFee    Int    @default(0)
-  rewardMoney Int    @default(0)
-  rewardXp    Int    @default(0)
+  entryFee    Int @default(0)
+  rewardMoney Int @default(0)
+  rewardXp    Int @default(0)
 
-  rounds      ChampionshipRace[]
-  entries     ChampionshipEntry[]
+  rounds  ChampionshipRace[]
+  entries ChampionshipEntry[]
 }
 
 model ChampionshipRace {
-  id                  Int          @id @default(autoincrement())
-  championshipId      Int
-  championship        Championship @relation(fields: [championshipId], references: [id])
-  trackId             Int
-  track               Track        @relation(fields: [trackId], references: [id])
-  ord                 Int          // Round order (1, 2, 3...)
-  opponentName        String
-  opponentCarName     String
-  opponentDifficulty  Float        @default(1.0) // 0.8 easy → 1.5 hard
+  id                 Int          @id @default(autoincrement())
+  championshipId     Int
+  championship       Championship @relation(fields: [championshipId], references: [id])
+  trackId            Int
+  track              Track        @relation(fields: [trackId], references: [id])
+  ord                Int // Round order (1, 2, 3...)
+  opponentName       String
+  opponentCarName    String
+  opponentDifficulty Float        @default(1.0) // 0.8 easy → 1.5 hard
 }
 
 model ChampionshipEntry {
-  id              Int          @id @default(autoincrement())
-  userId          Int
-  user            User         @relation(fields: [userId], references: [id])
-  championshipId  Int
-  championship    Championship @relation(fields: [championshipId], references: [id])
-  currentRound    Int          @default(1)
-  playerPoints    Int          @default(0)
-  opponentPoints  Int          @default(0)
-  gapDifference   Int          @default(0)
-  status          String       @default("active")
-  results         String       @default("[]")
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
+  id             Int          @id @default(autoincrement())
+  userId         Int
+  user           User         @relation(fields: [userId], references: [id])
+  championshipId Int
+  championship   Championship @relation(fields: [championshipId], references: [id])
+  currentRound   Int          @default(1)
+  playerPoints   Int          @default(0)
+  opponentPoints Int          @default(0)
+  gapDifference  Int          @default(0)
+  status         String       @default("active")
+  results        String       @default("[]")
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
 }
 
 // ─── TRAINING SESSIONS ──────────────────────────────────────────────────
 
 model TrainingSession {
-  id           Int    @id @default(autoincrement())
-  name         String
-  description  String
-  category     String // "stat" | "move"
-  targetStat   String @default("")  // "brake", "reflex", "brave", "clean", "shift"
-  targetMove   String @default("")  // Nome mossa da sbloccare (se category = "move")
-  statGain     Int    @default(1)
-  xpReward     Int    @default(100)
-  cost         Int    @default(500)
-  minLevel     Int    @default(1)
-  trackId      Int
-  track        Track  @relation(fields: [trackId], references: [id])
-  image        String @default("track.png")
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+  category    String // "stat" | "move"
+  targetStat  String @default("") // "brake", "reflex", "brave", "clean", "shift"
+  targetMove  String @default("") // Nome mossa da sbloccare (se category = "move")
+  statGain    Int    @default(1)
+  xpReward    Int    @default(100)
+  cost        Int    @default(500)
+  minLevel    Int    @default(1)
+  trackId     Int
+  track       Track  @relation(fields: [trackId], references: [id])
+  image       String @default("track.png")
 }
 
 // ─── DEV SANDBOX ────────────────────────────────────────────────────────
 
 model CustomOpponent {
-  id        Int    @id @default(autoincrement())
-  name      String
-  carId     Int
-  car       Car    @relation(fields: [carId], references: [id])
-  level     Int
-  shift     Int
-  reflex    Int
-  brave     Int
-  clean     Int
-  acro      Int
-  turn      Int
-  brake     Int
-  throttle  Int
+  id       Int    @id @default(autoincrement())
+  name     String
+  carId    Int
+  car      Car    @relation(fields: [carId], references: [id])
+  level    Int
+  shift    Int
+  reflex   Int
+  brave    Int
+  clean    Int
+  acro     Int
+  turn     Int
+  brake    Int
+  throttle Int
 }
 
 model CustomTrack {
-  id       Int    @id @default(autoincrement())
+  id       Int                  @id @default(autoincrement())
   name     String
   sections CustomTrackSection[]
 }
@@ -341,57 +341,60 @@ model CustomTrackSection {
 }
 
 model PlayerProgress {
-  userId Int @id
-  user User @relation(fields: [userId], references: [id])
-  learnedMoves String @default("[]")
-  equippedMoves String @default("[\"m1\",\"m2\",\"m3\"]")
+  userId        Int    @id
+  user          User   @relation(fields: [userId], references: [id])
+  learnedMoves  String @default("[]")
+  equippedMoves String @default("[]")
 }
 
 model InventoryPart {
-  userId Int
-  partId Int
-  quantity Int @default(1)
-  user User @relation(fields: [userId], references: [id])
-  part Part @relation(fields: [partId], references: [id])
+  userId   Int
+  partId   Int
+  quantity Int  @default(1)
+  user     User @relation(fields: [userId], references: [id])
+  part     Part @relation(fields: [partId], references: [id])
+
   @@id([userId, partId])
 }
 
 model GameOperation {
-  userId Int
-  key String
-  kind String
+  userId      Int
+  key         String
+  kind        String
   fingerprint String
-  response String
-  createdAt DateTime @default(now())
-  user User @relation(fields: [userId], references: [id])
+  response    String
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+
   @@id([userId, key])
 }
 
 model RaceSession {
-  id String @id @default(cuid())
-  userId Int
-  user User @relation(fields: [userId], references: [id])
-  garageId Int
-  mode String
-  status String @default("active")
-  seed Int
-  version Int @default(0)
-  state String
+  id        String   @id @default(cuid())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  garageId  Int
+  mode      String
+  status    String   @default("active")
+  seed      Int
+  version   Int      @default(0)
+  state     String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
   @@index([userId, status])
 }
 
-
 model DriverDevelopment {
-  userId Int @id
-  user User @relation(fields: [userId], references: [id])
-  earlyPractice Int @default(0)
-  referencePractice Int @default(0)
-  latePractice Int @default(0)
-  techniquePractice Int @default(0)
-  lessonRead Boolean @default(false)
-  lessonPassed Boolean @default(false)
-  routePractice String @default("{}")
-  trainingCourses String @default("{}")
+  techniqueProgress String  @default("{}")
+  userId            Int     @id
+  user              User    @relation(fields: [userId], references: [id])
+  earlyPractice     Int     @default(0)
+  referencePractice Int     @default(0)
+  latePractice      Int     @default(0)
+  techniquePractice Int     @default(0)
+  lessonRead        Boolean @default(false)
+  lessonPassed      Boolean @default(false)
+  routePractice     String  @default("{}")
+  trainingCourses   String  @default("{}")
 }

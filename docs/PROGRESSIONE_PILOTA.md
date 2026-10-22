@@ -1,5 +1,7 @@
 # Primo percorso di crescita del pilota
 
+Il catalogo completo dei **50 corsi in 10 percorsi** è in [TECNICHE.md](TECNICHE.md), con livelli, requisiti, bonus e bilanciamento. I nuovi piloti partono senza tecniche apprese o equipaggiate.
+
 La crescita ha tre livelli distinti: esperienza di carriera, pratica dei fondamentali e padronanza delle tecniche. Questo primo percorso copre la frenata. Gli attributi esistenti e le tecniche già conosciute vengono conservati.
 
 ## Percorso giocabile
@@ -29,14 +31,14 @@ La tecnica può essere usata solo in una zona di frenata, inclusa quella in fond
 | Padronanza | Pratica tecnica | Bonus abilità |
 |---|---:|---|
 | Appresa | 0–19 | +2 frenata, +1 pulizia |
-| Consolidata | 20–59 | +3 frenata, +2 pulizia |
-| Padroneggiata | 60 | +4 frenata, +3 pulizia |
+| Consolidata | 20–59 | +3 frenata, +1 pulizia |
+| Padroneggiata | 60 | +3 frenata, +2 pulizia |
 
 Si può usare una sola tecnica per settore, con massimo quattro equipaggiate. Le tecniche aiutano a sfruttare l'auto; non ne alzano i limiti meccanici.
 
 ## Corsi preesistenti
 
-I vecchi corsi di statistiche restano disponibili con massimo tre completamenti per corso. I guadagni e gli XP valgono 100%, 50%, 25% del valore iniziale, con minimo 1 punto di statistica. Il costo resta quello indicato; l'interfaccia mostra il prossimo beneficio ridotto. I corsi che sbloccano una tecnica restano utilizzabili una sola volta. I guadagni storici vengono conservati; il conteggio delle ripetizioni parte dall'introduzione di questo sistema.
+I vecchi corsi di statistiche restano disponibili con massimo tre completamenti per corso. I guadagni e gli XP valgono 100%, 50%, 25% del valore iniziale, con minimo 1 punto di statistica. Il costo resta quello indicato; l'interfaccia mostra il prossimo beneficio ridotto. I vecchi corsi acquistabili che sbloccavano una tecnica sono ritirati: i nuovi apprendimenti richiedono lezione e prova nella scuola guida. I guadagni storici vengono conservati; il conteggio delle ripetizioni parte dall'introduzione di questo sistema.
 
 ## Protezioni e limiti
 
@@ -46,4 +48,4 @@ Questo protegge dall'alterazione dei valori e dal doppio incasso delle operazion
 
 ## Prossimi passi
 
-Provare la crescita con un pilota nuovo e arrivare al primo campionato. Valutare ritmo dei guadagni, utilità della tecnica e chiarezza dei consigli. Solo dopo estendere il percorso a traiettoria, rilancio e duelli, aggiungere lezioni avanzate e sostituire gradualmente i corsi acquistabili con prove guidate.
+Provare la crescita con un pilota nuovo e arrivare al primo campionato. Valutare ritmo dei guadagni, utilità della tecnica e chiarezza dei consigli. I corsi di traiettoria, rilancio, duelli e specialità sono ora implementati nel catalogo da 50: proseguire il bilanciamento anche con partite reali e ampliare i tracciati ordinari compatibili con i contesti specialistici.

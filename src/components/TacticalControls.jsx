@@ -14,7 +14,8 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
   const section = race.sections[race.index];
   const preview = decisionPreview(race, decision, moveId);
   const select = (key, value) => setDecision(current => ({ ...current, [key]: value }));
-  const moves = race.moves.filter(move => tacticalMovePlayable(move, section, race.sections[race.index + 1], race.gapSeconds));
+  const moves = race.moves.filter(move => tacticalMovePlayable(move, section, race.sections[race.index + 1], race.gapSeconds, race, decision));
+  const selectedMoveId = moves.some(move => move.id === moveId) ? moveId : null;
   const groups = [{ key: 'braking', label: context.brakingAhead ? 'Staccata in fondo al rettilineo' : 'Staccata', show: context.hasBrakingZone },
     { key: 'line', label: 'Traiettoria', show: context.hasCorner }, { key: 'manoeuvre', label: 'Duello', show: context.allowed.manoeuvre.length > 1 }];
   return <section className="race-controls" aria-label="Scelte di guida">
@@ -27,9 +28,9 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
       <fieldset className="race-pace"><legend>Ritmo</legend><div>{options('pace').map(option => <button type="button" aria-pressed={decision.pace === option.id} key={option.id} onClick={() => select('pace', option.id)} className={decision.pace === option.id ? 'is-selected' : ''}>{option.name}</button>)}</div></fieldset>
       <div className="race-choices">
         {groups.filter(group => group.show).map(({ key, label }) => <label key={key}>{label}<select value={decision[key]} onChange={event => select(key, event.target.value)}>{options(key).map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>)}
-        {moves.length > 0 && <label>Tecnica del pilota<select value={moveId || ''} onChange={event => setMoveId(event.target.value || null)}><option value="">Guida normale</option>{moves.map(move => <option value={move.id} key={move.id}>{move.name}</option>)}</select></label>}
+        {moves.length > 0 && <label>Tecnica del pilota<select value={selectedMoveId || ''} onChange={event => setMoveId(event.target.value || null)}><option value="">Guida normale</option>{moves.map(move => <option value={move.id} key={move.id}>{move.name}</option>)}</select></label>}
       </div>
-      <div className="race-confirm"><div role="status"><span>Stima settore <strong>{preview.seconds.toFixed(1)} s</strong></span><span className={preview.errorPercent >= 8 ? 'race-risk-high' : ''}>Rischio errore <strong>{preview.errorPercent.toFixed(1)}%</strong></span></div><button type="button" onClick={() => onTurn(moveId, decision)} className="race-drive-button">{pending > 0 ? 'Salvataggio…' : 'Percorri il settore →'}</button></div>
+      <div className="race-confirm"><div role="status"><span>Stima settore <strong>{preview.seconds.toFixed(1)} s</strong></span><span className={preview.errorPercent >= 8 ? 'race-risk-high' : ''}>Rischio errore <strong>{preview.errorPercent.toFixed(1)}%</strong></span></div><button type="button" onClick={() => onTurn(selectedMoveId, decision)} className="race-drive-button">{pending > 0 ? 'Salvataggio…' : 'Percorri il settore →'}</button></div>
     </fieldset>
     {inspect && <RaceDetailDialog title="Strategia · effetti e stime" onClose={() => setInspect(false)}>
       <div className="space-y-5">

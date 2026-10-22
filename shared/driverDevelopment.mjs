@@ -31,7 +31,7 @@ function brakingFamiliarity(pilot, decision) {
 function learnedTechnique(points = 0) {
   const grade = points >= TECHNIQUE_CAP ? 2 : points >= 20 ? 1 : 0;
   return { id: TECHNIQUE_ID, name: 'Rilascio progressivo', description: 'Moduli il rilascio del freno per comporre l’ingresso. Migliora precisione e pulizia nelle zone di frenata, senza aumentare l’aderenza.',
-    trigger: 'Braking-Zone', bonus: { brake: 2 + grade, clean: 1 + grade }, skillBonus: { brake: 2 + grade, clean: 1 + grade },
+    trigger: 'Braking-Zone', bonus: { brake: 2 + (grade >= 1 ? 1 : 0), clean: 1 + (grade >= 2 ? 1 : 0) }, skillBonus: { brake: 2 + (grade >= 1 ? 1 : 0), clean: 1 + (grade >= 2 ? 1 : 0) },
     costGrip: 0.2, costHealth: 0, aggressiveness: 1.05, mastery: ['Appresa', 'Consolidata', 'Padroneggiata'][grade] };
 }
 function lessonFeedback(state, index = state.logs.length - 1) {

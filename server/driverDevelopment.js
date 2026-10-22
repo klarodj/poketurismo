@@ -1,7 +1,10 @@
 const { fail } = require('./gameRules');
+const { publicCurriculum, settleTechniqueCourse, practiceTechniques } = require('./techniqueSchool');
 const { PRACTICE_FIELDS, PRACTICE_CAP, TECHNIQUE_CAP, TECHNIQUE_ID, LESSON_ID, publicDevelopment, lessonFeedback, practiceFromRace } = require('../shared/driverDevelopment.mjs');
 async function development(tx, userId) {
-  return publicDevelopment(await tx.driverDevelopment.findUnique({ where: { userId } }));
+  const row = await tx.driverDevelopment.findUnique({ where: { userId } });
+  const user = await tx.user.findUnique({ where: { id: userId } });
+  return { ...publicDevelopment(row), curriculum: publicCurriculum(row, user.level) };
 }
 async function readLesson(tx, userId, body) {
   if (Object.keys(body).length) fail(400, 'La lezione non accetta statistiche o progressi dal browser');
@@ -15,6 +18,7 @@ async function settleDevelopment(tx, userId, state) {
     return summary;
   }
   const row = await tx.driverDevelopment.upsert({ where: { userId }, create: { userId }, update: {} });
+  if (state.courseTechniqueId) return settleTechniqueCourse(tx, userId, state, row, summary);
   if (state.lesson === LESSON_ID) {
     const exercises = state.logs.map((_, index) => lessonFeedback(state, index));
     const correct = exercises.filter(exercise => exercise.correct);
@@ -62,6 +66,8 @@ async function settleDevelopment(tx, userId, state) {
     : factors.every(factor => factor === 0) ? 'Hai assimilato queste scelte su questo percorso: varia frenata o tracciato per nuova pratica.'
     : factors.some(factor => factor < 1) ? 'Scelte già esercitate su questo percorso: pratica ridotta. Variare i tracciati aiuta a crescere.'
     : 'Hai fatto pratica nelle zone di frenata realmente affrontate.';
+  summary.techniqueGains = await practiceTechniques(tx, userId, row, state);
+  if (Object.values(summary.techniqueGains).some(gain => gain > 0)) summary.message += ' Hai consolidato le tecniche effettivamente usate.';
   const lateErrors = state.logs.filter(log => log.decision?.braking === 'late' && ((log.mistakeSeconds || 0) > 0 || (log.explanations || []).some(text => text.startsWith('Staccata tardiva:')))).length;
   if (lateErrors) summary.advice = 'Le staccate tardive hanno compromesso alcuni ingressi: confrontale con la frenata al riferimento.';
   return summary;
