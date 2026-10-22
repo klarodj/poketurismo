@@ -2,6 +2,8 @@
 
 Ingresso dalla mappa: `/autodrome`, con Gara singola, Campionati, Prove a tempo e Scuola guida. La gara in corso e il campionato attivo sono raggiungibili anche dall'ingresso. `/racing` resta il centro dei campionati e degli allenamenti a pagamento.
 
+Pubblicato nell'istanza condivisa il 22 ottobre 2026. Verificati dopo l'applicazione: sei nuovi eventi, 23 round su dieci circuiti e rimozione di 87 soli settori duplicati. Conservati utenti, garage, progressi, iscrizioni, gare e calendari storici. Backup completo prima e dopo l'aggiornamento; Autodromo e API disponibili, tempi personali protetti dal login.
+
 ## Sei calendari nuovi
 
 | Campionato | Requisiti | Round | Quota | Premio primo posto | XP titolo |
