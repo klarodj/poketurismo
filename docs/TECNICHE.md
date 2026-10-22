@@ -1,6 +1,6 @@
 # Le 50 tecniche della scuola guida
 
-Catalogo implementato: 10 percorsi da 5 tecniche, livelli da 1 a 22. Ogni percorso richiede il corso precedente, poi lettura e prova pratica; il solo livello non assegna tecniche. Nuovi piloti con inventario ed equipaggiamento vuoti, guida normale sempre disponibile.
+Catalogo attivo dal 22 ottobre 2026 nella scheda Garage → Scuola guida: 10 percorsi da 5 tecniche, livelli da 1 a 22. Ogni percorso richiede il corso precedente, poi lettura e prova pratica; il solo livello non assegna tecniche. Nuovi piloti con inventario ed equipaggiamento vuoti, guida normale sempre disponibile.
 
 ## Apprendimento e benefici
 
@@ -131,3 +131,5 @@ Questo è un primo bilanciamento del motore, non una garanzia sui risultati di o
 Migrazioni versionate SQLite 0005 e PostgreSQL 0002: nuovo campo JSON dei progressi, equipaggiamento iniziale vuoto, rimozione dei soli ID gratuiti m1/m2/m3. Il percorso della frenata già superato resta valido.
 
 Test: struttura dei 50 corsi, istruzioni tutte eseguibili, copertura delle otto abilità e dei contesti, prerequisiti, limiti dei benefici, rifiuto di progressi forgiati, fallimenti, persistenza e ripetizioni senza premi duplicati. Tutte le 50 prove sono state completate anche su una copia PostgreSQL del database reale, con invii finali concorrenti e un solo premio. Verificata la conservazione delle lezioni e della pratica precedenti; nessun test modifica la partita pubblica.
+
+La migrazione sul servizio definitivo è stata applicata dopo backup completo: piloti, soldi, auto, lezioni e pratica preesistenti verificati invariati. La build pubblica contiene il catalogo e le API di apprendimento rifiutano accessi anonimi.

@@ -109,3 +109,15 @@ test('pilot development UI explains the school, bounded practice and first-time 
   markup = renderToStaticMarkup(React.createElement(Summary, { summary: { message: 'Promosso', gains: { early: 4, optimal: 4, late: 4 }, xp: 40, techniqueGain: 0, lesson: { passed: true, correct: 4, total: 4 } } }));
   assert.ok(markup.includes('Prova superata')); assert.ok(markup.includes('+40 XP')); assert.ok(markup.includes('Frenata al riferimento'));
 });
+
+test('driving school renders all fifty techniques with contexts, prerequisites and locked advanced courses', async () => {
+  const Panel = await component('TechniqueSchoolPanel');
+  const { publicCurriculum } = await import('../shared/techniqueCatalog.mjs');
+  const markup = renderToStaticMarkup(React.createElement(Panel, { development: { curriculum: publicCurriculum(null,1) }, pending: 0, activeRace: null, onRead() {}, onStart() {} }));
+  assert.equal((markup.match(/<article\b/g)||[]).length,50);
+  assert.ok(markup.includes('0 / 50 tecniche apprese'));
+  assert.ok(markup.includes('Quando usarla'));assert.ok(markup.includes('Corso precedente'));
+  assert.ok(markup.includes('Richiede livello 22'));
+  assert.ok(markup.includes('Tornante innevato'));assert.ok(markup.includes('Punta-tacco'));
+  assert.ok(markup.includes('Da imparare ora'));assert.ok(markup.includes('Leggi la lezione'));
+});
