@@ -833,3 +833,28 @@ test('recovery and repayment reject stale plans, forged amounts and changes duri
  for(const amount of [-1,0,999999])assert.equal((await post('/workshop/repay',{amount})).status,400);
  await prisma.garage.update({where:{id:garage.id},data:{engineHealth:100,currentFuel:20}});const race=await begin();assert.equal((await post('/workshop/recover',{quoteKey:plan.key})).status,409);await post(`/races/${race.id}/abandon`,{version:0});
 });
+
+test('tuning hub verifies ownership, exposes no account data and matches the actual mounted replacement',async()=>{
+ await post('/parts/purchase',{partId:part.id});await post(`/garage/${garage.id}/mount`,{partId:part.id});
+ const upgrade=await prisma.part.create({data:{...Object.fromEntries(Object.entries(part).filter(([key])=>key!=='id')),level:2,price:300,cvBonus:15.5,nmBonus:13.5,kgBonus:14.5,turnSlowBonus:10.25}});
+ const view=await get(`/tuning/1?garageId=${garage.id}`);assert.equal(view.status,200);assert.ok(!JSON.stringify(view.data).includes('private@example.org'));assert.ok(!JSON.stringify(view.data).includes('secret'));assert.equal((await get(`/tuning/1?garageId=${otherGarage.id}`)).status,403);
+ const offered=view.data.parts.find(p=>p.id===upgrade.id);assert.equal(offered.preview.before.cv,110);assert.equal(offered.preview.after.cv,116);assert.equal(offered.preview.installed.id,part.id);assert.equal(offered.preview.after.kg,985);
+ const key=randomUUID();const buy=await post('/parts/purchase',{partId:upgrade.id,garageId:garage.id,quoteKey:offered.preview.quoteKey},key);assert.equal(buy.status,200);const cash=await wallet();await post('/parts/purchase',{partId:upgrade.id,garageId:garage.id,quoteKey:offered.preview.quoteKey},key);assert.equal(await wallet(),cash);
+ const mounted=await post(`/garage/${garage.id}/mount`,{partId:upgrade.id,quoteKey:offered.preview.quoteKey});assert.equal(mounted.status,200,JSON.stringify(mounted.data));const actual=await prisma.garage.findUnique({where:{id:garage.id},include:{car:true,mods:{include:{part:true}}}});const {tuningMetrics}=await import('../shared/tuning.mjs');assert.deepEqual(tuningMetrics(actual),offered.preview.after);assert.equal(await stock(),1);
+ const after=(await get('/tuning/1')).data.parts.find(p=>p.id===upgrade.id);assert.equal(after.preview.alreadyMounted,true);assert.equal(after.ownedQuantity,0);
+});
+test('tuning quotes reject stale conditions, price changes and foreign cars without charging or consuming inventory',async()=>{
+ let offered=(await get('/tuning/1')).data.parts.find(p=>p.id===part.id),cash=await wallet();await prisma.part.update({where:{id:part.id},data:{price:101}});
+ assert.equal((await post('/parts/purchase',{partId:part.id,garageId:garage.id,quoteKey:offered.preview.quoteKey})).status,409);assert.equal(await wallet(),cash);assert.equal(await stock(),0);
+ offered=(await get('/tuning/1')).data.parts.find(p=>p.id===part.id);assert.equal((await post('/parts/purchase',{partId:part.id,garageId:otherGarage.id,quoteKey:offered.preview.quoteKey})).status,403);
+ await post('/parts/purchase',{partId:part.id,garageId:garage.id,quoteKey:offered.preview.quoteKey});await prisma.garage.update({where:{id:garage.id},data:{engineHealth:90}});
+ assert.equal((await post(`/garage/${garage.id}/mount`,{partId:part.id,quoteKey:offered.preview.quoteKey})).status,409);assert.equal(await stock(),1);
+});
+test('tuning access warnings use championship limits and all street requirements, and never bypass race gates',async()=>{
+ const {CHAMPIONSHIP_CATALOG}=await import('../shared/championshipCatalog.mjs');const cup=CHAMPIONSHIP_CATALOG[0];await prisma.championship.update({where:{id:championship.id},data:{name:cup.name,minCv:40,maxCv:85,minLevel:1,minPerfIndex:0}});await prisma.garage.update({where:{id:garage.id},data:{cv:80}});
+ const offered=(await get('/tuning/1')).data.parts.find(p=>p.id===part.id);const gate=offered.preview.championships[0];assert.deepEqual(gate.beforeErrors,[]);assert.match(gate.afterErrors.join(' '),/85 CV/);assert.ok(offered.preview.zones.find(z=>z.id==='industrial').afterErrors.some(reason=>reason.includes('reputazione')));
+ await post('/parts/purchase',{partId:part.id});await post(`/garage/${garage.id}/mount`,{partId:part.id,quoteKey:offered.preview.quoteKey});assert.equal((await post(`/championships/${championship.id}/enter`,{})).status,400);
+});
+test('a carless player can browse and buy inventory without a misleading car preview',async()=>{
+ await prisma.user.update({where:{id:1},data:{carDrive:0}});await prisma.garage.delete({where:{id:garage.id}});const view=(await get('/tuning/1')).data;assert.equal(view.garageId,null);assert.equal(view.parts[0].preview,null);assert.equal((await post('/parts/purchase',{partId:part.id})).status,200);
+});

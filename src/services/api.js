@@ -67,6 +67,7 @@ export const fetchMeet = userId => request(`/meet?userId=${userId}`);
 export const displayMeetCar = (userId, garageId) => action('/meet/showcase', { userId, garageId });
 export const fetchMeetLeaderboard = (trackId, modelId, setupKey) => request(`/meet/leaderboard?trackId=${trackId}&modelId=${modelId}${setupKey ? `&setupKey=${setupKey}` : ''}`);
 export const fetchParts = () => request('/parts');
+export const fetchTuning = (userId,garageId) => request(`/tuning/${userId}${garageId?`?garageId=${garageId}`:''}`);
 export const fetchTimeTrials = userId => request(`/time-trials/${userId}`);
 export const fetchTracks = () => request('/tracks');
 export const fetchStreetHub = userId => request(`/street/${userId}`);
@@ -79,8 +80,8 @@ export const fetchChampionshipEntry = (id, userId) => request(`/championship-ent
 export const equipCar = (userId, carDrive) => action(`/player/${userId}/equip`, { userId, carDrive }, 'PUT');
 export const purchaseCar = (userId, carId, marketGarageId) => action('/purchase', { userId, ...(marketGarageId ? { marketGarageId } : { carId }) });
 export const sellCar = (userId, garageId) => action('/market/sell', { userId, garageId });
-export const purchasePart = (userId, partId) => action('/parts/purchase', { userId, partId });
-export const mountPart = (garageId, partId, userId) => action(`/garage/${garageId}/mount`, { userId, partId });
+export const purchasePart = (userId, partId, preparation) => action('/parts/purchase', { userId, partId, ...preparation });
+export const mountPart = (garageId, partId, userId, quoteKey) => action(`/garage/${garageId}/mount`, { userId, partId, ...(quoteKey ? {quoteKey}: {}) });
 export const unmountPart = (garageId, modId, userId) => action(`/garage/${garageId}/mods/${modId}`, { userId }, 'DELETE');
 export const fetchWorkshop = userId => request(`/workshop/${userId}`);
 export const recoverAtWorkshop = (userId, quoteKey) => action('/workshop/recover', {userId,quoteKey});

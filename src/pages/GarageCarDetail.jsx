@@ -6,7 +6,12 @@ import useInventoryStore from '../store/inventoryStore';
 import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 import GarageTabs from '../components/GarageTabs';
-import { unmountPart, mountPart } from '../services/api';
+import { unmountPart, mountPart, fetchTuning } from '../services/api';
+import TuningPreview from '../components/TuningPreview';
+import useRequestStore from '../store/requestStore';
+import useRaceStore from '../store/raceStore';
+import {performanceIndex} from '../../shared/vehiclePerformance.mjs';
+import '../components/tuning.css';
 
 import { CAR_STAT_LABELS } from '../logic/raceEngine';
 
@@ -19,6 +24,11 @@ export default function GarageCarDetail() {
   const { triggerEvent } = useGameStore();
 
   const [activeTab, setActiveTab] = useState('installed');
+  const [review,setReview]=useState(null);
+  const [reviewLoading,setReviewLoading]=useState(false);
+  const money=usePlayerStore(state=>state.money);
+  const pending=useRequestStore(state=>state.pending);
+  const activeRace=useRaceStore(state=>state.activeRace);
 
   const car = cars.find(c => c.id === parseInt(id));
   const stats = car ? getCarStats(car.id) : null;
@@ -26,35 +36,26 @@ export default function GarageCarDetail() {
   if (!car) return <div className="p-10 text-center font-bold">Auto non trovata...</div>;
 
   const handleAction = async (type, partId, partName) => {
-      if (type === 'unmount') {
-         try {
-            const res = await unmountPart(car.id, partId, userId);
-            if (res.success) {
-               triggerEvent({ type: 'info', title: 'Meccanico', message: `Hai rimosso "${partName}". Il ricambio è tornato in inventario.`});
-               }
-         } catch {
-            triggerEvent({ type: 'error', title: 'Errore Officina', message: 'Impossibile smontare il pezzo.'});
-         }
-      } else if (type === 'mount') {
-         try {
-            const samePartMounted = car.mods?.find(m => m.partId === partId);
-            if (samePartMounted) {
-               triggerEvent({ type: 'warning', title: 'Già Installato', message: 'Questo pezzo è già montato su questa vettura.'});
-               return;
-            }
-
-            const res = await mountPart(car.id, partId, userId);
-            if (res.success) {
-               triggerEvent({ 
-                 type: 'success', 
-                 title: 'Montaggio Completato', 
-                 message: `Hai installato "${partName}". Le prestazioni sono state aggiornate.`
-               });
-               }
-         } catch {
-            triggerEvent({ type: 'error', title: 'Errore Officina', message: 'Impossibile montare il pezzo.'});
-         }
+    try {
+      if(type==='unmount'){
+        await unmountPart(car.id,partId,userId);
+        triggerEvent({type:'info',title:'Meccanico',message:`Hai rimosso "${partName}". Il ricambio è tornato in inventario.`});
+      }else{
+        setReviewLoading(true);
+        const data=await fetchTuning(userId,car.id);
+        const selected=data.parts.find(part=>part.id===partId);
+        if(!selected)throw new Error('Ricambio non disponibile');
+        setReview(selected);
       }
+    }catch(error){triggerEvent({type:'error',title:'Errore Officina',message:error.message});}
+    finally{setReviewLoading(false);}
+  };
+  const confirmMount=async()=>{
+    try{
+      await mountPart(car.id,review.id,userId,review.preview.quoteKey);
+      setReview(null);
+      triggerEvent({type:'success',title:'Montaggio completato',message:'Preparazione aggiornata. Il pezzo sostituito è tornato in magazzino.'});
+    }catch(error){setReview(null);triggerEvent({type:'error',title:'Montaggio non riuscito',message:error.message+' Riapri il confronto per aggiornare il preventivo.'});}
   };
 
   return (
@@ -62,6 +63,7 @@ export default function GarageCarDetail() {
       <div className="flex flex-col bg-win98-gray text-black">
         
         <GarageTabs />
+        {review&&<section className="tuning-garage-review" aria-label="Conferma preparazione"><button className="win98-btn" autoFocus onClick={()=>setReview(null)}>Chiudi confronto</button><TuningPreview part={review} carName={`${car.brand} ${car.name}`} money={money} disabled={pending>0||Boolean(activeRace)} onMount={confirmMount}/></section>}
 
         {/* Sub-header Navigation */}
         <div className="p-2 border-b border-win98-darkGray flex justify-between items-center bg-win98-blue text-white">
@@ -72,7 +74,7 @@ export default function GarageCarDetail() {
              ⬅ Torna Indietro
            </button>
            <div className="font-pixel text-yellow-300 text-xl">
-              {car.brand} {car.name} - LIVELLO PRESTAZIONI S1
+              {car.brand} {car.name} · IP {performanceIndex(car)}
            </div>
         </div>
 
@@ -213,10 +215,11 @@ export default function GarageCarDetail() {
                                     {part.kgBonus > 0 && <span className="text-[9px] font-bold bg-blue-100 text-blue-800 px-1 border border-blue-600">-{part.kgBonus} KG</span>}
                                  </div>
                                  <button 
+                                   disabled={reviewLoading||pending>0||Boolean(activeRace)}
                                    onClick={() => handleAction('mount', part.id, part.name)}
                                    className="px-3 py-1 bg-green-100 text-green-800 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-xs font-bold hover:bg-green-800 hover:text-white transition-colors"
                                  >
-                                   INSTALLA
+                                   CONFRONTA E MONTA
                                  </button>
                               </div>
                            </div>
@@ -233,6 +236,7 @@ export default function GarageCarDetail() {
 
         </div>
       </div>
+
     </Win98Window>
   );
 }

@@ -1,5 +1,5 @@
 const {randomInt,randomUUID,createHash}=require('node:crypto');
-const {STREET_ZONES,STREET_STYLES,streetPerformance,streetPilot,streetReward,repeatFactor}=require('../shared/streetCatalog.mjs');
+const {STREET_ZONES,STREET_STYLES,streetPerformance,streetPilot,streetReward,repeatFactor,streetAccessReasons:access}=require('../shared/streetCatalog.mjs');
 const {buildTacticalTrack}=require('../shared/trackGeometry.mjs');
 const {routeProfileFor}=require('../shared/raceContext.mjs');
 const {simulateBlock,DEFAULT_DECISION}=require('../shared/tacticalRace.mjs');
@@ -16,15 +16,6 @@ async function context(tx,userId){
   let garage=await tx.garage.findFirst({where:{id:user.carDrive,userId},include:garageInclude});
   if(garage)garage={...garage,...restoredHandlingStats(garage)};
   return {user,progress,growth,cars,garage,state:parseProgress(progress)};
-}
-function access(zone,ctx){
-  const reasons=[];
-  if(ctx.user.level<zone.minLevel)reasons.push(`Livello pilota ${zone.minLevel}`);
-  if(!ctx.garage)reasons.push('Equipaggia un’auto');
-  else if(streetPerformance(ctx.garage)<zone.minPerformance)reasons.push(`Indice prestazioni attuale ${zone.minPerformance}`);
-  if(zone.previousZone&&(ctx.state[zone.previousZone]?.reputation||0)<zone.minReputation)reasons.push(`${zone.minReputation} reputazione in ${STREET_ZONES.find(item=>item.id===zone.previousZone).name}`);
-  if(zone.technique&&!ctx.growth?.lessonPassed)reasons.push('Scuola guida: Rilascio progressivo');
-  return reasons;
 }
 function findCar(ctx,rival){return ctx.cars.find(car=>car.name===rival.carName);}
 function rivalCar(car,rival){return {...car,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,currentFuel:20,fuelType:'Normale',km:0,serviceKm:0};}

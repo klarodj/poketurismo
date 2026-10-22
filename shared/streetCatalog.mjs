@@ -31,3 +31,13 @@ STREET_ZONES[0].tracks.push(STREET_TRACKS[0].name);
 STREET_ZONES[1].tracks=[STREET_TRACKS[1].name];
 STREET_ZONES[3].tracks.push('Grossglockner · Ferleiten → Fuscher Törl');
 STREET_ZONES[4].tracks=[STREET_TRACKS[2].name];
+
+export function streetAccessReasons(zone,ctx){
+ const reasons=[];
+ if(ctx.user.level<zone.minLevel)reasons.push(`Livello pilota ${zone.minLevel}`);
+ if(!ctx.garage)reasons.push('Equipaggia un’auto');
+ else if(streetPerformance(ctx.garage)<zone.minPerformance)reasons.push(`Indice prestazioni attuale ${zone.minPerformance}`);
+ if(zone.previousZone&&(ctx.state[zone.previousZone]?.reputation||0)<zone.minReputation)reasons.push(`${zone.minReputation} reputazione in ${STREET_ZONES.find(item=>item.id===zone.previousZone).name}`);
+ if(zone.technique&&!ctx.growth?.lessonPassed)reasons.push('Scuola guida: Rilascio progressivo');
+ return reasons;
+}

@@ -73,4 +73,4 @@ async function consumePart(tx, userId, partId) {
   const result = await tx.inventoryPart.updateMany({ where: { userId, partId, quantity: { gt: 0 } }, data: { quantity: { decrement: 1 } } });
   if (result.count !== 1) fail(400, 'Ricambio non presente nel tuo inventario');
 }
-module.exports = { operation, transaction, assertIdle, inventory, addPart, consumePart, garageInclude };
+module.exports = { canonical, operation, transaction, assertIdle, inventory, addPart, consumePart, garageInclude };

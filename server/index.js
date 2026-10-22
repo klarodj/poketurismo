@@ -14,6 +14,7 @@ const { publicEntry, createContract } = require('./championships');
 const { championshipInfo } = require('../shared/championshipCatalog.mjs');
 const carMeet = require('./carMeet');
 const workshop = require('./workshop');
+const tuning=require('./tuning');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -53,6 +54,7 @@ app.get('/api/garage/:userId', endpoint(async req => {
 }));
 app.get('/api/cars', endpoint(async () => (await prisma.car.findMany({ include: { brand: true }, orderBy: { id: 'asc' } })).map(car => ({ ...car, price: newCarPrice(car) }))));
 app.get('/api/brands', endpoint(() => prisma.brand.findMany({ orderBy: { name: 'asc' } })));
+app.get('/api/tuning/:userId',endpoint(req=>transaction(prisma,tx=>tuning.tuning(tx,accounts.playerId(req,req.params.userId),req.query.garageId))));
 app.get('/api/parts', endpoint(() => prisma.part.findMany({ orderBy: { id: 'asc' } })));
 app.get('/api/tracks', endpoint(async () => (await prisma.track.findMany({ include: { type: true, surface: true, meteo: true, builds: { include: { section: true }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })).map(track => ({ ...track, catalog: trackCatalogInfo(track.name) }))));
 app.get('/api/market', endpoint(async () => {
@@ -100,6 +102,7 @@ mutate('/api/market/sell', 'sell-car', async (tx, userId, body) => {
 mutate('/api/parts/purchase', 'purchase-part', async (tx, userId, body) => {
   const part = await tx.part.findUnique({ where: { id: positiveId(body.partId) } });
   if (!part) fail(404, 'Ricambio inesistente');
+  if(body.quoteKey!==undefined)tuning.validateQuote(await ownGarage(tx,userId,body.garageId),part,body.quoteKey);
   await charge(tx, userId, part.price);
   await addPart(tx, userId, part.id);
   return snapshot(tx, userId);
@@ -108,6 +111,7 @@ mutate('/api/garage/:garageId/mount', 'mount-part', async (tx, userId, body, par
   const garage = await ownGarage(tx, userId, params.garageId);
   const part = await tx.part.findUnique({ where: { id: positiveId(body.partId) } });
   if (!part) fail(404, 'Ricambio inesistente');
+  if(body.quoteKey!==undefined)tuning.validateQuote(garage,part,body.quoteKey);
   const conflict = garage.mods.find(mod => mod.part.name === part.name);
   if (conflict?.partId === part.id) fail(400, 'Ricambio già montato');
   await consumePart(tx, userId, part.id);

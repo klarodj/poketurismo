@@ -1,11 +1,6 @@
 const {championshipCarErrors}=require('../shared/championshipCatalog.mjs');
 const PILOT_STATS = ['brave', 'clean', 'reflex', 'shift', 'acro', 'turn', 'brake', 'throttle'];
-const PART_STATS = {
-  cv: ['cvBonus', true], nm: ['nmBonus', true], kg: ['kgBonus', true, -1],
-  speed: ['speedBonus'], acceleration: ['accelBonus'], revving: ['revvBonus'],
-  transmission: ['transBonus'], turnSlow: ['turnSlowBonus'], turnFast: ['turnFastBonus'],
-  brake: ['brakeBonus'], traction: ['tractBonus']
-};
+const {partStatDeltas,restoredTuningStats}=require('../shared/tuning.mjs');
 function fail(status, message) { const error = new Error(message); error.status = status; throw error; }
 function positiveId(value) {
   if (!['string', 'number'].includes(typeof value) || value === '') fail(400, 'ID non valido');
@@ -13,12 +8,7 @@ function positiveId(value) {
   if (!Number.isSafeInteger(id) || id <= 0) fail(400, 'ID non valido');
   return id;
 }
-function restoredHandlingStats(garage) {
-  return Object.fromEntries([
-    ['revving', 'revvBonus'], ['transmission', 'transBonus'],
-    ['turnSlow', 'turnSlowBonus'], ['turnFast', 'turnFastBonus']
-  ].map(([stat, bonus]) => [stat, garage.car[stat] + garage.mods.reduce((sum, mod) => sum + mod.part[bonus], 0)]));
-}
+const restoredHandlingStats=restoredTuningStats;
 function publicPlayer(user) {
   if (!user) return user;
   const result = { ...user };
@@ -30,10 +20,7 @@ function publicPlayer(user) {
   return result;
 }
 function partChanges(part, direction = 1) {
-  return Object.fromEntries(Object.entries(PART_STATS).map(([stat, [bonus, round, sign = 1]]) => {
-    const value = round ? Math.round(part[bonus]) : part[bonus];
-    return [stat, { increment: value * sign * direction }];
-  }));
+  return Object.fromEntries(Object.entries(partStatDeltas(part,direction)).map(([stat,value])=>[stat,{increment:value}]));
 }
 function checkChampionship(user, car, championship, legacy = false) {
   if (!car || car.userId !== user.id) fail(400, 'Equipaggia una tua auto');
