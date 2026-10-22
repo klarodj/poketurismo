@@ -122,8 +122,6 @@
 .account-form-actions { padding-top: 4px; justify-content: flex-end; }
 .account-dialog .account-confirm { font-weight: 700; outline: 1px solid #000; outline-offset: 1px; }
 .account-dialog .account-confirm:focus-visible { outline: 2px dotted #000; outline-offset: -6px; }
-.account-session { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 16px; background: #c0c0c0; color: #000; border-bottom: 2px groove #fff; }
-.account-session .win98-btn { padding: 5px 14px; min-height: 30px; }
 @media (max-width: 520px) {
   .account-desktop { padding: 20px 10px; align-items: flex-start; }
   .account-body { padding: 16px 12px; }

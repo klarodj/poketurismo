@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
 import FuelGauge from './FuelGauge';
 import useRaceStore from '../store/raceStore';
+import AccountContext from '../contexts/AccountContext';
 
 export default function HUD() {
   const navigate = useNavigate();
+  const account = useContext(AccountContext);
   const activeRace = useRaceStore(state => state.activeRace);
-  const { money, level } = usePlayerStore();
+  const { money, level, username } = usePlayerStore();
   const { equippedCarId, toggleHistory, travel } = useGameStore();
   const { cars } = useGarageStore();
   
@@ -22,8 +24,8 @@ export default function HUD() {
   const equippedCar = cars.find(c => c.id === equippedCarId);
 
   return (
-    <div className="w-full bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray flex flex-row justify-between items-center px-2 py-1.5 shadow-win98-outset z-50 relative gap-2">
-      <div className="flex gap-1.5 sm:gap-4 items-center flex-shrink-0">
+    <div className="w-full bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray flex flex-row flex-wrap justify-between items-center px-2 py-1.5 shadow-win98-outset z-50 relative gap-2">
+      <div className="flex flex-wrap gap-1.5 sm:gap-4 items-center min-w-0 max-w-full">
         <button 
           onClick={handleMapClick}
           className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white text-xl sm:text-2xl shadow-[inset_-1px_-1px_0_rgba(0,0,0,0.5)]"
@@ -63,7 +65,7 @@ export default function HUD() {
         </div>
       </div>
 
-      <div className="flex items-center gap-1 sm:gap-4 overflow-hidden">
+      <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-4 min-w-0 max-w-full ml-auto">
         {equippedCar ? (
           <>
             <div className="bg-win98-blue text-white px-1.5 sm:px-2 py-0.5 sm:py-1 font-bold border-2 border-t-win98-darkGray border-l-win98-darkGray border-b-white border-r-white text-[11px] sm:text-sm whitespace-nowrap truncate max-w-[130px] sm:max-w-none">
@@ -74,6 +76,10 @@ export default function HUD() {
         ) : (
           <div className="text-gray-500 italic font-bold text-[10px] sm:text-sm whitespace-nowrap">No Car</div>
         )}
+        {account && <>
+          <span className="text-sm font-bold truncate max-w-[120px] sm:max-w-[180px]" title={username}>👤 {username}</span>
+          <button type="button" className="win98-btn" onClick={account.logout} disabled={account.busy} aria-label="Esci dalla partita">Esci</button>
+        </>}
       </div>
     </div>
   );

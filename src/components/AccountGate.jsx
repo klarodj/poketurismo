@@ -3,6 +3,7 @@ import { AuthClient } from '@supabase/auth-js';
 import { configureIdentity, fetchAuthConfig, fetchAccount, createPilot, fetchState } from '../services/api';
 import { applyGameState, resetGameState } from '../services/gameState';
 import Win98Window from './Win98Window';
+import AccountContext from '../contexts/AccountContext';
 import './AccountGate.css';
 
 const labels = { brave: 'Coraggio', clean: 'Pulizia', reflex: 'Riflessi', shift: 'Cambio', acro: 'Acrobazia', turn: 'Curva', brake: 'Frenata', throttle: 'Acceleratore' };
@@ -106,7 +107,7 @@ export default function AccountGate({ children }) {
     if (result.error) await client.auth.signOut({ scope: 'local' });
   }
   if (ready && config && !config.enabled) return children;
-  if (ready && profile?.player) return <><div className="account-session"><span>Pilota: {profile.player.username}</span><button className="win98-btn" onClick={() => perform(logout)} disabled={busy}>Esci</button></div>{children}</>;
+  if (ready && profile?.player) return <AccountContext.Provider value={{ logout: () => perform(logout), busy }}>{children}</AccountContext.Provider>;
   const points = stats && config ? 8 - config.stats.reduce((sum, key) => sum + stats[key] - 10, 0) : 0;
   const creatingPilot = Boolean(session && profile && !profile.player);
   return <main className="account-desktop">
