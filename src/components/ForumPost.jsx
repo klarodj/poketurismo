@@ -1,6 +1,7 @@
 import React from 'react';
+import UsedCarDetails from './UsedCarDetails';
 
-export default function ForumPost({ author, avatar, date, title, carDetails, price, onBuy, disabled = false, remainingMoney }) {
+export default function ForumPost({ author, avatar, date, title, carDetails, listing, price, onBuy, disabled = false, remainingMoney }) {
   return (
     <div className="border border-[#7799CC] mb-4 bg-white font-sans text-sm shadow-[1px_1px_2px_rgba(0,0,0,0.1)]">
       {/* Forum Thread Header */}
@@ -41,6 +42,7 @@ export default function ForumPost({ author, avatar, date, title, carDetails, pri
               {Number.isFinite(carDetails.currentFuel) && <><strong>Carburante incluso:</strong> {carDetails.currentFuel.toLocaleString('it-IT')} L<br/></>}
               {remainingMoney >= 0 ? <span className="text-green-800">Dopo l’acquisto ti restano €{remainingMoney.toLocaleString('it-IT')}.</span> : <span className="text-red-800">Servono altri €{Math.abs(remainingMoney).toLocaleString('it-IT')}.</span>}
             </p>
+            {listing && <UsedCarDetails listing={listing} />}
           </div>
           
           <div className="border-t border-dashed border-gray-300 pt-2 flex justify-between items-center mt-4">

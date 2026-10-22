@@ -88,6 +88,7 @@ export default function UsedCars() {
             author="Mercatino Poketurismo"
             date="Annuncio attivo"
             title={`${item.car.brand.name} ${item.car.name}`}
+            listing={item}
             carDetails={{
               ...item.car,
               brand: item.car.brand.name,
