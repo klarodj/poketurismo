@@ -7,6 +7,7 @@ const { operation, transaction, inventory, addPart, consumePart, garageInclude }
 const { startRace, turnRace, snapshot, presentRace } = require('./races');
 const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
 const { readTechnique } = require('./techniqueSchool');
+const { newCarPrice, marketAskingPrice, usedRetailPrice, tradeInValue, publicMarketItem } = require('../shared/carEconomy.mjs');
 const app = express();
 const prisma = new PrismaClient();
 const accounts = require('./accounts');
@@ -42,15 +43,15 @@ app.get('/api/state/:userId', endpoint(req => transaction(prisma, tx => snapshot
 app.get('/api/inventory/:userId', endpoint(req => inventory(prisma, accounts.playerId(req, req.params.userId))));
 app.get('/api/garage/:userId', endpoint(async req => {
   const items = await prisma.garage.findMany({ where: { userId: accounts.playerId(req, req.params.userId) }, include: garageInclude });
-  return items.map(item => ({ ...item, ...restoredHandlingStats(item) }));
+  return items.map(item => ({ ...item, ...restoredHandlingStats(item), resaleValue: tradeInValue(item.car, item) }));
 }));
-app.get('/api/cars', endpoint(() => prisma.car.findMany({ include: { brand: true }, orderBy: { id: 'asc' } })));
+app.get('/api/cars', endpoint(async () => (await prisma.car.findMany({ include: { brand: true }, orderBy: { id: 'asc' } })).map(car => ({ ...car, price: newCarPrice(car) }))));
 app.get('/api/brands', endpoint(() => prisma.brand.findMany({ orderBy: { name: 'asc' } })));
 app.get('/api/parts', endpoint(() => prisma.part.findMany({ orderBy: { id: 'asc' } })));
 app.get('/api/tracks', endpoint(() => prisma.track.findMany({ include: { type: true, surface: true, meteo: true, builds: { include: { section: true }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })));
 app.get('/api/market', endpoint(async () => {
   const cars = await prisma.garage.findMany({ where: { userId: -1 }, include: garageInclude });
-  return cars.map(item => ({ ...item, ...restoredHandlingStats(item) }));
+  return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item) })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
 }));
 mutate('/api/player/:id/equip', 'equip', async (tx, userId, body, params) => {
   if (positiveId(params.id) !== userId) fail(403, 'Giocatore non corrispondente');
@@ -61,15 +62,15 @@ mutate('/api/player/:id/equip', 'equip', async (tx, userId, body, params) => {
 mutate('/api/purchase', 'purchase-car', async (tx, userId, body) => {
   if (body.marketGarageId !== undefined) {
     const id = positiveId(body.marketGarageId);
-    const listing = await tx.garage.findFirst({ where: { id, userId: -1 } });
+    const listing = await tx.garage.findFirst({ where: { id, userId: -1 }, include: garageInclude });
     if (!listing) fail(404, 'Annuncio non più disponibile');
-    await charge(tx, userId, listing.sellPrice);
+    await charge(tx, userId, marketAskingPrice(listing.car, listing));
     await tx.garage.update({ where: { id }, data: { userId, sellPrice: 0 } });
   } else {
     const carId = positiveId(body.carId);
     const car = await tx.car.findUnique({ where: { id: carId } });
     if (!car) fail(404, 'Auto inesistente');
-    await charge(tx, userId, car.price);
+    await charge(tx, userId, newCarPrice(car));
     const stats = Object.fromEntries(['cv', 'nm', 'kg', 'speed', 'acceleration', 'revving', 'transmission', 'turnSlow', 'turnFast', 'brake', 'traction'].map(key => [key, car[key]]));
     await tx.garage.create({ data: { userId, carId, ...stats } });
   }
@@ -77,9 +78,10 @@ mutate('/api/purchase', 'purchase-car', async (tx, userId, body) => {
 });
 mutate('/api/market/sell', 'sell-car', async (tx, userId, body) => {
   const item = await ownGarage(tx, userId, body.garageId);
-  const sellValue = Math.max(0, Math.floor(item.cv * 10));
+  const sellValue = tradeInValue(item.car, item);
+  const askingPrice = usedRetailPrice(item.car, item);
   await tx.user.upsert({ where: { id: -1 }, update: {}, create: { id: -1, username: 'Mercato', password: '', mail: '', carDrive: 0, ...Object.fromEntries(PILOT_STATS.map(key => [key, 0])) } });
-  await tx.garage.update({ where: { id: item.id }, data: { userId: -1, sellPrice: sellValue } });
+  await tx.garage.update({ where: { id: item.id }, data: { userId: -1, sellPrice: askingPrice } });
   const user = await tx.user.findUnique({ where: { id: userId } });
   await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(sellValue) }, ...(user.carDrive === item.id ? { carDrive: 0 } : {}) } });
   return { ...await snapshot(tx, userId), sellValue };

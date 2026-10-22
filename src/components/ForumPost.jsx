@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ForumPost({ author, avatar, date, title, carDetails, price, onBuy }) {
+export default function ForumPost({ author, avatar, date, title, carDetails, price, onBuy, disabled = false, remainingMoney }) {
   return (
     <div className="border border-[#7799CC] mb-4 bg-white font-sans text-sm shadow-[1px_1px_2px_rgba(0,0,0,0.1)]">
       {/* Forum Thread Header */}
@@ -33,23 +33,27 @@ export default function ForumPost({ author, avatar, date, title, carDetails, pri
             <p className="mb-4 text-[#333333]">
               Vendo causa inutilizzo la mia {carDetails.brand} {carDetails.name}.<br/>
               Macchina tenuta da amatore, motore {carDetails.engineType}, trazione {carDetails.driveType}.<br/><br/>
+              {carDetails.marketTier && <><strong>Fascia:</strong> {carDetails.marketTier}{carDetails.starterFriendly ? ' · adatta per iniziare' : ''}<br/></>}
+              <strong>Potenza:</strong> {carDetails.cv} CV · <strong>Peso:</strong> {carDetails.kg} kg<br/>
               <strong>Kilometri:</strong> {carDetails.km.toLocaleString()} KM<br/>
               <strong>Stato Motore:</strong> {carDetails.engineHealth}%<br/>
               <strong>Gomme:</strong> {carDetails.tireGrip}%<br/><br/>
-              Prezzo non trattabile, no perditempo.
+              {Number.isFinite(carDetails.currentFuel) && <><strong>Carburante incluso:</strong> {carDetails.currentFuel.toLocaleString('it-IT')} L<br/></>}
+              {remainingMoney >= 0 ? <span className="text-green-800">Dopo l’acquisto ti restano €{remainingMoney.toLocaleString('it-IT')}.</span> : <span className="text-red-800">Servono altri €{Math.abs(remainingMoney).toLocaleString('it-IT')}.</span>}
             </p>
           </div>
           
           <div className="border-t border-dashed border-gray-300 pt-2 flex justify-between items-center mt-4">
-            <span className="text-[#006699] font-bold underline cursor-pointer hover:text-red-500 text-xs">
-              Manda Messaggio Privato (MP)
+            <span className="text-[#006699] font-bold text-xs">
+              Acquisto dal mercato
             </span>
             
             <button 
               onClick={onBuy}
-              className="bg-[#006699] text-white font-bold px-4 py-1 text-xs hover:bg-[#004e7a] border border-[#003366] shadow-sm transform active:translate-y-[1px]"
+              disabled={disabled}
+              className="bg-[#006699] text-white font-bold px-4 py-1 text-xs hover:bg-[#004e7a] border border-[#003366] shadow-sm transform active:translate-y-[1px] disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
-              Compra per €{price}
+              Compra per €{price.toLocaleString('it-IT')}
             </button>
           </div>
         </div>

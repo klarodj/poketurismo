@@ -1,7 +1,7 @@
 const { fail, PILOT_STATS, publicPlayer } = require('./gameRules');
 const { transaction } = require('./persistence');
 const enabled = process.env.POKETURISMO_AUTH_ENABLED === '1';
-const initialMoneyCents = 1_000_000;
+const { INITIAL_MONEY_CENTS: initialMoneyCents } = require('../shared/carEconomy.mjs');
 const avatars = ['blue', 'red', 'green', 'yellow'];
 function configuredAdmin(user) {
   return (process.env.ADMIN_EMAILS || '').split(',').map(email => email.trim().toLowerCase()).filter(Boolean).includes(user.email?.toLowerCase());

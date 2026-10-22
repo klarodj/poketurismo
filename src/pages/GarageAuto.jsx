@@ -21,7 +21,7 @@ export default function GarageAuto() {
   const raceStats = selectedCar ? getCarStats(selectedCar.id) : null;
   const perfIndex = raceStats ? Math.round((raceStats.speed + raceStats.acceleration + raceStats.turnSlow + raceStats.turnFast + raceStats.brake + raceStats.traction) / 6) : 0;
   
-  const estimatedValue = selectedCar ? Math.floor((selectedCar.cv * 20) * 0.5) : 0;
+  const estimatedValue = selectedCar?.resaleValue ?? 0;
 
   const handleSell = async () => {
     if (!selectedCar) return;

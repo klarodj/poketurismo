@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGameStore from '../store/gameStore';
 import ForumPost from '../components/ForumPost';
+import useRequestStore from '../store/requestStore';
 import { fetchMarket, purchaseCar } from '../services/api';
 
 export default function UsedCars() {
@@ -9,6 +10,11 @@ export default function UsedCars() {
   const { triggerEvent } = useGameStore();
   const [marketCars, setMarketCars] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [tier, setTier] = useState('all');
+  const [affordableOnly, setAffordableOnly] = useState(false);
+  const pending = useRequestStore(state => state.pending);
+  const tiers = [...new Map(marketCars.filter(item => item.marketTier).map(item => [item.marketTier.id, item.marketTier.name])).entries()];
+  const filtered = marketCars.filter(item => (tier === 'all' || item.marketTier?.id === tier) && (!affordableOnly || item.sellPrice <= money));
 
   useEffect(() => {
     fetchMarket().then(data => {
@@ -38,14 +44,14 @@ export default function UsedCars() {
         triggerEvent({
           type: 'error',
           title: 'Errore Forum',
-          message: 'Il venditore ha annullato la transazione all\'ultimo secondo.'
+          message: 'Annuncio non più disponibile o acquisto non riuscito. Ricarica il mercato e riprova.'
         });
       }
     } else {
       triggerEvent({
         type: 'error',
         title: 'Fondi Insufficienti',
-        message: 'Non hai i soldi richiesti. Il venditore ti ha bloccato.'
+        message: 'Il prezzo supera il tuo saldo disponibile.'
       });
     }
   };
@@ -58,12 +64,13 @@ export default function UsedCars() {
         <div className="text-xs mt-1 text-[#D1D7DC]">Indice del forum ➔ Mercatino Vendo Auto</div>
       </div>
       
-      {/* Search / Breadcrumbs bar */}
-      <div className="flex justify-between items-center px-4 py-2 bg-[#EFEFEF] border border-[#D1D7DC] mb-4 text-sm text-[#006699] font-bold">
-        <span>Argomenti: 2</span>
-        <button className="bg-[#EFEFEF] border border-[#7799CC] px-2 py-1 hover:bg-white text-xs">
-          Nuovo Argomento
-        </button>
+      <div className="px-4 mb-4 space-y-3 text-sm">
+        <p className="font-bold text-[#006699]">Saldo disponibile: €{money.toLocaleString('it-IT')} · Annunci: {filtered.length}</p>
+        <p>Le auto Primi passi sono adatte per cominciare. Conserva un margine per carburante, gomme e manutenzione.</p>
+        <div className="flex flex-wrap items-center gap-4">
+          <label>Fascia <select className="bg-white border-2 border-gray-500 px-2 py-1 ml-2" value={tier} onChange={event => setTier(event.target.value)}><option value="all">Tutte le fasce</option>{tiers.map(([id,name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+          <label className="flex items-center gap-2"><input type="checkbox" checked={affordableOnly} onChange={event => setAffordableOnly(event.target.checked)} />Solo auto nel mio budget</label>
+        </div>
       </div>
 
       <div className="px-4 pb-4">
@@ -71,24 +78,28 @@ export default function UsedCars() {
           <div className="bg-white p-4 border border-[#7799CC] italic text-[#006699]">
             Connessione al server del forum in corso (56k modem sound)...
           </div>
-        ) : marketCars.length === 0 ? (
+        ) : filtered.length === 0 ? (
           <div className="bg-white p-4 border border-[#7799CC] text-center">
-            Non ci sono annunci attivi in questa sezione.
+            Nessun annuncio corrisponde ai filtri selezionati.
           </div>
-        ) : marketCars.map(item => (
+        ) : filtered.map(item => (
           <ForumPost 
             key={item.id}
-            author="Utente_Anonimo" // Legacy DB doesn't have sellers
-            date="Oggi, 12:44"
+            author="Mercatino Poketurismo"
+            date="Annuncio attivo"
             title={`${item.car.brand.name} ${item.car.name}`}
             carDetails={{
               ...item.car,
               brand: item.car.brand.name,
+              cv: item.cv, kg: item.kg, currentFuel: item.currentFuel,
+              marketTier: item.marketTier?.name, starterFriendly: item.starterFriendly,
               km: item.km,
               engineHealth: item.engineHealth,
               tireGrip: item.tireGrip,
             }}
             price={item.sellPrice}
+            disabled={pending > 0 || money < item.sellPrice}
+            remainingMoney={money - item.sellPrice}
             onBuy={() => handleBuy(item)}
           />
         ))}

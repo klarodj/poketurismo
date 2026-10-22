@@ -1,6 +1,7 @@
 const { randomInt } = require('node:crypto');
 const { fail, positiveId, restoredHandlingStats, checkChampionship, charge, cents, publicPlayer } = require('./gameRules');
 const { inventory, garageInclude } = require('./persistence');
+const { tradeInValue } = require('../shared/carEconomy.mjs');
 const { CAR_STATS, PILOT_STATS, advanceRace, performance } = require('./raceEngine');
 const { DEMO_TRACK, buildTacticalTrack } = require('../shared/trackGeometry.mjs');
 const { DECISION_OPTIONS, decisionPreview } = require('../shared/tacticalRace.mjs');
@@ -22,7 +23,7 @@ async function snapshot(tx, userId, race) {
   const cars = await tx.garage.findMany({ where: { userId }, include: garageInclude, orderBy: { id: 'asc' } });
   const active = await tx.raceSession.findFirst({ where: { userId, status: 'active' }, select: { id: true, mode: true } });
   return { success: true, activeRace: active, ...(race ? { race: presentRace(race) } : {}), player: publicPlayer(user),
-    development: await development(tx, userId), garage: cars.map(car => ({ ...car, ...restoredHandlingStats(car) })), inventory: await inventory(tx, userId) };
+    development: await development(tx, userId), garage: cars.map(car => ({ ...car, ...restoredHandlingStats(car), resaleValue: tradeInValue(car.car, car) })), inventory: await inventory(tx, userId) };
 }
 function carSnapshot(garage) {
   return { ...Object.fromEntries([...CAR_STATS, 'cv', 'nm', 'kg', 'km', 'engineHealth', 'tireGrip', 'serviceKm', 'currentFuel', 'fuelType'].map(key => [key, garage[key]])),

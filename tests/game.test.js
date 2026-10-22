@@ -69,7 +69,7 @@ test('player omits private fields and exposes euro balance derived from cents', 
 test('car purchase uses catalogue price and duplicate delivery charges exactly once', async () => {
   const key = randomUUID(), body = { carId: car.id, price: -50000 };
   const a = await post('/purchase', body, key), b = await post('/purchase', body, key);
-  assert.equal(a.status, 200); assert.deepEqual(b, a); assert.equal(await wallet(), 9500000);
+  assert.equal(a.status, 200); assert.deepEqual(b, a); assert.equal(await wallet(), 8500000);
   assert.equal(await prisma.garage.count({ where: { userId: 1 } }), 2);
 });
 test('reusing operation key for a different request is rejected', async () => {
@@ -570,4 +570,28 @@ test('modern technique practice requires actual completed use, respects its cap 
   assert.equal(JSON.parse((await prisma.driverDevelopment.findUnique({where:{userId:1}})).techniqueProgress)['exit-line'].practice,0);
   state.sandbox=false;state.failure='abandoned';await prisma.$transaction(tx=>settleDevelopment(tx,1,state));
   assert.equal(JSON.parse((await prisma.driverDevelopment.findUnique({where:{userId:1}})).techniqueProgress)['exit-line'].practice,0);
+});
+
+test('market stock and price revision run once without altering players or their owned cars', async()=>{
+  const {applyStock}=require('../server/marketStock');
+  const user=await prisma.user.findUnique({where:{id:1}}),owned=await prisma.garage.findMany({where:{userId:1}});
+  const first=await applyStock(prisma),count=await prisma.garage.count({where:{userId:-1}});
+  assert.equal(first.applied,true);assert.ok(count>0);assert.equal((await applyStock(prisma)).applied,false);
+  assert.equal(await prisma.garage.count({where:{userId:-1}}),count);
+  assert.deepEqual(await prisma.user.findUnique({where:{id:1}}),user);assert.deepEqual(await prisma.garage.findMany({where:{userId:1}}),owned);
+});
+test('used purchase applies the same protected asking price shown by the market', async()=>{
+  const {marketAskingPrice}=require('../shared/carEconomy.mjs');
+  await prisma.user.create({data:{id:-1,username:'Market',password:'',mail:'',carDrive:0,...pilot}});
+  const listing=await prisma.garage.create({data:{userId:-1,carId:car.id,cv:car.cv,nm:car.nm,kg:car.kg,...stats,sellPrice:1}});
+  const shown=(await get('/market')).data.find(item=>item.id===listing.id);assert.ok(shown.sellPrice>10000);
+  const before=await wallet(),bought=await post('/purchase',{marketGarageId:listing.id,price:1});assert.equal(bought.status,200);
+  assert.equal(await wallet(),before-marketAskingPrice(car,listing)*100);
+});
+test('trade-in quote matches the UI and buying back an unchanged car cannot generate money',async()=>{
+  const state=(await get('/state/1')).data,quote=state.garage.find(item=>item.id===garage.id).resaleValue,before=await wallet();
+  const sold=await post('/market/sell',{garageId:garage.id});assert.equal(sold.data.sellValue,quote);assert.equal(await wallet(),before+quote*100);
+  const listing=(await get('/market')).data.find(item=>item.id===garage.id);assert.ok(listing.sellPrice>quote);
+  const key=randomUUID();await post('/purchase',{marketGarageId:garage.id},key);await post('/purchase',{marketGarageId:garage.id},key);
+  assert.equal(await wallet(),before+(quote-listing.sellPrice)*100);assert.ok(await wallet()<before);
 });

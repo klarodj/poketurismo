@@ -13,6 +13,7 @@ const useGarageStore = create((set, get) => ({
         name: item.car.name,
         brand: item.car.brand?.name || 'Sconosciuta',
         cv: item.cv,
+        resaleValue: item.resaleValue,
         nm: item.nm,
         kg: item.kg,
         driveType: item.car.driveType,
