@@ -23,3 +23,9 @@ Blocco e segnalazione accessibili dalle opzioni del contatto; lo storico resta c
 203 test di gioco/client e 11 account/gateway, lint e build superati. Casi dedicati: privacy e proprietà, riepilogo senza lettura, cursore di lettura, deduplicazione notifiche e invii, paginazione, bozze e risposte tardive dopo cambio account.
 
 Query eseguite anche su copia completa PostgreSQL temporanea: ricezione, conversazione, notifica senza corpo e nessuna lettura implicita; tutti i campi pilota invariati. Nessun messaggio di prova inviato ad account reali. Collaudo del telefono nel browser con due piloti e HTTP isolato, desktop e telefono; dettagli e catture in .preview/phone-qa. La schermata di gara nel collaudo browser è simulata: la non interferenza deriva anche dal montaggio globale del telefono esterno ai controlli di gara, senza chiamate alle operazioni di gara.
+
+## Rilascio verificato
+
+Pubblicato il 23 ottobre 2026 sulla sola istanza 5174 tramite gateway 5184. Backup completo Auth + gioco prima e dopo; build precedente, dati e confronto delle 31 tabelle di gioco in /home/klaro/.backups/poketurismo/phone-sms-2026-10-23T11-30-37.820Z (privato). Tutte le righe e i campi di gioco invariati al rilascio: nessuna migrazione, reset o modifica ai messaggi preesistenti.
+
+Servizi attivi, health positivo, raduno pubblico HTTP 200 e API notifiche senza sessione HTTP 401. L'anteprima di collaudo e la copia PostgreSQL temporanea vengono rimosse dopo le verifiche; rimangono le catture e i rapporti senza dati reali in .preview/phone-qa.
