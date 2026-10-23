@@ -21,6 +21,7 @@ const prisma = {
     create: async ({ data: { progress: _progress, development: _development, ...data } }) => {
       const row = { id: rows.length + 1, level: 1, exp: 0, isAdmin: false, ...data }; rows.push(row); return row;
     },
+    update: async ({where,data}) => {const row=rows.find(row=>row.id===where.id);Object.assign(row,data);return row;},
     updateMany: async () => { throw new Error('The first signup must not claim the historical save'); },
   },
   $transaction: async work => work(prisma),
@@ -41,6 +42,7 @@ before(async () => {
   const app = express(); app.use(express.json()); install(app, prisma, endpoint);
   app.get('/api/state/:userId', endpoint(req => ({ id: playerId(req, req.params.userId) })));
   app.get('/api/dev/opponents', endpoint(async () => []));
+  app.post('/api/player/:id/avatar',endpoint(req=>{const{userId,...body}=req.body;return require('../server/pilotProfile').changeAvatar(prisma,playerId(req,userId),body,req.params);}));
   app.post('/api/purchase', endpoint(async req => ({ id: playerId(req, req.body.userId) })));
   server = app.listen(0, '127.0.0.1');
   await new Promise(resolve => server.once('listening', resolve));
@@ -55,7 +57,7 @@ async function request(path, token, body) {
     ...(body ? { body: JSON.stringify(body) } : {}) });
   return { status: response.status, data: await response.json() };
 }
-const pilot = (nickname = 'New Pilot') => ({ nickname, avatar: 'blue', stats: Object.fromEntries(['brave','clean','reflex','shift','acro','turn','brake','throttle'].map(key => [key, 11])) });
+const pilot = (nickname = 'New Pilot') => ({ nickname, avatar: 'rally-woman', stats: Object.fromEntries(['brave','clean','reflex','shift','acro','turn','brake','throttle'].map(key => [key, 11])) });
 test('anonymous, invalid and unverified accounts cannot read a save', async () => {
   for (const token of [null, 'forged-token-value', 'unverified-token']) assert.equal((await request('/state/1', token)).status, 401);
 });
@@ -76,7 +78,7 @@ test('pilot creation grants the server budget once, no equipped car, and preserv
   const second = await request('/account/pilot', 'valid-token-one', pilot());
   assert.equal(first.status, 200); assert.equal(first.data.created, true); assert.equal(second.data.created, false);
   assert.equal(first.data.player.id, second.data.player.id);
-  assert.equal(first.data.player.money, 10000); assert.equal(first.data.player.carDrive, 0);
+  assert.equal(first.data.player.avatar,'rally-woman');assert.equal(first.data.player.money, 10000); assert.equal(first.data.player.carDrive, 0);
   assert.equal(first.data.player.isAdmin, false); assert.equal('authUserId' in first.data.player, false);
   assert.equal(rows.length, 2); assert.equal(rows[0].moneyCents, 123456); assert.equal(rows[0].authUserId, null);
 });
@@ -94,4 +96,15 @@ test('only the configured verified email receives admin privileges on a fresh pi
   assert.equal(me.data.player.carDrive, 0);
   assert.equal((await request('/dev/opponents', 'valid-token-two')).status, 200);
   assert.equal(rows[0].authUserId, null);
+});
+
+test('twenty cosmetic avatars are advertised and profile changes require the verified owner',async()=>{
+ const config=await request('/auth/config');assert.equal(config.data.avatars.length,20);assert.equal(new Set(config.data.avatars).size,20);
+ const own=await request('/account/me','valid-token-one'),id=own.data.player.id,before=JSON.parse(JSON.stringify(rows.find(row=>row.id===id)));
+ assert.equal((await request(`/player/${id}/avatar`,null,{userId:id,avatar:'mechanic-woman'})).status,401);
+ assert.equal((await request(`/player/${id}/avatar`,'unverified-token',{userId:id,avatar:'mechanic-woman'})).status,401);
+ assert.equal((await request(`/player/${id}/avatar`,'valid-token-two',{userId:id,avatar:'mechanic-woman'})).status,403);
+ assert.equal((await request('/player/3/avatar','valid-token-one',{userId:id,avatar:'mechanic-woman'})).status,403);
+ for(const body of [{userId:id,avatar:'https://evil.invalid/avatar.png'},{userId:id,avatar:'../file'},{userId:id,avatar:'mechanic-woman',moneyCents:999999}])assert.equal((await request(`/player/${id}/avatar`,'valid-token-one',body)).status,400);
+ const saved=await request(`/player/${id}/avatar`,'valid-token-one',{userId:id,avatar:'mechanic-woman'});assert.equal(saved.status,200);assert.equal(saved.data.player.avatar,'mechanic-woman');assert.deepEqual({...rows.find(row=>row.id===id),avatar:before.avatar},before);
 });

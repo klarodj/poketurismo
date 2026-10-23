@@ -1,3 +1,4 @@
+import PilotAvatar from '../components/PilotAvatar';
 import React from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
@@ -5,7 +6,7 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 
 export default function GarageHome() {
-  const { username, money, level, xp, stats } = usePlayerStore();
+  const { username, avatar, money, level, xp, stats } = usePlayerStore();
   const { cars, getCarStats } = useGarageStore();
   const { equippedCarId, setEquippedCarId } = useGameStore();
 
@@ -18,9 +19,7 @@ export default function GarageHome() {
         <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
           <h2 className="text-xl font-bold bg-win98-blue text-white px-2 mb-4">Profilo Pilota</h2>
           <div className="flex gap-4 mb-4">
-             <div className="w-24 h-24 bg-gray-300 border-2 border-gray-500 overflow-hidden">
-                <img src={`https://api.dicebear.com/7.x/pixel-art/svg?seed=Pilota${level}`} alt="Avatar" className="w-full h-full object-cover"/>
-             </div>
+             <PilotAvatar avatar={avatar} size={96} alt={`Avatar di ${username}`}/>
              <div className="flex-1 text-sm font-bold">
                <p>Utente: {username}</p>
                <p>Livello: {level} ({xp} XP)</p>

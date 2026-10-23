@@ -733,7 +733,7 @@ test('Car Meet is opt-in, exposes only public game fields and does not alter fun
  const before=await prisma.garage.findUnique({where:{id:garage.id}}),money=await wallet();
  const shown=await post('/meet/showcase',{garageId:garage.id});assert.equal(shown.status,200);assert.equal(shown.data.meet.myGarageId,garage.id);
  const publicData=(await get('/meet?userId=2')).data;assert.equal(publicData.showcases.length,1);assert.equal(publicData.myGarageId,null);
- const pilot=publicData.showcases[0].pilot;assert.deepEqual(Object.keys(pilot).sort(),['id','level','name']);
+ const pilot=publicData.showcases[0].pilot;assert.deepEqual(Object.keys(pilot).sort(),['avatar','id','level','name']);
  for(const secret of ['private@example.org','secret','moneyCents','authUserId','usernameKey','password'])assert.ok(!JSON.stringify(publicData).includes(secret));
  assert.equal(await wallet(),money);assert.deepEqual(await prisma.garage.findUnique({where:{id:garage.id}}),before);
 });
@@ -947,4 +947,18 @@ test('explicit race-history reset preserves career and financial deduplication, 
  assert.equal((await post('/races',{mode:'track',trackId:track.id},startedKey)).status,410);
  assert.equal((await post('/purchase',{carId:car.id},purchaseKey)).status,200);assert.deepEqual(await prisma.user.findMany(),beforeUser);assert.deepEqual(await prisma.garage.findMany(),beforeGarage);
  assert.deepEqual(await prisma.$transaction(tx=>resetRaceHistory(tx,{apply:true})),{races:0,championshipEntries:0,meetChallenges:0,operationReceipts:0,streetHistories:0});
+});
+
+test('changing avatar is cosmetic, owner-only, idempotent and allowed during a race',async()=>{
+ const race=await begin('track'),before=await prisma.user.findUnique({where:{id:1}}),cars=await prisma.garage.findMany(),savedRace=await prisma.raceSession.findUnique({where:{id:race.id}}),key=randomUUID();
+ assert.equal((await post('/player/2/avatar',{avatar:'mechanic-woman'})).status,403);
+ for(const body of [{avatar:'fake'},{avatar:'blue'},{avatar:'rally-man',isAdmin:true},{avatar:'rally-man',stats:{brave:99}}])assert.equal((await post('/player/1/avatar',body)).status,400);
+ const updated=await post('/player/1/avatar',{avatar:'mechanic-woman'},key);assert.equal(updated.status,200);assert.equal(updated.data.player.avatar,'mechanic-woman');
+ assert.deepEqual({...await prisma.user.findUnique({where:{id:1}}),avatar:before.avatar},before);assert.deepEqual(await prisma.garage.findMany(),cars);assert.deepEqual(await prisma.raceSession.findUnique({where:{id:race.id}}),savedRace);
+ await post('/player/1/avatar',{avatar:'veteran-man'});const retried=await post('/player/1/avatar',{avatar:'mechanic-woman'},key);assert.equal(retried.data.player.avatar,'veteran-man');assert.equal((await prisma.user.findUnique({where:{id:1}})).avatar,'veteran-man');
+});
+test('avatar does not invalidate a meet preparation or change frozen race contracts',async()=>{
+ const {mine}=await socialSetup(),key=mine.cars[0].quoteKey;await post('/player/1/avatar',{avatar:'tuner-woman'});const after=(await get('/meet/social/1')).data;assert.equal(after.cars[0].quoteKey,key);
+ const invited=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:key,trackId:track.id,format:'model'});assert.equal(invited.status,200);const contract=(await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract;
+ await post('/player/1/avatar',{avatar:'rally-man'});assert.equal((await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract,contract);assert.equal((await get('/meet?userId=2')).data.showcases.find(s=>s.pilot.id===1).pilot.avatar,'rally-man');
 });

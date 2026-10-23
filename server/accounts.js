@@ -2,7 +2,8 @@ const { fail, PILOT_STATS, publicPlayer } = require('./gameRules');
 const { transaction } = require('./persistence');
 const enabled = process.env.POKETURISMO_AUTH_ENABLED === '1';
 const { INITIAL_MONEY_CENTS: initialMoneyCents } = require('../shared/carEconomy.mjs');
-const avatars = ['blue', 'red', 'green', 'yellow'];
+const {AVATARS,isCreationAvatarId}=require('../shared/avatarCatalog.mjs');
+const avatars=AVATARS.map(avatar=>avatar.id);
 function configuredAdmin(user) {
   return (process.env.ADMIN_EMAILS || '').split(',').map(email => email.trim().toLowerCase()).filter(Boolean).includes(user.email?.toLowerCase());
 }
@@ -64,7 +65,7 @@ function install(app, prisma, endpoint) {
     if (Object.keys(rest).length) fail(400, 'Campi di creazione pilota non validi');
     const name = typeof nickname === 'string' ? nickname.normalize('NFKC').trim() : '';
     if (!/^[\p{L}\p{N} _-]{3,20}$/u.test(name)) fail(400, 'Scegli un nome di 3–20 caratteri, usando lettere, numeri, spazi o trattini');
-    if (!avatars.includes(avatar)) fail(400, 'Avatar non valido');
+    if (!isCreationAvatarId(avatar)) fail(400, 'Avatar non valido');
     if (!stats || Object.keys(stats).sort().join() !== [...PILOT_STATS].sort().join() ||
         PILOT_STATS.some(key => !Number.isInteger(stats[key]) || stats[key] < 10 || stats[key] > 14) ||
         PILOT_STATS.reduce((sum, key) => sum + stats[key], 0) !== 88) fail(400, 'Distribuisci esattamente 8 punti, con valori tra 10 e 14');

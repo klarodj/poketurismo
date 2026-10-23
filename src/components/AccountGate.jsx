@@ -1,3 +1,5 @@
+import AvatarPicker from './AvatarPicker';
+import {DEFAULT_AVATAR} from '../../shared/avatarCatalog.mjs';
 import React, { useEffect, useState } from 'react';
 import { AuthClient } from '@supabase/auth-js';
 import { configureIdentity, fetchAuthConfig, fetchAccount, createPilot, fetchState } from '../services/api';
@@ -39,7 +41,7 @@ export default function AccountGate({ children }) {
   const [notice, setNotice] = useState('');
   const [busy, setBusy] = useState(false);
   const [nickname, setNickname] = useState('');
-  const [avatar, setAvatar] = useState('blue');
+  const [avatar, setAvatar] = useState(DEFAULT_AVATAR);
   const [stats, setStats] = useState(null);
   useEffect(() => {
     let stopped = false;
@@ -161,7 +163,7 @@ export default function AccountGate({ children }) {
               <div className="account-starting"><span>Livello <strong>1</strong></span><span>Budget <strong>€{config.initialMoney.toLocaleString('it-IT')}</strong></span><span>Garage <strong>vuoto</strong></span></div>
               <p className="account-help">La scuola guida ti presta un’auto per imparare, anche prima del tuo primo acquisto.</p>
               <label className="account-field">Nome pilota<input required minLength={3} maxLength={20} autoComplete="nickname" placeholder="Come ti chiameranno in pista?" value={nickname} onChange={event => setNickname(event.target.value)} /></label>
-              <fieldset className="account-group"><legend>Colore del casco</legend><div className="account-colors">{config.avatars.map(value => <button type="button" key={value} aria-pressed={avatar === value} className="win98-btn account-color" onClick={() => setAvatar(value)}><span className={'account-swatch account-swatch-' + value} aria-hidden="true" />{({ blue: 'Blu', red: 'Rosso', green: 'Verde', yellow: 'Giallo' })[value]}{avatar === value && <span className="account-selected-mark" aria-hidden="true">✓</span>}</button>)}</div></fieldset>
+              <AvatarPicker value={avatar} onChange={setAvatar} disabled={busy} allowedIds={config.avatars}/>
               <fieldset className="account-group"><legend>Profilo di partenza</legend>
                 <p className="account-help">Tutti i profili valgono 88 punti. Cambiano le abilità iniziali: scegli una base, poi personalizzala liberamente.</p>
                 <div className="account-profiles">{Object.entries(config.profiles).map(([key, value]) => {

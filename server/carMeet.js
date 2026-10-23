@@ -6,14 +6,14 @@ const {buildTacticalTrack}=require('../shared/trackGeometry.mjs');
 const {routeProfileFor}=require('../shared/raceContext.mjs');
 const {marketTier}=require('../shared/carEconomy.mjs');
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const pilot=user=>({id:user.id,name:user.username,level:user.level});
+const pilot=user=>({id:user.id,name:user.username,level:user.level,avatar:user.avatar||null});
 function publicShowcase(user,item){
  const garage={...item,...restoredHandlingStats(item)};
  return {pilot:pilot(user),car:{id:garage.id,modelId:garage.carId,name:garage.car.name,brand:garage.car.brand?.name||'',image:garage.car.image,year:garage.car.year,cv:garage.cv,nm:garage.nm,kg:garage.kg,driveType:garage.car.driveType,engineType:garage.car.engineType,km:garage.km,engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,performanceIndex:performanceIndex(garage),tier:marketTier(garage.car,garage).name,
  parts:garage.mods.map(mod=>({id:mod.part.id,name:mod.part.name,description:mod.part.description,category:mod.part.category,level:mod.part.level}))}};
 }
 async function visibleParticipants(tx){
- const users=await tx.user.findMany({where:{id:{gt:0},progress:{showcaseGarageId:{not:null}}},select:{id:true,username:true,level:true,progress:{select:{showcaseGarageId:true}}},orderBy:{id:'asc'}});
+ const users=await tx.user.findMany({where:{id:{gt:0},progress:{showcaseGarageId:{not:null}}},select:{id:true,username:true,level:true,avatar:true,progress:{select:{showcaseGarageId:true}}},orderBy:{id:'asc'}});
  const garages=await tx.garage.findMany({where:{id:{in:users.map(u=>u.progress.showcaseGarageId)}},include:garageInclude});
  return users.flatMap(user=>{const garage=garages.find(g=>g.id===user.progress.showcaseGarageId&&g.userId===user.id);return garage?[{user,garage}]:[];});
 }

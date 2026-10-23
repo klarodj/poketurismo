@@ -182,3 +182,8 @@ test('track sector names are Italian in previews, map titles, progress and saved
 test('active race always shows scene, live minimap and highlighted sector without opening a dialog',async()=>{
  const Dashboard=await component('RaceDashboard'),race=makeRace();race.trackName='Lario · statale del lago';race.status='active';race.index=2;const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));assert.ok(html.includes('Mappa e ambientazione durante la gara'));assert.ok(html.includes('/images/tracks/lario.png'));assert.ok(html.includes('settore 3 evidenziato'));assert.ok(html.includes('Esamina tutti i settori'));assert.ok(!html.includes('<dialog'));
 });
+
+test('avatar picker renders twenty labelled choices and selected local image with a safe legacy fallback',async()=>{
+ const Picker=await component('AvatarPicker'),Portrait=await component('PilotAvatar');const html=renderToStaticMarkup(React.createElement(Picker,{value:'mechanic-woman',onChange:()=>{}}));assert.equal((html.match(/type="radio"/g)||[]).length,20);assert.ok(html.includes('La meccanica'));assert.ok(html.includes('/images/avatars/mechanic-woman.png'));assert.ok(html.includes('checked=""'));assert.ok(!html.includes('dicebear'));
+ const fallback=renderToStaticMarkup(React.createElement(Portrait,{avatar:'https://evil.invalid/a.png'}));assert.ok(fallback.includes('Avatar da scegliere'));assert.ok(!fallback.includes('evil.invalid'));
+});

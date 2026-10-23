@@ -76,6 +76,7 @@ mutate('/api/meet/challenge','meet-invite',meetSocial.invite,'post',false);
 mutate('/api/meet/challenge/respond','meet-respond',meetSocial.respond,'post',false);
 mutate('/api/meet/challenge/start','meet-start',meetSocial.start);
 mutate('/api/meet/showcase', 'meet-showcase', carMeet.displayCar, 'post', false);
+mutate('/api/player/:id/avatar','change-avatar',require('./pilotProfile').changeAvatar,'post',false);
 mutate('/api/player/:id/equip', 'equip', async (tx, userId, body, params) => {
   if (positiveId(params.id) !== userId) fail(403, 'Giocatore non corrispondente');
   const car = await ownGarage(tx, userId, body.carDrive);

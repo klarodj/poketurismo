@@ -4,6 +4,7 @@ import { fetchPlayer } from '../services/api';
 const usePlayerStore = create((set) => ({
   id: null,
   username: '',
+  avatar: null,
   isAdmin: false,
   money: 0,
   xp: 0,
@@ -21,7 +22,7 @@ const usePlayerStore = create((set) => ({
   carDrive: null,
   isLoading: false,
 
-  accept: (data) => set({ id: data.id, username: data.username, isAdmin: Boolean(data.isAdmin), money: data.money, xp: data.exp, level: data.level,
+  accept: (data) => set({ id: data.id, username: data.username, avatar: data.avatar || null, isAdmin: Boolean(data.isAdmin), money: data.money, xp: data.exp, level: data.level,
     carDrive: data.carDrive, isLoading: false, stats: Object.fromEntries(['brave', 'clean', 'reflex', 'shift', 'acro', 'turn', 'brake', 'throttle'].map(key => [key, data[key]])) }),
   initialize: async (playerId = 1) => {
     set({ isLoading: true });

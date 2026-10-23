@@ -1,3 +1,5 @@
+import PilotAvatar from '../components/PilotAvatar';
+import AvatarProfile from '../components/AvatarProfile';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
@@ -11,7 +13,7 @@ import { equipMoves } from '../services/api';
 import { PILOT_STAT_LABELS } from '../logic/raceEngine';
 
 export default function GaragePilota() {
-  const { id: userId, username, money, level, xp, stats } = usePlayerStore();
+  const { id: userId, username, avatar, money, level, xp, stats } = usePlayerStore();
   const { moves, equippedMoves } = useInventoryStore();
 
   const playerMoves = moves;
@@ -33,19 +35,18 @@ export default function GaragePilota() {
         <div className="p-4 flex flex-col md:flex-row gap-6">
         
           {/* Left: Pilot Info & Stats */}
-          <div className="flex-1 space-y-4">
+          <div className="flex-1 min-w-0 space-y-4">
             <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
               <h2 className="text-xl font-bold bg-win98-blue text-white px-2 mb-4">Dati Generali</h2>
               <div className="flex gap-4 mb-4">
-                 <div className="w-24 h-24 bg-gray-300 border-2 border-gray-500 overflow-hidden shrink-0">
-                    <img src={`https://api.dicebear.com/7.x/pixel-art/svg?seed=Pilota${level}`} alt="Avatar" className="w-full h-full object-cover"/>
-                 </div>
-                 <div className="flex-1 text-base font-bold flex flex-col justify-center">
-                   <p className="text-xl">Utente: {username}</p>
+                 <PilotAvatar avatar={avatar} size={96} alt={`Avatar di ${username}`}/>
+                 <div className="flex-1 min-w-0 text-base font-bold flex flex-col justify-center">
+                   <p className="text-xl break-words">Utente: {username}</p>
                    <p>Livello: {level} ({xp} XP)</p>
                    <p className="text-green-700">Saldo: €{money.toLocaleString()}</p>
                  </div>
               </div>
+              <AvatarProfile/>
             </div>
 
               <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">

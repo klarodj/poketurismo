@@ -121,3 +121,5 @@ export const respondMeetChallenge=(userId,setup)=>action('/meet/challenge/respon
 export const startMeetChallenge=(userId,challengeId)=>action('/meet/challenge/start',{userId,challengeId});
 export const fetchMeetReports=userId=>request(`/meet/reports/${userId}`);
 export const resolveMeetReport=(userId,reportId)=>action('/meet/report/resolve',{userId,reportId});
+
+export const changePilotAvatar=(userId,avatar)=>action(`/player/${userId}/avatar`,{userId,avatar});

@@ -1,3 +1,4 @@
+import PilotAvatar from './PilotAvatar';
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
@@ -11,7 +12,7 @@ export default function HUD() {
   const navigate = useNavigate();
   const account = useContext(AccountContext);
   const activeRace = useRaceStore(state => state.activeRace);
-  const { money, level, username } = usePlayerStore();
+  const { money, level, username, avatar } = usePlayerStore();
   const { equippedCarId, toggleHistory, travel } = useGameStore();
   const { cars } = useGarageStore();
   
@@ -77,7 +78,7 @@ export default function HUD() {
           <div className="text-gray-500 italic font-bold text-[10px] sm:text-sm whitespace-nowrap">No Car</div>
         )}
         {account && <>
-          <span className="text-sm font-bold truncate max-w-[120px] sm:max-w-[180px]" title={username}>👤 {username}</span>
+          <button type="button" className="pilot-name-with-avatar text-sm font-bold" onClick={()=>navigate('/garage/pilota')} title="Apri il profilo pilota"><PilotAvatar avatar={avatar} size={32} decorative/><span className="truncate max-w-[100px] sm:max-w-[160px]">{username}</span></button>
           <button type="button" className="win98-btn" onClick={account.logout} disabled={account.busy} aria-label="Esci dalla partita">Esci</button>
         </>}
       </div>

@@ -50,3 +50,5 @@ Controllo con browser headless su una copia locale e piloti sintetici: officina,
 Pubblicato il 23 ottobre 2026 sulla sola istanza 5174 tramite il gateway 5184. Backup completo Auth + gioco prima e dopo; copia dei dati precedenti, build e rapporto di verifica in /home/klaro/.backups/poketurismo/period-mood-2026-10-23T05-09-21-406Z (accesso privato). Verificato anche sul database effettivo: 22 tracciati e due campionati aggiornati; confronto di tutte le tabelle superato, nessun altro campo modificato. Servizi attivi, health positivo, officina e raduno pubblici HTTP 200, API personali senza sessione HTTP 401. Anteprima e database di collaudo rimossi dopo la verifica.
 
 Cartoline e minimappe: 27 ambientazioni lowres in public/images/tracks e atlante del club /tracks; linee guida e compatibilità in [ANTEPRIME_TRACCIATI.md](ANTEPRIME_TRACCIATI.md). Il circuito di prova conserva il disegno originale.
+
+Avatar: 20 ritratti pixel art a 64×64 per il mondo dei motori 1998–2002, documentati in [AVATAR.md](AVATAR.md). Selettore da finestra Windows, foto incassate e scelta estetica indipendente dalle abilità.
