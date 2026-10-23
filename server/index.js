@@ -62,6 +62,8 @@ app.get('/api/market', endpoint(async () => {
   const cars = await prisma.garage.findMany({ where: { userId: -1 }, include: garageInclude });
   return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item) })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
 }));
+app.get('/api/phone/:userId/notifications',endpoint(req=>transaction(prisma,tx=>require('./phone').notifications(tx,accounts.playerId(req,req.params.userId)))));
+app.get('/api/phone/:userId',endpoint(req=>transaction(prisma,tx=>require('./phone').inbox(tx,accounts.playerId(req,req.params.userId)))));
 app.get('/api/meet', endpoint(req => transaction(prisma, tx => carMeet.meet(tx, accounts.playerId(req, req.query.userId)))));
 app.get('/api/meet/leaderboard', endpoint(req => transaction(prisma, tx => carMeet.leaderboard(tx, req.query))));
 app.get('/api/meet/social/:userId',endpoint(req=>transaction(prisma,tx=>meetSocial.hub(tx,accounts.playerId(req,req.params.userId)))));

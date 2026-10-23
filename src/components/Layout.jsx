@@ -1,3 +1,5 @@
+import PhoneBridge from './PhoneBridge';
+import PhoneNotification from './PhoneNotification';
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import useGameStore from '../store/gameStore';
@@ -23,7 +25,9 @@ export default function Layout() {
 
   return (
     <div className="period-desktop min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg">
+      <PhoneBridge />
       <NokiaModal />
+      <PhoneNotification />
       <Win98ErrorDialog />
 
       {/* HUD Bar */}

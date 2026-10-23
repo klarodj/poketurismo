@@ -123,3 +123,6 @@ export const fetchMeetReports=userId=>request(`/meet/reports/${userId}`);
 export const resolveMeetReport=(userId,reportId)=>action('/meet/report/resolve',{userId,reportId});
 
 export const changePilotAvatar=(userId,avatar)=>action(`/player/${userId}/avatar`,{userId,avatar});
+
+export const fetchPhoneNotifications=userId=>request(`/phone/${userId}/notifications`);
+export const fetchPhoneInbox=userId=>request(`/phone/${userId}`);

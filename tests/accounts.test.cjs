@@ -41,6 +41,8 @@ before(async () => {
   process.env.AUTH_INTERNAL_URL = 'http://127.0.0.1:' + upstream.address().port;
   const app = express(); app.use(express.json()); install(app, prisma, endpoint);
   app.get('/api/state/:userId', endpoint(req => ({ id: playerId(req, req.params.userId) })));
+  app.get('/api/phone/:userId/notifications',endpoint(req=>({id:playerId(req,req.params.userId)})));
+  app.get('/api/phone/:userId',endpoint(req=>({id:playerId(req,req.params.userId)})));
   app.get('/api/dev/opponents', endpoint(async () => []));
   app.post('/api/player/:id/avatar',endpoint(req=>{const{userId,...body}=req.body;return require('../server/pilotProfile').changeAvatar(prisma,playerId(req,userId),body,req.params);}));
   app.post('/api/purchase', endpoint(async req => ({ id: playerId(req, req.body.userId) })));
@@ -108,3 +110,5 @@ test('twenty cosmetic avatars are advertised and profile changes require the ver
  for(const body of [{userId:id,avatar:'https://evil.invalid/avatar.png'},{userId:id,avatar:'../file'},{userId:id,avatar:'mechanic-woman',moneyCents:999999}])assert.equal((await request(`/player/${id}/avatar`,'valid-token-one',body)).status,400);
  const saved=await request(`/player/${id}/avatar`,'valid-token-one',{userId:id,avatar:'mechanic-woman'});assert.equal(saved.status,200);assert.equal(saved.data.player.avatar,'mechanic-woman');assert.deepEqual({...rows.find(row=>row.id===id),avatar:before.avatar},before);
 });
+
+test('phone inbox and notification URLs require the verified owner',async()=>{for(const route of ['/phone/2','/phone/2/notifications']){assert.equal((await request(route)).status,401);assert.equal((await request(route,'valid-token-two')).status,403);assert.equal((await request(route,'valid-token-one')).status,200);}});

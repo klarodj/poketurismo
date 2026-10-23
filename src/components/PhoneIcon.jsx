@@ -1,0 +1,2 @@
+import React from 'react';
+export default function PhoneIcon(){return <svg viewBox="0 0 24 28" width="22" height="26" aria-hidden="true" shapeRendering="crispEdges"><path fill="#000" d="M5 1h14v2h2v22h-2v2H5v-2H3V3h2z"/><path fill="#808080" d="M5 3h14v21H5z"/><path fill="#a5b77d" d="M6 5h12v10H6z"/><path fill="#000" d="M7 7h10v1l-5 4-5-4zm0 2 4 3h2l4-3v5H7zM7 18h3v2H7zm7 0h3v2h-3zM7 21h3v2H7zm7 0h3v2h-3z"/></svg>;}

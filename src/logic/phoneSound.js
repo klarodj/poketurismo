@@ -1,0 +1,3 @@
+let context;
+export async function unlockPhoneSound(){try{const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return false;context ||=new Audio();await context.resume();return context.state==='running';}catch{return false;}}
+export function playSmsTone(){if(context?.state!=='running')return;for(const delay of [0,0.13]){const tone=context.createOscillator(),gain=context.createGain(),start=context.currentTime+delay;tone.type='square';tone.frequency.value=1400;gain.gain.setValueAtTime(0.015,start);gain.gain.exponentialRampToValueAtTime(0.001,start+0.07);tone.connect(gain);gain.connect(context.destination);tone.start(start);tone.stop(start+0.08);}}

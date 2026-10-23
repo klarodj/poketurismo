@@ -962,3 +962,20 @@ test('avatar does not invalidate a meet preparation or change frozen race contra
  const invited=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:key,trackId:track.id,format:'model'});assert.equal(invited.status,200);const contract=(await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract;
  await post('/player/1/avatar',{avatar:'rally-man'});assert.equal((await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract,contract);assert.equal((await get('/meet?userId=2')).data.showcases.find(s=>s.pilot.id===1).pilot.avatar,'rally-man');
 });
+
+test('phone notifications are recipient-only, bounded and never mark SMS as read',async()=>{
+ await socialSetup();const sent=await post('/meet/message',{peerId:2,text:'Ci vediamo al piazzale.'});assert.equal(sent.status,200);
+ const before=await prisma.meetMessage.findMany();assert.deepEqual((await get('/phone/1/notifications')).data,{unread:0,latest:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
+ const inbox=(await get('/phone/2')).data;assert.equal(inbox.conversations[0].lastMessage.id,sent.data.message.id);assert.deepEqual(await prisma.meetMessage.findMany(),before);
+ await prisma.meetMessage.createMany({data:Array.from({length:7},()=>({senderId:1,recipientId:2,text:'Altro SMS'}))});assert.equal((await get('/phone/2/notifications')).data.latest.length,5);
+});
+test('phone address book preserves opt-in privacy, known conversations and mutual blocking',async()=>{
+ await prisma.user.create({data:{id:3,username:'Private stranger',password:'hidden',mail:'hidden@example.invalid',carDrive:0,...pilot}});
+ assert.deepEqual((await get('/phone/1')).data.contacts,[]);await socialSetup();assert.deepEqual((await get('/phone/2')).data.contacts.map(p=>p.id),[1]);await post('/meet/message',{peerId:2,text:'Ciao'});
+ await post('/meet/showcase',{garageId:null});const phone=(await get('/phone/2')).data;assert.ok(phone.contacts.some(p=>p.id===1));assert.ok(!phone.contacts.some(p=>p.id===3));assert.ok(!JSON.stringify(phone).includes('hidden@example'));
+ await post('/meet/block',{userId:2,peerId:1,blocked:true});assert.equal((await get('/phone/1')).data.contacts.find(p=>p.id===2).blocked,true);assert.equal((await get('/phone/2')).data.contacts.find(p=>p.id===1).blockedByMe,true);assert.equal((await post('/meet/message',{peerId:2,text:'Bloccato'})).status,403);assert.equal((await get('/meet/conversation/1?userId=2')).data.messages[0].text,'Ciao');
+});
+test('opening a displayed SMS only acknowledges incoming messages through its own server cursor',async()=>{
+ await socialSetup();const first=(await post('/meet/message',{peerId:2,text:'Prima'})).data.message;await prisma.meetMessage.update({where:{id:first.id},data:{createdAt:new Date(Date.now()-10000)}});const second=(await post('/meet/message',{peerId:2,text:'Dopo'})).data.message;
+ await get('/phone/2');assert.equal((await get('/phone/2/notifications')).data.unread,2);assert.equal((await post('/meet/read',{userId:2,peerId:1,throughId:first.id})).status,200);const notifications=(await get('/phone/2/notifications')).data;assert.equal(notifications.unread,1);assert.equal(notifications.latest[0].id,second.id);assert.equal((await prisma.meetMessage.findUnique({where:{id:second.id}})).readAt,null);
+});

@@ -1,3 +1,5 @@
+import usePhoneStore from '../store/phoneStore';
+import PhoneIcon from './PhoneIcon';
 import PilotAvatar from './PilotAvatar';
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -11,9 +13,10 @@ import AccountContext from '../contexts/AccountContext';
 export default function HUD() {
   const navigate = useNavigate();
   const account = useContext(AccountContext);
+  const phoneUnread=usePhoneStore(state=>state.unread);
   const activeRace = useRaceStore(state => state.activeRace);
   const { money, level, username, avatar } = usePlayerStore();
-  const { equippedCarId, toggleHistory, travel } = useGameStore();
+  const { equippedCarId, travel } = useGameStore();
   const { cars } = useGarageStore();
   
   const handleMapClick = () => {
@@ -34,13 +37,7 @@ export default function HUD() {
         >
           🗺️
         </button>
-        <button 
-          onClick={toggleHistory}
-          className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white text-lg sm:text-xl"
-          title="Apri Cellulare (Notifiche)"
-        >
-          📱
-        </button>
+        <button type="button" onClick={()=>usePhoneStore.getState().menu('inbox')} className="phone-hud-button" title="Cellulare e SMS" aria-label={`Apri cellulare · ${phoneUnread} SMS non letti`}><PhoneIcon/>{phoneUnread>0&&<span className="phone-hud-badge">{phoneUnread>99?'99+':phoneUnread}</span>}</button>
         <button 
           onClick={() => {
             if (travel('/dev-sandbox', 0)) {
