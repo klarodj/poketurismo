@@ -1,4 +1,4 @@
-.win98-btn {
+.account-desktop .win98-btn {
   appearance: none;
   display: inline-flex;
   align-items: center;
@@ -16,13 +16,13 @@
   text-decoration: none;
   cursor: pointer;
 }
-.win98-btn:hover:not(:disabled) { background: #cdcdcd; }
-.win98-btn:active:not(:disabled), .win98-btn[aria-pressed='true'] {
+.account-desktop .win98-btn:hover:not(:disabled) { background: #cdcdcd; }
+.account-desktop .win98-btn:active:not(:disabled), .account-desktop .win98-btn[aria-pressed='true'] {
   background: #d7d7d7;
   box-shadow: inset 1px 1px #000, inset -1px -1px #fff, inset 2px 2px #808080, inset -2px -2px #dfdfdf;
 }
-.win98-btn:focus-visible { outline: 1px dotted #000; outline-offset: -6px; }
-.win98-btn:disabled { cursor: not-allowed; color: #626262; background: #c0c0c0; }
+.account-desktop .win98-btn:focus-visible { outline: 1px dotted #000; outline-offset: -6px; }
+.account-desktop .win98-btn:disabled { cursor: not-allowed; color: #626262; background: #c0c0c0; }
 .account-desktop {
   min-height: 100vh;
   min-height: 100dvh;
@@ -133,5 +133,5 @@
   .account-group { padding: 12px 10px; }
   .account-profiles, .account-stats { grid-template-columns: 1fr; }
   .account-points > span { width: 100%; margin-left: 0; }
-  .account-form-actions .win98-btn { width: 100%; }
+  .account-desktop .account-form-actions .win98-btn { width: 100%; }
 }

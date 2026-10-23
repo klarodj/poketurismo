@@ -110,15 +110,15 @@ test('pilot development UI explains the school, bounded practice and first-time 
   assert.ok(markup.includes('Prova superata')); assert.ok(markup.includes('+40 XP')); assert.ok(markup.includes('Frenata al riferimento'));
 });
 
-test('driving school renders all fifty techniques with contexts, prerequisites and locked advanced courses', async () => {
+test('driving school opens with available courses and keeps the fifty-course catalogue accessible', async () => {
   const Panel = await component('TechniqueSchoolPanel');
   const { publicCurriculum } = await import('../shared/techniqueCatalog.mjs');
   const markup = renderToStaticMarkup(React.createElement(Panel, { development: { curriculum: publicCurriculum(null,1) }, pending: 0, activeRace: null, onRead() {}, onStart() {} }));
-  assert.equal((markup.match(/<article\b/g)||[]).length,50);
+  assert.equal((markup.match(/<article\b/g)||[]).length,publicCurriculum(null,1).filter(item=>item.unlocked&&!item.learned).length);
   assert.ok(markup.includes('0 / 50 tecniche apprese'));
-  assert.ok(markup.includes('Quando usarla'));assert.ok(markup.includes('Corso precedente'));
-  assert.ok(markup.includes('Richiede livello 22'));
-  assert.ok(markup.includes('Tornante innevato'));assert.ok(markup.includes('Punta-tacco'));
+  assert.ok(markup.includes('Quando usarla'));assert.ok(markup.includes('Mostra'));
+  assert.ok(markup.includes('Tutte le tecniche'));
+  assert.ok(markup.includes('school-course'));assert.equal(publicCurriculum(null,1).length,50);
   assert.ok(markup.includes('Da imparare ora'));assert.ok(markup.includes('Leggi la lezione'));
 });
 
@@ -213,4 +213,17 @@ test('grid cockpit keeps current neighbours, imagery and controls in one primary
  assert.equal((html.match(/Davanti a te/g)||[]).length,1);assert.equal((html.match(/Dietro di te/g)||[]).length,1);
  assert.ok(!html.includes('<table'));assert.ok(!html.includes('grid-sector-summary'));assert.ok(!html.includes('race-instruments'));
  assert.ok(!html.includes('aria-label="Duello e posizione"'));assert.ok(!html.includes('Sei davanti'));
+});
+
+test('location windows preserve artwork without offering inert window buttons',async()=>{
+ const Window=await component('Win98Window');
+ const html=renderToStaticMarkup(React.createElement(Window,{title:'Officina',imageUrl:'/images/workshop.png'},'Preventivo'));
+ assert.ok(html.includes('/images/workshop.png'));assert.ok(html.includes('Preventivo'));assert.ok(!html.includes('<button'));
+ const closable=renderToStaticMarkup(React.createElement(Window,{title:'Scheda',onClose:()=>{}},'Dettagli'));
+ assert.ok(closable.includes('aria-label="Chiudi Scheda"'));
+});
+test('used listings lead with the car photo, price and condition while keeping full inspection available',async()=>{
+ const Post=await component('ForumPost');const car={name:'Seicento',brand:{name:'Fiat'},image:'106.png',year:1998,cc:1108,cv:55,nm:90,kg:735,engineType:'NA',driveType:'FF',velMax:150,zeroToHundred:13};const listing={car,cv:55,nm:90,kg:735,km:70000,serviceKm:65000,engineHealth:85,tireGrip:80,currentFuel:10,mods:[]};
+ const html=renderToStaticMarkup(React.createElement(Post,{author:'Club',title:'Fiat Seicento',carDetails:{...listing,...car,brand:'Fiat'},listing,price:4200,remainingMoney:5800,onBuy:()=>{}}));
+ assert.ok(html.indexOf('/images/car/106.png')<html.indexOf('<details'));assert.ok(html.includes((4200).toLocaleString('it-IT')));assert.ok(html.includes('motore')||html.includes('Motore'));assert.ok(html.includes('Apri foto, caratteristiche e pezzi installati'));assert.ok(!html.includes('Iscritto: 2001'));
 });

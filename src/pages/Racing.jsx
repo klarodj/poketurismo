@@ -1,3 +1,4 @@
+import {trackVisual} from '../../shared/trackVisuals.mjs';
 import TrackIllustration from '../components/TrackIllustration';
 import ChampionshipTable from '../components/ChampionshipTable';
 import {championshipCarErrors} from '../../shared/championshipCatalog.mjs';
@@ -19,16 +20,6 @@ import {
 } from '../services/api';
 
 // ─── HELPERS ────────────────────────────────────────────────────────────────
-
-const CATEGORY_COLORS = {
-  'N/A':       'bg-[#808080]',
-  'Aspirato':  'bg-[#008000]',
-  'GT':        'bg-[#000080]',
-  'Supercar': 'bg-[#800000]',
-  'Turbo':     'bg-[#800000]',
-  'Leggenda':  'bg-[#808000]',
-  'Open':      'bg-[#800080]',
-};
 
 const STAT_LABELS = {
   brave: '💪 Coraggio',
@@ -55,118 +46,15 @@ function checkPilotRequirements(stats, level, champ) {
 
 // ─── CHAMPIONSHIP CARD ───────────────────────────────────────────────────────
 
-function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, playerMoney, activeEntry, joining, onEnter }) {
-  const [expanded, setExpanded] = useState(false);
-  const isActive = activeEntry?.championshipId === champ.id;
-  const carErrors = checkCarRequirements(equippedCar, champ);
-  const pilotErrors = checkPilotRequirements(playerStats, playerLevel, champ);
-  const allErrors = [...carErrors, ...pilotErrors];
-  const canEnter = isActive || (!activeEntry && allErrors.length === 0 && playerMoney >= champ.entryFee);
-  const catColor = CATEGORY_COLORS[champ.category] || 'bg-[#808080]';
-
-  return (
-    <div className={`bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-win98-outset`}>
-      {/* Header */}
-      <div className={`${catColor} text-white px-3 py-2 flex justify-between items-center cursor-pointer`} onClick={() => setExpanded(e => !e)}>
-        <div className="flex items-center gap-2">
-          <span className="font-bold text-base uppercase tracking-wide">{champ.name}</span>
-          <span className="text-xs bg-win98-gray text-black border border-white px-2 py-0.5">{champ.category}</span>
-        </div>
-        <div className="flex items-center gap-3 text-sm">
-          <span className="font-bold text-yellow-300">€{champ.rewardMoney.toLocaleString()}</span>
-          <span className="text-white/70">+{champ.rewardXp} XP</span>
-          <span>{expanded ? '▲' : '▼'}</span>
-        </div>
-      </div>
-
-      {/* Body */}
-      <div className="p-3">
-        <p className="text-sm text-gray-700 italic mb-3">{champ.description}</p>
-
-        {/* Requirements row */}
-        <div className="grid grid-cols-2 gap-2 mb-3 text-xs">
-          <div className="bg-white border border-gray-300 p-2">
-            <div className="font-bold text-gray-600 uppercase mb-1">🚗 Req. Auto</div>
-            <div>CV: {champ.minCv === 0 && champ.maxCv === 9999 ? 'Libero' : `${champ.minCv}–${champ.maxCv}`}</div>
-            <div>Trazione: <span className="font-bold">{champ.allowedDrive === 'any' ? 'Libera' : champ.allowedDrive}</span></div>
-          </div>
-          <div className="bg-white border border-gray-300 p-2">
-            <div className="font-bold text-gray-600 uppercase mb-1">👤 Req. Pilota</div>
-            <div>Livello min: <span className="font-bold">{champ.minLevel}</span></div>
-            {champ.minBrave > 0 && <div>Coraggio: {champ.minBrave}+</div>}
-            {champ.minReflex > 0 && <div>Riflessi: {champ.minReflex}+</div>}
-          </div>
-        </div>
-
-        <p className="text-xs mb-2">{champ.format === 'grid' ? 'Otto partecipanti · punti 10–8–6–5–4–3–2–1. Premi finali: 100% / 60% / 35% sul podio, 15% agli altri classificati.' : 'Campionato storico a duelli'}</p>
-        {champ.rules?.engineTypes && <p className="text-xs mb-2">Solo motori aspirati</p>}
-        {champ.rules?.brands && <p className="text-xs mb-2">Solo marchi italiani</p>}
-        {champ.rules?.drives && <p className="text-xs mb-2">Trazioni ammesse: {champ.rules.drives.join(', ')}</p>}
-        {expanded && champ.drivers && <div className="text-xs bg-white p-2 mb-3 border border-gray-400"><strong>Partecipanti oltre a te</strong><ul className="mt-1 space-y-1">{champ.drivers.map(driver=><li key={driver.id}>{driver.name} · {driver.carName} · abilità {driver.skill}</li>)}</ul></div>}
-        {/* Rounds (expandable) */}
-        {expanded && (
-          <div className="mb-3 border-t-2 border-win98-darkerGray pt-2">
-            <div className="font-bold text-sm mb-2 uppercase text-gray-700">📋 Round del Campionato:</div>
-            <div className="space-y-1">
-              {champ.rounds?.map(r => (
-                <div key={r.id} className="bg-white border border-gray-300 px-3 py-1.5 text-sm">
-                  <span className="font-bold text-blue-900">Round {r.ord}: {r.track?.name || '—'}</span>
-                  <span className="text-gray-500">Rivale in evidenza: <span className="font-bold text-red-700">{r.opponentName}</span> ({r.opponentCarName})</span>
-                  <span className={`text-xs font-bold px-2 py-0.5 ${r.opponentDifficulty >= 1.3 ? 'bg-red-200 text-red-800' : r.opponentDifficulty >= 1.0 ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}`}>
-                    {r.opponentDifficulty >= 1.3 ? '🔥 HARD' : r.opponentDifficulty >= 1.0 ? '⚡ MED' : '✅ EASY'}
-                  </span><details className="track-art-details"><summary>Mappa e ambientazione</summary><TrackIllustration name={r.track?.name} compact/></details>
-                </div>
-              ))}
-            </div>
-            {isActive && (
-              <div className="mt-3 bg-blue-50 border border-blue-300 p-2 text-xs">
-                <strong>Classifica in corso: {activeEntry.playerPoints} punti {activeEntry.format === 'duel' ? `— ${activeEntry.opponentPoints}` : ''}</strong>
-                {activeEntry.results.map((result) => (
-                  <div key={result.round} className="flex justify-between gap-2 mt-1">
-                    <span>Round {result.round} · {result.trackName} vs {result.opponentName}</span>
-                    <span className="font-bold uppercase">{result.classification ? `${result.position}° posto · ${result.playerPoints} punti` : `${result.outcome} (${result.playerPoints}-${result.opponentPoints})`}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Errors */}
-        {allErrors.length > 0 && (
-          <div className="bg-red-50 border border-red-300 p-2 mb-2 text-xs space-y-0.5">
-            {allErrors.map((e, i) => <div key={i} className="text-red-700">⛔ {e}</div>)}
-          </div>
-        )}
-        {!canEnter && activeEntry && !isActive && (
-          <div className="bg-yellow-50 border border-yellow-300 p-2 mb-2 text-xs text-yellow-700">
-            🏁 Completa prima il campionato {activeEntry.championship.name}.
-          </div>
-        )}
-        {!canEnter && !activeEntry && playerMoney < champ.entryFee && allErrors.length === 0 && (
-          <div className="bg-yellow-50 border border-yellow-300 p-2 mb-2 text-xs text-yellow-700">
-            💰 Iscrizione: €{champ.entryFee.toLocaleString()} (hai €{playerMoney.toLocaleString()})
-          </div>
-        )}
-
-        {/* Action */}
-        <button
-          onClick={() => canEnter && !joining && onEnter(champ)}
-          disabled={!canEnter}
-          className={`w-full py-2 font-bold border-2 text-sm transition-colors ${
-            canEnter
-              ? 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray hover:bg-green-100 active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white'
-              : 'bg-gray-200 border-gray-400 text-gray-500 cursor-not-allowed'
-          }`}
-        >
-          {joining ? '⌛ Iscrizione...' : isActive
-            ? `▶ CONTINUA · ROUND ${activeEntry.currentRound}/${champ.rounds.length}`
-            : canEnter ? `🏁 Iscriviti (€${champ.entryFee.toLocaleString()})`
-              : activeEntry ? '🔒 Altro campionato in corso' : '🔒 Requisiti non soddisfatti'}
-        </button>
-      </div>
-    </div>
-  );
+function ChampionshipCard({champ,equippedCar,playerStats,playerLevel,playerMoney,activeEntry,joining,onEnter}){
+ const isActive=activeEntry?.championshipId===champ.id,errors=[...checkCarRequirements(equippedCar,champ),...checkPilotRequirements(playerStats,playerLevel,champ)];
+ const canEnter=isActive||(!activeEntry&&!errors.length&&playerMoney>=champ.entryFee),visual=trackVisual(champ.rounds?.[0]?.track?.name);
+ return <article className="championship-listing"><h2>{champ.name}</h2><div className="championship-listing-overview">{visual&&<img src={visual.image} alt={visual.name} loading="lazy" width="144" height="96"/>}<div><p><strong>{champ.rounds?.length||0} gare</strong> · livello {champ.minLevel}+</p><p>{champ.minCv}–{champ.maxCv} CV · {champ.category}</p><p>Iscrizione <strong>€{champ.entryFee.toLocaleString('it-IT')}</strong></p></div></div><p className="championship-prize">Titolo: €{champ.rewardMoney.toLocaleString('it-IT')} · {champ.rewardXp} XP</p>
+ {!canEnter&&<p className="period-notice">{activeEntry?'Concludi prima il campionato in corso.':errors[0]||`Mancano €${(champ.entryFee-playerMoney).toLocaleString('it-IT')} per l’iscrizione.`}</p>}
+ <button type="button" className="win98-btn" disabled={!canEnter||joining} onClick={()=>onEnter(champ)}>{joining?'Iscrizione…':isActive?`Continua · round ${activeEntry.currentRound}`:canEnter?'Iscriviti · €'+champ.entryFee.toLocaleString('it-IT'):'Iscrizione non disponibile'}</button>
+ <details className="period-details"><summary>Calendario, rivali e regolamento</summary><p>{champ.description}</p><p>{champ.format==='grid'?'Otto piloti · punti 10–8–6–5–4–3–2–1. Premi finali: 100% / 60% / 35% sul podio, 15% agli altri classificati.':'Campionato storico a duelli.'}</p><p>Trazione: {champ.allowedDrive==='any'?'libera':champ.allowedDrive}{champ.rules?.engineTypes?' · solo aspirati':''}{champ.rules?.brands?' · marchi italiani':''}{champ.rules?.drives?` · ${champ.rules.drives.join(', ')}`:''}</p>{errors.length>0&&<ul>{errors.map(e=><li key={e}>{e}</li>)}</ul>}
+ {champ.drivers&&<details><summary>I sette rivali</summary><ul>{champ.drivers.map(d=><li key={d.id}>{d.name} · {d.carName} · abilità {d.skill}</li>)}</ul></details>}
+ <ol>{champ.rounds?.map(r=><li key={r.id}><strong>Gara {r.ord} · {r.track?.name||'—'}</strong><p>Rivale tattico: {r.opponentName} · {r.opponentCarName}</p><details className="track-art-details"><summary>Mappa e ambientazione</summary><TrackIllustration name={r.track?.name} compact/></details></li>)}</ol></details></article>;
 }
 
 // ─── TRAINING CARD ──────────────────────────────────────────────────────────
@@ -182,7 +70,7 @@ function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onCom
 
   return (
     <div className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-win98-outset">
-      <div className={`px-3 py-2 flex justify-between items-center ${session.category === 'move' ? 'bg-purple-900' : 'bg-teal-800'} text-white`}>
+      <div className={`px-3 py-2 flex justify-between items-center ${session.category === 'move' ? 'bg-win98-blue' : 'bg-win98-blue'} text-white`}>
         <div className="flex items-center gap-2">
           <span className="font-bold text-base">{session.name}</span>
           <span className="text-xs bg-white/20 border border-white/30 px-2 py-0.5">
@@ -268,6 +156,7 @@ export default function Racing() {
   const [history,setHistory]=useState([]);
   const [activeEntry, setActiveEntry] = useState(null);
   const [trainingSessions, setTrainingSessions] = useState([]);
+  const [loadError,setLoadError]=useState('');
   const [loading, setLoading] = useState(true);
   const [joining, setJoining] = useState(false);
   const [filterCategory, setFilterCategory] = useState('all');
@@ -285,7 +174,7 @@ export default function Racing() {
         setLoading(false);
       })
       .catch(err => {
-        console.error(err);
+        setLoadError(err.message);
         setLoading(false);
       });
     return undefined;
@@ -322,7 +211,7 @@ export default function Racing() {
       const { entry } = await enterChampionship(champ.id, userId);
       setActiveEntry(entry);
       const firstRound = entry.championship.rounds.find((round) => round.ord === entry.currentRound);
-      if (!firstRound) throw new Error('The first championship round is missing.');
+      if (!firstRound) throw new Error('Il primo appuntamento del campionato non è disponibile.');
       navigate(`/track-race?id=${firstRound.trackId}&entryId=${entry.id}&round=${firstRound.ord}`);
     } catch (error) {
       console.error('Championship entry failed:', error);
@@ -354,7 +243,7 @@ export default function Racing() {
 
   return (
     <Win98Window title="Autodromo — Centro Corse" imageUrl="/images/track.png">
-      <div className="flex flex-col bg-win98-gray text-black">
+      <div className="racing-page flex flex-col bg-win98-gray text-black">
 
         <button className="win98-btn m-2" onClick={()=>navigate('/autodrome')}>Torna all’Autodromo</button>
         {/* Top Tab Navigation */}
@@ -363,29 +252,20 @@ export default function Racing() {
             onClick={() => setActiveTab('competitions')}
             className={`flex-1 py-3 font-bold text-base border-2 transition-all ${activeTab === 'competitions' ? 'bg-white border-win98-darkerGray shadow-win98-inset' : 'border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray hover:bg-gray-100'}`}
           >
-            🏆 COMPETIZIONI ORGANIZZATE
+            Campionati
           </button>
           <button
             onClick={() => setActiveTab('training')}
             className={`flex-1 py-3 font-bold text-base border-2 transition-all ${activeTab === 'training' ? 'bg-white border-win98-darkerGray shadow-win98-inset' : 'border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray hover:bg-gray-100'}`}
           >
-            🎓 TRACK DAY — ALLENAMENTO
+            Allenamento
           </button>
         </div>
 
-        {/* Status Bar */}
-        <div className="flex items-center gap-4 px-4 py-2 bg-win98-bg text-white text-sm border-b-2 border-win98-darkerGray">
-          <span>👤 Lv.{level}</span>
-          <span>💰 €{money.toLocaleString()}</span>
-          <span>🚗 {equippedCar ? `${equippedCar.brand} ${equippedCar.name} (${equippedCar.cv} CV)` : <span className="text-red-400">Nessuna auto equipaggiata</span>}</span>
-          <span className="ml-auto font-pixel text-yellow-300 text-xs">
-            💡 {activeTab === 'competitions' ? 'Vinci round, accumula punti e punta al titolo.' : 'Investi in allenamento per migliorare le stat del pilota.'}
-          </span>
-        </div>
-
+        {loadError&&<p role="alert" className="period-notice">{loadError} <button className="win98-btn" onClick={()=>window.location.reload()}>Riprova</button></p>}
         {loading ? (
           <div className="flex-1 flex items-center justify-center italic text-gray-500 text-lg">
-            Caricamento calendatio eventi...
+            Caricamento del calendario…
           </div>
         ) : (
           <div className="p-4">
@@ -394,11 +274,11 @@ export default function Racing() {
             {activeTab === 'competitions' && (
               <div>
                 {activeEntry && (
-                  <div className="bg-[#101820] text-white border-2 border-yellow-400 p-4 mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
+                  <div className="championship-active border-2 border-white p-4 mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
                     <div className="flex-1">
                       <div className="font-bold text-yellow-300 uppercase">🏁 Campionato in corso</div>
                       <div className="text-lg">{activeEntry.championship.name} · Round {activeEntry.currentRound}/{activeEntry.championship.rounds.length}</div>
-                      <div className="text-sm text-cyan-200">
+                      <div className="text-sm text-black">
                         {activeEntry.format === 'grid' ? `Punti: ${activeEntry.playerPoints} · otto partecipanti` : `Classifica: ${activeEntry.playerPoints} — ${activeEntry.opponentPoints} punti`}
                       </div>
                       <div className="h-2 bg-gray-700 mt-2">
@@ -410,11 +290,11 @@ export default function Racing() {
                       disabled={joining}
                       className="bg-green-700 text-white px-4 py-2 border-2 border-t-green-400 border-l-green-400 border-b-green-950 border-r-green-950 font-bold disabled:opacity-50"
                     >
-                      RIPRENDI LA GARA
+                      Continua il campionato
                     </button>
                   </div>
                 )}
-                {activeEntry?.format === 'grid' && <ChampionshipTable rows={activeEntry.standings}/>}
+                {activeEntry?.format === 'grid' && <details className="period-details mb-3"><summary>Classifica generale · {activeEntry.playerPoints} punti</summary><ChampionshipTable rows={activeEntry.standings}/></details>}
                 {history.length > 0 && <details className="border border-gray-500 bg-white p-3 my-3"><summary className="cursor-pointer font-bold">Campionati conclusi ({history.length})</summary>{history.map(entry=><details key={entry.id} className="border-t border-gray-300 mt-3 pt-2"><summary className="cursor-pointer">{entry.championship.name} · {entry.playerPoints} punti</summary>{entry.format==='grid'?<ChampionshipTable rows={entry.standings}/>:<p className="text-sm">Classifica storica: {entry.playerPoints} — {entry.opponentPoints}</p>}</details>)}</details>}
                 {/* Category Filter */}
                 <div className="flex gap-1 mb-4 flex-wrap">

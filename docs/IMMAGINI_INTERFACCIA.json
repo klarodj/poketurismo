@@ -1,0 +1,16 @@
+{
+  "tool": "Built-in image_gen",
+  "size": "384x256",
+  "preparation": "Riduzione nearest-neighbor e palette 96 colori per le copie distribuite; originali generati conservati.",
+  "assets": [
+    {
+      "path": "public/images/places/scuola-guida.png",
+      "prompt": "Use case: historical-scene. Asset type: low resolution pixel-art location illustration for an Italian automotive browser game. Create a single landscape scene, aspect ratio 3:2. Northern Italy provincial driving school practice yard around 2002, Fiat Seicento era small yellow hatchback with roof-mounted learner sign, instructor in denim jacket holding clipboard near orange cones, brick workshop, poplar trees and hazy pre-Alps, inviting afternoon. Style: authentic late-1990s PC racing adventure background, chunky clearly visible pixel clusters, limited muted 64-color palette, subtle ordered dithering, hard pixel edges, native-looking 384x256 artwork, no smooth digital painting. Car and cones central, entire illustration visible, no UI or borders, no text, no modern vehicles, no smartphones, no modern buildings. Warm approachable small-town automotive atmosphere.",
+      "edit": "Edit this exact image with ONE tiny historically accurate change: on the yellow learner car white roof sign, replace the blue capital L with a blue capital P, the Italian learner-driver mark. Keep the entire scene, car, instructor, mountains, cones, colors, composition and pixel art style unchanged. Do not add or remove anything else. Northern Italy circa 2002."
+    },
+    {
+      "path": "public/images/places/cronometraggio.png",
+      "prompt": "Use case: historical-scene. Asset type: low resolution pixel-art location illustration for Italian automotive browser game, single landscape scene aspect ratio 3:2. A small provincial motorsport club timing office in northern Italy circa 2002: foreground wooden desk with paper lap chart, black digital handheld stopwatch, chunky beige CRT showing tiny green timing digits, binder, through open window see club pit lane with red late-1990s small sports hatchback, garage sheds, poplar trees and distant hazy Alpine foothills. Authentic late-1990s PC racing adventure background, visibly chunky pixels, native-looking 384x256, limited muted 64-color palette, ordered dithering, hard pixel edges. Desk and pit lane both readable at thumbnail size. Inviting daylight, modest Italian motor club. No UI, no borders, no logos, no legible text, no modern objects, no smooth painting, no futuristic cars."
+    }
+  ]
+}

@@ -52,3 +52,5 @@ Pubblicato il 23 ottobre 2026 sulla sola istanza 5174 tramite il gateway 5184. B
 Cartoline e minimappe: 27 ambientazioni lowres in public/images/tracks e atlante del club /tracks; linee guida e compatibilità in [ANTEPRIME_TRACCIATI.md](ANTEPRIME_TRACCIATI.md). Il circuito di prova conserva il disegno originale.
 
 Avatar: 20 ritratti pixel art a 64×64 per il mondo dei motori 1998–2002, documentati in [AVATAR.md](AVATAR.md). Selettore da finestra Windows, foto incassate e scelta estetica indipendente dalle abilità.
+
+Revisione generale del 24 ottobre 2026: gerarchia fra panoramica e dettagli in [REVISIONE_INTERFACCIA.md](REVISIONE_INTERFACCIA.md). Due nuove illustrazioni lowres 384×256 per scuola guida e cronometraggio in `public/images/places`; originali esistenti conservati. Prompt, strumento e preparazione in `docs/IMMAGINI_INTERFACCIA.json`. Le piccole icone delle schede garage restano SVG con griglia pixel, senza emoji di sistema.

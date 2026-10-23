@@ -1,3 +1,5 @@
+import {PILOT_STAT_LABELS} from '../logic/raceEngine';
+import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState, useEffect } from 'react';
 import { fetchCars, fetchTrackSections, createCustomOpponent, createCustomTrack } from '../services/api';
 import Win98Window from '../components/Win98Window';
@@ -96,7 +98,7 @@ export default function DevSandbox() {
   };
 
   return (
-    <Win98Window title="Dev Sandbox" imageUrl="/images/computer.png">
+    <Win98Window title="Strumenti di sviluppo" imageUrl="/images/computer.png">
       <div className="flex flex-col items-center justify-start p-2 bg-win98-gray border-4 border-gray-800 text-black shadow-[inset_0_10px_50px_rgba(0,0,0,0.2)] min-h-[400px]">
         
         {/* Tabs */}
@@ -123,7 +125,7 @@ export default function DevSandbox() {
 
         {/* OPPONENT TAB */}
         {activeTab === 'opponent' && (
-          <div className="w-full max-w-md flex flex-col gap-2 font-mono text-sm">
+          <div className="w-full max-w-md flex flex-col gap-2 font-pixel text-sm">
             <div className="bg-gray-200 p-2 border-2 border-t-gray-600 border-l-gray-600 border-b-white border-r-white shadow-inner">
               <label className="flex flex-col mb-2">Nome Avversario:
                 <input type="text" value={opponentSetup.name} onChange={e => setOpponentSetup({...opponentSetup, name: e.target.value})} className="border border-gray-400 p-1 bg-white"/>
@@ -144,7 +146,7 @@ export default function DevSandbox() {
                 <div className="grid grid-cols-2 gap-2">
                   {['shift', 'reflex', 'brave', 'clean', 'acro', 'turn', 'brake', 'throttle'].map(stat => (
                     <label key={stat} className="flex justify-between items-center text-xs">
-                      <span className="capitalize">{stat}:</span>
+                      <span className="capitalize">{PILOT_STAT_LABELS[stat]||stat}:</span>
                       <input type="number" min="1" max="100" value={opponentSetup[stat]} onChange={e => setOpponentSetup({...opponentSetup, [stat]: e.target.value})} className="w-16 border border-gray-400 p-1 text-right bg-white" />
                     </label>
                   ))}
@@ -153,14 +155,14 @@ export default function DevSandbox() {
             </div>
 
             <button onClick={saveOpponent} className="bg-green-600 text-white font-bold py-2 border-2 border-t-green-400 border-l-green-400 border-b-green-900 border-r-green-900 hover:bg-green-500 mt-2">
-              SALVA AVVERSARIO IN DB
+              Salva avversario di prova
             </button>
           </div>
         )}
 
         {/* TRACK TAB */}
         {activeTab === 'track' && (
-          <div className="w-full max-w-md flex flex-col gap-2 font-mono text-sm">
+          <div className="w-full max-w-md flex flex-col gap-2 font-pixel text-sm">
              <div className="bg-gray-200 p-2 border-2 border-t-gray-600 border-l-gray-600 border-b-white border-r-white shadow-inner">
               <label className="flex flex-col mb-2">Nome Tracciato:
                 <input type="text" value={trackSetup.name} onChange={e => setTrackSetup({...trackSetup, name: e.target.value})} className="border border-gray-400 p-1 bg-white"/>
@@ -181,7 +183,7 @@ export default function DevSandbox() {
                       className="border border-gray-400 p-1 bg-white flex-1 text-xs"
                     >
                       {trackSections.map(ts => (
-                        <option key={ts.id} value={ts.id}>{ts.name} (Auto: {ts.carStat}/{ts.carTech} - Pilota: {ts.driverStat}/{ts.driverTech})</option>
+                        <option key={ts.id} value={ts.id}>{trackSectionLabel(ts.name)} (Auto: {ts.carStat}/{ts.carTech} - Pilota: {ts.driverStat}/{ts.driverTech})</option>
                       ))}
                     </select>
                   </div>
@@ -190,7 +192,7 @@ export default function DevSandbox() {
             </div>
 
             <button onClick={saveTrack} className="bg-blue-800 text-white font-bold py-2 border-2 border-t-blue-400 border-l-blue-400 border-b-blue-900 border-r-blue-900 hover:bg-blue-700 mt-2">
-              SALVA TRACCIATO IN DB
+              Salva tracciato di prova
             </button>
           </div>
         )}

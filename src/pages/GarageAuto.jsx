@@ -1,3 +1,6 @@
+import RaceDetailDialog from '../components/RaceDetailDialog';
+import useRaceStore from '../store/raceStore';
+import useRequestStore from '../store/requestStore';
 import {performanceIndex} from '../../shared/vehiclePerformance.mjs';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -15,10 +18,12 @@ export default function GarageAuto() {
   const { cars, getCarStats } = useGarageStore();
   const { equippedCarId, setEquippedCarId, triggerEvent } = useGameStore();
   const navigate = useNavigate();
+  const activeRace=useRaceStore(s=>s.activeRace),pending=useRequestStore(s=>s.pending);
+  const [selling,setSelling]=useState(false);
 
   const [selectedCarId, setSelectedCarId] = useState(equippedCarId || (cars.length > 0 ? cars[0].id : null));
 
-  const selectedCar = cars.find(c => c.id === selectedCarId);
+  const selectedCar = cars.find(c => c.id === selectedCarId) || cars.find(c => c.id === equippedCarId) || cars[0];
   const raceStats = selectedCar ? getCarStats(selectedCar.id) : null;
   const perfIndex = performanceIndex(selectedCar);
   
@@ -38,17 +43,19 @@ export default function GarageAuto() {
         if (res.success) {
             triggerEvent({ type: 'info', title: 'Vendita Completata', message: `Hai incassato €${res.sellValue.toLocaleString()}. L'auto ora si trova al mercato usato.`});
             setSelectedCarId(equippedCarId);
+            setSelling(false);
         }
     } catch {
         triggerEvent({ type: 'error', title: 'Errore', message: 'Il passaggio di proprietà ha fallito.'});
     }
   };
 
+  if(!cars.length)return <Win98Window title="Il tuo garage" imageUrl="/images/garage.png"><GarageTabs/><div className="period-page"><h1>Qui inizia la tua collezione</h1><p>Il garage è ancora vuoto. Cerca un usato per partire, oppure sfoglia il nuovo.</p><button className="win98-btn" onClick={()=>navigate('/used-cars')}>Cerca la prima auto usata</button><button className="win98-btn" onClick={()=>navigate('/dealership')}>Visita il concessionario</button><p>La scuola guida ti presta una vettura anche prima del primo acquisto.</p></div></Win98Window>;
   return (
     <Win98Window title="Gestione Parco Auto" imageUrl="/images/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
-        <GarageTabs />
+        <GarageTabs />{activeRace&&<p className="period-notice">Auto e preparazione bloccate durante la gara. Puoi consultare tutte le schede.</p>}
 
         <div className="p-4 flex flex-col lg:flex-row gap-4">
           
@@ -57,23 +64,23 @@ export default function GarageAuto() {
              <h3 className="font-bold bg-win98-darkerGray text-white px-2 py-1.5 mb-2 text-base">Veicoli Posseduti ({cars.length})</h3>
              <div className="space-y-2 pr-1">
                {cars.map(car => (
-                  <div 
+                  <button type="button"
                     key={car.id} 
-                    className={`p-3 border-2 cursor-pointer flex items-center justify-between transition-colors ${selectedCarId === car.id ? 'bg-win98-blue text-white border-black font-bold' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-black hover:bg-gray-200'}`}
+                    className={`w-full text-left p-3 border-2 cursor-pointer flex items-center justify-between transition-colors ${selectedCarId === car.id ? 'bg-win98-blue text-white border-black font-bold' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-black hover:bg-gray-200'}`}
                     onClick={() => setSelectedCarId(car.id)}
                   >
                      <div className="truncate pr-2 text-base">
                        <span className="mr-2">{car.id === equippedCarId ? '✔️' : '🚗'}</span>
                        {car.brand} {car.name}
                      </div>
-                  </div>
+                  </button>
                ))}
              {cars.length === 0 && <p className="italic text-gray-500 text-sm">Nessuna auto disponibile.</p>}
            </div>
         </div>
 
         {/* Right: Detailed View */}
-        <div className="w-full md:w-2/3 flex flex-col bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 shadow-win98-inset">
+        <div className="w-full lg:w-2/3 min-w-0 flex flex-col bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 shadow-win98-inset">
           {selectedCar ? (
             <div className="flex flex-col h-full">
                <h2 className="text-xl font-bold bg-win98-blue text-white px-2 py-1 mb-2 flex justify-between">
@@ -113,8 +120,8 @@ export default function GarageAuto() {
                </div>
 
                {/* Complete Race Stats Box */}
-               <div className="bg-win98-bg text-white p-2 border-2 border-t-gray-500 border-l-gray-500 border-b-white border-r-white mb-4">
-                  <h3 className="font-bold font-pixel text-sm mb-1 text-yellow-300 border-b border-gray-500 pb-1">Telemetria e Setup</h3>
+               <details className="garage-setup bg-win98-bg text-white p-2 border-2 border-t-gray-500 border-l-gray-500 border-b-white border-r-white mb-4">
+                  <summary className="font-bold">Caratteristiche e preparazione</summary>
                   {raceStats && (
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2 text-[10px] font-bold font-pixel px-1 mt-2 uppercase">
                        <p className="flex justify-between border-b border-gray-600 pb-0.5"><span>{CAR_STAT_LABELS.speed}</span> <span className="text-white">{raceStats.speed}</span></p>
@@ -132,11 +139,12 @@ export default function GarageAuto() {
                     {selectedCar.mods && selectedCar.mods.length > 0 ? (
                       <span>{selectedCar.mods.length} MODIFICHE INSTALLATE</span>
                     ) : (
-                      <span className="text-gray-400 italic">AUTO ORIGINALE (ORANGE STOCK)</span>
+                      <span className="text-gray-400 italic">Auto di serie</span>
                     )}
                   </div>
-               </div>
+               </details>
                
+               <p className="period-status">Motore {Math.round(selectedCar.engineHealth)}% · gomme {Math.round(selectedCar.tireGrip)}% · {selectedCar.currentFuel.toFixed(1)} L</p>
                {/* Actions */}
                <div className="mt-auto pt-2 border-t-2 border-win98-darkerGray flex flex-wrap gap-2">
                   <button 
@@ -148,7 +156,7 @@ export default function GarageAuto() {
                            triggerEvent({ type: 'error', title: 'Errore', message: 'Errore durante equipaggiamento.'});
                        }
                     }}
-                    disabled={selectedCar.id === equippedCarId}
+                    disabled={pending>0||!!activeRace||selectedCar.id === equippedCarId}
                     className={`flex-1 min-w-[120px] py-2 font-bold border-2 ${selectedCar.id === equippedCarId ? 'bg-gray-300 text-gray-500 border-gray-400' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-t-win98-darkerGray active:border-l-win98-darkerGray active:border-b-white active:border-r-white'} transition-colors`}
                   >
                     {selectedCar.id === equippedCarId ? '✔️ Attiva' : '🏎️ Equipaggia'}
@@ -162,7 +170,8 @@ export default function GarageAuto() {
                   </button>
 
                   <button 
-                    onClick={handleSell}
+                    disabled={pending>0||!!activeRace||selectedCar.id===equippedCarId}
+                    onClick={()=>setSelling(true)}
                     className="flex-1 min-w-[120px] py-2 font-bold border-2 bg-red-800 text-white border-t-red-400 border-l-red-400 border-b-red-900 border-r-red-900 active:border-t-red-900 active:border-l-red-900 active:border-b-red-400 active:border-r-red-400 transition-colors"
                   >
                     💵 Vendi (€{estimatedValue.toLocaleString()})
@@ -177,6 +186,7 @@ export default function GarageAuto() {
         </div>
       </div>
     </div>
+  {selling&&selectedCar&&<RaceDetailDialog title="Passaggio di proprietà" onClose={()=>setSelling(false)} closeLabel="Conserva l’auto"><p>Vuoi vendere <strong>{selectedCar.brand} {selectedCar.name}</strong> per <strong>€{estimatedValue.toLocaleString('it-IT')}</strong>?</p><p>La vettura e i suoi ricambi installati passano al mercatino.</p><button className="win98-btn" disabled={pending>0||!!activeRace||selectedCar.id===equippedCarId} onClick={handleSell}>Conferma vendita · €{estimatedValue.toLocaleString('it-IT')}</button></RaceDetailDialog>}
   </Win98Window>
 );
 }

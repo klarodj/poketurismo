@@ -29,18 +29,18 @@ export default function CityMap() {
   return (
     <Win98Window title="Mappa della Città">
       <div 
-        className="p-3 flex flex-col bg-cover bg-center"
+        className="city-map p-3 flex flex-col bg-cover bg-center"
         style={{ backgroundImage: "url('/images/city.png')" }}
       >
 
         {/* Header */}
         <div className="flex items-center gap-2 mb-3 pb-2 border-b-2 border-win98-darkerGray shrink-0 bg-white/80 p-2">
-          <span className="text-2xl">🗺️</span>
+          <span className="text-2xl">▦</span>
           <h2 className="text-xl font-bold font-pixel text-black">Dove vuoi andare?</h2>
         </div>
 
         {/* Grid - flex-1 so it grows to fill available space */}
-        <div className="flex-1 grid grid-cols-3 gap-3 content-start">
+        <div className="city-map-locations">
           {LOCATIONS.map(loc => (
             <button
               key={loc.id}
@@ -62,15 +62,15 @@ export default function CityMap() {
               <img 
                 src={loc.image} 
                 alt={loc.name} 
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                className="absolute inset-0 w-full h-full object-cover"
                 style={{ imageRendering: 'pixelated' }}
               />
               
               <div className="relative w-full bg-win98-gray/95 border-t-2 border-win98-darkerGray px-1 py-1.5 z-10 shadow-sm text-center">
-                <span className="block font-bold text-xs font-pixel leading-tight text-black truncate">
+                <span className="block font-bold text-base font-pixel leading-tight text-black">
                   {loc.name}
                 </span>
-                <span className="text-[9px] text-gray-800 leading-tight hidden md:block truncate mt-[1px]">
+                <span className="text-sm text-gray-800 leading-tight hidden md:block mt-[1px]">
                   {loc.desc}
                 </span>
               </div>

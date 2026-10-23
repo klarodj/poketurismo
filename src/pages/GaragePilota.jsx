@@ -13,7 +13,7 @@ import { equipMoves } from '../services/api';
 import { PILOT_STAT_LABELS } from '../logic/raceEngine';
 
 export default function GaragePilota() {
-  const { id: userId, username, avatar, money, level, xp, stats } = usePlayerStore();
+  const { id: userId, username, avatar, level, xp, stats } = usePlayerStore();
   const { moves, equippedMoves } = useInventoryStore();
 
   const playerMoves = moves;
@@ -43,7 +43,6 @@ export default function GaragePilota() {
                  <div className="flex-1 min-w-0 text-base font-bold flex flex-col justify-center">
                    <p className="text-xl break-words">Utente: {username}</p>
                    <p>Livello: {level} ({xp} XP)</p>
-                   <p className="text-green-700">Saldo: €{money.toLocaleString()}</p>
                  </div>
               </div>
               <AvatarProfile/>
@@ -53,28 +52,28 @@ export default function GaragePilota() {
                 <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2>
                 <div className="bg-win98-gray p-2 border border-gray-400 font-bold text-base space-y-1.5 uppercase font-pixel">
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>💪 {PILOT_STAT_LABELS.brave}</span> <span>{stats.brave}</span>
+                     <span>{PILOT_STAT_LABELS.brave}</span> <span>{stats.brave}</span>
                    </div>
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>🧼 {PILOT_STAT_LABELS.clean}</span> <span>{stats.clean}</span>
+                     <span>{PILOT_STAT_LABELS.clean}</span> <span>{stats.clean}</span>
                    </div>
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>⚡ {PILOT_STAT_LABELS.reflex}</span> <span>{stats.reflex}</span>
+                     <span>{PILOT_STAT_LABELS.reflex}</span> <span>{stats.reflex}</span>
                    </div>
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>🤸 {PILOT_STAT_LABELS.acro}</span> <span>{stats.acro}</span>
+                     <span>{PILOT_STAT_LABELS.acro}</span> <span>{stats.acro}</span>
                    </div>
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>🎯 {PILOT_STAT_LABELS.turn}</span> <span>{stats.turn}</span>
+                     <span>{PILOT_STAT_LABELS.turn}</span> <span>{stats.turn}</span>
                    </div>
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>🛑 {PILOT_STAT_LABELS.brake}</span> <span>{stats.brake}</span>
+                     <span>{PILOT_STAT_LABELS.brake}</span> <span>{stats.brake}</span>
                    </div>
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
-                     <span>🚀 {PILOT_STAT_LABELS.throttle}</span> <span>{stats.throttle}</span>
+                     <span>{PILOT_STAT_LABELS.throttle}</span> <span>{stats.throttle}</span>
                    </div>
                    <div className="flex justify-between">
-                     <span>⚙️ {PILOT_STAT_LABELS.shift}</span> <span>{stats.shift}</span>
+                     <span>{PILOT_STAT_LABELS.shift}</span> <span>{stats.shift}</span>
                    </div>
                 </div>
               </div>

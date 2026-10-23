@@ -66,8 +66,8 @@ export default function GarageCarDetail() {
         <GarageTabs />
         {review&&<section className="tuning-garage-review" aria-label="Conferma preparazione"><button className="win98-btn" autoFocus onClick={()=>setReview(null)}>Chiudi confronto</button><TuningPreview part={review} carName={`${car.brand} ${car.name}`} money={money} disabled={pending>0||Boolean(activeRace)} onMount={confirmMount}/></section>}
 
-        <FuelConsumption car={car}/>{/* Sub-header Navigation */}
-        <div className="p-2 border-b border-win98-darkGray flex justify-between items-center bg-win98-blue text-white">
+        {/* Sub-header Navigation */}
+        <div className="garage-detail-toolbar p-2 border-b border-win98-darkGray flex flex-wrap gap-2 justify-between items-center bg-win98-blue text-white">
            <button 
              onClick={() => navigate('/garage/auto')}
              className="px-4 py-1 bg-win98-gray text-black border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray active:border-win98-darkerGray font-bold text-base"
@@ -83,16 +83,16 @@ export default function GarageCarDetail() {
           
           {/* Left: Giant Image & Big Stats */}
           <div className="w-full lg:w-1/2 flex flex-col p-4 border-r-2 border-win98-darkerGray bg-gray-100">
-             <div className="bg-white border-2 border-win98-darkerGray shadow-win98-inset p-4 mb-4 flex items-center justify-center min-h-[400px]">
+             <div className="bg-white border-2 border-win98-darkerGray shadow-win98-inset p-4 mb-4 flex items-center justify-center min-h-[170px]">
                 <img 
                   src={`/images/car/${car.image}`} 
                   alt={car.name} 
-                  className="max-w-full max-h-[360px] object-contain drop-shadow-2xl"
-                  onError={(e) => e.target.src = 'https://via.placeholder.com/400x200?text=Auto'}
+                  className="max-w-full max-h-[200px] object-contain"
+                  onError={(e) => e.target.src = '/images/garage.png'}
                 />
              </div>
 
-             <div className="grid grid-cols-2 gap-4">
+             <FuelConsumption car={car}/><details className="period-details mt-2"><summary>Dati banco prova e telemetria</summary><div className="grid grid-cols-2 gap-4">
                 <div className="bg-black text-green-400 p-5 font-pixel border-2 border-gray-600 shadow-xl">
                    <h4 className="text-yellow-500 underline mb-3 text-lg uppercase">Dati Banco Prova</h4>
                    <p className="text-4xl">{car.cv} CV</p>
@@ -127,6 +127,7 @@ export default function GarageCarDetail() {
                     )}
                 </div>
              </div>
+             </details>
           </div>
 
           {/* Right: Management Area */}
@@ -165,14 +166,14 @@ export default function GarageCarDetail() {
                               <div>
                                 <div className="flex justify-between items-start">
                                    <span className="font-bold text-sm uppercase truncate pr-2">{mod.name}</span>
-                                   <span className="text-[10px] bg-win98-blue text-white px-1 leading-tight shrink-0 uppercase">LVL ?</span>
+                                   <span className="text-[10px] bg-win98-blue text-white px-1 leading-tight shrink-0 uppercase">Liv. {mod.level ?? '—'}</span>
                                 </div>
                                 <p className="text-xs text-gray-700 leading-tight italic truncate">{mod.description}</p>
                               </div>
                               <div className="mt-2 flex justify-between items-end">
                                  <div className="flex flex-wrap gap-1">
-                                    {(mod.bonuses?.cv !== 0) && <span className="text-[9px] font-bold bg-green-200 text-green-800 px-1 border border-green-600">+{mod.bonuses?.cv} CV</span>}
-                                    {(mod.bonuses?.kg !== 0) && <span className="text-[9px] font-bold bg-green-200 text-green-800 px-1 border border-green-600">-{mod.bonuses?.kg} KG</span>}
+                                    {(Number.isFinite(mod.bonuses?.cv) && mod.bonuses.cv !== 0) && <span className="text-[9px] font-bold bg-green-200 text-green-800 px-1 border border-green-600">+{mod.bonuses?.cv} CV</span>}
+                                    {(Number.isFinite(mod.bonuses?.kg) && mod.bonuses.kg !== 0) && <span className="text-[9px] font-bold bg-green-200 text-green-800 px-1 border border-green-600">{-mod.bonuses.kg} kg</span>}
                                  </div>
                                  <button 
                                    onClick={() => handleAction('unmount', mod.id, mod.name)}

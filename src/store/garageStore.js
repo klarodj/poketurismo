@@ -39,6 +39,7 @@ const useGarageStore = create((set, get) => ({
         mods: item.mods.map(m => ({
           id: m.id,
           partId: m.partId,
+          level: m.part.level,
           name: m.part.name,
           category: m.part.category,
           image: m.part.image,

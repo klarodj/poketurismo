@@ -22,7 +22,7 @@ export default function GarageScuolaGuida() {
     } catch { /* The shared request banner reports errors. */ }
   };
 
-  return <Win98Window title="Garage — Scuola guida" imageUrl="/images/garage.png">
+  return <Win98Window title="Garage — Scuola guida" imageUrl="/images/places/scuola-guida.png">
     <div className="flex flex-col bg-win98-gray text-black">
       <GarageTabs />
       <div className="p-4">

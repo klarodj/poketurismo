@@ -1,65 +1,6 @@
 import React from 'react';
 import UsedCarDetails from './UsedCarDetails';
-
-export default function ForumPost({ author, avatar, date, title, carDetails, listing, price, onBuy, disabled = false, remainingMoney }) {
-  return (
-    <div className="border border-[#7799CC] mb-4 bg-white period-web text-sm shadow-[1px_1px_0_#808080]">
-      {/* Forum Thread Header */}
-      <div className="bg-[#D1D7DC] px-2 py-1 flex justify-between border-b border-[#7799CC] text-[#006699] font-bold text-xs">
-        <div>Re: [VENDO] {title}</div>
-        <div>Inviato: {date}</div>
-      </div>
-      
-      {/* Post Body */}
-      <div className="flex flex-col md:flex-row min-h-[150px]">
-        {/* User Info Sidebar (Left) */}
-        <div className="w-full md:w-[150px] bg-[#EFEFEF] border-b md:border-b-0 md:border-r border-[#D1D7DC] p-2 flex flex-col items-center gap-2">
-          <span className="font-bold text-[#006699] hover:underline cursor-pointer">{author}</span>
-          <div className="w-20 h-20 bg-gray-300 border border-gray-400 flex items-center justify-center overflow-hidden">
-            {avatar ? (
-               <img src={avatar} alt="avatar" className="w-full h-full object-cover pixelated" />
-            ) : (
-               <span className="text-xs text-gray-500 text-center">No<br/>Avatar</span>
-            )}
-          </div>
-          <div className="text-[10px] text-gray-600 text-center w-full">
-            Messaggi: —<br/>
-            Iscritto: 2001
-          </div>
-        </div>
-
-        {/* Post Content (Right) */}
-        <div className="flex-1 p-3 flex flex-col justify-between">
-          <div>
-            <p className="mb-4 text-[#333333]">
-              Vendo causa inutilizzo la mia {carDetails.brand} {carDetails.name}.<br/>
-              Macchina tenuta da amatore, motore {carDetails.engineType}, trazione {carDetails.driveType}.<br/><br/>
-              {carDetails.marketTier && <><strong>Fascia:</strong> {carDetails.marketTier}{carDetails.starterFriendly ? ' · adatta per iniziare' : ''}<br/></>}
-              <strong>Potenza:</strong> {carDetails.cv} CV · <strong>Peso:</strong> {carDetails.kg} kg<br/>
-              <strong>Kilometri:</strong> {carDetails.km.toLocaleString()} KM<br/>
-              <strong>Stato Motore:</strong> {carDetails.engineHealth}%<br/>
-              <strong>Gomme:</strong> {carDetails.tireGrip}%<br/><br/>
-              {Number.isFinite(carDetails.currentFuel) && <><strong>Carburante incluso:</strong> {carDetails.currentFuel.toLocaleString('it-IT')} L<br/></>}
-              {remainingMoney >= 0 ? <span className="text-green-800">Dopo l’acquisto ti restano €{remainingMoney.toLocaleString('it-IT')}.</span> : <span className="text-red-800">Servono altri €{Math.abs(remainingMoney).toLocaleString('it-IT')}.</span>}
-            </p>
-            {listing && <UsedCarDetails listing={listing} />}
-          </div>
-          
-          <div className="border-t border-dashed border-gray-300 pt-2 flex justify-between items-center mt-4">
-            <span className="text-[#006699] font-bold text-xs">
-              Acquisto dal mercato
-            </span>
-            
-            <button 
-              onClick={onBuy}
-              disabled={disabled}
-              className="bg-[#006699] text-white font-bold px-4 py-1 text-xs hover:bg-[#004e7a] border border-[#003366] shadow-sm transform active:translate-y-[1px] disabled:bg-gray-400 disabled:cursor-not-allowed"
-            >
-              Compra per €{price.toLocaleString('it-IT')}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+import RaceCarArtwork from './RaceCarArtwork';
+export default function ForumPost({author,date,title,carDetails,listing,price,onBuy,disabled=false,remainingMoney}){
+ return <article className="market-post period-web"><header><strong>[VENDO] {title}</strong><span>{author} · {date}</span></header><div className="market-post-body"><RaceCarArtwork car={carDetails}/><div><p className="market-post-price">€{price.toLocaleString('it-IT')}</p><p>{carDetails.cv} CV · {carDetails.km.toLocaleString('it-IT')} km</p><p>Motore {carDetails.engineHealth}% · gomme {carDetails.tireGrip}%</p>{carDetails.starterFriendly&&<p>Adatta per iniziare</p>}</div></div><div className="market-post-footer"><p>{remainingMoney>=0?`Restano €${remainingMoney.toLocaleString('it-IT')}`:`Mancano €${Math.abs(remainingMoney).toLocaleString('it-IT')}`}</p><button type="button" className="win98-btn" onClick={onBuy} disabled={disabled}>Compra · €{price.toLocaleString('it-IT')}</button></div>{listing&&<UsedCarDetails listing={listing}/>}</article>;
 }

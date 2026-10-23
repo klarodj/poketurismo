@@ -45,7 +45,7 @@ export default function Layout() {
           {/* Content View */}
           <div className="w-full bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white shadow-[inset_1px_1px_0_0_#000000]">
             {error && <div role="alert" className="bg-red-100 text-red-900 p-3">{error} {retry && <button disabled={pending > 0} className="underline font-bold" onClick={retry}>Riprova operazione</button>}</div>}
-            {pending > 0 && <div role="status" className="bg-yellow-100 text-black p-2">Salvataggio in corso…</div>}
+            {pending > 0 && <span className="sr-only" role="status">Salvataggio in corso…</span>}
             <fieldset disabled={pending > 0} className="min-w-0"><Outlet /></fieldset>
           </div>
         </div>
