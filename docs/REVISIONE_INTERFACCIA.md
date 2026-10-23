@@ -43,3 +43,7 @@ Nel browser: nuovo pilota senza auto, tutti i 50 corsi raggiungibili, lettura le
 Catture e report in `.preview/interface-qa` (solo dati di collaudo). I confronti di altezza preliminari usavano anche il carattere di ripiego: non sono misure prestazionali del gioco pubblico. La riduzione è verificabile dalla struttura: corsi e schede compatti, cataloghi progressivi e dettagli chiusi all’ingresso.
 
 Verifica finale: 264 test JavaScript e 12 test account/gateway superati; lint, build e controllo del diff completati. Le prove con richieste di gioco sono state eseguite soltanto sulla copia locale; il login è stato ispezionato con configurazione simulata, senza inviare richieste OAuth.
+
+## Pubblicazione
+
+Online il 24 ottobre 2026 sulla singola istanza 5174 e gateway 5184. Backup completo Auth + gioco prima e dopo; build precedente e confronto privato in `/home/klaro/.backups/poketurismo/interface-review-2026-10-23T23-12-01-038Z`. Con servizi fermi, confronto integrale delle 32 tabelle game: tutte le righe identiche prima e dopo. Nessun cambiamento a server/shared, migrazioni o reset. Verificati gateway locale e Funnel 443/8443: pagine e health disponibili, API personali anonime 401, nuovo bundle e immagini corrispondenti agli artefatti distribuiti. Nessuna modifica alla configurazione Funnel.
