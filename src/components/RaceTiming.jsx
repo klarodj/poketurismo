@@ -1,3 +1,4 @@
+import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React from 'react';
 import { DECISION_OPTIONS } from '../../shared/tacticalRace.mjs';
 import { formatRaceTime } from '../logic/racePresentation';
@@ -6,7 +7,7 @@ export function RaceTiming({ race }) {
   return <div className="bg-black text-green-400 p-4 font-pixel space-y-3">
     <div className="text-3xl text-center" aria-live="polite">{gap > 0.01 ? `Davanti di ${gap.toFixed(3)} s` : gap < -0.01 ? `Dietro di ${Math.abs(gap).toFixed(3)} s` : 'Affiancati'}</div>
     <div className="grid grid-cols-2 gap-2 text-center"><div>Il tuo tempo<strong className="block text-xl">{formatRaceTime(race.playerTime)}</strong></div><div>Tempo rivale<strong className="block text-xl">{formatRaceTime(race.opponentTime)}</strong></div></div>
-    <ol className="flex gap-1" aria-label="Avanzamento gara">{race.sections.map((section, i) => <li key={section.id || i} title={section.name} aria-current={i === race.index ? 'step' : undefined} className={`flex-1 p-1 text-center border text-sm ${i < race.index ? 'bg-green-800 text-white' : i === race.index ? 'bg-yellow-200 text-black' : 'border-gray-600 text-gray-400'}`}>{i + 1}<span className="block text-xs">{section.segments.every(segment => !segment.radiusM) ? '━' : '↝'}</span></li>)}</ol>
+    <ol className="flex gap-1" aria-label="Avanzamento gara">{race.sections.map((section, i) => <li key={section.id || i} title={trackSectionLabel(section.name)} aria-current={i === race.index ? 'step' : undefined} className={`flex-1 p-1 text-center border text-sm ${i < race.index ? 'bg-green-800 text-white' : i === race.index ? 'bg-yellow-200 text-black' : 'border-gray-600 text-gray-400'}`}>{i + 1}<span className="block text-xs">{section.segments.every(segment => !segment.radiusM) ? '━' : '↝'}</span></li>)}</ol>
   </div>;
 }
 export function TacticalLog({ log, solo }) {

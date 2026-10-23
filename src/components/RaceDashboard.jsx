@@ -1,3 +1,4 @@
+import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState } from 'react';
 import RaceCarArtwork from './RaceCarArtwork';
 import RaceDetailDialog from './RaceDetailDialog';
@@ -20,10 +21,10 @@ function CarCard({ car, label, pilot, rival, onClick }) {
   </button>;
 }
 function TimingDetail({ race }) {
-  if((race.timeTrial||race.meetTrial))return <div className="space-y-3"><p className="font-bold">Tempo personale: {formatRaceTime(race.playerTime)}</p><table className="race-table"><thead><tr><th>Settore</th><th>Tempo</th></tr></thead><tbody>{race.logs.map((log,index)=><tr key={index}><td>{log.section}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'} s</td></tr>)}</tbody></table></div>;
+  if((race.timeTrial||race.meetTrial))return <div className="space-y-3"><p className="font-bold">Tempo personale: {formatRaceTime(race.playerTime)}</p><table className="race-table"><thead><tr><th>Settore</th><th>Tempo</th></tr></thead><tbody>{race.logs.map((log,index)=><tr key={index}><td>{trackSectionLabel(log.section)}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'} s</td></tr>)}</tbody></table></div>;
   return <div className="space-y-4">
     <RaceTiming race={race} />
-    <div className="overflow-x-auto"><table className="race-table"><caption>Tempi per settore · secondi</caption><thead><tr><th>Settore</th><th>Tu</th><th>Rivale</th><th>Guadagno</th></tr></thead><tbody>{race.logs.map((log, i) => <tr key={i}><td>{log.section}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'}</td><td>{log.opponentSeconds?.toFixed(3) ?? '—'}</td><td>{(log.deltaSeconds || 0) > 0 ? '+' : ''}{(log.deltaSeconds || 0).toFixed(3)}</td></tr>)}</tbody></table></div>
+    <div className="overflow-x-auto"><table className="race-table"><caption>Tempi per settore · secondi</caption><thead><tr><th>Settore</th><th>Tu</th><th>Rivale</th><th>Guadagno</th></tr></thead><tbody>{race.logs.map((log, i) => <tr key={i}><td>{trackSectionLabel(log.section)}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'}</td><td>{log.opponentSeconds?.toFixed(3) ?? '—'}</td><td>{(log.deltaSeconds || 0) > 0 ? '+' : ''}{(log.deltaSeconds || 0).toFixed(3)}</td></tr>)}</tbody></table></div>
     {!race.logs.length && <p>Il confronto si aggiornerà dopo il primo settore.</p>}
     <p className="text-sm">Un guadagno positivo indica tempo recuperato sul rivale; il distacco totale deriva dai tempi cumulati.</p>
   </div>;
@@ -54,8 +55,8 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
     </section>
     <nav className="race-instruments" aria-label="Esplora i dettagli della gara">
       <button type="button" onClick={() => setDetail('track')}><span>Pista ↗</span><strong>{race.distanceKm.toFixed(2)} km</strong></button>
-      <button type="button" onClick={() => setDetail('sector')}><span>{active ? 'Settore attuale ↗' : 'Percorso completato ↗'}</span><strong>{section?.name || 'Traguardo'}</strong><small>{section?.segments ? `${Math.round(section.segments.reduce((sum, segment) => sum + segment.lengthM, 0))} m · ` : ''}{next ? `Poi: ${next.name}` : active ? 'Poi: traguardo' : `${race.index}/${race.sections.length} settori percorsi`}</small></button>
-      <button type="button" onClick={() => setDetail('history')}><span>Cronologia ↗</span><strong>{last ? last.section : 'In attesa del via'}</strong><small>{last && race.meetTrial ? `Il tuo settore: ${last.playerSeconds?.toFixed(3)||'—'} s` : last && tactical ? `${(last.deltaSeconds || 0) >= 0 ? 'Recuperati' : 'Persi'} ${Math.abs(last.deltaSeconds || 0).toFixed(2)} s nell’ultimo settore` : 'Scelte, consumi e avvenimenti'}</small></button>
+      <button type="button" onClick={() => setDetail('sector')}><span>{active ? 'Settore attuale ↗' : 'Percorso completato ↗'}</span><strong>{trackSectionLabel(section?.name) || 'Traguardo'}</strong><small>{section?.segments ? `${Math.round(section.segments.reduce((sum, segment) => sum + segment.lengthM, 0))} m · ` : ''}{next ? `Poi: ${trackSectionLabel(next.name)}` : active ? 'Poi: traguardo' : `${race.index}/${race.sections.length} settori percorsi`}</small></button>
+      <button type="button" onClick={() => setDetail('history')}><span>Cronologia ↗</span><strong>{last ? trackSectionLabel(last.section) : 'In attesa del via'}</strong><small>{last && race.meetTrial ? `Il tuo settore: ${last.playerSeconds?.toFixed(3)||'—'} s` : last && tactical ? `${(last.deltaSeconds || 0) >= 0 ? 'Recuperati' : 'Persi'} ${Math.abs(last.deltaSeconds || 0).toFixed(2)} s nell’ultimo settore` : 'Scelte, consumi e avvenimenti'}</small></button>
     </nav>
     {active && <div className="race-alerts" aria-label="Avvisi di gara">
       {race.incidentCue && <p role="status">⚠ {race.incidentCue.description} Scegli «Conserva» per lasciare più margine.</p>}
@@ -70,7 +71,7 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
     {detail && <RaceDetailDialog title={titles[detail]} onClose={() => setDetail(null)}>
       {detail === 'player' && <CarDetail car={race.car} pilot={race.pilot} name="Tu" />}
       {detail === 'opponent' && <CarDetail car={race.opponent.car} pilot={race.opponent.pilot} name={race.opponent.name} />}
-      {detail === 'track' && <div className="space-y-4"><p>{race.environment.weather} · {race.environment.surface} · {race.distanceKm.toFixed(2)} km</p>{tactical ? <TrackPreview trackName={race.trackName} sections={race.sections} paths={race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null)} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)} /> : <ol className="list-decimal pl-6">{race.sections.map((item, i) => <li key={i}>{item.name}</li>)}</ol>}</div>}
+      {detail === 'track' && <div className="space-y-4"><p>{race.environment.weather} · {race.environment.surface} · {race.distanceKm.toFixed(2)} km</p>{tactical ? <TrackPreview trackName={race.trackName} sections={race.sections} paths={race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null)} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)} /> : <ol className="list-decimal pl-6">{race.sections.map((item, i) => <li key={i}>{trackSectionLabel(item.name)}</li>)}</ol>}</div>}
       {detail === 'sector' && <SectorDetail race={race} />}
       {detail === 'timing' && (tactical ? <TimingDetail race={race} /> : <p>{position} · {Math.abs(gap)} m</p>)}
       {detail === 'history' && <RaceHistory race={race} />}

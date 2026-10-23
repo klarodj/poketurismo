@@ -1,3 +1,4 @@
+import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import ChampionshipTable from './ChampionshipTable';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -128,7 +129,7 @@ export default function RacePage({ mode }) {
       </> : <RaceDashboard race={race} pending={pending} onAbandon={abandon}>
         {race.status === 'active' && section ? <>
           {race.rulesVersion === 3 ? <TacticalControls key={`${race.id}:${race.index}`} race={race} pending={pending} onTurn={turn} showAlerts={false} /> : <>
-          <h2 className="font-bold text-xl">{section.name} · {getSectionType(section)}</h2>
+          <h2 className="font-bold text-xl">{trackSectionLabel(section.name)} · {trackSectionLabel(getSectionType(section))}</h2>
           <p>Auto: {CAR_STAT_LABELS[section.carStat]} + {CAR_STAT_LABELS[section.carTech]} · Pilota: {PILOT_STAT_LABELS[section.driverStat]} + {PILOT_STAT_LABELS[section.driverTech]}</p>
           <div className="flex flex-wrap gap-2"><button disabled={pending > 0} className={button} onClick={() => turn(null)}>Guida normale</button>
             {race.moves.map(move => <button key={move.id} disabled={pending > 0 || !canPlay(move, section, race.gap)} className={button} onClick={() => turn(move.id)}>

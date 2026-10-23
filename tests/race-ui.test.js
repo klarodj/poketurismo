@@ -167,3 +167,14 @@ test('old track labels display the same illustration without altering the school
  const Illustration=await component('TrackIllustration');const old=renderToStaticMarkup(React.createElement(Illustration,{name:'Tsukuba · Ibaraki'})),current=renderToStaticMarkup(React.createElement(Illustration,{name:'Pistino di San Rocco · Pavese'}));assert.equal(old,current);assert.ok(old.includes('san-rocco.png'));
  const TrackPreview=await component('TrackPreview');const demo=renderToStaticMarkup(React.createElement(TrackPreview,{trackName:DEMO_TRACK.name,sections:DEMO_TRACK.sections,paths:DEMO_TRACK.mapPaths}));assert.ok(demo.includes('scuola.png'));assert.ok(demo.includes(DEMO_TRACK.mapPaths[0]));assert.ok(demo.includes('P / A'));
 });
+
+test('track sector names are Italian in previews, map titles, progress and saved race history',async()=>{
+ const TrackPreview=await component('TrackPreview'),{trackSectionLabel}=await import('../shared/trackSectionLabels.mjs');
+ const names=['Short Straight','Long Straight','Slow Right Turn','Slow Left Turn','Fast Right Turn','Fast Left Turn','Hump','Depression','Descent','Climb','Chicane','Hairpin Right','Hairpin Left','Right Inversion','Left Inversion','Obstacle'];
+ for(const name of names)assert.notEqual(trackSectionLabel(name),name);
+ assert.equal(trackSectionLabel('Climb → Hairpin Right'),'Salita → Tornante a destra');assert.equal(trackSectionLabel('Esse del Bosco'),'Esse del Bosco');assert.equal(trackSectionLabel('Bar Straight · settore privato'),'Bar Straight · settore privato');
+ const sections=structuredClone(DEMO_TRACK.sections);sections[0].name='Short Straight';sections[1].name='Climb → Hairpin Right';const before=JSON.stringify(sections);
+ const markup=renderToStaticMarkup(React.createElement(TrackPreview,{trackName:DEMO_TRACK.name,sections,paths:DEMO_TRACK.mapPaths,index:0}));assert.ok(markup.includes('Rettilineo breve'));assert.ok(markup.includes('Salita → Tornante a destra'));assert.ok(!markup.includes('Short Straight'));assert.ok(!markup.includes('Hairpin Right'));assert.equal(JSON.stringify(sections),before);
+ const RaceTiming=await component('RaceTiming','RaceTiming');const race=makeRace();race.sections=sections;assert.ok(!renderToStaticMarkup(React.createElement(RaceTiming,{race})).includes('Short Straight'));
+ const RaceHistory=await component('RaceDetails','RaceHistory');race.logs=[{section:'Long Straight → Fast Left Turn',move:'Guida normale',playerSeconds:2,opponentSeconds:3,deltaSeconds:1,peakKmh:100,exitKmh:80,potentialSeconds:2,driverLossSeconds:0,fuel:0.2,tires:0.1,engine:0.1}];const history=renderToStaticMarkup(React.createElement(RaceHistory,{race}));assert.ok(history.includes('Rettilineo lungo → Curva veloce a sinistra'));assert.equal(race.logs[0].section,'Long Straight → Fast Left Turn');
+});

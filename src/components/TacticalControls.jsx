@@ -1,3 +1,4 @@
+import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState } from 'react';
 import { DEFAULT_DECISION, DECISION_OPTIONS, decisionPreview } from '../../shared/tacticalRace.mjs';
 import { contextualDecision, tacticalContext, tacticalMovePlayable } from '../../shared/raceContext.mjs';
@@ -34,7 +35,7 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
     </fieldset>
     {inspect && <RaceDetailDialog title="Strategia · effetti e stime" onClose={() => setInspect(false)}>
       <div className="space-y-5">
-        <p>Stai scegliendo come affrontare <strong>{section.name}</strong>. Le tecniche aiutano a sfruttare la vettura; non ne aumentano potenza o aderenza fisica.</p>
+        <p>Stai scegliendo come affrontare <strong>{trackSectionLabel(section.name)}</strong>. Le tecniche aiutano a sfruttare la vettura; non ne aumentano potenza o aderenza fisica.</p>
         <dl className="race-specs"><div><dt>Tempo indicativo</dt><dd>{preview.seconds.toFixed(1)} s</dd></div><div><dt>Rischio errore</dt><dd>{preview.errorPercent.toFixed(1)}%</dd></div><div><dt>Carburante stimato</dt><dd>{preview.fuel.toFixed(2)} L</dd></div><div><dt>Usura gomme stimata</dt><dd>−{preview.tires.toFixed(2)}%</dd></div>{context.hasBrakingZone && <div><dt>Efficacia frenata del pilota</dt><dd>{preview.brakingSkill}/100</dd></div>}{preview.cornerLimitKmh !== null && <div><dt>Limite di aderenza stimato</dt><dd>{preview.cornerLimitKmh} km/h</dd></div>}</dl>
         <p className="text-sm">La stima non include duelli, errori o imprevisti. Non c’è un timer per scegliere.</p>
         {[{ key: 'pace', label: 'Ritmo', show: true }, ...groups].filter(group => group.show).map(({ key, label }) => <section key={key}><h3 className="font-bold mb-2">{label}</h3><ul className="space-y-2">{options(key).map(option => <li key={option.id} className={decision[key] === option.id ? 'bg-blue-50 border-l-4 border-blue-700 p-2' : 'p-2'}><strong>{option.name}{decision[key] === option.id ? ' · selezionata' : ''}</strong><p className="text-sm">{option.description}</p></li>)}</ul></section>)}

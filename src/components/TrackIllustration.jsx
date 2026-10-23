@@ -1,3 +1,4 @@
+import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React from 'react';
 import {trackVisual,mapSectors,sectorMapLabel,TRACK_SECTOR_COLORS} from '../../shared/trackVisuals.mjs';
 import './track-art.css';
@@ -18,9 +19,9 @@ export function TrackMinimap({visual,sections=[],index=-1,paths}){
  const closed=visual?.format==='circuit',groups=demo?[]:mapSectors(visual.points,sections,closed),points=visual?.points;
  return <svg className="track-minimap" viewBox={demo?'50 35 510 245':'0 0 320 200'} role="img" aria-label={`Minimappa di ${visual?.name||'Circuito Scuola'}${index>=0&&sections[index]?`, settore ${index+1} evidenziato`:''}`} shapeRendering="crispEdges">
  {demo?<rect x="50" y="35" width="510" height="245" fill="#b8c898"/>:<MapGround terrain={visual.terrain}/>}
- {demo?paths.map((path,i)=><g key={i}><path d={path} fill="none" stroke="#fff" strokeWidth="12"/><path d={path} fill="none" stroke={i===index?'#ffff00':TRACK_SECTOR_COLORS[i%8]} strokeWidth={i===index?9:7}><title>{`${i+1}. ${sections[i].name}`}</title></path></g>):<>
+ {demo?paths.map((path,i)=><g key={i}><path d={path} fill="none" stroke="#fff" strokeWidth="12"/><path d={path} fill="none" stroke={i===index?'#ffff00':TRACK_SECTOR_COLORS[i%8]} strokeWidth={i===index?9:7}><title>{`${i+1}. ${trackSectionLabel(sections[i].name)}`}</title></path></g>):<>
  <polyline points={line(closed?[...points,points[0]]:points)} fill="none" stroke="#303030" strokeWidth="12" strokeLinejoin="round"/><polyline points={line(closed?[...points,points[0]]:points)} fill="none" stroke="#fff" strokeWidth="9" strokeDasharray="5 5" strokeLinejoin="round"/>
- {groups.map(({points:part,index:i})=><polyline key={i} points={line(part)} fill="none" stroke={i===index?'#ffff00':sections.length?TRACK_SECTOR_COLORS[i%8]:'#505050'} strokeWidth={i===index?7:5} strokeLinejoin="round"><title>{sections[i]?`${i+1}. ${sections[i].name}${i===index?' · settore attuale':''}`:visual.name}</title></polyline>)}
+ {groups.map(({points:part,index:i})=><polyline key={i} points={line(part)} fill="none" stroke={i===index?'#ffff00':sections.length?TRACK_SECTOR_COLORS[i%8]:'#505050'} strokeWidth={i===index?7:5} strokeLinejoin="round"><title>{sections[i]?`${i+1}. ${trackSectionLabel(sections[i].name)}${i===index?' · settore attuale':''}`:visual.name}</title></polyline>)}
  {sections.length>0&&groups.map(({points:part,index:i})=>{const[x,y]=sectorMapLabel(part);return <g key={i} transform={`translate(${Math.round(x)} ${Math.round(y)})`}><rect x="-6" y="-6" width="12" height="12" fill={i===index?'#ffff00':'#fff'} stroke="#000"/><text textAnchor="middle" y="4" fontSize="11" fontWeight="bold" fill="#000">{i+1}</text></g>;})}
  <Flag point={points[0]} label={closed?'P / A':'P'} start={!closed}/>{!closed&&<Flag point={points.at(-1)} label="A"/>}
  </>}
