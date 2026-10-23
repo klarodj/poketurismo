@@ -20,13 +20,13 @@ import {
 // ─── HELPERS ────────────────────────────────────────────────────────────────
 
 const CATEGORY_COLORS = {
-  'N/A':       'bg-gray-700',
-  'Aspirato':  'bg-green-800',
-  'GT':        'bg-blue-800',
-  'Supercar': 'bg-red-900',
-  'Turbo':     'bg-red-800',
-  'Leggenda':  'bg-yellow-700',
-  'Open':      'bg-purple-800',
+  'N/A':       'bg-[#808080]',
+  'Aspirato':  'bg-[#008000]',
+  'GT':        'bg-[#000080]',
+  'Supercar': 'bg-[#800000]',
+  'Turbo':     'bg-[#800000]',
+  'Leggenda':  'bg-[#808000]',
+  'Open':      'bg-[#800080]',
 };
 
 const STAT_LABELS = {
@@ -61,15 +61,15 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
   const pilotErrors = checkPilotRequirements(playerStats, playerLevel, champ);
   const allErrors = [...carErrors, ...pilotErrors];
   const canEnter = isActive || (!activeEntry && allErrors.length === 0 && playerMoney >= champ.entryFee);
-  const catColor = CATEGORY_COLORS[champ.category] || 'bg-gray-700';
+  const catColor = CATEGORY_COLORS[champ.category] || 'bg-[#808080]';
 
   return (
-    <div className={`bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-md`}>
+    <div className={`bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-win98-outset`}>
       {/* Header */}
       <div className={`${catColor} text-white px-3 py-2 flex justify-between items-center cursor-pointer`} onClick={() => setExpanded(e => !e)}>
         <div className="flex items-center gap-2">
           <span className="font-bold text-base uppercase tracking-wide">{champ.name}</span>
-          <span className="text-xs bg-white/20 border border-white/30 px-2 py-0.5 rounded-sm">{champ.category}</span>
+          <span className="text-xs bg-win98-gray text-black border border-white px-2 py-0.5">{champ.category}</span>
         </div>
         <div className="flex items-center gap-3 text-sm">
           <span className="font-bold text-yellow-300">€{champ.rewardMoney.toLocaleString()}</span>
@@ -180,7 +180,7 @@ function TrainingCard({ session, playerLevel, playerMoney, alreadyHasMove, onCom
   const canDo = canAfford && levelOk && !moveAlreadyUnlocked && !assimilated;
 
   return (
-    <div className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-md">
+    <div className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray shadow-win98-outset">
       <div className={`px-3 py-2 flex justify-between items-center ${session.category === 'move' ? 'bg-purple-900' : 'bg-teal-800'} text-white`}>
         <div className="flex items-center gap-2">
           <span className="font-bold text-base">{session.name}</span>

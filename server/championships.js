@@ -1,3 +1,4 @@
+const {cupAliases}=require('../shared/periodWorld.mjs');
 const {CHAMPIONSHIP_CATALOG,championshipInfo,gridClassification,gridStandings}=require('../shared/championshipCatalog.mjs');
 const {PILOT_STATS}=require('./raceEngine');
 const {advanceTacticalRace,DEFAULT_DECISION}=require('../shared/tacticalRace.mjs');
@@ -5,7 +6,7 @@ const {incidentCue,routeProfileFor}=require('../shared/raceContext.mjs');
 const {fail}=require('./gameRules');
 const trackInclude={type:true,surface:true,meteo:true,builds:{include:{section:true},orderBy:{ord:'asc'}}};
 function readContract(entry){return JSON.parse(entry.contract||'{}');}
-function publicEntry(entry){if(!entry)return null;const contract=readContract(entry);const results=typeof entry.results==='string'?JSON.parse(entry.results):entry.results;const {contract:_,...safe}=entry;return {...safe,results,...(contract.version===1?{championship:contract.championship,format:'grid',standings:gridStandings(results,[{id:'player',name:contract.playerName},...contract.drivers.map(d=>({id:d.id,name:d.name,carName:d.car.name}))])}:{format:'duel'})};}
+function publicEntry(entry){if(!entry)return null;const contract=readContract(entry);const results=typeof entry.results==='string'?JSON.parse(entry.results):entry.results;const {contract:_,...safe}=entry;return require('./periodWorld').presentPeriodEntry({...safe,results,...(contract.version===1?{championship:contract.championship,format:'grid',standings:gridStandings(results,[{id:'player',name:contract.playerName},...contract.drivers.map(d=>({id:d.id,name:d.name,carName:d.car.name}))])}:{format:'duel'})});}
 async function createContract(tx,user,championship){
  const spec=championshipInfo(championship.name);if(!spec)return '{}';
  const cars=await tx.car.findMany({include:{brand:true}});
@@ -33,7 +34,7 @@ async function settleGrid(tx,userId,state,entry){
 }
 async function seedChampionships(tx){
  const tracks=await tx.track.findMany();const cars=await tx.car.findMany();const created=[];
- for(const cup of CHAMPIONSHIP_CATALOG){if(await tx.championship.findFirst({where:{name:cup.name}}))continue;
+ for(const cup of CHAMPIONSHIP_CATALOG){if(await tx.championship.findFirst({where:{name:{in:cupAliases(cup.name)}}}))continue;
   for(const rival of cup.rivals)if(!cars.some(car=>car.name===rival.carName))throw Error(`Auto mancante: ${rival.carName}`);
   const rounds=cup.tracks.map((name,index)=>{const track=tracks.find(t=>t.name===name);if(!track)throw Error(`Circuito mancante: ${name}`);const rival=cup.rivals[index%7];return {trackId:track.id,ord:index+1,opponentName:rival.name,opponentCarName:rival.carName,opponentDifficulty:rival.skill/24};});
   const {tracks:_,rivals:__,engineTypes:___,brands:____,drives:_____,...data}=cup;

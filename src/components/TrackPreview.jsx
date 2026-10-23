@@ -2,11 +2,11 @@ import React from 'react';
 import { sectionFeatures } from '../../shared/raceContext.mjs';
 export default function TrackPreview({ sections, paths, index = -1, profile = {}, compact = false, title = 'Anteprima del tracciato' }) {
   if (!sections?.length) return null;
-  const colors = ['#1d4ed8', '#9a3412', '#7e22ce', '#047857', '#be123c', '#0369a1', '#a16207', '#4338ca'];
+  const colors = ['#000080', '#800000', '#800080', '#008000', '#ff0000', '#008080', '#808000', '#0000ff'];
   return <section className="border-2 border-gray-600 bg-white p-3 space-y-3" aria-label={title}>
     <h2 className="font-bold">{title} · {profile.kind === 'road' ? 'Strada · da punto a punto' : 'Circuito'}</h2>
     {paths?.length === sections.length && <>
-      <svg viewBox="50 35 510 245" className={`w-full ${compact ? 'max-h-40' : 'max-h-64'} bg-green-50`} role="img" aria-label="Schema del Circuito Scuola, con settori numerati">
+      <svg viewBox="50 35 510 245" className={`w-full ${compact ? 'max-h-40' : 'max-h-64'} bg-[#c0c0c0]`} role="img" aria-label="Schema del Circuito Scuola, con settori numerati">
         {paths.map((path, i) => <g key={i}><path d={path} fill="none" stroke={i === index ? '#facc15' : colors[i % colors.length]} strokeWidth={i === index ? 13 : 8} strokeLinecap="round"><title>{`${i + 1}. ${sections[i].name}${i === index ? ' · settore attuale' : ''}`}</title></path><path d={path} fill="none" stroke="#ffffff" strokeWidth="1" strokeDasharray="4 6" /></g>)}
         {[[320,260],[540,205],[465,115],[250,52],[62,110],[220,145],[210,205],[125,262]].map(([x,y], i) => <text key={i} x={x} y={y} textAnchor="middle" fontSize="16" fontWeight="bold" fill="#111827">{i + 1}</text>)}
         <text x="180" y="231" fontSize="12" textAnchor="middle">Partenza / arrivo</text>

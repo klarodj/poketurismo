@@ -152,3 +152,7 @@ test('meet challenge cards explain frozen conditions, consent, time results and 
 test('meet cockpit shows a personal clock and honest ghost rather than a live fictional rival',async()=>{
  const Dashboard=await component('RaceDashboard');const race=makeRace();Object.assign(race,{status:'active',mode:'track',trackName:'Tsukuba',meetTrial:true,meetChallenge:{otherName:'Marta'},meetGhost:{splits:[30000],totalMs:60000}});const markup=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon(){}}));assert.ok(markup.includes('Sfida asincrona'));assert.ok(markup.includes('Fantasma disponibile'));assert.ok(markup.includes('Tempo personale'));assert.ok(!markup.includes('Auto rivale'));assert.ok(!markup.includes('Affiancati'));
 });
+
+test('mechanic previews keep all four original workshop pictures alongside their real quotes',async()=>{
+ const Services=await component('WorkshopServices');const car={id:1,engineHealth:50,tireGrip:50,performanceIndex:40,services:['engine','tires','rebuild','full'].map(id=>({id,name:id,description:'Lavorazione',price:150,enabled:true,after:{engineHealth:100,tireGrip:100,performanceIndex:45}}))};const html=renderToStaticMarkup(React.createElement(Services,{car,money:1000,disabled:false,onService(){}}));for(const file of ['oil.png','tyre.png','rebuild.png','repair.png']){assert.ok(html.includes('/images/work/'+file));assert.ok(existsSync(resolve('public/images/work/'+file)));}
+});

@@ -22,7 +22,7 @@ export default function Layout() {
 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg">
+    <div className="period-desktop min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg">
       <NokiaModal />
       <Win98ErrorDialog />
 

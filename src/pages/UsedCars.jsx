@@ -57,7 +57,7 @@ export default function UsedCars() {
   };
 
   return (
-    <div className="w-full bg-[#f1f1f1] flex flex-col">
+    <div className="period-web w-full bg-[#f1f1f1] flex flex-col">
       {/* Forum Header */}
       <div className="bg-[#006699] text-white p-4 mb-4 shadow-md">
         <h1 className="text-2xl font-bold italic tracking-wider">Elaborare.info Forum</h1>
@@ -76,7 +76,7 @@ export default function UsedCars() {
       <div className="px-4 pb-4">
         {loading ? (
           <div className="bg-white p-4 border border-[#7799CC] italic text-[#006699]">
-            Connessione al server del forum in corso (56k modem sound)...
+            Connessione al mercatino in corso…
           </div>
         ) : filtered.length === 0 ? (
           <div className="bg-white p-4 border border-[#7799CC] text-center">

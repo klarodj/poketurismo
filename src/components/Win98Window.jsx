@@ -40,14 +40,10 @@ export default function Win98Window({ title, children, onClose, noShadow = false
       {/* Window Body */}
       <div className="bg-win98-gray p-1 flex flex-col">
         {imageUrl && (
-          <div className="w-full h-32 md:h-48 border-2 border-win98-darkerGray mb-2 relative overflow-hidden shrink-0 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] bg-black">
-            <img src={imageUrl} alt={title} className="w-full h-full object-cover opacity-80 mix-blend-screen" onError={(e) => e.target.style.display='none'} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2 pointer-events-none">
-               <span className="text-white font-pixel font-bold text-xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] uppercase tracking-widest bg-black/40 px-2 py-1">{title}</span>
-            </div>
-            {/* Scanline effect */}
-            <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)] pointer-events-none mix-blend-overlay"></div>
-          </div>
+          <figure className="mb-2 border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white bg-win98-gray">
+            <img src={imageUrl} alt={title} className="w-full h-32 md:h-48 object-cover" style={{imageRendering:'pixelated'}} />
+            <figcaption className="px-2 py-1 border-t border-win98-darkerGray text-black font-bold">{title}</figcaption>
+          </figure>
         )}
         <div className="w-full">
           {children}

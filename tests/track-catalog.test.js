@@ -39,7 +39,7 @@ test('twenty distinct routes cover both formats, five conditions and varied play
 });
 test('catalog seed preserves existing tracks and does not duplicate tracks or sectors on rerun',async()=>{
   const rows=[{id:1,name:'Legacy',builds:{create:[{ord:1,sectionId:1,level:1}]}}];
-  const tx={trackType:{findMany:async()=>['Track','Touge','City','Highway'].map((name,id)=>({id:id+1,name}))},trackSurface:{findMany:async()=>[{id:1,name:'tarmac'}]},trackMeteo:{findMany:async()=>['sunny','rainy','snowy','night','foggy'].map((name,id)=>({id:id+1,name}))},trackSection:{findMany:async()=>names.map((name,id)=>({id:id+1,name}))},track:{findFirst:async({where})=>rows.find(row=>row.name===where.name),create:async({data})=>{const row={id:rows.length+1,...data};rows.push(row);return row;}}};
+  const tx={trackType:{findMany:async()=>['Track','Touge','City','Highway'].map((name,id)=>({id:id+1,name}))},trackSurface:{findMany:async()=>[{id:1,name:'tarmac'}]},trackMeteo:{findMany:async()=>['sunny','rainy','snowy','night','foggy'].map((name,id)=>({id:id+1,name}))},trackSection:{findMany:async()=>names.map((name,id)=>({id:id+1,name}))},track:{findFirst:async({where})=>rows.find(row=>where.name?.in?where.name.in.includes(row.name):row.name===where.name),create:async({data})=>{const row={id:rows.length+1,...data};rows.push(row);return row;}}};
   const db={$transaction:async callback=>callback(tx)};
   assert.equal((await applyTracks(db)).created.length,20);
   const before=JSON.stringify(rows);

@@ -222,7 +222,7 @@ app.get('/api/races/active/:userId', endpoint(async req => {
 app.get('/api/time-trials/:userId', endpoint(async req => {
   const rows=await prisma.raceSession.findMany({where:{userId:accounts.playerId(req,req.params.userId),mode:'track',status:'completed'},orderBy:{createdAt:'desc'}});
   const records=new Map();
-  for(const row of rows){const state=JSON.parse(row.state);if(!state.timeTrial||state.failure||state.index!==state.sections.length||!Number.isFinite(state.playerTime))continue;const timeMs=Math.round(state.playerTime*1000);if(!records.has(state.trackId)||records.get(state.trackId).timeMs>timeMs)records.set(state.trackId,{raceId:row.id,trackId:state.trackId,trackName:state.trackName,timeMs,...state.trialSetup});}
+  for(const row of rows){const state=JSON.parse(row.state);if(!state.timeTrial||state.failure||state.index!==state.sections.length||!Number.isFinite(state.playerTime))continue;const timeMs=Math.round(state.playerTime*1000);if(!records.has(state.trackId)||records.get(state.trackId).timeMs>timeMs)records.set(state.trackId,{raceId:row.id,trackId:state.trackId,trackName:require('../shared/periodWorld.mjs').periodTrackName(state.trackName),timeMs,...state.trialSetup});}
   return [...records.values()];
 }));
 app.get('/api/races/:raceId', endpoint(async req => {

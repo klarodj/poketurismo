@@ -1,0 +1,22 @@
+/* Poketurismo, provincia del Nord, 2002. Keep the original bitmap artwork. */
+.period-desktop{--win-face:#c0c0c0;--win-light:#fff;--win-shadow:#808080;--win-dark:#000;--win-title:#000080;--win-outset:inset 1px 1px #fff,inset -1px -1px #000,inset 2px 2px #dfdfdf,inset -2px -2px #808080;--win-inset:inset 1px 1px #808080,inset -1px -1px #fff,inset 2px 2px #000,inset -2px -2px #dfdfdf;font-family:'VT323',monospace;color:#000}
+.period-desktop :is(button,input,select,textarea){font-family:inherit;border-radius:0}
+.period-desktop :is(button,input,select,textarea,summary):focus-visible{outline:1px dotted #000;outline-offset:2px}
+.period-desktop .win98-btn{font:inherit;font-size:1rem;min-height:30px;padding:5px 12px;box-shadow:var(--win-outset);background:#c0c0c0;color:#000;border:0}
+.period-desktop .win98-btn:hover:not(:disabled){background:#dfdfdf}
+.period-desktop .win98-btn:active:not(:disabled),.period-desktop .win98-btn[aria-pressed=true]{box-shadow:var(--win-inset);background:#c0c0c0}
+.period-desktop .win98-btn:disabled{color:#808080;text-shadow:1px 1px #fff;background:#c0c0c0;cursor:default}
+.period-title{background:#000080;color:#fff;font-weight:bold;padding:3px 6px;font-size:1.25rem}
+.period-menu{padding:5px 8px;border-bottom:1px solid #808080;box-shadow:0 1px #fff;background:#c0c0c0;display:flex;gap:16px;flex-wrap:wrap}
+.period-menu a{color:#000080;text-decoration:underline}
+.period-status{display:flex;flex-wrap:wrap;gap:12px;background:#c0c0c0;border:2px inset #dfdfdf;padding:3px 7px;font-size:.9rem}
+.period-panel{background:#c0c0c0;border:2px groove #fff;padding:12px}
+.period-ledger{width:100%;border:2px inset #dfdfdf;background:#fff;border-collapse:separate;border-spacing:1px;text-align:left}
+.period-ledger :is(th,td){padding:6px 8px;border-bottom:1px solid #808080}
+.period-ledger thead th{background:#c0c0c0;box-shadow:inset 1px 1px #fff,inset -1px -1px #808080}
+.period-ledger td{background:#fff}.period-ledger caption{text-align:left;font-weight:bold;padding:6px 0}
+.period-web{font:13px/1.5 Verdana,Tahoma,Arial,sans-serif}.period-web button,.period-web select{font:inherit}
+.period-activities{display:grid;grid-template-columns:1fr 1fr;gap:10px}.period-activity{display:grid;grid-template-columns:70px 1fr;gap:10px;text-align:left;padding:12px;background:#c0c0c0;box-shadow:var(--win-outset)}.period-activity img{width:64px;height:64px;object-fit:cover;border:2px inset #fff;image-rendering:pixelated}.period-activity strong{display:block;color:#000080;text-decoration:underline;font-size:1.2rem}.period-activity span{display:block}.period-activity:active{box-shadow:var(--win-inset)}
+.period-page{padding:12px;background:#c0c0c0;display:grid;gap:12px}.period-page h1{font-size:1.35rem;font-weight:bold;color:#000}.period-page p{line-height:1.3}.period-page a{color:#000080;text-decoration:underline}.period-trial-list{display:grid;gap:10px}.period-trial{border:2px groove #fff;padding:10px;display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,1fr) auto;align-items:center;gap:10px}.period-trial h2{font-weight:bold;color:#000080}.period-trial .period-clock{background:#000;color:#00ff00;font-family:'VT323',monospace;padding:5px 8px;display:inline-block}
+@media(max-width:620px){.period-activities{grid-template-columns:1fr}.period-trial{grid-template-columns:1fr}.period-desktop{padding:8px}}
+.driver-development{background:#c0c0c0!important;border:2px groove #fff!important}.driver-development :is(.bg-slate-50,.bg-blue-50,.bg-green-50){background:#ffffe1;border:1px solid #808080}.driver-development progress{border:2px inset #dfdfdf;accent-color:#000080}.driver-development progress::-webkit-progress-value{background:repeating-linear-gradient(90deg,#000080 0 9px,#c0c0c0 9px 11px)}

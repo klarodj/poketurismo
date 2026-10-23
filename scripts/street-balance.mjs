@@ -10,7 +10,7 @@ require('../server/node_modules/dotenv').config({path:process.env.ACCOUNTS_ENV_F
 const {PrismaClient}=require('../server/database');const prisma=new PrismaClient();
 try{
  const cars=await prisma.car.findMany();
- const track=await prisma.track.findFirst({where:{name:'Amalfitana · Maiori → Minori'},include:{builds:{include:{section:true},orderBy:{ord:'asc'}}}});
+ const track=await prisma.track.findFirst({where:{name:'Lago d’Iseo · porto → galleria'},include:{builds:{include:{section:true},orderBy:{ord:'asc'}}}});
  if(!track)throw Error('Catalogo tracciati richiesto');
  for(const myName of ['Seicento Sporting','Cinquecento Sporting','Cooper S','Mini Turbo','A112 Abarth','Micra Super S']){
   const mine=cars.find(car=>car.name===myName);let approachable=0;const results=[];

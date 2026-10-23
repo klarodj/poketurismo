@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
+import Win98Window from '../components/Win98Window';
 import LCDDisplay from '../components/LCDDisplay';
 import { refuelCar } from '../services/api';
 export default function GasStation() {
@@ -21,8 +22,8 @@ export default function GasStation() {
       triggerEvent({ type: 'info', title: 'Rifornimento salvato', message: `${result.liters.toFixed(2)} L · €${result.cost.toFixed(2)}. Il nuovo saldo e il carburante sono salvati.` });
     } catch (error) { triggerEvent({ type: 'error', title: 'Rifornimento non riuscito', message: error.message }); }
   };
-  return <div className="bg-[#3e3e3e] p-4 flex justify-center text-black">
-    <div className="bg-gray-200 border-8 border-gray-400 rounded-t-3xl shadow-xl max-w-md w-full overflow-hidden">
+  return <Win98Window title="Distributore — AGIP 2002"><div className="bg-win98-gray p-4 flex justify-center text-black">
+    <div className="bg-gray-200 border-4 border-t-white border-l-white border-b-black border-r-black max-w-md w-full overflow-hidden">
       <img src="/images/fuel.png" alt="Benzinaio" className="w-full h-32 object-cover" />
       <div className="p-6 space-y-4">
         <h1 className="text-2xl font-black italic text-red-600">AGIP 2002</h1>
@@ -40,9 +41,9 @@ export default function GasStation() {
             <input type="number" min="0.01" max="45" step="0.1" value={liters} onChange={event => setLiters(Math.max(0, Math.min(45, Number(event.target.value))))} className="block w-full p-2 border border-gray-500" />
           </label>
           <div className="flex gap-2"><button onClick={() => setLiters(10)} className="bg-yellow-300 border p-2">10 litri</button><button onClick={() => setLiters(capacity)} className="bg-yellow-300 border p-2">Pieno</button></div>
-          <button disabled={quantity <= 0 || money < cost} onClick={buy} className="w-full bg-green-800 text-white font-bold py-3 disabled:opacity-50">Conferma rifornimento · €{cost.toFixed(2)}</button>
+          <button disabled={quantity <= 0 || money < cost} onClick={buy} className="win98-btn w-full font-bold py-3 disabled:opacity-50">Conferma rifornimento · €{cost.toFixed(2)}</button>
         </>}
       </div>
     </div>
-  </div>;
+  </div></Win98Window>;
 }

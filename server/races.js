@@ -19,6 +19,8 @@ const {withholdReward}=require('./workshop');
 const includeChampionship = { championship: { include: { rounds: { orderBy: { ord: 'asc' } } } } };
 function presentRace(row) {
   const state = JSON.parse(row.state);
+  state.trackName=require('../shared/periodWorld.mjs').periodTrackName(state.trackName);
+  if(state.street){const zone=require('../shared/streetCatalog.mjs').STREET_ZONES.find(zone=>zone.id===state.street.zoneId);if(zone)state.street.zoneName=zone.name;}
   delete state.rng;
   delete state.incidentPlan;
   delete state.gridSeed;

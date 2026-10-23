@@ -3,7 +3,7 @@ import UsedCarDetails from './UsedCarDetails';
 
 export default function ForumPost({ author, avatar, date, title, carDetails, listing, price, onBuy, disabled = false, remainingMoney }) {
   return (
-    <div className="border border-[#7799CC] mb-4 bg-white font-sans text-sm shadow-[1px_1px_2px_rgba(0,0,0,0.1)]">
+    <div className="border border-[#7799CC] mb-4 bg-white period-web text-sm shadow-[1px_1px_0_#808080]">
       {/* Forum Thread Header */}
       <div className="bg-[#D1D7DC] px-2 py-1 flex justify-between border-b border-[#7799CC] text-[#006699] font-bold text-xs">
         <div>Re: [VENDO] {title}</div>
