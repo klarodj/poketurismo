@@ -7,3 +7,6 @@ test('phone and piazzale use the same model or IP admission checks',()=>{
 test('phone challenge picker excludes own, blocked and not-yet-reachable contacts',()=>{
  const contacts=[{id:1,canMessage:true},{id:2,blocked:true,canMessage:true},{id:3,canMessage:false},{id:4,canMessage:true},{id:5}];assert.deepEqual(challengeContacts(contacts,1).map(c=>c.id),[4,5]);assert.equal(contacts.length,5);
 });
+test('free-choice invitations allow every selected car but still require one; legacy restrictions remain',()=>{
+ const open={format:'open',minIP:null,maxIP:null,modelId:null};for(const car of[{modelId:1,performanceIndex:1},{modelId:999,performanceIndex:999}])assert.equal(challengeCarAllowed(open,car),true);assert.equal(challengeCarAllowed(open,null),false);assert.equal(challengeCarAllowed({format:'unknown'},{modelId:1,performanceIndex:1}),false);
+});

@@ -13,21 +13,21 @@ export function PhoneChallengeItem({challenge,userId,car,disabled,activeRace,now
  const sent=challenge.senderId===userId,other=challenge[sent?'recipient':'sender']?.pilot.name||'pilota',mine=challenge.results[sent?'sender':'recipient'];
  const expired=now>=+new Date(challenge.expiresAt),canAccept=challengeCarAllowed(challenge,car);
  return <li className="phone-challenge"><details><summary><strong>{sent?'A: ':'Da: '}{other}</strong><span>{CHALLENGE_STATUSES[challenge.status]||challenge.status}</span><small>{challenge.track.name}</small></summary>
- <p>{condition(challenge.track.weather)} · {condition(challenge.track.surface)}</p><p>{challenge.format==='model'?`Stesso modello: ${challenge.sender.car.name}`:`Fascia IP ${challenge.minIP}–${challenge.maxIP}`}</p><small>Scadenza: {clubDate(challenge.expiresAt)}</small><p>Motore e gomme 100%, 20 L normale. Un tentativo a testa, senza premi o usura della tua auto.</p>
+ <p>{condition(challenge.track.weather)} · {condition(challenge.track.surface)}</p><p>{challenge.format==='open'?'Auto a scelta del destinatario':challenge.format==='model'?`Stesso modello: ${challenge.sender.car.name}`:`Fascia IP ${challenge.minIP}–${challenge.maxIP}`}</p><small>Scadenza: {clubDate(challenge.expiresAt)}</small><p>Motore e gomme 100%, 20 L normale. Un tentativo a testa, senza premi o usura della tua auto.</p>
  <h3>{challenge.sender.pilot.name}</h3><CarSummary car={challenge.sender.car}/><h3>{challenge.recipient?.pilot.name||'Auto da confermare'}</h3>{challenge.recipient?<CarSummary car={challenge.recipient.car}/>:!sent&&car?<CarSummary car={car}/>:<p>La sceglierà il destinatario.</p>}
  {['sender','recipient'].map(side=><p key={side}>{side==='sender'?'Mittente':'Destinatario'}: {challenge.results[side]?.status==='finished'?time(challenge.results[side].timeMs):challenge.results[side]?'Ritirato':'Tentativo non completato'}</p>)}
  {challenge.status==='completed'&&<p>{challenge.draw?'Pareggio / doppio ritiro':challenge.winnerId===userId?'Hai vinto':'Ha vinto l’altro pilota'}</p>}
  <div className="phone-actions">{challenge.status==='pending'&&(sent?<button type="button" disabled={disabled||expired} onClick={()=>onRespond('cancel')}>Ritira invito</button>:<><button type="button" disabled={disabled||expired||!canAccept} onClick={()=>onRespond('accept')}>Accetta con l’auto selezionata</button><button type="button" disabled={disabled||expired} onClick={()=>onRespond('decline')}>Rifiuta invito</button></>)}
  {challenge.status==='accepted'&&!challenge.myRaceId&&<button type="button" disabled={disabled||expired||!!activeRace} onClick={onStart}>Inizia il tuo tentativo</button>}
  {challenge.myRaceId&&<button type="button" disabled={disabled} onClick={onRace}>{mine||challenge.status==='cancelled'?'Rivedi il tentativo':'Riprendi il tentativo'}</button>}</div>
- {!sent&&challenge.status==='pending'&&!canAccept&&<p>L’auto selezionata non rispetta il modello o la fascia IP.</p>}{expired&&['pending','accepted'].includes(challenge.status)&&<p>Tempo scaduto: aggiorna le sfide.</p>}
+ {!sent&&challenge.status==='pending'&&!canAccept&&<p>{car?'Questa auto non rispetta le condizioni dell’invito precedente.':'Seleziona una tua auto per accettare.'}</p>}{expired&&['pending','accepted'].includes(challenge.status)&&<p>Tempo scaduto: aggiorna le sfide.</p>}
  </details></li>;
 }
 export default function PhoneChallenges({ownerId,targetPeer,onClose}){
  const navigate=useNavigate(),activeRace=useRaceStore(state=>state.activeRace),pending=useRequestStore(state=>state.pending);
  const [screen,setScreen]=useState(targetPeer?'compose':'list'),[sentFingerprint,setSentFingerprint]=useState(null);
  const feedback=useRef(null);
- const [data,setData]=useState(null),[contacts,setContacts]=useState([]),[tracks,setTracks]=useState([]),[peerId,setPeerId]=useState(String(targetPeer?.id||'')),[garageId,setGarageId]=useState(''),[trackId,setTrackId]=useState(''),[format,setFormat]=useState('ip');
+ const [data,setData]=useState(null),[contacts,setContacts]=useState([]),[tracks,setTracks]=useState([]),[peerId,setPeerId]=useState(String(targetPeer?.id||'')),[garageId,setGarageId]=useState(''),[trackId,setTrackId]=useState('');
  const [now,setNow]=useState(()=>Date.now());
  const [error,setError]=useState(''),[notice,setNotice]=useState(''),[loading,setLoading]=useState(false),[busy,setBusy]=useState(false);
  const live=useRef(false),loadVersion=useRef(0),acting=useRef(false);
@@ -44,7 +44,7 @@ export default function PhoneChallenges({ownerId,targetPeer,onClose}){
  const act=async(work,message,after)=>{if(acting.current||!current())return;acting.current=true;setBusy(true);setError('');setNotice('');try{const result=await work();if(!current())return;setNotice(message);if(after){after(result);return;}await Promise.all([refresh(),usePhoneStore.getState().refresh().catch(()=>{})]);}catch(e){if(current())setError(e.message);}finally{acting.current=false;if(current())setBusy(false);}};
  const goToRace=id=>{onClose();navigate(`/track-race?raceId=${encodeURIComponent(id)}`);};
  const car=data?.cars.find(c=>c.id===Number(garageId)),peer=contacts.find(p=>p.id===Number(peerId)),disabled=busy||pending>0;
- const fingerprint=JSON.stringify([peerId,garageId,trackId,format,car?.quoteKey]);
+ const fingerprint=JSON.stringify([peerId,garageId,trackId,car?.quoteKey]);
  const alreadySent=sentFingerprint===fingerprint;
  const challenges=data?.challenges.filter(c=>!peerId||c.senderId===Number(peerId)||c.recipientId===Number(peerId))||[];
  return <section className="phone-challenges"><h2>Sfide del club</h2><p>Invito asincrono: scegli il confronto, l’altro pilota decide se accettare. 48 ore, un tentativo a testa.</p>
@@ -55,9 +55,9 @@ export default function PhoneChallenges({ownerId,targetPeer,onClose}){
  <label>Auto per inviti e accettazioni<select value={garageId} onChange={event=>setGarageId(event.target.value)}>{!data.cars.length&&<option value="">Nessuna auto posseduta</option>}{data.cars.map(c=><option key={c.id} value={c.id}>{c.brand} {c.name} · IP {c.performanceIndex}</option>)}</select></label>
  {!data.cars.length&&<p>Serve una tua auto per proporre o accettare una sfida. Puoi comunque leggere gli inviti.</p>}
  <details><summary>Auto selezionata e condizioni</summary>{car&&<CarSummary car={car}/>}<p>Motore/gomme 100%, 20 L normale, condizioni virtuali. La scelta non cambia l’auto equipaggiata. La preparazione si fissa all’accettazione.</p></details>
- {screen==='compose'&&<form onSubmit={event=>{event.preventDefault();if(!car||!peer||!trackId||disabled||alreadySent)return;act(async()=>{const result=await inviteMeetChallenge(ownerId,{peerId:Number(peerId),garageId:Number(garageId),quoteKey:car.quoteKey,trackId:Number(trackId),format});if(current()){setSentFingerprint(fingerprint);setScreen('list');}return result;},'Invito inviato. Il destinatario può rispondere dal cellulare o dal raduno.');}}>
+ {screen==='compose'&&<form onSubmit={event=>{event.preventDefault();if(!car||!peer||!trackId||disabled||alreadySent)return;act(async()=>{const result=await inviteMeetChallenge(ownerId,{peerId:Number(peerId),garageId:Number(garageId),quoteKey:car.quoteKey,trackId:Number(trackId)});if(current()){setSentFingerprint(fingerprint);setScreen('list');}return result;},'Invito inviato. Il destinatario può rispondere dal cellulare o dal raduno.');}}>
  <h3>Proponi una sfida{peer?` a ${peer.name}`:''}</h3><label>Circuito della sfida<select value={trackId} onChange={event=>setTrackId(event.target.value)}>{tracks.map(t=><option key={t.id} value={t.id}>{t.name} · {condition(t.meteo.name)}</option>)}</select></label>
- <label>Regolamento della sfida<select value={format} onChange={event=>setFormat(event.target.value)}><option value="ip">Fascia IP della mia auto</option><option value="model">Stesso modello della mia auto</option></select></label><p>Abilità e preparazioni possono differire. Nessuna puntata o premio; massimo 3 inviti l’ora e 2 sfide aperte per coppia.</p>
+ <p>Chi riceve l’invito vede la tua auto e sceglie liberamente quale vettura usare. Massimo 3 inviti l’ora e 2 sfide aperte per coppia.</p>
  <button type="submit" disabled={disabled||!peer||!car||!trackId||alreadySent}>{busy?'Operazione in corso…':alreadySent?'Invito già inviato':'Invia invito'}</button></form>}
  {screen==='list'&&<>{activeRace&&<p>Hai già una gara in corso. Concludila prima di iniziare un tentativo.</p>}
  <h3>Inviti e tentativi ({challenges.length})</h3><p>Ultime 100 sfide: {data.record.wins} vittorie · {data.record.losses} sconfitte · {data.record.draws} pareggi.</p>

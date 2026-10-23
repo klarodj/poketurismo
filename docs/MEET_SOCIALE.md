@@ -14,10 +14,9 @@ Segnalazione del comportamento o di un preciso messaggio ricevuto (massimo 5 al 
 
 ## Contratto della sfida
 
-Il proponente sceglie una propria vettura, un circuito esistente e uno dei regolamenti:
+Per le nuove sfide, il proponente sceglie una propria vettura e un circuito. Il destinatario esamina auto, CV, peso, IP e pezzi dello sfidante e sceglie liberamente una vettura posseduta: nessun vincolo automatico di modello o fascia IP. L'IP resta un'informazione utile per valutare il confronto. Il destinatario può rifiutare.
 
-- Stesso modello: stesso Car.id, preparazioni e abilità possono differire e sono visibili prima della partenza.
-- Fascia IP: 0–49, 50–59, 60–69, 70–84, 85–120, 121–999. La fascia è quella della vettura proposta, calcolata nelle condizioni del raduno; il destinatario sceglie una propria auto che vi rientra. L'IP non garantisce equivalenza su ogni tracciato.
+I nuovi contratti sono version 2 con format open. Gli inviti già esistenti mantengono le condizioni originali: modello uguale oppure fascia IP, quando previste dal vecchio contratto version 1. Non si convertono sfide pendenti o accettate. Vecchi client che tentano di creare un nuovo invito con model/ip ricevono 409 con richiesta di aggiornare la pagina, senza inviare condizioni diverse da quelle mostrate. Un retry di un invito già creato conserva la ricevuta e il contratto originali.
 
 Condizioni iniziali per tutti: motore e gomme al 100%, 20 litri di normale, chilometraggio/tagliando virtuale azzerato. Nessun incremento artificiale di CV o abilità. La selezione non equipaggia l'auto e non ripara quella reale.
 

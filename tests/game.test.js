@@ -864,8 +864,8 @@ async function socialSetup(){
  for(const[userId,id]of [[1,garage.id],[2,otherGarage.id]])await prisma.playerProgress.upsert({where:{userId},create:{userId,showcaseGarageId:id},update:{showcaseGarageId:id}});
  const mine=(await get('/meet/social/1')).data,other=(await get('/meet/social/2')).data;return {mine,other};
 }
-async function socialInvite(format='model'){
- const{mine,other}=await socialSetup();const sent=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:mine.cars[0].quoteKey,trackId:track.id,format});assert.equal(sent.status,200,JSON.stringify(sent.data));return {challenge:sent.data.challenge,mine,other};
+async function socialInvite(legacyFormat){
+ const{mine,other}=await socialSetup();const sent=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:mine.cars[0].quoteKey,trackId:track.id});assert.equal(sent.status,200,JSON.stringify(sent.data));if(legacyFormat){const row=await prisma.meetChallenge.findUnique({where:{id:sent.data.challenge.id}}),contract=JSON.parse(row.contract);Object.assign(contract,{version:1,format:legacyFormat,modelId:car.id,minIP:0,maxIP:49});await prisma.meetChallenge.update({where:{id:row.id},data:{contract:JSON.stringify(contract)}});}return {challenge:sent.data.challenge,mine,other};
 }
 async function socialAccept(){const setup=await socialInvite();const accepted=await post('/meet/challenge/respond',{userId:2,challengeId:setup.challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:setup.other.cars[0].quoteKey});assert.equal(accepted.status,200,JSON.stringify(accepted.data));return accepted.data.challenge;}
 async function finishSocial(userId,race){while(race.status==='active'){const response=await post(`/races/${race.id}/turns`,{userId,version:race.version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'}});assert.equal(response.status,200,JSON.stringify(response.data));race=response.data.race;}return race;}
@@ -959,7 +959,7 @@ test('changing avatar is cosmetic, owner-only, idempotent and allowed during a r
 });
 test('avatar does not invalidate a meet preparation or change frozen race contracts',async()=>{
  const {mine}=await socialSetup(),key=mine.cars[0].quoteKey;await post('/player/1/avatar',{avatar:'tuner-woman'});const after=(await get('/meet/social/1')).data;assert.equal(after.cars[0].quoteKey,key);
- const invited=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:key,trackId:track.id,format:'model'});assert.equal(invited.status,200);const contract=(await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract;
+ const invited=await post('/meet/challenge',{peerId:2,garageId:garage.id,quoteKey:key,trackId:track.id});assert.equal(invited.status,200);const contract=(await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract;
  await post('/player/1/avatar',{avatar:'rally-man'});assert.equal((await prisma.meetChallenge.findUnique({where:{id:invited.data.challenge.id}})).contract,contract);assert.equal((await get('/meet?userId=2')).data.showcases.find(s=>s.pilot.id===1).pilot.avatar,'rally-man');
 });
 
@@ -1070,7 +1070,7 @@ test('stored races without fuel version retain original consumption across resum
  const key=randomUUID(),result=await post(`/races/${row.id}/turns`,{version:0,moveId:null},key);assert.equal(result.status,200);assert.equal(result.data.race.logs[0].fuel,0.1);assert.equal((await post(`/races/${row.id}/turns`,{version:0,moveId:null},key)).data.race.logs[0].fuel,0.1);
 });
 test('old pending meet invitations remain acceptable and retain version one fuel rules for both drivers',async()=>{
- const sent=await socialInvite(),row=await prisma.meetChallenge.findUnique({where:{id:sent.challenge.id}}),contract=JSON.parse(row.contract);delete contract.fuelModelVersion;contract.sender.key=contract.sender.legacyKey;delete contract.sender.legacyKey;delete contract.sender.car.cc;delete contract.sender.car.engineType;await prisma.meetChallenge.update({where:{id:row.id},data:{contract:JSON.stringify(contract)}});
+ const sent=await socialInvite(),row=await prisma.meetChallenge.findUnique({where:{id:sent.challenge.id}}),contract=JSON.parse(row.contract);contract.version=1;contract.format='model';contract.modelId=car.id;delete contract.fuelModelVersion;contract.sender.key=contract.sender.legacyKey;delete contract.sender.legacyKey;delete contract.sender.car.cc;delete contract.sender.car.engineType;await prisma.meetChallenge.update({where:{id:row.id},data:{contract:JSON.stringify(contract)}});
  const accepted=await post('/meet/challenge/respond',{userId:2,challengeId:row.id,action:'accept',garageId:otherGarage.id,quoteKey:sent.other.cars[0].quoteKey});assert.equal(accepted.status,200,JSON.stringify(accepted.data));const race=(await post('/meet/challenge/start',{challengeId:row.id})).data.race;assert.equal(race.fuelModelVersion,1);assert.equal(race.car.cc,undefined);
 });
 test('new meet contracts freeze the same new fuel rules and full engine metadata for both participants',async()=>{
@@ -1095,4 +1095,18 @@ test('phone challenge alerts are recipient-only, bounded, exclude expired invita
  const incoming=(await get('/phone/2/notifications')).data;assert.equal(incoming.challengeInviteCount,1);assert.equal(incoming.challengeInvites[0].id,challenge.id);assert.equal(incoming.challengeInvites[0].sender.id,1);assert.deepEqual(Object.keys(incoming.challengeInvites[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(incoming).includes('private@example'));assert.ok(!JSON.stringify(incoming).includes('contract'));
  await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'decline'});assert.equal((await get('/phone/2/notifications')).data.challengeInviteCount,0);
  const second=await socialInvite();await prisma.meetChallenge.update({where:{id:second.challenge.id},data:{expiresAt:new Date(Date.now()-1000)}});assert.equal((await get('/phone/2/notifications')).data.challengeInviteCount,0);
+});
+
+test('new meet invitations let the recipient choose a different model and performance class',async()=>{
+ const {challenge}=await socialInvite();assert.equal(challenge.format,'open');const row=await prisma.meetChallenge.findUnique({where:{id:challenge.id}}),contract=JSON.parse(row.contract);assert.equal(contract.version,2);assert.equal(contract.minIP,null);assert.equal(contract.modelId,null);
+ const{id:_id,...original}=car;const stronger=await prisma.car.create({data:{...original,name:'Different model QA',cv:800}});await prisma.garage.update({where:{id:otherGarage.id},data:{carId:stronger.id,cv:800}});const hub=(await get('/meet/social/2')).data;
+ assert.ok(hub.cars[0].performanceIndex>challenge.sender.car.performanceIndex);const accepted=await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:hub.cars[0].quoteKey});assert.equal(accepted.status,200,JSON.stringify(accepted.data));assert.equal(accepted.data.challenge.recipient.car.modelId,stronger.id);
+ const started=await post('/meet/challenge/start',{userId:2,challengeId:challenge.id});assert.equal(started.status,200);assert.equal(started.data.race.car.cv,800);assert.equal(started.data.race.car.modelId,stronger.id);
+});
+test('new invite requests from outdated model or IP clients ask for refresh rather than silently changing terms',async()=>{
+ const{mine}=await socialSetup(),body={peerId:2,garageId:garage.id,quoteKey:mine.cars[0].quoteKey,trackId:track.id};for(const format of['model','ip'])assert.equal((await post('/meet/challenge',{...body,format})).status,409);assert.equal((await post('/meet/challenge',{...body,format:'fake'})).status,400);assert.equal(await prisma.meetChallenge.count(),0);assert.equal((await post('/meet/challenge',body)).data.challenge.format,'open');
+});
+test('stored model restrictions remain binding after free-choice invitations are introduced',async()=>{
+ const{challenge,other}=await socialInvite('model');const{id:_id,...original}=car;const different=await prisma.car.create({data:{...original,name:'Other old model'}});await prisma.garage.update({where:{id:otherGarage.id},data:{carId:different.id}});const quote=(await get('/meet/social/2')).data.cars[0].quoteKey;
+ assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:quote})).status,400);assert.equal((await prisma.meetChallenge.findUnique({where:{id:challenge.id}})).status,'pending');assert.ok(other.cars.length);
 });

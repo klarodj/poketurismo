@@ -1,6 +1,6 @@
 # Giochi e sfide nel POKETEL
 
-Il pulsante del cellulare apre il menu con messaggi, rubrica, richieste, sfide, giochi e avvisi del gioco. I collegamenti dagli SMS e dalle notifiche continuano ad aprire il contenuto pertinente. Il tasto fisico «Menu» torna al menu principale; «Indietro» rispetta la sezione corrente. Display verde, scocca blu, caratteri VT323 e pulsanti in stile telefonino dell'epoca.
+Il pulsante del cellulare apre il menu con messaggi, rubrica, richieste, sfide, giochi, avvisi del gioco e impostazioni. I collegamenti dagli SMS e dalle notifiche continuano ad aprire il contenuto pertinente. I tre pulsanti inferiori «Avvisi del gioco», «Suono» e «C» sono rimossi. Gli avvisi restano nel menu e il suono SMS si regola in Menu → Impostazioni. La X e il tasto Esc chiudono il telefono; «Indietro» dal menu principale lo chiude. Il tasto fisico «Menu» torna al menu principale; «Indietro» rispetta la sezione corrente. Display verde, scocca blu, caratteri VT323 e pulsanti in stile telefonino dell'epoca.
 
 ## Snake
 
@@ -14,7 +14,7 @@ src/logic/snake.mjs contiene il motore puro e deterministico; snakeStore gestisc
 
 ## Sfide dal cellulare
 
-Dal menu «Sfide» si vedono inviti e risultati. Da un contatto in rubrica o da un SMS, «Proponi sfida» apre invece la composizione con il pilota preselezionato. Aprire la schermata non invia nulla: occorre scegliere la propria auto, il circuito e il regolamento (stesso modello oppure fascia IP), esaminare preparazione/condizioni e premere «Invia invito».
+Dal menu «Sfide» si vedono inviti e risultati. Da un contatto in rubrica o da un SMS, «Proponi sfida» apre invece la composizione con il pilota preselezionato. Aprire la schermata non invia nulla: occorre scegliere la propria auto e il circuito, esaminare preparazione/condizioni e premere «Invia invito».
 
 Dopo l'invio compare la conferma e si torna all'elenco. Lo stesso modulo non ripropone un invio identico già confermato finché non si cambia la configurazione; un errore di rete mantiene le scelte e la stessa operationId per il retry. Si può usare «Nuovo invito» per un confronto differente, sempre entro i limiti server esistenti.
 
@@ -22,7 +22,7 @@ Il destinatario può scegliere un'auto compatibile e accettare o rifiutare dal t
 
 Restano immutati il contratto asincrono di 48 ore, le condizioni virtuali 100/100 e 20 L normale, le regole sui consumi congelate nel contratto, il fantasma cronometrico, blocchi, proprietà, limiti e assenza di premi/usura reale. src/logic/meetChallenges.mjs condivide i controlli di compatibilità tra telefono e scheda del raduno; l'autorità rimane server/meetSocial.js. Si riusano le stesse API, senza nuove tabelle o copie delle sfide.
 
-La schermata aggiorna le letture ogni 30 secondi quando è aperta e visibile, al ritorno sulla finestra e dopo le proprie operazioni. Scelte di auto/circuito/regolamento restano durante gli aggiornamenti. Risposte tardive dopo chiusura o cambio account non cambiano la schermata né avviano una navigazione per il nuovo account.
+La schermata aggiorna le letture ogni 30 secondi quando è aperta e visibile, al ritorno sulla finestra e dopo le proprie operazioni. Scelte di auto/circuito restano durante gli aggiornamenti. Risposte tardive dopo chiusura o cambio account non cambiano la schermata né avviano una navigazione per il nuovo account.
 
 ## Avvisi degli inviti
 
@@ -43,3 +43,9 @@ Desktop 1280×960 e telefono 390×844: campo, punteggio e tastierino visibili in
 Pubblicato il 23 ottobre 2026 sull'istanza unica 5174, gateway 5184 e Funnel 443/8443. Backup completo Auth + gioco prima e dopo; build precedente, dati e confronto in /home/klaro/.backups/poketurismo/phone-games-2026-10-23T13-16-54.050Z (privato). Tutte le righe e tutti i campi delle 32 tabelle dello schema game invariati al rilascio, inclusi contratti, inviti, SMS, gare, carburante e saldi. Nessuna migrazione o reset.
 
 Servizi attivi, health positivo, entrambi gli URL pubblici HTTP 200 e notifiche personali senza sessione HTTP 401. Verificato il bundle servito dal Funnel con Snake, menu e sfide nel telefono. Ultimo controllo mirato dell'interfaccia dopo la traduzione delle condizioni del circuito: 21 test UI superati, oltre alla suite completa di 249 e ai 12 account/gateway. Anteprima, browser e database di collaudo vengono rimossi dopo la verifica.
+
+## Semplificazione dei comandi e delle nuove sfide
+
+253 test JavaScript e 12 account/gateway superati, lint e build validi. Le nuove sfide, sia al raduno sia dal telefono, usano contratto version 2 / format open: il destinatario può scegliere una qualsiasi propria auto, anche di modello e IP diversi. CV, peso, IP e ricambi restano visibili per valutare il confronto. Quote, proprietà, consenso e condizioni congelate rimangono obbligatori. Gli inviti precedenti version 1 conservano i propri limiti; nuovi invii model/ip da client non aggiornati restituiscono 409 chiedendo il reload, mentre i retry di ricevute esistenti restano validi.
+
+Browser reale su copia PostgreSQL, desktop e telefono: tre pulsanti inferiori rimossi, suono attivabile in Impostazioni, avvisi nel menu, X e tastierino Snake conservati, nessun selettore del regolamento nei nuovi moduli. Accettata e avviata una sfida tra vetture di modello/IP differenti; un invito precedente monomodello continua a rifiutare l'auto incompatibile. Nessun errore JavaScript nelle viste verificate. Collaudo completo validate-meet-social.cjs superato anche con i nuovi contratti, senza alterare i dati preesistenti. Catture e rapporti in .preview/phone-simple-qa; solo piloti sintetici sul database temporaneo, nessuna modifica ai giocatori reali durante il collaudo. Nessuna migrazione di schema.
