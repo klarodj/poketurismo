@@ -102,7 +102,8 @@ function mistakeRisk(skills, decision, section, next, environment, familiarity =
   const curve = section.segments.some(segment => segment.radiusM > 0) || (next?.segments[0]?.radiusM || 0) > 0;
   const lateRisk = curve && decision.braking === 'late' ? 0.09 * (1 - skills.brake) : 0;
   const visibility = /fog|nebbia|night|notte/.test((environment.weather || '').toLowerCase()) ? 1.5 : 1;
-  return clamp((0.004 + 0.055 * (1 - skills.clean) ** 2 + lateRisk + (decision.manoeuvre === 'overtake' ? 0.018 : 0)) * (decision.pace === 'attack' ? 1.8 : decision.pace === 'save' ? 0.55 : 1) * visibility * (1 - familiarity * 0.15), 0, 0.35);
+  const base = clamp((0.004 + 0.055 * (1 - skills.clean) ** 2 + lateRisk + (decision.manoeuvre === 'overtake' ? 0.018 : 0)) * (decision.pace === 'attack' ? 1.8 : decision.pace === 'save' ? 0.55 : 1) * visibility * (1 - familiarity * 0.15), 0, 0.35);
+  return 1-(1-base)**(section.riskExposure ?? 1);
 }
 function drive(state, side, move, decision, section, next) {
   const player = side === 'player', car = player ? state.car : state.opponent.car, pilot = player ? state.pilot : state.opponent.pilot;
@@ -116,17 +117,18 @@ function drive(state, side, move, decision, section, next) {
   const errorRoll = random(state), severity = random(state), variation = random(state);
   const mistake = errorRoll < errorChance ? 0.25 + severity * (0.5 + 2.2 * (1 - (skill.reflex + skill.clean) / 2)) + (lateRisk > 0 ? 0.8 * (1 - skill.brake) : 0) : 0;
   const lateExitLoss = curve && decision.braking === 'late' ? (1 - skill.brake) * (1 - skill.clean) * 0.38 * (1 - result.familiarity * 0.12) : 0;
-  const variance = (variation - 0.5) * 0.06 * (1 - skill.clean);
+  const variance = (variation - 0.5) * 0.06 * (1 - skill.clean) * Math.sqrt(section.riskExposure ?? 1);
   const recoveryLoss = mistake * (1 - 0.2 * skill.acro);
   const time = Math.max(0.01, result.time + recoveryLoss + lateExitLoss + variance);
   const km = section.segments.reduce((sum, segment) => sum + segment.lengthM, 0) / 1000;
   const aggression = decision.pace === 'save' ? 0.78 : decision.pace === 'attack' ? 1.3 : 1;
   const techniqueFuel = move?.aggressiveness ? Math.min(1.3, 1 + (move.aggressiveness - 1) * 0.1) : 1;
-  const fuel = round(Math.max(0.01, car.cv * 0.0002 * km * aggression * techniqueFuel), 4);
+  const fuel = round(Math.max(section.layoutVersion===2?0:0.01, car.cv * 0.0002 * km * aggression * techniqueFuel), 4);
   const tires = round(km * 0.15 * aggression + (move?.costGrip || 0) * 0.12 * aggression, 4);
   const engine = round(km * 0.05 * aggression + (move?.costHealth || 0) * 0.1 * aggression, 4);
   const wear = 1 - clamp(car.engineHealth / 100, 0, 1);
-  const failureChance = clamp(km * (0.00002 + wear ** 3 * 0.012) * aggression, 0, 0.2);
+  const perKmFailure=clamp((0.00002 + wear ** 3 * 0.012)*aggression,0,0.2);
+  const failureChance=section.layoutVersion===2?1-(1-perKmFailure)**km:clamp(km*perKmFailure,0,0.2);
   const failureRoll = random(state);
   const broken = !state.meetTrial && !state.lesson && failureRoll < failureChance;
   return { ...result, time, potentialTime: ideal.time, driverLoss: Math.max(0, result.time - ideal.time), mistake: recoveryLoss, errorChance, lateExitLoss, fuel, tires, engine, km, broken,
@@ -142,7 +144,7 @@ function decisionPreview(state, decision = DEFAULT_DECISION, moveId = null) {
   const km = section.segments.reduce((sum, segment) => sum + segment.lengthM, 0) / 1000;
   const aggression = selected.pace === 'save' ? 0.78 : selected.pace === 'attack' ? 1.3 : 1;
   return { seconds: round(expected.time, 1), errorPercent: round(mistakeRisk(expected.skill, selected, section, next, state.environment, expected.familiarity) * 100, 1),
-    fuel: round(Math.max(0.01, state.car.cv * 0.0002 * km * aggression * (move?.aggressiveness ? Math.min(1.3, 1 + (move.aggressiveness - 1) * 0.1) : 1))),
+    fuel: round(Math.max(section.layoutVersion===2?0:0.01, state.car.cv * 0.0002 * km * aggression * (move?.aggressiveness ? Math.min(1.3, 1 + (move.aggressiveness - 1) * 0.1) : 1))),
     tires: round(km * 0.15 * aggression + (move?.costGrip || 0) * 0.12 * aggression), distanceM: Math.round(section.segments.reduce((sum, segment) => sum + segment.lengthM, 0)),
     cornerLimitKmh: section.segments.some(segment => segment.radiusM > 0) ? round(Math.min(...section.segments.filter(segment => segment.radiusM > 0).map(segment => cornerLimit(expected.model, segment.radiusM) * 3.6)), 0) : null,
     brakingSkill: round(expected.skill.brake * 100, 0), closeEnough: Math.abs(state.gapSeconds || 0) <= 1.2, hasCorner: section.segments.some(segment => segment.radiusM > 0), hasBrakingZone: section.segments.some(segment => segment.radiusM > 0) || (next?.segments[0]?.radiusM || 0) > 0,
@@ -232,4 +234,4 @@ function advanceTacticalRace(input, moveId, rawDecision) {
   state.logs.push(log);
   return state;
 }
-export { DEFAULT_DECISION, DECISION_OPTIONS, validateDecision, ability, vehicleModel, simulateBlock, decisionPreview, aiDecision, advanceTacticalRace };
+export { DEFAULT_DECISION, DECISION_OPTIONS, validateDecision, ability, vehicleModel, simulateBlock, decisionPreview, aiDecision, advanceTacticalRace, mistakeRisk };

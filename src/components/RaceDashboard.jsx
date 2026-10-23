@@ -1,3 +1,5 @@
+import TrackIllustration from './TrackIllustration';
+import {trackVisual} from '../../shared/trackVisuals.mjs';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState } from 'react';
 import RaceCarArtwork from './RaceCarArtwork';
@@ -43,6 +45,11 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
   return <div className="race-dashboard">
     <header className="race-heading"><div><p className="race-eyebrow">{race.meetTrial ? 'Meet · Sfida asincrona' : race.lesson ? 'Scuola guida · Prova pratica' : (race.timeTrial||race.meetTrial) ? 'Prova a tempo personale' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.meetTrial ? '' : race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{race.environment.weather} · {race.environment.surface}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
     {race.meetTrial&&<p className="p-3 border bg-blue-50">Unico tentativo contro {race.meetChallenge.otherName}. Condizioni della carriera invariate; nessun premio o XP. {race.meetGhost?`Fantasma disponibile: tempo da battere ${formatRaceTime(race.meetGhost.totalMs/1000)}.${race.index>0?` Distacco al settore: ${((race.meetGhost.splits.slice(0,race.index).reduce((sum,t)=>sum+t,0)-race.playerTime*1000)/1000).toFixed(3)} s (positivo: sei davanti).`:''}`:'L’altro pilota non ha ancora completato un giro valido. Il tuo tempo sarà il riferimento.'}</p>}
+    {tactical&&(trackVisual(race.trackName)||race.demo)&&<section className="race-route-live" aria-label="Mappa e ambientazione durante la gara">
+      <header><h2>Il percorso · {race.sections.length} settori</h2><button type="button" className="win98-btn" onClick={()=>setDetail('track')}>Esamina tutti i settori</button></header>
+      <TrackIllustration name={race.trackName} sections={race.sections} paths={race.trackMap||(race.demo?DEMO_TRACK.mapPaths:null)} index={race.index} compact/>
+      <p className="race-route-current" aria-live="polite">{section?`Ora: ${trackSectionLabel(section.name)}${next?` · Poi: ${trackSectionLabel(next.name)}`:' · Poi: traguardo'}`:'Traguardo raggiunto'}</p>
+    </section>}
     <section className={`race-stage ${race.mode === 'street' ? 'race-stage-street' : ''} ${(race.timeTrial||race.meetTrial) ? 'race-stage-trial' : ''}`} aria-label="Duello e posizione">
       <CarCard car={race.car} label="La tua auto" onClick={() => setDetail('player')} />
       <button type="button" className={`race-position ${gap < -level ? 'race-position-behind' : ''}`} onClick={() => setDetail('timing')} aria-label="Apri dettaglio: tempi e distacco">

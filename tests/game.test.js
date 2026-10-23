@@ -489,10 +489,11 @@ test('switching a catalogue route between circuit and street cannot reset its br
   await prisma.trackSection.update({ where: { id: build.sectionId }, data: { name: 'Tornante' } });
   let race = await begin('track');
   let result = await post(`/races/${race.id}/turns`, { version: 0, moveId: null });
-  assert.equal(result.data.development.fundamentals.optimal, 2);
+  const firstGain=result.data.development.fundamentals.optimal;assert.ok(firstGain>=1&&firstGain<=2);
   race = await begin('street');
   result = await post(`/races/${race.id}/turns`, { version: 0, moveId: null });
-  assert.equal(result.data.development.fundamentals.optimal, 3);
+  assert.ok(result.data.development.fundamentals.optimal>=firstGain&&result.data.development.fundamentals.optimal<=firstGain+1);
+  assert.equal(JSON.parse((await prisma.driverDevelopment.findUnique({where:{userId:1}})).routePractice)[`track-${track.id}`].optimal,2);
 });
 test('a failed course payment cannot consume a repetition or grant experience', async () => {
   await prisma.user.update({ where: { id: 1 }, data: { moneyCents: 1 } });
@@ -932,4 +933,18 @@ test('period alignment is previewable and idempotent and preserves tracks, build
 });
 test('period alignment refuses ambiguous duplicate labels and rolls back earlier changes',async()=>{
  await prisma.track.update({where:{id:track.id},data:{name:'Tsukuba · Ibaraki'}});const{ id:_id,...data}=track;await prisma.track.create({data:{...data,name:'Pistino di San Rocco · Pavese'}});await prisma.track.create({data:{...data,name:'Mugello · Toscana'}});const before=await prisma.track.findMany();const{alignPeriodWorld}=require('../server/periodWorld');await assert.rejects(prisma.$transaction(tx=>alignPeriodWorld(tx,{apply:true})),/duplicati/);assert.deepEqual(await prisma.track.findMany(),before);
+});
+
+test('explicit race-history reset preserves career and financial deduplication, invalidating old race receipts',async()=>{
+ const purchaseKey=randomUUID(),purchase=await post('/purchase',{carId:car.id},purchaseKey);assert.equal(purchase.status,200);
+ const startedKey=randomUUID(),started=await post('/races',{mode:'track',trackId:track.id},startedKey);assert.equal(started.status,200);
+ const beforeUser=await prisma.user.findMany(),beforeGarage=await prisma.garage.findMany();
+ await prisma.playerProgress.create({data:{userId:1,streetState:JSON.stringify({parking:{reputation:70,wins:3,rivals:{npc:{wins:3}},offer:{id:'old'}}}),recoveryState:'{"debtCents":500}'}});
+ await prisma.driverDevelopment.create({data:{userId:1,lessonPassed:true,techniqueProgress:'{"exit-line":{"passed":true}}'}});const skills=await prisma.driverDevelopment.findMany();
+ const{resetRaceHistory}=require('../server/resetRaceHistory');const dry=await prisma.$transaction(tx=>resetRaceHistory(tx));assert.ok(dry.races>0);assert.equal(await prisma.raceSession.count(),dry.races);
+ const applied=await prisma.$transaction(tx=>resetRaceHistory(tx,{apply:true}));assert.deepEqual(applied,dry);assert.equal(await prisma.raceSession.count(),0);assert.deepEqual(await prisma.user.findMany(),beforeUser);assert.deepEqual(await prisma.garage.findMany(),beforeGarage);assert.deepEqual(await prisma.driverDevelopment.findMany(),skills);
+ const progress=await prisma.playerProgress.findUnique({where:{userId:1}});assert.deepEqual(JSON.parse(progress.streetState),{parking:{reputation:70}});assert.equal(progress.recoveryState,'{"debtCents":500}');
+ assert.equal((await post('/races',{mode:'track',trackId:track.id},startedKey)).status,410);
+ assert.equal((await post('/purchase',{carId:car.id},purchaseKey)).status,200);assert.deepEqual(await prisma.user.findMany(),beforeUser);assert.deepEqual(await prisma.garage.findMany(),beforeGarage);
+ assert.deepEqual(await prisma.$transaction(tx=>resetRaceHistory(tx,{apply:true})),{races:0,championshipEntries:0,meetChallenges:0,operationReceipts:0,streetHistories:0});
 });

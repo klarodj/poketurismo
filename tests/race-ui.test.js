@@ -178,3 +178,7 @@ test('track sector names are Italian in previews, map titles, progress and saved
  const RaceTiming=await component('RaceTiming','RaceTiming');const race=makeRace();race.sections=sections;assert.ok(!renderToStaticMarkup(React.createElement(RaceTiming,{race})).includes('Short Straight'));
  const RaceHistory=await component('RaceDetails','RaceHistory');race.logs=[{section:'Long Straight → Fast Left Turn',move:'Guida normale',playerSeconds:2,opponentSeconds:3,deltaSeconds:1,peakKmh:100,exitKmh:80,potentialSeconds:2,driverLossSeconds:0,fuel:0.2,tires:0.1,engine:0.1}];const history=renderToStaticMarkup(React.createElement(RaceHistory,{race}));assert.ok(history.includes('Rettilineo lungo → Curva veloce a sinistra'));assert.equal(race.logs[0].section,'Long Straight → Fast Left Turn');
 });
+
+test('active race always shows scene, live minimap and highlighted sector without opening a dialog',async()=>{
+ const Dashboard=await component('RaceDashboard'),race=makeRace();race.trackName='Lario · statale del lago';race.status='active';race.index=2;const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));assert.ok(html.includes('Mappa e ambientazione durante la gara'));assert.ok(html.includes('/images/tracks/lario.png'));assert.ok(html.includes('settore 3 evidenziato'));assert.ok(html.includes('Esamina tutti i settori'));assert.ok(!html.includes('<dialog'));
+});

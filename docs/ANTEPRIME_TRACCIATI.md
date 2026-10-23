@@ -36,3 +36,7 @@ Pubblicato il 23 ottobre 2026 sull’istanza unica 5174 attraverso il gateway 51
 ### Nomi italiani dei settori
 
 Dal 23 ottobre 2026 shared/trackSectionLabels.mjs traduce i 16 nomi del catalogo nelle viste: rettilineo breve/lungo, curva lenta/veloce a destra/sinistra, dosso, avvallamento, salita, discesa, variante, tornante e inversione a destra/sinistra, ostacolo. Vale anche per le combinazioni con →, le etichette delle minimappe, il settore attuale/successivo, tempi e cronologia delle sessioni già salvate. I nomi personalizzati restano riconoscibili. Si traduce soltanto la visualizzazione: database, identificatori, inferenza della geometria e contratti salvati restano invariati. Verifica: 183 test di gioco superati, lint e build superati, inclusi casi di resa italiana e conservazione dei dati originali.
+
+### Anteprima in gara e settori variabili
+
+Dal rilascio descritto in [SETTORI_E_AZZERAMENTO.md](SETTORI_E_AZZERAMENTO.md), cartolina e minimappa sono aperte anche durante la gara; settori e numerazione seguono la nuova struttura variabile. Mappe e anteprime sono un’attività principale dell’autodromo, e l’atlante apre subito una scheda. Il reset dello storico è stato autorizzato esplicitamente dall’utente per questa fase di test, con backup e conservazione della carriera.

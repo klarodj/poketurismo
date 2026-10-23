@@ -1,0 +1,4 @@
+const path=require('node:path'),{createRequire}=require('node:module'),requireServer=createRequire(path.resolve(__dirname,'../server/package.json'));
+requireServer('dotenv').config({path:process.env.ACCOUNTS_ENV_FILE||'/home/klaro/poketurismo-data/accounts/accounts.env',quiet:true});
+const{PrismaClient}=require('../server/database'),{resetRaceHistory}=require('../server/resetRaceHistory'),prisma=new PrismaClient();
+(async()=>{const apply=process.argv.includes('--apply');if(apply&&!process.argv.includes('--confirm-reset-races'))throw Error('Azzeramento richiesto esplicitamente: aggiungere --confirm-reset-races dopo il backup.');console.log(JSON.stringify(await prisma.$transaction(tx=>resetRaceHistory(tx,{apply}),{isolationLevel:'Serializable',timeout:30000}),null,2));})().catch(error=>{console.error(error.message);process.exitCode=1;}).finally(()=>prisma.$disconnect());

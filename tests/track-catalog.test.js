@@ -15,8 +15,8 @@ test('all twenty routes finish in the tactical engine with finite times and fuel
     state.routeProfile=routeProfileFor(track.format==='circuit'?'track':'street');
     state.sections=buildTacticalTrack(track.sections.map(id=>({name:names[id-1]})),track.distanceM/1000,state.routeProfile);
     state.distanceKm=track.distanceM/1000;
-    for(let turn=0;!state.finished&&turn<9;turn++)state=advanceTacticalRace(state,null,DEFAULT_DECISION);
-    assert.ok(state.finished,track.name);assert.equal(state.index,8,track.name);
+    for(let turn=0;!state.finished&&turn<=state.sections.length;turn++)state=advanceTacticalRace(state,null,DEFAULT_DECISION);
+    assert.ok(state.finished,track.name);assert.equal(state.index,state.sections.length,track.name);
     assert.ok(Number.isFinite(state.playerTime)&&state.playerTime>0,track.name);
     assert.ok(Number.isFinite(state.car.currentFuel)&&state.car.currentFuel>=0,track.name);
   }
@@ -29,7 +29,7 @@ test('twenty distinct routes cover both formats, five conditions and varied play
   for(const track of TRACK_CATALOG){
     const profile=routeProfileFor(track.format==='circuit'?'track':'street');
     const sectors=buildTacticalTrack(track.sections.map(id=>({name:names[id-1]})),track.distanceM/1000,profile);
-    assert.equal(sectors.length,8);
+    assert.ok(sectors.length>=4&&sectors.length<=20);
     assert.ok(Math.abs(sectors.flatMap(s=>s.segments).reduce((sum,s)=>sum+s.lengthM,0)-track.distanceM)<0.001);
     assert.ok(sectors.every(s=>s.segments.every(segment=>segment.lengthM>0&&Number.isFinite(segment.radiusM))));
     assert.ok(track.difficulty>=1&&track.difficulty<=5);

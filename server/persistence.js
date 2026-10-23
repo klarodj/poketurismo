@@ -27,6 +27,7 @@ async function operation(prisma, userId, key, kind, payload, action, idle = true
     if (existing) {
       if (existing.kind !== kind || existing.fingerprint !== fingerprint) fail(409, 'Identificativo già usato per un’altra operazione');
       const saved = JSON.parse(existing.response);
+      if(saved.raceHistoryReset)fail(410,'Lo storico gare di test è stato azzerato. Ricarica la pagina e avvia una nuova gara.');
       // Return current checkpoints on a retry, rather than rolling the UI back to an old balance.
       const { snapshot } = require('./races');
       const race = saved.race ? await tx.raceSession.findUnique({ where: { id: saved.race.id } }) : null;

@@ -72,10 +72,10 @@ test('wet roads lengthen the same lap and novice pilots lose more usable perform
   const ideal = simulateBlock(expert.car, expert.pilot, null, DEFAULT_DECISION, section, null, 15, expert.environment, true);
   assert.ok(n.time > e.time); assert.ok(e.time >= ideal.time);
 });
-test('legacy tracks are grouped into at most eight decisions without losing their distance', () => {
+test('long tracks use up to twenty decisions without losing their distance', () => {
   const source = Array.from({ length: 64 }, (_, i) => ({ name: i % 2 ? 'Hairpin Right' : 'Long Straight' }));
   const blocks = buildTacticalTrack(source, 16);
-  assert.equal(blocks.length, 8);
+  assert.equal(blocks.length, 20);
   assert.equal(blocks.reduce((sum, block) => sum + block.segments.length, 0), 64);
   assert.ok(Math.abs(blocks.flatMap(block => block.segments).reduce((sum, segment) => sum + segment.lengthM, 0) - 16000) < 0.001);
   assert.equal(DEMO_TRACK.sections.length, 8);

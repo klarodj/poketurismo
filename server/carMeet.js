@@ -28,7 +28,7 @@ async function displayCar(tx,userId,body){
  await tx.playerProgress.upsert({where:{userId},create:{userId,showcaseGarageId:garageId},update:{showcaseGarageId:garageId}});
  return {...await require('./races').snapshot(tx,userId),meet:await meet(tx,userId)};
 }
-function layoutKey(sections,environment){return hash([environment?.weather?.toLowerCase(),environment?.surface?.toLowerCase(),sections.map(section=>(section.segments||[]).map(segment=>[segment.lengthM,segment.radiusM,segment.widthM,segment.grade||0]))]);}
+function layoutKey(sections,environment){return hash([environment?.weather?.toLowerCase(),environment?.surface?.toLowerCase(),sections.map(section=>[section.layoutVersion||1,section.riskExposure??1,(section.segments||[]).map(segment=>[segment.lengthM,segment.radiusM,segment.widthM,segment.grade||0])])]);}
 function trialConfiguration(garage){
  const stats=Object.fromEntries(['cv','nm','kg','speed','acceleration','revving','transmission','turnSlow','turnFast','brake','traction'].map(key=>[key,garage[key]]));
  return {modelId:garage.carId,setupKey:hash(stats),engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,currentFuel:garage.currentFuel,fuelType:garage.fuelType,parts:garage.mods.map(mod=>({name:mod.part.name,level:mod.part.level}))};

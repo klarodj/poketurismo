@@ -7,7 +7,7 @@ export default function TrackPreview({sections,paths,trackName,index=-1,profile=
  if(!sections?.length)return null;
  const visual=trackVisual(trackName),road=visual?visual.format==='point-to-point':profile.kind==='road';
  return <section className="track-preview" aria-label={title}>
- <h2>{title} · {road?'Strada · da punto a punto':'Circuito'}</h2>
+ <h2>{title} · {road?'Strada · da punto a punto':'Circuito'} · {sections.length} settori</h2>
  <TrackIllustration name={trackName} sections={sections} paths={paths} index={index} compact={compact}/>
  {!visual&&!paths&&<p className="text-xs">Schema dei settori ricostruito dal catalogo: non rappresenta la forma reale del percorso.</p>}
  {compact&&sections[index]&&<p className="font-bold">Ora: {trackSectionLabel(sections[index].name)}{sections[index+1]?` · Poi: ${trackSectionLabel(sections[index+1].name)}`:' · Ultimo settore'}</p>}

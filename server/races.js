@@ -146,8 +146,8 @@ async function startRace(tx, userId, body) {
   const seed = randomInt(1, 2147483647);
   const distanceKm = demo ? DEMO_TRACK.distanceKm : Math.max(1, Number(track.lenght || sections.length) / (Number(track.lenght) >= 100 ? 1000 : 1));
   const routeProfile = routeProfileFor(mode, track.name);
-  const plan = incidentPlan(seed, rulesVersion === 3 ? Math.min(8, sections.length) : 0, routeProfile);
   const raceSections = rulesVersion === 3 ? demo ? structuredClone(DEMO_TRACK.sections) : buildTacticalTrack(sections, distanceKm, routeProfile) : sections;
+  const plan = incidentPlan(seed, rulesVersion === 3 ? raceSections.length : 0, routeProfile);
   const state = {
     rulesVersion, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
