@@ -29,3 +29,9 @@ Le proiezioni pubbliche aggiungono soltanto l’ID dell’avatar, senza dati acc
 193 test di gioco e 10 account/gateway passati, lint e build superati. Casi specifici: 20 asset 64×64, selezione maschile/femminile, compatibilità dei vecchi colori, rifiuto di URL e ID arbitrari, autenticazione e proprietà, esclusione dei campi economici/amministrativi, cambio con gara attiva, retry senza ripristinare un vecchio avatar, impronta e contratto di sfida invariati.
 
 Browser reale headless su copia PostgreSQL e autenticazione sintetica locale: creazione con ritratto femminile e budget €10.000 senza auto, modifica dal garage, persistenza al ricaricamento, scelta di un vecchio profilo con gara attiva e controllo che tutti gli altri dati di pilota/garage/gara restino identici, ritratto nel raduno e nella barra. Otto verifiche desktop 1280×960 e telefono 390×844 senza errori JavaScript o scorrimenti orizzontali. Catture, tavola dei venti ritratti e report in .preview/avatar-qa. Nessun account reale usato per il collaudo e nessuna email inviata.
+
+## Rilascio verificato
+
+Pubblicato il 23 ottobre 2026 sull’istanza unica 5174 attraverso il gateway 5184. Backup completo Auth + gioco prima e dopo; dati precedenti, build precedente e confronto di tutte le tabelle in /home/klaro/.backups/poketurismo/avatars-2026-10-23T10-32-58-795Z (accesso privato). Nessuna riga o campo del database modificato durante il rilascio, compresi avatar dei giocatori esistenti, gara e record. Nessuna migrazione di schema.
+
+Servizi attivi, health positivo, profilo pubblico HTTP 200, API personali senza sessione HTTP 401. Catalogo pubblico con venti ID verificato, tutti i PNG serviti dal gateway identici agli asset collaudati; verificato anche HTTP 200 e contenuto dell’immagine attraverso l’URL pubblico. Server, autenticazione sintetica, browser di collaudo e database temporaneo rimossi dopo la verifica.
