@@ -53,3 +53,9 @@ Non cambia il prezzo della benzina, la capacità dei serbatoi, il bonus prestazi
 scripts/validate-fuel-consumption.cjs rifiuta database non locali o non terminanti in _validation. Eseguito su copia completa PostgreSQL: 200 modelli con stime finite, quattro gare via HTTP (serie, conserva, elaborata in attacco, vecchie regole), controllo di ogni checkpoint e retry senza doppio consumo, tutti i dati preesistenti invariati. Anche validate-meet-social.cjs supera il controllo di due tentativi asincroni con stesso tempo a parità di scelte, senza modifiche alla carriera reale.
 
 Browser con API reale sulla copia PostgreSQL e pilota sintetico: distributore e garage con stime coerenti, confronto tuning con delta positivo e spiegazione, desktop 1280×960 e telefono 390×844 senza errori JavaScript o scorrimento orizzontale nelle viste verificate. Catture e rapporti in .preview/fuel-qa. Nessuna gara o acquisto di collaudo sui giocatori pubblici.
+
+## Rilascio verificato
+
+Pubblicato il 23 ottobre 2026 sulla sola istanza 5174 attraverso il gateway 5184. Backup completo Auth + gioco prima e dopo; build precedente, dati e rapporto di verifica in /home/klaro/.backups/poketurismo/fuel-model-2026-10-23T12-39-14.355Z (privato). Confronto delle 32 tabelle dello schema game superato: tutte le righe e tutti i campi invariati, compresi carburante, saldi, contratti e gare già in corso. Nessuna migrazione di schema o cancellazione di record.
+
+Servizi attivi, health positivo, distributore pubblico HTTP 200 e API personali senza sessione HTTP 401. Verificato il bundle effettivamente servito dal Funnel con le nuove stime e il selettore dei regolamenti. Browser, anteprima e database temporaneo vengono rimossi dopo il collaudo.
