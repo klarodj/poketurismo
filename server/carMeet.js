@@ -21,10 +21,14 @@ async function meet(tx,userId){
  const participants=await visibleParticipants(tx);
  return {showcases:participants.map(({user,garage})=>publicShowcase(user,garage)),myGarageId:participants.find(p=>p.user.id===userId)?.garage.id||null};
 }
+async function withdrawForDrive(tx,userId,garageId){
+ if(garageId>0)await tx.playerProgress.updateMany({where:{userId,showcaseGarageId:garageId},data:{showcaseGarageId:null}});
+}
 async function displayCar(tx,userId,body){
  if(Object.keys(body).some(key=>key!=='garageId')||body.garageId===undefined)fail(400,'Scegli una tua vettura oppure ritira l’esposizione');
  const garageId=body.garageId===null?null:positiveId(body.garageId);
  if(garageId!==null&&!await tx.garage.findFirst({where:{id:garageId,userId}}))fail(403,'Puoi esporre soltanto una tua auto');
+ if(garageId!==null&&await tx.raceSession.findFirst({where:{userId,garageId,status:'active'}}))fail(409,'Questa auto è in gara: riportala al piazzale dopo aver concluso');
  await tx.playerProgress.upsert({where:{userId},create:{userId,showcaseGarageId:garageId},update:{showcaseGarageId:garageId}});
  return {...await require('./races').snapshot(tx,userId),meet:await meet(tx,userId)};
 }
@@ -63,4 +67,4 @@ async function leaderboard(tx,query){
  const records=[...best.values()].sort((a,b)=>a.timeMs-b.timeMs||a.pilot.id-b.pilot.id);
  return {track:{id:track.id,name:track.name,distanceKm,weather:track.meteo.name},model:{id:model.id,name:model.name,brand:model.brand?.name||''},records:records.slice(0,50).map(record=>({...record,position:records.findIndex(r=>r.timeMs===record.timeMs)+1,gapMs:record.timeMs-records[0].timeMs})),total:records.length};
 }
-module.exports={meet,displayCar,leaderboard,layoutKey,trialConfiguration,projectTime};
+module.exports={withdrawForDrive,meet,displayCar,leaderboard,layoutKey,trialConfiguration,projectTime};

@@ -13,7 +13,9 @@ import AccountContext from '../contexts/AccountContext';
 export default function HUD() {
   const navigate = useNavigate();
   const account = useContext(AccountContext);
+  const friendRequests=usePhoneStore(state=>state.friendRequests.length);
   const phoneUnread=usePhoneStore(state=>state.unread);
+  const phoneAlerts=phoneUnread+friendRequests;
   const activeRace = useRaceStore(state => state.activeRace);
   const { money, level, username, avatar } = usePlayerStore();
   const { equippedCarId, travel } = useGameStore();
@@ -37,7 +39,7 @@ export default function HUD() {
         >
           🗺️
         </button>
-        <button type="button" onClick={()=>usePhoneStore.getState().menu('inbox')} className="phone-hud-button" title="Cellulare e SMS" aria-label={`Apri cellulare · ${phoneUnread} SMS non letti`}><PhoneIcon/>{phoneUnread>0&&<span className="phone-hud-badge">{phoneUnread>99?'99+':phoneUnread}</span>}</button>
+        <button type="button" onClick={()=>usePhoneStore.getState().menu(friendRequests&&!phoneUnread?'requests':'inbox')} className="phone-hud-button" title="Cellulare, SMS e rubrica" aria-label={`Apri cellulare · ${phoneUnread} SMS non letti · ${friendRequests} richieste di contatto`}><PhoneIcon/>{phoneAlerts>0&&<span className="phone-hud-badge">{phoneAlerts>99?'99+':phoneAlerts}</span>}</button>
         <button 
           onClick={() => {
             if (travel('/dev-sandbox', 0)) {

@@ -74,6 +74,9 @@ model Class {
 }
 
 model User {
+  friendshipLow  MeetFriendship[] @relation("FriendLow")
+  friendshipHigh MeetFriendship[] @relation("FriendHigh")
+  friendshipSent MeetFriendship[] @relation("FriendRequester")
   sentMeetMessages       MeetMessage[]   @relation("MeetSender")
   receivedMeetMessages   MeetMessage[]   @relation("MeetRecipient")
   meetBlocks             MeetBlock[]     @relation("MeetBlocker")
@@ -524,5 +527,23 @@ model MeetChallenge {
 
   @@index([senderId, status])
   @@index([recipientId, status])
+  @@schema("game")
+}
+
+model MeetFriendship {
+  lowId       Int
+  highId      Int
+  requestedBy Int
+  status      String   @default("pending")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  low         User @relation("FriendLow", fields: [lowId], references: [id])
+  high        User @relation("FriendHigh", fields: [highId], references: [id])
+  requester   User @relation("FriendRequester", fields: [requestedBy], references: [id])
+
+  @@id([lowId, highId])
+  @@index([lowId, status])
+  @@index([highId, status])
+  @@index([requestedBy, createdAt])
   @@schema("game")
 }

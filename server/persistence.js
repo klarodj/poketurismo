@@ -32,12 +32,14 @@ async function operation(prisma, userId, key, kind, payload, action, idle = true
       const { snapshot } = require('./races');
       const race = saved.race ? await tx.raceSession.findUnique({ where: { id: saved.race.id } }) : null;
       const fresh = await snapshot(tx, userId, race);
+      let friendship;
+      if(saved.friendshipStatus!==undefined){const ids=require('./friendships').pair(userId,positiveId(payload.peerId));friendship=await tx.meetFriendship.findUnique({where:{lowId_highId:ids}});}
       let entry;
       if (saved.entry) {
         entry = await tx.championshipEntry.findUnique({ where: { id: saved.entry.id }, include: { championship: { include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } } } } });
         if (entry) entry = require('./championships').publicEntry(entry);
       }
-      return { ...saved, ...fresh, ...(saved.meet ? { meet: await require('./carMeet').meet(tx, userId) } : {}), ...(saved.street ? { street: await require('./streetRacing').streetHub(tx, userId) } : {}), ...(saved.user ? { user: fresh.player } : {}), ...(entry ? { entry } : {}) };
+      return { ...saved, ...fresh, ...(saved.friendshipStatus!==undefined?{friendshipStatus:friendship?.status||'removed'}:{}), ...(saved.meet ? { meet: await require('./carMeet').meet(tx, userId) } : {}), ...(saved.street ? { street: await require('./streetRacing').streetHub(tx, userId) } : {}), ...(saved.user ? { user: fresh.player } : {}), ...(entry ? { entry } : {}) };
     }
     if (!await tx.user.findUnique({ where: { id: userId } })) fail(404, 'Giocatore inesistente');
     if (idle) await assertIdle(tx, userId);

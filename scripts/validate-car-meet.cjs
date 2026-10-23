@@ -13,10 +13,10 @@ async function main(){
  assert.equal((await request('/meet/showcase',a.user.id,{garageId:b.garage.id})).status,403);
  const key=crypto.randomUUID();assert.equal((await request('/meet/showcase',a.user.id,{garageId:a.garage.id},key)).status,200);assert.equal((await request('/meet/showcase',a.user.id,{garageId:a.garage.id},key)).status,200);
  for(const person of people){const started=await request('/races',person.user.id,{mode:'track',timeTrial:true,trackId:track.id});assert.equal(started.status,200,JSON.stringify(started.data));let race=started.data.race;
-  // Changing display while driving must leave the ongoing race intact.
-  const displayed=await request('/meet/showcase',person.user.id,{garageId:person.garage.id});assert.equal(displayed.status,200);assert.equal(displayed.data.activeRace.id,race.id);
+  // The same car cannot be parked while driving; no change to the ongoing race.
+  const displayed=await request('/meet/showcase',person.user.id,{garageId:person.garage.id});assert.equal(displayed.status,409);assert.equal((await request('/meet?userId='+person.user.id)).data.myGarageId,null);
   while(race.status==='active'){const result=await request(`/races/${race.id}/turns`,person.user.id,{version:race.version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'}});assert.equal(result.status,200,JSON.stringify(result.data));race=result.data.race;}
-  assert.equal(race.reward.money,0);assert.equal(race.reward.xp,0);
+  assert.equal(race.reward.money,0);assert.equal(race.reward.xp,0);assert.equal((await request('/meet/showcase',person.user.id,{garageId:person.garage.id})).status,200);
  }
  const boardUrl=`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`;let board=(await request(boardUrl)).data;assert.equal(board.records.filter(record=>people.some(p=>p.user.id===record.pilot.id)).length,2);
  assert.ok(board.records.every(record=>record.configuration&&record.car.modelId===car.id));assert.ok(board.records[0].timeMs<=board.records[1].timeMs);
@@ -26,6 +26,6 @@ async function main(){
  assert.equal((await request('/meet/showcase',a.user.id,{garageId:a.garage.id},key)).data.meet.myGarageId,null);
  await request('/market/sell',b.user.id,{garageId:b.garage.id});assert.ok(!(await request('/meet?userId='+b.user.id)).data.showcases.some(s=>s.pilot.id===b.user.id));assert.ok(!(await request(boardUrl)).data.records.some(r=>r.pilot.id===b.user.id));
  for(const [model,rows]of Object.entries(before)){const all=await prisma[model].findMany();for(const old of rows){const current=all.find(row=>model==='playerProgress'?row.userId===old.userId:row.id===old.id);assert.deepEqual(current,old,model+' precedente invariato');}}
- console.log('PostgreSQL: due giocatori, esposizione volontaria, proprietà verificata, cambio durante gara, tempi dello stesso modello/circuito, ritiro e vendita, record privati conservati e campi personali esclusi. Dati precedenti invariati.');
+ console.log('PostgreSQL: due giocatori, esposizione volontaria, proprietà verificata, ritiro alla partenza e divieto di esposizione durante gara, nuova esposizione manuale, tempi dello stesso modello/circuito, ritiro e vendita, record privati conservati e campi personali esclusi. Dati precedenti invariati.');
 }
 main().catch(error=>{console.error(error.message);process.exitCode=1}).finally(async()=>{await prisma.$disconnect();if(server){server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}});

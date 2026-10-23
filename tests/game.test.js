@@ -33,7 +33,7 @@ before(async () => {
   for (const sql of readFileSync(new URL('./schema.sql', import.meta.url), 'utf8').split(';')) if (sql.trim()) await prisma.$executeRawUnsafe(sql);
 });
 beforeEach(async () => {
-  for (const table of ['MeetReport','MeetMessage','MeetBlock','MeetChallenge','DriverDevelopment', 'GameOperation', 'RaceSession', 'InventoryPart', 'PlayerProgress', 'ChampionshipEntry', 'ChampionshipRace', 'Championship', 'TrainingSession', 'TrackBuild', 'Track', 'TrackType', 'TrackSurface', 'TrackMeteo', 'CustomTrackSection', 'CustomTrack', 'TrackSection', 'CustomOpponent', 'Mod', 'Garage', 'Part', 'Car', 'Brand', 'User']) await prisma.$executeRawUnsafe(`DELETE FROM "${table}"`);
+  for (const table of ['MeetFriendship','MeetReport','MeetMessage','MeetBlock','MeetChallenge','DriverDevelopment', 'GameOperation', 'RaceSession', 'InventoryPart', 'PlayerProgress', 'ChampionshipEntry', 'ChampionshipRace', 'Championship', 'TrainingSession', 'TrackBuild', 'Track', 'TrackType', 'TrackSurface', 'TrackMeteo', 'CustomTrackSection', 'CustomTrack', 'TrackSection', 'CustomOpponent', 'Mod', 'Garage', 'Part', 'Car', 'Brand', 'User']) await prisma.$executeRawUnsafe(`DELETE FROM "${table}"`);
   await prisma.user.create({ data: { id: 1, username: 'Test', password: 'secret', mail: 'private@example.org', moneyCents: 10000000, carDrive: 0, ...pilot } });
   await prisma.user.create({ data: { id: 2, username: 'Other', password: 'secret', mail: '', moneyCents: 100, carDrive: 0, ...pilot } });
   const brand = await prisma.brand.create({ data: { name: 'Test brand' } });
@@ -746,7 +746,7 @@ test('Car Meet rejects foreign cars, missing choices and forged public metadata'
 test('showcase retries return current visibility and withdrawing preserves personal records',async()=>{
  const key=randomUUID();await post('/meet/showcase',{garageId:garage.id},key);
  const race=await begin('track',{timeTrial:true});await post(`/races/${race.id}/turns`,{version:0,moveId:null});
- const privateRecords=(await get('/time-trials/1')).data;
+ const privateRecords=(await get('/time-trials/1')).data;await post('/meet/showcase',{garageId:garage.id});
  assert.equal((await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data.records.length,1);
  await post('/meet/showcase',{garageId:null});
  assert.equal((await post('/meet/showcase',{garageId:garage.id},key)).data.meet.showcases.length,0);
@@ -755,7 +755,7 @@ test('showcase retries return current visibility and withdrawing preserves perso
 });
 test('showcase settings are safe to change during a race without overwriting driving progress',async()=>{
  const race=await begin();await prisma.playerProgress.upsert({where:{userId:1},create:{userId:1,streetState:'{"parking":{"reputation":12}}'},update:{streetState:'{"parking":{"reputation":12}}'}});
- const displayed=await post('/meet/showcase',{garageId:garage.id});assert.equal(displayed.status,200);assert.equal(displayed.data.activeRace.id,race.id);
+ assert.equal((await post('/meet/showcase',{garageId:garage.id})).status,409);const{id:_id,...copy}=garage;const second=await prisma.garage.create({data:copy});const displayed=await post('/meet/showcase',{garageId:second.id});assert.equal(displayed.status,200);assert.equal(displayed.data.activeRace.id,race.id);
  assert.equal(JSON.parse((await prisma.playerProgress.findUnique({where:{userId:1}})).streetState).parking.reputation,12);
  assert.equal((await post(`/races/${race.id}/turns`,{version:0,moveId:null})).status,200);
 });
@@ -772,14 +772,14 @@ test('shared records use completed time trials only, one best per visible pilot 
  const second=await begin('track',{timeTrial:true});const result=await post(`/races/${second.id}/turns`,{version:0,moveId:null});assert.equal(result.status,200);
  const normal=await begin();await post(`/races/${normal.id}/turns`,{version:0,moveId:null});
  const failed=await begin('track',{timeTrial:true});await post(`/races/${failed.id}/abandon`,{version:0});
- const data=(await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data;
+ await post('/meet/showcase',{garageId:garage.id});const data=(await get(`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`)).data;
  assert.equal(data.records.length,1);assert.equal(data.records[0].timeMs,Math.round(Math.min(first.data.race.playerTime,result.data.race.playerTime)*1000));assert.equal(data.records[0].position,1);
  assert.equal(data.records[0].configuration.currentFuel,(first.data.race.playerTime<=result.data.race.playerTime?one:second).trialSetup.configuration.currentFuel);
  for(const name of ['rng','moneyCents','password','authUserId','raceId'])assert.ok(!JSON.stringify(data).includes(`"${name}"`));
 });
 test('leaderboards do not mix track layouts, weather or car models',async()=>{
  await post('/meet/showcase',{garageId:garage.id});const race=await begin('track',{timeTrial:true});await post(`/races/${race.id}/turns`,{version:0,moveId:null});
- const url=`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`;assert.equal((await get(url)).data.records.length,1);
+ await post('/meet/showcase',{garageId:garage.id});const url=`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`;assert.equal((await get(url)).data.records.length,1);
  const{id:_id,...model}=car;const another=await prisma.car.create({data:{...model,name:'Another model'}});assert.equal((await get(`/meet/leaderboard?trackId=${track.id}&modelId=${another.id}`)).data.records.length,0);
  await prisma.trackMeteo.update({where:{id:track.meteoId},data:{name:'Rainy'}});assert.equal((await get(url)).data.records.length,0);
  await prisma.trackMeteo.update({where:{id:track.meteoId},data:{name:'Dry'}});const build=await prisma.trackBuild.findFirst({where:{trackId:track.id}});await prisma.trackBuild.create({data:{trackId:track.id,sectionId:build.sectionId,level:1,ord:2}});assert.equal((await get(url)).data.records.length,0);
@@ -899,7 +899,7 @@ test('meet attempts freeze cars and pilots, complete asynchronously with a ghost
  await prisma.garage.update({where:{id:garage.id},data:{engineHealth:0,tireGrip:20,currentFuel:0}});const challenge=await socialAccept();const initial={users:await prisma.user.findMany(),garages:await prisma.garage.findMany(),development:await prisma.driverDevelopment.findMany(),progress:await prisma.playerProgress.findMany()};
  const key=randomUUID();const first=await post('/meet/challenge/start',{challengeId:challenge.id},key);assert.equal(first.status,200,JSON.stringify(first.data));assert.equal(first.data.race.car.engineHealth,100);assert.equal(first.data.race.car.currentFuel,20);assert.equal(first.data.race.meetGhost,null);assert.equal('rng'in first.data.race,false);assert.equal((await post('/meet/challenge/start',{challengeId:challenge.id},key)).data.race.id,first.data.race.id);assert.equal((await post('/meet/challenge/start',{challengeId:challenge.id})).status,409);
  const done=await finishSocial(1,first.data.race);assert.deepEqual(done.reward,{money:0,xp:0});const second=await post('/meet/challenge/start',{userId:2,challengeId:challenge.id});assert.equal(second.status,200,JSON.stringify(second.data));assert.ok(second.data.race.meetGhost.splits.length);const otherDone=await finishSocial(2,second.data.race);assert.equal(done.playerTime,otherDone.playerTime);
- const hub=(await get('/meet/social/1')).data;assert.equal(hub.challenges[0].status,'completed');assert.equal(hub.challenges[0].draw,true);assert.equal(hub.record.total,1);assert.equal((await get('/time-trials/1')).data.length,0);assert.deepEqual(await prisma.user.findMany(),initial.users);assert.deepEqual(await prisma.garage.findMany(),initial.garages);assert.deepEqual(await prisma.driverDevelopment.findMany(),initial.development);assert.deepEqual(await prisma.playerProgress.findMany(),initial.progress);
+ const hub=(await get('/meet/social/1')).data;assert.equal(hub.challenges[0].status,'completed');assert.equal(hub.challenges[0].draw,true);assert.equal(hub.record.total,1);assert.equal((await get('/time-trials/1')).data.length,0);assert.deepEqual(await prisma.user.findMany(),initial.users);assert.deepEqual(await prisma.garage.findMany(),initial.garages);assert.deepEqual(await prisma.driverDevelopment.findMany(),initial.development);assert.deepEqual(await prisma.playerProgress.findMany(),initial.progress.map(row=>({...row,showcaseGarageId:null})));
 });
 test('accepted meet preparations remain usable after later tuning or selling and results cannot be forged',async()=>{
  const challenge=await socialAccept();await prisma.garage.update({where:{id:garage.id},data:{cv:900}});await prisma.user.update({where:{id:1},data:{brave:999}});await post('/market/sell',{garageId:garage.id});
@@ -965,7 +965,7 @@ test('avatar does not invalidate a meet preparation or change frozen race contra
 
 test('phone notifications are recipient-only, bounded and never mark SMS as read',async()=>{
  await socialSetup();const sent=await post('/meet/message',{peerId:2,text:'Ci vediamo al piazzale.'});assert.equal(sent.status,200);
- const before=await prisma.meetMessage.findMany();assert.deepEqual((await get('/phone/1/notifications')).data,{unread:0,latest:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
+ const before=await prisma.meetMessage.findMany();assert.deepEqual((await get('/phone/1/notifications')).data,{unread:0,latest:[],friendRequests:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
  const inbox=(await get('/phone/2')).data;assert.equal(inbox.conversations[0].lastMessage.id,sent.data.message.id);assert.deepEqual(await prisma.meetMessage.findMany(),before);
  await prisma.meetMessage.createMany({data:Array.from({length:7},()=>({senderId:1,recipientId:2,text:'Altro SMS'}))});assert.equal((await get('/phone/2/notifications')).data.latest.length,5);
 });
@@ -978,4 +978,85 @@ test('phone address book preserves opt-in privacy, known conversations and mutua
 test('opening a displayed SMS only acknowledges incoming messages through its own server cursor',async()=>{
  await socialSetup();const first=(await post('/meet/message',{peerId:2,text:'Prima'})).data.message;await prisma.meetMessage.update({where:{id:first.id},data:{createdAt:new Date(Date.now()-10000)}});const second=(await post('/meet/message',{peerId:2,text:'Dopo'})).data.message;
  await get('/phone/2');assert.equal((await get('/phone/2/notifications')).data.unread,2);assert.equal((await post('/meet/read',{userId:2,peerId:1,throughId:first.id})).status,200);const notifications=(await get('/phone/2/notifications')).data;assert.equal(notifications.unread,1);assert.equal(notifications.latest[0].id,second.id);assert.equal((await prisma.meetMessage.findUnique({where:{id:second.id}})).readAt,null);
+});
+
+test('parked car persists across unrelated reads, failed starts, and use of another owned car',async()=>{
+ await post('/meet/showcase',{garageId:garage.id});const before=await prisma.playerProgress.findUnique({where:{userId:1}});
+ for(const path of ['/state/1','/garage/1','/phone/1','/meet?userId=2'])assert.equal((await get(path)).status,200);
+ assert.deepEqual(await prisma.playerProgress.findUnique({where:{userId:1}}),before);
+ assert.equal((await post('/races',{mode:'track',trackId:999999})).status,404);assert.equal((await get('/meet?userId=2')).data.myGarageId,null);assert.equal((await get('/meet?userId=1')).data.myGarageId,garage.id);
+ const{id:_id,...copy}=garage;const second=await prisma.garage.create({data:copy});
+ assert.equal((await request('/player/1/equip',{userId:1,carDrive:second.id},'PUT')).status,200);
+ const race=await begin();assert.equal(race.car.id,second.id);assert.equal((await get('/meet?userId=1')).data.myGarageId,garage.id);
+});
+test('successful driving withdraws the matching parked car atomically, retry cannot repark, finish does not return it',async()=>{
+ const displayKey=randomUUID();await post('/meet/showcase',{garageId:garage.id},displayKey);const key=randomUUID();const started=await post('/races',{mode:'track',trackId:track.id},key);assert.equal(started.status,200);
+ assert.equal((await get('/meet?userId=1')).data.myGarageId,null);assert.equal((await post('/meet/showcase',{garageId:garage.id})).status,409);
+ assert.equal((await post('/meet/showcase',{garageId:garage.id},displayKey)).data.meet.myGarageId,null);
+ assert.equal((await post('/races',{mode:'track',trackId:track.id},key)).data.race.id,started.data.race.id);
+ await post(`/races/${started.data.race.id}/abandon`,{version:0});assert.equal((await get('/meet?userId=1')).data.myGarageId,null);assert.equal((await post('/meet/showcase',{garageId:garage.id})).data.meet.myGarageId,garage.id);
+});
+test('school loan car does not withdraw a parked personal car',async()=>{
+ await post('/meet/showcase',{garageId:garage.id});await post('/driver/techniques/read',{techniqueId:'progressive-release'});
+ const start=await post('/races',{mode:'track',lesson:'braking-basics'});assert.equal(start.status,200,JSON.stringify(start.data));assert.equal((await get('/meet?userId=1')).data.myGarageId,garage.id);
+});
+const friendship=async(userId,peerId,action,key)=>{const row=await prisma.meetFriendship.findFirst({where:{lowId:Math.min(userId,peerId),highId:Math.max(userId,peerId)}});const requestKey=row&&action!=='request'?`${row.lowId}-${row.highId}-${+new Date(row.createdAt)}`:undefined;return post('/meet/friendship',{userId,peerId,action,...(requestKey?{requestKey}:{})},key);};
+async function acceptFriendship(){await socialSetup();assert.equal((await friendship(1,2,'request')).status,200);assert.equal((await friendship(2,1,'accept')).status,200);}
+test('friend requests require known pilots, strict fields and explicit recipient consent',async()=>{
+ assert.equal((await friendship(1,2,'request')).status,403);await socialSetup();
+ for(const body of [{peerId:1,action:'request'},{peerId:2,action:'accept',accepted:true},{peerId:2,action:'fake'},{peerId:2,action:'request',requestedBy:2}])assert.equal((await post('/meet/friendship',body)).status,400);
+ const key=randomUUID();assert.equal((await friendship(1,2,'request',key)).status,200);assert.equal((await friendship(1,2,'request',key)).status,200);assert.equal(await prisma.meetFriendship.count(),1);
+ assert.equal((await friendship(1,2,'accept')).status,403);assert.equal((await friendship(1,2,'decline')).status,403);assert.equal((await friendship(2,1,'cancel')).status,403);
+ assert.equal((await friendship(2,1,'request')).data.friendshipStatus,'pending');assert.equal((await prisma.meetFriendship.findFirst()).status,'pending');
+ assert.equal((await friendship(2,1,'accept')).status,200);for(const id of[1,2]){const book=(await get(`/phone/${id}`)).data;assert.equal(book.friendships[0].status,'accepted');assert.match(book.friendships[0].number,/^PT-\d{5}$/);}
+});
+test('friend request notifications are private, do not become SMS or expose account data, and disappear after response',async()=>{
+ await socialSetup();await friendship(1,2,'request');await prisma.user.create({data:{id:3,username:'Third',password:'secret',mail:'hidden@example.invalid',carDrive:0,...pilot}});
+ const incoming=(await get('/phone/2/notifications')).data;assert.equal(incoming.friendRequests.length,1);assert.equal(incoming.friendRequests[0].peer.id,1);assert.equal(incoming.unread,0);assert.equal(await prisma.meetMessage.count(),0);
+ for(const id of[1,3])assert.deepEqual((await get(`/phone/${id}/notifications`)).data.friendRequests,[]);
+ for(const field of['secret','hidden@example','private@example','moneyCents','authUserId'])assert.ok(!JSON.stringify(incoming).includes(field));
+ assert.equal((await friendship(3,1,'accept')).status,404);assert.equal((await friendship(2,1,'decline')).status,200);assert.deepEqual((await get('/phone/2/notifications')).data.friendRequests,[]);
+ assert.equal((await friendship(1,2,'request')).status,429);
+});
+test('accepted numbers remain after both leave the piazzale and allow the first SMS without prior messages',async()=>{
+ await acceptFriendship();await post('/meet/showcase',{garageId:null});await post('/meet/showcase',{userId:2,garageId:null});
+ assert.equal((await get('/meet?userId=1')).data.showcases.length,0);assert.equal((await get('/phone/1')).data.contacts[0].friendship.status,'accepted');
+ assert.equal((await get('/meet/social/1')).data.conversations.find(c=>c.peer.id===2).peer.name,'Other');assert.equal((await get('/meet/conversation/2?userId=1')).status,200);assert.equal((await post('/meet/message',{peerId:2,text:'Numero salvato!'})).status,200);
+});
+test('removal is mutual, preserves SMS and does not restore friendship on old operation retries',async()=>{
+ await socialSetup();const requestKey=randomUUID(),acceptKey=randomUUID();await friendship(1,2,'request',requestKey);await friendship(2,1,'accept',acceptKey);await post('/meet/message',{peerId:2,text:'Storico da conservare'});
+ assert.equal((await friendship(1,2,'remove')).status,200);for(const id of[1,2])assert.deepEqual((await get(`/phone/${id}`)).data.friendships,[]);
+ assert.equal((await friendship(2,1,'accept',acceptKey)).data.friendshipStatus,'removed');assert.equal((await friendship(1,2,'request',requestKey)).data.friendshipStatus,'removed');assert.equal((await prisma.meetFriendship.findFirst()).status,'removed');assert.equal(await prisma.meetMessage.count(),1);assert.equal((await get('/meet/conversation/1?userId=2')).data.messages[0].text,'Storico da conservare');
+ assert.equal((await friendship(2,1,'request')).status,429);
+});
+test('pending requests can be withdrawn; refusal and cancellation have a per-pair cooldown',async()=>{
+ await socialSetup();await friendship(1,2,'request');assert.equal((await friendship(1,2,'cancel')).status,200);assert.equal((await friendship(2,1,'accept')).status,409);assert.equal((await friendship(2,1,'request')).status,429);
+ await prisma.meetFriendship.updateMany({data:{updatedAt:new Date(Date.now()-86400001)}});assert.equal((await friendship(2,1,'request')).status,200);assert.equal((await friendship(1,2,'accept')).status,200);
+});
+test('blocking removes accepted or pending friendships, denies requests both ways and unblocking does not restore them',async()=>{
+ await acceptFriendship();await post('/meet/message',{peerId:2,text:'Prima del blocco'});await post('/meet/block',{userId:2,peerId:1,blocked:true});assert.equal((await prisma.meetFriendship.findFirst()).status,'removed');
+ for(const id of[1,2])assert.deepEqual((await get(`/phone/${id}`)).data.friendships,[]);for(const ids of[[1,2],[2,1]])assert.equal((await friendship(...ids,'request')).status,403);
+ await post('/meet/block',{userId:2,peerId:1,blocked:false});assert.equal((await prisma.meetFriendship.findFirst()).status,'removed');assert.equal(await prisma.meetMessage.count(),1);
+});
+test('concurrent crossing requests create one pending pair and never auto-accept',async()=>{
+ await socialSetup();const results=await Promise.all([friendship(1,2,'request'),friendship(2,1,'request')]);assert.ok(results.every(r=>r.status===200));assert.equal(await prisma.meetFriendship.count(),1);assert.equal((await prisma.meetFriendship.findFirst()).status,'pending');
+});
+test('friendship hourly rate and pending cap are checked server-side without changing career',async()=>{
+ await socialSetup();const usersBefore=await prisma.user.findMany();for(let i=3;i<13;i++){await prisma.user.create({data:{id:i,username:'Limit '+i,password:'',mail:'',carDrive:0,...pilot}});await prisma.meetFriendship.create({data:{lowId:1,highId:i,requestedBy:1}});}
+ assert.equal((await friendship(1,2,'request')).status,429);assert.equal(await prisma.meetFriendship.count(),10);assert.deepEqual((await prisma.user.findMany({where:{id:{in:[1,2]}}})),usersBefore);
+});
+
+test('a stale consent cursor cannot accept a later invitation cycle',async()=>{
+ await socialSetup();await friendship(1,2,'request');const old=(await get('/phone/2')).data.friendships[0].key;await friendship(1,2,'cancel');await prisma.meetFriendship.updateMany({data:{updatedAt:new Date(Date.now()-86400001)}});await friendship(1,2,'request');
+ assert.equal((await post('/meet/friendship',{userId:2,peerId:1,action:'accept',requestKey:old})).status,409);assert.equal((await prisma.meetFriendship.findFirst()).status,'pending');assert.equal((await friendship(2,1,'accept')).status,200);
+});
+test('thirty old pending requests still enforce the outstanding cap beyond the hourly window',async()=>{
+ await socialSetup();for(let i=3;i<33;i++){await prisma.user.create({data:{id:i,username:'Pending '+i,password:'',mail:'',carDrive:0,...pilot}});await prisma.meetFriendship.create({data:{lowId:1,highId:i,requestedBy:1,createdAt:new Date(Date.now()-7200000)}});}
+ assert.equal((await friendship(1,2,'request')).status,429);assert.equal(await prisma.meetFriendship.count(),30);
+});
+
+test('a pending number request can be blocked or reported after the sender leaves, without permitting first SMS',async()=>{
+ await socialSetup();await friendship(1,2,'request');await post('/meet/showcase',{garageId:null});await post('/meet/showcase',{userId:2,garageId:null});
+ assert.equal((await get('/phone/2')).data.contacts[0].canMessage,false);assert.equal((await post('/meet/message',{userId:2,peerId:1,text:'Non ancora amici'})).status,403);
+ assert.equal((await post('/meet/report',{userId:2,peerId:1,reason:'Richiesta non gradita'})).status,200);assert.equal((await post('/meet/block',{userId:2,peerId:1,blocked:true})).status,200);assert.deepEqual((await get('/phone/2/notifications')).data.friendRequests,[]);assert.equal((await prisma.meetFriendship.findFirst()).status,'removed');
 });

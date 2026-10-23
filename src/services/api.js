@@ -126,3 +126,5 @@ export const changePilotAvatar=(userId,avatar)=>action(`/player/${userId}/avatar
 
 export const fetchPhoneNotifications=userId=>request(`/phone/${userId}/notifications`);
 export const fetchPhoneInbox=userId=>request(`/phone/${userId}`);
+
+export const changeFriendship=(userId,peerId,choice,requestKey)=>action('/meet/friendship',{userId,peerId,action:choice,...(requestKey?{requestKey}:{})});

@@ -161,6 +161,7 @@ async function startRace(tx, userId, body) {
     ...(streetMatch ? { street: streetMatch.street } : {})
   };
   const race = await tx.raceSession.create({ data: { userId, garageId: garage.id, mode, seed, state: JSON.stringify(state) } });
+  await require('./carMeet').withdrawForDrive(tx,userId,garage.id);
   return snapshot(tx, userId, race);
 }
 async function settleChampionship(tx, userId, state) {

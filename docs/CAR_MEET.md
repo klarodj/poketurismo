@@ -38,3 +38,7 @@ Migrazione additiva SQLite 0008 / PostgreSQL 0005: PlayerProgress.showcaseGarage
 Copia PostgreSQL: due nuovi giocatori completano un giro, espongono le vetture durante la gara, compaiono nel confronto, poi ritirano o vendono. Verificati assenza di campi privati, conservazione dei record personali e dati precedenti invariati. Script scripts/validate-car-meet.cjs, obbliga ACCOUNTS_VALIDATION_ENV_FILE a un database locale *_validation.
 
 Nessun browser collegato disponibile per il controllo visivo interattivo; i componenti sono verificati anche tramite rendering automatico.
+
+## Aggiornamento: parcheggio persistente
+
+Le regole aggiornate di permanenza, ritiro alla partenza e consultazione periodica sono in [RADUNO_E_AMICIZIE.md](RADUNO_E_AMICIZIE.md). La stessa auto già in gara non può essere esposta; si può lasciare un'altra vettura al raduno. Lo scambio dei numeri aggiunge amicizie consensuali, mantenendo SMS e sfide asincrone.

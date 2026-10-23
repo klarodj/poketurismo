@@ -45,6 +45,7 @@ before(async () => {
   app.get('/api/phone/:userId',endpoint(req=>({id:playerId(req,req.params.userId)})));
   app.get('/api/dev/opponents', endpoint(async () => []));
   app.post('/api/player/:id/avatar',endpoint(req=>{const{userId,...body}=req.body;return require('../server/pilotProfile').changeAvatar(prisma,playerId(req,userId),body,req.params);}));
+  app.post('/api/meet/friendship',endpoint(req=>({id:playerId(req,req.body.userId)})));
   app.post('/api/purchase', endpoint(async req => ({ id: playerId(req, req.body.userId) })));
   server = app.listen(0, '127.0.0.1');
   await new Promise(resolve => server.once('listening', resolve));
@@ -112,3 +113,5 @@ test('twenty cosmetic avatars are advertised and profile changes require the ver
 });
 
 test('phone inbox and notification URLs require the verified owner',async()=>{for(const route of ['/phone/2','/phone/2/notifications']){assert.equal((await request(route)).status,401);assert.equal((await request(route,'valid-token-two')).status,403);assert.equal((await request(route,'valid-token-one')).status,200);}});
+
+test('friendship writes require the verified owner, including while another pilot is targeted',async()=>{const body={userId:2,peerId:3,action:'request'};assert.equal((await request('/meet/friendship',null,body)).status,401);assert.equal((await request('/meet/friendship','unverified-token',body)).status,401);assert.equal((await request('/meet/friendship','valid-token-two',body)).status,403);assert.equal((await request('/meet/friendship','valid-token-one',body)).status,200);});

@@ -29,3 +29,7 @@ Query eseguite anche su copia completa PostgreSQL temporanea: ricezione, convers
 Pubblicato il 23 ottobre 2026 sulla sola istanza 5174 tramite gateway 5184. Backup completo Auth + gioco prima e dopo; build precedente, dati e confronto delle 31 tabelle di gioco in /home/klaro/.backups/poketurismo/phone-sms-2026-10-23T11-30-37.820Z (privato). Tutte le righe e i campi di gioco invariati al rilascio: nessuna migrazione, reset o modifica ai messaggi preesistenti.
 
 Servizi attivi, health positivo, raduno pubblico HTTP 200 e API notifiche senza sessione HTTP 401. L'anteprima di collaudo e la copia PostgreSQL temporanea vengono rimosse dopo le verifiche; rimangono le catture e i rapporti senza dati reali in .preview/phone-qa.
+
+## Rubrica e amicizie
+
+La rubrica distingue ora «Numeri salvati» (amicizie accettate) da «Piloti incontrati» (contatti noti e presenti al raduno). Richieste e avvisi di scambio numero sono separati dai messaggi SMS. Regole, consenso, blocchi e conservazione sono descritti in [RADUNO_E_AMICIZIE.md](RADUNO_E_AMICIZIE.md).

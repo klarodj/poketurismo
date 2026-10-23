@@ -69,6 +69,7 @@ app.get('/api/meet/leaderboard', endpoint(req => transaction(prisma, tx => carMe
 app.get('/api/meet/social/:userId',endpoint(req=>transaction(prisma,tx=>meetSocial.hub(tx,accounts.playerId(req,req.params.userId)))));
 app.get('/api/meet/conversation/:peerId',endpoint(req=>transaction(prisma,tx=>meetSocial.conversation(tx,accounts.playerId(req,req.query.userId),req.params.peerId,req.query.before))));
 app.get('/api/meet/reports/:userId',endpoint(req=>transaction(prisma,tx=>meetSocial.reports(tx,accounts.playerId(req,req.params.userId)))));
+mutate('/api/meet/friendship','meet-friendship',require('./friendships').change,'post',false);
 mutate('/api/meet/message','meet-message',meetSocial.send,'post',false);
 mutate('/api/meet/read','meet-read',meetSocial.read,'post',false);
 mutate('/api/meet/block','meet-block',meetSocial.block,'post',false);

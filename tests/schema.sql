@@ -408,3 +408,17 @@ CREATE INDEX "MeetChallenge_senderId_status_idx" ON "MeetChallenge"("senderId","
 CREATE INDEX "MeetChallenge_recipientId_status_idx" ON "MeetChallenge"("recipientId","status");
 
 ALTER TABLE "User" ADD COLUMN "isAdmin" BOOLEAN NOT NULL DEFAULT false;
+
+CREATE TABLE "MeetFriendship" (
+ "lowId" INTEGER NOT NULL, "highId" INTEGER NOT NULL, "requestedBy" INTEGER NOT NULL,
+ "status" TEXT NOT NULL DEFAULT 'pending', "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ "updatedAt" DATETIME NOT NULL, PRIMARY KEY ("lowId", "highId"),
+ CHECK ("lowId" < "highId"), CHECK ("requestedBy" IN ("lowId", "highId")),
+ CHECK ("status" IN ('pending','accepted','declined','removed','cancelled')),
+ FOREIGN KEY ("lowId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+ FOREIGN KEY ("highId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+ FOREIGN KEY ("requestedBy") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+CREATE INDEX "MeetFriendship_lowId_status_idx" ON "MeetFriendship"("lowId", "status");
+CREATE INDEX "MeetFriendship_highId_status_idx" ON "MeetFriendship"("highId", "status");
+CREATE INDEX "MeetFriendship_requestedBy_createdAt_idx" ON "MeetFriendship"("requestedBy", "createdAt");
