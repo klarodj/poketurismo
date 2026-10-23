@@ -1,3 +1,4 @@
+import {GridSectorSummary} from './GridRaceTiming';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState } from 'react';
 import { DEFAULT_DECISION, DECISION_OPTIONS, decisionPreview } from '../../shared/tacticalRace.mjs';
@@ -18,10 +19,10 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
   const moves = race.moves.filter(move => tacticalMovePlayable(move, section, race.sections[race.index + 1], race.gapSeconds, race, decision));
   const selectedMoveId = moves.some(move => move.id === moveId) ? moveId : null;
   const groups = [{ key: 'braking', label: context.brakingAhead ? 'Staccata in fondo al rettilineo' : 'Staccata', show: context.hasBrakingZone },
-    { key: 'line', label: 'Traiettoria', show: context.hasCorner }, { key: 'manoeuvre', label: 'Duello', show: context.allowed.manoeuvre.length > 1 }];
+    { key: 'line', label: 'Traiettoria', show: context.hasCorner }, { key: 'manoeuvre', label: race.gridOpponentId?'Confronto tattico':'Duello', show: context.allowed.manoeuvre.length > 1 }];
   return <section className="race-controls" aria-label="Scelte di guida">
-    <div className="race-control-heading"><h2>La tua prossima mossa</h2><button type="button" className="race-text-button" onClick={() => setInspect(true)}>Dettagli strategia ↗</button></div>
-    <p className="race-driving-situation">{race.lesson ? 'Segui la consegna dell’istruttore: il distacco non decide la promozione.' : context.ahead ? context.canDefend ? 'Rivale vicino: puoi difendere la posizione.' : 'Hai margine: gestisci il tuo passo.' : context.behind ? context.close ? 'Sei a contatto: cerca la tua occasione.' : 'Recupera il distacco prima di attaccare.' : 'Siete affiancati: cerca spazio senza forzare.'}</p>
+    {race.gridTiming&&<GridSectorSummary timing={race.gridTiming}/>}<div className="race-control-heading"><h2>La tua prossima mossa</h2><button type="button" className="race-text-button" onClick={() => setInspect(true)}>Dettagli strategia ↗</button></div>
+    <p className="race-driving-situation">{race.gridOpponentId&&<strong>Confronto tattico con {race.opponent.name}: </strong>}{race.lesson ? 'Segui la consegna dell’istruttore: il distacco non decide la promozione.' : context.ahead ? context.canDefend ? 'Rivale vicino: puoi difendere la posizione.' : 'Hai margine: gestisci il tuo passo.' : context.behind ? context.close ? 'Sei a contatto: cerca la tua occasione.' : 'Recupera il distacco prima di attaccare.' : 'Siete affiancati: cerca spazio senza forzare.'}</p>
     {race.lesson && <p className="race-inline-warning" role="status"><strong>Istruttore:</strong> {section.instruction}</p>}
     {showAlerts && race.incidentCue && <p className="race-inline-warning" role="status">{race.incidentCue.description} «Conserva» lascia più margine.</p>}
     <fieldset disabled={pending > 0} className="min-w-0">

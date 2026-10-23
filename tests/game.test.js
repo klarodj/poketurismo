@@ -1110,3 +1110,18 @@ test('stored model restrictions remain binding after free-choice invitations are
  const{challenge,other}=await socialInvite('model');const{id:_id,...original}=car;const different=await prisma.car.create({data:{...original,name:'Other old model'}});await prisma.garage.update({where:{id:otherGarage.id},data:{carId:different.id}});const quote=(await get('/meet/social/2')).data.cars[0].quoteKey;
  assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:quote})).status,400);assert.equal((await prisma.meetChallenge.findUnique({where:{id:challenge.id}})).status,'pending');assert.ok(other.cars.length);
 });
+
+test('grid checkpoints update on every sector, survive reads/retries and match final scoring without changing physics',async()=>{
+ const curve=await prisma.trackSection.create({data:{name:'Slow Left Turn',image:'',carStat:'turnSlow',carTech:'traction',driverStat:'turn',driverTech:'brake'}});await prisma.trackBuild.create({data:{trackId:track.id,sectionId:curve.id,level:1,ord:2}});
+ const entry=await modernCup(),race=await begin('championship',{entryId:entry.id});assert.ok(race.sections.length>1);assert.equal(race.gridTiming.total,8);assert.equal(race.gridTiming.position,null);assert.equal(race.gridTiming.started,false);let expected=JSON.parse((await prisma.raceSession.findUnique({where:{id:race.id}})).state),current=race;
+ while(current.status==='active'){
+  expected=advanceRace(expected,null,{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'});const key=randomUUID(),version=current.version,result=await post(`/races/${race.id}/turns`,{version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'}},key);assert.equal(result.status,200);current=result.data.race;
+  assert.equal(current.gridTiming.sector,current.index);assert.equal(current.gridTiming.rows.length,8);assert.equal(current.logs.at(-1).gridTiming.position,current.gridTiming.position);assert.deepEqual(current.car,expected.car);assert.equal(current.playerTime,expected.playerTime);assert.equal(current.opponentTime,expected.opponentTime);
+  assert.deepEqual((await post(`/races/${race.id}/turns`,{version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'}},key)).data.race.gridTiming,current.gridTiming);
+  const before=await prisma.raceSession.findUnique({where:{id:race.id}});assert.deepEqual((await get(`/races/${race.id}?userId=1`)).data.race.gridTiming,current.gridTiming);assert.deepEqual(await prisma.raceSession.findUnique({where:{id:race.id}}),before);assert.ok(!JSON.stringify(current.gridTiming).includes('checkpoints'));assert.equal('gridSeed'in current,false);
+ }
+ assert.equal(current.gridTiming.finished,true);assert.equal(current.gridTiming.position,current.championship.position);assert.deepEqual(current.gridTiming.rows.map(r=>[r.id,r.position,r.timeMs,r.failure]),current.championship.classification.map(r=>[r.id,r.position,r.timeMs,r.failure]));
+});
+test('reading an old in-progress grid race adds live standings without rewriting its existing checkpoint',async()=>{
+ const entry=await modernCup(),race=await begin('championship',{entryId:entry.id}),row=await prisma.raceSession.findUnique({where:{id:race.id}});assert.equal(JSON.parse(row.state).gridTiming,undefined);const view=(await get(`/races/active/1`)).data;assert.equal(view.gridTiming.total,8);assert.equal(view.gridTiming.position,null);assert.deepEqual(await prisma.raceSession.findUnique({where:{id:race.id}}),row);
+});

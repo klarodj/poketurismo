@@ -26,12 +26,17 @@ function presentRace(row) {
   delete state.gridSeed;
   return { ...state, ...(state.rulesVersion === 3 ? { decisionOptions: DECISION_OPTIONS, preview: decisionPreview(state), nextSectionName: state.sections[state.index + 1]?.name || null } : {}), id: row.id, mode: row.mode, status: row.status, version: row.version };
 }
+async function projectRace(tx,row){
+ const visible=presentRace(row);
+ if(visible.gridOpponentId)visible.gridTiming=await require('./gridTiming').read(tx,row.userId,JSON.parse(row.state));
+ return visible;
+}
 async function snapshot(tx, userId, race) {
   const user = await tx.user.findUnique({ where: { id: userId } });
   if (!user) fail(404, 'Giocatore inesistente');
   const cars = await tx.garage.findMany({ where: { userId }, include: garageInclude, orderBy: { id: 'asc' } });
   const active = await tx.raceSession.findFirst({ where: { userId, status: 'active' }, select: { id: true, mode: true } });
-  return { success: true, activeRace: active, ...(race ? { race: presentRace(race) } : {}), player: publicPlayer(user),
+  return { success: true, activeRace: active, ...(race ? { race: await projectRace(tx,race) } : {}), player: publicPlayer(user),
     development: await development(tx, userId), garage: cars.map(car => ({ ...car, ...restoredHandlingStats(car), resaleValue: tradeInValue(car.car, car) })), inventory: await inventory(tx, userId) };
 }
 function carSnapshot(garage) {
@@ -187,6 +192,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
   if (race.status !== 'active') fail(409, 'Gara già conclusa');
   if (!Number.isSafeInteger(body.version) || race.version !== body.version) fail(409, 'Il settore è già stato giocato. Ricarica la gara.');
   let state = JSON.parse(race.state);
+  const previousLogCount=state.logs.length;
   if(state.meetTrial&&+new Date(state.meetChallenge.expiresAt)<=Date.now()){state.finished=true;state.outcome='loss';state.failure='expired';}
   else if (abandon) { state.finished = true; state.outcome = 'loss'; state.failure = 'abandoned'; }
   else {
@@ -217,8 +223,9 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(reward.money) }, exp: { increment: reward.xp }, level: Math.floor((user.exp + reward.xp) / 1000) + 1 } });
     state.reward = reward;
   }
+  if(state.gridOpponentId&&state.logs.length>previousLogCount){const timing=await require('./gridTiming').read(tx,userId,state);if(timing)state.logs.at(-1).gridTiming=require('../shared/gridTiming.mjs').gridCheckpoint(timing);}
   const updated = await tx.raceSession.updateMany({ where: { id: race.id, version: body.version, status: 'active' }, data: { version: { increment: 1 }, state: JSON.stringify(state), status: state.finished ? abandon ? 'abandoned' : 'completed' : 'active' } });
   if (updated.count !== 1) fail(409, 'Settore già registrato');
   return snapshot(tx, userId, await tx.raceSession.findUnique({ where: { id: race.id } }));
 }
-module.exports = { presentRace, snapshot, startRace, turnRace, performance };
+module.exports = { projectRace,presentRace, snapshot, startRace, turnRace, performance };

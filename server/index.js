@@ -4,7 +4,7 @@ const cors = require('cors');
 const { PrismaClient } = require('./database');
 const { PILOT_STATS, fail, positiveId, publicPlayer, restoredHandlingStats, partChanges, checkChampionship, charge, cents } = require('./gameRules');
 const { operation, transaction, inventory, addPart, consumePart, garageInclude } = require('./persistence');
-const { startRace, turnRace, snapshot, presentRace } = require('./races');
+const { startRace, turnRace, snapshot, projectRace } = require('./races');
 const { readLesson, legacyTrainingUse } = require('./driverDevelopment');
 const { readTechnique } = require('./techniqueSchool');
 const { newCarPrice, marketAskingPrice, usedRetailPrice, tradeInValue, publicMarketItem } = require('../shared/carEconomy.mjs');
@@ -221,7 +221,7 @@ mutate('/api/championships/:championshipId/enter', 'enter-championship', async (
 });
 app.get('/api/races/active/:userId', endpoint(async req => {
   const race = await prisma.raceSession.findFirst({ where: { userId: accounts.playerId(req, req.params.userId), status: 'active' }, orderBy: { createdAt: 'desc' } });
-  return race ? presentRace(race) : null;
+  return race ? projectRace(prisma,race) : null;
 }));
 app.get('/api/time-trials/:userId', endpoint(async req => {
   const rows=await prisma.raceSession.findMany({where:{userId:accounts.playerId(req,req.params.userId),mode:'track',status:'completed'},orderBy:{createdAt:'desc'}});

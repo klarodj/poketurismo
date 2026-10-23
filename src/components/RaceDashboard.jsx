@@ -1,3 +1,4 @@
+import GridRaceTiming,{GridSectorSummary} from './GridRaceTiming';
 import TrackIllustration from './TrackIllustration';
 import {trackVisual} from '../../shared/trackVisuals.mjs';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
@@ -23,6 +24,8 @@ function CarCard({ car, label, pilot, rival, onClick }) {
   </button>;
 }
 function TimingDetail({ race }) {
+  if(race.gridOpponentId||race.championship?.format==='grid')return <div className="space-y-3"><GridRaceTiming timing={race.gridTiming}/><h3 className="font-bold">Posizione e distacchi per settore</h3><ol className="grid-sector-history">{race.logs.map((log,i)=><li key={i}><strong>Settore {i+1} · {trackSectionLabel(log.section)}</strong>{log.gridTiming?<GridSectorSummary timing={log.gridTiming}/>:<p>Rilevamento non registrato nel vecchio salvataggio.</p>}</li>)}</ol></div>;
+
   if((race.timeTrial||race.meetTrial))return <div className="space-y-3"><p className="font-bold">Tempo personale: {formatRaceTime(race.playerTime)}</p><table className="race-table"><thead><tr><th>Settore</th><th>Tempo</th></tr></thead><tbody>{race.logs.map((log,index)=><tr key={index}><td>{trackSectionLabel(log.section)}</td><td>{log.playerSeconds?.toFixed(3) ?? '—'} s</td></tr>)}</tbody></table></div>;
   return <div className="space-y-4">
     <RaceTiming race={race} />
@@ -33,6 +36,8 @@ function TimingDetail({ race }) {
 }
 export default function RaceDashboard({ race, pending, onAbandon, children }) {
   const [detail, setDetail] = useState(null);
+  const grid=!!race.gridOpponentId||race.championship?.format==='grid';
+  const featured=race.gridTiming?.rows.find(row=>row.id===race.gridOpponentId);
   const tactical = race.rulesVersion === 3;
   const active = race.status === 'active';
   const section = race.sections[race.index];
@@ -41,15 +46,16 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
   const gap = tactical ? race.gapSeconds || 0 : race.gap;
   const level = tactical ? 0.01 : 0;
   const position = gap > level ? 'Sei davanti' : gap < -level ? 'Sei dietro' : 'Affiancati';
-  const titles = { player: 'La tua auto e il pilota', opponent: 'Avversario · auto e pilota', track: 'Pista e condizioni', sector: 'Dettaglio del settore', timing: 'Tempi e confronto', history: 'Cronologia della gara', session: 'Sessione di gara' };
+  const titles = { player: 'La tua auto e il pilota', opponent: grid?'Confronto tattico · auto e pilota':'Avversario · auto e pilota', track: 'Pista e condizioni', sector: 'Dettaglio del settore', timing: grid?'Classifica e distacchi del gruppo':'Tempi e confronto', history: 'Cronologia della gara', session: 'Sessione di gara' };
   return <div className="race-dashboard">
-    <header className="race-heading"><div><p className="race-eyebrow">{race.meetTrial ? 'Meet · Sfida asincrona' : race.lesson ? 'Scuola guida · Prova pratica' : (race.timeTrial||race.meetTrial) ? 'Prova a tempo personale' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.meetTrial ? '' : race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{race.environment.weather} · {race.environment.surface}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
+    <header className="race-heading"><div><p className="race-eyebrow">{grid?'Campionato · gara a più partecipanti':race.meetTrial ? 'Meet · Sfida asincrona' : race.lesson ? 'Scuola guida · Prova pratica' : (race.timeTrial||race.meetTrial) ? 'Prova a tempo personale' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.meetTrial ? '' : race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{race.environment.weather} · {race.environment.surface}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
     {race.meetTrial&&<p className="p-3 border bg-blue-50">Unico tentativo contro {race.meetChallenge.otherName}. Condizioni della carriera invariate; nessun premio o XP. {race.meetGhost?`Fantasma disponibile: tempo da battere ${formatRaceTime(race.meetGhost.totalMs/1000)}.${race.index>0?` Distacco al settore: ${((race.meetGhost.splits.slice(0,race.index).reduce((sum,t)=>sum+t,0)-race.playerTime*1000)/1000).toFixed(3)} s (positivo: sei davanti).`:''}`:'L’altro pilota non ha ancora completato un giro valido. Il tuo tempo sarà il riferimento.'}</p>}
     {tactical&&(trackVisual(race.trackName)||race.demo)&&<section className="race-route-live" aria-label="Mappa e ambientazione durante la gara">
       <header><h2>Il percorso · {race.sections.length} settori</h2><button type="button" className="win98-btn" onClick={()=>setDetail('track')}>Esamina tutti i settori</button></header>
       <TrackIllustration name={race.trackName} sections={race.sections} paths={race.trackMap||(race.demo?DEMO_TRACK.mapPaths:null)} index={race.index} compact/>
       <p className="race-route-current" aria-live="polite">{section?`Ora: ${trackSectionLabel(section.name)}${next?` · Poi: ${trackSectionLabel(next.name)}`:' · Poi: traguardo'}`:'Traguardo raggiunto'}</p>
     </section>}
+    {grid?<section className="grid-race-stage" aria-label="Posizione nella gara a più partecipanti"><GridRaceTiming timing={race.gridTiming}/><button type="button" className="win98-btn" onClick={()=>setDetail('timing')}>Posizioni e distacchi per settore</button><details className="grid-featured-details"><summary>Auto e confronto tattico · {race.opponent.name}{featured?.position?` · ${featured.position}°`:''}</summary><p>Questo è il rivale del confronto tattico; non è necessariamente il pilota davanti o dietro di te. La classifica sopra mostra i distacchi nel gruppo.</p><div className="grid-comparison-cars"><CarCard car={race.car} label="La tua auto" onClick={()=>setDetail('player')}/><CarCard car={race.opponent.car} label={`Confronto tattico${featured?.position?` · ${featured.position}°`:''}`} pilot={race.opponent.name} rival onClick={()=>setDetail('opponent')}/></div></details></section>:<>
     <section className={`race-stage ${race.mode === 'street' ? 'race-stage-street' : ''} ${(race.timeTrial||race.meetTrial) ? 'race-stage-trial' : ''}`} aria-label="Duello e posizione">
       <CarCard car={race.car} label="La tua auto" onClick={() => setDetail('player')} />
       <button type="button" className={`race-position ${gap < -level ? 'race-position-behind' : ''}`} onClick={() => setDetail('timing')} aria-label="Apri dettaglio: tempi e distacco">
@@ -60,10 +66,11 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
       </button>
       {!(race.timeTrial||race.meetTrial) && <CarCard car={race.opponent.car} label="Auto rivale" pilot={race.opponent.name} rival onClick={() => setDetail('opponent')} />}
     </section>
+    </>}
     <nav className="race-instruments" aria-label="Esplora i dettagli della gara">
       <button type="button" onClick={() => setDetail('track')}><span>Pista ↗</span><strong>{race.distanceKm.toFixed(2)} km</strong></button>
       <button type="button" onClick={() => setDetail('sector')}><span>{active ? 'Settore attuale ↗' : 'Percorso completato ↗'}</span><strong>{trackSectionLabel(section?.name) || 'Traguardo'}</strong><small>{section?.segments ? `${Math.round(section.segments.reduce((sum, segment) => sum + segment.lengthM, 0))} m · ` : ''}{next ? `Poi: ${trackSectionLabel(next.name)}` : active ? 'Poi: traguardo' : `${race.index}/${race.sections.length} settori percorsi`}</small></button>
-      <button type="button" onClick={() => setDetail('history')}><span>Cronologia ↗</span><strong>{last ? trackSectionLabel(last.section) : 'In attesa del via'}</strong><small>{last && race.meetTrial ? `Il tuo settore: ${last.playerSeconds?.toFixed(3)||'—'} s` : last && tactical ? `${(last.deltaSeconds || 0) >= 0 ? 'Recuperati' : 'Persi'} ${Math.abs(last.deltaSeconds || 0).toFixed(2)} s nell’ultimo settore` : 'Scelte, consumi e avvenimenti'}</small></button>
+      <button type="button" onClick={() => setDetail('history')}><span>Cronologia ↗</span><strong>{last ? trackSectionLabel(last.section) : 'In attesa del via'}</strong><small>{grid?last?.gridTiming?`Ultimo rilevamento: ${last.gridTiming.playerRetired?'ritirato':`${last.gridTiming.position}° / ${last.gridTiming.total}`}`:'Posizioni e distacchi per settore':last && race.meetTrial ? `Il tuo settore: ${last.playerSeconds?.toFixed(3)||'—'} s` : last && tactical ? `${(last.deltaSeconds || 0) >= 0 ? 'Recuperati' : 'Persi'} ${Math.abs(last.deltaSeconds || 0).toFixed(2)} s nell’ultimo settore` : 'Scelte, consumi e avvenimenti'}</small></button>
     </nav>
     {active && <div className="race-alerts" aria-label="Avvisi di gara">
       {race.incidentCue && <p role="status">⚠ {race.incidentCue.description} Scegli «Conserva» per lasciare più margine.</p>}
