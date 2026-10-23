@@ -2,7 +2,7 @@ import usePhoneStore from '../store/phoneStore';
 import PhoneIcon from './PhoneIcon';
 import PilotAvatar from './PilotAvatar';
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
@@ -18,6 +18,9 @@ export default function HUD() {
   const challengeInvites=usePhoneStore(state=>state.challengeInviteCount);
   const phoneAlerts=phoneUnread+friendRequests+challengeInvites;
   const activeRace = useRaceStore(state => state.activeRace);
+  const race = useRaceStore(state => state.race);
+  const location = useLocation();
+  const inChampionship = location.pathname === '/track-race' && !!(race?.gridOpponentId || race?.championship?.format === 'grid');
   const { money, level, username, avatar } = usePlayerStore();
   const { equippedCarId, travel } = useGameStore();
   const { cars } = useGarageStore();
@@ -31,7 +34,7 @@ export default function HUD() {
   const equippedCar = cars.find(c => c.id === equippedCarId);
 
   return (
-    <div className="w-full bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray flex flex-row flex-wrap justify-between items-center px-2 py-1.5 shadow-win98-outset z-50 relative gap-2">
+    <div className={`${inChampionship ? 'championship-hud ' : ''}w-full bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray flex flex-row flex-wrap justify-between items-center px-2 py-1.5 shadow-win98-outset z-50 relative gap-2`}>
       <div className="flex flex-wrap gap-1.5 sm:gap-4 items-center min-w-0 max-w-full">
         <button 
           onClick={handleMapClick}
@@ -41,7 +44,7 @@ export default function HUD() {
           🗺️
         </button>
         <button type="button" onClick={()=>usePhoneStore.getState().menu(friendRequests&&!phoneUnread?'requests':'home')} className="phone-hud-button" title="Cellulare, SMS e rubrica" aria-label={`Apri cellulare · ${phoneUnread} SMS non letti · ${friendRequests} richieste di contatto · ${challengeInvites} inviti a sfide`}><PhoneIcon/>{phoneAlerts>0&&<span className="phone-hud-badge">{phoneAlerts>99?'99+':phoneAlerts}</span>}</button>
-        <button 
+        {!inChampionship && <button
           onClick={() => {
             if (travel('/dev-sandbox', 0)) {
                navigate('/dev-sandbox');
@@ -51,9 +54,9 @@ export default function HUD() {
           title="Dev Sandbox"
         >
           🔧
-        </button>
+        </button>}
         
-        {activeRace && <button className="bg-yellow-200 text-black border px-2 py-1 text-xs font-bold" onClick={() => navigate(`${activeRace.mode === 'street' ? '/street-racing' : '/track-race'}?raceId=${activeRace.id}`)}>Riprendi gara</button>}
+        {activeRace && !inChampionship && <button className="bg-yellow-200 text-black border px-2 py-1 text-xs font-bold" onClick={() => navigate(`${activeRace.mode === 'street' ? '/street-racing' : '/track-race'}?raceId=${activeRace.id}`)}>Riprendi gara</button>}
         <div className="font-bold flex items-center gap-1 sm:gap-2">
           <span className="hidden sm:inline text-xl sm:text-2xl">💰</span>
           <span className="text-[13px] sm:text-xl tracking-tight sm:tracking-wider text-green-800 bg-white px-1 sm:px-2 py-0.5 border border-win98-darkerGray shadow-win98-inset">
@@ -67,7 +70,7 @@ export default function HUD() {
       </div>
 
       <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-4 min-w-0 max-w-full ml-auto">
-        {equippedCar ? (
+        {!inChampionship && (equippedCar ? (
           <>
             <div className="bg-win98-blue text-white px-1.5 sm:px-2 py-0.5 sm:py-1 font-bold border-2 border-t-win98-darkGray border-l-win98-darkGray border-b-white border-r-white text-[11px] sm:text-sm whitespace-nowrap truncate max-w-[130px] sm:max-w-none">
               🚗 {equippedCar.name}
@@ -76,7 +79,7 @@ export default function HUD() {
           </>
         ) : (
           <div className="text-gray-500 italic font-bold text-[10px] sm:text-sm whitespace-nowrap">No Car</div>
-        )}
+        ))}
         {account && <>
           <button type="button" className="pilot-name-with-avatar text-sm font-bold" onClick={()=>navigate('/garage/pilota')} title="Apri il profilo pilota"><PilotAvatar avatar={avatar} size={32} decorative/><span className="truncate max-w-[100px] sm:max-w-[160px]">{username}</span></button>
           <button type="button" className="win98-btn" onClick={account.logout} disabled={account.busy} aria-label="Esci dalla partita">Esci</button>

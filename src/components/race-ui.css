@@ -119,3 +119,99 @@
 /* Cronometraggio da officina / programma gare del club. */
 .race-heading{background:#c0c0c0;border:2px groove #fff;padding:6px}.race-heading h1{background:#000080;color:#fff;padding:3px 6px;font-size:1.3rem}.race-eyebrow{letter-spacing:0;text-transform:none;font-size:.95rem}.race-car-card{background:#c0c0c0}.race-car-card .race-eyebrow{background:#000080;color:#fff;padding:2px 4px}.race-car-rival .race-eyebrow{background:#800000;color:#fff}.race-car-spec,.race-car-status{font-size:.95rem;color:#000}.race-position .race-eyebrow,.race-timing-mini{color:#00ff00}.race-detail-link{color:#0000ff;text-decoration:underline;font-size:.9rem}.race-position .race-detail-link{color:#00ff00}.race-instruments{background:#c0c0c0;border:2px groove #fff}.race-instruments button{border:2px solid;border-color:#fff #808080 #808080 #fff}.race-instruments span,.race-instruments small{font-size:.9rem;color:#000}.race-controls{border:2px groove #fff;background:#c0c0c0}.race-pace button,.race-drive-button,.race-button{background:#c0c0c0;color:#000;border:2px solid;border-color:#fff #000 #000 #fff}.race-drive-button:hover{background:#dfdfdf}.race-pace button.is-selected{background:#fff;color:#000;border-color:#808080 #fff #fff #808080}.race-choices select{border:2px inset #dfdfdf;font-size:1rem}.race-dialog-body{background:#c0c0c0}.race-dialog::backdrop{background:#0006}.race-dialog-window{box-shadow:3px 3px 0 #000}.race-table{background:#fff;border:2px inset #dfdfdf}.race-table th{background:#c0c0c0;border:1px outset #fff}.race-table td{border:1px solid #808080}.race-text-button{color:#0000ff;font-size:.95rem}.race-session-bar{font-size:.9rem}.race-alerts p,.race-inline-warning{background:#ffffe1;border:1px solid #808080;color:#000}
 .grid-timing{background:#c0c0c0;color:#111;border:2px outset #fff;padding:10px;min-width:0}.grid-timing>header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;background:#000080;color:#fff;padding:6px}.grid-timing h2{font-size:1.3rem;font-weight:bold}.grid-timing header p{font-size:1rem}.grid-current-position{background:#000;color:#9bea65;padding:5px 10px;border:2px inset #808080;font-size:1.5rem;white-space:nowrap}.grid-neighbors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:8px 0}.grid-neighbor{background:#ffffe1;border:2px inset #fff;padding:7px;min-width:0;overflow-wrap:anywhere}.grid-neighbor h3{font-weight:bold;border-bottom:1px solid #808080}.grid-neighbor strong,.grid-neighbor span,.grid-neighbor b,.grid-neighbor small{display:block}.grid-neighbor b{font-size:1.3rem;color:#000080}.grid-leader-gap{padding:4px 0}.grid-timing-table{border-collapse:collapse;table-layout:fixed;width:100%;background:#fff;border:2px inset #808080;font-size:1rem}.grid-timing-table caption{font-weight:bold;text-align:left;padding:3px}.grid-timing-table th,.grid-timing-table td{border:1px solid #808080;padding:5px;vertical-align:top;overflow-wrap:anywhere}.grid-timing-table thead{background:#000080;color:#fff}.grid-timing-table th:first-child{width:10%}.grid-timing-table th:nth-child(2){width:44%}.grid-timing-table td>strong,.grid-timing-table td>small{display:block}.grid-player-row{background:#ffffb5;font-weight:bold}.grid-timing-note{font-size:.95rem;margin-top:6px}.grid-featured-details{border:2px groove #fff;background:#c0c0c0;padding:8px;margin-top:8px}.grid-featured-details>summary{font-weight:bold;cursor:pointer}.grid-comparison-cars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}.grid-sector-summary{display:flex;flex-wrap:wrap;gap:4px 12px;background:#ffffe1;border:2px inset #fff;padding:5px;margin-bottom:8px;font-size:1rem}.grid-sector-summary>strong{color:#000080}.grid-sector-history{list-style:none;padding:0}.grid-sector-history>li{border-bottom:1px solid #808080;padding:8px 0}@media(max-width:480px){.grid-timing{padding:5px}.grid-timing-table{font-size:.9rem}.grid-timing-table td,.grid-timing-table th{padding:3px}.grid-comparison-cars{grid-template-columns:minmax(0,1fr)}}
+
+/* Campionato: immagini e guida al centro, registri nelle finestre di dettaglio. */
+.championship-cockpit { display:grid; gap:8px; }
+.championship-cockpit .race-heading { margin:0; }
+.championship-cockpit .race-heading .race-eyebrow { font-size:.9rem; }
+.championship-route { min-width:0; border:2px groove #fff; padding:4px; }
+.championship-roadbook { display:block; width:100%; text-align:left; background:#ffffe1; border:2px inset #fff; padding:5px 7px; margin-top:4px; }
+.championship-roadbook strong, .championship-roadbook>span { display:block; }
+.championship-roadbook strong { color:#000080; line-height:1.15; }
+.championship-roadbook>span { font-size:.9rem; line-height:1.2; margin-top:3px; }
+.championship-player-car { display:flex; align-items:center; gap:8px; padding:4px; background:#c0c0c0; border:2px outset #fff; text-align:left; min-width:0; }
+.championship-player-car>.race-car-art { width:104px; height:66px; margin:0; flex-shrink:0; }
+.championship-player-car>span { min-width:0; flex:1; }
+.championship-player-car>span>strong { display:block; color:#000080; line-height:1.1; overflow-wrap:anywhere; }
+.championship-car-gauges { display:flex; flex-wrap:wrap; gap:3px 12px; margin-top:4px; font-size:.95rem; }
+.championship-car-gauges>span { white-space:nowrap; }
+.grid-race-snapshot { min-width:0; background:#c0c0c0; border:2px outset #fff; padding:5px; }
+.grid-race-snapshot>header { display:flex; align-items:center; justify-content:space-between; gap:8px; background:#000080; color:#fff; padding:5px 9px; }
+.grid-snapshot-position { font-size:2rem; line-height:1; white-space:nowrap; }
+.grid-snapshot-position small { font-size:1.1rem; }
+.grid-race-snapshot>header>span { text-align:right; font-size:1rem; line-height:1.1; }
+.grid-race-snapshot>header>span small { display:block; font-size:.85rem; margin-top:3px; }
+.grid-snapshot-neighbors { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px; margin-top:5px; }
+.grid-snapshot-neighbors .grid-neighbor { padding:4px 6px; line-height:1.1; }
+.grid-snapshot-neighbors .grid-neighbor h3 { font-size:.9rem; font-weight:normal; border:0; margin-bottom:3px; }
+.grid-snapshot-neighbors .grid-neighbor span { font-size:.85rem; }
+.grid-snapshot-neighbors .grid-neighbor b { font-size:1.2rem; margin-top:3px; }
+.championship-cockpit .race-alerts { margin:0; }
+.championship-cockpit .race-alerts p { margin:0 0 3px; }
+.championship-cockpit .race-action-area { margin:0; }
+.championship-cockpit .race-controls { padding:8px; }
+.championship-cockpit .race-control-heading { align-items:baseline; }
+.championship-cockpit .race-control-heading h2 { font-size:1.1rem; }
+.championship-cockpit .race-driving-situation { font-size:.9rem; line-height:1.2; margin:5px 0; }
+.championship-cockpit .race-pace button { min-height:44px; padding:3px; }
+.championship-cockpit .race-choices { gap:6px; margin-top:6px; }
+.championship-cockpit .race-choices select { min-height:44px; padding:4px; margin-top:2px; }
+.championship-cockpit .race-confirm { margin-top:8px; padding-top:6px; gap:5px; }
+.championship-cockpit .race-drive-button { min-height:44px; }
+.championship-tools { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:5px; }
+.championship-tools button { min-height:44px; padding:4px; line-height:1.1; font-size:1rem; }
+.championship-cockpit .race-session-bar { padding:0; align-items:center; font-size:.85rem; }
+.championship-cockpit .race-session-bar button { min-height:44px; }
+.championship-tactical-note { background:#ffffe1; border:2px inset #fff; padding:8px; margin-bottom:8px; }
+@media(max-width:620px) {
+ .championship-cockpit { gap:6px; }
+ .championship-cockpit .race-heading { padding:4px; gap:5px; align-items:start; }
+ .championship-cockpit .race-heading h1 { font-size:1.1rem; padding:2px 4px; }
+ .championship-cockpit .race-heading-meta { font-size:.85rem; max-width:32%; }
+ .championship-cockpit .race-heading .race-eyebrow { font-size:.85rem; }
+ .championship-player-car>.race-car-art { width:90px; height:60px; }
+ .championship-player-car>span>strong { font-size:1rem; }
+ .championship-car-gauges { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2px 7px; font-size:.85rem; line-height:1.1; }
+ .championship-car-gauges b { display:block; }
+ .championship-cockpit .race-control-heading h2 { font-size:1rem; }
+ .championship-cockpit .race-text-button { font-size:.85rem; }
+ .championship-cockpit .race-pace legend { font-size:.9rem; }
+ .championship-cockpit .race-pace>div { gap:4px; }
+ .championship-cockpit .race-choices select { font-size:.9rem; }
+ .championship-tools { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:360px) {
+ .championship-cockpit .race-heading { flex-wrap:wrap; }
+ .championship-cockpit .race-heading-meta { display:flex; max-width:none; width:100%; justify-content:space-between; gap:5px; }
+ .championship-player-car>.race-car-art { width:72px; }
+ .championship-car-gauges { gap:2px 4px; }
+}
+.championship-result-ledger { background:#c0c0c0; color:#000; border:2px groove #fff; padding:6px; }
+.championship-result-ledger>summary { cursor:pointer; min-height:44px; display:list-item; align-content:center; font-weight:bold; }
+@media(max-width:620px) {
+ .period-desktop.championship-desktop { padding:5px; }
+ .championship-hud { gap:4px; }
+ .championship-hud .pilot-name-with-avatar { font-size:.9rem; gap:3px; }
+ .championship-hud .pilot-name-with-avatar>span { max-width:85px; }
+}
+.championship-manoeuvres { margin-top:8px; border:2px groove #fff; padding:4px 6px; }
+.championship-manoeuvres>summary { cursor:pointer; font-size:.95rem; min-height:44px; align-content:center; }
+.championship-manoeuvres>summary>span { display:block; color:#404040; font-size:.9rem; padding-left:1rem; }
+.championship-tactical-reference { display:flex; gap:8px; margin:6px 0; align-items:center; font-size:.9rem; line-height:1.2; }
+.championship-tactical-reference .race-car-art { width:90px; height:60px; flex-shrink:0; margin:0; }
+.championship-manoeuvres label { display:block; font-size:.9rem; }
+.championship-manoeuvres select { width:100%; display:block; min-height:44px; margin:3px 0; background:#fff; border:2px inset #dfdfdf; padding:4px; font-size:.95rem; }
+.championship-checkpoint, .championship-cockpit .race-action-area { scroll-margin-top:8px; }
+.championship-checkpoint:focus, .championship-cockpit .race-action-area:focus { outline:1px dotted #000080; outline-offset:2px; }
+@media(max-width:360px) {
+ .grid-race-snapshot>header { padding:5px 6px; }
+ .grid-snapshot-position { font-size:1.6rem; }
+ .grid-snapshot-position small { font-size:1rem; }
+ .grid-race-snapshot>header>span { font-size:.9rem; }
+ .grid-race-snapshot>header>span b { white-space:nowrap; }
+ .grid-race-snapshot>header>span small { font-size:.8rem; }
+ .championship-car-gauges { font-size:.8rem; gap:3px 8px; }
+ .championship-player-car>.race-car-art { width:65px; }
+ .championship-cockpit .race-heading-meta strong { white-space:nowrap; }
+ .championship-cockpit .race-drive-button { font-size:.95rem; padding:8px 4px; }
+}

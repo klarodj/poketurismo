@@ -28,12 +28,12 @@ export function TrackMinimap({visual,sections=[],index=-1,paths}){
  {demo&&<><Flag point={[180,240]} label="P / A"/>{[[320,240],[520,205],[450,135],[250,70],[85,110],[220,170],[210,215],[125,240]].map(([x,y],i)=><text key={i} x={x} y={y-9} textAnchor="middle" fontSize="16" fontWeight="bold" fill="#000" stroke="#fff" strokeWidth="3" paintOrder="stroke">{i+1}</text>)}</>}
  </svg>;
 }
-export default function TrackIllustration({name,sections=[],index=-1,paths,compact=false}){
+export default function TrackIllustration({name,sections=[],index=-1,paths,compact=false,cockpit=false}){
  const visual=trackVisual(name);
  if(!visual&&!paths?.length)return null;
- return <div className={`track-art${compact?' track-art-compact':''}`}>
- {visual&&<figure className="track-art-scene"><div className="track-art-title">Cartolina dal percorso</div><img src={visual.image} alt={`${visual.name}: ${visual.caption}`} width="384" height="256" loading="lazy" decoding="async"/><figcaption>{visual.caption}</figcaption></figure>}
- <figure className="track-art-map"><div className="track-art-title">Minimappa · {visual?.format==='point-to-point'?'punto a punto':'circuito'}</div><TrackMinimap visual={visual} sections={sections} index={index} paths={paths}/><figcaption>{index>=0&&sections[index]?`Giallo: settore ${index+1} · `:''}P: partenza · A: arrivo{sections.length?` · ${sections.length} settori${sections.length>12?' · numeri principali':''}`:''}</figcaption></figure>
- <p className="track-art-note">{paths?.length?'Schema del Circuito Scuola.':'Roadbook del club: forma illustrativa, non in scala.'} {sections.length>0?'Ordine, distanze e difficoltà seguono i settori della gara.':'Apri la preparazione della gara per i settori e le distanze.'}</p>
+ return <div className={`track-art${compact?' track-art-compact':''}${cockpit?' track-art-cockpit':''}`}>
+ {visual&&<figure className="track-art-scene">{!cockpit&&<div className="track-art-title">Cartolina dal percorso</div>}<img src={visual.image} alt={`${visual.name}: ${visual.caption}`} width="384" height="256" loading="lazy" decoding="async"/>{!cockpit&&<figcaption>{visual.caption}</figcaption>}</figure>}
+ <figure className="track-art-map">{!cockpit&&<div className="track-art-title">Minimappa · {visual?.format==='point-to-point'?'punto a punto':'circuito'}</div>}<TrackMinimap visual={visual} sections={sections} index={index} paths={paths}/><figcaption>{cockpit ? index>=0&&sections[index]?'Ora in giallo':'P: partenza · A: arrivo' : <>{index>=0&&sections[index]?`Giallo: settore ${index+1} · `:''}P: partenza · A: arrivo{sections.length?` · ${sections.length} settori${sections.length>12?' · numeri principali':''}`:''}</>}</figcaption></figure>
+ {!cockpit&&<p className="track-art-note">{paths?.length?'Schema del Circuito Scuola.':'Roadbook del club: forma illustrativa, non in scala.'} {sections.length>0?'Ordine, distanze e difficoltà seguono i settori della gara.':'Apri la preparazione della gara per i settori e le distanze.'}</p>}
  </div>;
 }

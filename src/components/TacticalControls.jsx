@@ -1,10 +1,10 @@
-import {GridSectorSummary} from './GridRaceTiming';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState } from 'react';
 import { DEFAULT_DECISION, DECISION_OPTIONS, decisionPreview } from '../../shared/tacticalRace.mjs';
 import { contextualDecision, tacticalContext, tacticalMovePlayable } from '../../shared/raceContext.mjs';
 import { PILOT_STAT_LABELS } from '../logic/raceEngine';
 import RaceDetailDialog from './RaceDetailDialog';
+import RaceCarArtwork from './RaceCarArtwork';
 
 export default function TacticalControls({ race, pending, onTurn, showAlerts = true }) {
   const [selection, setDecision] = useState({ ...DEFAULT_DECISION });
@@ -21,17 +21,22 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
   const groups = [{ key: 'braking', label: context.brakingAhead ? 'Staccata in fondo al rettilineo' : 'Staccata', show: context.hasBrakingZone },
     { key: 'line', label: 'Traiettoria', show: context.hasCorner }, { key: 'manoeuvre', label: race.gridOpponentId?'Confronto tattico':'Duello', show: context.allowed.manoeuvre.length > 1 }];
   return <section className="race-controls" aria-label="Scelte di guida">
-    {race.gridTiming&&<GridSectorSummary timing={race.gridTiming}/>}<div className="race-control-heading"><h2>La tua prossima mossa</h2><button type="button" className="race-text-button" onClick={() => setInspect(true)}>Dettagli strategia ↗</button></div>
-    <p className="race-driving-situation">{race.gridOpponentId&&<strong>Confronto tattico con {race.opponent.name}: </strong>}{race.lesson ? 'Segui la consegna dell’istruttore: il distacco non decide la promozione.' : context.ahead ? context.canDefend ? 'Rivale vicino: puoi difendere la posizione.' : 'Hai margine: gestisci il tuo passo.' : context.behind ? context.close ? 'Sei a contatto: cerca la tua occasione.' : 'Recupera il distacco prima di attaccare.' : 'Siete affiancati: cerca spazio senza forzare.'}</p>
+    <div className="race-control-heading"><h2>{race.gridOpponentId?'Guida il settore':'La tua prossima mossa'}</h2><button type="button" className="race-text-button" onClick={() => setInspect(true)}>Dettagli strategia ↗</button></div>
+    {!race.gridOpponentId&&<p className="race-driving-situation">{race.lesson ? 'Segui la consegna dell’istruttore: il distacco non decide la promozione.' : context.ahead ? context.canDefend ? 'Rivale vicino: puoi difendere la posizione.' : 'Hai margine: gestisci il tuo passo.' : context.behind ? context.close ? 'Sei a contatto: cerca la tua occasione.' : 'Recupera il distacco prima di attaccare.' : 'Siete affiancati: cerca spazio senza forzare.'}</p>}
     {race.lesson && <p className="race-inline-warning" role="status"><strong>Istruttore:</strong> {section.instruction}</p>}
     {showAlerts && race.incidentCue && <p className="race-inline-warning" role="status">{race.incidentCue.description} «Conserva» lascia più margine.</p>}
     <fieldset disabled={pending > 0} className="min-w-0">
       <legend className="sr-only">Imposta e conferma la strategia</legend>
       <fieldset className="race-pace"><legend>Ritmo</legend><div>{options('pace').map(option => <button type="button" aria-pressed={decision.pace === option.id} key={option.id} onClick={() => select('pace', option.id)} className={decision.pace === option.id ? 'is-selected' : ''}>{option.name}</button>)}</div></fieldset>
       <div className="race-choices">
-        {groups.filter(group => group.show).map(({ key, label }) => <label key={key}>{label}<select value={decision[key]} onChange={event => select(key, event.target.value)}>{options(key).map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>)}
+        {groups.filter(group => group.show && !(race.gridOpponentId && group.key === 'manoeuvre')).map(({ key, label }) => <label key={key}>{label}<select value={decision[key]} onChange={event => select(key, event.target.value)}>{options(key).map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>)}
         {moves.length > 0 && <label>Tecnica del pilota<select value={selectedMoveId || ''} onChange={event => setMoveId(event.target.value || null)}><option value="">Guida normale</option>{moves.map(move => <option value={move.id} key={move.id}>{move.name}</option>)}</select></label>}
       </div>
+      {race.gridOpponentId && context.allowed.manoeuvre.length > 1 && <details className="championship-manoeuvres">
+        <summary>Manovre su {race.opponent.name}<span>{options('manoeuvre').find(option => option.id === decision.manoeuvre)?.name}</span></summary>
+        <div className="championship-tactical-reference"><RaceCarArtwork car={race.opponent.car}/><p>Rivale tattico: <strong>{race.opponent.name}</strong>. {context.ahead?'Lo precedi':context.behind?'Lo insegui':'Siete affiancati'} · {Math.abs(race.gapSeconds||0).toFixed(3)} s. I vicini in classifica sono nel cruscotto.</p></div>
+        <label>Confronto tattico<select value={decision.manoeuvre} onChange={event => select('manoeuvre', event.target.value)}>{options('manoeuvre').map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>
+      </details>}
       <div className="race-confirm"><div role="status"><span>Stima settore <strong>{preview.seconds.toFixed(1)} s</strong></span><span className={preview.errorPercent >= 8 ? 'race-risk-high' : ''}>Rischio errore <strong>{preview.errorPercent.toFixed(1)}%</strong></span></div><button type="button" onClick={() => onTurn(selectedMoveId, decision)} className="race-drive-button">{pending > 0 ? 'Salvataggio…' : 'Percorri il settore →'}</button></div>
     </fieldset>
     {inspect && <RaceDetailDialog title="Strategia · effetti e stime" onClose={() => setInspect(false)}>

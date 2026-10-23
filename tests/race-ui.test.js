@@ -202,6 +202,15 @@ test('phone challenge details require a compatible car to accept and respect an 
  const valid=render(challenge,car);assert.ok(valid.includes('sereno'));assert.ok(valid.includes('asfalto'));assert.ok(valid.includes('Accetta con l’auto selezionata'));assert.ok(!valid.includes('non rispetta'));const invalid=render(challenge,{...car,modelId:99});assert.match(invalid,/disabled=""[^>]*>Accetta/);assert.ok(invalid.includes('non rispetta'));
  const running=render({...challenge,status:'accepted',recipient:{...person,pilot:{id:1,name:'Tu'}}},car,{id:'already-driving'});assert.match(running,/disabled=""[^>]*>Inizia il tuo tentativo/);
 });
-test('grid dashboard shows actual neighbors and position while labeling the distant tactical reference separately',async()=>{
- const{gridTiming}=await import('../shared/gridTiming.mjs'),race=makeRace();Object.assign(race,{id:'grid-qa',mode:'championship',status:'active',gridOpponentId:'last',index:1,trackName:'Pistino di San Rocco · Pavese'});race.gridTiming=gridTiming([{id:'first',name:'Andrea',carName:'Prima',timeMs:10000},{id:'player',name:'Tu',carName:'Tua',timeMs:12000},{id:'next',name:'Sonia',carName:'Dietro',timeMs:13000},{id:'last',name:'Ultimo QA',carName:'Ultima',timeMs:20000}],{sector:1,totalSectors:8,featuredId:'last'});race.opponent.name='Ultimo QA';const Dashboard=await component('RaceDashboard'),html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));for(const text of['Posizione 2 / 4','Davanti a te','Dietro di te','Andrea','Sonia','Confronto tattico','Dopo il settore 1 / 8'])assert.ok(html.includes(text),text);assert.ok(!html.includes('aria-label="Duello e posizione"'));assert.ok(!html.includes('Sei davanti'));
+test('grid cockpit keeps current neighbours, imagery and controls in one primary view',async()=>{
+ const{gridTiming}=await import('../shared/gridTiming.mjs'),race=makeRace();
+ Object.assign(race,{id:'grid-qa',mode:'championship',status:'active',gridOpponentId:'last',index:1,trackName:'Pistino di San Rocco · Pavese'});
+ race.gridTiming=gridTiming([{id:'first',name:'Andrea',carName:'Prima',timeMs:10000},{id:'player',name:'Tu',carName:'Tua',timeMs:12000},{id:'next',name:'Sonia',carName:'Dietro',timeMs:13000},{id:'last',name:'Ultimo QA',carName:'Ultima',timeMs:20000}],{sector:1,totalSectors:8,featuredId:'last'});
+ race.opponent.name='Ultimo QA';race.car.image='106.png';
+ const Dashboard=await component('RaceDashboard'),Controls=await component('TacticalControls');
+ const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}},React.createElement(Controls,{race,pending:0,onTurn:()=>{},showAlerts:false})));
+ for(const text of ['aria-label="Posizione e distacchi"','2°','/ 4','Andrea','Sonia','Dopo il settore 1','san-rocco.png','106.png','settore 2 evidenziato','Percorri il settore','Classifica e settori'])assert.ok(html.includes(text),text);
+ assert.equal((html.match(/Davanti a te/g)||[]).length,1);assert.equal((html.match(/Dietro di te/g)||[]).length,1);
+ assert.ok(!html.includes('<table'));assert.ok(!html.includes('grid-sector-summary'));assert.ok(!html.includes('race-instruments'));
+ assert.ok(!html.includes('aria-label="Duello e posizione"'));assert.ok(!html.includes('Sei davanti'));
 });

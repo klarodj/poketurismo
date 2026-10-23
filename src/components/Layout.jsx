@@ -4,12 +4,15 @@ import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import useGameStore from '../store/gameStore';
 import HUD from './HUD';
+import useRaceStore from '../store/raceStore';
 import useRequestStore from '../store/requestStore';
 import NokiaModal from './NokiaModal';
 import Win98ErrorDialog from './Win98ErrorDialog';
 
 export default function Layout() {
   const location = useLocation();
+  const race = useRaceStore(state => state.race);
+  const inChampionship = location.pathname === '/track-race' && !!(race?.gridOpponentId || race?.championship?.format === 'grid');
   const { pending, error, retry } = useRequestStore();
   const currentLocation = useGameStore(state => state.currentLocation);
   const setLocation = useGameStore(state => state.setLocation);
@@ -24,7 +27,7 @@ export default function Layout() {
 
 
   return (
-    <div className="period-desktop min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg">
+    <div className={`period-desktop ${inChampionship ? 'championship-desktop' : ''} min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg`}>
       <PhoneBridge />
       <NokiaModal />
       <PhoneNotification />
