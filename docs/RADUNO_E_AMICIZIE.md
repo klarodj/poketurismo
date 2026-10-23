@@ -37,3 +37,11 @@ Migrazione additiva PostgreSQL 0008 / SQLite 0011: nuova tabella MeetFriendship,
 Migrazioni complete SQLite e PostgreSQL verificate. Su copia PostgreSQL, scripts/validate-meet-friends.cjs verifica le nuove operazioni via HTTP con tre piloti sintetici; anche i collaudi aggiornati validate-meet-social.cjs e validate-car-meet.cjs superano i controlli, incluse sfide asincrone, fantasma, record e conservazione dei dati preesistenti. Questi script rifiutano database non locali o non terminanti in _validation.
 
 Browser reale con due sessioni, API effettiva e copia PostgreSQL: richiesta dal dettaglio dell'auto, notifica sul telefono, accettazione, numeri salvati, permanenza fuori sezione e al ricaricamento, uso di un'altra auto, ritiro alla partenza, nessun ritorno automatico, primo SMS con piazzale vuoto, rimozione e rifiuto. Verifica separata del blocco/sblocco di una richiesta dopo la partenza del mittente dal raduno. Desktop 1280×960 e telefono 390×844, nessun errore JavaScript o scorrimento orizzontale nelle viste verificate. Catture e rapporti in .preview/friends-qa; nessun SMS, richiesta o sfida di collaudo inviato ai giocatori reali.
+
+## Rilascio verificato
+
+Pubblicato il 23 ottobre 2026 sull'istanza unica 5174, gateway 5184 e URL pubblici 443/8443. Backup completo Auth + gioco prima e dopo; build e client Prisma precedenti, dati e rapporto di confronto in /home/klaro/.backups/poketurismo/meet-friends-2026-10-23T12-10-17.837Z (privato).
+
+Audit delle 31 tabelle precedenti e della nuova tabella (32 totali nello schema game, inclusi i metadati Prisma): MeetFriendship inizialmente vuota, una nuova ricevuta di migrazione e tutte le righe di gioco preesistenti invariate. Nessuna esposizione corrispondeva a un'auto già in gara, quindi il riallineamento non ha ritirato alcuna vettura. Nessun reset, amicizia automatica o messaggio di collaudo sul database pubblico.
+
+Servizi attivi e health valido; raduno pubblico HTTP 200 su entrambe le porte HTTPS, API notifiche e scritture amicizia senza sessione HTTP 401. Verificato anche il bundle effettivamente servito dal Funnel. Anteprima, browser e database temporaneo vengono rimossi dopo il collaudo.
