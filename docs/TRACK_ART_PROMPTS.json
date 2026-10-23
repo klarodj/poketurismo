@@ -1,0 +1,168 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. ",
+  "prompts": [
+    {
+      "key": "bassa",
+      "name": "Autodromo della Bassa · Cremonese",
+      "file": "public/images/tracks/bassa.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Cremona countryside. A bend and long straight of a modest motor club circuit, red white kerbs, flat fields, poplars, small 1980s concrete paddock shed. Sunny hazy afternoon."
+    },
+    {
+      "key": "santerno",
+      "name": "Circuito del Santerno · Imolese",
+      "file": "public/images/tracks/santerno.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Imola hills. Local circuit sweeping uphill through grassy banks, red white kerbs, low concrete grandstand and plain guardrails. Sunny afternoon."
+    },
+    {
+      "key": "ticino",
+      "name": "Pista club del Ticino · Novarese",
+      "file": "public/images/tracks/ticino.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Novara countryside. Tiny motor club circuit with a straight beside flooded rice paddies, poplar rows, chain link fence and a humble garage. Bright spring daylight."
+    },
+    {
+      "key": "san-rocco",
+      "name": "Pistino di San Rocco · Pavese",
+      "file": "public/images/tracks/san-rocco.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Pavia countryside. Short tight club circuit bend, worn red white kerbs, stacked tires and two small plain concrete pit garages, flat fields. A tiny red 1998 Italian hatchback near the bend. Sunny daylight."
+    },
+    {
+      "key": "garda",
+      "name": "Autodromo del Garda · Bresciano",
+      "file": "public/images/tracks/garda.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Brescia side of Lake Garda. Club circuit with snaking esses and red white kerbs, wet tarmac, a glimpse of lake and Prealps behind simple paddock buildings. Rainy overcast day."
+    },
+    {
+      "key": "langhe",
+      "name": "Circuito delle Colline · Langhe",
+      "file": "public/images/tracks/langhe.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Langhe in Piedmont. Small undulating club circuit among vineyards and farmhouses with red tile roofs, low guardrails, light morning fog. Pale muted autumn light."
+    },
+    {
+      "key": "euganei",
+      "name": "Anello dei Colli · Euganei",
+      "file": "public/images/tracks/euganei.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Euganean hills in Veneto. Sweeping motor club circuit framed by rounded wooded volcanic hills, wet tarmac and red white kerbs, low paddock fencing, dark rain clouds."
+    },
+    {
+      "key": "cava",
+      "name": "Pista della Cava · Veronese",
+      "file": "public/images/tracks/cava.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Verona countryside quarry circuit. Tight downhill bend between pale limestone quarry banks, plain metal guardrail, worn red white kerbs, small marshal hut. Sunny dry daylight."
+    },
+    {
+      "key": "cascina",
+      "name": "Circuito della Cascina · Lodigiano",
+      "file": "public/images/tracks/cascina.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Lodi countryside. Club circuit bend beside a traditional red brick Lombard farmhouse, wet asphalt, flat fields, poplar trees, red white kerbs and plain metal barrier, overcast rain."
+    },
+    {
+      "key": "po",
+      "name": "Pista club del Po · Ferrarese",
+      "file": "public/images/tracks/po.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Ferrara countryside near the Po. Long club circuit straight leading into a broad bend, flat river embankment, poplars and small paddock shed, faded red white kerbs, warm sunny haze."
+    },
+    {
+      "key": "stelvio",
+      "name": "Stelvio · Prato → passo",
+      "file": "public/images/tracks/stelvio.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Val Venosta, Alto Adige. View along a narrow alpine hairpin climbing toward Stelvio, stone retaining wall, metal guardrail and imposing bare rocky mountains with sparse snow high above. Sunny summer daylight. No circuit kerbs."
+    },
+    {
+      "key": "cisa",
+      "name": "Cisa · strada del passo",
+      "file": "public/images/tracks/cisa.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Parma Apennines, Cisa pass. Winding two lane mountain road into chestnut woodland, old steel guardrail, a small roadside bar with red tile roof in the distance, warm sunny daylight. No circuit kerbs."
+    },
+    {
+      "key": "iseo",
+      "name": "Lago d’Iseo · porto → galleria",
+      "file": "public/images/tracks/iseo.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Lake Iseo, Lombardy. Narrow lakeside road from a tiny stone harbour toward a dark old rock tunnel, pastel village houses, lake water and mountains. Sunny daylight. No circuit kerbs."
+    },
+    {
+      "key": "cervo",
+      "name": "Passo del Cervo · Biellese",
+      "file": "public/images/tracks/cervo.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Biella Prealps, Piedmont at night. Narrow uphill hairpin with old stone wall and dark woodland, a small plain roadside bar, warm tungsten lamps and a tiny late-1990s hatchback showing dim halogen headlights. Deep blue night, readable road, no neon."
+    },
+    {
+      "key": "cadore",
+      "name": "Valico della Neve · Cadore",
+      "file": "public/images/tracks/cadore.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Cadore Dolomites, Veneto. Winding alpine pass after snowfall, road with dark wet cleared center and snow banks at the edges, fir trees, angular Dolomite peaks and an old guardrail. Overcast winter daylight. No circuit kerbs."
+    },
+    {
+      "key": "santuario",
+      "name": "Salita del Santuario · Canavese",
+      "file": "public/images/tracks/santuario.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Canavese, Piedmont. Narrow climbing road with hairpin, chestnut trees, old stone wall, modest distant hilltop stone sanctuary barely visible through soft grey fog. No circuit kerbs."
+    },
+    {
+      "key": "lario",
+      "name": "Lario · statale del lago",
+      "file": "public/images/tracks/lario.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Lake Como Lario, Lombardy. Wet two lane lakeside state road curving between old village houses and a metal lake guardrail, dark mountain slopes across the lake, overcast rain, restrained reflections. No circuit kerbs."
+    },
+    {
+      "key": "seriana",
+      "name": "Val Seriana · strada delle cave",
+      "file": "public/images/tracks/seriana.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Val Seriana near Bergamo. Sunny uphill road with tight bend, pale quarry cut, dusty old industrial shed, stone wall and green Prealps, modest provincial working landscape. No circuit kerbs."
+    },
+    {
+      "key": "riviera",
+      "name": "Riviera di Levante · statale costiera",
+      "file": "public/images/tracks/riviera.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Ligurian Riviera di Levante. Old Aurelia coastal road sweeping above blue sea, stone parapet, pastel narrow houses with green shutters and a small roadside petrol stop, sunny warm daylight. No circuit kerbs."
+    },
+    {
+      "key": "castagni",
+      "name": "Discesa dei Castagni · Valsesia",
+      "file": "public/images/tracks/castagni.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Valsesia Piedmont. Downhill hairpin through chestnut woodland, wet leaves at edge of grey road, old steel guardrail, faint valley village below, rainy autumn light. No circuit kerbs."
+    },
+    {
+      "key": "parcheggio",
+      "name": "Parcheggio · anello dei magazzini",
+      "file": "public/images/tracks/parcheggio.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Milan outskirts in 2002 at dusk. Empty supermarket loading area and broad parking lanes between modest warehouses, sodium streetlights, worn painted asphalt markings, a few tiny 1990s hatchbacks parked by loading shutters. No modern retail branding."
+    },
+    {
+      "key": "officine",
+      "name": "Zona industriale · viale delle officine",
+      "file": "public/images/tracks/officine.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Bergamo industrial outskirts. Long straight provincial industrial road, simple concrete workshops with roller shutters, wire gates, worn curb, distant Prealps, pale daylight. Tiny parked 1990s vans. No modern buildings."
+    },
+    {
+      "key": "tangenziale",
+      "name": "Tangenziale · svincolo nord → interporto",
+      "file": "public/images/tracks/tangenziale.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Padua outskirts near an intermodal freight yard at night in 2002. View of a curving multilane ring-road slip road, steel guardrails, orange sodium lamps, dark concrete flyover and distant container yard. No readable signs, no neon, no modern cars."
+    },
+    {
+      "key": "bassa-officine",
+      "name": "Strada delle officine · Bassa",
+      "file": "public/images/tracks/bassa-officine.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Lombard Po plain. Narrow straight county road bending past an old brick mechanics workshop and flat fields, poplars, weathered metal gates and electricity poles, hazy sunny afternoon. No circuit kerbs."
+    },
+    {
+      "key": "prealpi",
+      "name": "Salita della cava · Prealpi",
+      "file": "public/images/tracks/prealpi.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Lombard Prealps. Narrow road climbing in hairpins beside a pale limestone quarry, old stone retaining walls, simple guardrail and wooded slopes. Sunny daylight, no circuit kerbs."
+    },
+    {
+      "key": "monza",
+      "name": "Monza",
+      "file": "public/images/tracks/monza.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Monza park circuit in 2002. Low trackside view of a long straight approaching a chicane, red white kerbs, dense tall park trees, old concrete pit buildings and low grandstands, period safety barriers, sunny daylight. No current logos or modern constructions."
+    },
+    {
+      "key": "scuola",
+      "name": "Circuito Scuola · Laboratorio tattico",
+      "file": "public/images/tracks/scuola.png",
+      "prompt": "Use case: historical-scene. Asset type: one landscape 3:2 environment picture for Poketurismo, Windows 98 browser racing game, northern Italy in 2002. Style: deliberately low resolution 320x200-era PC racing game scenery, photographic pixel art, chunky visible square pixels, limited muted earthy palette, ordered dithering, nearest-neighbor edges. Match early-2000s compressed pixelated racing game photos, not cute cartoon or glossy modern concept art. Ground-level view with a road or racetrack as the main subject, believable northern Italian scenery and modest provincial structures. No interface, text, labels, logos, watermark, futuristic buildings, modern cars, LED screens, solar panels or wind turbines. No contact sheet. No race anywhere in the world outside northern Italy. Scene: Lombard countryside driving school motor club. Tiny simple training circuit bend with red white kerbs, orange cones, tire barriers, small concrete garage and grassy flat fields, calm sunny daylight. A tiny white 1990s school hatchback in the distance."
+    }
+  ]
+}

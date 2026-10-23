@@ -117,7 +117,7 @@ export default function RacePage({ mode }) {
           <p>{previewDistance.toLocaleString('it-IT')} km · dislivello {selectedTrack.elevation} m · meteo: {({sunny:'sereno',rainy:'pioggia',snowy:'neve',night:'notte',foggy:'nebbia'})[selectedTrack.meteo?.name] || selectedTrack.meteo?.name}</p>
           <p>{selectedTrack.catalog.description}</p><p className="text-xs text-gray-600">{selectedTrack.catalog.interpretation ? 'Interpretazione di gioco del luogo reale; settori e mappa sono semplificati.' : 'Percorso originale di gioco; mappa schematica.'}</p>
         </div>}
-        {!entryId && <TrackPreview sections={previewSections} paths={trackChoice === 'demo' ? DEMO_TRACK.mapPaths : null} profile={previewProfile} />}
+        {!entryId && <TrackPreview trackName={trackChoice === 'demo' ? DEMO_TRACK.name : selectedTrack?.name} sections={previewSections} paths={trackChoice === 'demo' ? DEMO_TRACK.mapPaths : null} profile={previewProfile} />}
         {!entryId && mode === 'street' && !previewSections.length && <p className="text-sm">Scegli un percorso per vedere i settori prima della partenza. Con la scelta casuale li scoprirai all’avvio.</p>}
         {mode === 'street' && <label className="block font-bold">Avversario<select className="block w-full p-2 bg-white border" value={opponentChoice} onChange={event => setOpponentChoice(event.target.value)}>
           <option value="similar">Auto di categoria simile dal catalogo</option><option value="random">Auto casuale dal catalogo</option>

@@ -70,7 +70,7 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
     {detail && <RaceDetailDialog title={titles[detail]} onClose={() => setDetail(null)}>
       {detail === 'player' && <CarDetail car={race.car} pilot={race.pilot} name="Tu" />}
       {detail === 'opponent' && <CarDetail car={race.opponent.car} pilot={race.opponent.pilot} name={race.opponent.name} />}
-      {detail === 'track' && <div className="space-y-4"><p>{race.environment.weather} · {race.environment.surface} · {race.distanceKm.toFixed(2)} km</p>{tactical ? <TrackPreview sections={race.sections} paths={race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null)} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)} /> : <ol className="list-decimal pl-6">{race.sections.map((item, i) => <li key={i}>{item.name}</li>)}</ol>}</div>}
+      {detail === 'track' && <div className="space-y-4"><p>{race.environment.weather} · {race.environment.surface} · {race.distanceKm.toFixed(2)} km</p>{tactical ? <TrackPreview trackName={race.trackName} sections={race.sections} paths={race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null)} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)} /> : <ol className="list-decimal pl-6">{race.sections.map((item, i) => <li key={i}>{item.name}</li>)}</ol>}</div>}
       {detail === 'sector' && <SectorDetail race={race} />}
       {detail === 'timing' && (tactical ? <TimingDetail race={race} /> : <p>{position} · {Math.abs(gap)} m</p>)}
       {detail === 'history' && <RaceHistory race={race} />}

@@ -1,3 +1,4 @@
+import TrackIllustration from '../components/TrackIllustration';
 import ChampionshipTable from '../components/ChampionshipTable';
 import {championshipCarErrors} from '../../shared/championshipCatalog.mjs';
 import React, { useState, useEffect } from 'react';
@@ -108,12 +109,12 @@ function ChampionshipCard({ champ, equippedCar, playerStats, playerLevel, player
             <div className="font-bold text-sm mb-2 uppercase text-gray-700">📋 Round del Campionato:</div>
             <div className="space-y-1">
               {champ.rounds?.map(r => (
-                <div key={r.id} className="flex justify-between items-center gap-2 bg-white border border-gray-300 px-3 py-1.5 text-sm">
+                <div key={r.id} className="bg-white border border-gray-300 px-3 py-1.5 text-sm">
                   <span className="font-bold text-blue-900">Round {r.ord}: {r.track?.name || '—'}</span>
                   <span className="text-gray-500">Rivale in evidenza: <span className="font-bold text-red-700">{r.opponentName}</span> ({r.opponentCarName})</span>
                   <span className={`text-xs font-bold px-2 py-0.5 ${r.opponentDifficulty >= 1.3 ? 'bg-red-200 text-red-800' : r.opponentDifficulty >= 1.0 ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}`}>
                     {r.opponentDifficulty >= 1.3 ? '🔥 HARD' : r.opponentDifficulty >= 1.0 ? '⚡ MED' : '✅ EASY'}
-                  </span>
+                  </span><details className="track-art-details"><summary>Mappa e ambientazione</summary><TrackIllustration name={r.track?.name} compact/></details>
                 </div>
               ))}
             </div>

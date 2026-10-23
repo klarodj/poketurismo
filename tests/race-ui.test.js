@@ -156,3 +156,14 @@ test('meet cockpit shows a personal clock and honest ghost rather than a live fi
 test('mechanic previews keep all four original workshop pictures alongside their real quotes',async()=>{
  const Services=await component('WorkshopServices');const car={id:1,engineHealth:50,tireGrip:50,performanceIndex:40,services:['engine','tires','rebuild','full'].map(id=>({id,name:id,description:'Lavorazione',price:150,enabled:true,after:{engineHealth:100,tireGrip:100,performanceIndex:45}}))};const html=renderToStaticMarkup(React.createElement(Services,{car,money:1000,disabled:false,onService(){}}));for(const file of ['oil.png','tyre.png','rebuild.png','repair.png']){assert.ok(html.includes('/images/work/'+file));assert.ok(existsSync(resolve('public/images/work/'+file)));}
 });
+
+test('track previews show the local scene, sector minimap, active sector and open-road finish',async()=>{
+ const TrackPreview=await component('TrackPreview');
+ const markup=renderToStaticMarkup(React.createElement(TrackPreview,{trackName:'Lario · statale del lago',sections:DEMO_TRACK.sections,index:2,profile:{kind:'road'}}));
+ assert.ok(markup.includes('/images/tracks/lario.png'));assert.ok(markup.includes('Minimappa di Lario'));assert.ok(markup.includes('settore 3 evidenziato'));assert.ok(markup.includes('punto a punto'));assert.ok(markup.includes('P: partenza'));assert.ok(markup.includes('aria-current="step"'));assert.ok(markup.includes('Giallo: settore 3'));
+ const Illustration=await component('TrackIllustration');assert.equal(renderToStaticMarkup(React.createElement(Illustration,{name:'Percorso privato sconosciuto'})),'');
+});
+test('old track labels display the same illustration without altering the school map',async()=>{
+ const Illustration=await component('TrackIllustration');const old=renderToStaticMarkup(React.createElement(Illustration,{name:'Tsukuba · Ibaraki'})),current=renderToStaticMarkup(React.createElement(Illustration,{name:'Pistino di San Rocco · Pavese'}));assert.equal(old,current);assert.ok(old.includes('san-rocco.png'));
+ const TrackPreview=await component('TrackPreview');const demo=renderToStaticMarkup(React.createElement(TrackPreview,{trackName:DEMO_TRACK.name,sections:DEMO_TRACK.sections,paths:DEMO_TRACK.mapPaths}));assert.ok(demo.includes('scuola.png'));assert.ok(demo.includes(DEMO_TRACK.mapPaths[0]));assert.ok(demo.includes('P / A'));
+});
