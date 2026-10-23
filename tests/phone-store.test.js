@@ -13,3 +13,13 @@ test('friend request notice is separate from unread SMS, dismisses once and clea
 test('a delayed friendship write cannot populate another account rubric or status',async t=>{
  let deliver;t.mock.method(globalThis,'fetch',()=>new Promise(resolve=>{deliver=resolve;}));phone.getState().bindUser(1);const work=phone.getState().changeFriendship({id:2,name:'Private'},'request');phone.getState().bindUser(3);deliver(response({friendshipStatus:'pending'}));await work;assert.equal(phone.getState().ownerId,3);assert.equal(phone.getState().status,'');assert.equal(phone.getState().inbox,null);assert.equal(phone.getState().friendshipBusy,false);
 });
+test('phone games pause on close or another view and are cleared on account switch',async()=>{
+ const {default:snake}=await import('../src/store/snakeStore.js');phone.getState().bindUser(1);phone.getState().menu('snake');snake.getState().start();assert.equal(snake.getState().game.status,'running');phone.getState().close();assert.equal(snake.getState().game.status,'paused');phone.getState().menu('snake');snake.getState().start();phone.getState().menu('home');assert.equal(snake.getState().game.status,'paused');phone.getState().bindUser(2);assert.equal(snake.getState().ownerId,2);assert.equal(snake.getState().game.status,'ready');assert.equal(snake.getState().game.score,0);
+});
+test('opening a phone challenge preselects its peer without sending an invitation or altering an SMS draft',async()=>{
+ phone.getState().bindUser(1);phone.setState({draft:'Bozza privata',drafts:{2:'Bozza privata'}});phone.getState().openChallenges({id:2,name:'Pilota QA'});assert.equal(phone.getState().view,'challenges');assert.equal(phone.getState().challengePeer.id,2);assert.equal(phone.getState().draft,'Bozza privata');phone.getState().menu('challenges');assert.equal(phone.getState().challengePeer,null);phone.getState().bindUser(3);assert.equal(phone.getState().challengePeer,null);
+});
+
+test('challenge notices do not become unread SMS, dismiss once and reset on account change',async t=>{
+ const invite={id:'invite-qa',createdAt:'2002-01-01',sender:{id:2,name:'Pilota QA'}};t.mock.method(globalThis,'fetch',async()=>response({unread:0,latest:[],friendRequests:[],challengeInviteCount:1,challengeInvites:[invite]}));phone.getState().bindUser(1);await phone.getState().refresh();assert.equal(phone.getState().unread,0);assert.equal(phone.getState().challengeInviteCount,1);assert.equal(phone.getState().challengeNotice.id,invite.id);phone.getState().dismiss();await phone.getState().refresh();assert.equal(phone.getState().challengeNotice,null);phone.getState().bindUser(3);assert.equal(phone.getState().challengeInviteCount,0);assert.deepEqual(phone.getState().seenChallenges,[]);
+});

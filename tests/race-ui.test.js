@@ -191,3 +191,14 @@ test('fuel estimate panel distinguishes mixed and race pace without presenting h
  const FuelConsumption=await component('FuelConsumption'),html=renderToStaticMarkup(React.createElement(FuelConsumption,{car:{cc:1600,cv:100,baseCv:100,kg:1000,engineType:'NA'}}));
  for(const text of['Consumo stimato','L/100 km','Misto indicativo','conserva','ritmo pulito','attacco','non è un dato omologato'])assert.ok(html.includes(text));assert.ok(!html.includes('NaN'));
 });
+test('phone Snake renders a green pixel board and labelled touch controls',async()=>{
+ const {createSnake}=await import('../src/logic/snake.mjs'),SnakeBoard=await component('PhoneSnake','SnakeBoard'),SnakePad=await component('PhoneSnake','SnakePad');const html=renderToStaticMarkup(React.createElement(React.Fragment,null,React.createElement(SnakeBoard,{game:createSnake(123)}),React.createElement(SnakePad)));
+ for(const text of['Campo di Snake','0 punti','shape-rendering="crispEdges"','Snake su','Snake sinistra','Snake giù','Snake destra'])assert.ok(html.includes(text),text);
+});
+test('phone challenge details require a compatible car to accept and respect an active race',async()=>{
+ if(!globalThis.window)Object.defineProperty(globalThis,'window',{configurable:true,value:{location:{hostname:'localhost'}}});
+ const PhoneChallengeItem=await component('PhoneChallenges','PhoneChallengeItem'),car={id:4,modelId:10,name:'Compatta QA',brand:'Fiat',cv:55,kg:735,performanceIndex:40,parts:[]},person={pilot:{id:2,name:'Pilota QA'},car};
+ const challenge={id:'qa-invite',senderId:2,recipientId:1,status:'pending',format:'model',modelId:10,minIP:0,maxIP:49,results:{},expiresAt:'2099-01-01',track:{name:'Pistino QA',weather:'sunny',surface:'Asphalt'},sender:person,recipient:null};const render=(ch,vehicle,activeRace)=>renderToStaticMarkup(React.createElement(PhoneChallengeItem,{challenge:ch,userId:1,car:vehicle,activeRace,now:1,onRespond:()=>{},onStart:()=>{},onRace:()=>{}}));
+ const valid=render(challenge,car);assert.ok(valid.includes('sereno'));assert.ok(valid.includes('asfalto'));assert.ok(valid.includes('Accetta con l’auto selezionata'));assert.ok(!valid.includes('non rispetta'));const invalid=render(challenge,{...car,modelId:99});assert.match(invalid,/disabled=""[^>]*>Accetta/);assert.ok(invalid.includes('non rispetta'));
+ const running=render({...challenge,status:'accepted',recipient:{...person,pilot:{id:1,name:'Tu'}}},car,{id:'already-driving'});assert.match(running,/disabled=""[^>]*>Inizia il tuo tentativo/);
+});

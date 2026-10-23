@@ -1,25 +1,28 @@
+import useSnakeStore from './snakeStore.js';
 import{create}from'zustand';
 import{fetchPhoneNotifications,fetchPhoneInbox,fetchMeetConversation,sendMeetMessage,readMeetMessages,blockMeetPilot,reportMeetPilot,changeFriendship}from'../services/api.js';
 import{notificationState,mergeSms}from'../logic/phone.mjs';
 import{playSmsTone,unlockPhoneSound}from'../logic/phoneSound.js';
-const initial={ownerId:null,isOpen:false,view:'inbox',peer:null,inbox:null,thread:null,messageId:null,messageSnapshot:null,draft:'',drafts:{},unread:0,notice:null,friendRequests:[],friendshipNotice:null,seenRequests:[],friendshipBusy:false,seen:[],initialized:false,watermark:null,sound:false,error:'',status:'',loading:false,sending:false,connected:true};
+const initial={ownerId:null,challengePeer:null,isOpen:false,view:'inbox',peer:null,inbox:null,thread:null,messageId:null,messageSnapshot:null,draft:'',drafts:{},unread:0,notice:null,challengeInviteCount:0,challengeNotice:null,seenChallenges:[],challengeInitialized:false,challengeWatermark:null,friendRequests:[],friendshipNotice:null,seenRequests:[],friendshipBusy:false,seen:[],initialized:false,watermark:null,sound:false,error:'',status:'',loading:false,sending:false,connected:true};
 let epoch=0,poll=null;const reading=new Set();
 const usePhoneStore=create((set,get)=>{
  const current=(id,generation)=>get().ownerId===id&&epoch===generation;
  return{...initial,
- reset:()=>{epoch++;poll=null;reading.clear();set({...initial});},
- bindUser:id=>{if(get().ownerId===id)return;epoch++;poll=null;reading.clear();set({...initial,ownerId:id||null});},
- close:()=>set({isOpen:false,error:''}),dismiss:()=>set({notice:null,friendshipNotice:null}),
- menu:view=>{set({isOpen:true,view:view||'inbox',error:'',status:''});if(['inbox','contacts','requests','contact'].includes(view||'inbox'))get().loadInbox();},
- openContact:peer=>{set({isOpen:true,peer,view:'contact',error:'',status:'',messageId:null,messageSnapshot:null});get().loadInbox();},
- openSms:(peer,compose=false)=>{const same=get().peer?.id===peer.id;set({isOpen:true,peer,view:compose?'compose':'conversation',messageId:null,messageSnapshot:null,thread:same?get().thread:null,draft:get().drafts[peer.id]||'',error:'',status:''});get().loadThread(peer.id);},
+ reset:()=>{useSnakeStore.getState().reset();epoch++;poll=null;reading.clear();set({...initial});},
+ bindUser:id=>{if(get().ownerId===id)return;useSnakeStore.getState().bindUser(id);epoch++;poll=null;reading.clear();set({...initial,ownerId:id||null});},
+ close:()=>{useSnakeStore.getState().pause();set({isOpen:false,error:''});},dismiss:()=>set({notice:null,friendshipNotice:null,challengeNotice:null}),
+ menu:view=>{if(view!=='snake')useSnakeStore.getState().pause();set({...(view==='challenges'?{challengePeer:null}:{}),isOpen:true,view:view||'inbox',error:'',status:''});if(['inbox','contacts','requests','contact'].includes(view||'inbox'))get().loadInbox();},
+ openContact:peer=>{useSnakeStore.getState().pause();set({isOpen:true,peer,view:'contact',error:'',status:'',messageId:null,messageSnapshot:null});get().loadInbox();},
+ openChallenges:peer=>{useSnakeStore.getState().pause();set({isOpen:true,view:'challenges',challengePeer:peer||null,error:'',status:''});},
+ openSms:(peer,compose=false)=>{useSnakeStore.getState().pause();const same=get().peer?.id===peer.id;set({isOpen:true,peer,view:compose?'compose':'conversation',messageId:null,messageSnapshot:null,thread:same?get().thread:null,draft:get().drafts[peer.id]||'',error:'',status:''});get().loadThread(peer.id);},
  setDraft:draft=>{const peer=get().peer;if(peer)set(state=>({draft,drafts:{...state.drafts,[peer.id]:draft}}));},
  toggleSound:async()=>{if(get().sound){set({sound:false});return;}const ok=await unlockPhoneSound();set({sound:ok,status:ok?'Suono SMS attivo.':'Audio non disponibile.'});},
  refresh:()=>{const id=get().ownerId,generation=epoch;if(!id)return Promise.resolve();if(poll?.id===id)return poll.promise;
   const promise=(async()=>{try{const data=await fetchPhoneNotifications(id);if(!current(id,generation))return;const next=notificationState(get(),data);if(next.beep&&get().sound)playSmsTone();const{beep:_beep,...state}=next;const requests=data.friendRequests||[],seen=new Set(get().seenRequests),fresh=requests.find(r=>!seen.has(r.key));let friendshipNotice=get().friendshipNotice;
    if(fresh)friendshipNotice=fresh;else if(friendshipNotice&&!requests.some(r=>r.key===friendshipNotice.key))friendshipNotice=null;
    for(const request of requests)seen.add(request.key);
-   set({...state,friendRequests:requests,friendshipNotice,seenRequests:[...new Set([...seen].slice(-500).concat(requests.map(r=>r.key)))],connected:true});return data;}catch(error){if(current(id,generation))set({connected:false});throw error;}finally{if(poll?.promise===promise)poll=null;}})();poll={id,promise};return promise;},
+   const challengeState=notificationState({seen:get().seenChallenges,initialized:get().challengeInitialized,watermark:get().challengeWatermark,notice:get().challengeNotice},{unread:data.challengeInviteCount||0,latest:data.challengeInvites||[]});
+   set({...state,challengeInviteCount:challengeState.unread,challengeNotice:challengeState.notice,seenChallenges:challengeState.seen,challengeInitialized:challengeState.initialized,challengeWatermark:challengeState.watermark,friendRequests:requests,friendshipNotice,seenRequests:[...new Set([...seen].slice(-500).concat(requests.map(r=>r.key)))],connected:true});return data;}catch(error){if(current(id,generation))set({connected:false});throw error;}finally{if(poll?.promise===promise)poll=null;}})();poll={id,promise};return promise;},
  loadInbox:async()=>{const id=get().ownerId,generation=epoch;if(!id)return;set({loading:true});try{const data=await fetchPhoneInbox(id);if(current(id,generation))set(state=>({inbox:data,unread:data.unread,friendRequests:(data.friendships||[]).filter(f=>f.status==='pending'&&f.direction==='incoming'),friendshipNotice:state.friendshipNotice&&(data.friendships||[]).some(f=>f.key===state.friendshipNotice.key&&f.status==='pending'&&f.direction==='incoming')?state.friendshipNotice:null,error:'',connected:true}));}catch(error){if(current(id,generation))set({error:error.message});}finally{if(current(id,generation))set({loading:false});}},
  loadThread:async(peerId,older=false)=>{const id=get().ownerId,generation=epoch;if(!id)return;const before=older?get().thread?.nextBefore:undefined;if(older&&!before)return;
   try{const data=await fetchMeetConversation(id,peerId,before);if(!current(id,generation)||get().peer?.id!==Number(peerId))return;const old=get().thread;set({peer:{...get().peer,...data.peer},messageSnapshot:data.messages.find(m=>m.id===get().messageId)||get().messageSnapshot,thread:older?{...data,messages:mergeSms(data.messages,old?.messages||[]),olderLoaded:true}:old?.olderLoaded?{...data,messages:mergeSms(old.messages,data.messages),hasMore:old.hasMore,nextBefore:old.nextBefore,olderLoaded:true}:data,error:''});}catch(error){if(current(id,generation)&&get().peer?.id===Number(peerId))set({error:error.message});}},

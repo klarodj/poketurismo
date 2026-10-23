@@ -1,10 +1,10 @@
+import {challengeCarAllowed,CHALLENGE_STATUSES} from '../logic/meetChallenges.mjs';
 import PilotAvatar from './PilotAvatar';
 import TrackIllustration from './TrackIllustration';
 import {clubDate} from '../logic/clubDate';
 import React from 'react';
 const time=ms=>ms==null?'—':`${(ms/1000).toLocaleString('it-IT',{minimumFractionDigits:3,maximumFractionDigits:3})} s`;
-const statuses={pending:'Invito in attesa',accepted:'Sfida attiva',completed:'Sfida conclusa',declined:'Invito rifiutato',cancelled:'Sfida annullata',expired:'Invito scaduto'};
-function challengeCarAllowed(challenge,car){return challenge.format==='model'?car.modelId===challenge.modelId:car.performanceIndex>=challenge.minIP&&car.performanceIndex<=challenge.maxIP;}
+const statuses=CHALLENGE_STATUSES;
 export default function MeetChallengeCard({challenge,userId,peerName,cars,garageId,disabled,onRespond,onStart,onRace}){
  const sender=challenge.senderId===userId,mine=challenge.results[sender?'sender':'recipient'],selected=cars.find(car=>car.id===Number(garageId));
  const result=challenge.status==='completed'?(challenge.draw?'Pareggio / doppio ritiro':challenge.winnerId===userId?'Hai vinto':'Ha vinto l’altro pilota'):null;

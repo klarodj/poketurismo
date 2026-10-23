@@ -965,7 +965,7 @@ test('avatar does not invalidate a meet preparation or change frozen race contra
 
 test('phone notifications are recipient-only, bounded and never mark SMS as read',async()=>{
  await socialSetup();const sent=await post('/meet/message',{peerId:2,text:'Ci vediamo al piazzale.'});assert.equal(sent.status,200);
- const before=await prisma.meetMessage.findMany();assert.deepEqual((await get('/phone/1/notifications')).data,{unread:0,latest:[],friendRequests:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
+ const before=await prisma.meetMessage.findMany();assert.deepEqual((await get('/phone/1/notifications')).data,{unread:0,latest:[],friendRequests:[],challengeInviteCount:0,challengeInvites:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
  const inbox=(await get('/phone/2')).data;assert.equal(inbox.conversations[0].lastMessage.id,sent.data.message.id);assert.deepEqual(await prisma.meetMessage.findMany(),before);
  await prisma.meetMessage.createMany({data:Array.from({length:7},()=>({senderId:1,recipientId:2,text:'Altro SMS'}))});assert.equal((await get('/phone/2/notifications')).data.latest.length,5);
 });
@@ -1088,4 +1088,11 @@ test('championship entries freeze consumption rules, including legacy entries st
  const entry=await modernCup(),row=await prisma.championshipEntry.findUnique({where:{id:entry.id}}),contract=JSON.parse(row.contract);assert.equal(contract.fuelModelVersion,2);
  const first=await begin('championship',{entryId:entry.id});assert.equal(first.fuelModelVersion,2);await post(`/races/${first.id}/turns`,{version:0,moveId:null});
  delete contract.fuelModelVersion;await prisma.championshipEntry.update({where:{id:entry.id},data:{contract:JSON.stringify(contract)}});const second=await begin('championship',{entryId:entry.id});assert.equal(second.fuelModelVersion,1);
+});
+
+test('phone challenge alerts are recipient-only, bounded, exclude expired invitations and clear on response',async()=>{
+ const {challenge}=await socialInvite();const outgoing=(await get('/phone/1/notifications')).data;assert.equal(outgoing.challengeInviteCount,0);assert.deepEqual(outgoing.challengeInvites,[]);
+ const incoming=(await get('/phone/2/notifications')).data;assert.equal(incoming.challengeInviteCount,1);assert.equal(incoming.challengeInvites[0].id,challenge.id);assert.equal(incoming.challengeInvites[0].sender.id,1);assert.deepEqual(Object.keys(incoming.challengeInvites[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(incoming).includes('private@example'));assert.ok(!JSON.stringify(incoming).includes('contract'));
+ await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'decline'});assert.equal((await get('/phone/2/notifications')).data.challengeInviteCount,0);
+ const second=await socialInvite();await prisma.meetChallenge.update({where:{id:second.challenge.id},data:{expiresAt:new Date(Date.now()-1000)}});assert.equal((await get('/phone/2/notifications')).data.challengeInviteCount,0);
 });

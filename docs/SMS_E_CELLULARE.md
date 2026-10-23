@@ -16,7 +16,7 @@ Le notifiche vengono controllate ogni 10 secondi con pagina visibile e al ritorn
 
 GET /api/phone/:userId/notifications restituisce soltanto conteggio e ultimi cinque mittenti/ID/date non letti del proprietario, senza testo. GET /api/phone/:userId restituisce soltanto conversazioni proprie e contatti già noti (messaggi, sfide, blocchi), più piloti con esposizione volontaria ancora valida al raduno. Nessun elenco generale di account, email, saldo o credenziali. Autenticazione e proprietà controllate prima delle query; invii, letture, blocchi e segnalazioni riusano i controlli server esistenti e i rate limit.
 
-Blocco e segnalazione accessibili dalle opzioni del contatto; lo storico resta consultabile. Le sfide rimangono nella sezione dedicata del raduno. Gli avvisi e lo storico del gioco sono conservati nel telefono, separati dagli SMS; gli errori restano nelle finestre Windows esistenti.
+Blocco e segnalazione accessibili dalle opzioni del contatto; lo storico resta consultabile. Le sfide si gestiscono anche dal cellulare, oltre alla sezione dedicata del raduno. Gli avvisi e lo storico del gioco sono conservati nel telefono, separati dagli SMS; gli errori restano nelle finestre Windows esistenti.
 
 ## Verifica
 
@@ -33,3 +33,5 @@ Servizi attivi, health positivo, raduno pubblico HTTP 200 e API notifiche senza 
 ## Rubrica e amicizie
 
 La rubrica distingue ora «Numeri salvati» (amicizie accettate) da «Piloti incontrati» (contatti noti e presenti al raduno). Richieste e avvisi di scambio numero sono separati dai messaggi SMS. Regole, consenso, blocchi e conservazione sono descritti in [RADUNO_E_AMICIZIE.md](RADUNO_E_AMICIZIE.md).
+
+Menu, Snake e gestione completa delle sfide nel telefono sono documentati in [CELLULARE_GIOCHI_E_SFIDE.md](CELLULARE_GIOCHI_E_SFIDE.md). Gli avvisi degli inviti sono separati dagli SMS non letti.

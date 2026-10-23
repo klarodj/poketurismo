@@ -63,3 +63,5 @@ scripts/validate-meet-social.cjs richiede un file privato ACCOUNTS_VALIDATION_EN
 Aggiornamento pubblicato sull'unica istanza 5174 e sul gateway pubblico. Backup completo Auth + gioco prima e dopo. Migrazione PostgreSQL 0007 applicata; audit delle tabelle game: quattro nuove tabelle inizialmente vuote e ogni riga preesistente invariata. API salute valida, Meet HTTPS pubblico 200, posta senza login 401. Lettura del vero hub e della coda admin verificata senza inviare messaggi/inviti o avviare tentativi sui giocatori reali. Servizi sviluppo e gateway entrambi attivi; database sintetico di collaudo rimosso.
 
 Lo scambio consensuale dei numeri estende ora i contatti raggiungibili alle amicizie accettate. Il blocco interrompe anche questo rapporto. Dettagli in [RADUNO_E_AMICIZIE.md](RADUNO_E_AMICIZIE.md).
+
+Le sfide sono ora proponibili e gestibili anche nel telefono, con le stesse operazioni e regole server: [CELLULARE_GIOCHI_E_SFIDE.md](CELLULARE_GIOCHI_E_SFIDE.md).

@@ -1,8 +1,9 @@
 const pilot=user=>({id:user.id,name:user.username,level:user.level,avatar:user.avatar||null});
 const pair=(a,b)=>({OR:[{senderId:a,recipientId:b},{senderId:b,recipientId:a}]});
 async function notifications(tx,userId){
- const [unread,latest,friendships]=await Promise.all([tx.meetMessage.count({where:{recipientId:userId,readAt:null}}),tx.meetMessage.findMany({where:{recipientId:userId,readAt:null},orderBy:[{createdAt:'desc'},{id:'desc'}],take:5,select:{id:true,createdAt:true,sender:{select:{id:true,username:true,level:true,avatar:true}}}}),require('./friendships').list(tx,userId,true)]);
- return {unread,friendRequests:friendships,latest:latest.map(row=>({id:row.id,createdAt:row.createdAt,sender:pilot(row.sender)}))};
+ const invitesWhere={recipientId:userId,status:'pending',expiresAt:{gt:new Date()}};
+ const [unread,latest,friendships,challengeInviteCount,challengeInvites]=await Promise.all([tx.meetMessage.count({where:{recipientId:userId,readAt:null}}),tx.meetMessage.findMany({where:{recipientId:userId,readAt:null},orderBy:[{createdAt:'desc'},{id:'desc'}],take:5,select:{id:true,createdAt:true,sender:{select:{id:true,username:true,level:true,avatar:true}}}}),require('./friendships').list(tx,userId,true),tx.meetChallenge.count({where:invitesWhere}),tx.meetChallenge.findMany({where:invitesWhere,orderBy:[{createdAt:'desc'},{id:'desc'}],take:5,select:{id:true,createdAt:true,sender:{select:{id:true,username:true,level:true,avatar:true}}}})]);
+ return {unread,challengeInviteCount,challengeInvites:challengeInvites.map(row=>({id:row.id,createdAt:row.createdAt,sender:pilot(row.sender)})),friendRequests:friendships,latest:latest.map(row=>({id:row.id,createdAt:row.createdAt,sender:pilot(row.sender)}))};
 }
 async function inbox(tx,userId){
  const [messages,challenges,blocks,visible,unread,friendships]=await Promise.all([
