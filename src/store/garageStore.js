@@ -19,6 +19,7 @@ const useGarageStore = create((set, get) => ({
         kg: item.kg,
         driveType: item.car.driveType,
         engineType: item.car.engineType,
+        cc: item.car.cc,
         km: item.km,
         speed: item.speed,
         acceleration: item.acceleration,

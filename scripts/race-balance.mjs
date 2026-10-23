@@ -6,10 +6,10 @@ import { DEMO_TRACK } from '../shared/trackGeometry.mjs';
 const PILOT_KEYS = ['brave', 'clean', 'reflex', 'shift', 'acro', 'turn', 'brake', 'throttle'];
 const pilot = value => Object.fromEntries(PILOT_KEYS.map(key => [key, value]));
 const CARS = {
-  hatch: { name: 'Compatta 120', cv: 120, kg: 1000, velMax: 190, zeroToHundred: 9, turnSlow: 75, turnFast: 65, brake: 65, traction: 68, driveType: 'FF' },
-  sport: { name: 'Sportiva 150', cv: 150, kg: 1100, velMax: 210, zeroToHundred: 8, turnSlow: 70, turnFast: 70, brake: 70, traction: 70, driveType: 'FR' },
-  gt: { name: 'GT 300', cv: 300, kg: 1450, velMax: 260, zeroToHundred: 5.5, turnSlow: 70, turnFast: 80, brake: 80, traction: 78, driveType: 'FR' },
-  supercar: { name: 'Supercar 500', cv: 500, kg: 1450, velMax: 310, zeroToHundred: 3.8, turnSlow: 72, turnFast: 85, brake: 88, traction: 82, driveType: 'AWD' }
+  hatch: { cc:1600,engineType:'NA',name: 'Compatta 120', cv: 120, kg: 1000, velMax: 190, zeroToHundred: 9, turnSlow: 75, turnFast: 65, brake: 65, traction: 68, driveType: 'FF' },
+  sport: { cc:2000,engineType:'NA',name: 'Sportiva 150', cv: 150, kg: 1100, velMax: 210, zeroToHundred: 8, turnSlow: 70, turnFast: 70, brake: 70, traction: 70, driveType: 'FR' },
+  gt: { cc:3000,engineType:'Turbo',name: 'GT 300', cv: 300, kg: 1450, velMax: 260, zeroToHundred: 5.5, turnSlow: 70, turnFast: 80, brake: 80, traction: 78, driveType: 'FR' },
+  supercar: { cc:5000,engineType:'NA',name: 'Supercar 500', cv: 500, kg: 1450, velMax: 310, zeroToHundred: 3.8, turnSlow: 72, turnFast: 85, brake: 88, traction: 82, driveType: 'AWD' }
 };
 const condition = car => ({ ...car, baseCv: car.cv, baseKg: car.kg, engineHealth: 100, tireGrip: 100, currentFuel: 35, fuelType: 'Normale', km: 0, serviceKm: 0 });
 const TRACKS = {
@@ -21,7 +21,7 @@ function makeRace({ mine = 'hatch', theirs = 'hatch', mySkill = 30, theirSkill =
   const sections = structuredClone(TRACKS[track]);
   const routeProfile = routeProfileFor('track');
   const plan = incidentPlan(seed, sections.length, routeProfile);
-  return { rulesVersion: 3, routeProfile, incidentPlan: plan, incidentCue: incidentCue(plan, 0), car: condition(CARS[mine]), pilot: { ...pilot(mySkill), fundamentals: { early: Math.min(PRACTICE_CAP, practice), optimal: Math.min(PRACTICE_CAP, practice), late: Math.min(PRACTICE_CAP, practice) } }, opponent: { car: condition(CARS[theirs]), pilot: pilot(theirSkill) },
+  return { rulesVersion: 3, fuelModelVersion:2, routeProfile, incidentPlan: plan, incidentCue: incidentCue(plan, 0), car: condition(CARS[mine]), pilot: { ...pilot(mySkill), fundamentals: { early: Math.min(PRACTICE_CAP, practice), optimal: Math.min(PRACTICE_CAP, practice), late: Math.min(PRACTICE_CAP, practice) } }, opponent: { car: condition(CARS[theirs]), pilot: pilot(theirSkill) },
     sections, moves: technique ? [learnedTechnique(60)] : [], index: 0, gap: 0, gapSeconds: 0, playerTime: 0, opponentTime: 0, playerSpeed: 0, opponentSpeed: 0, logs: [], rng: seed, finished: false,
     distanceKm: sections.reduce((sum, section) => sum + section.segments.reduce((sum, segment) => sum + segment.lengthM, 0), 0) / 1000,
     environment: { weather, surface: 'Asfalto' } };

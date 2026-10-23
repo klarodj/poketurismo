@@ -28,3 +28,8 @@ test('an affordable starter upgrade improves a controlled lap without granting s
  const lap=g=>{const input={...g.car,...g,baseCv:g.car.cv,baseKg:g.car.kg};return simulateBlock(input,pilot,null,DEFAULT_DECISION,{segments},null,0,{weather:'sunny',surface:'tarmac'}).time;};
  assert.ok(lap(upgraded)<lap(base));assert.ok(upgraded.cv<85);assert.ok(tuningMetrics(upgraded).topSpeedKmh<180);assert.ok(lap({...base,cv:450,kg:1250})<lap(upgraded));
 });
+test('tuning preview consumption follows actual net power and mass, never the number of installed parts',()=>{
+ const base={...stock(),car:{...car,cc:1108,engineType:'NA'}};const motor=piece({cvBonus:12}),brakes=piece({id:2,name:'Brakes',brakeBonus:10});
+ assert.ok(tuningMetrics(replacePart(base,motor).after).fuelConsumption>tuningMetrics(base).fuelConsumption);assert.equal(tuningMetrics(replacePart(base,brakes).after).fuelConsumption,tuningMetrics(base).fuelConsumption);
+ const high=replacePart(base,motor).after,lower=replacePart(high,piece({id:3,cvBonus:3})).after;assert.ok(tuningMetrics(lower).fuelConsumption<tuningMetrics(high).fuelConsumption);
+});

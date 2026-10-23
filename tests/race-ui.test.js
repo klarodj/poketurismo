@@ -187,3 +187,7 @@ test('avatar picker renders twenty labelled choices and selected local image wit
  const Picker=await component('AvatarPicker'),Portrait=await component('PilotAvatar');const html=renderToStaticMarkup(React.createElement(Picker,{value:'mechanic-woman',onChange:()=>{}}));assert.equal((html.match(/type="radio"/g)||[]).length,20);assert.ok(html.includes('La meccanica'));assert.ok(html.includes('/images/avatars/mechanic-woman.png'));assert.ok(html.includes('checked=""'));assert.ok(!html.includes('dicebear'));
  const fallback=renderToStaticMarkup(React.createElement(Portrait,{avatar:'https://evil.invalid/a.png'}));assert.ok(fallback.includes('Avatar da scegliere'));assert.ok(!fallback.includes('evil.invalid'));
 });
+test('fuel estimate panel distinguishes mixed and race pace without presenting homologated figures',async()=>{
+ const FuelConsumption=await component('FuelConsumption'),html=renderToStaticMarkup(React.createElement(FuelConsumption,{car:{cc:1600,cv:100,baseCv:100,kg:1000,engineType:'NA'}}));
+ for(const text of['Consumo stimato','L/100 km','Misto indicativo','conserva','ritmo pulito','attacco','non è un dato omologato'])assert.ok(html.includes(text));assert.ok(!html.includes('NaN'));
+});

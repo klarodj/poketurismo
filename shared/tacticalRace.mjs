@@ -1,3 +1,4 @@
+import {sectorFuel} from './fuelConsumption.mjs';
 import { brakingFamiliarity } from './driverDevelopment.mjs';
 import { tacticalContext, contextualDecision, sectionFeatures, incidentCue, tacticalMovePlayable } from './raceContext.mjs';
 // Simplified longitudinal/lateral model in SI units, calibrated as game rules.
@@ -122,8 +123,7 @@ function drive(state, side, move, decision, section, next) {
   const time = Math.max(0.01, result.time + recoveryLoss + lateExitLoss + variance);
   const km = section.segments.reduce((sum, segment) => sum + segment.lengthM, 0) / 1000;
   const aggression = decision.pace === 'save' ? 0.78 : decision.pace === 'attack' ? 1.3 : 1;
-  const techniqueFuel = move?.aggressiveness ? Math.min(1.3, 1 + (move.aggressiveness - 1) * 0.1) : 1;
-  const fuel = round(Math.max(section.layoutVersion===2?0:0.01, car.cv * 0.0002 * km * aggression * techniqueFuel), 4);
+  const fuel = round(sectorFuel(car,section,decision,move,state.fuelModelVersion||1),4);
   const tires = round(km * 0.15 * aggression + (move?.costGrip || 0) * 0.12 * aggression, 4);
   const engine = round(km * 0.05 * aggression + (move?.costHealth || 0) * 0.1 * aggression, 4);
   const wear = 1 - clamp(car.engineHealth / 100, 0, 1);
@@ -144,7 +144,7 @@ function decisionPreview(state, decision = DEFAULT_DECISION, moveId = null) {
   const km = section.segments.reduce((sum, segment) => sum + segment.lengthM, 0) / 1000;
   const aggression = selected.pace === 'save' ? 0.78 : selected.pace === 'attack' ? 1.3 : 1;
   return { seconds: round(expected.time, 1), errorPercent: round(mistakeRisk(expected.skill, selected, section, next, state.environment, expected.familiarity) * 100, 1),
-    fuel: round(Math.max(section.layoutVersion===2?0:0.01, state.car.cv * 0.0002 * km * aggression * (move?.aggressiveness ? Math.min(1.3, 1 + (move.aggressiveness - 1) * 0.1) : 1))),
+    fuel: round(sectorFuel(state.car,section,selected,move,state.fuelModelVersion||1),4),
     tires: round(km * 0.15 * aggression + (move?.costGrip || 0) * 0.12 * aggression), distanceM: Math.round(section.segments.reduce((sum, segment) => sum + segment.lengthM, 0)),
     cornerLimitKmh: section.segments.some(segment => segment.radiusM > 0) ? round(Math.min(...section.segments.filter(segment => segment.radiusM > 0).map(segment => cornerLimit(expected.model, segment.radiusM) * 3.6)), 0) : null,
     brakingSkill: round(expected.skill.brake * 100, 0), closeEnough: Math.abs(state.gapSeconds || 0) <= 1.2, hasCorner: section.segments.some(segment => segment.radiusM > 0), hasBrakingZone: section.segments.some(segment => segment.radiusM > 0) || (next?.segments[0]?.radiusM || 0) > 0,

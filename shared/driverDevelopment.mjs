@@ -62,8 +62,8 @@ function publicDevelopment(row) {
     trainingCourses: JSON.parse(row?.trainingCourses || '{}') };
 }
 function createLessonState(pilot, seed) {
-  const car = { name: 'Compatta Scuola', brand: 'Scuola guida', image: '106.png', cv: 120, baseCv: 120, kg: 1100, baseKg: 1100, velMax: 180, zeroToHundred: 10, brake: 65, turnSlow: 65, turnFast: 60, driveType: 'FF', currentFuel: 20, tireGrip: 100, engineHealth: 100, km: 0, serviceKm: 0, fuelType: 'Normale' };
-  return { rulesVersion: 3, developmentVersion: 1, lesson: LESSON_ID, trackName: 'Scuola guida · Fondamentali della frenata', trackId: null,
+  const car = { cc:1600,engineType:'NA',name: 'Compatta Scuola', brand: 'Scuola guida', image: '106.png', cv: 120, baseCv: 120, kg: 1100, baseKg: 1100, velMax: 180, zeroToHundred: 10, brake: 65, turnSlow: 65, turnFast: 60, driveType: 'FF', currentFuel: 20, tireGrip: 100, engineHealth: 100, km: 0, serviceKm: 0, fuelType: 'Normale' };
+  return { rulesVersion: 3, fuelModelVersion:2, developmentVersion: 1, lesson: LESSON_ID, trackName: 'Scuola guida · Fondamentali della frenata', trackId: null,
     sections: structuredClone(LESSON_SECTIONS), geometrySource: 'authored', routeProfile: { kind: 'circuit', format: 'exercise', traffic: 'none' },
     environment: { weather: 'Asciutto', surface: 'Asfalto' }, distanceKm: LESSON_SECTIONS.flatMap(section => section.segments).reduce((sum, segment) => sum + segment.lengthM, 0) / 1000,
     car, pilot, opponent: { name: 'Istruttore · riferimento didattico', car: structuredClone(car), pilot: Object.fromEntries(Object.keys(pilot).filter(key => key !== 'fundamentals').map(key => [key, 30])) },

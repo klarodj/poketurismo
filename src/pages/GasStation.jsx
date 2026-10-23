@@ -1,3 +1,4 @@
+import FuelConsumption from '../components/FuelConsumption';
 import React, { useState } from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGarageStore from '../store/garageStore';
@@ -29,7 +30,7 @@ export default function GasStation() {
         <h1 className="text-2xl font-black italic text-red-600">AGIP 2002</h1>
         {!car ? <p>Equipaggia un’auto dal garage.</p> : <>
           <p>{car.brand} {car.name}: <strong>{car.currentFuel.toFixed(2)} / 45 L</strong> · {car.fuelType}</p>
-          <LCDDisplay value={cost} unit="€" label="Importo" />
+          <FuelConsumption car={car}/><LCDDisplay value={cost} unit="€" label="Importo" />
           <LCDDisplay value={quantity} unit="L" label="Da erogare" />
           <label className="block font-bold">Carburante
             <select className="block w-full p-2 border border-gray-500" value={fuelType} onChange={event => setFuelType(event.target.value)}>

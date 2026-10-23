@@ -36,7 +36,7 @@ async function snapshot(tx, userId, race) {
 }
 function carSnapshot(garage) {
   return { ...Object.fromEntries([...CAR_STATS, 'cv', 'nm', 'kg', 'km', 'engineHealth', 'tireGrip', 'serviceKm', 'currentFuel', 'fuelType'].map(key => [key, garage[key]])),
-    baseCv: garage.car.cv, baseKg: garage.car.kg, velMax: garage.car.velMax, zeroToHundred: garage.car.zeroToHundred, driveType: garage.car.driveType,
+    cc:garage.car.cc,engineType:garage.car.engineType,baseCv: garage.car.cv, baseKg: garage.car.kg, velMax: garage.car.velMax, zeroToHundred: garage.car.zeroToHundred, driveType: garage.car.driveType,
     id: garage.id, name: garage.car.name, brand: garage.car.brand?.name || '', image: garage.car.image };
 }
 async function startRace(tx, userId, body) {
@@ -149,7 +149,7 @@ async function startRace(tx, userId, body) {
   const raceSections = rulesVersion === 3 ? demo ? structuredClone(DEMO_TRACK.sections) : buildTacticalTrack(sections, distanceKm, routeProfile) : sections;
   const plan = incidentPlan(seed, rulesVersion === 3 ? raceSections.length : 0, routeProfile);
   const state = {
-    rulesVersion, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
+    rulesVersion, fuelModelVersion:rulesVersion!==3?1:gridMatch?(gridMatch.contract.fuelModelVersion||1):2, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
     car: carSnapshot(garage), pilot,
     opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },

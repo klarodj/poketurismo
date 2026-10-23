@@ -7,7 +7,7 @@ import { TacticalLog } from './RaceTiming';
 
 const value = (number, decimals = 0, unit = '') => Number.isFinite(Number(number)) && number !== null && number !== undefined ? `${Number(number).toFixed(decimals)}${unit}` : '—';
 export function CarDetail({ car, pilot, name }) {
-  const specs = { cv: ['Potenza', 0, ' CV'], nm: ['Coppia', 0, ' Nm'], kg: ['Peso a secco', 0, ' kg'], velMax: ['Velocità nominale', 0, ' km/h'], zeroToHundred: ['0–100 km/h', 1, ' s'], currentFuel: ['Carburante', 2, ' L'], tireGrip: ['Gomme', 1, '%'], engineHealth: ['Motore', 1, '%'], km: ['Chilometraggio', 2, ' km'], serviceKm: ['Ultimo tagliando', 0, ' km'] };
+  const specs = { cc: ['Cilindrata',0,' cm³'], cv: ['Potenza', 0, ' CV'], nm: ['Coppia', 0, ' Nm'], kg: ['Peso a secco', 0, ' kg'], velMax: ['Velocità nominale', 0, ' km/h'], zeroToHundred: ['0–100 km/h', 1, ' s'], currentFuel: ['Carburante', 2, ' L'], tireGrip: ['Gomme', 1, '%'], engineHealth: ['Motore', 1, '%'], km: ['Chilometraggio', 2, ' km'], serviceKm: ['Ultimo tagliando', 0, ' km'] };
   return <div className="space-y-4">
     <RaceCarArtwork car={car} large />
     <p className="text-xl font-bold">{typeof car.brand === 'string' ? car.brand : car.brand?.name} {car.name}</p>

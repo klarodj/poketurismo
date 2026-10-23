@@ -1060,3 +1060,32 @@ test('a pending number request can be blocked or reported after the sender leave
  assert.equal((await get('/phone/2')).data.contacts[0].canMessage,false);assert.equal((await post('/meet/message',{userId:2,peerId:1,text:'Non ancora amici'})).status,403);
  assert.equal((await post('/meet/report',{userId:2,peerId:1,reason:'Richiesta non gradita'})).status,200);assert.equal((await post('/meet/block',{userId:2,peerId:1,blocked:true})).status,200);assert.deepEqual((await get('/phone/2/notifications')).data.friendRequests,[]);assert.equal((await prisma.meetFriendship.findFirst()).status,'removed');
 });
+
+test('new races freeze authoritative displacement, rated power and consumption version; body cannot forge fuel costs',async()=>{
+ const result=await post('/races',{mode:'track',trackId:track.id,cc:1,fuelModelVersion:1,fuelConsumption:0});assert.equal(result.status,200);const race=result.data.race;assert.equal(race.fuelModelVersion,2);assert.equal(race.car.cc,car.cc);assert.equal(race.car.baseCv,car.cv);assert.equal(race.car.engineType,car.engineType);
+ const next=await post(`/races/${race.id}/turns`,{version:0,moveId:null});assert.equal(next.status,200);assert.ok(next.data.race.logs[0].fuel>0.2);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).currentFuel,next.data.race.car.currentFuel);
+});
+test('stored races without fuel version retain original consumption across resume and idempotent turns',async()=>{
+ const started=await begin();const row=await prisma.raceSession.findUnique({where:{id:started.id}}),state=JSON.parse(row.state);delete state.fuelModelVersion;delete state.car.cc;delete state.car.engineType;await prisma.raceSession.update({where:{id:row.id},data:{state:JSON.stringify(state)}});
+ const key=randomUUID(),result=await post(`/races/${row.id}/turns`,{version:0,moveId:null},key);assert.equal(result.status,200);assert.equal(result.data.race.logs[0].fuel,0.1);assert.equal((await post(`/races/${row.id}/turns`,{version:0,moveId:null},key)).data.race.logs[0].fuel,0.1);
+});
+test('old pending meet invitations remain acceptable and retain version one fuel rules for both drivers',async()=>{
+ const sent=await socialInvite(),row=await prisma.meetChallenge.findUnique({where:{id:sent.challenge.id}}),contract=JSON.parse(row.contract);delete contract.fuelModelVersion;contract.sender.key=contract.sender.legacyKey;delete contract.sender.legacyKey;delete contract.sender.car.cc;delete contract.sender.car.engineType;await prisma.meetChallenge.update({where:{id:row.id},data:{contract:JSON.stringify(contract)}});
+ const accepted=await post('/meet/challenge/respond',{userId:2,challengeId:row.id,action:'accept',garageId:otherGarage.id,quoteKey:sent.other.cars[0].quoteKey});assert.equal(accepted.status,200,JSON.stringify(accepted.data));const race=(await post('/meet/challenge/start',{challengeId:row.id})).data.race;assert.equal(race.fuelModelVersion,1);assert.equal(race.car.cc,undefined);
+});
+test('new meet contracts freeze the same new fuel rules and full engine metadata for both participants',async()=>{
+ const challenge=await socialAccept();const row=await prisma.meetChallenge.findUnique({where:{id:challenge.id}}),contract=JSON.parse(row.contract);assert.equal(contract.fuelModelVersion,2);assert.equal(contract.sender.car.cc,car.cc);assert.equal(contract.recipient.car.cc,car.cc);
+ const first=(await post('/meet/challenge/start',{challengeId:row.id})).data.race;assert.equal(first.fuelModelVersion,2);await finishSocial(1,first);const second=(await post('/meet/challenge/start',{userId:2,challengeId:row.id})).data.race;assert.equal(second.fuelModelVersion,2);
+});
+test('personal and public time trials separate old and new fuel rules without deleting historical races',async()=>{
+ const first=await begin('track',{timeTrial:true});await post(`/races/${first.id}/turns`,{version:0,moveId:null});const row=await prisma.raceSession.findUnique({where:{id:first.id}}),old=JSON.parse(row.state);delete old.fuelModelVersion;await prisma.raceSession.update({where:{id:row.id},data:{state:JSON.stringify(old)}});
+ const second=await begin('track',{timeTrial:true});await post(`/races/${second.id}/turns`,{version:0,moveId:null});await post('/meet/showcase',{garageId:garage.id});
+ const records=(await get('/time-trials/1')).data;assert.equal(records.length,2);assert.deepEqual(records.map(r=>r.fuelModelVersion).sort(),[1,2]);const url=`/meet/leaderboard?trackId=${track.id}&modelId=${car.id}`;
+ assert.equal((await get(url)).data.records.length,1);assert.equal((await get(url+'&fuelVersion=1')).data.records.length,1);assert.equal((await get(url+'&fuelVersion=3')).status,400);assert.equal(await prisma.raceSession.count(),2);
+});
+
+test('championship entries freeze consumption rules, including legacy entries starting new rounds',async()=>{
+ const entry=await modernCup(),row=await prisma.championshipEntry.findUnique({where:{id:entry.id}}),contract=JSON.parse(row.contract);assert.equal(contract.fuelModelVersion,2);
+ const first=await begin('championship',{entryId:entry.id});assert.equal(first.fuelModelVersion,2);await post(`/races/${first.id}/turns`,{version:0,moveId:null});
+ delete contract.fuelModelVersion;await prisma.championshipEntry.update({where:{id:entry.id},data:{contract:JSON.stringify(contract)}});const second=await begin('championship',{entryId:entry.id});assert.equal(second.fuelModelVersion,1);
+});

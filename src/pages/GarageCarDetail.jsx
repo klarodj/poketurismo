@@ -1,3 +1,4 @@
+import FuelConsumption from '../components/FuelConsumption';
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useGarageStore from '../store/garageStore';
@@ -65,7 +66,7 @@ export default function GarageCarDetail() {
         <GarageTabs />
         {review&&<section className="tuning-garage-review" aria-label="Conferma preparazione"><button className="win98-btn" autoFocus onClick={()=>setReview(null)}>Chiudi confronto</button><TuningPreview part={review} carName={`${car.brand} ${car.name}`} money={money} disabled={pending>0||Boolean(activeRace)} onMount={confirmMount}/></section>}
 
-        {/* Sub-header Navigation */}
+        <FuelConsumption car={car}/>{/* Sub-header Navigation */}
         <div className="p-2 border-b border-win98-darkGray flex justify-between items-center bg-win98-blue text-white">
            <button 
              onClick={() => navigate('/garage/auto')}

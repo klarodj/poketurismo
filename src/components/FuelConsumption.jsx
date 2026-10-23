@@ -1,0 +1,4 @@
+import React from 'react';
+import {consumptionEstimate} from '../../shared/fuelConsumption.mjs';
+const display=n=>n.toLocaleString('it-IT',{minimumFractionDigits:1,maximumFractionDigits:1});
+export default function FuelConsumption({car}){const estimate=consumptionEstimate(car);return <section className="border-2 border-t-gray-500 border-l-gray-500 border-b-white border-r-white bg-win98-gray p-2 text-black" aria-label="Consumo stimato"><h3 className="font-bold">Consumo stimato · L/100 km</h3><p>Misto indicativo: <strong>{display(estimate.mixed)}</strong></p><p>In gara: <strong>{display(estimate.save)}</strong> conserva · <strong>{display(estimate.balanced)}</strong> ritmo pulito · <strong>{display(estimate.attack)}</strong> attacco</p><p className="text-base">Stima a motore caldo sulla tua preparazione attuale. Pendenze e tecniche possono aumentare o ridurre il consumo del settore; non è un dato omologato.</p></section>;}
