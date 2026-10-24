@@ -1,0 +1,5859 @@
+{
+  "version": 2,
+  "proposedPrice": 2500,
+  "colours": [
+    {
+      "id": "rosso",
+      "name": "Rosso pastello",
+      "rgb": [
+        195,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "blu",
+      "name": "Blu scuro",
+      "rgb": [
+        28,
+        60,
+        148
+      ]
+    },
+    {
+      "id": "verde",
+      "name": "Verde bottiglia",
+      "rgb": [
+        27,
+        82,
+        54
+      ]
+    },
+    {
+      "id": "nero",
+      "name": "Nero",
+      "rgb": [
+        29,
+        32,
+        36
+      ]
+    },
+    {
+      "id": "bianco",
+      "name": "Bianco",
+      "rgb": [
+        237,
+        238,
+        234
+      ]
+    },
+    {
+      "id": "argento",
+      "name": "Grigio argento",
+      "rgb": [
+        159,
+        168,
+        178
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": 1,
+      "name": "145 Quadrifoglio",
+      "image": "145.png",
+      "year": 1997,
+      "brand": "Alfa Romeo",
+      "width": 400,
+      "height": 130,
+      "key": "145",
+      "source": "/images/car/145.png",
+      "originalSha256": "c3707214e9832b4eb8d8e0ea5e43c322c044a0f0a024bc499d22954d405b49b4",
+      "mask": "/images/paint/145/mask.png",
+      "images": {
+        "rosso": "/images/paint/145/rosso.png",
+        "blu": "/images/paint/145/blu.png",
+        "verde": "/images/paint/145/verde.png",
+        "nero": "/images/paint/145/nero.png",
+        "bianco": "/images/paint/145/bianco.png",
+        "argento": "/images/paint/145/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16475,
+        "visiblePixels": 29744,
+        "coverage": 55.4,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 2,
+      "name": "155 Q4",
+      "image": "155.png",
+      "year": 1992,
+      "brand": "Alfa Romeo",
+      "width": 400,
+      "height": 130,
+      "key": "155",
+      "source": "/images/car/155.png",
+      "originalSha256": "4c39076dc33fd30fe234546a9885a07b784a4509de9b9fd72c4578094982e80e",
+      "mask": "/images/paint/155/mask.png",
+      "images": {
+        "rosso": "/images/paint/155/rosso.png",
+        "blu": "/images/paint/155/blu.png",
+        "verde": "/images/paint/155/verde.png",
+        "nero": "/images/paint/155/nero.png",
+        "bianco": "/images/paint/155/bianco.png",
+        "argento": "/images/paint/155/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17022,
+        "visiblePixels": 29220,
+        "coverage": 58.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 3,
+      "name": "33 Quadrifoglio",
+      "image": "33.png",
+      "year": 1990,
+      "brand": "Alfa Romeo",
+      "width": 400,
+      "height": 130,
+      "key": "33",
+      "source": "/images/car/33.png",
+      "originalSha256": "73f3aba7b1a2e3d53bef8e0ccc7e54feb85e085243d658779a1547f0d2413235",
+      "mask": "/images/paint/33/mask.png",
+      "images": {
+        "rosso": "/images/paint/33/rosso.png",
+        "blu": "/images/paint/33/blu.png",
+        "verde": "/images/paint/33/verde.png",
+        "nero": "/images/paint/33/nero.png",
+        "bianco": "/images/paint/33/bianco.png",
+        "argento": "/images/paint/33/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14259,
+        "visiblePixels": 31344,
+        "coverage": 45.5,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 4,
+      "name": "75 Quadrifoglio",
+      "image": "75.png",
+      "year": 1990,
+      "brand": "Alfa Romeo",
+      "width": 400,
+      "height": 130,
+      "key": "75",
+      "source": "/images/car/75.png",
+      "originalSha256": "15aba3145dd7c28ff831f89d533c366de7dfda196e9e7fd3d9c2607f084260e1",
+      "mask": "/images/paint/75/mask.png",
+      "images": {
+        "rosso": "/images/paint/75/rosso.png",
+        "blu": "/images/paint/75/blu.png",
+        "verde": "/images/paint/75/verde.png",
+        "nero": "/images/paint/75/nero.png",
+        "bianco": "/images/paint/75/bianco.png",
+        "argento": "/images/paint/75/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15628,
+        "visiblePixels": 29928,
+        "coverage": 52.2,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 5,
+      "name": "GTV v6 Cup",
+      "image": "gtv.png",
+      "year": 1997,
+      "brand": "Alfa Romeo",
+      "width": 400,
+      "height": 130,
+      "key": "gtv",
+      "source": "/images/car/gtv.png",
+      "originalSha256": "9bb27a7cf0dc439b1452d92e807cefccecff1f81b25342132bea0682c6d20a31",
+      "mask": "/images/paint/gtv/mask.png",
+      "images": {
+        "rosso": "/images/paint/gtv/rosso.png",
+        "blu": "/images/paint/gtv/blu.png",
+        "verde": "/images/paint/gtv/verde.png",
+        "nero": "/images/paint/gtv/nero.png",
+        "bianco": "/images/paint/gtv/bianco.png",
+        "argento": "/images/paint/gtv/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17923,
+        "visiblePixels": 27560,
+        "coverage": 65,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 6,
+      "name": "Vantage",
+      "image": "vantage.png",
+      "year": 1997,
+      "brand": "Aston Martin",
+      "width": 400,
+      "height": 130,
+      "key": "vantage",
+      "source": "/images/car/vantage.png",
+      "originalSha256": "f085c74bf374eb8645ff5b88e9758549d5a3196ef0d39d316051d280a9ec21e1",
+      "mask": "/images/paint/vantage/mask.png",
+      "images": {
+        "rosso": "/images/paint/vantage/rosso.png",
+        "blu": "/images/paint/vantage/blu.png",
+        "verde": "/images/paint/vantage/verde.png",
+        "nero": "/images/paint/vantage/nero.png",
+        "bianco": "/images/paint/vantage/bianco.png",
+        "argento": "/images/paint/vantage/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13600,
+        "visiblePixels": 30912,
+        "coverage": 44,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 7,
+      "name": "80 RS2",
+      "image": "80.png",
+      "year": 1994,
+      "brand": "Audi",
+      "width": 400,
+      "height": 130,
+      "key": "80",
+      "source": "/images/car/80.png",
+      "originalSha256": "53f5648655ab5671e7fc22e7a28594ffb334b64e274f3e47f4907380b4e96e72",
+      "mask": "/images/paint/80/mask.png",
+      "images": {
+        "rosso": "/images/paint/80/rosso.png",
+        "blu": "/images/paint/80/blu.png",
+        "verde": "/images/paint/80/verde.png",
+        "nero": "/images/paint/80/nero.png",
+        "bianco": "/images/paint/80/bianco.png",
+        "argento": "/images/paint/80/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15931,
+        "visiblePixels": 30012,
+        "coverage": 53.1,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 8,
+      "name": "Coupè S2",
+      "image": "s2.png",
+      "year": 1993,
+      "brand": "Audi",
+      "width": 400,
+      "height": 130,
+      "key": "s2",
+      "source": "/images/car/s2.png",
+      "originalSha256": "d007f3fedc6a122f1ee34512390611ad860a17544d8a2ef84e9f4879c4d3c647",
+      "mask": "/images/paint/s2/mask.png",
+      "images": {
+        "rosso": "/images/paint/s2/rosso.png",
+        "blu": "/images/paint/s2/blu.png",
+        "verde": "/images/paint/s2/verde.png",
+        "nero": "/images/paint/s2/nero.png",
+        "bianco": "/images/paint/s2/bianco.png",
+        "argento": "/images/paint/s2/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13908,
+        "visiblePixels": 32160,
+        "coverage": 43.2,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 9,
+      "name": "RS4",
+      "image": "rs4.png",
+      "year": 2000,
+      "brand": "Audi",
+      "width": 400,
+      "height": 130,
+      "key": "rs4",
+      "source": "/images/car/rs4.png",
+      "originalSha256": "f366dcce3371c4981b41e99662b7390dfeb975cbe8140e49725f00fcd83240ea",
+      "mask": "/images/paint/rs4/mask.png",
+      "images": {
+        "rosso": "/images/paint/rs4/rosso.png",
+        "blu": "/images/paint/rs4/blu.png",
+        "verde": "/images/paint/rs4/verde.png",
+        "nero": "/images/paint/rs4/nero.png",
+        "bianco": "/images/paint/rs4/bianco.png",
+        "argento": "/images/paint/rs4/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18942,
+        "visiblePixels": 34772,
+        "coverage": 54.5,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 10,
+      "name": "S3",
+      "image": "s3.png",
+      "year": 2001,
+      "brand": "Audi",
+      "width": 400,
+      "height": 130,
+      "key": "s3",
+      "source": "/images/car/s3.png",
+      "originalSha256": "5e82df2caea123ada5a51ab74f97b1b505f89de1fa65f3d84a9d6b61f1321f3a",
+      "mask": "/images/paint/s3/mask.png",
+      "images": {
+        "rosso": "/images/paint/s3/rosso.png",
+        "blu": "/images/paint/s3/blu.png",
+        "verde": "/images/paint/s3/verde.png",
+        "nero": "/images/paint/s3/nero.png",
+        "bianco": "/images/paint/s3/bianco.png",
+        "argento": "/images/paint/s3/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15550,
+        "visiblePixels": 29268,
+        "coverage": 53.1,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 11,
+      "name": "S6",
+      "image": "s6.png",
+      "year": 2001,
+      "brand": "Audi",
+      "width": 400,
+      "height": 130,
+      "key": "s6",
+      "source": "/images/car/s6.png",
+      "originalSha256": "3728ef62cdac6bc547d70f3f877540c96bd99d1d78238657412a20737b30271c",
+      "mask": "/images/paint/s6/mask.png",
+      "images": {
+        "rosso": "/images/paint/s6/rosso.png",
+        "blu": "/images/paint/s6/blu.png",
+        "verde": "/images/paint/s6/verde.png",
+        "nero": "/images/paint/s6/nero.png",
+        "bianco": "/images/paint/s6/bianco.png",
+        "argento": "/images/paint/s6/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13200,
+        "visiblePixels": 27572,
+        "coverage": 47.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 12,
+      "name": "TT",
+      "image": "tt.png",
+      "year": 1998,
+      "brand": "Audi",
+      "width": 400,
+      "height": 130,
+      "key": "tt",
+      "source": "/images/car/tt.png",
+      "originalSha256": "a61c5c94c96681a58a1783b2d44f453531a3e57ed602eaee67e054fe81833c92",
+      "mask": "/images/paint/tt/mask.png",
+      "images": {
+        "rosso": "/images/paint/tt/rosso.png",
+        "blu": "/images/paint/tt/blu.png",
+        "verde": "/images/paint/tt/verde.png",
+        "nero": "/images/paint/tt/nero.png",
+        "bianco": "/images/paint/tt/bianco.png",
+        "argento": "/images/paint/tt/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12447,
+        "visiblePixels": 28396,
+        "coverage": 43.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 13,
+      "name": "A112 Abarth",
+      "image": "a112.png",
+      "year": 1975,
+      "brand": "Autobianchi",
+      "width": 400,
+      "height": 130,
+      "key": "a112",
+      "source": "/images/car/a112.png",
+      "originalSha256": "539db11d943f02029e8954541d88d1304ab3345e0c422bf94aced8b3e1526a08",
+      "mask": "/images/paint/a112/mask.png",
+      "images": {
+        "rosso": "/images/paint/a112/rosso.png",
+        "blu": "/images/paint/a112/blu.png",
+        "verde": "/images/paint/a112/verde.png",
+        "nero": "/images/paint/a112/nero.png",
+        "bianco": "/images/paint/a112/bianco.png",
+        "argento": "/images/paint/a112/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 9102,
+        "visiblePixels": 25628,
+        "coverage": 35.5,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 14,
+      "name": "Y10 Turbo",
+      "image": "y10.png",
+      "year": 1985,
+      "brand": "Autobianchi",
+      "width": 400,
+      "height": 130,
+      "key": "y10",
+      "source": "/images/car/y10.png",
+      "originalSha256": "e70f9360b66453b5d7705394d4619b4a11d6de8a8a252867b45d77b8ac7c6ca9",
+      "mask": "/images/paint/y10/mask.png",
+      "images": {
+        "rosso": "/images/paint/y10/rosso.png",
+        "blu": "/images/paint/y10/blu.png",
+        "verde": "/images/paint/y10/verde.png",
+        "nero": "/images/paint/y10/nero.png",
+        "bianco": "/images/paint/y10/bianco.png",
+        "argento": "/images/paint/y10/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10988,
+        "visiblePixels": 24800,
+        "coverage": 44.3,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 16,
+      "name": "850 CSI",
+      "image": "850.png",
+      "year": 1992,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "850",
+      "source": "/images/car/850.png",
+      "originalSha256": "e7cf0984fcdf022cdf7074c8aa93a12275776da57d400496d246d0cca1a0786d",
+      "mask": "/images/paint/850/mask.png",
+      "images": {
+        "rosso": "/images/paint/850/rosso.png",
+        "blu": "/images/paint/850/blu.png",
+        "verde": "/images/paint/850/verde.png",
+        "nero": "/images/paint/850/nero.png",
+        "bianco": "/images/paint/850/bianco.png",
+        "argento": "/images/paint/850/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16569,
+        "visiblePixels": 33892,
+        "coverage": 48.9,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 17,
+      "name": "M1",
+      "image": "m1.png",
+      "year": 1978,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "m1",
+      "source": "/images/car/m1.png",
+      "originalSha256": "a376afd77714139c73c010dab5a7207013be221a2a9af9b360b665048291e89f",
+      "mask": "/images/paint/m1/mask.png",
+      "images": {
+        "rosso": "/images/paint/m1/rosso.png",
+        "blu": "/images/paint/m1/blu.png",
+        "verde": "/images/paint/m1/verde.png",
+        "nero": "/images/paint/m1/nero.png",
+        "bianco": "/images/paint/m1/bianco.png",
+        "argento": "/images/paint/m1/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14527,
+        "visiblePixels": 30544,
+        "coverage": 47.6,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 18,
+      "name": "M3 E30",
+      "image": "e30.png",
+      "year": 1988,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "e30",
+      "source": "/images/car/e30.png",
+      "originalSha256": "5694b7e4874a4f9e142c4efeacc34a1ac3eb205c21ee70c61ae602275e156fb4",
+      "mask": "/images/paint/e30/mask.png",
+      "images": {
+        "rosso": "/images/paint/e30/rosso.png",
+        "blu": "/images/paint/e30/blu.png",
+        "verde": "/images/paint/e30/verde.png",
+        "nero": "/images/paint/e30/nero.png",
+        "bianco": "/images/paint/e30/bianco.png",
+        "argento": "/images/paint/e30/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17509,
+        "visiblePixels": 32236,
+        "coverage": 54.3,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 19,
+      "name": "M3 E36",
+      "image": "e36.png",
+      "year": 1996,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "e36",
+      "source": "/images/car/e36.png",
+      "originalSha256": "7cc59f517d66566a0bcc3c4d0917f533663f31a20a7d253e49b49c166ef16c0a",
+      "mask": "/images/paint/e36/mask.png",
+      "images": {
+        "rosso": "/images/paint/e36/rosso.png",
+        "blu": "/images/paint/e36/blu.png",
+        "verde": "/images/paint/e36/verde.png",
+        "nero": "/images/paint/e36/nero.png",
+        "bianco": "/images/paint/e36/bianco.png",
+        "argento": "/images/paint/e36/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17423,
+        "visiblePixels": 32660,
+        "coverage": 53.3,
+        "maskOverlap": 98.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 20,
+      "name": "M3 E46",
+      "image": "e46.png",
+      "year": 2000,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "e46",
+      "source": "/images/car/e46.png",
+      "originalSha256": "5f9e3075ec842cf212f7a73b77f740930d275b75efa1700e45fca7642018640f",
+      "mask": "/images/paint/e46/mask.png",
+      "images": {
+        "rosso": "/images/paint/e46/rosso.png",
+        "blu": "/images/paint/e46/blu.png",
+        "verde": "/images/paint/e46/verde.png",
+        "nero": "/images/paint/e46/nero.png",
+        "bianco": "/images/paint/e46/bianco.png",
+        "argento": "/images/paint/e46/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16980,
+        "visiblePixels": 32076,
+        "coverage": 52.9,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 21,
+      "name": "M5 E34",
+      "image": "e34.png",
+      "year": 1994,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "e34",
+      "source": "/images/car/e34.png",
+      "originalSha256": "ebe64eb1af90f89a1e64e26b3517d2b946b5ce132f9635c986b693eaea7ec653",
+      "mask": "/images/paint/e34/mask.png",
+      "images": {
+        "rosso": "/images/paint/e34/rosso.png",
+        "blu": "/images/paint/e34/blu.png",
+        "verde": "/images/paint/e34/verde.png",
+        "nero": "/images/paint/e34/nero.png",
+        "bianco": "/images/paint/e34/bianco.png",
+        "argento": "/images/paint/e34/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12015,
+        "visiblePixels": 29432,
+        "coverage": 40.8,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 22,
+      "name": "M5 E39",
+      "image": "e39.png",
+      "year": 2000,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "e39",
+      "source": "/images/car/e39.png",
+      "originalSha256": "2a50a3f31a9b63459f6b50ab87714e3479156439a3fa5d8cbbe05b0e6232d269",
+      "mask": "/images/paint/e39/mask.png",
+      "images": {
+        "rosso": "/images/paint/e39/rosso.png",
+        "blu": "/images/paint/e39/blu.png",
+        "verde": "/images/paint/e39/verde.png",
+        "nero": "/images/paint/e39/nero.png",
+        "bianco": "/images/paint/e39/bianco.png",
+        "argento": "/images/paint/e39/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15708,
+        "visiblePixels": 33600,
+        "coverage": 46.8,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 23,
+      "name": "M635",
+      "image": "m635.png",
+      "year": 1984,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "m635",
+      "source": "/images/car/m635.png",
+      "originalSha256": "bdb04948d85a971db75d53373417779d52e59b86a5f8379ba69a4974e83c2257",
+      "mask": "/images/paint/m635/mask.png",
+      "images": {
+        "rosso": "/images/paint/m635/rosso.png",
+        "blu": "/images/paint/m635/blu.png",
+        "verde": "/images/paint/m635/verde.png",
+        "nero": "/images/paint/m635/nero.png",
+        "bianco": "/images/paint/m635/bianco.png",
+        "argento": "/images/paint/m635/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17630,
+        "visiblePixels": 34928,
+        "coverage": 50.5,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 24,
+      "name": "Z3 M",
+      "image": "z3m.png",
+      "year": 2000,
+      "brand": "BMW",
+      "width": 400,
+      "height": 130,
+      "key": "z3m",
+      "source": "/images/car/z3m.png",
+      "originalSha256": "a863ddca0201fc9c7ba64a2a3da26952ea1f93397ba8775eb92dc03d6d5cd20a",
+      "mask": "/images/paint/z3m/mask.png",
+      "images": {
+        "rosso": "/images/paint/z3m/rosso.png",
+        "blu": "/images/paint/z3m/blu.png",
+        "verde": "/images/paint/z3m/verde.png",
+        "nero": "/images/paint/z3m/nero.png",
+        "bianco": "/images/paint/z3m/bianco.png",
+        "argento": "/images/paint/z3m/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16689,
+        "visiblePixels": 32584,
+        "coverage": 51.2,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 15,
+      "name": "Continental R",
+      "image": "continental.png",
+      "year": 1995,
+      "brand": "Bentley",
+      "width": 400,
+      "height": 130,
+      "key": "continental",
+      "source": "/images/car/continental.png",
+      "originalSha256": "a602fc0a359d42486c87652120f20a0eaba4deb14423e915fe8840133a1e0fbe",
+      "mask": "/images/paint/continental/mask.png",
+      "images": {
+        "rosso": "/images/paint/continental/rosso.png",
+        "blu": "/images/paint/continental/blu.png",
+        "verde": "/images/paint/continental/verde.png",
+        "nero": "/images/paint/continental/nero.png",
+        "bianco": "/images/paint/continental/bianco.png",
+        "argento": "/images/paint/continental/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17443,
+        "visiblePixels": 30368,
+        "coverage": 57.4,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 25,
+      "name": "EB110",
+      "image": "eb110.png",
+      "year": 1991,
+      "brand": "Bugatti",
+      "width": 400,
+      "height": 130,
+      "key": "eb110",
+      "source": "/images/car/eb110.png",
+      "originalSha256": "1bb9575ad784e387fbc7557a7a99cf2a82bbaef31f41f55de84754d87f374f66",
+      "mask": "/images/paint/eb110/mask.png",
+      "images": {
+        "rosso": "/images/paint/eb110/rosso.png",
+        "blu": "/images/paint/eb110/blu.png",
+        "verde": "/images/paint/eb110/verde.png",
+        "nero": "/images/paint/eb110/nero.png",
+        "bianco": "/images/paint/eb110/bianco.png",
+        "argento": "/images/paint/eb110/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19736,
+        "visiblePixels": 37464,
+        "coverage": 52.7,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 26,
+      "name": "Super 7",
+      "image": "seven.png",
+      "year": 1992,
+      "brand": "Caterham",
+      "width": 400,
+      "height": 130,
+      "key": "seven",
+      "source": "/images/car/seven.png",
+      "originalSha256": "0f5c3802dfc5642e41ea8ac623e9684ca2b79b365876f7a9150d54729b3a4771",
+      "mask": "/images/paint/seven/mask.png",
+      "images": {
+        "rosso": "/images/paint/seven/rosso.png",
+        "blu": "/images/paint/seven/blu.png",
+        "verde": "/images/paint/seven/verde.png",
+        "nero": "/images/paint/seven/nero.png",
+        "bianco": "/images/paint/seven/bianco.png",
+        "argento": "/images/paint/seven/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 8942,
+        "visiblePixels": 29476,
+        "coverage": 30.3,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 27,
+      "name": "Camaro Z28",
+      "image": "camaro.png",
+      "year": 1998,
+      "brand": "Chevrolet",
+      "width": 400,
+      "height": 130,
+      "key": "camaro",
+      "source": "/images/car/camaro.png",
+      "originalSha256": "16f2d814b1fefba6d3681fa3d441ccf514f2d1516618be625fddcd3a1dea3c2d",
+      "mask": "/images/paint/camaro/mask.png",
+      "images": {
+        "rosso": "/images/paint/camaro/rosso.png",
+        "blu": "/images/paint/camaro/blu.png",
+        "verde": "/images/paint/camaro/verde.png",
+        "nero": "/images/paint/camaro/nero.png",
+        "bianco": "/images/paint/camaro/bianco.png",
+        "argento": "/images/paint/camaro/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17048,
+        "visiblePixels": 30540,
+        "coverage": 55.8,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 28,
+      "name": "Corvette C4 ZR1",
+      "image": "c4.png",
+      "year": 1993,
+      "brand": "Chevrolet",
+      "width": 400,
+      "height": 130,
+      "key": "c4",
+      "source": "/images/car/c4.png",
+      "originalSha256": "a960573f0b62366c1dccb7c21c31eb0a5b3fc30eb6a515c0b2489fbf02f5aa62",
+      "mask": "/images/paint/c4/mask.png",
+      "images": {
+        "rosso": "/images/paint/c4/rosso.png",
+        "blu": "/images/paint/c4/blu.png",
+        "verde": "/images/paint/c4/verde.png",
+        "nero": "/images/paint/c4/nero.png",
+        "bianco": "/images/paint/c4/bianco.png",
+        "argento": "/images/paint/c4/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18923,
+        "visiblePixels": 35772,
+        "coverage": 52.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 29,
+      "name": "Corvette C5 Z06",
+      "image": "c5.png",
+      "year": 2001,
+      "brand": "Chevrolet",
+      "width": 400,
+      "height": 130,
+      "key": "c5",
+      "source": "/images/car/c5.png",
+      "originalSha256": "2cbf9f8ffc5212911df928680f56287f742637ab098f2801b199d161f55eb64e",
+      "mask": "/images/paint/c5/mask.png",
+      "images": {
+        "rosso": "/images/paint/c5/rosso.png",
+        "blu": "/images/paint/c5/blu.png",
+        "verde": "/images/paint/c5/verde.png",
+        "nero": "/images/paint/c5/nero.png",
+        "bianco": "/images/paint/c5/bianco.png",
+        "argento": "/images/paint/c5/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21895,
+        "visiblePixels": 36136,
+        "coverage": 60.6,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 30,
+      "name": "AX Gti",
+      "image": "ax.png",
+      "year": 1991,
+      "brand": "Citroen",
+      "width": 400,
+      "height": 130,
+      "key": "ax",
+      "source": "/images/car/ax.png",
+      "originalSha256": "81ea58cc6972a0e5c5889bd6857a083603b4e496c440a39dda099f8da161ba6f",
+      "mask": "/images/paint/ax/mask.png",
+      "images": {
+        "rosso": "/images/paint/ax/rosso.png",
+        "blu": "/images/paint/ax/blu.png",
+        "verde": "/images/paint/ax/verde.png",
+        "nero": "/images/paint/ax/nero.png",
+        "bianco": "/images/paint/ax/bianco.png",
+        "argento": "/images/paint/ax/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12801,
+        "visiblePixels": 28164,
+        "coverage": 45.5,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 31,
+      "name": "Saxo VTS",
+      "image": "saxo.png",
+      "year": 1998,
+      "brand": "Citroen",
+      "width": 400,
+      "height": 130,
+      "key": "saxo",
+      "source": "/images/car/saxo.png",
+      "originalSha256": "437895c231bb0a49ab5eaa9d3d0620fa2b46653a54ea06dbae1b7351498707ca",
+      "mask": "/images/paint/saxo/mask.png",
+      "images": {
+        "rosso": "/images/paint/saxo/rosso.png",
+        "blu": "/images/paint/saxo/blu.png",
+        "verde": "/images/paint/saxo/verde.png",
+        "nero": "/images/paint/saxo/nero.png",
+        "bianco": "/images/paint/saxo/bianco.png",
+        "argento": "/images/paint/saxo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15639,
+        "visiblePixels": 32504,
+        "coverage": 48.1,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 32,
+      "name": "Visa Gti",
+      "image": "visa.png",
+      "year": 1985,
+      "brand": "Citroen",
+      "width": 400,
+      "height": 130,
+      "key": "visa",
+      "source": "/images/car/visa.png",
+      "originalSha256": "8d9121ddbaeb9d46887c063a74058ab653c02dd10bc570d3640f9f746b5393ea",
+      "mask": "/images/paint/visa/mask.png",
+      "images": {
+        "rosso": "/images/paint/visa/rosso.png",
+        "blu": "/images/paint/visa/blu.png",
+        "verde": "/images/paint/visa/verde.png",
+        "nero": "/images/paint/visa/nero.png",
+        "bianco": "/images/paint/visa/bianco.png",
+        "argento": "/images/paint/visa/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10479,
+        "visiblePixels": 27700,
+        "coverage": 37.8,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 33,
+      "name": "Xsara VTS",
+      "image": "xsara.png",
+      "year": 1998,
+      "brand": "Citroen",
+      "width": 400,
+      "height": 130,
+      "key": "xsara",
+      "source": "/images/car/xsara.png",
+      "originalSha256": "ae4186a2f895127eabce682d68ae83dfb51ba63feef49dad4e52b34a9f099891",
+      "mask": "/images/paint/xsara/mask.png",
+      "images": {
+        "rosso": "/images/paint/xsara/rosso.png",
+        "blu": "/images/paint/xsara/blu.png",
+        "verde": "/images/paint/xsara/verde.png",
+        "nero": "/images/paint/xsara/nero.png",
+        "bianco": "/images/paint/xsara/bianco.png",
+        "argento": "/images/paint/xsara/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14816,
+        "visiblePixels": 33952,
+        "coverage": 43.6,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 34,
+      "name": "ZX 2.0",
+      "image": "zx.png",
+      "year": 1996,
+      "brand": "Citroen",
+      "width": 400,
+      "height": 130,
+      "key": "zx",
+      "source": "/images/car/zx.png",
+      "originalSha256": "d0e16c6ee79be6cd8b3804a9bdbe8daf7cb5d9b9b7d853a081904205b4897dd2",
+      "mask": "/images/paint/zx/mask.png",
+      "images": {
+        "rosso": "/images/paint/zx/rosso.png",
+        "blu": "/images/paint/zx/blu.png",
+        "verde": "/images/paint/zx/verde.png",
+        "nero": "/images/paint/zx/nero.png",
+        "bianco": "/images/paint/zx/bianco.png",
+        "argento": "/images/paint/zx/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18804,
+        "visiblePixels": 35072,
+        "coverage": 53.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 35,
+      "name": "Charade Gtti",
+      "image": "charade.png",
+      "year": 1987,
+      "brand": "Daihatsu",
+      "width": 400,
+      "height": 130,
+      "key": "charade",
+      "source": "/images/car/charade.png",
+      "originalSha256": "44e96d58d1ce2e242c42b8b0660ae6af3b5d6d8470f5c6dcf267301285a0321c",
+      "mask": "/images/paint/charade/mask.png",
+      "images": {
+        "rosso": "/images/paint/charade/rosso.png",
+        "blu": "/images/paint/charade/blu.png",
+        "verde": "/images/paint/charade/verde.png",
+        "nero": "/images/paint/charade/nero.png",
+        "bianco": "/images/paint/charade/bianco.png",
+        "argento": "/images/paint/charade/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11453,
+        "visiblePixels": 25800,
+        "coverage": 44.4,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 36,
+      "name": "Mini Turbo",
+      "image": "minit.png",
+      "year": 1984,
+      "brand": "De Tomaso",
+      "width": 400,
+      "height": 130,
+      "key": "minit",
+      "source": "/images/car/minit.png",
+      "originalSha256": "0c4f903e77a2e267c9f7dad0a4e059029353579ffdd238223d8ab9f1da9665c2",
+      "mask": "/images/paint/minit/mask.png",
+      "images": {
+        "rosso": "/images/paint/minit/rosso.png",
+        "blu": "/images/paint/minit/blu.png",
+        "verde": "/images/paint/minit/verde.png",
+        "nero": "/images/paint/minit/nero.png",
+        "bianco": "/images/paint/minit/bianco.png",
+        "argento": "/images/paint/minit/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 8622,
+        "visiblePixels": 24920,
+        "coverage": 34.6,
+        "maskOverlap": 98.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 37,
+      "name": "Pantera GTS",
+      "image": "pantera.png",
+      "year": 1970,
+      "brand": "De Tomaso",
+      "width": 400,
+      "height": 130,
+      "key": "pantera",
+      "source": "/images/car/pantera.png",
+      "originalSha256": "654b2397644692bf12fc07541bf0de1f62629e22efe95495fb5c486583442ece",
+      "mask": "/images/paint/pantera/mask.png",
+      "images": {
+        "rosso": "/images/paint/pantera/rosso.png",
+        "blu": "/images/paint/pantera/blu.png",
+        "verde": "/images/paint/pantera/verde.png",
+        "nero": "/images/paint/pantera/nero.png",
+        "bianco": "/images/paint/pantera/bianco.png",
+        "argento": "/images/paint/pantera/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17356,
+        "visiblePixels": 40228,
+        "coverage": 43.1,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 38,
+      "name": "Viper GTS",
+      "image": "viper.png",
+      "year": 1996,
+      "brand": "Dodge",
+      "width": 400,
+      "height": 130,
+      "key": "viper",
+      "source": "/images/car/viper.png",
+      "originalSha256": "b4a787de178868e526dd3a31f7c6210bae92ad1c72e3c58063eb8cce62fdf122",
+      "mask": "/images/paint/viper/mask.png",
+      "images": {
+        "rosso": "/images/paint/viper/rosso.png",
+        "blu": "/images/paint/viper/blu.png",
+        "verde": "/images/paint/viper/verde.png",
+        "nero": "/images/paint/viper/nero.png",
+        "bianco": "/images/paint/viper/bianco.png",
+        "argento": "/images/paint/viper/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17892,
+        "visiblePixels": 28448,
+        "coverage": 62.9,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 39,
+      "name": "288 Gto",
+      "image": "288.png",
+      "year": 1984,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "288",
+      "source": "/images/car/288.png",
+      "originalSha256": "ceb7ec28a8b9a98c4d74844fb974f6145663e7a15685dbf3ba80bb91a35b30d2",
+      "mask": "/images/paint/288/mask.png",
+      "images": {
+        "rosso": "/images/paint/288/rosso.png",
+        "blu": "/images/paint/288/blu.png",
+        "verde": "/images/paint/288/verde.png",
+        "nero": "/images/paint/288/nero.png",
+        "bianco": "/images/paint/288/bianco.png",
+        "argento": "/images/paint/288/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21052,
+        "visiblePixels": 35996,
+        "coverage": 58.5,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 40,
+      "name": "348",
+      "image": "348.png",
+      "year": 1989,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "348",
+      "source": "/images/car/348.png",
+      "originalSha256": "792eaf3586ed2283dad7e3a13e0c0f41ddb28e46b0a2b7dd2a4958e3e9fa018f",
+      "mask": "/images/paint/348/mask.png",
+      "images": {
+        "rosso": "/images/paint/348/rosso.png",
+        "blu": "/images/paint/348/blu.png",
+        "verde": "/images/paint/348/verde.png",
+        "nero": "/images/paint/348/nero.png",
+        "bianco": "/images/paint/348/bianco.png",
+        "argento": "/images/paint/348/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18029,
+        "visiblePixels": 36152,
+        "coverage": 49.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 41,
+      "name": "360",
+      "image": "360.png",
+      "year": 1999,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "360",
+      "source": "/images/car/360.png",
+      "originalSha256": "6c68882098ab0da35fef9c2e525f640f55760748434a79444151af8ef7eaaffb",
+      "mask": "/images/paint/360/mask.png",
+      "images": {
+        "rosso": "/images/paint/360/rosso.png",
+        "blu": "/images/paint/360/blu.png",
+        "verde": "/images/paint/360/verde.png",
+        "nero": "/images/paint/360/nero.png",
+        "bianco": "/images/paint/360/bianco.png",
+        "argento": "/images/paint/360/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20671,
+        "visiblePixels": 36088,
+        "coverage": 57.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 42,
+      "name": "550",
+      "image": "550.png",
+      "year": 1996,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "550",
+      "source": "/images/car/550.png",
+      "originalSha256": "a7a36de17db041c38a4439ba830978428384351fd9877c447e70b14800ad8a4c",
+      "mask": "/images/paint/550/mask.png",
+      "images": {
+        "rosso": "/images/paint/550/rosso.png",
+        "blu": "/images/paint/550/blu.png",
+        "verde": "/images/paint/550/verde.png",
+        "nero": "/images/paint/550/nero.png",
+        "bianco": "/images/paint/550/bianco.png",
+        "argento": "/images/paint/550/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20382,
+        "visiblePixels": 37348,
+        "coverage": 54.6,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 43,
+      "name": "F355",
+      "image": "355.png",
+      "year": 1994,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "355",
+      "source": "/images/car/355.png",
+      "originalSha256": "7db160f14d48684a4033f76ea58b9e96070ecb7971ea3d1e4c7e48871aa74574",
+      "mask": "/images/paint/355/mask.png",
+      "images": {
+        "rosso": "/images/paint/355/rosso.png",
+        "blu": "/images/paint/355/blu.png",
+        "verde": "/images/paint/355/verde.png",
+        "nero": "/images/paint/355/nero.png",
+        "bianco": "/images/paint/355/bianco.png",
+        "argento": "/images/paint/355/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21008,
+        "visiblePixels": 33144,
+        "coverage": 63.4,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 44,
+      "name": "F40",
+      "image": "f40.png",
+      "year": 1987,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "f40",
+      "source": "/images/car/f40.png",
+      "originalSha256": "1a8a23d3f8f750f4df26f131f06bf11e9287398ba9809a32ee0dab8a89e4ddc6",
+      "mask": "/images/paint/f40/mask.png",
+      "images": {
+        "rosso": "/images/paint/f40/rosso.png",
+        "blu": "/images/paint/f40/blu.png",
+        "verde": "/images/paint/f40/verde.png",
+        "nero": "/images/paint/f40/nero.png",
+        "bianco": "/images/paint/f40/bianco.png",
+        "argento": "/images/paint/f40/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 24034,
+        "visiblePixels": 37408,
+        "coverage": 64.2,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 45,
+      "name": "F50",
+      "image": "f50.png",
+      "year": 1995,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "f50",
+      "source": "/images/car/f50.png",
+      "originalSha256": "e82cabf8805131c14543a26d1c5d31ebc4ce495721bada39ab5c8c8addbe23e8",
+      "mask": "/images/paint/f50/mask.png",
+      "images": {
+        "rosso": "/images/paint/f50/rosso.png",
+        "blu": "/images/paint/f50/blu.png",
+        "verde": "/images/paint/f50/verde.png",
+        "nero": "/images/paint/f50/nero.png",
+        "bianco": "/images/paint/f50/bianco.png",
+        "argento": "/images/paint/f50/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 24160,
+        "visiblePixels": 37880,
+        "coverage": 63.8,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 46,
+      "name": "Testarossa",
+      "image": "testarossa.png",
+      "year": 1984,
+      "brand": "Ferrari",
+      "width": 400,
+      "height": 130,
+      "key": "testarossa",
+      "source": "/images/car/testarossa.png",
+      "originalSha256": "a2d45c6914c28d6817557856526c859f1d1d61ac6c1503c302c1ffc71035f246",
+      "mask": "/images/paint/testarossa/mask.png",
+      "images": {
+        "rosso": "/images/paint/testarossa/rosso.png",
+        "blu": "/images/paint/testarossa/blu.png",
+        "verde": "/images/paint/testarossa/verde.png",
+        "nero": "/images/paint/testarossa/nero.png",
+        "bianco": "/images/paint/testarossa/bianco.png",
+        "argento": "/images/paint/testarossa/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20302,
+        "visiblePixels": 33696,
+        "coverage": 60.3,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 47,
+      "name": "131 Abarth",
+      "image": "131.png",
+      "year": 1976,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "131",
+      "source": "/images/car/131.png",
+      "originalSha256": "70318432917108f214d1a67d2b1742e2e5304fad15972709bf45d0535087d2df",
+      "mask": "/images/paint/131/mask.png",
+      "images": {
+        "rosso": "/images/paint/131/rosso.png",
+        "blu": "/images/paint/131/blu.png",
+        "verde": "/images/paint/131/verde.png",
+        "nero": "/images/paint/131/nero.png",
+        "bianco": "/images/paint/131/bianco.png",
+        "argento": "/images/paint/131/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15883,
+        "visiblePixels": 29156,
+        "coverage": 54.5,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 48,
+      "name": "Barchetta",
+      "image": "barchetta.png",
+      "year": 1995,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "barchetta",
+      "source": "/images/car/barchetta.png",
+      "originalSha256": "7f894d9ba4644579b03f03b89df042355f5a8ca312c472e5ba4816f81aff7da9",
+      "mask": "/images/paint/barchetta/mask.png",
+      "images": {
+        "rosso": "/images/paint/barchetta/rosso.png",
+        "blu": "/images/paint/barchetta/blu.png",
+        "verde": "/images/paint/barchetta/verde.png",
+        "nero": "/images/paint/barchetta/nero.png",
+        "bianco": "/images/paint/barchetta/bianco.png",
+        "argento": "/images/paint/barchetta/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15540,
+        "visiblePixels": 30196,
+        "coverage": 51.5,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 49,
+      "name": "Bravo HGT",
+      "image": "bravo.png",
+      "year": 1999,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "bravo",
+      "source": "/images/car/bravo.png",
+      "originalSha256": "78d23acbe711b5600471a9aadb5e9b78ba28cd2090e199edf75b00b17f4618c2",
+      "mask": "/images/paint/bravo/mask.png",
+      "images": {
+        "rosso": "/images/paint/bravo/rosso.png",
+        "blu": "/images/paint/bravo/blu.png",
+        "verde": "/images/paint/bravo/verde.png",
+        "nero": "/images/paint/bravo/nero.png",
+        "bianco": "/images/paint/bravo/bianco.png",
+        "argento": "/images/paint/bravo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19795,
+        "visiblePixels": 33916,
+        "coverage": 58.4,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 50,
+      "name": "Cinquecento Sporting",
+      "image": "cinquecento.png",
+      "year": 1994,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "cinquecento",
+      "source": "/images/car/cinquecento.png",
+      "originalSha256": "9fa244d508b4b432a72f9fb9e4a6a452acca9d3cd3944118cebb50ebde7aed56",
+      "mask": "/images/paint/cinquecento/mask.png",
+      "images": {
+        "rosso": "/images/paint/cinquecento/rosso.png",
+        "blu": "/images/paint/cinquecento/blu.png",
+        "verde": "/images/paint/cinquecento/verde.png",
+        "nero": "/images/paint/cinquecento/nero.png",
+        "bianco": "/images/paint/cinquecento/bianco.png",
+        "argento": "/images/paint/cinquecento/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14153,
+        "visiblePixels": 27820,
+        "coverage": 50.9,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 51,
+      "name": "Coupè 20v",
+      "image": "coupe.png",
+      "year": 1993,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "coupe",
+      "source": "/images/car/coupe.png",
+      "originalSha256": "f2252ca34e8963bdce53679db8dcc8b93388f545740a350e1aa33595fce69929",
+      "mask": "/images/paint/coupe/mask.png",
+      "images": {
+        "rosso": "/images/paint/coupe/rosso.png",
+        "blu": "/images/paint/coupe/blu.png",
+        "verde": "/images/paint/coupe/verde.png",
+        "nero": "/images/paint/coupe/nero.png",
+        "bianco": "/images/paint/coupe/bianco.png",
+        "argento": "/images/paint/coupe/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15318,
+        "visiblePixels": 27900,
+        "coverage": 54.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 52,
+      "name": "Punto GT",
+      "image": "punto.png",
+      "year": 1994,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "punto",
+      "source": "/images/car/punto.png",
+      "originalSha256": "d985ae5ba3187e721202f5c0dd762687c7705ddb9028a3124178c5012646971b",
+      "mask": "/images/paint/punto/mask.png",
+      "images": {
+        "rosso": "/images/paint/punto/rosso.png",
+        "blu": "/images/paint/punto/blu.png",
+        "verde": "/images/paint/punto/verde.png",
+        "nero": "/images/paint/punto/nero.png",
+        "bianco": "/images/paint/punto/bianco.png",
+        "argento": "/images/paint/punto/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14088,
+        "visiblePixels": 25224,
+        "coverage": 55.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 53,
+      "name": "Ritmo 130 TC",
+      "image": "ritmo.png",
+      "year": 1983,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "ritmo",
+      "source": "/images/car/ritmo.png",
+      "originalSha256": "63cf56159e59d38fc712b4156a2b964249ce36b2968a24f6db4643fb238ff418",
+      "mask": "/images/paint/ritmo/mask.png",
+      "images": {
+        "rosso": "/images/paint/ritmo/rosso.png",
+        "blu": "/images/paint/ritmo/blu.png",
+        "verde": "/images/paint/ritmo/verde.png",
+        "nero": "/images/paint/ritmo/nero.png",
+        "bianco": "/images/paint/ritmo/bianco.png",
+        "argento": "/images/paint/ritmo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10787,
+        "visiblePixels": 25776,
+        "coverage": 41.8,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 54,
+      "name": "Seicento Sporting",
+      "image": "seicento.png",
+      "year": 1998,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "seicento",
+      "source": "/images/car/seicento.png",
+      "originalSha256": "baf30f17a326f0d16acb341e91900954c7342febc15c2a2689f01f2e41d6faca",
+      "mask": "/images/paint/seicento/mask.png",
+      "images": {
+        "rosso": "/images/paint/seicento/rosso.png",
+        "blu": "/images/paint/seicento/blu.png",
+        "verde": "/images/paint/seicento/verde.png",
+        "nero": "/images/paint/seicento/nero.png",
+        "bianco": "/images/paint/seicento/bianco.png",
+        "argento": "/images/paint/seicento/argento.png"
+      },
+      "approved": true,
+      "metrics": {
+        "selectedPixels": 13112
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 55,
+      "name": "Tipo 16v",
+      "image": "tipo.png",
+      "year": 1991,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "tipo",
+      "source": "/images/car/tipo.png",
+      "originalSha256": "1b8880c33fbf49b8aa2bda1700b745ee6450e9d42270a17c32055a528a4a8bd6",
+      "mask": "/images/paint/tipo/mask.png",
+      "images": {
+        "rosso": "/images/paint/tipo/rosso.png",
+        "blu": "/images/paint/tipo/blu.png",
+        "verde": "/images/paint/tipo/verde.png",
+        "nero": "/images/paint/tipo/nero.png",
+        "bianco": "/images/paint/tipo/bianco.png",
+        "argento": "/images/paint/tipo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14294,
+        "visiblePixels": 34740,
+        "coverage": 41.1,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 56,
+      "name": "Uno Turbo",
+      "image": "uno.png",
+      "year": 1985,
+      "brand": "Fiat",
+      "width": 400,
+      "height": 130,
+      "key": "uno",
+      "source": "/images/car/uno.png",
+      "originalSha256": "67b4e6345a2eff0209db4cdacc0ad0d5022cf26d82481b7d5cd9b226b66bceb1",
+      "mask": "/images/paint/uno/mask.png",
+      "images": {
+        "rosso": "/images/paint/uno/rosso.png",
+        "blu": "/images/paint/uno/blu.png",
+        "verde": "/images/paint/uno/verde.png",
+        "nero": "/images/paint/uno/nero.png",
+        "bianco": "/images/paint/uno/bianco.png",
+        "argento": "/images/paint/uno/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11541,
+        "visiblePixels": 31056,
+        "coverage": 37.2,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 57,
+      "name": "Escort RS Cosworth",
+      "image": "escortc.png",
+      "year": 1994,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "escortc",
+      "source": "/images/car/escortc.png",
+      "originalSha256": "30c8f2beab6e72424935ece0c692ea0177d088bae7b41bd0fe1a98783b2ce273",
+      "mask": "/images/paint/escortc/mask.png",
+      "images": {
+        "rosso": "/images/paint/escortc/rosso.png",
+        "blu": "/images/paint/escortc/blu.png",
+        "verde": "/images/paint/escortc/verde.png",
+        "nero": "/images/paint/escortc/nero.png",
+        "bianco": "/images/paint/escortc/bianco.png",
+        "argento": "/images/paint/escortc/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15662,
+        "visiblePixels": 30012,
+        "coverage": 52.2,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 58,
+      "name": "Escort Turbo RS",
+      "image": "escortt.png",
+      "year": 1986,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "escortt",
+      "source": "/images/car/escortt.png",
+      "originalSha256": "0efc86b6ee814ea78009ba4216c5d64b7d64dd8df5ae32ce60a92b415d67230f",
+      "mask": "/images/paint/escortt/mask.png",
+      "images": {
+        "rosso": "/images/paint/escortt/rosso.png",
+        "blu": "/images/paint/escortt/blu.png",
+        "verde": "/images/paint/escortt/verde.png",
+        "nero": "/images/paint/escortt/nero.png",
+        "bianco": "/images/paint/escortt/bianco.png",
+        "argento": "/images/paint/escortt/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13684,
+        "visiblePixels": 33964,
+        "coverage": 40.3,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 59,
+      "name": "Fiesta Turbo",
+      "image": "fiesta.png",
+      "year": 1990,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "fiesta",
+      "source": "/images/car/fiesta.png",
+      "originalSha256": "df837892a010cf0906db030006d5fd064a482da8c64749c4fffd0379055856cd",
+      "mask": "/images/paint/fiesta/mask.png",
+      "images": {
+        "rosso": "/images/paint/fiesta/rosso.png",
+        "blu": "/images/paint/fiesta/blu.png",
+        "verde": "/images/paint/fiesta/verde.png",
+        "nero": "/images/paint/fiesta/nero.png",
+        "bianco": "/images/paint/fiesta/bianco.png",
+        "argento": "/images/paint/fiesta/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10614,
+        "visiblePixels": 27012,
+        "coverage": 39.3,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 60,
+      "name": "Mondeo ST200",
+      "image": "mondeo.png",
+      "year": 1999,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "mondeo",
+      "source": "/images/car/mondeo.png",
+      "originalSha256": "8fd607f168671aa61be27b4dac28a2f9a5551188684b325c5b2230a77425ee57",
+      "mask": "/images/paint/mondeo/mask.png",
+      "images": {
+        "rosso": "/images/paint/mondeo/rosso.png",
+        "blu": "/images/paint/mondeo/blu.png",
+        "verde": "/images/paint/mondeo/verde.png",
+        "nero": "/images/paint/mondeo/nero.png",
+        "bianco": "/images/paint/mondeo/bianco.png",
+        "argento": "/images/paint/mondeo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17594,
+        "visiblePixels": 27992,
+        "coverage": 62.9,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 61,
+      "name": "Mustang Cobra",
+      "image": "mustang.png",
+      "year": 2000,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "mustang",
+      "source": "/images/car/mustang.png",
+      "originalSha256": "4de3c772d00732034712ff366be06857e2e93c7958e8dfcde3f4160b8bc207e8",
+      "mask": "/images/paint/mustang/mask.png",
+      "images": {
+        "rosso": "/images/paint/mustang/rosso.png",
+        "blu": "/images/paint/mustang/blu.png",
+        "verde": "/images/paint/mustang/verde.png",
+        "nero": "/images/paint/mustang/nero.png",
+        "bianco": "/images/paint/mustang/bianco.png",
+        "argento": "/images/paint/mustang/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21723,
+        "visiblePixels": 35976,
+        "coverage": 60.4,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 62,
+      "name": "Puma",
+      "image": "puma.png",
+      "year": 1997,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "puma",
+      "source": "/images/car/puma.png",
+      "originalSha256": "ecfe97041beaa4a1714e54d3f57cf1748ab3aed106d22d85868c489be54d7f10",
+      "mask": "/images/paint/puma/mask.png",
+      "images": {
+        "rosso": "/images/paint/puma/rosso.png",
+        "blu": "/images/paint/puma/blu.png",
+        "verde": "/images/paint/puma/verde.png",
+        "nero": "/images/paint/puma/nero.png",
+        "bianco": "/images/paint/puma/bianco.png",
+        "argento": "/images/paint/puma/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12752,
+        "visiblePixels": 27136,
+        "coverage": 47,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 63,
+      "name": "Sierra RS 4wd",
+      "image": "sierra4.png",
+      "year": 1990,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "sierra4",
+      "source": "/images/car/sierra4.png",
+      "originalSha256": "9ad97a8ac692ff40b2e4bf12a50ebfb887b1c6ec58a1c5caecbfc0040f93869e",
+      "mask": "/images/paint/sierra4/mask.png",
+      "images": {
+        "rosso": "/images/paint/sierra4/rosso.png",
+        "blu": "/images/paint/sierra4/blu.png",
+        "verde": "/images/paint/sierra4/verde.png",
+        "nero": "/images/paint/sierra4/nero.png",
+        "bianco": "/images/paint/sierra4/bianco.png",
+        "argento": "/images/paint/sierra4/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21550,
+        "visiblePixels": 36116,
+        "coverage": 59.7,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 64,
+      "name": "Sierra RS Corworth",
+      "image": "sierrac.png",
+      "year": 1986,
+      "brand": "Ford",
+      "width": 400,
+      "height": 130,
+      "key": "sierrac",
+      "source": "/images/car/sierrac.png",
+      "originalSha256": "b9a1602b0bda39b948e85796f570b78cf7d027d32451554fe8b8aa0bb70811f3",
+      "mask": "/images/paint/sierrac/mask.png",
+      "images": {
+        "rosso": "/images/paint/sierrac/rosso.png",
+        "blu": "/images/paint/sierrac/blu.png",
+        "verde": "/images/paint/sierrac/verde.png",
+        "nero": "/images/paint/sierrac/nero.png",
+        "bianco": "/images/paint/sierrac/bianco.png",
+        "argento": "/images/paint/sierrac/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15215,
+        "visiblePixels": 30392,
+        "coverage": 50.1,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 68,
+      "name": "CRX",
+      "image": "crx.png",
+      "year": 1990,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "crx",
+      "source": "/images/car/crx.png",
+      "originalSha256": "40f7bc93dd8945c9a886cd90afe67b1494e9cf9b28346a9a1ed9df7656b21982",
+      "mask": "/images/paint/crx/mask.png",
+      "images": {
+        "rosso": "/images/paint/crx/rosso.png",
+        "blu": "/images/paint/crx/blu.png",
+        "verde": "/images/paint/crx/verde.png",
+        "nero": "/images/paint/crx/nero.png",
+        "bianco": "/images/paint/crx/bianco.png",
+        "argento": "/images/paint/crx/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10633,
+        "visiblePixels": 27984,
+        "coverage": 38,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 65,
+      "name": "Civic EF",
+      "image": "ef.png",
+      "year": 1990,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "ef",
+      "source": "/images/car/ef.png",
+      "originalSha256": "a59114ef89864818fc7e5860697da167ca74c2395e712eb969f904204860581d",
+      "mask": "/images/paint/ef/mask.png",
+      "images": {
+        "rosso": "/images/paint/ef/rosso.png",
+        "blu": "/images/paint/ef/blu.png",
+        "verde": "/images/paint/ef/verde.png",
+        "nero": "/images/paint/ef/nero.png",
+        "bianco": "/images/paint/ef/bianco.png",
+        "argento": "/images/paint/ef/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16287,
+        "visiblePixels": 34952,
+        "coverage": 46.6,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 66,
+      "name": "Civic EG",
+      "image": "eg.png",
+      "year": 1991,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "eg",
+      "source": "/images/car/eg.png",
+      "originalSha256": "31c63fe5242d8b5f2b3e4793f079ee47c7a827e2be803a80bc8bd0d7b862ffd9",
+      "mask": "/images/paint/eg/mask.png",
+      "images": {
+        "rosso": "/images/paint/eg/rosso.png",
+        "blu": "/images/paint/eg/blu.png",
+        "verde": "/images/paint/eg/verde.png",
+        "nero": "/images/paint/eg/nero.png",
+        "bianco": "/images/paint/eg/bianco.png",
+        "argento": "/images/paint/eg/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14394,
+        "visiblePixels": 28032,
+        "coverage": 51.3,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 67,
+      "name": "Civic EK",
+      "image": "ek.png",
+      "year": 1995,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "ek",
+      "source": "/images/car/ek.png",
+      "originalSha256": "fbebf7e1da0e47b886f65bf4810904dd5bc6e9c83b935425fba240e7051464be",
+      "mask": "/images/paint/ek/mask.png",
+      "images": {
+        "rosso": "/images/paint/ek/rosso.png",
+        "blu": "/images/paint/ek/blu.png",
+        "verde": "/images/paint/ek/verde.png",
+        "nero": "/images/paint/ek/nero.png",
+        "bianco": "/images/paint/ek/bianco.png",
+        "argento": "/images/paint/ek/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14998,
+        "visiblePixels": 33984,
+        "coverage": 44.1,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 69,
+      "name": "Integra",
+      "image": "integra.png",
+      "year": 1998,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "integra",
+      "source": "/images/car/integra.png",
+      "originalSha256": "04e2a69bc22c6d74e84b2cce178b4dd750e3322072caae0660318d585de81b58",
+      "mask": "/images/paint/integra/mask.png",
+      "images": {
+        "rosso": "/images/paint/integra/rosso.png",
+        "blu": "/images/paint/integra/blu.png",
+        "verde": "/images/paint/integra/verde.png",
+        "nero": "/images/paint/integra/nero.png",
+        "bianco": "/images/paint/integra/bianco.png",
+        "argento": "/images/paint/integra/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17370,
+        "visiblePixels": 35036,
+        "coverage": 49.6,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 70,
+      "name": "NSX",
+      "image": "nsx.png",
+      "year": 1997,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "nsx",
+      "source": "/images/car/nsx.png",
+      "originalSha256": "b435f38464ebb1ecadb59fcff51f94cf93c8a81c79324440e71059e62ed3e888",
+      "mask": "/images/paint/nsx/mask.png",
+      "images": {
+        "rosso": "/images/paint/nsx/rosso.png",
+        "blu": "/images/paint/nsx/blu.png",
+        "verde": "/images/paint/nsx/verde.png",
+        "nero": "/images/paint/nsx/nero.png",
+        "bianco": "/images/paint/nsx/bianco.png",
+        "argento": "/images/paint/nsx/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20976,
+        "visiblePixels": 36588,
+        "coverage": 57.3,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 71,
+      "name": "Prelude",
+      "image": "prelude.png",
+      "year": 1996,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "prelude",
+      "source": "/images/car/prelude.png",
+      "originalSha256": "9e02dedfcfbd0dec44f42a64e451a236e8d299765a60366d9b2476d828e83a10",
+      "mask": "/images/paint/prelude/mask.png",
+      "images": {
+        "rosso": "/images/paint/prelude/rosso.png",
+        "blu": "/images/paint/prelude/blu.png",
+        "verde": "/images/paint/prelude/verde.png",
+        "nero": "/images/paint/prelude/nero.png",
+        "bianco": "/images/paint/prelude/bianco.png",
+        "argento": "/images/paint/prelude/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21072,
+        "visiblePixels": 36628,
+        "coverage": 57.5,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 72,
+      "name": "S2000",
+      "image": "s2000.png",
+      "year": 1999,
+      "brand": "Honda",
+      "width": 400,
+      "height": 130,
+      "key": "s2000",
+      "source": "/images/car/s2000.png",
+      "originalSha256": "1310629cb4bcc2cdb23f14f72ef98b86f7a892b77a44fe2ef0a7c347664154a5",
+      "mask": "/images/paint/s2000/mask.png",
+      "images": {
+        "rosso": "/images/paint/s2000/rosso.png",
+        "blu": "/images/paint/s2000/blu.png",
+        "verde": "/images/paint/s2000/verde.png",
+        "nero": "/images/paint/s2000/nero.png",
+        "bianco": "/images/paint/s2000/bianco.png",
+        "argento": "/images/paint/s2000/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16083,
+        "visiblePixels": 28840,
+        "coverage": 55.8,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 73,
+      "name": "Coupè",
+      "image": "hyundai.png",
+      "year": 1996,
+      "brand": "Hyundai",
+      "width": 400,
+      "height": 130,
+      "key": "hyundai",
+      "source": "/images/car/hyundai.png",
+      "originalSha256": "ccbad392e6a62e117afa71195aa9e7336dac333500f30f45e72fa7282b231d4d",
+      "mask": "/images/paint/hyundai/mask.png",
+      "images": {
+        "rosso": "/images/paint/hyundai/rosso.png",
+        "blu": "/images/paint/hyundai/blu.png",
+        "verde": "/images/paint/hyundai/verde.png",
+        "nero": "/images/paint/hyundai/nero.png",
+        "bianco": "/images/paint/hyundai/bianco.png",
+        "argento": "/images/paint/hyundai/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19670,
+        "visiblePixels": 35132,
+        "coverage": 56,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 74,
+      "name": "XJ R",
+      "image": "xj.png",
+      "year": 1997,
+      "brand": "Jaguar",
+      "width": 400,
+      "height": 130,
+      "key": "xj",
+      "source": "/images/car/xj.png",
+      "originalSha256": "c12b3ce7bc9e0f6902608f5d8860da97007ea057cd611fca55da70cddc8b0438",
+      "mask": "/images/paint/xj/mask.png",
+      "images": {
+        "rosso": "/images/paint/xj/rosso.png",
+        "blu": "/images/paint/xj/blu.png",
+        "verde": "/images/paint/xj/verde.png",
+        "nero": "/images/paint/xj/nero.png",
+        "bianco": "/images/paint/xj/bianco.png",
+        "argento": "/images/paint/xj/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13178,
+        "visiblePixels": 36388,
+        "coverage": 36.2,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 75,
+      "name": "XJ220",
+      "image": "xj220.png",
+      "year": 1991,
+      "brand": "Jaguar",
+      "width": 400,
+      "height": 130,
+      "key": "xj220",
+      "source": "/images/car/xj220.png",
+      "originalSha256": "5cc23b11d5a3731ff0f74f4c55dd5c3b8b2a7ed1c6081dae485e594991158ae7",
+      "mask": "/images/paint/xj220/mask.png",
+      "images": {
+        "rosso": "/images/paint/xj220/rosso.png",
+        "blu": "/images/paint/xj220/blu.png",
+        "verde": "/images/paint/xj220/verde.png",
+        "nero": "/images/paint/xj220/nero.png",
+        "bianco": "/images/paint/xj220/bianco.png",
+        "argento": "/images/paint/xj220/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20804,
+        "visiblePixels": 35016,
+        "coverage": 59.4,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 76,
+      "name": "XKR",
+      "image": "xkr.png",
+      "year": 1998,
+      "brand": "Jaguar",
+      "width": 400,
+      "height": 130,
+      "key": "xkr",
+      "source": "/images/car/xkr.png",
+      "originalSha256": "591aa04248bbf0d74f62d76c72b0d1de13a2da07dca0033130bf732eddc740cb",
+      "mask": "/images/paint/xkr/mask.png",
+      "images": {
+        "rosso": "/images/paint/xkr/rosso.png",
+        "blu": "/images/paint/xkr/blu.png",
+        "verde": "/images/paint/xkr/verde.png",
+        "nero": "/images/paint/xkr/nero.png",
+        "bianco": "/images/paint/xkr/bianco.png",
+        "argento": "/images/paint/xkr/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16622,
+        "visiblePixels": 36268,
+        "coverage": 45.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 77,
+      "name": "Countach",
+      "image": "countach.png",
+      "year": 1985,
+      "brand": "Lamborghini",
+      "width": 400,
+      "height": 130,
+      "key": "countach",
+      "source": "/images/car/countach.png",
+      "originalSha256": "bf136219857ce26136168fe9a7ab171e40bb08822ab15051db675eed99de6e9f",
+      "mask": "/images/paint/countach/mask.png",
+      "images": {
+        "rosso": "/images/paint/countach/rosso.png",
+        "blu": "/images/paint/countach/blu.png",
+        "verde": "/images/paint/countach/verde.png",
+        "nero": "/images/paint/countach/nero.png",
+        "bianco": "/images/paint/countach/bianco.png",
+        "argento": "/images/paint/countach/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 27109,
+        "visiblePixels": 41856,
+        "coverage": 64.8,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 78,
+      "name": "Diablo",
+      "image": "diablo.png",
+      "year": 2000,
+      "brand": "Lamborghini",
+      "width": 400,
+      "height": 130,
+      "key": "diablo",
+      "source": "/images/car/diablo.png",
+      "originalSha256": "5104599d1e071f616721abb5a2493978e09ae552ca154e0fda8450a5cd990165",
+      "mask": "/images/paint/diablo/mask.png",
+      "images": {
+        "rosso": "/images/paint/diablo/rosso.png",
+        "blu": "/images/paint/diablo/blu.png",
+        "verde": "/images/paint/diablo/verde.png",
+        "nero": "/images/paint/diablo/nero.png",
+        "bianco": "/images/paint/diablo/bianco.png",
+        "argento": "/images/paint/diablo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 26410,
+        "visiblePixels": 35464,
+        "coverage": 74.5,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 79,
+      "name": "Dedra Turbo",
+      "image": "dedra.png",
+      "year": 1991,
+      "brand": "Lancia",
+      "width": 400,
+      "height": 130,
+      "key": "dedra",
+      "source": "/images/car/dedra.png",
+      "originalSha256": "5b7bc2e5cee0f98f15b8d06b5057fd1bae1c49378185c625b9c34f279e6ff5e2",
+      "mask": "/images/paint/dedra/mask.png",
+      "images": {
+        "rosso": "/images/paint/dedra/rosso.png",
+        "blu": "/images/paint/dedra/blu.png",
+        "verde": "/images/paint/dedra/verde.png",
+        "nero": "/images/paint/dedra/nero.png",
+        "bianco": "/images/paint/dedra/bianco.png",
+        "argento": "/images/paint/dedra/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12236,
+        "visiblePixels": 28740,
+        "coverage": 42.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 80,
+      "name": "Delta Evoluzione",
+      "image": "evoluzione.png",
+      "year": 1991,
+      "brand": "Lancia",
+      "width": 400,
+      "height": 130,
+      "key": "evoluzione",
+      "source": "/images/car/evoluzione.png",
+      "originalSha256": "31b54b896bd467016441c27c8bd9b5e2d708f1411e7595d9e5c86e4e96b8ffde",
+      "mask": "/images/paint/evoluzione/mask.png",
+      "images": {
+        "rosso": "/images/paint/evoluzione/rosso.png",
+        "blu": "/images/paint/evoluzione/blu.png",
+        "verde": "/images/paint/evoluzione/verde.png",
+        "nero": "/images/paint/evoluzione/nero.png",
+        "bianco": "/images/paint/evoluzione/bianco.png",
+        "argento": "/images/paint/evoluzione/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16451,
+        "visiblePixels": 29864,
+        "coverage": 55.1,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 81,
+      "name": "Delta HF 16v",
+      "image": "delta16.png",
+      "year": 1989,
+      "brand": "Lancia",
+      "width": 400,
+      "height": 130,
+      "key": "delta16",
+      "source": "/images/car/delta16.png",
+      "originalSha256": "1505dbfb5a85f7f5af8732b16b87f9c9bacb44f953f3b435f07c2b5c8c7585a0",
+      "mask": "/images/paint/delta16/mask.png",
+      "images": {
+        "rosso": "/images/paint/delta16/rosso.png",
+        "blu": "/images/paint/delta16/blu.png",
+        "verde": "/images/paint/delta16/verde.png",
+        "nero": "/images/paint/delta16/nero.png",
+        "bianco": "/images/paint/delta16/bianco.png",
+        "argento": "/images/paint/delta16/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15005,
+        "visiblePixels": 29676,
+        "coverage": 50.6,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 82,
+      "name": "Delta HPE",
+      "image": "hpe.png",
+      "year": 1998,
+      "brand": "Lancia",
+      "width": 400,
+      "height": 130,
+      "key": "hpe",
+      "source": "/images/car/hpe.png",
+      "originalSha256": "fda829fbe0e7629de1311afa7788280f385ead0707b3b218d57e471ad6b6a145",
+      "mask": "/images/paint/hpe/mask.png",
+      "images": {
+        "rosso": "/images/paint/hpe/rosso.png",
+        "blu": "/images/paint/hpe/blu.png",
+        "verde": "/images/paint/hpe/verde.png",
+        "nero": "/images/paint/hpe/nero.png",
+        "bianco": "/images/paint/hpe/bianco.png",
+        "argento": "/images/paint/hpe/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14025,
+        "visiblePixels": 24952,
+        "coverage": 56.2,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 83,
+      "name": "Thema 8.32",
+      "image": "thema.png",
+      "year": 1987,
+      "brand": "Lancia",
+      "width": 400,
+      "height": 130,
+      "key": "thema",
+      "source": "/images/car/thema.png",
+      "originalSha256": "3aaffed87bd9749fecda1b3bb9598599296f5720442869548b0b7a37bf1f122d",
+      "mask": "/images/paint/thema/mask.png",
+      "images": {
+        "rosso": "/images/paint/thema/rosso.png",
+        "blu": "/images/paint/thema/blu.png",
+        "verde": "/images/paint/thema/verde.png",
+        "nero": "/images/paint/thema/nero.png",
+        "bianco": "/images/paint/thema/bianco.png",
+        "argento": "/images/paint/thema/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14221,
+        "visiblePixels": 31120,
+        "coverage": 45.7,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 84,
+      "name": "IS200 RS",
+      "image": "is200.png",
+      "year": 1998,
+      "brand": "Lexus",
+      "width": 400,
+      "height": 130,
+      "key": "is200",
+      "source": "/images/car/is200.png",
+      "originalSha256": "d18e79550b521a9cf9045cac7f75324154349f7d8df865dbbc3ebfa1dbe5ef9a",
+      "mask": "/images/paint/is200/mask.png",
+      "images": {
+        "rosso": "/images/paint/is200/rosso.png",
+        "blu": "/images/paint/is200/blu.png",
+        "verde": "/images/paint/is200/verde.png",
+        "nero": "/images/paint/is200/nero.png",
+        "bianco": "/images/paint/is200/bianco.png",
+        "argento": "/images/paint/is200/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15119,
+        "visiblePixels": 30500,
+        "coverage": 49.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 85,
+      "name": "Elise",
+      "image": "elise.png",
+      "year": 2000,
+      "brand": "Lotus",
+      "width": 400,
+      "height": 130,
+      "key": "elise",
+      "source": "/images/car/elise.png",
+      "originalSha256": "a019ab63228496a0af27595a9442daaf5a89b347f0e78fa225e1f7fe644cae03",
+      "mask": "/images/paint/elise/mask.png",
+      "images": {
+        "rosso": "/images/paint/elise/rosso.png",
+        "blu": "/images/paint/elise/blu.png",
+        "verde": "/images/paint/elise/verde.png",
+        "nero": "/images/paint/elise/nero.png",
+        "bianco": "/images/paint/elise/bianco.png",
+        "argento": "/images/paint/elise/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18569,
+        "visiblePixels": 34624,
+        "coverage": 53.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 86,
+      "name": "Esprit",
+      "image": "esprit.png",
+      "year": 1997,
+      "brand": "Lotus",
+      "width": 400,
+      "height": 130,
+      "key": "esprit",
+      "source": "/images/car/esprit.png",
+      "originalSha256": "abf4eb59088dd46f29ef40046a22b76f435f7d32b1e7df8d265b3a166335056e",
+      "mask": "/images/paint/esprit/mask.png",
+      "images": {
+        "rosso": "/images/paint/esprit/rosso.png",
+        "blu": "/images/paint/esprit/blu.png",
+        "verde": "/images/paint/esprit/verde.png",
+        "nero": "/images/paint/esprit/nero.png",
+        "bianco": "/images/paint/esprit/bianco.png",
+        "argento": "/images/paint/esprit/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 25183,
+        "visiblePixels": 39364,
+        "coverage": 64,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 87,
+      "name": "Exige",
+      "image": "exige.png",
+      "year": 2000,
+      "brand": "Lotus",
+      "width": 400,
+      "height": 130,
+      "key": "exige",
+      "source": "/images/car/exige.png",
+      "originalSha256": "c8f5217243eb124093b77c7e6e3b1cf34b503213a26f59b2ab78e6e3c50f5c0a",
+      "mask": "/images/paint/exige/mask.png",
+      "images": {
+        "rosso": "/images/paint/exige/rosso.png",
+        "blu": "/images/paint/exige/blu.png",
+        "verde": "/images/paint/exige/verde.png",
+        "nero": "/images/paint/exige/nero.png",
+        "bianco": "/images/paint/exige/bianco.png",
+        "argento": "/images/paint/exige/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16669,
+        "visiblePixels": 32748,
+        "coverage": 50.9,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 103,
+      "name": "MGF",
+      "image": "mgf.png",
+      "year": 2001,
+      "brand": "MG",
+      "width": 400,
+      "height": 130,
+      "key": "mgf",
+      "source": "/images/car/mgf.png",
+      "originalSha256": "71ca487fbd3e9b4bb2c26f5c2538bdc731b37aba538903b87f0bc354c8316b66",
+      "mask": "/images/paint/mgf/mask.png",
+      "images": {
+        "rosso": "/images/paint/mgf/rosso.png",
+        "blu": "/images/paint/mgf/blu.png",
+        "verde": "/images/paint/mgf/verde.png",
+        "nero": "/images/paint/mgf/nero.png",
+        "bianco": "/images/paint/mgf/bianco.png",
+        "argento": "/images/paint/mgf/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17998,
+        "visiblePixels": 33072,
+        "coverage": 54.4,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 104,
+      "name": "ZR",
+      "image": "zr.png",
+      "year": 2001,
+      "brand": "MG",
+      "width": 400,
+      "height": 130,
+      "key": "zr",
+      "source": "/images/car/zr.png",
+      "originalSha256": "f4e1ea5b23f194881d5e9cceb00b36eab4f3cddcce372581629f529ce86ff1c8",
+      "mask": "/images/paint/zr/mask.png",
+      "images": {
+        "rosso": "/images/paint/zr/rosso.png",
+        "blu": "/images/paint/zr/blu.png",
+        "verde": "/images/paint/zr/verde.png",
+        "nero": "/images/paint/zr/nero.png",
+        "bianco": "/images/paint/zr/bianco.png",
+        "argento": "/images/paint/zr/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16601,
+        "visiblePixels": 29624,
+        "coverage": 56,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 105,
+      "name": "ZS",
+      "image": "zs.png",
+      "year": 2001,
+      "brand": "MG",
+      "width": 400,
+      "height": 130,
+      "key": "zs",
+      "source": "/images/car/zs.png",
+      "originalSha256": "6d38b2d2d98798f026f7a16e57115143377501caf379b911093ddfe71ac550e4",
+      "mask": "/images/paint/zs/mask.png",
+      "images": {
+        "rosso": "/images/paint/zs/rosso.png",
+        "blu": "/images/paint/zs/blu.png",
+        "verde": "/images/paint/zs/verde.png",
+        "nero": "/images/paint/zs/nero.png",
+        "bianco": "/images/paint/zs/bianco.png",
+        "argento": "/images/paint/zs/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17208,
+        "visiblePixels": 34020,
+        "coverage": 50.6,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 88,
+      "name": "3200GT",
+      "image": "3200.png",
+      "year": 1998,
+      "brand": "Maserati",
+      "width": 400,
+      "height": 130,
+      "key": "3200",
+      "source": "/images/car/3200.png",
+      "originalSha256": "c894d572638aa7ad2baca7100e9458e35d94df9dda26fafe054f6f8407adfc45",
+      "mask": "/images/paint/3200/mask.png",
+      "images": {
+        "rosso": "/images/paint/3200/rosso.png",
+        "blu": "/images/paint/3200/blu.png",
+        "verde": "/images/paint/3200/verde.png",
+        "nero": "/images/paint/3200/nero.png",
+        "bianco": "/images/paint/3200/bianco.png",
+        "argento": "/images/paint/3200/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16679,
+        "visiblePixels": 33016,
+        "coverage": 50.5,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 89,
+      "name": "Biturbo",
+      "image": "biturbo.png",
+      "year": 1988,
+      "brand": "Maserati",
+      "width": 400,
+      "height": 130,
+      "key": "biturbo",
+      "source": "/images/car/biturbo.png",
+      "originalSha256": "fa7966d020ef662d03ce7e1105071f917ddac911001c02942c07ea1bd0fa112e",
+      "mask": "/images/paint/biturbo/mask.png",
+      "images": {
+        "rosso": "/images/paint/biturbo/rosso.png",
+        "blu": "/images/paint/biturbo/blu.png",
+        "verde": "/images/paint/biturbo/verde.png",
+        "nero": "/images/paint/biturbo/nero.png",
+        "bianco": "/images/paint/biturbo/bianco.png",
+        "argento": "/images/paint/biturbo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19076,
+        "visiblePixels": 33520,
+        "coverage": 56.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 90,
+      "name": "Shamal",
+      "image": "shamal.png",
+      "year": 1989,
+      "brand": "Maserati",
+      "width": 400,
+      "height": 130,
+      "key": "shamal",
+      "source": "/images/car/shamal.png",
+      "originalSha256": "5e5a6f85f1b94c7d6f4bad7fa2dd7cf4859e013d897deb512af199641efee5e8",
+      "mask": "/images/paint/shamal/mask.png",
+      "images": {
+        "rosso": "/images/paint/shamal/rosso.png",
+        "blu": "/images/paint/shamal/blu.png",
+        "verde": "/images/paint/shamal/verde.png",
+        "nero": "/images/paint/shamal/nero.png",
+        "bianco": "/images/paint/shamal/bianco.png",
+        "argento": "/images/paint/shamal/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 21094,
+        "visiblePixels": 32792,
+        "coverage": 64.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 91,
+      "name": "323 GT-r",
+      "image": "323.png",
+      "year": 1992,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "323",
+      "source": "/images/car/323.png",
+      "originalSha256": "28350a26ae198ba61b33ecaa7ac6bd5e0a04cdcd759a6741909c60fed09ec858",
+      "mask": "/images/paint/323/mask.png",
+      "images": {
+        "rosso": "/images/paint/323/rosso.png",
+        "blu": "/images/paint/323/blu.png",
+        "verde": "/images/paint/323/verde.png",
+        "nero": "/images/paint/323/nero.png",
+        "bianco": "/images/paint/323/bianco.png",
+        "argento": "/images/paint/323/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15657,
+        "visiblePixels": 30148,
+        "coverage": 51.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 92,
+      "name": "323 Lantis",
+      "image": "lantis.png",
+      "year": 1994,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "lantis",
+      "source": "/images/car/lantis.png",
+      "originalSha256": "3bbc43ea67e69be3298a5fee5f1aea86f347f49fa60494fa50dce22b50c97fe1",
+      "mask": "/images/paint/lantis/mask.png",
+      "images": {
+        "rosso": "/images/paint/lantis/rosso.png",
+        "blu": "/images/paint/lantis/blu.png",
+        "verde": "/images/paint/lantis/verde.png",
+        "nero": "/images/paint/lantis/nero.png",
+        "bianco": "/images/paint/lantis/bianco.png",
+        "argento": "/images/paint/lantis/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13836,
+        "visiblePixels": 31940,
+        "coverage": 43.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 93,
+      "name": "Mx-3",
+      "image": "mx3.png",
+      "year": 1991,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "mx3",
+      "source": "/images/car/mx3.png",
+      "originalSha256": "b278b2431d5a0ddfc548c8a25a4c3ec136b14c4cb86749935674180e01e62f89",
+      "mask": "/images/paint/mx3/mask.png",
+      "images": {
+        "rosso": "/images/paint/mx3/rosso.png",
+        "blu": "/images/paint/mx3/blu.png",
+        "verde": "/images/paint/mx3/verde.png",
+        "nero": "/images/paint/mx3/nero.png",
+        "bianco": "/images/paint/mx3/bianco.png",
+        "argento": "/images/paint/mx3/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17032,
+        "visiblePixels": 31144,
+        "coverage": 54.7,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 94,
+      "name": "Mx-5 NA",
+      "image": "na.png",
+      "year": 1994,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "na",
+      "source": "/images/car/na.png",
+      "originalSha256": "b59aae8020e23bf8d654dd43c6eed243dd8222effb08162a0bc2247454ccdf10",
+      "mask": "/images/paint/na/mask.png",
+      "images": {
+        "rosso": "/images/paint/na/rosso.png",
+        "blu": "/images/paint/na/blu.png",
+        "verde": "/images/paint/na/verde.png",
+        "nero": "/images/paint/na/nero.png",
+        "bianco": "/images/paint/na/bianco.png",
+        "argento": "/images/paint/na/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13992,
+        "visiblePixels": 30428,
+        "coverage": 46,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 95,
+      "name": "Mx-5 NB",
+      "image": "nb.png",
+      "year": 2001,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "nb",
+      "source": "/images/car/nb.png",
+      "originalSha256": "b9fcf8982b813edf273507924da5098e0ded1035f0e7448e23efcf25f30e2d77",
+      "mask": "/images/paint/nb/mask.png",
+      "images": {
+        "rosso": "/images/paint/nb/rosso.png",
+        "blu": "/images/paint/nb/blu.png",
+        "verde": "/images/paint/nb/verde.png",
+        "nero": "/images/paint/nb/nero.png",
+        "bianco": "/images/paint/nb/bianco.png",
+        "argento": "/images/paint/nb/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17973,
+        "visiblePixels": 32116,
+        "coverage": 56,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 96,
+      "name": "Rx-7 FC",
+      "image": "fc.png",
+      "year": 1990,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "fc",
+      "source": "/images/car/fc.png",
+      "originalSha256": "3a4ac981cb0f0ee5bcc5b3f7709304988984ee36462374f4597c09e6dcb35846",
+      "mask": "/images/paint/fc/mask.png",
+      "images": {
+        "rosso": "/images/paint/fc/rosso.png",
+        "blu": "/images/paint/fc/blu.png",
+        "verde": "/images/paint/fc/verde.png",
+        "nero": "/images/paint/fc/nero.png",
+        "bianco": "/images/paint/fc/bianco.png",
+        "argento": "/images/paint/fc/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16742,
+        "visiblePixels": 37628,
+        "coverage": 44.5,
+        "maskOverlap": 98.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 97,
+      "name": "Rx-7 FD",
+      "image": "fd.png",
+      "year": 1992,
+      "brand": "Mazda",
+      "width": 400,
+      "height": 130,
+      "key": "fd",
+      "source": "/images/car/fd.png",
+      "originalSha256": "3feefdb2b4d138efdf650f441d39d3e5c7badb3b47cdde952233224048082342",
+      "mask": "/images/paint/fd/mask.png",
+      "images": {
+        "rosso": "/images/paint/fd/rosso.png",
+        "blu": "/images/paint/fd/blu.png",
+        "verde": "/images/paint/fd/verde.png",
+        "nero": "/images/paint/fd/nero.png",
+        "bianco": "/images/paint/fd/bianco.png",
+        "argento": "/images/paint/fd/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20911,
+        "visiblePixels": 36384,
+        "coverage": 57.5,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 98,
+      "name": "F1",
+      "image": "f1.png",
+      "year": 1992,
+      "brand": "McLaren",
+      "width": 400,
+      "height": 130,
+      "key": "f1",
+      "source": "/images/car/f1.png",
+      "originalSha256": "05326e40b7dfaf2c46a098bbdea8a69f8f6839566979251cb3cba4480a4b9cb7",
+      "mask": "/images/paint/f1/mask.png",
+      "images": {
+        "rosso": "/images/paint/f1/rosso.png",
+        "blu": "/images/paint/f1/blu.png",
+        "verde": "/images/paint/f1/verde.png",
+        "nero": "/images/paint/f1/nero.png",
+        "bianco": "/images/paint/f1/bianco.png",
+        "argento": "/images/paint/f1/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16886,
+        "visiblePixels": 38012,
+        "coverage": 44.4,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 99,
+      "name": "190 Evo",
+      "image": "190.png",
+      "year": 1990,
+      "brand": "Mercedes",
+      "width": 400,
+      "height": 130,
+      "key": "190",
+      "source": "/images/car/190.png",
+      "originalSha256": "5b3caee44d19f3c3d2171c5e1ce91d21addea8e6b53ca84c0f82290eb316951e",
+      "mask": "/images/paint/190/mask.png",
+      "images": {
+        "rosso": "/images/paint/190/rosso.png",
+        "blu": "/images/paint/190/blu.png",
+        "verde": "/images/paint/190/verde.png",
+        "nero": "/images/paint/190/nero.png",
+        "bianco": "/images/paint/190/bianco.png",
+        "argento": "/images/paint/190/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13072,
+        "visiblePixels": 30408,
+        "coverage": 43,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 100,
+      "name": "C43 AMG",
+      "image": "c43.png",
+      "year": 1997,
+      "brand": "Mercedes",
+      "width": 400,
+      "height": 130,
+      "key": "c43",
+      "source": "/images/car/c43.png",
+      "originalSha256": "4ae6c7443d0c3755c28ca44dbfb225ccb888c390f362552a367c96e941b84e47",
+      "mask": "/images/paint/c43/mask.png",
+      "images": {
+        "rosso": "/images/paint/c43/rosso.png",
+        "blu": "/images/paint/c43/blu.png",
+        "verde": "/images/paint/c43/verde.png",
+        "nero": "/images/paint/c43/nero.png",
+        "bianco": "/images/paint/c43/bianco.png",
+        "argento": "/images/paint/c43/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16268,
+        "visiblePixels": 33924,
+        "coverage": 48,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 101,
+      "name": "CLK AMG",
+      "image": "clk.png",
+      "year": 1999,
+      "brand": "Mercedes",
+      "width": 400,
+      "height": 130,
+      "key": "clk",
+      "source": "/images/car/clk.png",
+      "originalSha256": "c49785c05db2ae37fa21ebaa73e5f88a7f07cfb457caea14b4dc25a5c26efe74",
+      "mask": "/images/paint/clk/mask.png",
+      "images": {
+        "rosso": "/images/paint/clk/rosso.png",
+        "blu": "/images/paint/clk/blu.png",
+        "verde": "/images/paint/clk/verde.png",
+        "nero": "/images/paint/clk/nero.png",
+        "bianco": "/images/paint/clk/bianco.png",
+        "argento": "/images/paint/clk/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18304,
+        "visiblePixels": 30900,
+        "coverage": 59.2,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 102,
+      "name": "SLK AMG",
+      "image": "slk.png",
+      "year": 2001,
+      "brand": "Mercedes",
+      "width": 400,
+      "height": 130,
+      "key": "slk",
+      "source": "/images/car/slk.png",
+      "originalSha256": "5b6b60f8e720c3b15ef681d51348551201fab080bd5009d1de354149ec76ffe0",
+      "mask": "/images/paint/slk/mask.png",
+      "images": {
+        "rosso": "/images/paint/slk/rosso.png",
+        "blu": "/images/paint/slk/blu.png",
+        "verde": "/images/paint/slk/verde.png",
+        "nero": "/images/paint/slk/nero.png",
+        "bianco": "/images/paint/slk/bianco.png",
+        "argento": "/images/paint/slk/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15211,
+        "visiblePixels": 28904,
+        "coverage": 52.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 106,
+      "name": "Cooper S",
+      "image": "cooper.png",
+      "year": 1997,
+      "brand": "Mini",
+      "width": 400,
+      "height": 130,
+      "key": "cooper",
+      "source": "/images/car/cooper.png",
+      "originalSha256": "e32aa92bb2026d1fb3c0d1caa2b543aa410501cce663fa8e478b3301d6480819",
+      "mask": "/images/paint/cooper/mask.png",
+      "images": {
+        "rosso": "/images/paint/cooper/rosso.png",
+        "blu": "/images/paint/cooper/blu.png",
+        "verde": "/images/paint/cooper/verde.png",
+        "nero": "/images/paint/cooper/nero.png",
+        "bianco": "/images/paint/cooper/bianco.png",
+        "argento": "/images/paint/cooper/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 9821,
+        "visiblePixels": 24028,
+        "coverage": 40.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 107,
+      "name": "3000GT",
+      "image": "3000gt.png",
+      "year": 1994,
+      "brand": "Mitsubishi",
+      "width": 400,
+      "height": 130,
+      "key": "3000gt",
+      "source": "/images/car/3000gt.png",
+      "originalSha256": "7bda1c5b5f68c1e0e3cd76e75dc3c8986e8dce39a9949283a7f53cd34b377eab",
+      "mask": "/images/paint/3000gt/mask.png",
+      "images": {
+        "rosso": "/images/paint/3000gt/rosso.png",
+        "blu": "/images/paint/3000gt/blu.png",
+        "verde": "/images/paint/3000gt/verde.png",
+        "nero": "/images/paint/3000gt/nero.png",
+        "bianco": "/images/paint/3000gt/bianco.png",
+        "argento": "/images/paint/3000gt/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20303,
+        "visiblePixels": 36664,
+        "coverage": 55.4,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 108,
+      "name": "Colt GTI",
+      "image": "colt.png",
+      "year": 1992,
+      "brand": "Mitsubishi",
+      "width": 400,
+      "height": 130,
+      "key": "colt",
+      "source": "/images/car/colt.png",
+      "originalSha256": "d71c9dc1cbe7ff680685f43bea4486de3f69f1ffdf1a318976261556c8fb8608",
+      "mask": "/images/paint/colt/mask.png",
+      "images": {
+        "rosso": "/images/paint/colt/rosso.png",
+        "blu": "/images/paint/colt/blu.png",
+        "verde": "/images/paint/colt/verde.png",
+        "nero": "/images/paint/colt/nero.png",
+        "bianco": "/images/paint/colt/bianco.png",
+        "argento": "/images/paint/colt/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12340,
+        "visiblePixels": 29652,
+        "coverage": 41.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 109,
+      "name": "Eclipse",
+      "image": "eclipse.png",
+      "year": 1994,
+      "brand": "Mitsubishi",
+      "width": 400,
+      "height": 130,
+      "key": "eclipse",
+      "source": "/images/car/eclipse.png",
+      "originalSha256": "b10932bef7cedd3726ae0d6e95712bf55756b527b6faeca3390c1c2449b6bcb6",
+      "mask": "/images/paint/eclipse/mask.png",
+      "images": {
+        "rosso": "/images/paint/eclipse/rosso.png",
+        "blu": "/images/paint/eclipse/blu.png",
+        "verde": "/images/paint/eclipse/verde.png",
+        "nero": "/images/paint/eclipse/nero.png",
+        "bianco": "/images/paint/eclipse/bianco.png",
+        "argento": "/images/paint/eclipse/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19419,
+        "visiblePixels": 33104,
+        "coverage": 58.7,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 110,
+      "name": "Lancer Evo 5",
+      "image": "evo5.png",
+      "year": 1997,
+      "brand": "Mitsubishi",
+      "width": 400,
+      "height": 130,
+      "key": "evo5",
+      "source": "/images/car/evo5.png",
+      "originalSha256": "00438a7bb6559514eeec0b5c1aa07bcaa5d9b55cd7aff8c370976f54d66eabfb",
+      "mask": "/images/paint/evo5/mask.png",
+      "images": {
+        "rosso": "/images/paint/evo5/rosso.png",
+        "blu": "/images/paint/evo5/blu.png",
+        "verde": "/images/paint/evo5/verde.png",
+        "nero": "/images/paint/evo5/nero.png",
+        "bianco": "/images/paint/evo5/bianco.png",
+        "argento": "/images/paint/evo5/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16813,
+        "visiblePixels": 33868,
+        "coverage": 49.6,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 111,
+      "name": "Lancer Evo 6",
+      "image": "evo6.png",
+      "year": 1999,
+      "brand": "Mitsubishi",
+      "width": 400,
+      "height": 130,
+      "key": "evo6",
+      "source": "/images/car/evo6.png",
+      "originalSha256": "cf6edb159e97527caa7249e8dd2e716e30438780427ce12447863b4c2760ad38",
+      "mask": "/images/paint/evo6/mask.png",
+      "images": {
+        "rosso": "/images/paint/evo6/rosso.png",
+        "blu": "/images/paint/evo6/blu.png",
+        "verde": "/images/paint/evo6/verde.png",
+        "nero": "/images/paint/evo6/nero.png",
+        "bianco": "/images/paint/evo6/bianco.png",
+        "argento": "/images/paint/evo6/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16561,
+        "visiblePixels": 30992,
+        "coverage": 53.4,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 112,
+      "name": "Lancer Evo 7",
+      "image": "evo7.png",
+      "year": 2001,
+      "brand": "Mitsubishi",
+      "width": 400,
+      "height": 130,
+      "key": "evo7",
+      "source": "/images/car/evo7.png",
+      "originalSha256": "d4b375262579acfb5b2d3a167f95efc31c070cde95352a491526389df6f59532",
+      "mask": "/images/paint/evo7/mask.png",
+      "images": {
+        "rosso": "/images/paint/evo7/rosso.png",
+        "blu": "/images/paint/evo7/blu.png",
+        "verde": "/images/paint/evo7/verde.png",
+        "nero": "/images/paint/evo7/nero.png",
+        "bianco": "/images/paint/evo7/bianco.png",
+        "argento": "/images/paint/evo7/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20695,
+        "visiblePixels": 35016,
+        "coverage": 59.1,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 113,
+      "name": "180SX",
+      "image": "180sx.png",
+      "year": 1989,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "180sx",
+      "source": "/images/car/180sx.png",
+      "originalSha256": "efef40fd8fb008afbb2a3b926fe61810be3cebecf6403e3d4b9adcccad575b20",
+      "mask": "/images/paint/180sx/mask.png",
+      "images": {
+        "rosso": "/images/paint/180sx/rosso.png",
+        "blu": "/images/paint/180sx/blu.png",
+        "verde": "/images/paint/180sx/verde.png",
+        "nero": "/images/paint/180sx/nero.png",
+        "bianco": "/images/paint/180sx/bianco.png",
+        "argento": "/images/paint/180sx/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18047,
+        "visiblePixels": 33244,
+        "coverage": 54.3,
+        "maskOverlap": 99.1
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 114,
+      "name": "200SX S13",
+      "image": "s13.png",
+      "year": 1991,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "s13",
+      "source": "/images/car/s13.png",
+      "originalSha256": "11a2888b389495dd4d672d97b318fdb3571ac4f2817b2c60fb1b57a9731bc1d6",
+      "mask": "/images/paint/s13/mask.png",
+      "images": {
+        "rosso": "/images/paint/s13/rosso.png",
+        "blu": "/images/paint/s13/blu.png",
+        "verde": "/images/paint/s13/verde.png",
+        "nero": "/images/paint/s13/nero.png",
+        "bianco": "/images/paint/s13/bianco.png",
+        "argento": "/images/paint/s13/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11412,
+        "visiblePixels": 32636,
+        "coverage": 35,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 115,
+      "name": "200SX S14",
+      "image": "s14.png",
+      "year": 1994,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "s14",
+      "source": "/images/car/s14.png",
+      "originalSha256": "6d7e6ed0b9b22f198f5a7528cca8feab0c4ed3835be989e1357856daea0b3063",
+      "mask": "/images/paint/s14/mask.png",
+      "images": {
+        "rosso": "/images/paint/s14/rosso.png",
+        "blu": "/images/paint/s14/blu.png",
+        "verde": "/images/paint/s14/verde.png",
+        "nero": "/images/paint/s14/nero.png",
+        "bianco": "/images/paint/s14/bianco.png",
+        "argento": "/images/paint/s14/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14226,
+        "visiblePixels": 27528,
+        "coverage": 51.7,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 116,
+      "name": "300ZX",
+      "image": "300zx.png",
+      "year": 1990,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "300zx",
+      "source": "/images/car/300zx.png",
+      "originalSha256": "583630ee89b4eb9d6df2c641a252c090295d01c3c8a668cd332279b6e548ffbf",
+      "mask": "/images/paint/300zx/mask.png",
+      "images": {
+        "rosso": "/images/paint/300zx/rosso.png",
+        "blu": "/images/paint/300zx/blu.png",
+        "verde": "/images/paint/300zx/verde.png",
+        "nero": "/images/paint/300zx/nero.png",
+        "bianco": "/images/paint/300zx/bianco.png",
+        "argento": "/images/paint/300zx/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16603,
+        "visiblePixels": 29396,
+        "coverage": 56.5,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 117,
+      "name": "Almera GTI",
+      "image": "almera.png",
+      "year": 1996,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "almera",
+      "source": "/images/car/almera.png",
+      "originalSha256": "8ed475df354bec8f933657586b9e06ee59a4c3476d7361170f2585e4799dd54c",
+      "mask": "/images/paint/almera/mask.png",
+      "images": {
+        "rosso": "/images/paint/almera/rosso.png",
+        "blu": "/images/paint/almera/blu.png",
+        "verde": "/images/paint/almera/verde.png",
+        "nero": "/images/paint/almera/nero.png",
+        "bianco": "/images/paint/almera/bianco.png",
+        "argento": "/images/paint/almera/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12271,
+        "visiblePixels": 22740,
+        "coverage": 54,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 118,
+      "name": "Micra Super S",
+      "image": "micra.png",
+      "year": 1996,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "micra",
+      "source": "/images/car/micra.png",
+      "originalSha256": "7a42883b8536653016f761a7ed411ff15211149c181763712e7fdf57d4e41cfc",
+      "mask": "/images/paint/micra/mask.png",
+      "images": {
+        "rosso": "/images/paint/micra/rosso.png",
+        "blu": "/images/paint/micra/blu.png",
+        "verde": "/images/paint/micra/verde.png",
+        "nero": "/images/paint/micra/nero.png",
+        "bianco": "/images/paint/micra/bianco.png",
+        "argento": "/images/paint/micra/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14696,
+        "visiblePixels": 26024,
+        "coverage": 56.5,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 119,
+      "name": "Primera GT",
+      "image": "primera.png",
+      "year": 1997,
+      "brand": "Nissan",
+      "width": 404,
+      "height": 138,
+      "key": "primera",
+      "source": "/images/car/primera.png",
+      "originalSha256": "1f0aa2de6fae0fe7e6b1d1897f03aff8dd7d54f9d6cd2c6506230500c433269a",
+      "mask": "/images/paint/primera/mask.png",
+      "images": {
+        "rosso": "/images/paint/primera/rosso.png",
+        "blu": "/images/paint/primera/blu.png",
+        "verde": "/images/paint/primera/verde.png",
+        "nero": "/images/paint/primera/nero.png",
+        "bianco": "/images/paint/primera/bianco.png",
+        "argento": "/images/paint/primera/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20090,
+        "visiblePixels": 33200,
+        "coverage": 60.5,
+        "maskOverlap": 97.1
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 120,
+      "name": "Skyline GTR R32",
+      "image": "r32.png",
+      "year": 1989,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "r32",
+      "source": "/images/car/r32.png",
+      "originalSha256": "fe255f759f1c0710c06c67fbfe27c256bcb144fbf0db9a643cc1fe476927e217",
+      "mask": "/images/paint/r32/mask.png",
+      "images": {
+        "rosso": "/images/paint/r32/rosso.png",
+        "blu": "/images/paint/r32/blu.png",
+        "verde": "/images/paint/r32/verde.png",
+        "nero": "/images/paint/r32/nero.png",
+        "bianco": "/images/paint/r32/bianco.png",
+        "argento": "/images/paint/r32/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14911,
+        "visiblePixels": 29108,
+        "coverage": 51.2,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 121,
+      "name": "Skyline GTR R33",
+      "image": "r33.png",
+      "year": 1995,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "r33",
+      "source": "/images/car/r33.png",
+      "originalSha256": "6bae360e8c23875b04a2f29f1689f24a9f6c8b7a41ae6b8f075f8b26392c9989",
+      "mask": "/images/paint/r33/mask.png",
+      "images": {
+        "rosso": "/images/paint/r33/rosso.png",
+        "blu": "/images/paint/r33/blu.png",
+        "verde": "/images/paint/r33/verde.png",
+        "nero": "/images/paint/r33/nero.png",
+        "bianco": "/images/paint/r33/bianco.png",
+        "argento": "/images/paint/r33/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14982,
+        "visiblePixels": 24708,
+        "coverage": 60.6,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 122,
+      "name": "Sunny GTi-R",
+      "image": "sunny.png",
+      "year": 1991,
+      "brand": "Nissan",
+      "width": 400,
+      "height": 130,
+      "key": "sunny",
+      "source": "/images/car/sunny.png",
+      "originalSha256": "2c7e5a9c6e48f76702c0c7a574abd789a4db5698d8ecdd9ea1d92e3bddd3fac0",
+      "mask": "/images/paint/sunny/mask.png",
+      "images": {
+        "rosso": "/images/paint/sunny/rosso.png",
+        "blu": "/images/paint/sunny/blu.png",
+        "verde": "/images/paint/sunny/verde.png",
+        "nero": "/images/paint/sunny/nero.png",
+        "bianco": "/images/paint/sunny/bianco.png",
+        "argento": "/images/paint/sunny/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12933,
+        "visiblePixels": 29644,
+        "coverage": 43.6,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 123,
+      "name": "Astra Coupè Turbo",
+      "image": "astrac.png",
+      "year": 2000,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "astrac",
+      "source": "/images/car/astrac.png",
+      "originalSha256": "a3821cb240df5fce3715b7d6bfecc367bcf1d5a73932823d0fe66b8a45545c27",
+      "mask": "/images/paint/astrac/mask.png",
+      "images": {
+        "rosso": "/images/paint/astrac/rosso.png",
+        "blu": "/images/paint/astrac/blu.png",
+        "verde": "/images/paint/astrac/verde.png",
+        "nero": "/images/paint/astrac/nero.png",
+        "bianco": "/images/paint/astrac/bianco.png",
+        "argento": "/images/paint/astrac/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17478,
+        "visiblePixels": 29520,
+        "coverage": 59.2,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 124,
+      "name": "Astra Gsi",
+      "image": "astrag.png",
+      "year": 1991,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "astrag",
+      "source": "/images/car/astrag.png",
+      "originalSha256": "d9b8cced53e0078427ff5d14e08e9293b31b91dac20896465e9423246bd85032",
+      "mask": "/images/paint/astrag/mask.png",
+      "images": {
+        "rosso": "/images/paint/astrag/rosso.png",
+        "blu": "/images/paint/astrag/blu.png",
+        "verde": "/images/paint/astrag/verde.png",
+        "nero": "/images/paint/astrag/nero.png",
+        "bianco": "/images/paint/astrag/bianco.png",
+        "argento": "/images/paint/astrag/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13312,
+        "visiblePixels": 27592,
+        "coverage": 48.2,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 125,
+      "name": "Astra OPC",
+      "image": "opc.png",
+      "year": 2001,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "opc",
+      "source": "/images/car/opc.png",
+      "originalSha256": "82241ab17ceb3bb56c228efcb525395aecd82fbe4af7f895bdc0c1683ee75aa8",
+      "mask": "/images/paint/opc/mask.png",
+      "images": {
+        "rosso": "/images/paint/opc/rosso.png",
+        "blu": "/images/paint/opc/blu.png",
+        "verde": "/images/paint/opc/verde.png",
+        "nero": "/images/paint/opc/nero.png",
+        "bianco": "/images/paint/opc/bianco.png",
+        "argento": "/images/paint/opc/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16434,
+        "visiblePixels": 27888,
+        "coverage": 58.9,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 126,
+      "name": "Calibra Turbo",
+      "image": "calibra.png",
+      "year": 1992,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "calibra",
+      "source": "/images/car/calibra.png",
+      "originalSha256": "628e10c8222ea60a47d12239be6863405bd058019875a0365a6a02c86d9b1ad4",
+      "mask": "/images/paint/calibra/mask.png",
+      "images": {
+        "rosso": "/images/paint/calibra/rosso.png",
+        "blu": "/images/paint/calibra/blu.png",
+        "verde": "/images/paint/calibra/verde.png",
+        "nero": "/images/paint/calibra/nero.png",
+        "bianco": "/images/paint/calibra/bianco.png",
+        "argento": "/images/paint/calibra/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17937,
+        "visiblePixels": 33500,
+        "coverage": 53.5,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 127,
+      "name": "Corsa Gsi mk1",
+      "image": "corsa1.png",
+      "year": 1988,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "corsa1",
+      "source": "/images/car/corsa1.png",
+      "originalSha256": "88de9af3a8d27640de65e6dda2596268f8c244a43b945037d4244584e7754790",
+      "mask": "/images/paint/corsa1/mask.png",
+      "images": {
+        "rosso": "/images/paint/corsa1/rosso.png",
+        "blu": "/images/paint/corsa1/blu.png",
+        "verde": "/images/paint/corsa1/verde.png",
+        "nero": "/images/paint/corsa1/nero.png",
+        "bianco": "/images/paint/corsa1/bianco.png",
+        "argento": "/images/paint/corsa1/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13803,
+        "visiblePixels": 29036,
+        "coverage": 47.5,
+        "maskOverlap": 99.2
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 128,
+      "name": "Corsa Gsi mk2",
+      "image": "corsa2.png",
+      "year": 1993,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "corsa2",
+      "source": "/images/car/corsa2.png",
+      "originalSha256": "386329a43325e9ffbd679fcd1b5d7e1001732aa62225783d625559df803fd7c8",
+      "mask": "/images/paint/corsa2/mask.png",
+      "images": {
+        "rosso": "/images/paint/corsa2/rosso.png",
+        "blu": "/images/paint/corsa2/blu.png",
+        "verde": "/images/paint/corsa2/verde.png",
+        "nero": "/images/paint/corsa2/nero.png",
+        "bianco": "/images/paint/corsa2/bianco.png",
+        "argento": "/images/paint/corsa2/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12971,
+        "visiblePixels": 26376,
+        "coverage": 49.2,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 129,
+      "name": "Kadett Gsi",
+      "image": "kadett.png",
+      "year": 1989,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "kadett",
+      "source": "/images/car/kadett.png",
+      "originalSha256": "4a45349a82478a9e17140f4aa8f94829e7b348b77d12c2b815cbda0355b6ae7d",
+      "mask": "/images/paint/kadett/mask.png",
+      "images": {
+        "rosso": "/images/paint/kadett/rosso.png",
+        "blu": "/images/paint/kadett/blu.png",
+        "verde": "/images/paint/kadett/verde.png",
+        "nero": "/images/paint/kadett/nero.png",
+        "bianco": "/images/paint/kadett/bianco.png",
+        "argento": "/images/paint/kadett/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12781,
+        "visiblePixels": 31804,
+        "coverage": 40.2,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 130,
+      "name": "Manta Gsi",
+      "image": "manta.png",
+      "year": 1988,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "manta",
+      "source": "/images/car/manta.png",
+      "originalSha256": "d525d2b9a01f4b0919f96c4ec5774188293687b2f05f2d984a64dfdb04683841",
+      "mask": "/images/paint/manta/mask.png",
+      "images": {
+        "rosso": "/images/paint/manta/rosso.png",
+        "blu": "/images/paint/manta/blu.png",
+        "verde": "/images/paint/manta/verde.png",
+        "nero": "/images/paint/manta/nero.png",
+        "bianco": "/images/paint/manta/bianco.png",
+        "argento": "/images/paint/manta/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11982,
+        "visiblePixels": 27286,
+        "coverage": 43.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 131,
+      "name": "Omega Lotus",
+      "image": "omega.png",
+      "year": 1990,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "omega",
+      "source": "/images/car/omega.png",
+      "originalSha256": "08626249d7e34e5018726df10e3c69b76dd06f99455a5a80f7ce3bd08a62d056",
+      "mask": "/images/paint/omega/mask.png",
+      "images": {
+        "rosso": "/images/paint/omega/rosso.png",
+        "blu": "/images/paint/omega/blu.png",
+        "verde": "/images/paint/omega/verde.png",
+        "nero": "/images/paint/omega/nero.png",
+        "bianco": "/images/paint/omega/bianco.png",
+        "argento": "/images/paint/omega/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13735,
+        "visiblePixels": 31488,
+        "coverage": 43.6,
+        "maskOverlap": 99.3
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 132,
+      "name": "Speedster",
+      "image": "speedster.png",
+      "year": 2000,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "speedster",
+      "source": "/images/car/speedster.png",
+      "originalSha256": "bd2794874f3c169268be14fb73488c50a6d896f18f0eb79c4e5fefe99285e971",
+      "mask": "/images/paint/speedster/mask.png",
+      "images": {
+        "rosso": "/images/paint/speedster/rosso.png",
+        "blu": "/images/paint/speedster/blu.png",
+        "verde": "/images/paint/speedster/verde.png",
+        "nero": "/images/paint/speedster/nero.png",
+        "bianco": "/images/paint/speedster/bianco.png",
+        "argento": "/images/paint/speedster/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12400,
+        "visiblePixels": 28310,
+        "coverage": 43.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 133,
+      "name": "Tigra 1.6",
+      "image": "tigra.png",
+      "year": 1994,
+      "brand": "Opel",
+      "width": 400,
+      "height": 130,
+      "key": "tigra",
+      "source": "/images/car/tigra.png",
+      "originalSha256": "432b8471b455d5de3a38371ebe1fb3cbe7d6cdf279d424f18491db95a903c906",
+      "mask": "/images/paint/tigra/mask.png",
+      "images": {
+        "rosso": "/images/paint/tigra/rosso.png",
+        "blu": "/images/paint/tigra/blu.png",
+        "verde": "/images/paint/tigra/verde.png",
+        "nero": "/images/paint/tigra/nero.png",
+        "bianco": "/images/paint/tigra/bianco.png",
+        "argento": "/images/paint/tigra/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16271,
+        "visiblePixels": 30180,
+        "coverage": 53.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 134,
+      "name": "Zonda",
+      "image": "zonda.png",
+      "year": 2000,
+      "brand": "Pagani",
+      "width": 400,
+      "height": 130,
+      "key": "zonda",
+      "source": "/images/car/zonda.png",
+      "originalSha256": "799126e74fc246114294478c69abbc2b8837eebdddf3361c345e34345b4412a0",
+      "mask": "/images/paint/zonda/mask.png",
+      "images": {
+        "rosso": "/images/paint/zonda/rosso.png",
+        "blu": "/images/paint/zonda/blu.png",
+        "verde": "/images/paint/zonda/verde.png",
+        "nero": "/images/paint/zonda/nero.png",
+        "bianco": "/images/paint/zonda/bianco.png",
+        "argento": "/images/paint/zonda/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18494,
+        "visiblePixels": 38048,
+        "coverage": 48.6,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 135,
+      "name": "106 Gti 16v",
+      "image": "106.png",
+      "year": 1996,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "106",
+      "source": "/images/car/106.png",
+      "originalSha256": "1261ab0355c00ad384039ba5bf74eebd35b3b7940352d3fad50a7f69fadb88d4",
+      "mask": "/images/paint/106/mask.png",
+      "images": {
+        "rosso": "/images/paint/106/rosso.png",
+        "blu": "/images/paint/106/blu.png",
+        "verde": "/images/paint/106/verde.png",
+        "nero": "/images/paint/106/nero.png",
+        "bianco": "/images/paint/106/bianco.png",
+        "argento": "/images/paint/106/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14452,
+        "visiblePixels": 25650,
+        "coverage": 56.3,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 136,
+      "name": "106 Rallye 1.3",
+      "image": "rallye.png",
+      "year": 1993,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "rallye",
+      "source": "/images/car/rallye.png",
+      "originalSha256": "26173834a67870cd70740086f16c3f09926ce61f54da69a7edf267883fba85bf",
+      "mask": "/images/paint/rallye/mask.png",
+      "images": {
+        "rosso": "/images/paint/rallye/rosso.png",
+        "blu": "/images/paint/rallye/blu.png",
+        "verde": "/images/paint/rallye/verde.png",
+        "nero": "/images/paint/rallye/nero.png",
+        "bianco": "/images/paint/rallye/bianco.png",
+        "argento": "/images/paint/rallye/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14620,
+        "visiblePixels": 32044,
+        "coverage": 45.6,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 137,
+      "name": "205 Gti 1.9",
+      "image": "205.png",
+      "year": 1986,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "205",
+      "source": "/images/car/205.png",
+      "originalSha256": "36be776ef9450c77cf8352a6ed9cbc017a7c6973e7c46a8ee41d1cbf5af66f8c",
+      "mask": "/images/paint/205/mask.png",
+      "images": {
+        "rosso": "/images/paint/205/rosso.png",
+        "blu": "/images/paint/205/blu.png",
+        "verde": "/images/paint/205/verde.png",
+        "nero": "/images/paint/205/nero.png",
+        "bianco": "/images/paint/205/bianco.png",
+        "argento": "/images/paint/205/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11666,
+        "visiblePixels": 30342,
+        "coverage": 38.4,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 138,
+      "name": "206 Gti",
+      "image": "206.png",
+      "year": 1998,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "206",
+      "source": "/images/car/206.png",
+      "originalSha256": "56319b0ec783af78696627738a277c267834703882a1d192550740216d453423",
+      "mask": "/images/paint/206/mask.png",
+      "images": {
+        "rosso": "/images/paint/206/rosso.png",
+        "blu": "/images/paint/206/blu.png",
+        "verde": "/images/paint/206/verde.png",
+        "nero": "/images/paint/206/nero.png",
+        "bianco": "/images/paint/206/bianco.png",
+        "argento": "/images/paint/206/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12492,
+        "visiblePixels": 24336,
+        "coverage": 51.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 139,
+      "name": "306 Gti",
+      "image": "306.png",
+      "year": 1996,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "306",
+      "source": "/images/car/306.png",
+      "originalSha256": "2ae7da5bb18cd899c6d48a1fb47a4b72ba7065eb021fc29f873f0da83cacfabe",
+      "mask": "/images/paint/306/mask.png",
+      "images": {
+        "rosso": "/images/paint/306/rosso.png",
+        "blu": "/images/paint/306/blu.png",
+        "verde": "/images/paint/306/verde.png",
+        "nero": "/images/paint/306/nero.png",
+        "bianco": "/images/paint/306/bianco.png",
+        "argento": "/images/paint/306/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17169,
+        "visiblePixels": 33272,
+        "coverage": 51.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 140,
+      "name": "309 Gti",
+      "image": "309.png",
+      "year": 1990,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "309",
+      "source": "/images/car/309.png",
+      "originalSha256": "1ad450e13a8fb4d6c4e8574c5292712291eef7ee3084bc123ebf91a28469ca57",
+      "mask": "/images/paint/309/mask.png",
+      "images": {
+        "rosso": "/images/paint/309/rosso.png",
+        "blu": "/images/paint/309/blu.png",
+        "verde": "/images/paint/309/verde.png",
+        "nero": "/images/paint/309/nero.png",
+        "bianco": "/images/paint/309/bianco.png",
+        "argento": "/images/paint/309/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10336,
+        "visiblePixels": 28552,
+        "coverage": 36.2,
+        "maskOverlap": 99.3
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 141,
+      "name": "405 T16",
+      "image": "405.png",
+      "year": 1993,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "405",
+      "source": "/images/car/405.png",
+      "originalSha256": "22a908df6310993c8511e6224b3e643573e4a721890ea56252c9fae040331ff8",
+      "mask": "/images/paint/405/mask.png",
+      "images": {
+        "rosso": "/images/paint/405/rosso.png",
+        "blu": "/images/paint/405/blu.png",
+        "verde": "/images/paint/405/verde.png",
+        "nero": "/images/paint/405/nero.png",
+        "bianco": "/images/paint/405/bianco.png",
+        "argento": "/images/paint/405/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17640,
+        "visiblePixels": 35090,
+        "coverage": 50.3,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 142,
+      "name": "406 v6",
+      "image": "406.png",
+      "year": 1997,
+      "brand": "Peugeot",
+      "width": 400,
+      "height": 130,
+      "key": "406",
+      "source": "/images/car/406.png",
+      "originalSha256": "3f56820386bcc0d8aeb39818862c6d5b33307c91b5e12541f4473dce6cf91ec2",
+      "mask": "/images/paint/406/mask.png",
+      "images": {
+        "rosso": "/images/paint/406/rosso.png",
+        "blu": "/images/paint/406/blu.png",
+        "verde": "/images/paint/406/verde.png",
+        "nero": "/images/paint/406/nero.png",
+        "bianco": "/images/paint/406/bianco.png",
+        "argento": "/images/paint/406/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17560,
+        "visiblePixels": 31688,
+        "coverage": 55.4,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 143,
+      "name": "911 Carrera",
+      "image": "911.png",
+      "year": 1984,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "911",
+      "source": "/images/car/911.png",
+      "originalSha256": "7a91387e905f16461d0765015d71760590a59d9897d1c88c68edb715f4917ec3",
+      "mask": "/images/paint/911/mask.png",
+      "images": {
+        "rosso": "/images/paint/911/rosso.png",
+        "blu": "/images/paint/911/blu.png",
+        "verde": "/images/paint/911/verde.png",
+        "nero": "/images/paint/911/nero.png",
+        "bianco": "/images/paint/911/bianco.png",
+        "argento": "/images/paint/911/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 10829,
+        "visiblePixels": 25616,
+        "coverage": 42.3,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 144,
+      "name": "911 GT1",
+      "image": "gt1.png",
+      "year": 1998,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "gt1",
+      "source": "/images/car/gt1.png",
+      "originalSha256": "27e7793eab12eeb7e7dbfdf743b8f20cc9d7862c0c35e79b060c1cdf82b1b32a",
+      "mask": "/images/paint/gt1/mask.png",
+      "images": {
+        "rosso": "/images/paint/gt1/rosso.png",
+        "blu": "/images/paint/gt1/blu.png",
+        "verde": "/images/paint/gt1/verde.png",
+        "nero": "/images/paint/gt1/nero.png",
+        "bianco": "/images/paint/gt1/bianco.png",
+        "argento": "/images/paint/gt1/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17528,
+        "visiblePixels": 31520,
+        "coverage": 55.6,
+        "maskOverlap": 98.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 145,
+      "name": "930 Turbo",
+      "image": "930.png",
+      "year": 1978,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "930",
+      "source": "/images/car/930.png",
+      "originalSha256": "ab654cb4691dea855a9aefa0135fc5957244d3014a70a0092b9e0c5b7553b773",
+      "mask": "/images/paint/930/mask.png",
+      "images": {
+        "rosso": "/images/paint/930/rosso.png",
+        "blu": "/images/paint/930/blu.png",
+        "verde": "/images/paint/930/verde.png",
+        "nero": "/images/paint/930/nero.png",
+        "bianco": "/images/paint/930/bianco.png",
+        "argento": "/images/paint/930/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12183,
+        "visiblePixels": 29708,
+        "coverage": 41,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 146,
+      "name": "944 Turbo S",
+      "image": "944.png",
+      "year": 1988,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "944",
+      "source": "/images/car/944.png",
+      "originalSha256": "99fedb3452daf62841a0f7fc16aae8fab8d2497b917a909dfd22dcc8b8303e4d",
+      "mask": "/images/paint/944/mask.png",
+      "images": {
+        "rosso": "/images/paint/944/rosso.png",
+        "blu": "/images/paint/944/blu.png",
+        "verde": "/images/paint/944/verde.png",
+        "nero": "/images/paint/944/nero.png",
+        "bianco": "/images/paint/944/bianco.png",
+        "argento": "/images/paint/944/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19832,
+        "visiblePixels": 31172,
+        "coverage": 63.6,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 147,
+      "name": "959",
+      "image": "959.png",
+      "year": 1987,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "959",
+      "source": "/images/car/959.png",
+      "originalSha256": "1d091d379f96f58098df5d4a043343da31a7528259d7ac8cd8e4c1f8c2600076",
+      "mask": "/images/paint/959/mask.png",
+      "images": {
+        "rosso": "/images/paint/959/rosso.png",
+        "blu": "/images/paint/959/blu.png",
+        "verde": "/images/paint/959/verde.png",
+        "nero": "/images/paint/959/nero.png",
+        "bianco": "/images/paint/959/bianco.png",
+        "argento": "/images/paint/959/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14993,
+        "visiblePixels": 32756,
+        "coverage": 45.8,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 148,
+      "name": "964 RS",
+      "image": "964.png",
+      "year": 1991,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "964",
+      "source": "/images/car/964.png",
+      "originalSha256": "92bf811cda533246280567ef3b10703061bb47ba2739e9fdca41e951f78886e5",
+      "mask": "/images/paint/964/mask.png",
+      "images": {
+        "rosso": "/images/paint/964/rosso.png",
+        "blu": "/images/paint/964/blu.png",
+        "verde": "/images/paint/964/verde.png",
+        "nero": "/images/paint/964/nero.png",
+        "bianco": "/images/paint/964/bianco.png",
+        "argento": "/images/paint/964/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15709,
+        "visiblePixels": 27806,
+        "coverage": 56.5,
+        "maskOverlap": 99.2
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 149,
+      "name": "964 Turbo",
+      "image": "964t.png",
+      "year": 1990,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "964t",
+      "source": "/images/car/964t.png",
+      "originalSha256": "ed2dddc0f5831f13ee49581f77c1dfceb28578bd6782d1d20ced7999be9df9a8",
+      "mask": "/images/paint/964t/mask.png",
+      "images": {
+        "rosso": "/images/paint/964t/rosso.png",
+        "blu": "/images/paint/964t/blu.png",
+        "verde": "/images/paint/964t/verde.png",
+        "nero": "/images/paint/964t/nero.png",
+        "bianco": "/images/paint/964t/bianco.png",
+        "argento": "/images/paint/964t/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13443,
+        "visiblePixels": 29892,
+        "coverage": 45,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 150,
+      "name": "968 Turbo S",
+      "image": "968.png",
+      "year": 1993,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "968",
+      "source": "/images/car/968.png",
+      "originalSha256": "2c9a5564ef15f6e140e8b71fab75b5905a7cc4413fb49f0671090d952480ce92",
+      "mask": "/images/paint/968/mask.png",
+      "images": {
+        "rosso": "/images/paint/968/rosso.png",
+        "blu": "/images/paint/968/blu.png",
+        "verde": "/images/paint/968/verde.png",
+        "nero": "/images/paint/968/nero.png",
+        "bianco": "/images/paint/968/bianco.png",
+        "argento": "/images/paint/968/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20687,
+        "visiblePixels": 34246,
+        "coverage": 60.4,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 151,
+      "name": "993 GT2",
+      "image": "gt2.png",
+      "year": 1995,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "gt2",
+      "source": "/images/car/gt2.png",
+      "originalSha256": "a9df0596ed1af2d0dc41e1333a62422a0a8af1662788585bee4c6df90f274614",
+      "mask": "/images/paint/gt2/mask.png",
+      "images": {
+        "rosso": "/images/paint/gt2/rosso.png",
+        "blu": "/images/paint/gt2/blu.png",
+        "verde": "/images/paint/gt2/verde.png",
+        "nero": "/images/paint/gt2/nero.png",
+        "bianco": "/images/paint/gt2/bianco.png",
+        "argento": "/images/paint/gt2/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18706,
+        "visiblePixels": 30348,
+        "coverage": 61.6,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 152,
+      "name": "993 RS",
+      "image": "993.png",
+      "year": 1995,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "993",
+      "source": "/images/car/993.png",
+      "originalSha256": "6f0fb86dd28e5b957669fdaa3aac5b64691f4e326eaac7fda77756ab580f9505",
+      "mask": "/images/paint/993/mask.png",
+      "images": {
+        "rosso": "/images/paint/993/rosso.png",
+        "blu": "/images/paint/993/blu.png",
+        "verde": "/images/paint/993/verde.png",
+        "nero": "/images/paint/993/nero.png",
+        "bianco": "/images/paint/993/bianco.png",
+        "argento": "/images/paint/993/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18648,
+        "visiblePixels": 29646,
+        "coverage": 62.9,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 153,
+      "name": "996 GT3",
+      "image": "996.png",
+      "year": 1999,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "996",
+      "source": "/images/car/996.png",
+      "originalSha256": "3dabe43b447fa735d6b8ffe2c4ecfcbad0a8f4393bc66461c1ac818b38d4ba2e",
+      "mask": "/images/paint/996/mask.png",
+      "images": {
+        "rosso": "/images/paint/996/rosso.png",
+        "blu": "/images/paint/996/blu.png",
+        "verde": "/images/paint/996/verde.png",
+        "nero": "/images/paint/996/nero.png",
+        "bianco": "/images/paint/996/bianco.png",
+        "argento": "/images/paint/996/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17907,
+        "visiblePixels": 30324,
+        "coverage": 59.1,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 154,
+      "name": "Boxster",
+      "image": "boxster.png",
+      "year": 1999,
+      "brand": "Porsche",
+      "width": 400,
+      "height": 130,
+      "key": "boxster",
+      "source": "/images/car/boxster.png",
+      "originalSha256": "b567d6ff39aa5ec6300941fec87eed1d9d081821b1ab39b0e15a1f6292f09b3c",
+      "mask": "/images/paint/boxster/mask.png",
+      "images": {
+        "rosso": "/images/paint/boxster/rosso.png",
+        "blu": "/images/paint/boxster/blu.png",
+        "verde": "/images/paint/boxster/verde.png",
+        "nero": "/images/paint/boxster/nero.png",
+        "bianco": "/images/paint/boxster/bianco.png",
+        "argento": "/images/paint/boxster/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17448,
+        "visiblePixels": 30288,
+        "coverage": 57.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 155,
+      "name": "19 16v",
+      "image": "19.png",
+      "year": 1992,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "19",
+      "source": "/images/car/19.png",
+      "originalSha256": "d016cb6b207295148e38c002fa2fe830ec311fe047fc45639de1fbb8f8f5b60b",
+      "mask": "/images/paint/19/mask.png",
+      "images": {
+        "rosso": "/images/paint/19/rosso.png",
+        "blu": "/images/paint/19/blu.png",
+        "verde": "/images/paint/19/verde.png",
+        "nero": "/images/paint/19/nero.png",
+        "bianco": "/images/paint/19/bianco.png",
+        "argento": "/images/paint/19/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14406,
+        "visiblePixels": 26702,
+        "coverage": 54,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 156,
+      "name": "5 Gt",
+      "image": "5.png",
+      "year": 1987,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "5",
+      "source": "/images/car/5.png",
+      "originalSha256": "68cc39de49a19b7247511c73f411dc0d3bbabb9f2e86e98c65c0278e6c6386bb",
+      "mask": "/images/paint/5/mask.png",
+      "images": {
+        "rosso": "/images/paint/5/rosso.png",
+        "blu": "/images/paint/5/blu.png",
+        "verde": "/images/paint/5/verde.png",
+        "nero": "/images/paint/5/nero.png",
+        "bianco": "/images/paint/5/bianco.png",
+        "argento": "/images/paint/5/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11065,
+        "visiblePixels": 26062,
+        "coverage": 42.5,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 157,
+      "name": "5 Maxi Turbo",
+      "image": "5maxi.png",
+      "year": 1983,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "5maxi",
+      "source": "/images/car/5maxi.png",
+      "originalSha256": "8d3481f26804552028cb7177536ba31d376e39fb51263fd5ce1fbe4dbde2eb8d",
+      "mask": "/images/paint/5maxi/mask.png",
+      "images": {
+        "rosso": "/images/paint/5maxi/rosso.png",
+        "blu": "/images/paint/5maxi/blu.png",
+        "verde": "/images/paint/5maxi/verde.png",
+        "nero": "/images/paint/5maxi/nero.png",
+        "bianco": "/images/paint/5maxi/bianco.png",
+        "argento": "/images/paint/5maxi/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14413,
+        "visiblePixels": 25512,
+        "coverage": 56.5,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 158,
+      "name": "Alpine A610",
+      "image": "alpine.png",
+      "year": 1991,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "alpine",
+      "source": "/images/car/alpine.png",
+      "originalSha256": "2ed433315f330969f5e9f0807c2d5c38533af0888fbbb743f29c45e505882196",
+      "mask": "/images/paint/alpine/mask.png",
+      "images": {
+        "rosso": "/images/paint/alpine/rosso.png",
+        "blu": "/images/paint/alpine/blu.png",
+        "verde": "/images/paint/alpine/verde.png",
+        "nero": "/images/paint/alpine/nero.png",
+        "bianco": "/images/paint/alpine/bianco.png",
+        "argento": "/images/paint/alpine/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17855,
+        "visiblePixels": 32424,
+        "coverage": 55.1,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 159,
+      "name": "Clio Rs",
+      "image": "clio.png",
+      "year": 1999,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "clio",
+      "source": "/images/car/clio.png",
+      "originalSha256": "37101d8399f5aa9509be23c015239b3d6c1ee1667de0173dc5f6330a2b0029bf",
+      "mask": "/images/paint/clio/mask.png",
+      "images": {
+        "rosso": "/images/paint/clio/rosso.png",
+        "blu": "/images/paint/clio/blu.png",
+        "verde": "/images/paint/clio/verde.png",
+        "nero": "/images/paint/clio/nero.png",
+        "bianco": "/images/paint/clio/bianco.png",
+        "argento": "/images/paint/clio/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12363,
+        "visiblePixels": 24576,
+        "coverage": 50.3,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 161,
+      "name": "Clio Williams",
+      "image": "williams.png",
+      "year": 1993,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "williams",
+      "source": "/images/car/williams.png",
+      "originalSha256": "40b2ede53f32b9bcacd1c4fbdff54d0c05f3a717cc7ae38aa4f8535f75cbb496",
+      "mask": "/images/paint/williams/mask.png",
+      "images": {
+        "rosso": "/images/paint/williams/rosso.png",
+        "blu": "/images/paint/williams/blu.png",
+        "verde": "/images/paint/williams/verde.png",
+        "nero": "/images/paint/williams/nero.png",
+        "bianco": "/images/paint/williams/bianco.png",
+        "argento": "/images/paint/williams/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14390,
+        "visiblePixels": 28888,
+        "coverage": 49.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 160,
+      "name": "Clio v6",
+      "image": "v6.png",
+      "year": 2001,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "v6",
+      "source": "/images/car/v6.png",
+      "originalSha256": "983a7398e6cb1af87721a95f0ee384ebed7e0b91ba7111e4ab51b22f9254ae7d",
+      "mask": "/images/paint/v6/mask.png",
+      "images": {
+        "rosso": "/images/paint/v6/rosso.png",
+        "blu": "/images/paint/v6/blu.png",
+        "verde": "/images/paint/v6/verde.png",
+        "nero": "/images/paint/v6/nero.png",
+        "bianco": "/images/paint/v6/bianco.png",
+        "argento": "/images/paint/v6/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13099,
+        "visiblePixels": 27942,
+        "coverage": 46.9,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 162,
+      "name": "Laguna",
+      "image": "laguna.png",
+      "year": 1997,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "laguna",
+      "source": "/images/car/laguna.png",
+      "originalSha256": "dde31a604c337c5d5e213b319657759d5ad856dd5e00b3a8ff928c9c70b99e41",
+      "mask": "/images/paint/laguna/mask.png",
+      "images": {
+        "rosso": "/images/paint/laguna/rosso.png",
+        "blu": "/images/paint/laguna/blu.png",
+        "verde": "/images/paint/laguna/verde.png",
+        "nero": "/images/paint/laguna/nero.png",
+        "bianco": "/images/paint/laguna/bianco.png",
+        "argento": "/images/paint/laguna/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12255,
+        "visiblePixels": 27790,
+        "coverage": 44.1,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 163,
+      "name": "Megane Coupè",
+      "image": "megane.png",
+      "year": 1996,
+      "brand": "Renault",
+      "width": 400,
+      "height": 130,
+      "key": "megane",
+      "source": "/images/car/megane.png",
+      "originalSha256": "2cab552c6431ba39bf43086f6644d029750b31f43d3d7769bbc46879d6381581",
+      "mask": "/images/paint/megane/mask.png",
+      "images": {
+        "rosso": "/images/paint/megane/rosso.png",
+        "blu": "/images/paint/megane/blu.png",
+        "verde": "/images/paint/megane/verde.png",
+        "nero": "/images/paint/megane/nero.png",
+        "bianco": "/images/paint/megane/bianco.png",
+        "argento": "/images/paint/megane/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15883,
+        "visiblePixels": 30864,
+        "coverage": 51.5,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 164,
+      "name": "114 Gti",
+      "image": "114.png",
+      "year": 1991,
+      "brand": "Rover",
+      "width": 400,
+      "height": 130,
+      "key": "114",
+      "source": "/images/car/114.png",
+      "originalSha256": "f90365fbb5fadb6b421e6df2dea6372180fa8d245ce93f2641967672bc8aaa3b",
+      "mask": "/images/paint/114/mask.png",
+      "images": {
+        "rosso": "/images/paint/114/rosso.png",
+        "blu": "/images/paint/114/blu.png",
+        "verde": "/images/paint/114/verde.png",
+        "nero": "/images/paint/114/nero.png",
+        "bianco": "/images/paint/114/bianco.png",
+        "argento": "/images/paint/114/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13625,
+        "visiblePixels": 24800,
+        "coverage": 54.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 165,
+      "name": "220 Turbo",
+      "image": "220.png",
+      "year": 1993,
+      "brand": "Rover",
+      "width": 400,
+      "height": 130,
+      "key": "220",
+      "source": "/images/car/220.png",
+      "originalSha256": "b6d7f86cb36fff67963459eedd69b5bc5de60693ce3e2adb9cc84e1f4ecc204f",
+      "mask": "/images/paint/220/mask.png",
+      "images": {
+        "rosso": "/images/paint/220/rosso.png",
+        "blu": "/images/paint/220/blu.png",
+        "verde": "/images/paint/220/verde.png",
+        "nero": "/images/paint/220/nero.png",
+        "bianco": "/images/paint/220/bianco.png",
+        "argento": "/images/paint/220/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14153,
+        "visiblePixels": 26880,
+        "coverage": 52.7,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 166,
+      "name": "9-3 Viggen",
+      "image": "93.png",
+      "year": 1999,
+      "brand": "Saab",
+      "width": 400,
+      "height": 130,
+      "key": "93",
+      "source": "/images/car/93.png",
+      "originalSha256": "c314fa9447afba9dd03d715ad6fe6c75d78535aa16ccd427739493dd4bfa006c",
+      "mask": "/images/paint/93/mask.png",
+      "images": {
+        "rosso": "/images/paint/93/rosso.png",
+        "blu": "/images/paint/93/blu.png",
+        "verde": "/images/paint/93/verde.png",
+        "nero": "/images/paint/93/nero.png",
+        "bianco": "/images/paint/93/bianco.png",
+        "argento": "/images/paint/93/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15231,
+        "visiblePixels": 26360,
+        "coverage": 57.8,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 167,
+      "name": "900 Turbo",
+      "image": "900.png",
+      "year": 1994,
+      "brand": "Saab",
+      "width": 400,
+      "height": 130,
+      "key": "900",
+      "source": "/images/car/900.png",
+      "originalSha256": "bf0882553c201e0d2dfd970a8fac964750ab8449315e4b0c53d97e45aeeacacc",
+      "mask": "/images/paint/900/mask.png",
+      "images": {
+        "rosso": "/images/paint/900/rosso.png",
+        "blu": "/images/paint/900/blu.png",
+        "verde": "/images/paint/900/verde.png",
+        "nero": "/images/paint/900/nero.png",
+        "bianco": "/images/paint/900/bianco.png",
+        "argento": "/images/paint/900/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11450,
+        "visiblePixels": 27884,
+        "coverage": 41.1,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 168,
+      "name": "Cordoba Gt",
+      "image": "cordoba.png",
+      "year": 2000,
+      "brand": "Seat",
+      "width": 400,
+      "height": 130,
+      "key": "cordoba",
+      "source": "/images/car/cordoba.png",
+      "originalSha256": "f957b470246ca4a57e8ec5ab60e6f0b86956511d2c782f0a1d011b8870d157a3",
+      "mask": "/images/paint/cordoba/mask.png",
+      "images": {
+        "rosso": "/images/paint/cordoba/rosso.png",
+        "blu": "/images/paint/cordoba/blu.png",
+        "verde": "/images/paint/cordoba/verde.png",
+        "nero": "/images/paint/cordoba/nero.png",
+        "bianco": "/images/paint/cordoba/bianco.png",
+        "argento": "/images/paint/cordoba/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16932,
+        "visiblePixels": 30908,
+        "coverage": 54.8,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 169,
+      "name": "Ibiza Cupra R",
+      "image": "ibiza.png",
+      "year": 2001,
+      "brand": "Seat",
+      "width": 400,
+      "height": 130,
+      "key": "ibiza",
+      "source": "/images/car/ibiza.png",
+      "originalSha256": "74376368fa608a182e02ccd90080bc19c28b4da280ab150d5ada8f1f8c87e326",
+      "mask": "/images/paint/ibiza/mask.png",
+      "images": {
+        "rosso": "/images/paint/ibiza/rosso.png",
+        "blu": "/images/paint/ibiza/blu.png",
+        "verde": "/images/paint/ibiza/verde.png",
+        "nero": "/images/paint/ibiza/nero.png",
+        "bianco": "/images/paint/ibiza/bianco.png",
+        "argento": "/images/paint/ibiza/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16779,
+        "visiblePixels": 29332,
+        "coverage": 57.2,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 170,
+      "name": "Leon Cupra",
+      "image": "leon.png",
+      "year": 2000,
+      "brand": "Seat",
+      "width": 400,
+      "height": 130,
+      "key": "leon",
+      "source": "/images/car/leon.png",
+      "originalSha256": "0988ffce927aa698af23a25947374a2ba3ef467b379124128b600cc685e4e296",
+      "mask": "/images/paint/leon/mask.png",
+      "images": {
+        "rosso": "/images/paint/leon/rosso.png",
+        "blu": "/images/paint/leon/blu.png",
+        "verde": "/images/paint/leon/verde.png",
+        "nero": "/images/paint/leon/nero.png",
+        "bianco": "/images/paint/leon/bianco.png",
+        "argento": "/images/paint/leon/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14697,
+        "visiblePixels": 27152,
+        "coverage": 54.1,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 171,
+      "name": "Octavia Rs",
+      "image": "octavia.png",
+      "year": 2001,
+      "brand": "Skoda",
+      "width": 400,
+      "height": 130,
+      "key": "octavia",
+      "source": "/images/car/octavia.png",
+      "originalSha256": "45dcab7d79b4cfc494a43da074ebe1743a68cfe30d7523cbe8efc4b5939842aa",
+      "mask": "/images/paint/octavia/mask.png",
+      "images": {
+        "rosso": "/images/paint/octavia/rosso.png",
+        "blu": "/images/paint/octavia/blu.png",
+        "verde": "/images/paint/octavia/verde.png",
+        "nero": "/images/paint/octavia/nero.png",
+        "bianco": "/images/paint/octavia/bianco.png",
+        "argento": "/images/paint/octavia/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12879,
+        "visiblePixels": 30154,
+        "coverage": 42.7,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 172,
+      "name": "Impreza 22b",
+      "image": "22b.png",
+      "year": 1999,
+      "brand": "Subaru",
+      "width": 400,
+      "height": 130,
+      "key": "22b",
+      "source": "/images/car/22b.png",
+      "originalSha256": "d20a7aa4a1ddac400d705b5a13e2f24a70a833df2a1a1ea27c28c2ab3ab74534",
+      "mask": "/images/paint/22b/mask.png",
+      "images": {
+        "rosso": "/images/paint/22b/rosso.png",
+        "blu": "/images/paint/22b/blu.png",
+        "verde": "/images/paint/22b/verde.png",
+        "nero": "/images/paint/22b/nero.png",
+        "bianco": "/images/paint/22b/bianco.png",
+        "argento": "/images/paint/22b/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15857,
+        "visiblePixels": 26880,
+        "coverage": 59,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 173,
+      "name": "Impreza Gt",
+      "image": "impreza.png",
+      "year": 1998,
+      "brand": "Subaru",
+      "width": 400,
+      "height": 130,
+      "key": "impreza",
+      "source": "/images/car/impreza.png",
+      "originalSha256": "f11c2ed4a96a205c4e3a0c7a704ae0d35a05dcac8c3c112ca11a6c276fa441e3",
+      "mask": "/images/paint/impreza/mask.png",
+      "images": {
+        "rosso": "/images/paint/impreza/rosso.png",
+        "blu": "/images/paint/impreza/blu.png",
+        "verde": "/images/paint/impreza/verde.png",
+        "nero": "/images/paint/impreza/nero.png",
+        "bianco": "/images/paint/impreza/bianco.png",
+        "argento": "/images/paint/impreza/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15372,
+        "visiblePixels": 32772,
+        "coverage": 46.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 174,
+      "name": "Legacy Turbo",
+      "image": "legacy.png",
+      "year": 1991,
+      "brand": "Subaru",
+      "width": 400,
+      "height": 130,
+      "key": "legacy",
+      "source": "/images/car/legacy.png",
+      "originalSha256": "6f208c0b50ca365ad6e13da713b99957e3d16d174ca881ce8ee7bf5636f493c7",
+      "mask": "/images/paint/legacy/mask.png",
+      "images": {
+        "rosso": "/images/paint/legacy/rosso.png",
+        "blu": "/images/paint/legacy/blu.png",
+        "verde": "/images/paint/legacy/verde.png",
+        "nero": "/images/paint/legacy/nero.png",
+        "bianco": "/images/paint/legacy/bianco.png",
+        "argento": "/images/paint/legacy/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15004,
+        "visiblePixels": 32968,
+        "coverage": 45.5,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 175,
+      "name": "Svx",
+      "image": "svx.png",
+      "year": 1992,
+      "brand": "Subaru",
+      "width": 400,
+      "height": 130,
+      "key": "svx",
+      "source": "/images/car/svx.png",
+      "originalSha256": "af1df993d0a47cdb3c839b1d9b64ed716104bbc5e960a620752c6406f04fcb33",
+      "mask": "/images/paint/svx/mask.png",
+      "images": {
+        "rosso": "/images/paint/svx/rosso.png",
+        "blu": "/images/paint/svx/blu.png",
+        "verde": "/images/paint/svx/verde.png",
+        "nero": "/images/paint/svx/nero.png",
+        "bianco": "/images/paint/svx/bianco.png",
+        "argento": "/images/paint/svx/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17080,
+        "visiblePixels": 34698,
+        "coverage": 49.2,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 176,
+      "name": "Swift GTI",
+      "image": "swift.png",
+      "year": 1991,
+      "brand": "Suzuki",
+      "width": 400,
+      "height": 130,
+      "key": "swift",
+      "source": "/images/car/swift.png",
+      "originalSha256": "19f9401c2804faaa755b1164a96ab800ae4f15234e54626cff44025a7224f3da",
+      "mask": "/images/paint/swift/mask.png",
+      "images": {
+        "rosso": "/images/paint/swift/rosso.png",
+        "blu": "/images/paint/swift/blu.png",
+        "verde": "/images/paint/swift/verde.png",
+        "nero": "/images/paint/swift/nero.png",
+        "bianco": "/images/paint/swift/bianco.png",
+        "argento": "/images/paint/swift/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 16387,
+        "visiblePixels": 29572,
+        "coverage": 55.4,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 177,
+      "name": "Celica Carlos Sainz",
+      "image": "sainz.png",
+      "year": 1990,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "sainz",
+      "source": "/images/car/sainz.png",
+      "originalSha256": "fade0469bd2d45893b5e2477e845ba1853522f8bbd9bc9b6bf8a5bff1bacc216",
+      "mask": "/images/paint/sainz/mask.png",
+      "images": {
+        "rosso": "/images/paint/sainz/rosso.png",
+        "blu": "/images/paint/sainz/blu.png",
+        "verde": "/images/paint/sainz/verde.png",
+        "nero": "/images/paint/sainz/nero.png",
+        "bianco": "/images/paint/sainz/bianco.png",
+        "argento": "/images/paint/sainz/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18056,
+        "visiblePixels": 29520,
+        "coverage": 61.2,
+        "maskOverlap": 99.7
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 178,
+      "name": "Celica Gt Four",
+      "image": "gtfour.png",
+      "year": 1994,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "gtfour",
+      "source": "/images/car/gtfour.png",
+      "originalSha256": "66d938716a4749b993a394e71ef840c51c5d7f5f1f00f2180cbff3fa77fd6b04",
+      "mask": "/images/paint/gtfour/mask.png",
+      "images": {
+        "rosso": "/images/paint/gtfour/rosso.png",
+        "blu": "/images/paint/gtfour/blu.png",
+        "verde": "/images/paint/gtfour/verde.png",
+        "nero": "/images/paint/gtfour/nero.png",
+        "bianco": "/images/paint/gtfour/bianco.png",
+        "argento": "/images/paint/gtfour/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17397,
+        "visiblePixels": 28742,
+        "coverage": 60.5,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 179,
+      "name": "Celica Ts",
+      "image": "celica.png",
+      "year": 2000,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "celica",
+      "source": "/images/car/celica.png",
+      "originalSha256": "ad24db2952565ca3a0871e5bb3057afe70e0f3cfb28f2abe9723ce42deaced45",
+      "mask": "/images/paint/celica/mask.png",
+      "images": {
+        "rosso": "/images/paint/celica/rosso.png",
+        "blu": "/images/paint/celica/blu.png",
+        "verde": "/images/paint/celica/verde.png",
+        "nero": "/images/paint/celica/nero.png",
+        "bianco": "/images/paint/celica/bianco.png",
+        "argento": "/images/paint/celica/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15592,
+        "visiblePixels": 30976,
+        "coverage": 50.3,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 180,
+      "name": "Corolla GT-i",
+      "image": "corolla.png",
+      "year": 1987,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "corolla",
+      "source": "/images/car/corolla.png",
+      "originalSha256": "488580c12b33b62f32bc5bdeed2d56e86816844ed93329815107dc73864e0015",
+      "mask": "/images/paint/corolla/mask.png",
+      "images": {
+        "rosso": "/images/paint/corolla/rosso.png",
+        "blu": "/images/paint/corolla/blu.png",
+        "verde": "/images/paint/corolla/verde.png",
+        "nero": "/images/paint/corolla/nero.png",
+        "bianco": "/images/paint/corolla/bianco.png",
+        "argento": "/images/paint/corolla/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15672,
+        "visiblePixels": 35400,
+        "coverage": 44.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 181,
+      "name": "MR2 Turbo",
+      "image": "mr2.png",
+      "year": 1989,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "mr2",
+      "source": "/images/car/mr2.png",
+      "originalSha256": "fd7fe340ad23fa8f00aedcd9e95cde45bbb2373801383577d2a31f3794452aed",
+      "mask": "/images/paint/mr2/mask.png",
+      "images": {
+        "rosso": "/images/paint/mr2/rosso.png",
+        "blu": "/images/paint/mr2/blu.png",
+        "verde": "/images/paint/mr2/verde.png",
+        "nero": "/images/paint/mr2/nero.png",
+        "bianco": "/images/paint/mr2/bianco.png",
+        "argento": "/images/paint/mr2/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 17430,
+        "visiblePixels": 31158,
+        "coverage": 55.9,
+        "maskOverlap": 99.6
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 182,
+      "name": "MRs",
+      "image": "mrs.png",
+      "year": 2000,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "mrs",
+      "source": "/images/car/mrs.png",
+      "originalSha256": "bafad223d85329f39b628ae314b182c1fb6b93b08b1349ad906154367fda9732",
+      "mask": "/images/paint/mrs/mask.png",
+      "images": {
+        "rosso": "/images/paint/mrs/rosso.png",
+        "blu": "/images/paint/mrs/blu.png",
+        "verde": "/images/paint/mrs/verde.png",
+        "nero": "/images/paint/mrs/nero.png",
+        "bianco": "/images/paint/mrs/bianco.png",
+        "argento": "/images/paint/mrs/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14767,
+        "visiblePixels": 29676,
+        "coverage": 49.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 183,
+      "name": "Supra mk3",
+      "image": "supra3.png",
+      "year": 1988,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "supra3",
+      "source": "/images/car/supra3.png",
+      "originalSha256": "9eb68cc55fd9937a40e2b212153d4a6518f46bc2c3209aa11905a370fc0337c4",
+      "mask": "/images/paint/supra3/mask.png",
+      "images": {
+        "rosso": "/images/paint/supra3/rosso.png",
+        "blu": "/images/paint/supra3/blu.png",
+        "verde": "/images/paint/supra3/verde.png",
+        "nero": "/images/paint/supra3/nero.png",
+        "bianco": "/images/paint/supra3/bianco.png",
+        "argento": "/images/paint/supra3/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13282,
+        "visiblePixels": 34182,
+        "coverage": 38.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 184,
+      "name": "Supra mk4",
+      "image": "supra4.png",
+      "year": 1993,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "supra4",
+      "source": "/images/car/supra4.png",
+      "originalSha256": "ab149360e0c57ee2c95e3cb61c5c7a9754c2908db750627b4aa54924bcaa4a89",
+      "mask": "/images/paint/supra4/mask.png",
+      "images": {
+        "rosso": "/images/paint/supra4/rosso.png",
+        "blu": "/images/paint/supra4/blu.png",
+        "verde": "/images/paint/supra4/verde.png",
+        "nero": "/images/paint/supra4/nero.png",
+        "bianco": "/images/paint/supra4/bianco.png",
+        "argento": "/images/paint/supra4/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15668,
+        "visiblePixels": 34370,
+        "coverage": 45.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 185,
+      "name": "Trueno Gt-Apex",
+      "image": "trueno.png",
+      "year": 1983,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "trueno",
+      "source": "/images/car/trueno.png",
+      "originalSha256": "abdb73d66f2eed42c2e75ad2afb1ce2d3e0d25682e32cd2f5ddf98001da9baff",
+      "mask": "/images/paint/trueno/mask.png",
+      "images": {
+        "rosso": "/images/paint/trueno/rosso.png",
+        "blu": "/images/paint/trueno/blu.png",
+        "verde": "/images/paint/trueno/verde.png",
+        "nero": "/images/paint/trueno/nero.png",
+        "bianco": "/images/paint/trueno/bianco.png",
+        "argento": "/images/paint/trueno/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 8953,
+        "visiblePixels": 27560,
+        "coverage": 32.5,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 186,
+      "name": "Yaris Ts",
+      "image": "yaris.png",
+      "year": 2001,
+      "brand": "Toyota",
+      "width": 400,
+      "height": 130,
+      "key": "yaris",
+      "source": "/images/car/yaris.png",
+      "originalSha256": "1c5b921797978e2e7322a4e5ca3405cb1c8b995b7bff891fc0826c4d01edfa03",
+      "mask": "/images/paint/yaris/mask.png",
+      "images": {
+        "rosso": "/images/paint/yaris/rosso.png",
+        "blu": "/images/paint/yaris/blu.png",
+        "verde": "/images/paint/yaris/verde.png",
+        "nero": "/images/paint/yaris/nero.png",
+        "bianco": "/images/paint/yaris/bianco.png",
+        "argento": "/images/paint/yaris/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12806,
+        "visiblePixels": 26896,
+        "coverage": 47.6,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 187,
+      "name": "Cerbera",
+      "image": "cerbera.png",
+      "year": 1997,
+      "brand": "Tvr",
+      "width": 400,
+      "height": 130,
+      "key": "cerbera",
+      "source": "/images/car/cerbera.png",
+      "originalSha256": "3036b06b36cf19af698be3b9cf789e0dca160b5e5ab402041529836c0308e1db",
+      "mask": "/images/paint/cerbera/mask.png",
+      "images": {
+        "rosso": "/images/paint/cerbera/rosso.png",
+        "blu": "/images/paint/cerbera/blu.png",
+        "verde": "/images/paint/cerbera/verde.png",
+        "nero": "/images/paint/cerbera/nero.png",
+        "bianco": "/images/paint/cerbera/bianco.png",
+        "argento": "/images/paint/cerbera/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 20668,
+        "visiblePixels": 35670,
+        "coverage": 57.9,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 188,
+      "name": "Speed Twelve",
+      "image": "speed12.png",
+      "year": 2000,
+      "brand": "Tvr",
+      "width": 400,
+      "height": 130,
+      "key": "speed12",
+      "source": "/images/car/speed12.png",
+      "originalSha256": "d4d546dbe029be2c15e63f30818b618a9a011c521cfae06a250317d460607250",
+      "mask": "/images/paint/speed12/mask.png",
+      "images": {
+        "rosso": "/images/paint/speed12/rosso.png",
+        "blu": "/images/paint/speed12/blu.png",
+        "verde": "/images/paint/speed12/verde.png",
+        "nero": "/images/paint/speed12/nero.png",
+        "bianco": "/images/paint/speed12/bianco.png",
+        "argento": "/images/paint/speed12/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19403,
+        "visiblePixels": 38174,
+        "coverage": 50.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 189,
+      "name": "850 Turbo",
+      "image": "850t.png",
+      "year": 1996,
+      "brand": "Volvo",
+      "width": 400,
+      "height": 130,
+      "key": "850t",
+      "source": "/images/car/850t.png",
+      "originalSha256": "e9ef655fac9fa44b43ae4d61c4772f6f0c75ef296c4fcc05c897596b53031b7e",
+      "mask": "/images/paint/850t/mask.png",
+      "images": {
+        "rosso": "/images/paint/850t/rosso.png",
+        "blu": "/images/paint/850t/blu.png",
+        "verde": "/images/paint/850t/verde.png",
+        "nero": "/images/paint/850t/nero.png",
+        "bianco": "/images/paint/850t/bianco.png",
+        "argento": "/images/paint/850t/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 19461,
+        "visiblePixels": 36568,
+        "coverage": 53.2,
+        "maskOverlap": 99.4
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 190,
+      "name": "S40 T4",
+      "image": "s40.png",
+      "year": 1997,
+      "brand": "Volvo",
+      "width": 400,
+      "height": 130,
+      "key": "s40",
+      "source": "/images/car/s40.png",
+      "originalSha256": "b480b20414c661bd55a3fe4dc04e910748734966a85ae28b5e0e522825cb21cc",
+      "mask": "/images/paint/s40/mask.png",
+      "images": {
+        "rosso": "/images/paint/s40/rosso.png",
+        "blu": "/images/paint/s40/blu.png",
+        "verde": "/images/paint/s40/verde.png",
+        "nero": "/images/paint/s40/nero.png",
+        "bianco": "/images/paint/s40/bianco.png",
+        "argento": "/images/paint/s40/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 18671,
+        "visiblePixels": 36708,
+        "coverage": 50.9,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 191,
+      "name": "S60 T5",
+      "image": "s60.png",
+      "year": 2000,
+      "brand": "Volvo",
+      "width": 400,
+      "height": 130,
+      "key": "s60",
+      "source": "/images/car/s60.png",
+      "originalSha256": "2ff7d66fdc834c59a287946447acccd57dd65fbadec34dcfda3435fa43ffbc46",
+      "mask": "/images/paint/s60/mask.png",
+      "images": {
+        "rosso": "/images/paint/s60/rosso.png",
+        "blu": "/images/paint/s60/blu.png",
+        "verde": "/images/paint/s60/verde.png",
+        "nero": "/images/paint/s60/nero.png",
+        "bianco": "/images/paint/s60/bianco.png",
+        "argento": "/images/paint/s60/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14126,
+        "visiblePixels": 31918,
+        "coverage": 44.3,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 192,
+      "name": "Corrado vr6",
+      "image": "corrado.png",
+      "year": 1991,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "corrado",
+      "source": "/images/car/corrado.png",
+      "originalSha256": "b24e6963c80a0000816914e5e2588752f86a5c79fa878f66998514ffb7315b60",
+      "mask": "/images/paint/corrado/mask.png",
+      "images": {
+        "rosso": "/images/paint/corrado/rosso.png",
+        "blu": "/images/paint/corrado/blu.png",
+        "verde": "/images/paint/corrado/verde.png",
+        "nero": "/images/paint/corrado/nero.png",
+        "bianco": "/images/paint/corrado/bianco.png",
+        "argento": "/images/paint/corrado/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15457,
+        "visiblePixels": 28084,
+        "coverage": 55,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 193,
+      "name": "Golf G60 mk2",
+      "image": "g60.png",
+      "year": 1990,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "g60",
+      "source": "/images/car/g60.png",
+      "originalSha256": "5f55b5d7cce6d6d3f5ce56379500ec46501e857797f47129e697c0de92290c83",
+      "mask": "/images/paint/g60/mask.png",
+      "images": {
+        "rosso": "/images/paint/g60/rosso.png",
+        "blu": "/images/paint/g60/blu.png",
+        "verde": "/images/paint/g60/verde.png",
+        "nero": "/images/paint/g60/nero.png",
+        "bianco": "/images/paint/g60/bianco.png",
+        "argento": "/images/paint/g60/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12713,
+        "visiblePixels": 27148,
+        "coverage": 46.8,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 194,
+      "name": "Golf GTI mk1",
+      "image": "gti1.png",
+      "year": 1982,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "gti1",
+      "source": "/images/car/gti1.png",
+      "originalSha256": "1fcb4c20d06b73807f741fe610331c3edab88a373f7c03c027239c4b303f4336",
+      "mask": "/images/paint/gti1/mask.png",
+      "images": {
+        "rosso": "/images/paint/gti1/rosso.png",
+        "blu": "/images/paint/gti1/blu.png",
+        "verde": "/images/paint/gti1/verde.png",
+        "nero": "/images/paint/gti1/nero.png",
+        "bianco": "/images/paint/gti1/bianco.png",
+        "argento": "/images/paint/gti1/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 11955,
+        "visiblePixels": 25704,
+        "coverage": 46.5,
+        "maskOverlap": 99.5
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 195,
+      "name": "Golf GTI mk4",
+      "image": "gti4.png",
+      "year": 2000,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "gti4",
+      "source": "/images/car/gti4.png",
+      "originalSha256": "e117306212bc9aaf47c61434192067b299b2e8158b1488d840aeae328414d07d",
+      "mask": "/images/paint/gti4/mask.png",
+      "images": {
+        "rosso": "/images/paint/gti4/rosso.png",
+        "blu": "/images/paint/gti4/blu.png",
+        "verde": "/images/paint/gti4/verde.png",
+        "nero": "/images/paint/gti4/nero.png",
+        "bianco": "/images/paint/gti4/bianco.png",
+        "argento": "/images/paint/gti4/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 15934,
+        "visiblePixels": 28060,
+        "coverage": 56.8,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 196,
+      "name": "Golf VR6 mk3",
+      "image": "vr6.png",
+      "year": 1995,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "vr6",
+      "source": "/images/car/vr6.png",
+      "originalSha256": "efdf150206d3fced6eebb76060398c08542fca7d665ab0f0b3d9482ee7333fb3",
+      "mask": "/images/paint/vr6/mask.png",
+      "images": {
+        "rosso": "/images/paint/vr6/rosso.png",
+        "blu": "/images/paint/vr6/blu.png",
+        "verde": "/images/paint/vr6/verde.png",
+        "nero": "/images/paint/vr6/nero.png",
+        "bianco": "/images/paint/vr6/bianco.png",
+        "argento": "/images/paint/vr6/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 9130,
+        "visiblePixels": 25780,
+        "coverage": 35.4,
+        "maskOverlap": 99.8
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 197,
+      "name": "Lupo GTI",
+      "image": "lupo.png",
+      "year": 2000,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "lupo",
+      "source": "/images/car/lupo.png",
+      "originalSha256": "b5683624018de3e1907ecb59031f6b8bc5bc831cc3ae8f7708f91512b45925b9",
+      "mask": "/images/paint/lupo/mask.png",
+      "images": {
+        "rosso": "/images/paint/lupo/rosso.png",
+        "blu": "/images/paint/lupo/blu.png",
+        "verde": "/images/paint/lupo/verde.png",
+        "nero": "/images/paint/lupo/nero.png",
+        "bianco": "/images/paint/lupo/bianco.png",
+        "argento": "/images/paint/lupo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 12976,
+        "visiblePixels": 24928,
+        "coverage": 52.1,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 198,
+      "name": "New Beetle RS",
+      "image": "beetle.png",
+      "year": 2001,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "beetle",
+      "source": "/images/car/beetle.png",
+      "originalSha256": "7f0777dff446a5f47dd21770690cd15e46ab9e40fb3513af57b53f7f2bcdb3db",
+      "mask": "/images/paint/beetle/mask.png",
+      "images": {
+        "rosso": "/images/paint/beetle/rosso.png",
+        "blu": "/images/paint/beetle/blu.png",
+        "verde": "/images/paint/beetle/verde.png",
+        "nero": "/images/paint/beetle/nero.png",
+        "bianco": "/images/paint/beetle/bianco.png",
+        "argento": "/images/paint/beetle/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 14296,
+        "visiblePixels": 29600,
+        "coverage": 48.3,
+        "maskOverlap": 99.9
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 199,
+      "name": "Polo GTI",
+      "image": "polo.png",
+      "year": 1999,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "polo",
+      "source": "/images/car/polo.png",
+      "originalSha256": "44ebd302771f526d9ae2326f07979bdc85064ed7c6274e7e69dee366b0721bc2",
+      "mask": "/images/paint/polo/mask.png",
+      "images": {
+        "rosso": "/images/paint/polo/rosso.png",
+        "blu": "/images/paint/polo/blu.png",
+        "verde": "/images/paint/polo/verde.png",
+        "nero": "/images/paint/polo/nero.png",
+        "bianco": "/images/paint/polo/bianco.png",
+        "argento": "/images/paint/polo/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13015,
+        "visiblePixels": 25534,
+        "coverage": 51,
+        "maskOverlap": 100
+      },
+      "reviewHints": []
+    },
+    {
+      "id": 200,
+      "name": "Scirocco 16v",
+      "image": "scirocco.png",
+      "year": 1983,
+      "brand": "Vw",
+      "width": 400,
+      "height": 130,
+      "key": "scirocco",
+      "source": "/images/car/scirocco.png",
+      "originalSha256": "625b5af941007b603b0c61d1612345ac0cd01d7d5a200f33e61374269b98a821",
+      "mask": "/images/paint/scirocco/mask.png",
+      "images": {
+        "rosso": "/images/paint/scirocco/rosso.png",
+        "blu": "/images/paint/scirocco/blu.png",
+        "verde": "/images/paint/scirocco/verde.png",
+        "nero": "/images/paint/scirocco/nero.png",
+        "bianco": "/images/paint/scirocco/bianco.png",
+        "argento": "/images/paint/scirocco/argento.png"
+      },
+      "approved": false,
+      "metrics": {
+        "selectedPixels": 13299,
+        "visiblePixels": 31266,
+        "coverage": 42.5,
+        "maskOverlap": 99.2
+      },
+      "reviewHints": []
+    }
+  ]
+}

@@ -1,0 +1,8402 @@
+{
+  "models": 200,
+  "variants": 1200,
+  "missing": 0,
+  "sourceImagesUnchanged": true,
+  "checks": [
+    {
+      "key": "145",
+      "colour": "rosso",
+      "changed": 16475,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "145",
+      "colour": "blu",
+      "changed": 16475,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "145",
+      "colour": "verde",
+      "changed": 16475,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "145",
+      "colour": "nero",
+      "changed": 16475,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "145",
+      "colour": "bianco",
+      "changed": 16475,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "145",
+      "colour": "argento",
+      "changed": 16475,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "155",
+      "colour": "rosso",
+      "changed": 17006,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "155",
+      "colour": "blu",
+      "changed": 17006,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "155",
+      "colour": "verde",
+      "changed": 17002,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "155",
+      "colour": "nero",
+      "changed": 17002,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "155",
+      "colour": "bianco",
+      "changed": 17006,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "155",
+      "colour": "argento",
+      "changed": 17006,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "33",
+      "colour": "rosso",
+      "changed": 14259,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "33",
+      "colour": "blu",
+      "changed": 14259,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "33",
+      "colour": "verde",
+      "changed": 14259,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "33",
+      "colour": "nero",
+      "changed": 14259,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "33",
+      "colour": "bianco",
+      "changed": 14259,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "33",
+      "colour": "argento",
+      "changed": 14259,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "75",
+      "colour": "rosso",
+      "changed": 15628,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "75",
+      "colour": "blu",
+      "changed": 15628,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "75",
+      "colour": "verde",
+      "changed": 15628,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "75",
+      "colour": "nero",
+      "changed": 15628,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "75",
+      "colour": "bianco",
+      "changed": 15628,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "75",
+      "colour": "argento",
+      "changed": 15628,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtv",
+      "colour": "rosso",
+      "changed": 17923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtv",
+      "colour": "blu",
+      "changed": 17923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtv",
+      "colour": "verde",
+      "changed": 17923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtv",
+      "colour": "nero",
+      "changed": 17923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtv",
+      "colour": "bianco",
+      "changed": 17923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtv",
+      "colour": "argento",
+      "changed": 17923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vantage",
+      "colour": "rosso",
+      "changed": 13600,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vantage",
+      "colour": "blu",
+      "changed": 13600,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vantage",
+      "colour": "verde",
+      "changed": 13600,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vantage",
+      "colour": "nero",
+      "changed": 13600,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vantage",
+      "colour": "bianco",
+      "changed": 13600,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vantage",
+      "colour": "argento",
+      "changed": 13600,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "80",
+      "colour": "rosso",
+      "changed": 15931,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "80",
+      "colour": "blu",
+      "changed": 15931,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "80",
+      "colour": "verde",
+      "changed": 15931,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "80",
+      "colour": "nero",
+      "changed": 15931,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "80",
+      "colour": "bianco",
+      "changed": 15931,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "80",
+      "colour": "argento",
+      "changed": 15931,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2",
+      "colour": "rosso",
+      "changed": 13908,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2",
+      "colour": "blu",
+      "changed": 13908,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2",
+      "colour": "verde",
+      "changed": 13908,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2",
+      "colour": "nero",
+      "changed": 13908,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2",
+      "colour": "bianco",
+      "changed": 13908,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2",
+      "colour": "argento",
+      "changed": 13908,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rs4",
+      "colour": "rosso",
+      "changed": 18942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rs4",
+      "colour": "blu",
+      "changed": 18942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rs4",
+      "colour": "verde",
+      "changed": 18942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rs4",
+      "colour": "nero",
+      "changed": 18942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rs4",
+      "colour": "bianco",
+      "changed": 18942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rs4",
+      "colour": "argento",
+      "changed": 18942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s3",
+      "colour": "rosso",
+      "changed": 15550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s3",
+      "colour": "blu",
+      "changed": 15550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s3",
+      "colour": "verde",
+      "changed": 15550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s3",
+      "colour": "nero",
+      "changed": 15550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s3",
+      "colour": "bianco",
+      "changed": 15550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s3",
+      "colour": "argento",
+      "changed": 15550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s6",
+      "colour": "rosso",
+      "changed": 13200,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s6",
+      "colour": "blu",
+      "changed": 13200,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s6",
+      "colour": "verde",
+      "changed": 13196,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s6",
+      "colour": "nero",
+      "changed": 13196,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s6",
+      "colour": "bianco",
+      "changed": 13200,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s6",
+      "colour": "argento",
+      "changed": 13200,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tt",
+      "colour": "rosso",
+      "changed": 12447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tt",
+      "colour": "blu",
+      "changed": 12447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tt",
+      "colour": "verde",
+      "changed": 12447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tt",
+      "colour": "nero",
+      "changed": 12447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tt",
+      "colour": "bianco",
+      "changed": 12447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tt",
+      "colour": "argento",
+      "changed": 12447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "a112",
+      "colour": "rosso",
+      "changed": 9102,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "a112",
+      "colour": "blu",
+      "changed": 9102,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "a112",
+      "colour": "verde",
+      "changed": 9102,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "a112",
+      "colour": "nero",
+      "changed": 9102,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "a112",
+      "colour": "bianco",
+      "changed": 9102,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "a112",
+      "colour": "argento",
+      "changed": 9102,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "y10",
+      "colour": "rosso",
+      "changed": 10988,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "y10",
+      "colour": "blu",
+      "changed": 10988,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "y10",
+      "colour": "verde",
+      "changed": 10988,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "y10",
+      "colour": "nero",
+      "changed": 10988,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "y10",
+      "colour": "bianco",
+      "changed": 10988,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "y10",
+      "colour": "argento",
+      "changed": 10988,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850",
+      "colour": "rosso",
+      "changed": 16569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850",
+      "colour": "blu",
+      "changed": 16569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850",
+      "colour": "verde",
+      "changed": 16569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850",
+      "colour": "nero",
+      "changed": 16569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850",
+      "colour": "bianco",
+      "changed": 16569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850",
+      "colour": "argento",
+      "changed": 16569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m1",
+      "colour": "rosso",
+      "changed": 14527,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m1",
+      "colour": "blu",
+      "changed": 14527,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m1",
+      "colour": "verde",
+      "changed": 14527,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m1",
+      "colour": "nero",
+      "changed": 14527,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m1",
+      "colour": "bianco",
+      "changed": 14524,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m1",
+      "colour": "argento",
+      "changed": 14527,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e30",
+      "colour": "rosso",
+      "changed": 17509,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e30",
+      "colour": "blu",
+      "changed": 17509,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e30",
+      "colour": "verde",
+      "changed": 17509,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e30",
+      "colour": "nero",
+      "changed": 17509,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e30",
+      "colour": "bianco",
+      "changed": 17509,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e30",
+      "colour": "argento",
+      "changed": 17509,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e36",
+      "colour": "rosso",
+      "changed": 17423,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e36",
+      "colour": "blu",
+      "changed": 17423,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e36",
+      "colour": "verde",
+      "changed": 17423,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e36",
+      "colour": "nero",
+      "changed": 17421,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e36",
+      "colour": "bianco",
+      "changed": 17423,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e36",
+      "colour": "argento",
+      "changed": 17423,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e46",
+      "colour": "rosso",
+      "changed": 16980,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e46",
+      "colour": "blu",
+      "changed": 16980,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e46",
+      "colour": "verde",
+      "changed": 16980,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e46",
+      "colour": "nero",
+      "changed": 16980,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e46",
+      "colour": "bianco",
+      "changed": 16980,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e46",
+      "colour": "argento",
+      "changed": 16980,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e34",
+      "colour": "rosso",
+      "changed": 12015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e34",
+      "colour": "blu",
+      "changed": 12015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e34",
+      "colour": "verde",
+      "changed": 12015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e34",
+      "colour": "nero",
+      "changed": 12013,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e34",
+      "colour": "bianco",
+      "changed": 12015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e34",
+      "colour": "argento",
+      "changed": 12015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e39",
+      "colour": "rosso",
+      "changed": 15708,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e39",
+      "colour": "blu",
+      "changed": 15708,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e39",
+      "colour": "verde",
+      "changed": 15708,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e39",
+      "colour": "nero",
+      "changed": 15708,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e39",
+      "colour": "bianco",
+      "changed": 15708,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "e39",
+      "colour": "argento",
+      "changed": 15708,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m635",
+      "colour": "rosso",
+      "changed": 17630,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m635",
+      "colour": "blu",
+      "changed": 17630,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m635",
+      "colour": "verde",
+      "changed": 17630,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m635",
+      "colour": "nero",
+      "changed": 17629,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m635",
+      "colour": "bianco",
+      "changed": 17630,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "m635",
+      "colour": "argento",
+      "changed": 17630,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "z3m",
+      "colour": "rosso",
+      "changed": 16689,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "z3m",
+      "colour": "blu",
+      "changed": 16689,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "z3m",
+      "colour": "verde",
+      "changed": 16689,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "z3m",
+      "colour": "nero",
+      "changed": 16689,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "z3m",
+      "colour": "bianco",
+      "changed": 16689,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "z3m",
+      "colour": "argento",
+      "changed": 16689,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "continental",
+      "colour": "rosso",
+      "changed": 17443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "continental",
+      "colour": "blu",
+      "changed": 17443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "continental",
+      "colour": "verde",
+      "changed": 17443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "continental",
+      "colour": "nero",
+      "changed": 17443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "continental",
+      "colour": "bianco",
+      "changed": 17443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "continental",
+      "colour": "argento",
+      "changed": 17443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eb110",
+      "colour": "rosso",
+      "changed": 19736,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eb110",
+      "colour": "blu",
+      "changed": 19736,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eb110",
+      "colour": "verde",
+      "changed": 19736,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eb110",
+      "colour": "nero",
+      "changed": 19736,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eb110",
+      "colour": "bianco",
+      "changed": 19736,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eb110",
+      "colour": "argento",
+      "changed": 19734,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seven",
+      "colour": "rosso",
+      "changed": 8942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seven",
+      "colour": "blu",
+      "changed": 8942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seven",
+      "colour": "verde",
+      "changed": 8942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seven",
+      "colour": "nero",
+      "changed": 8942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seven",
+      "colour": "bianco",
+      "changed": 8942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seven",
+      "colour": "argento",
+      "changed": 8942,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "camaro",
+      "colour": "rosso",
+      "changed": 17048,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "camaro",
+      "colour": "blu",
+      "changed": 17048,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "camaro",
+      "colour": "verde",
+      "changed": 17048,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "camaro",
+      "colour": "nero",
+      "changed": 17047,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "camaro",
+      "colour": "bianco",
+      "changed": 17048,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "camaro",
+      "colour": "argento",
+      "changed": 17048,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c4",
+      "colour": "rosso",
+      "changed": 18923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c4",
+      "colour": "blu",
+      "changed": 18923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c4",
+      "colour": "verde",
+      "changed": 18923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c4",
+      "colour": "nero",
+      "changed": 18923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c4",
+      "colour": "bianco",
+      "changed": 18923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c4",
+      "colour": "argento",
+      "changed": 18923,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c5",
+      "colour": "rosso",
+      "changed": 21895,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c5",
+      "colour": "blu",
+      "changed": 21895,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c5",
+      "colour": "verde",
+      "changed": 21895,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c5",
+      "colour": "nero",
+      "changed": 21895,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c5",
+      "colour": "bianco",
+      "changed": 21895,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c5",
+      "colour": "argento",
+      "changed": 21895,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ax",
+      "colour": "rosso",
+      "changed": 12801,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ax",
+      "colour": "blu",
+      "changed": 12801,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ax",
+      "colour": "verde",
+      "changed": 12801,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ax",
+      "colour": "nero",
+      "changed": 12801,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ax",
+      "colour": "bianco",
+      "changed": 12801,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ax",
+      "colour": "argento",
+      "changed": 12801,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "saxo",
+      "colour": "rosso",
+      "changed": 15639,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "saxo",
+      "colour": "blu",
+      "changed": 15639,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "saxo",
+      "colour": "verde",
+      "changed": 15639,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "saxo",
+      "colour": "nero",
+      "changed": 15639,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "saxo",
+      "colour": "bianco",
+      "changed": 15639,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "saxo",
+      "colour": "argento",
+      "changed": 15639,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "visa",
+      "colour": "rosso",
+      "changed": 10479,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "visa",
+      "colour": "blu",
+      "changed": 10479,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "visa",
+      "colour": "verde",
+      "changed": 10479,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "visa",
+      "colour": "nero",
+      "changed": 10479,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "visa",
+      "colour": "bianco",
+      "changed": 10479,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "visa",
+      "colour": "argento",
+      "changed": 10479,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xsara",
+      "colour": "rosso",
+      "changed": 14816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xsara",
+      "colour": "blu",
+      "changed": 14816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xsara",
+      "colour": "verde",
+      "changed": 14816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xsara",
+      "colour": "nero",
+      "changed": 14816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xsara",
+      "colour": "bianco",
+      "changed": 14816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xsara",
+      "colour": "argento",
+      "changed": 14816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zx",
+      "colour": "rosso",
+      "changed": 18804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zx",
+      "colour": "blu",
+      "changed": 18802,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zx",
+      "colour": "verde",
+      "changed": 18804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zx",
+      "colour": "nero",
+      "changed": 18804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zx",
+      "colour": "bianco",
+      "changed": 18804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zx",
+      "colour": "argento",
+      "changed": 18804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "charade",
+      "colour": "rosso",
+      "changed": 11453,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "charade",
+      "colour": "blu",
+      "changed": 11453,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "charade",
+      "colour": "verde",
+      "changed": 11453,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "charade",
+      "colour": "nero",
+      "changed": 11453,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "charade",
+      "colour": "bianco",
+      "changed": 11449,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "charade",
+      "colour": "argento",
+      "changed": 11453,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "minit",
+      "colour": "rosso",
+      "changed": 8622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "minit",
+      "colour": "blu",
+      "changed": 8622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "minit",
+      "colour": "verde",
+      "changed": 8622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "minit",
+      "colour": "nero",
+      "changed": 8618,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "minit",
+      "colour": "bianco",
+      "changed": 8622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "minit",
+      "colour": "argento",
+      "changed": 8622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "pantera",
+      "colour": "rosso",
+      "changed": 17353,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "pantera",
+      "colour": "blu",
+      "changed": 17353,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "pantera",
+      "colour": "verde",
+      "changed": 17335,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "pantera",
+      "colour": "nero",
+      "changed": 17279,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "pantera",
+      "colour": "bianco",
+      "changed": 17356,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "pantera",
+      "colour": "argento",
+      "changed": 17353,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "viper",
+      "colour": "rosso",
+      "changed": 17715,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "viper",
+      "colour": "blu",
+      "changed": 17715,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "viper",
+      "colour": "verde",
+      "changed": 17711,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "viper",
+      "colour": "nero",
+      "changed": 17709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "viper",
+      "colour": "bianco",
+      "changed": 17715,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "viper",
+      "colour": "argento",
+      "changed": 17715,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "288",
+      "colour": "rosso",
+      "changed": 21052,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "288",
+      "colour": "blu",
+      "changed": 21052,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "288",
+      "colour": "verde",
+      "changed": 21052,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "288",
+      "colour": "nero",
+      "changed": 21052,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "288",
+      "colour": "bianco",
+      "changed": 21052,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "288",
+      "colour": "argento",
+      "changed": 21052,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "348",
+      "colour": "rosso",
+      "changed": 18029,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "348",
+      "colour": "blu",
+      "changed": 18029,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "348",
+      "colour": "verde",
+      "changed": 18029,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "348",
+      "colour": "nero",
+      "changed": 18029,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "348",
+      "colour": "bianco",
+      "changed": 18029,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "348",
+      "colour": "argento",
+      "changed": 18029,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "360",
+      "colour": "rosso",
+      "changed": 20671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "360",
+      "colour": "blu",
+      "changed": 20671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "360",
+      "colour": "verde",
+      "changed": 20671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "360",
+      "colour": "nero",
+      "changed": 20671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "360",
+      "colour": "bianco",
+      "changed": 20671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "360",
+      "colour": "argento",
+      "changed": 20671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "550",
+      "colour": "rosso",
+      "changed": 20382,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "550",
+      "colour": "blu",
+      "changed": 20382,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "550",
+      "colour": "verde",
+      "changed": 20382,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "550",
+      "colour": "nero",
+      "changed": 20382,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "550",
+      "colour": "bianco",
+      "changed": 20382,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "550",
+      "colour": "argento",
+      "changed": 20382,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "355",
+      "colour": "rosso",
+      "changed": 21008,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "355",
+      "colour": "blu",
+      "changed": 21008,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "355",
+      "colour": "verde",
+      "changed": 21008,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "355",
+      "colour": "nero",
+      "changed": 21008,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "355",
+      "colour": "bianco",
+      "changed": 21008,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "355",
+      "colour": "argento",
+      "changed": 21008,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f40",
+      "colour": "rosso",
+      "changed": 24034,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f40",
+      "colour": "blu",
+      "changed": 24034,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f40",
+      "colour": "verde",
+      "changed": 24034,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f40",
+      "colour": "nero",
+      "changed": 24034,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f40",
+      "colour": "bianco",
+      "changed": 24034,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f40",
+      "colour": "argento",
+      "changed": 24034,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f50",
+      "colour": "rosso",
+      "changed": 24160,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f50",
+      "colour": "blu",
+      "changed": 24160,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f50",
+      "colour": "verde",
+      "changed": 24160,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f50",
+      "colour": "nero",
+      "changed": 24160,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f50",
+      "colour": "bianco",
+      "changed": 24160,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f50",
+      "colour": "argento",
+      "changed": 24160,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "testarossa",
+      "colour": "rosso",
+      "changed": 20302,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "testarossa",
+      "colour": "blu",
+      "changed": 20302,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "testarossa",
+      "colour": "verde",
+      "changed": 20302,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "testarossa",
+      "colour": "nero",
+      "changed": 20302,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "testarossa",
+      "colour": "bianco",
+      "changed": 20302,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "testarossa",
+      "colour": "argento",
+      "changed": 20302,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "131",
+      "colour": "rosso",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "131",
+      "colour": "blu",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "131",
+      "colour": "verde",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "131",
+      "colour": "nero",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "131",
+      "colour": "bianco",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "131",
+      "colour": "argento",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "barchetta",
+      "colour": "rosso",
+      "changed": 15540,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "barchetta",
+      "colour": "blu",
+      "changed": 15540,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "barchetta",
+      "colour": "verde",
+      "changed": 15540,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "barchetta",
+      "colour": "nero",
+      "changed": 15540,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "barchetta",
+      "colour": "bianco",
+      "changed": 15540,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "barchetta",
+      "colour": "argento",
+      "changed": 15540,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "bravo",
+      "colour": "rosso",
+      "changed": 19795,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "bravo",
+      "colour": "blu",
+      "changed": 19795,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "bravo",
+      "colour": "verde",
+      "changed": 19795,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "bravo",
+      "colour": "nero",
+      "changed": 19795,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "bravo",
+      "colour": "bianco",
+      "changed": 19795,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "bravo",
+      "colour": "argento",
+      "changed": 19795,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cinquecento",
+      "colour": "rosso",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cinquecento",
+      "colour": "blu",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cinquecento",
+      "colour": "verde",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cinquecento",
+      "colour": "nero",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cinquecento",
+      "colour": "bianco",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cinquecento",
+      "colour": "argento",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "coupe",
+      "colour": "rosso",
+      "changed": 15318,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "coupe",
+      "colour": "blu",
+      "changed": 15318,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "coupe",
+      "colour": "verde",
+      "changed": 15318,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "coupe",
+      "colour": "nero",
+      "changed": 15318,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "coupe",
+      "colour": "bianco",
+      "changed": 15318,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "coupe",
+      "colour": "argento",
+      "changed": 15318,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "punto",
+      "colour": "rosso",
+      "changed": 14088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "punto",
+      "colour": "blu",
+      "changed": 14088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "punto",
+      "colour": "verde",
+      "changed": 14088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "punto",
+      "colour": "nero",
+      "changed": 14088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "punto",
+      "colour": "bianco",
+      "changed": 14088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "punto",
+      "colour": "argento",
+      "changed": 14088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ritmo",
+      "colour": "rosso",
+      "changed": 10787,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ritmo",
+      "colour": "blu",
+      "changed": 10787,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ritmo",
+      "colour": "verde",
+      "changed": 10787,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ritmo",
+      "colour": "nero",
+      "changed": 10787,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ritmo",
+      "colour": "bianco",
+      "changed": 10787,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ritmo",
+      "colour": "argento",
+      "changed": 10787,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "seicento",
+      "colour": "rosso",
+      "changed": 13112,
+      "approved": true
+    },
+    {
+      "key": "seicento",
+      "colour": "blu",
+      "changed": 13112,
+      "approved": true
+    },
+    {
+      "key": "seicento",
+      "colour": "verde",
+      "changed": 13112,
+      "approved": true
+    },
+    {
+      "key": "seicento",
+      "colour": "nero",
+      "changed": 13112,
+      "approved": true
+    },
+    {
+      "key": "seicento",
+      "colour": "bianco",
+      "changed": 13112,
+      "approved": true
+    },
+    {
+      "key": "seicento",
+      "colour": "argento",
+      "changed": 13112,
+      "approved": true
+    },
+    {
+      "key": "tipo",
+      "colour": "rosso",
+      "changed": 14294,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tipo",
+      "colour": "blu",
+      "changed": 14294,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tipo",
+      "colour": "verde",
+      "changed": 14294,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tipo",
+      "colour": "nero",
+      "changed": 14294,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tipo",
+      "colour": "bianco",
+      "changed": 14294,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tipo",
+      "colour": "argento",
+      "changed": 14294,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "uno",
+      "colour": "rosso",
+      "changed": 11541,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "uno",
+      "colour": "blu",
+      "changed": 11541,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "uno",
+      "colour": "verde",
+      "changed": 11541,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "uno",
+      "colour": "nero",
+      "changed": 11541,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "uno",
+      "colour": "bianco",
+      "changed": 11541,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "uno",
+      "colour": "argento",
+      "changed": 11541,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortc",
+      "colour": "rosso",
+      "changed": 15658,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortc",
+      "colour": "blu",
+      "changed": 15658,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortc",
+      "colour": "verde",
+      "changed": 15658,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortc",
+      "colour": "nero",
+      "changed": 15658,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortc",
+      "colour": "bianco",
+      "changed": 15658,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortc",
+      "colour": "argento",
+      "changed": 15658,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortt",
+      "colour": "rosso",
+      "changed": 13684,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortt",
+      "colour": "blu",
+      "changed": 13684,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortt",
+      "colour": "verde",
+      "changed": 13684,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortt",
+      "colour": "nero",
+      "changed": 13684,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortt",
+      "colour": "bianco",
+      "changed": 13684,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "escortt",
+      "colour": "argento",
+      "changed": 13684,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fiesta",
+      "colour": "rosso",
+      "changed": 10614,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fiesta",
+      "colour": "blu",
+      "changed": 10614,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fiesta",
+      "colour": "verde",
+      "changed": 10614,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fiesta",
+      "colour": "nero",
+      "changed": 10614,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fiesta",
+      "colour": "bianco",
+      "changed": 10614,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fiesta",
+      "colour": "argento",
+      "changed": 10614,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mondeo",
+      "colour": "rosso",
+      "changed": 17594,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mondeo",
+      "colour": "blu",
+      "changed": 17594,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mondeo",
+      "colour": "verde",
+      "changed": 17594,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mondeo",
+      "colour": "nero",
+      "changed": 17594,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mondeo",
+      "colour": "bianco",
+      "changed": 17594,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mondeo",
+      "colour": "argento",
+      "changed": 17594,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mustang",
+      "colour": "rosso",
+      "changed": 21723,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mustang",
+      "colour": "blu",
+      "changed": 21723,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mustang",
+      "colour": "verde",
+      "changed": 21723,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mustang",
+      "colour": "nero",
+      "changed": 21723,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mustang",
+      "colour": "bianco",
+      "changed": 21723,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mustang",
+      "colour": "argento",
+      "changed": 21723,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "puma",
+      "colour": "rosso",
+      "changed": 12752,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "puma",
+      "colour": "blu",
+      "changed": 12752,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "puma",
+      "colour": "verde",
+      "changed": 12752,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "puma",
+      "colour": "nero",
+      "changed": 12752,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "puma",
+      "colour": "bianco",
+      "changed": 12752,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "puma",
+      "colour": "argento",
+      "changed": 12752,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierra4",
+      "colour": "rosso",
+      "changed": 21550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierra4",
+      "colour": "blu",
+      "changed": 21550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierra4",
+      "colour": "verde",
+      "changed": 21550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierra4",
+      "colour": "nero",
+      "changed": 21550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierra4",
+      "colour": "bianco",
+      "changed": 21550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierra4",
+      "colour": "argento",
+      "changed": 21550,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierrac",
+      "colour": "rosso",
+      "changed": 15215,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierrac",
+      "colour": "blu",
+      "changed": 15215,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierrac",
+      "colour": "verde",
+      "changed": 15215,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierrac",
+      "colour": "nero",
+      "changed": 15215,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierrac",
+      "colour": "bianco",
+      "changed": 15215,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sierrac",
+      "colour": "argento",
+      "changed": 15215,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "crx",
+      "colour": "rosso",
+      "changed": 10633,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "crx",
+      "colour": "blu",
+      "changed": 10633,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "crx",
+      "colour": "verde",
+      "changed": 10633,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "crx",
+      "colour": "nero",
+      "changed": 10633,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "crx",
+      "colour": "bianco",
+      "changed": 10633,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "crx",
+      "colour": "argento",
+      "changed": 10625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ef",
+      "colour": "rosso",
+      "changed": 16287,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ef",
+      "colour": "blu",
+      "changed": 16287,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ef",
+      "colour": "verde",
+      "changed": 16287,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ef",
+      "colour": "nero",
+      "changed": 16287,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ef",
+      "colour": "bianco",
+      "changed": 16287,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ef",
+      "colour": "argento",
+      "changed": 16287,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eg",
+      "colour": "rosso",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eg",
+      "colour": "blu",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eg",
+      "colour": "verde",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eg",
+      "colour": "nero",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eg",
+      "colour": "bianco",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eg",
+      "colour": "argento",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ek",
+      "colour": "rosso",
+      "changed": 14998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ek",
+      "colour": "blu",
+      "changed": 14998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ek",
+      "colour": "verde",
+      "changed": 14998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ek",
+      "colour": "nero",
+      "changed": 14998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ek",
+      "colour": "bianco",
+      "changed": 14998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ek",
+      "colour": "argento",
+      "changed": 14998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "integra",
+      "colour": "rosso",
+      "changed": 17370,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "integra",
+      "colour": "blu",
+      "changed": 17370,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "integra",
+      "colour": "verde",
+      "changed": 17370,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "integra",
+      "colour": "nero",
+      "changed": 17370,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "integra",
+      "colour": "bianco",
+      "changed": 17358,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "integra",
+      "colour": "argento",
+      "changed": 17370,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nsx",
+      "colour": "rosso",
+      "changed": 20976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nsx",
+      "colour": "blu",
+      "changed": 20976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nsx",
+      "colour": "verde",
+      "changed": 20976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nsx",
+      "colour": "nero",
+      "changed": 20976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nsx",
+      "colour": "bianco",
+      "changed": 20976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nsx",
+      "colour": "argento",
+      "changed": 20976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "prelude",
+      "colour": "rosso",
+      "changed": 21072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "prelude",
+      "colour": "blu",
+      "changed": 21072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "prelude",
+      "colour": "verde",
+      "changed": 21072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "prelude",
+      "colour": "nero",
+      "changed": 21072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "prelude",
+      "colour": "bianco",
+      "changed": 21072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "prelude",
+      "colour": "argento",
+      "changed": 21072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2000",
+      "colour": "rosso",
+      "changed": 16083,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2000",
+      "colour": "blu",
+      "changed": 16083,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2000",
+      "colour": "verde",
+      "changed": 16083,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2000",
+      "colour": "nero",
+      "changed": 16079,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2000",
+      "colour": "bianco",
+      "changed": 16083,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s2000",
+      "colour": "argento",
+      "changed": 16083,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hyundai",
+      "colour": "rosso",
+      "changed": 19646,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hyundai",
+      "colour": "blu",
+      "changed": 19646,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hyundai",
+      "colour": "verde",
+      "changed": 19590,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hyundai",
+      "colour": "nero",
+      "changed": 19576,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hyundai",
+      "colour": "bianco",
+      "changed": 19646,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hyundai",
+      "colour": "argento",
+      "changed": 19646,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj",
+      "colour": "rosso",
+      "changed": 13178,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj",
+      "colour": "blu",
+      "changed": 13178,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj",
+      "colour": "verde",
+      "changed": 13178,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj",
+      "colour": "nero",
+      "changed": 13178,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj",
+      "colour": "bianco",
+      "changed": 13178,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj",
+      "colour": "argento",
+      "changed": 13178,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj220",
+      "colour": "rosso",
+      "changed": 20804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj220",
+      "colour": "blu",
+      "changed": 20804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj220",
+      "colour": "verde",
+      "changed": 20804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj220",
+      "colour": "nero",
+      "changed": 20804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj220",
+      "colour": "bianco",
+      "changed": 20804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xj220",
+      "colour": "argento",
+      "changed": 20804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xkr",
+      "colour": "rosso",
+      "changed": 16622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xkr",
+      "colour": "blu",
+      "changed": 16622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xkr",
+      "colour": "verde",
+      "changed": 16622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xkr",
+      "colour": "nero",
+      "changed": 16622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xkr",
+      "colour": "bianco",
+      "changed": 16622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "xkr",
+      "colour": "argento",
+      "changed": 16622,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "countach",
+      "colour": "rosso",
+      "changed": 27109,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "countach",
+      "colour": "blu",
+      "changed": 27109,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "countach",
+      "colour": "verde",
+      "changed": 27109,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "countach",
+      "colour": "nero",
+      "changed": 27109,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "countach",
+      "colour": "bianco",
+      "changed": 27109,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "countach",
+      "colour": "argento",
+      "changed": 27109,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "diablo",
+      "colour": "rosso",
+      "changed": 26410,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "diablo",
+      "colour": "blu",
+      "changed": 26410,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "diablo",
+      "colour": "verde",
+      "changed": 26410,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "diablo",
+      "colour": "nero",
+      "changed": 26410,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "diablo",
+      "colour": "bianco",
+      "changed": 26410,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "diablo",
+      "colour": "argento",
+      "changed": 26410,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "dedra",
+      "colour": "rosso",
+      "changed": 11641,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "dedra",
+      "colour": "blu",
+      "changed": 11625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "dedra",
+      "colour": "verde",
+      "changed": 11641,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "dedra",
+      "colour": "nero",
+      "changed": 11641,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "dedra",
+      "colour": "bianco",
+      "changed": 11641,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "dedra",
+      "colour": "argento",
+      "changed": 11625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evoluzione",
+      "colour": "rosso",
+      "changed": 16451,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evoluzione",
+      "colour": "blu",
+      "changed": 16451,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evoluzione",
+      "colour": "verde",
+      "changed": 16451,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evoluzione",
+      "colour": "nero",
+      "changed": 16447,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evoluzione",
+      "colour": "bianco",
+      "changed": 16451,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evoluzione",
+      "colour": "argento",
+      "changed": 16451,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "delta16",
+      "colour": "rosso",
+      "changed": 15005,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "delta16",
+      "colour": "blu",
+      "changed": 15005,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "delta16",
+      "colour": "verde",
+      "changed": 15005,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "delta16",
+      "colour": "nero",
+      "changed": 15004,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "delta16",
+      "colour": "bianco",
+      "changed": 15005,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "delta16",
+      "colour": "argento",
+      "changed": 15005,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hpe",
+      "colour": "rosso",
+      "changed": 14025,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hpe",
+      "colour": "blu",
+      "changed": 14025,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hpe",
+      "colour": "verde",
+      "changed": 14025,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hpe",
+      "colour": "nero",
+      "changed": 14025,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hpe",
+      "colour": "bianco",
+      "changed": 14025,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "hpe",
+      "colour": "argento",
+      "changed": 14025,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "thema",
+      "colour": "rosso",
+      "changed": 14221,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "thema",
+      "colour": "blu",
+      "changed": 14221,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "thema",
+      "colour": "verde",
+      "changed": 14217,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "thema",
+      "colour": "nero",
+      "changed": 14217,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "thema",
+      "colour": "bianco",
+      "changed": 14221,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "thema",
+      "colour": "argento",
+      "changed": 14221,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "is200",
+      "colour": "rosso",
+      "changed": 15119,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "is200",
+      "colour": "blu",
+      "changed": 15119,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "is200",
+      "colour": "verde",
+      "changed": 15119,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "is200",
+      "colour": "nero",
+      "changed": 15119,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "is200",
+      "colour": "bianco",
+      "changed": 15119,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "is200",
+      "colour": "argento",
+      "changed": 15119,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "elise",
+      "colour": "rosso",
+      "changed": 18569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "elise",
+      "colour": "blu",
+      "changed": 18569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "elise",
+      "colour": "verde",
+      "changed": 18569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "elise",
+      "colour": "nero",
+      "changed": 18569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "elise",
+      "colour": "bianco",
+      "changed": 18569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "elise",
+      "colour": "argento",
+      "changed": 18569,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "esprit",
+      "colour": "rosso",
+      "changed": 25183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "esprit",
+      "colour": "blu",
+      "changed": 25183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "esprit",
+      "colour": "verde",
+      "changed": 25183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "esprit",
+      "colour": "nero",
+      "changed": 25183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "esprit",
+      "colour": "bianco",
+      "changed": 25183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "esprit",
+      "colour": "argento",
+      "changed": 25183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "exige",
+      "colour": "rosso",
+      "changed": 16669,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "exige",
+      "colour": "blu",
+      "changed": 16669,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "exige",
+      "colour": "verde",
+      "changed": 16669,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "exige",
+      "colour": "nero",
+      "changed": 16669,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "exige",
+      "colour": "bianco",
+      "changed": 16669,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "exige",
+      "colour": "argento",
+      "changed": 16669,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mgf",
+      "colour": "rosso",
+      "changed": 17998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mgf",
+      "colour": "blu",
+      "changed": 17998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mgf",
+      "colour": "verde",
+      "changed": 17998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mgf",
+      "colour": "nero",
+      "changed": 17998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mgf",
+      "colour": "bianco",
+      "changed": 17998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mgf",
+      "colour": "argento",
+      "changed": 17998,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zr",
+      "colour": "rosso",
+      "changed": 16601,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zr",
+      "colour": "blu",
+      "changed": 16601,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zr",
+      "colour": "verde",
+      "changed": 16601,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zr",
+      "colour": "nero",
+      "changed": 16601,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zr",
+      "colour": "bianco",
+      "changed": 16601,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zr",
+      "colour": "argento",
+      "changed": 16601,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zs",
+      "colour": "rosso",
+      "changed": 17208,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zs",
+      "colour": "blu",
+      "changed": 17208,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zs",
+      "colour": "verde",
+      "changed": 17208,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zs",
+      "colour": "nero",
+      "changed": 17208,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zs",
+      "colour": "bianco",
+      "changed": 17208,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zs",
+      "colour": "argento",
+      "changed": 17208,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3200",
+      "colour": "rosso",
+      "changed": 16679,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3200",
+      "colour": "blu",
+      "changed": 16679,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3200",
+      "colour": "verde",
+      "changed": 16679,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3200",
+      "colour": "nero",
+      "changed": 16679,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3200",
+      "colour": "bianco",
+      "changed": 16679,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3200",
+      "colour": "argento",
+      "changed": 16679,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "biturbo",
+      "colour": "rosso",
+      "changed": 19076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "biturbo",
+      "colour": "blu",
+      "changed": 19076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "biturbo",
+      "colour": "verde",
+      "changed": 19076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "biturbo",
+      "colour": "nero",
+      "changed": 19076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "biturbo",
+      "colour": "bianco",
+      "changed": 19076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "biturbo",
+      "colour": "argento",
+      "changed": 19076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "shamal",
+      "colour": "rosso",
+      "changed": 21094,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "shamal",
+      "colour": "blu",
+      "changed": 21094,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "shamal",
+      "colour": "verde",
+      "changed": 21094,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "shamal",
+      "colour": "nero",
+      "changed": 21094,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "shamal",
+      "colour": "bianco",
+      "changed": 21094,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "shamal",
+      "colour": "argento",
+      "changed": 21094,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "323",
+      "colour": "rosso",
+      "changed": 15657,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "323",
+      "colour": "blu",
+      "changed": 15657,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "323",
+      "colour": "verde",
+      "changed": 15657,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "323",
+      "colour": "nero",
+      "changed": 15657,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "323",
+      "colour": "bianco",
+      "changed": 15657,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "323",
+      "colour": "argento",
+      "changed": 15657,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lantis",
+      "colour": "rosso",
+      "changed": 13836,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lantis",
+      "colour": "blu",
+      "changed": 13836,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lantis",
+      "colour": "verde",
+      "changed": 13836,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lantis",
+      "colour": "nero",
+      "changed": 13836,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lantis",
+      "colour": "bianco",
+      "changed": 13836,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lantis",
+      "colour": "argento",
+      "changed": 13816,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mx3",
+      "colour": "rosso",
+      "changed": 17032,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mx3",
+      "colour": "blu",
+      "changed": 17032,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mx3",
+      "colour": "verde",
+      "changed": 17032,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mx3",
+      "colour": "nero",
+      "changed": 17032,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mx3",
+      "colour": "bianco",
+      "changed": 17032,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mx3",
+      "colour": "argento",
+      "changed": 17032,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "na",
+      "colour": "rosso",
+      "changed": 13992,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "na",
+      "colour": "blu",
+      "changed": 13992,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "na",
+      "colour": "verde",
+      "changed": 13992,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "na",
+      "colour": "nero",
+      "changed": 13992,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "na",
+      "colour": "bianco",
+      "changed": 13992,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "na",
+      "colour": "argento",
+      "changed": 13992,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nb",
+      "colour": "rosso",
+      "changed": 17973,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nb",
+      "colour": "blu",
+      "changed": 17973,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nb",
+      "colour": "verde",
+      "changed": 17973,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nb",
+      "colour": "nero",
+      "changed": 17973,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nb",
+      "colour": "bianco",
+      "changed": 17973,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "nb",
+      "colour": "argento",
+      "changed": 17973,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fc",
+      "colour": "rosso",
+      "changed": 16742,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fc",
+      "colour": "blu",
+      "changed": 16742,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fc",
+      "colour": "verde",
+      "changed": 16742,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fc",
+      "colour": "nero",
+      "changed": 16742,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fc",
+      "colour": "bianco",
+      "changed": 16742,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fc",
+      "colour": "argento",
+      "changed": 16742,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fd",
+      "colour": "rosso",
+      "changed": 20911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fd",
+      "colour": "blu",
+      "changed": 20911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fd",
+      "colour": "verde",
+      "changed": 20911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fd",
+      "colour": "nero",
+      "changed": 20911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fd",
+      "colour": "bianco",
+      "changed": 20911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "fd",
+      "colour": "argento",
+      "changed": 20911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f1",
+      "colour": "rosso",
+      "changed": 16886,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f1",
+      "colour": "blu",
+      "changed": 16886,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f1",
+      "colour": "verde",
+      "changed": 16886,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f1",
+      "colour": "nero",
+      "changed": 16886,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f1",
+      "colour": "bianco",
+      "changed": 16886,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "f1",
+      "colour": "argento",
+      "changed": 16878,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "190",
+      "colour": "rosso",
+      "changed": 13072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "190",
+      "colour": "blu",
+      "changed": 13072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "190",
+      "colour": "verde",
+      "changed": 13072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "190",
+      "colour": "nero",
+      "changed": 13072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "190",
+      "colour": "bianco",
+      "changed": 13072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "190",
+      "colour": "argento",
+      "changed": 13072,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c43",
+      "colour": "rosso",
+      "changed": 16268,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c43",
+      "colour": "blu",
+      "changed": 16268,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c43",
+      "colour": "verde",
+      "changed": 16268,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c43",
+      "colour": "nero",
+      "changed": 16268,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c43",
+      "colour": "bianco",
+      "changed": 16268,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "c43",
+      "colour": "argento",
+      "changed": 16268,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clk",
+      "colour": "rosso",
+      "changed": 18304,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clk",
+      "colour": "blu",
+      "changed": 18304,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clk",
+      "colour": "verde",
+      "changed": 18300,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clk",
+      "colour": "nero",
+      "changed": 18300,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clk",
+      "colour": "bianco",
+      "changed": 18304,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clk",
+      "colour": "argento",
+      "changed": 18304,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "slk",
+      "colour": "rosso",
+      "changed": 15211,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "slk",
+      "colour": "blu",
+      "changed": 15211,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "slk",
+      "colour": "verde",
+      "changed": 15211,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "slk",
+      "colour": "nero",
+      "changed": 15211,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "slk",
+      "colour": "bianco",
+      "changed": 15211,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "slk",
+      "colour": "argento",
+      "changed": 15211,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cooper",
+      "colour": "rosso",
+      "changed": 9821,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cooper",
+      "colour": "blu",
+      "changed": 9821,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cooper",
+      "colour": "verde",
+      "changed": 9821,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cooper",
+      "colour": "nero",
+      "changed": 9821,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cooper",
+      "colour": "bianco",
+      "changed": 9821,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cooper",
+      "colour": "argento",
+      "changed": 9821,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3000gt",
+      "colour": "rosso",
+      "changed": 20303,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3000gt",
+      "colour": "blu",
+      "changed": 20303,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3000gt",
+      "colour": "verde",
+      "changed": 20303,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3000gt",
+      "colour": "nero",
+      "changed": 20303,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3000gt",
+      "colour": "bianco",
+      "changed": 20303,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "3000gt",
+      "colour": "argento",
+      "changed": 20303,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "colt",
+      "colour": "rosso",
+      "changed": 12340,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "colt",
+      "colour": "blu",
+      "changed": 12340,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "colt",
+      "colour": "verde",
+      "changed": 12340,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "colt",
+      "colour": "nero",
+      "changed": 12340,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "colt",
+      "colour": "bianco",
+      "changed": 12340,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "colt",
+      "colour": "argento",
+      "changed": 12324,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eclipse",
+      "colour": "rosso",
+      "changed": 19419,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eclipse",
+      "colour": "blu",
+      "changed": 19419,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eclipse",
+      "colour": "verde",
+      "changed": 19419,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eclipse",
+      "colour": "nero",
+      "changed": 19419,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eclipse",
+      "colour": "bianco",
+      "changed": 19419,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "eclipse",
+      "colour": "argento",
+      "changed": 19419,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo5",
+      "colour": "rosso",
+      "changed": 16813,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo5",
+      "colour": "blu",
+      "changed": 16813,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo5",
+      "colour": "verde",
+      "changed": 16813,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo5",
+      "colour": "nero",
+      "changed": 16813,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo5",
+      "colour": "bianco",
+      "changed": 16813,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo5",
+      "colour": "argento",
+      "changed": 16813,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo6",
+      "colour": "rosso",
+      "changed": 16561,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo6",
+      "colour": "blu",
+      "changed": 16557,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo6",
+      "colour": "verde",
+      "changed": 16561,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo6",
+      "colour": "nero",
+      "changed": 16561,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo6",
+      "colour": "bianco",
+      "changed": 16561,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo6",
+      "colour": "argento",
+      "changed": 16561,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo7",
+      "colour": "rosso",
+      "changed": 20695,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo7",
+      "colour": "blu",
+      "changed": 20695,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo7",
+      "colour": "verde",
+      "changed": 20695,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo7",
+      "colour": "nero",
+      "changed": 20695,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo7",
+      "colour": "bianco",
+      "changed": 20695,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "evo7",
+      "colour": "argento",
+      "changed": 20695,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "180sx",
+      "colour": "rosso",
+      "changed": 18035,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "180sx",
+      "colour": "blu",
+      "changed": 18035,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "180sx",
+      "colour": "verde",
+      "changed": 18035,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "180sx",
+      "colour": "nero",
+      "changed": 18035,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "180sx",
+      "colour": "bianco",
+      "changed": 18035,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "180sx",
+      "colour": "argento",
+      "changed": 18035,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s13",
+      "colour": "rosso",
+      "changed": 11412,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s13",
+      "colour": "blu",
+      "changed": 11412,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s13",
+      "colour": "verde",
+      "changed": 11412,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s13",
+      "colour": "nero",
+      "changed": 11412,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s13",
+      "colour": "bianco",
+      "changed": 11408,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s13",
+      "colour": "argento",
+      "changed": 11412,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s14",
+      "colour": "rosso",
+      "changed": 14226,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s14",
+      "colour": "blu",
+      "changed": 14226,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s14",
+      "colour": "verde",
+      "changed": 14226,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s14",
+      "colour": "nero",
+      "changed": 14226,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s14",
+      "colour": "bianco",
+      "changed": 14226,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s14",
+      "colour": "argento",
+      "changed": 14226,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "300zx",
+      "colour": "rosso",
+      "changed": 16603,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "300zx",
+      "colour": "blu",
+      "changed": 16603,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "300zx",
+      "colour": "verde",
+      "changed": 16603,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "300zx",
+      "colour": "nero",
+      "changed": 16603,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "300zx",
+      "colour": "bianco",
+      "changed": 16603,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "300zx",
+      "colour": "argento",
+      "changed": 16603,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "almera",
+      "colour": "rosso",
+      "changed": 12271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "almera",
+      "colour": "blu",
+      "changed": 12271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "almera",
+      "colour": "verde",
+      "changed": 12271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "almera",
+      "colour": "nero",
+      "changed": 12269,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "almera",
+      "colour": "bianco",
+      "changed": 12271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "almera",
+      "colour": "argento",
+      "changed": 12271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "micra",
+      "colour": "rosso",
+      "changed": 14696,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "micra",
+      "colour": "blu",
+      "changed": 14696,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "micra",
+      "colour": "verde",
+      "changed": 14696,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "micra",
+      "colour": "nero",
+      "changed": 14696,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "micra",
+      "colour": "bianco",
+      "changed": 14696,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "micra",
+      "colour": "argento",
+      "changed": 14696,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "primera",
+      "colour": "rosso",
+      "changed": 20090,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "primera",
+      "colour": "blu",
+      "changed": 20090,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "primera",
+      "colour": "verde",
+      "changed": 20090,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "primera",
+      "colour": "nero",
+      "changed": 20088,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "primera",
+      "colour": "bianco",
+      "changed": 20090,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "primera",
+      "colour": "argento",
+      "changed": 20090,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r32",
+      "colour": "rosso",
+      "changed": 14911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r32",
+      "colour": "blu",
+      "changed": 14911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r32",
+      "colour": "verde",
+      "changed": 14911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r32",
+      "colour": "nero",
+      "changed": 14911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r32",
+      "colour": "bianco",
+      "changed": 14911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r32",
+      "colour": "argento",
+      "changed": 14911,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r33",
+      "colour": "rosso",
+      "changed": 14982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r33",
+      "colour": "blu",
+      "changed": 14982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r33",
+      "colour": "verde",
+      "changed": 14982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r33",
+      "colour": "nero",
+      "changed": 14982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r33",
+      "colour": "bianco",
+      "changed": 14982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "r33",
+      "colour": "argento",
+      "changed": 14982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sunny",
+      "colour": "rosso",
+      "changed": 12933,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sunny",
+      "colour": "blu",
+      "changed": 12933,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sunny",
+      "colour": "verde",
+      "changed": 12933,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sunny",
+      "colour": "nero",
+      "changed": 12933,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sunny",
+      "colour": "bianco",
+      "changed": 12933,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sunny",
+      "colour": "argento",
+      "changed": 12933,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrac",
+      "colour": "rosso",
+      "changed": 17478,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrac",
+      "colour": "blu",
+      "changed": 17478,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrac",
+      "colour": "verde",
+      "changed": 17478,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrac",
+      "colour": "nero",
+      "changed": 17478,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrac",
+      "colour": "bianco",
+      "changed": 17478,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrac",
+      "colour": "argento",
+      "changed": 17478,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrag",
+      "colour": "rosso",
+      "changed": 13312,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrag",
+      "colour": "blu",
+      "changed": 13312,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrag",
+      "colour": "verde",
+      "changed": 13312,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrag",
+      "colour": "nero",
+      "changed": 13312,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrag",
+      "colour": "bianco",
+      "changed": 13312,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "astrag",
+      "colour": "argento",
+      "changed": 13312,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "opc",
+      "colour": "rosso",
+      "changed": 16434,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "opc",
+      "colour": "blu",
+      "changed": 16434,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "opc",
+      "colour": "verde",
+      "changed": 16434,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "opc",
+      "colour": "nero",
+      "changed": 16434,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "opc",
+      "colour": "bianco",
+      "changed": 16434,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "opc",
+      "colour": "argento",
+      "changed": 16434,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "calibra",
+      "colour": "rosso",
+      "changed": 17937,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "calibra",
+      "colour": "blu",
+      "changed": 17937,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "calibra",
+      "colour": "verde",
+      "changed": 17937,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "calibra",
+      "colour": "nero",
+      "changed": 17937,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "calibra",
+      "colour": "bianco",
+      "changed": 17937,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "calibra",
+      "colour": "argento",
+      "changed": 17937,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa1",
+      "colour": "rosso",
+      "changed": 13803,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa1",
+      "colour": "blu",
+      "changed": 13803,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa1",
+      "colour": "verde",
+      "changed": 13803,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa1",
+      "colour": "nero",
+      "changed": 13803,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa1",
+      "colour": "bianco",
+      "changed": 13803,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa1",
+      "colour": "argento",
+      "changed": 13803,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa2",
+      "colour": "rosso",
+      "changed": 12971,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa2",
+      "colour": "blu",
+      "changed": 12971,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa2",
+      "colour": "verde",
+      "changed": 12971,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa2",
+      "colour": "nero",
+      "changed": 12971,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa2",
+      "colour": "bianco",
+      "changed": 12971,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corsa2",
+      "colour": "argento",
+      "changed": 12971,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "kadett",
+      "colour": "rosso",
+      "changed": 12781,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "kadett",
+      "colour": "blu",
+      "changed": 12781,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "kadett",
+      "colour": "verde",
+      "changed": 12781,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "kadett",
+      "colour": "nero",
+      "changed": 12781,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "kadett",
+      "colour": "bianco",
+      "changed": 12781,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "kadett",
+      "colour": "argento",
+      "changed": 12781,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "manta",
+      "colour": "rosso",
+      "changed": 11982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "manta",
+      "colour": "blu",
+      "changed": 11982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "manta",
+      "colour": "verde",
+      "changed": 11982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "manta",
+      "colour": "nero",
+      "changed": 11982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "manta",
+      "colour": "bianco",
+      "changed": 11982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "manta",
+      "colour": "argento",
+      "changed": 11982,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "omega",
+      "colour": "rosso",
+      "changed": 13735,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "omega",
+      "colour": "blu",
+      "changed": 13735,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "omega",
+      "colour": "verde",
+      "changed": 13735,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "omega",
+      "colour": "nero",
+      "changed": 13735,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "omega",
+      "colour": "bianco",
+      "changed": 13735,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "omega",
+      "colour": "argento",
+      "changed": 13735,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speedster",
+      "colour": "rosso",
+      "changed": 12400,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speedster",
+      "colour": "blu",
+      "changed": 12400,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speedster",
+      "colour": "verde",
+      "changed": 12400,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speedster",
+      "colour": "nero",
+      "changed": 12400,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speedster",
+      "colour": "bianco",
+      "changed": 12400,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speedster",
+      "colour": "argento",
+      "changed": 12400,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tigra",
+      "colour": "rosso",
+      "changed": 16271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tigra",
+      "colour": "blu",
+      "changed": 16271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tigra",
+      "colour": "verde",
+      "changed": 16271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tigra",
+      "colour": "nero",
+      "changed": 16271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tigra",
+      "colour": "bianco",
+      "changed": 16271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "tigra",
+      "colour": "argento",
+      "changed": 16271,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zonda",
+      "colour": "rosso",
+      "changed": 18494,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zonda",
+      "colour": "blu",
+      "changed": 18494,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zonda",
+      "colour": "verde",
+      "changed": 18494,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zonda",
+      "colour": "nero",
+      "changed": 18494,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zonda",
+      "colour": "bianco",
+      "changed": 18494,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "zonda",
+      "colour": "argento",
+      "changed": 18494,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "106",
+      "colour": "rosso",
+      "changed": 14452,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "106",
+      "colour": "blu",
+      "changed": 14452,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "106",
+      "colour": "verde",
+      "changed": 14452,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "106",
+      "colour": "nero",
+      "changed": 14451,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "106",
+      "colour": "bianco",
+      "changed": 14452,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "106",
+      "colour": "argento",
+      "changed": 14452,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rallye",
+      "colour": "rosso",
+      "changed": 14620,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rallye",
+      "colour": "blu",
+      "changed": 14620,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rallye",
+      "colour": "verde",
+      "changed": 14620,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rallye",
+      "colour": "nero",
+      "changed": 14620,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rallye",
+      "colour": "bianco",
+      "changed": 14620,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "rallye",
+      "colour": "argento",
+      "changed": 14620,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "205",
+      "colour": "rosso",
+      "changed": 11666,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "205",
+      "colour": "blu",
+      "changed": 11666,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "205",
+      "colour": "verde",
+      "changed": 11666,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "205",
+      "colour": "nero",
+      "changed": 11666,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "205",
+      "colour": "bianco",
+      "changed": 11666,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "205",
+      "colour": "argento",
+      "changed": 11666,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "206",
+      "colour": "rosso",
+      "changed": 12492,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "206",
+      "colour": "blu",
+      "changed": 12492,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "206",
+      "colour": "verde",
+      "changed": 12492,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "206",
+      "colour": "nero",
+      "changed": 12492,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "206",
+      "colour": "bianco",
+      "changed": 12492,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "206",
+      "colour": "argento",
+      "changed": 12492,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "306",
+      "colour": "rosso",
+      "changed": 17169,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "306",
+      "colour": "blu",
+      "changed": 17169,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "306",
+      "colour": "verde",
+      "changed": 17169,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "306",
+      "colour": "nero",
+      "changed": 17169,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "306",
+      "colour": "bianco",
+      "changed": 17169,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "306",
+      "colour": "argento",
+      "changed": 17169,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "309",
+      "colour": "rosso",
+      "changed": 10336,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "309",
+      "colour": "blu",
+      "changed": 10336,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "309",
+      "colour": "verde",
+      "changed": 10336,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "309",
+      "colour": "nero",
+      "changed": 10332,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "309",
+      "colour": "bianco",
+      "changed": 10336,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "309",
+      "colour": "argento",
+      "changed": 10336,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "405",
+      "colour": "rosso",
+      "changed": 17636,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "405",
+      "colour": "blu",
+      "changed": 17640,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "405",
+      "colour": "verde",
+      "changed": 17640,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "405",
+      "colour": "nero",
+      "changed": 17640,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "405",
+      "colour": "bianco",
+      "changed": 17640,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "405",
+      "colour": "argento",
+      "changed": 17640,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "406",
+      "colour": "rosso",
+      "changed": 17560,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "406",
+      "colour": "blu",
+      "changed": 17560,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "406",
+      "colour": "verde",
+      "changed": 17560,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "406",
+      "colour": "nero",
+      "changed": 17560,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "406",
+      "colour": "bianco",
+      "changed": 17560,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "406",
+      "colour": "argento",
+      "changed": 17560,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "911",
+      "colour": "rosso",
+      "changed": 10829,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "911",
+      "colour": "blu",
+      "changed": 10829,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "911",
+      "colour": "verde",
+      "changed": 10829,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "911",
+      "colour": "nero",
+      "changed": 10825,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "911",
+      "colour": "bianco",
+      "changed": 10829,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "911",
+      "colour": "argento",
+      "changed": 10829,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt1",
+      "colour": "rosso",
+      "changed": 17528,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt1",
+      "colour": "blu",
+      "changed": 17528,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt1",
+      "colour": "verde",
+      "changed": 17528,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt1",
+      "colour": "nero",
+      "changed": 17528,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt1",
+      "colour": "bianco",
+      "changed": 17528,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt1",
+      "colour": "argento",
+      "changed": 17528,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "930",
+      "colour": "rosso",
+      "changed": 12183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "930",
+      "colour": "blu",
+      "changed": 12183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "930",
+      "colour": "verde",
+      "changed": 12183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "930",
+      "colour": "nero",
+      "changed": 12183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "930",
+      "colour": "bianco",
+      "changed": 12183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "930",
+      "colour": "argento",
+      "changed": 12183,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "944",
+      "colour": "rosso",
+      "changed": 19832,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "944",
+      "colour": "blu",
+      "changed": 19832,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "944",
+      "colour": "verde",
+      "changed": 19832,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "944",
+      "colour": "nero",
+      "changed": 19832,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "944",
+      "colour": "bianco",
+      "changed": 19832,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "944",
+      "colour": "argento",
+      "changed": 19832,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "959",
+      "colour": "rosso",
+      "changed": 14993,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "959",
+      "colour": "blu",
+      "changed": 14993,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "959",
+      "colour": "verde",
+      "changed": 14993,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "959",
+      "colour": "nero",
+      "changed": 14993,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "959",
+      "colour": "bianco",
+      "changed": 14993,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "959",
+      "colour": "argento",
+      "changed": 14993,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964",
+      "colour": "rosso",
+      "changed": 15709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964",
+      "colour": "blu",
+      "changed": 15709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964",
+      "colour": "verde",
+      "changed": 15709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964",
+      "colour": "nero",
+      "changed": 15709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964",
+      "colour": "bianco",
+      "changed": 15709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964",
+      "colour": "argento",
+      "changed": 15709,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964t",
+      "colour": "rosso",
+      "changed": 13443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964t",
+      "colour": "blu",
+      "changed": 13443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964t",
+      "colour": "verde",
+      "changed": 13443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964t",
+      "colour": "nero",
+      "changed": 13443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964t",
+      "colour": "bianco",
+      "changed": 13443,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "964t",
+      "colour": "argento",
+      "changed": 13439,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "968",
+      "colour": "rosso",
+      "changed": 20687,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "968",
+      "colour": "blu",
+      "changed": 20687,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "968",
+      "colour": "verde",
+      "changed": 20687,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "968",
+      "colour": "nero",
+      "changed": 20687,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "968",
+      "colour": "bianco",
+      "changed": 20687,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "968",
+      "colour": "argento",
+      "changed": 20687,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt2",
+      "colour": "rosso",
+      "changed": 18706,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt2",
+      "colour": "blu",
+      "changed": 18706,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt2",
+      "colour": "verde",
+      "changed": 18706,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt2",
+      "colour": "nero",
+      "changed": 18706,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt2",
+      "colour": "bianco",
+      "changed": 18706,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gt2",
+      "colour": "argento",
+      "changed": 18706,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "993",
+      "colour": "rosso",
+      "changed": 18648,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "993",
+      "colour": "blu",
+      "changed": 18648,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "993",
+      "colour": "verde",
+      "changed": 18648,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "993",
+      "colour": "nero",
+      "changed": 18648,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "993",
+      "colour": "bianco",
+      "changed": 18648,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "993",
+      "colour": "argento",
+      "changed": 18648,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "996",
+      "colour": "rosso",
+      "changed": 17907,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "996",
+      "colour": "blu",
+      "changed": 17907,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "996",
+      "colour": "verde",
+      "changed": 17907,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "996",
+      "colour": "nero",
+      "changed": 17907,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "996",
+      "colour": "bianco",
+      "changed": 17907,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "996",
+      "colour": "argento",
+      "changed": 17907,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "boxster",
+      "colour": "rosso",
+      "changed": 17448,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "boxster",
+      "colour": "blu",
+      "changed": 17448,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "boxster",
+      "colour": "verde",
+      "changed": 17448,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "boxster",
+      "colour": "nero",
+      "changed": 17448,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "boxster",
+      "colour": "bianco",
+      "changed": 17448,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "boxster",
+      "colour": "argento",
+      "changed": 17448,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "19",
+      "colour": "rosso",
+      "changed": 14406,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "19",
+      "colour": "blu",
+      "changed": 14406,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "19",
+      "colour": "verde",
+      "changed": 14406,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "19",
+      "colour": "nero",
+      "changed": 14394,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "19",
+      "colour": "bianco",
+      "changed": 14406,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "19",
+      "colour": "argento",
+      "changed": 14406,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5",
+      "colour": "rosso",
+      "changed": 11065,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5",
+      "colour": "blu",
+      "changed": 11065,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5",
+      "colour": "verde",
+      "changed": 11065,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5",
+      "colour": "nero",
+      "changed": 11065,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5",
+      "colour": "bianco",
+      "changed": 11065,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5",
+      "colour": "argento",
+      "changed": 11065,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5maxi",
+      "colour": "rosso",
+      "changed": 14413,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5maxi",
+      "colour": "blu",
+      "changed": 14413,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5maxi",
+      "colour": "verde",
+      "changed": 14413,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5maxi",
+      "colour": "nero",
+      "changed": 14413,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5maxi",
+      "colour": "bianco",
+      "changed": 14413,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "5maxi",
+      "colour": "argento",
+      "changed": 14413,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "alpine",
+      "colour": "rosso",
+      "changed": 17823,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "alpine",
+      "colour": "blu",
+      "changed": 17823,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "alpine",
+      "colour": "verde",
+      "changed": 17815,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "alpine",
+      "colour": "nero",
+      "changed": 17815,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "alpine",
+      "colour": "bianco",
+      "changed": 17823,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "alpine",
+      "colour": "argento",
+      "changed": 17823,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clio",
+      "colour": "rosso",
+      "changed": 12363,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clio",
+      "colour": "blu",
+      "changed": 12363,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clio",
+      "colour": "verde",
+      "changed": 12363,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clio",
+      "colour": "nero",
+      "changed": 12363,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clio",
+      "colour": "bianco",
+      "changed": 12363,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "clio",
+      "colour": "argento",
+      "changed": 12363,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "williams",
+      "colour": "rosso",
+      "changed": 14390,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "williams",
+      "colour": "blu",
+      "changed": 14390,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "williams",
+      "colour": "verde",
+      "changed": 14390,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "williams",
+      "colour": "nero",
+      "changed": 14390,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "williams",
+      "colour": "bianco",
+      "changed": 14390,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "williams",
+      "colour": "argento",
+      "changed": 14390,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "v6",
+      "colour": "rosso",
+      "changed": 13099,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "v6",
+      "colour": "blu",
+      "changed": 13099,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "v6",
+      "colour": "verde",
+      "changed": 13099,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "v6",
+      "colour": "nero",
+      "changed": 13099,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "v6",
+      "colour": "bianco",
+      "changed": 13099,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "v6",
+      "colour": "argento",
+      "changed": 13099,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "laguna",
+      "colour": "rosso",
+      "changed": 12255,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "laguna",
+      "colour": "blu",
+      "changed": 12255,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "laguna",
+      "colour": "verde",
+      "changed": 12255,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "laguna",
+      "colour": "nero",
+      "changed": 12255,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "laguna",
+      "colour": "bianco",
+      "changed": 12255,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "laguna",
+      "colour": "argento",
+      "changed": 12255,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "megane",
+      "colour": "rosso",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "megane",
+      "colour": "blu",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "megane",
+      "colour": "verde",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "megane",
+      "colour": "nero",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "megane",
+      "colour": "bianco",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "megane",
+      "colour": "argento",
+      "changed": 15883,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "114",
+      "colour": "rosso",
+      "changed": 13625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "114",
+      "colour": "blu",
+      "changed": 13625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "114",
+      "colour": "verde",
+      "changed": 13625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "114",
+      "colour": "nero",
+      "changed": 13625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "114",
+      "colour": "bianco",
+      "changed": 13625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "114",
+      "colour": "argento",
+      "changed": 13625,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "220",
+      "colour": "rosso",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "220",
+      "colour": "blu",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "220",
+      "colour": "verde",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "220",
+      "colour": "nero",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "220",
+      "colour": "bianco",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "220",
+      "colour": "argento",
+      "changed": 14153,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "93",
+      "colour": "rosso",
+      "changed": 15231,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "93",
+      "colour": "blu",
+      "changed": 15231,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "93",
+      "colour": "verde",
+      "changed": 15231,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "93",
+      "colour": "nero",
+      "changed": 15231,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "93",
+      "colour": "bianco",
+      "changed": 15231,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "93",
+      "colour": "argento",
+      "changed": 15231,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "900",
+      "colour": "rosso",
+      "changed": 11450,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "900",
+      "colour": "blu",
+      "changed": 11450,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "900",
+      "colour": "verde",
+      "changed": 11450,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "900",
+      "colour": "nero",
+      "changed": 11450,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "900",
+      "colour": "bianco",
+      "changed": 11450,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "900",
+      "colour": "argento",
+      "changed": 11450,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cordoba",
+      "colour": "rosso",
+      "changed": 16932,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cordoba",
+      "colour": "blu",
+      "changed": 16932,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cordoba",
+      "colour": "verde",
+      "changed": 16932,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cordoba",
+      "colour": "nero",
+      "changed": 16932,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cordoba",
+      "colour": "bianco",
+      "changed": 16932,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cordoba",
+      "colour": "argento",
+      "changed": 16932,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ibiza",
+      "colour": "rosso",
+      "changed": 16779,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ibiza",
+      "colour": "blu",
+      "changed": 16779,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ibiza",
+      "colour": "verde",
+      "changed": 16779,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ibiza",
+      "colour": "nero",
+      "changed": 16779,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ibiza",
+      "colour": "bianco",
+      "changed": 16779,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "ibiza",
+      "colour": "argento",
+      "changed": 16779,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "leon",
+      "colour": "rosso",
+      "changed": 14697,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "leon",
+      "colour": "blu",
+      "changed": 14697,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "leon",
+      "colour": "verde",
+      "changed": 14697,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "leon",
+      "colour": "nero",
+      "changed": 14697,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "leon",
+      "colour": "bianco",
+      "changed": 14697,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "leon",
+      "colour": "argento",
+      "changed": 14697,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "octavia",
+      "colour": "rosso",
+      "changed": 12879,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "octavia",
+      "colour": "blu",
+      "changed": 12879,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "octavia",
+      "colour": "verde",
+      "changed": 12879,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "octavia",
+      "colour": "nero",
+      "changed": 12879,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "octavia",
+      "colour": "bianco",
+      "changed": 12879,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "octavia",
+      "colour": "argento",
+      "changed": 12871,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "22b",
+      "colour": "rosso",
+      "changed": 15857,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "22b",
+      "colour": "blu",
+      "changed": 15857,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "22b",
+      "colour": "verde",
+      "changed": 15857,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "22b",
+      "colour": "nero",
+      "changed": 15857,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "22b",
+      "colour": "bianco",
+      "changed": 15857,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "22b",
+      "colour": "argento",
+      "changed": 15857,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "impreza",
+      "colour": "rosso",
+      "changed": 15372,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "impreza",
+      "colour": "blu",
+      "changed": 15372,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "impreza",
+      "colour": "verde",
+      "changed": 15372,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "impreza",
+      "colour": "nero",
+      "changed": 15372,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "impreza",
+      "colour": "bianco",
+      "changed": 15372,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "impreza",
+      "colour": "argento",
+      "changed": 15372,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "legacy",
+      "colour": "rosso",
+      "changed": 15004,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "legacy",
+      "colour": "blu",
+      "changed": 15004,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "legacy",
+      "colour": "verde",
+      "changed": 15004,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "legacy",
+      "colour": "nero",
+      "changed": 15004,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "legacy",
+      "colour": "bianco",
+      "changed": 15004,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "legacy",
+      "colour": "argento",
+      "changed": 15000,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "svx",
+      "colour": "rosso",
+      "changed": 17080,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "svx",
+      "colour": "blu",
+      "changed": 17080,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "svx",
+      "colour": "verde",
+      "changed": 17080,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "svx",
+      "colour": "nero",
+      "changed": 17080,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "svx",
+      "colour": "bianco",
+      "changed": 17080,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "svx",
+      "colour": "argento",
+      "changed": 17076,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "swift",
+      "colour": "rosso",
+      "changed": 16387,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "swift",
+      "colour": "blu",
+      "changed": 16387,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "swift",
+      "colour": "verde",
+      "changed": 16387,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "swift",
+      "colour": "nero",
+      "changed": 16387,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "swift",
+      "colour": "bianco",
+      "changed": 16387,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "swift",
+      "colour": "argento",
+      "changed": 16387,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sainz",
+      "colour": "rosso",
+      "changed": 18056,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sainz",
+      "colour": "blu",
+      "changed": 18056,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sainz",
+      "colour": "verde",
+      "changed": 18056,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sainz",
+      "colour": "nero",
+      "changed": 18056,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sainz",
+      "colour": "bianco",
+      "changed": 18056,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "sainz",
+      "colour": "argento",
+      "changed": 18056,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtfour",
+      "colour": "rosso",
+      "changed": 17397,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtfour",
+      "colour": "blu",
+      "changed": 17397,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtfour",
+      "colour": "verde",
+      "changed": 17397,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtfour",
+      "colour": "nero",
+      "changed": 17397,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtfour",
+      "colour": "bianco",
+      "changed": 17397,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gtfour",
+      "colour": "argento",
+      "changed": 17397,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "celica",
+      "colour": "rosso",
+      "changed": 15592,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "celica",
+      "colour": "blu",
+      "changed": 15592,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "celica",
+      "colour": "verde",
+      "changed": 15592,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "celica",
+      "colour": "nero",
+      "changed": 15592,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "celica",
+      "colour": "bianco",
+      "changed": 15592,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "celica",
+      "colour": "argento",
+      "changed": 15592,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corolla",
+      "colour": "rosso",
+      "changed": 15672,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corolla",
+      "colour": "blu",
+      "changed": 15672,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corolla",
+      "colour": "verde",
+      "changed": 15672,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corolla",
+      "colour": "nero",
+      "changed": 15672,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corolla",
+      "colour": "bianco",
+      "changed": 15672,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corolla",
+      "colour": "argento",
+      "changed": 15672,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mr2",
+      "colour": "rosso",
+      "changed": 17430,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mr2",
+      "colour": "blu",
+      "changed": 17430,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mr2",
+      "colour": "verde",
+      "changed": 17430,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mr2",
+      "colour": "nero",
+      "changed": 17430,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mr2",
+      "colour": "bianco",
+      "changed": 17430,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mr2",
+      "colour": "argento",
+      "changed": 17430,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mrs",
+      "colour": "rosso",
+      "changed": 14767,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mrs",
+      "colour": "blu",
+      "changed": 14767,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mrs",
+      "colour": "verde",
+      "changed": 14767,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mrs",
+      "colour": "nero",
+      "changed": 14767,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mrs",
+      "colour": "bianco",
+      "changed": 14767,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "mrs",
+      "colour": "argento",
+      "changed": 14767,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra3",
+      "colour": "rosso",
+      "changed": 13282,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra3",
+      "colour": "blu",
+      "changed": 13282,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra3",
+      "colour": "verde",
+      "changed": 13282,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra3",
+      "colour": "nero",
+      "changed": 13282,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra3",
+      "colour": "bianco",
+      "changed": 13282,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra3",
+      "colour": "argento",
+      "changed": 13282,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra4",
+      "colour": "rosso",
+      "changed": 15668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra4",
+      "colour": "blu",
+      "changed": 15668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra4",
+      "colour": "verde",
+      "changed": 15668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra4",
+      "colour": "nero",
+      "changed": 15668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra4",
+      "colour": "bianco",
+      "changed": 15668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "supra4",
+      "colour": "argento",
+      "changed": 15668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "trueno",
+      "colour": "rosso",
+      "changed": 8953,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "trueno",
+      "colour": "blu",
+      "changed": 8953,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "trueno",
+      "colour": "verde",
+      "changed": 8953,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "trueno",
+      "colour": "nero",
+      "changed": 8953,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "trueno",
+      "colour": "bianco",
+      "changed": 8953,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "trueno",
+      "colour": "argento",
+      "changed": 8953,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "yaris",
+      "colour": "rosso",
+      "changed": 12806,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "yaris",
+      "colour": "blu",
+      "changed": 12804,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "yaris",
+      "colour": "verde",
+      "changed": 12806,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "yaris",
+      "colour": "nero",
+      "changed": 12806,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "yaris",
+      "colour": "bianco",
+      "changed": 12806,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "yaris",
+      "colour": "argento",
+      "changed": 12806,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cerbera",
+      "colour": "rosso",
+      "changed": 20668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cerbera",
+      "colour": "blu",
+      "changed": 20668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cerbera",
+      "colour": "verde",
+      "changed": 20668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cerbera",
+      "colour": "nero",
+      "changed": 20668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cerbera",
+      "colour": "bianco",
+      "changed": 20668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "cerbera",
+      "colour": "argento",
+      "changed": 20668,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speed12",
+      "colour": "rosso",
+      "changed": 19403,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speed12",
+      "colour": "blu",
+      "changed": 19403,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speed12",
+      "colour": "verde",
+      "changed": 19403,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speed12",
+      "colour": "nero",
+      "changed": 19403,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speed12",
+      "colour": "bianco",
+      "changed": 19403,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "speed12",
+      "colour": "argento",
+      "changed": 19403,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850t",
+      "colour": "rosso",
+      "changed": 19461,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850t",
+      "colour": "blu",
+      "changed": 19461,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850t",
+      "colour": "verde",
+      "changed": 19461,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850t",
+      "colour": "nero",
+      "changed": 19461,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850t",
+      "colour": "bianco",
+      "changed": 19461,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "850t",
+      "colour": "argento",
+      "changed": 19461,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s40",
+      "colour": "rosso",
+      "changed": 18671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s40",
+      "colour": "blu",
+      "changed": 18671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s40",
+      "colour": "verde",
+      "changed": 18671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s40",
+      "colour": "nero",
+      "changed": 18671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s40",
+      "colour": "bianco",
+      "changed": 18671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s40",
+      "colour": "argento",
+      "changed": 18671,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s60",
+      "colour": "rosso",
+      "changed": 14126,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s60",
+      "colour": "blu",
+      "changed": 14126,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s60",
+      "colour": "verde",
+      "changed": 14126,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s60",
+      "colour": "nero",
+      "changed": 14124,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s60",
+      "colour": "bianco",
+      "changed": 14126,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "s60",
+      "colour": "argento",
+      "changed": 14126,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corrado",
+      "colour": "rosso",
+      "changed": 15457,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corrado",
+      "colour": "blu",
+      "changed": 15457,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corrado",
+      "colour": "verde",
+      "changed": 15457,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corrado",
+      "colour": "nero",
+      "changed": 15456,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corrado",
+      "colour": "bianco",
+      "changed": 15457,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "corrado",
+      "colour": "argento",
+      "changed": 15457,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "g60",
+      "colour": "rosso",
+      "changed": 12713,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "g60",
+      "colour": "blu",
+      "changed": 12713,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "g60",
+      "colour": "verde",
+      "changed": 12713,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "g60",
+      "colour": "nero",
+      "changed": 12713,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "g60",
+      "colour": "bianco",
+      "changed": 12713,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "g60",
+      "colour": "argento",
+      "changed": 12713,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti1",
+      "colour": "rosso",
+      "changed": 11955,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti1",
+      "colour": "blu",
+      "changed": 11955,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti1",
+      "colour": "verde",
+      "changed": 11955,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti1",
+      "colour": "nero",
+      "changed": 11955,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti1",
+      "colour": "bianco",
+      "changed": 11955,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti1",
+      "colour": "argento",
+      "changed": 11955,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti4",
+      "colour": "rosso",
+      "changed": 15934,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti4",
+      "colour": "blu",
+      "changed": 15934,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti4",
+      "colour": "verde",
+      "changed": 15934,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti4",
+      "colour": "nero",
+      "changed": 15934,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti4",
+      "colour": "bianco",
+      "changed": 15934,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "gti4",
+      "colour": "argento",
+      "changed": 15934,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vr6",
+      "colour": "rosso",
+      "changed": 9130,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vr6",
+      "colour": "blu",
+      "changed": 9130,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vr6",
+      "colour": "verde",
+      "changed": 9130,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vr6",
+      "colour": "nero",
+      "changed": 9130,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vr6",
+      "colour": "bianco",
+      "changed": 9130,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "vr6",
+      "colour": "argento",
+      "changed": 9130,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lupo",
+      "colour": "rosso",
+      "changed": 12976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lupo",
+      "colour": "blu",
+      "changed": 12976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lupo",
+      "colour": "verde",
+      "changed": 12976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lupo",
+      "colour": "nero",
+      "changed": 12976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lupo",
+      "colour": "bianco",
+      "changed": 12976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "lupo",
+      "colour": "argento",
+      "changed": 12976,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "beetle",
+      "colour": "rosso",
+      "changed": 14296,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "beetle",
+      "colour": "blu",
+      "changed": 14296,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "beetle",
+      "colour": "verde",
+      "changed": 14296,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "beetle",
+      "colour": "nero",
+      "changed": 14296,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "beetle",
+      "colour": "bianco",
+      "changed": 14296,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "beetle",
+      "colour": "argento",
+      "changed": 14276,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "polo",
+      "colour": "rosso",
+      "changed": 13015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "polo",
+      "colour": "blu",
+      "changed": 13015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "polo",
+      "colour": "verde",
+      "changed": 13015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "polo",
+      "colour": "nero",
+      "changed": 13015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "polo",
+      "colour": "bianco",
+      "changed": 13015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "polo",
+      "colour": "argento",
+      "changed": 13015,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "scirocco",
+      "colour": "rosso",
+      "changed": 13299,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "scirocco",
+      "colour": "blu",
+      "changed": 13299,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "scirocco",
+      "colour": "verde",
+      "changed": 13299,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "scirocco",
+      "colour": "nero",
+      "changed": 13299,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "scirocco",
+      "colour": "bianco",
+      "changed": 13299,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "key": "scirocco",
+      "colour": "argento",
+      "changed": 13299,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    }
+  ]
+}
