@@ -21,3 +21,7 @@ Browser con API reali su copia PostgreSQL `_validation` e pilota sintetico; ness
 Gara su strada e campionato via browser sulla copia: indicatore mini presente su 320 px, stima e log in km/l, avvio/turno/abbandono e classifica coerenti. Artefatti in `.preview/feedback-qa`. Test dedicati a conversione e direzione del confronto, soglie XP, alias senza mutazione, accessibilità degli strumenti. Backend, schema, formule e dati dei giocatori invariati.
 
 Verifica finale: 269 test JavaScript e 12 test account/gateway superati; lint, build e controllo del diff completati. Nessuna modifica a server, shared o schema; le localizzazioni e conversioni restano nello strato di presentazione.
+
+## Rilascio
+
+Pubblicato il 24 ottobre 2026 sulla sola istanza 5174 tramite gateway 5184. Backup completo Auth + gioco prima e dopo; build precedente e verifica privata in `/home/klaro/.backups/poketurismo/playtest-feedback-2026-10-24T08-27-27-721Z`. Con servizi fermi, tutte le righe delle 32 tabelle game identiche prima e dopo. Nessuna migrazione o reset. Servizi attivi; gateway e Funnel 443/8443 verificati con pagina scuola, concessionario, health, API personale anonima 401, nuovo bundle e immagine soccorso effettivamente distribuiti. Nessun cambiamento al Funnel.
