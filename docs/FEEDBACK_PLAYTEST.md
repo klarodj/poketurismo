@@ -25,3 +25,5 @@ Verifica finale: 269 test JavaScript e 12 test account/gateway superati; lint, b
 ## Rilascio
 
 Pubblicato il 24 ottobre 2026 sulla sola istanza 5174 tramite gateway 5184. Backup completo Auth + gioco prima e dopo; build precedente e verifica privata in `/home/klaro/.backups/poketurismo/playtest-feedback-2026-10-24T08-27-27-721Z`. Con servizi fermi, tutte le righe delle 32 tabelle game identiche prima e dopo. Nessuna migrazione o reset. Servizi attivi; gateway e Funnel 443/8443 verificati con pagina scuola, concessionario, health, API personale anonima 401, nuovo bundle e immagine soccorso effettivamente distribuiti. Nessun cambiamento al Funnel.
+
+Correzione successiva: le clandestine entrano senza luogo selezionato, ignorando anche il vecchio valore in sessionStorage. «Cambia luogo» azzera la selezione locale senza toccare le offerte server. Browser su 390/1280 px con risposte sintetiche: partenza, reload e ritorno senza selezione; scelta esplicita di luoghi accessibili e bloccati funzionante. Nessuna operazione sui dati pubblici durante il collaudo.
