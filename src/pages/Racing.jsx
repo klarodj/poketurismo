@@ -335,8 +335,8 @@ export default function Racing() {
             {activeTab === 'training' && (
               <div>
                 <div className="mb-4 bg-[#FFFFE1] border-2 border-win98-darkerGray p-3 text-sm">
-                  <button className="underline font-bold" onClick={() => navigate('/garage/scuola-guida')}>Scuola guida: lezione e prova pratica della frenata ↗</button><br /><strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
-                  Le tecniche si apprendono nella Scuola guida, con lezioni e prove pratiche.
+                  <strong>ℹ️ Come funziona il Track Day:</strong> Ogni sessione ha un costo in €. Le sessioni <span className="font-bold text-teal-700">STAT</span> aumentano permanentemente una statistica del pilota.
+                  Le tecniche si apprendono nella Scuola guida sulla mappa, con lezioni e prove pratiche.
                 </div>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">

@@ -12,6 +12,7 @@ const LOCATIONS = [
   { path: '/used-cars',     name: 'Auto Usate',         id: 'used',      image: '/images/used.png', desc: 'Forum compravendita' },
   { path: '/gas-station',   name: 'Benzinaio',          id: 'fuel',      image: '/images/fuel.png', desc: 'Fai il pieno' },
   { path: '/meet',          name: 'Raduno del club',           id: 'meet',      image: '/images/meet.png', desc: 'Piazzale, posta e sfide tra piloti' },
+  { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
   { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/street.png', desc: 'Solo per i coraggiosi' },
 ];
 

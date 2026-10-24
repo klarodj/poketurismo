@@ -1,5 +1,7 @@
 # Consumi delle vetture
 
+Dal 24 ottobre 2026 le stime mostrate al giocatore sono in **km/l**, convertite come `100 / valore in L/100 km`. Un valore più alto è migliore, anche nel delta del tuning. Le formule e gli esempi tecnici seguenti rimangono espressi nell’unità interna originaria per conservare il modello fisico. Serbatoio, acquisti e quantità effettivamente usate si misurano ancora in litri.
+
 Le nuove gare usano un consumo legato a cilindrata, CV effettivi, peso e incremento di potenza rispetto al modello originale. Non si conta il numero di ricambi: aumentano i consumi le elaborazioni che aumentano realmente la potenza; freni e assetto non aggiungono da soli un costo carburante. Un alleggerimento riduce leggermente la richiesta. Turbo e compressore richiedono più carburante nel modello di gara, soprattutto se elaborati.
 
 ## Stima e comportamento

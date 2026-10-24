@@ -189,7 +189,7 @@ test('avatar picker renders twenty labelled choices and selected local image wit
 });
 test('fuel estimate panel distinguishes mixed and race pace without presenting homologated figures',async()=>{
  const FuelConsumption=await component('FuelConsumption'),html=renderToStaticMarkup(React.createElement(FuelConsumption,{car:{cc:1600,cv:100,baseCv:100,kg:1000,engineType:'NA'}}));
- for(const text of['Consumo stimato','L/100 km','Misto indicativo','conserva','ritmo pulito','attacco','non è un dato omologato'])assert.ok(html.includes(text));assert.ok(!html.includes('NaN'));
+ for(const text of['Consumo stimato','km/l','Misto indicativo','conserva','ritmo pulito','attacco','non è un dato omologato'])assert.ok(html.includes(text));assert.ok(!html.includes('NaN'));
 });
 test('phone Snake renders a green pixel board and labelled touch controls',async()=>{
  const {createSnake}=await import('../src/logic/snake.mjs'),SnakeBoard=await component('PhoneSnake','SnakeBoard'),SnakePad=await component('PhoneSnake','SnakePad');const html=renderToStaticMarkup(React.createElement(React.Fragment,null,React.createElement(SnakeBoard,{game:createSnake(123)}),React.createElement(SnakePad)));
@@ -226,4 +226,14 @@ test('used listings lead with the car photo, price and condition while keeping f
  const Post=await component('ForumPost');const car={name:'Seicento',brand:{name:'Fiat'},image:'106.png',year:1998,cc:1108,cv:55,nm:90,kg:735,engineType:'NA',driveType:'FF',velMax:150,zeroToHundred:13};const listing={car,cv:55,nm:90,kg:735,km:70000,serviceKm:65000,engineHealth:85,tireGrip:80,currentFuel:10,mods:[]};
  const html=renderToStaticMarkup(React.createElement(Post,{author:'Club',title:'Fiat Seicento',carDetails:{...listing,...car,brand:'Fiat'},listing,price:4200,remainingMoney:5800,onBuy:()=>{}}));
  assert.ok(html.indexOf('/images/car/106.png')<html.indexOf('<details'));assert.ok(html.includes((4200).toLocaleString('it-IT')));assert.ok(html.includes('motore')||html.includes('Motore'));assert.ok(html.includes('Apri foto, caratteristiche e pezzi installati'));assert.ok(!html.includes('Iscritto: 2001'));
+});
+
+test('compact fuel gauge and XP progress expose meaningful accessible values',async()=>{
+ const Gauge=await component('FuelGauge'),Experience=await component('ExperienceProgress');
+ let html=renderToStaticMarkup(React.createElement(Gauge,{currentFuel:4.5,maxFuel:45}));assert.ok(html.includes('role="meter"'));assert.ok(html.includes('aria-valuenow="4.5"'));assert.ok(html.includes('riserva'));assert.ok(html.includes('width:10%'));
+ html=renderToStaticMarkup(React.createElement(Experience,{xp:1350}));assert.ok(html.includes('value="350"'));assert.ok(html.includes('650 XP'));assert.ok(html.includes('livello 3'));
+});
+test('tuning fuel comparison displays km per litre and marks greater fuel use as worse',async()=>{
+ const Panel=await component('TuningPreview'),part={name:'Exhaust System',description:'Basic sport exhaust',level:1,price:100,image:'e.png',ownedQuantity:0,preview:{before:{fuelConsumption:8},after:{fuelConsumption:10},championships:[],zones:[],advice:[]}};
+ const html=renderToStaticMarkup(React.createElement(Panel,{part,money:500}));assert.ok(html.includes('Scarico'));assert.ok(html.includes('Scarico sportivo'));assert.ok(html.includes('km/l'));assert.ok(html.includes('tuning-negative'));assert.ok(html.includes('-2,5'));assert.ok(!html.includes('L/100'));
 });

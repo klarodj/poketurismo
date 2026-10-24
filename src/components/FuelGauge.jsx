@@ -1,37 +1,5 @@
 import React from 'react';
-
-export default function FuelGauge({ currentFuel, maxFuel }) {
-  const percentage = (currentFuel / maxFuel) * 100;
-  const isReserve = percentage < 15;
-
-  return (
-    <div className="flex items-center gap-1 sm:gap-2 bg-black px-1 sm:px-3 py-0.5 sm:py-1 border-2 border-win98-darkerGray shadow-win98-inset">
-      <span className="hidden sm:inline text-white font-bold text-lg select-none">E</span>
-      
-      {/* Gauge Container */}
-      <div className="relative w-12 sm:w-32 h-2.5 sm:h-4 bg-gray-900 border border-gray-700 mx-0.5 sm:mx-1 overflow-hidden">
-        {/* Progress Fill */}
-        <div 
-          className={`h-full transition-all duration-500 ease-in-out ${
-            isReserve ? 'bg-orange-500 animate-pulse' : 'bg-green-500'
-          }`}
-          style={{ width: `${percentage}%` }}
-        />
-        
-        {/* Analog Ticks Overlay */}
-        <div className="absolute inset-0 flex justify-between px-1">
-          <div className="w-[1px] h-full bg-white/30" />
-          <div className="hidden sm:block w-[1px] h-2 bg-white/30" />
-          <div className="w-[1px] h-3 bg-white/30 truncate" />
-          <div className="hidden sm:block w-[1px] h-2 bg-white/30" />
-          <div className="w-[1px] h-full bg-white/30" />
-        </div>
-      </div>
-      
-      <span className="hidden sm:inline text-white font-bold text-lg select-none">F</span>
-      
-      {/* Reserve Indicator Light */}
-      <div className={`w-1.5 h-1.5 sm:w-3 sm:h-3 rounded-full ml-0.5 border border-black shadow-[inset_0_1px_2px_rgba(255,255,255,0.4)] ${isReserve ? 'bg-yellow-400 animate-pulse shadow-[0_0_8px_4px_rgba(250,204,21,0.6)]' : 'bg-stone-800'}`} />
-    </div>
-  );
+export default function FuelGauge({currentFuel,maxFuel=45,compact=false}){
+ const capacity=Number.isFinite(maxFuel)&&maxFuel>0?maxFuel:45,fuel=Math.max(0,Number.isFinite(currentFuel)?currentFuel:0),percentage=Math.max(0,Math.min(100,fuel/capacity*100)),reserve=percentage<15;
+ return <span className={`fuel-gauge${compact?' fuel-gauge-mini':''}${reserve?' fuel-gauge-reserve':''}`} role="meter" aria-label="Benzina nel serbatoio" aria-valuemin={0} aria-valuemax={capacity} aria-valuenow={Math.min(fuel,capacity)} aria-valuetext={`${fuel.toFixed(1)} litri su ${capacity}${reserve?' · riserva':''}`} title={`${fuel.toFixed(1)} / ${capacity} L${reserve?' · Riserva':''}`}><span aria-hidden="true" className="fuel-gauge-end">E</span><span className="fuel-gauge-track" aria-hidden="true"><span style={{width:`${percentage}%`}}/></span><span aria-hidden="true" className="fuel-gauge-end">F</span><span className="fuel-gauge-litres" aria-hidden="true">{fuel.toFixed(1)} L</span>{reserve&&<span className="fuel-gauge-light" aria-hidden="true">●</span>}</span>;
 }

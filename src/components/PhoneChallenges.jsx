@@ -1,3 +1,4 @@
+import {partName} from '../logic/partLabels.mjs';
 import React,{useCallback,useEffect,useRef,useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import usePhoneStore from '../store/phoneStore';
@@ -8,7 +9,7 @@ import {challengeContacts,challengeCarAllowed,CHALLENGE_STATUSES} from '../logic
 import {clubDate} from '../logic/clubDate';
 const condition=value=>({sunny:'sereno',rainy:'pioggia',snowy:'neve',night:'notte',foggy:'nebbia',dry:'asciutto',wet:'bagnato',asphalt:'asfalto',tarmac:'asfalto',gravel:'sterrato',dirt:'sterrato'})[value?.toLowerCase()]||value;
 const time=ms=>ms==null?'—':`${(ms/1000).toLocaleString('it-IT',{minimumFractionDigits:3,maximumFractionDigits:3})} s`;
-function CarSummary({car}){return <><p>{car.brand} {car.name} · {car.cv} CV · {car.kg} kg · IP {car.performanceIndex}</p><details><summary>Preparazione · {car.parts.length} pezzi</summary>{car.parts.length?<ul>{car.parts.map((part,i)=><li key={i}>{part.name} · liv. {part.level}</li>)}</ul>:<p>Allestimento di serie.</p>}</details></>;}
+function CarSummary({car}){return <><p>{car.brand} {car.name} · {car.cv} CV · {car.kg} kg · IP {car.performanceIndex}</p><details><summary>Preparazione · {car.parts.length} pezzi</summary>{car.parts.length?<ul>{car.parts.map((part,i)=><li key={i}>{partName(part.name)} · liv. {part.level}</li>)}</ul>:<p>Allestimento di serie.</p>}</details></>;}
 export function PhoneChallengeItem({challenge,userId,car,disabled,activeRace,now=0,onRespond,onStart,onRace}){
  const sent=challenge.senderId===userId,other=challenge[sent?'recipient':'sender']?.pilot.name||'pilota',mine=challenge.results[sent?'sender':'recipient'];
  const expired=now>=+new Date(challenge.expiresAt),canAccept=challengeCarAllowed(challenge,car);

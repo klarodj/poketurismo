@@ -31,17 +31,30 @@ function EncounterCard({offer,zone,userId,money,onNext,onStarted,onError}){
 export default function StreetMeetups({onStarted}){
   const {id:userId,money,level}=usePlayerStore();
   const pending=useRequestStore(state=>state.pending);
-  const [hub,setHub]=useState(null);
+  const [hub,setHub]=useState(null),[stage,setStage]=useState('locations');
   const [zoneId,setZoneId]=useState(()=>{try{return sessionStorage.getItem(`street-zone-${userId}`)||'parking';}catch{return 'parking';}});
   const [error,setError]=useState('');
   useEffect(()=>{let cancelled=false;fetchStreetHub(userId).then(data=>{if(!cancelled)setHub(data);}).catch(error=>{if(!cancelled)setError(error.message);});return()=>{cancelled=true;};},[userId]);
   const zone=hub?.zones.find(item=>item.id===zoneId)||hub?.zones[0];
-  const choose=id=>{setZoneId(id);setError('');try{sessionStorage.setItem(`street-zone-${userId}`,id);}catch{/* Keep the selection for this visit. */}};
-  const encounter=async()=>{try{setError('');const data=await findStreetOpponent(userId,{zoneId:zone.id,...(zone.offer?{replace:true,offerId:zone.offer.id}:{})});setHub(data.street);}catch(error){setError(error.message);}};
-  return <div className="street-meetups"><header className="street-header"><p className="street-eyebrow">Corse clandestine</p><h1>I ritrovi</h1><p>Fatti conoscere, incontra i piloti della zona e scegli chi sfidare.</p><div className="street-player"><span>Livello {level}</span><span>La tua auto: IP {hub?.performance??'—'}</span></div></header>
+  const encounter=async(selected=zone,replace=true)=>{try{setError('');const data=await findStreetOpponent(userId,{zoneId:selected.id,...(replace&&selected.offer?{replace:true,offerId:selected.offer.id}:{})});setHub(data.street);}catch(error){setError(error.message);}};
+  const choose=async selected=>{
+    setZoneId(selected.id);setError('');try{sessionStorage.setItem(`street-zone-${userId}`,selected.id);}catch{/* Keep this visit usable without storage. */}
+    if(!selected.unlocked)return;
+    setStage('opponent');
+    if(!selected.offer)await encounter(selected,false);
+  };
+  return <div className="street-meetups"><header className="street-header"><p className="street-eyebrow">Corse clandestine · {stage==='locations'?'1. Scegli il luogo':'2. Scegli l’avversario'}</p><h1>{stage==='locations'?'Dove si corre stasera?':zone?.name||'Il ritrovo'}</h1><p>{stage==='locations'?'Scegli un ritrovo per incontrare i piloti della zona.':'Guarda chi c’è, scegli se sfidarlo e decidi la puntata.'}</p><div className="street-player"><span>Livello {level}</span><span>La tua auto: IP {hub?.performance??'—'}</span></div></header>
     {error&&<p role="alert" className="street-error">{error} <button className="underline" onClick={()=>{setError('');fetchStreetHub(userId).then(setHub).catch(e=>setError(e.message));}}>Aggiorna ritrovi</button></p>}
-    {!hub?<p>Caricamento dei ritrovi…</p>:<><nav className="street-zones" aria-label="Scegli il ritrovo">{hub.zones.map(item=><button key={item.id} className={`street-zone ${zone.id===item.id?'street-zone-selected':''}`} aria-pressed={zone.id===item.id} onClick={()=>choose(item.id)}><span>{item.unlocked?'● Aperto':'🔒 Da sbloccare'}</span><strong>{item.name}</strong><small>Liv. {item.minLevel} · IP {item.minPerformance}+</small><small>Reputazione {item.reputation} · {item.wins} vittorie</small></button>)}</nav>
-    <section className="street-zone-intro"><h2>{zone.name}</h2><p>{zone.description}</p><p className="street-small">{zone.rivalCount} piloti abituali · puntate fino a {euros(zone.maxWager)} · reputazione locale {zone.reputation}</p>{!zone.unlocked?<div className="street-locked"><strong>Per accedere ti manca:</strong><ul>{zone.reasons.map(reason=><li key={reason}>{reason}</li>)}</ul></div>:zone.offer?<EncounterCard key={zone.offer.id} offer={zone.offer} zone={zone} userId={userId} money={money} onNext={encounter} onStarted={onStarted} onError={setError}/>:<button className="street-button street-button-primary" disabled={pending>0} onClick={encounter}>Entra nel ritrovo · incontra un rivale</button>}</section>
-    <Link className="street-button" to="/tracks">Atlante del club · piste e strade</Link><p className="street-small">Cercare un rivale è gratuito. Incontrerai tutti i piloti disponibili prima che la selezione ricominci. Auto e abilità dei rivali sono fisse: migliorando puoi tornare nelle vecchie zone.</p></>}
+    {!hub?<p>Caricamento dei ritrovi…</p>:stage==='locations'?<>
+      <nav className="street-zones" aria-label="Scegli il ritrovo">{hub.zones.map(item=><button type="button" disabled={pending>0} key={item.id} className={`street-zone ${zone.id===item.id?'street-zone-selected':''}`} aria-pressed={zone.id===item.id} onClick={()=>choose(item)}><span>{item.unlocked?'● Aperto':'Da sbloccare'}</span><strong>{item.name}</strong><small>Liv. {item.minLevel} · IP {item.minPerformance}+</small><small>{item.description}</small><small>Reputazione {item.reputation} · {item.wins} vittorie</small></button>)}</nav>
+      {!zone.unlocked&&<section className="street-locked"><h2>{zone.name} · per accedere ti manca:</h2><ul>{zone.reasons.map(reason=><li key={reason}>{reason}</li>)}</ul></section>}
+      <Link className="street-button" to="/tracks">Atlante del club · piste e strade</Link>
+    </>:<>
+      <button type="button" className="street-button" disabled={pending>0} onClick={()=>{setStage('locations');setError('');}}>← Cambia luogo</button>
+      <section className="street-zone-intro" aria-label="Scegli l’avversario"><p className="street-small">{zone.rivalCount} piloti abituali · reputazione locale {zone.reputation}</p>
+        {zone.offer?<EncounterCard key={zone.offer.id} offer={zone.offer} zone={zone} userId={userId} money={money} onNext={()=>encounter()} onStarted={onStarted} onError={setError}/>:pending>0?<p role="status">Stai arrivando al ritrovo…</p>:<button className="street-button street-button-primary" onClick={()=>encounter(zone,false)}>Incontra un rivale</button>}
+      </section>
+      <p className="street-small">Cercare un rivale è gratuito. Incontrerai tutti i piloti disponibili prima che la selezione ricominci.</p>
+    </>}
   </div>;
 }

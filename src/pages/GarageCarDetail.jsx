@@ -1,3 +1,4 @@
+import {partName,partDescription} from '../logic/partLabels.mjs';
 import FuelConsumption from '../components/FuelConsumption';
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -36,11 +37,11 @@ export default function GarageCarDetail() {
 
   if (!car) return <div className="p-10 text-center font-bold">Auto non trovata...</div>;
 
-  const handleAction = async (type, partId, partName) => {
+  const handleAction = async (type, partId, partTitle) => {
     try {
       if(type==='unmount'){
         await unmountPart(car.id,partId,userId);
-        triggerEvent({type:'info',title:'Meccanico',message:`Hai rimosso "${partName}". Il ricambio è tornato in inventario.`});
+        triggerEvent({type:'info',title:'Meccanico',message:`Hai rimosso "${partName(partTitle)}". Il ricambio è tornato in inventario.`});
       }else{
         setReviewLoading(true);
         const data=await fetchTuning(userId,car.id);
@@ -157,7 +158,7 @@ export default function GarageCarDetail() {
                            <div className="w-16 h-16 bg-white border border-gray-400 shrink-0 p-1">
                               <img 
                                 src={`/images/part/${mod.image}`} 
-                                alt={mod.name} 
+                                alt={partName(mod.name)}
                                 className="w-full h-full object-contain"
                                 onError={(e) => e.target.src = '/images/shop.png'}
                               />
@@ -165,10 +166,10 @@ export default function GarageCarDetail() {
                            <div className="flex-1 flex flex-col justify-between min-w-0">
                               <div>
                                 <div className="flex justify-between items-start">
-                                   <span className="font-bold text-sm uppercase truncate pr-2">{mod.name}</span>
+                                   <span className="font-bold text-sm uppercase truncate pr-2">{partName(mod.name)}</span>
                                    <span className="text-[10px] bg-win98-blue text-white px-1 leading-tight shrink-0 uppercase">Liv. {mod.level ?? '—'}</span>
                                 </div>
-                                <p className="text-xs text-gray-700 leading-tight italic truncate">{mod.description}</p>
+                                <p className="text-xs text-gray-700 leading-tight italic truncate">{partDescription(mod)}</p>
                               </div>
                               <div className="mt-2 flex justify-between items-end">
                                  <div className="flex flex-wrap gap-1">
@@ -201,15 +202,15 @@ export default function GarageCarDetail() {
                               <span className="absolute -top-1 -left-1 bg-win98-blue text-white text-[9px] px-1 font-bold border border-white">Lvl {part.level}</span>
                               <img 
                                 src={`/images/part/${part.image}`} 
-                                alt={part.name} 
+                                alt={partName(part.name)}
                                 className="w-full h-full object-contain"
                                 onError={(e) => e.target.src = '/images/shop.png'}
                               />
                            </div>
                            <div className="flex-1 flex flex-col justify-between min-w-0">
                               <div>
-                                <span className="font-bold text-sm uppercase truncate block">{part.name}</span>
-                                <p className="text-xs text-gray-700 leading-tight italic truncate">{part.description}</p>
+                                <span className="font-bold text-sm uppercase truncate block">{partName(part.name)}</span>
+                                <p className="text-xs text-gray-700 leading-tight italic truncate">{partDescription(part)}</p>
                               </div>
                               <div className="mt-2 flex justify-between items-end">
                                  <div className="flex flex-wrap gap-1">

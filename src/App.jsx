@@ -16,7 +16,7 @@ import TrackRace from './pages/TrackRace';
 import CityMap from './pages/CityMap';
 import GaragePilota from './pages/GaragePilota';
 import GarageAuto from './pages/GarageAuto';
-import GarageScuolaGuida from './pages/GarageScuolaGuida';
+import DrivingSchool from './pages/DrivingSchool';
 import GarageCarDetail from './pages/GarageCarDetail';
 import Meet from './pages/Meet';
 import StreetRacing from './pages/StreetRacing';
@@ -48,7 +48,8 @@ function App() {
           <Route path="garage" element={<Navigate to="/garage/pilota" replace />} />
           <Route path="garage/pilota" element={<GaragePilota />} />
           <Route path="garage/auto" element={<GarageAuto />} />
-          <Route path="garage/scuola-guida" element={<GarageScuolaGuida />} />
+          <Route path="driving-school" element={<DrivingSchool />} />
+          <Route path="garage/scuola-guida" element={<Navigate to="/driving-school" replace />} />
           <Route path="garage/auto/:id" element={<GarageCarDetail />} />
           <Route path="dealership" element={<Dealership />} />
           <Route path="used-cars" element={<UsedCars />} />

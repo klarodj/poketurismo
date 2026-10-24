@@ -1,3 +1,5 @@
+import {conditionLabel} from '../logic/racePresentation';
+import FuelGauge from './FuelGauge';
 import React, {useEffect, useRef, useState} from 'react';
 import GridRaceTiming, {GridRaceSnapshot, GridSectorSummary} from './GridRaceTiming';
 import TrackIllustration from './TrackIllustration';
@@ -34,7 +36,7 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
   return <div className="race-dashboard championship-cockpit">
     <header className="race-heading">
       <div><p className="race-eyebrow">Campionato</p><h1>{race.trackName}</h1></div>
-      <div className="race-heading-meta"><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong><span>{race.environment.weather} · {race.environment.surface}</span></div>
+      <div className="race-heading-meta"><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong><span>{conditionLabel(race.environment.weather)} · {conditionLabel(race.environment.surface)}</span></div>
     </header>
     <section className="championship-route" aria-label="Mappa e ambientazione durante la gara">
       <TrackIllustration name={race.trackName} sections={race.sections} index={race.index} paths={paths} cockpit/>
@@ -45,7 +47,7 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
     </section>
     <button type="button" className="championship-player-car" onClick={() => setDetail('player')} aria-label="Apri dettaglio: La tua auto">
       <RaceCarArtwork car={race.car}/>
-      <span><strong>{race.car.name}</strong><span className="championship-car-gauges"><span>Benz. <b>{Number(race.car.currentFuel || 0).toFixed(1)} L</b></span><span>Gomme <b>{Math.round(race.car.tireGrip ?? 100)}%</b></span><span>Motore <b>{Math.round(race.car.engineHealth ?? 100)}%</b></span></span></span>
+      <span><strong>{race.car.name}</strong><span className="championship-car-gauges"><span>Benz. <b>{Number(race.car.currentFuel || 0).toFixed(1)} L</b><FuelGauge currentFuel={race.car.currentFuel} compact/></span><span>Gomme <b>{Math.round(race.car.tireGrip ?? 100)}%</b></span><span>Motore <b>{Math.round(race.car.engineHealth ?? 100)}%</b></span></span></span>
     </button>
     {active && <div ref={timingRef} tabIndex={-1} className="championship-checkpoint"><GridRaceSnapshot timing={race.gridTiming}/></div>}
     {active && <div className="race-alerts" aria-label="Avvisi di gara">
@@ -66,7 +68,7 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
     {detail && <RaceDetailDialog title={titles[detail]} onClose={() => setDetail(null)}>
       {detail === 'player' && <CarDetail car={race.car} pilot={race.pilot} name="Tu"/>}
       {detail === 'sector' && <SectorDetail race={race}/>}
-      {detail === 'track' && <><p>{race.environment.weather} · {race.environment.surface} · {race.distanceKm.toFixed(2)} km</p><TrackPreview trackName={race.trackName} sections={race.sections} paths={paths} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)}/></>}
+      {detail === 'track' && <><p>{conditionLabel(race.environment.weather)} · {conditionLabel(race.environment.surface)} · {race.distanceKm.toFixed(2)} km</p><TrackPreview trackName={race.trackName} sections={race.sections} paths={paths} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)}/></>}
       {detail === 'timing' && <div className="space-y-3"><GridRaceTiming timing={race.gridTiming}/><h3 className="font-bold">Posizione e distacchi per settore</h3>{race.logs.length ? <ol className="grid-sector-history">{race.logs.map((log, i) => <li key={i}><strong>Settore {i + 1} · {trackSectionLabel(log.section)}</strong>{log.gridTiming ? <GridSectorSummary timing={log.gridTiming}/> : <p>Rilevamento non registrato nel vecchio salvataggio.</p>}</li>)}</ol> : <p>Il primo rilevamento arriva alla fine del primo settore.</p>}</div>}
       {detail === 'history' && <RaceHistory race={race}/>}
       {detail === 'opponent' && <><p className="championship-tactical-note">{race.opponent.name}{featured?.position ? ` · ${featured.position}° posto` : ''} è il rivale delle manovre tattiche. La tua posizione e i tuoi vicini sono indicati nel cruscotto.</p><CarDetail car={race.opponent.car} pilot={race.opponent.pilot} name={race.opponent.name}/></>}

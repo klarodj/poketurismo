@@ -1,3 +1,4 @@
+import FuelGauge from './FuelGauge';
 import ChampionshipCockpit from './ChampionshipCockpit';
 import TrackIllustration from './TrackIllustration';
 import {trackVisual} from '../../shared/trackVisuals.mjs';
@@ -8,7 +9,7 @@ import RaceDetailDialog from './RaceDetailDialog';
 import TrackPreview from './TrackPreview';
 import { CarDetail, SectorDetail, RaceHistory } from './RaceDetails';
 import { RaceTiming } from './RaceTiming';
-import { formatRaceTime } from '../logic/racePresentation';
+import { formatRaceTime, conditionLabel } from '../logic/racePresentation';
 import { DEMO_TRACK } from '../../shared/trackGeometry.mjs';
 import { routeProfileFor } from '../../shared/raceContext.mjs';
 
@@ -19,7 +20,7 @@ function CarCard({ car, label, pilot, rival, onClick }) {
     <RaceCarArtwork car={car} />
     <span className="race-car-name">{brand} {car.name}</span>
     <span className="race-car-spec">{car.cv} CV · {car.kg} kg</span>
-    <span className="race-car-status"><span>{Number(car.currentFuel || 0).toFixed(1)} L</span><span>Gomme {Math.round(car.tireGrip ?? 100)}%</span></span>
+    <span className="race-car-status"><span>{Number(car.currentFuel || 0).toFixed(1)} L{!rival&&<FuelGauge currentFuel={car.currentFuel} compact/>}</span><span>Gomme {Math.round(car.tireGrip ?? 100)}%</span></span>
     {rival && <span className="race-car-spec">{pilot}</span>}
   </button>;
 }
@@ -46,7 +47,7 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
   const position = gap > level ? 'Sei davanti' : gap < -level ? 'Sei dietro' : 'Affiancati';
   const titles = { player: 'La tua auto e il pilota', opponent: 'Avversario · auto e pilota', track: 'Pista e condizioni', sector: 'Dettaglio del settore', timing: 'Tempi e confronto', history: 'Cronologia della gara', session: 'Sessione di gara' };
   return <div className="race-dashboard">
-    <header className="race-heading"><div><p className="race-eyebrow">{race.meetTrial ? 'Meet · Sfida asincrona' : race.lesson ? 'Scuola guida · Prova pratica' : (race.timeTrial||race.meetTrial) ? 'Prova a tempo personale' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.meetTrial ? '' : race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{race.environment.weather} · {race.environment.surface}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
+    <header className="race-heading"><div><p className="race-eyebrow">{race.meetTrial ? 'Meet · Sfida asincrona' : race.lesson ? 'Scuola guida · Prova pratica' : (race.timeTrial||race.meetTrial) ? 'Prova a tempo personale' : race.mode === 'street' ? 'Sfida su strada' : 'Autodromo'}{race.meetTrial ? '' : race.sandbox ? ' · Allenamento' : race.street ? ` · ${race.street.zoneName}` : ''}</p><h1>{race.trackName}</h1></div><div className="race-heading-meta"><span>{conditionLabel(race.environment.weather)} · {conditionLabel(race.environment.surface)}</span><strong>{active ? `Settore ${race.index + 1}/${race.sections.length}` : 'Gara conclusa'}</strong></div></header>
     {race.meetTrial&&<p className="p-3 border bg-blue-50">Unico tentativo contro {race.meetChallenge.otherName}. Condizioni della carriera invariate; nessun premio o XP. {race.meetGhost?`Fantasma disponibile: tempo da battere ${formatRaceTime(race.meetGhost.totalMs/1000)}.${race.index>0?` Distacco al settore: ${((race.meetGhost.splits.slice(0,race.index).reduce((sum,t)=>sum+t,0)-race.playerTime*1000)/1000).toFixed(3)} s (positivo: sei davanti).`:''}`:'L’altro pilota non ha ancora completato un giro valido. Il tuo tempo sarà il riferimento.'}</p>}
     {tactical&&(trackVisual(race.trackName)||race.demo)&&<section className="race-route-live" aria-label="Mappa e ambientazione durante la gara">
       <header><h2>Il percorso · {race.sections.length} settori</h2><button type="button" className="win98-btn" onClick={()=>setDetail('track')}>Esamina tutti i settori</button></header>
@@ -81,7 +82,7 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
     {detail && <RaceDetailDialog title={titles[detail]} onClose={() => setDetail(null)}>
       {detail === 'player' && <CarDetail car={race.car} pilot={race.pilot} name="Tu" />}
       {detail === 'opponent' && <CarDetail car={race.opponent.car} pilot={race.opponent.pilot} name={race.opponent.name} />}
-      {detail === 'track' && <div className="space-y-4"><p>{race.environment.weather} · {race.environment.surface} · {race.distanceKm.toFixed(2)} km</p>{tactical ? <TrackPreview trackName={race.trackName} sections={race.sections} paths={race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null)} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)} /> : <ol className="list-decimal pl-6">{race.sections.map((item, i) => <li key={i}>{trackSectionLabel(item.name)}</li>)}</ol>}</div>}
+      {detail === 'track' && <div className="space-y-4"><p>{conditionLabel(race.environment.weather)} · {conditionLabel(race.environment.surface)} · {race.distanceKm.toFixed(2)} km</p>{tactical ? <TrackPreview trackName={race.trackName} sections={race.sections} paths={race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null)} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)} /> : <ol className="list-decimal pl-6">{race.sections.map((item, i) => <li key={i}>{trackSectionLabel(item.name)}</li>)}</ol>}</div>}
       {detail === 'sector' && <SectorDetail race={race} />}
       {detail === 'timing' && (tactical ? <TimingDetail race={race} /> : <p>{position} · {Math.abs(gap)} m</p>)}
       {detail === 'history' && <RaceHistory race={race} />}

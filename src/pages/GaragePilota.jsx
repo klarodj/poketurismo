@@ -1,3 +1,4 @@
+import ExperienceProgress from '../components/ExperienceProgress';
 import PilotAvatar from '../components/PilotAvatar';
 import AvatarProfile from '../components/AvatarProfile';
 import React from 'react';
@@ -13,7 +14,7 @@ import { equipMoves } from '../services/api';
 import { PILOT_STAT_LABELS } from '../logic/raceEngine';
 
 export default function GaragePilota() {
-  const { id: userId, username, avatar, level, xp, stats } = usePlayerStore();
+  const { id: userId, username, avatar, xp, stats } = usePlayerStore();
   const { moves, equippedMoves } = useInventoryStore();
 
   const playerMoves = moves;
@@ -42,7 +43,7 @@ export default function GaragePilota() {
                  <PilotAvatar avatar={avatar} size={96} alt={`Avatar di ${username}`}/>
                  <div className="flex-1 min-w-0 text-base font-bold flex flex-col justify-center">
                    <p className="text-xl break-words">Utente: {username}</p>
-                   <p>Livello: {level} ({xp} XP)</p>
+                   <ExperienceProgress xp={xp}/>
                  </div>
               </div>
               <AvatarProfile/>
@@ -83,7 +84,7 @@ export default function GaragePilota() {
           <div className="flex-1">
             <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-2 h-full shadow-win98-inset">
               <h2 className="text-xl font-bold bg-win98-blue text-white px-2 mb-2">Tecniche di guida (massimo 4 attive)</h2>
-              <p className="text-sm mb-3 px-1 text-gray-700 font-bold">Le tecniche equipaggiate aiutano a sfruttare la vettura nei contesti indicati. La padronanza migliora con la pratica.</p>
+              <p className="text-sm mb-3 px-1 text-gray-700">Per imparare nuove tecniche e migliorare, visita la <Link className="underline font-bold" to="/driving-school">Scuola guida sulla mappa</Link>. Qui scegli le tecniche da portare in gara.</p>
               
               <div className="space-y-3">
                 {playerMoves.map(move => (
@@ -104,7 +105,7 @@ export default function GaragePilota() {
                     </div>
                   </div>
                 ))}
-                {playerMoves.length === 0 && <div className="p-4 space-y-3"><p>Nessuna tecnica appresa. Le azioni base di guida sono sempre disponibili.</p><Link className="win98-btn" to="/garage/scuola-guida">Vai alla scuola guida</Link></div>}
+                {playerMoves.length === 0 && <div className="p-4 space-y-3"><p>Nessuna tecnica appresa. Le azioni base di guida sono sempre disponibili.</p><Link className="win98-btn" to="/driving-school">Vai alla scuola guida</Link></div>}
               </div>
             </div>
           </div>

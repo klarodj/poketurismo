@@ -54,3 +54,5 @@ Cartoline e minimappe: 27 ambientazioni lowres in public/images/tracks e atlante
 Avatar: 20 ritratti pixel art a 64×64 per il mondo dei motori 1998–2002, documentati in [AVATAR.md](AVATAR.md). Selettore da finestra Windows, foto incassate e scelta estetica indipendente dalle abilità.
 
 Revisione generale del 24 ottobre 2026: gerarchia fra panoramica e dettagli in [REVISIONE_INTERFACCIA.md](REVISIONE_INTERFACCIA.md). Due nuove illustrazioni lowres 384×256 per scuola guida e cronometraggio in `public/images/places`; originali esistenti conservati. Prompt, strumento e preparazione in `docs/IMMAGINI_INTERFACCIA.json`. Le piccole icone delle schede garage restano SVG con griglia pixel, senza emoji di sistema.
+
+Soccorso essenziale: `public/images/work/soccorso.png`, carroattrezzi italiano anni Novanta, 400×400 come gli altri servizi dell’officina. Prompt e preparazione in `docs/SOCCORSO_IMMAGINE.json`. Le nuove collocazioni di scuola guida, strumenti e listino marchi sono documentate in `docs/FEEDBACK_PLAYTEST.md`.

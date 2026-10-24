@@ -1,3 +1,4 @@
+import {partName,partDescription} from '../logic/partLabels.mjs';
 import React, { useState } from 'react';
 import { CAR_STAT_LABELS, calculateRaceStats } from '../logic/raceEngine';
 
@@ -49,8 +50,8 @@ export default function UsedCarDetails({ listing }) {
         <div>
           <h3 className="font-bold text-[#006699] mb-2">Pezzi già installati</h3>
           {mods.length ? <ul className="space-y-2">{mods.map(mod => <li key={mod.id} className="bg-white border border-gray-300 p-2">
-            <p className="font-bold">{mod.part.name} <span className="font-normal text-xs">· {mod.part.category} · livello {mod.part.level}</span></p>
-            <p className="text-xs mt-1">{mod.part.description}</p>
+            <p className="font-bold">{partName(mod.part.name)} <span className="font-normal text-xs">· {mod.part.category==='Engine'?'Motore e trasmissione':mod.part.category==='Dynamic'?'Assetto e ciclistica':mod.part.category} · livello {mod.part.level}</span></p>
+            <p className="text-xs mt-1">{partDescription(mod.part)}</p>
           </li>)}</ul> : <p className="text-xs">Nessun pezzo aftermarket installato: allestimento di serie.</p>}
           <p className="text-xs text-gray-600 mt-2">I pezzi elencati sono inclusi nel prezzo e rimangono sull’auto dopo l’acquisto.</p>
         </div>

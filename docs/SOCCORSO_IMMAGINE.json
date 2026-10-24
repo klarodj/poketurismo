@@ -1,0 +1,10 @@
+{
+  "tool": "image_gen integrato",
+  "path": "public/images/work/soccorso.png",
+  "size": [
+    400,
+    400
+  ],
+  "preparation": "Copia per il gioco: campionamento nearest-neighbor a 200×200, palette 96 colori, ingrandimento nearest-neighbor a 400×400. Originale generato conservato.",
+  "prompt": "Use case: historical-scene. Asset type: square automotive game service thumbnail, to be delivered in a 400 by 400 pixel square. A believable Italian roadside assistance tow truck from the early 1990s, Iveco Daily 35-10 era flatbed, white cab with faded orange stripes and an amber rotating roof beacon. Three-quarter front view, whole truck and rear flatbed visible, compact red late-1990s hatchback secured upright on the flatbed. Parked outside a modest brick mechanic's workshop in provincial northern Italy circa 2002, poplar trees and hazy foothills, overcast daylight. Low-resolution pixelated photographic illustration matching an early-2000s PC automotive game, muted realistic colors, visibly coarse pixel clusters, subtly dithered and low-fi, no modern glossy rendering. Subject clearly legible at an 80px service thumbnail. No UI, no border, no watermark, no modern vehicles, no smartphones, no US-style truck or American road signs, no need for legible lettering or number plates."
+}
