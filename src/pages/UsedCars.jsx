@@ -1,3 +1,4 @@
+import LocationGuide from '../components/LocationGuide';
 import React, { useState, useEffect } from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGameStore from '../store/gameStore';
@@ -61,9 +62,9 @@ export default function UsedCars() {
   return (
     <div className="period-web w-full bg-[#f1f1f1] flex flex-col">
       {/* Forum Header */}
-      <div className="bg-[#006699] text-white p-4 mb-4 shadow-md">
-        <h1 className="text-2xl font-bold italic tracking-wider">Elaborare.info Forum</h1>
-        <div className="text-xs mt-1 text-[#D1D7DC]">Indice del forum ➔ Mercatino Vendo Auto</div>
+      <div className="bg-[#006699] text-white p-4 mb-4 shadow-md flex items-center gap-2"><div className="min-w-0 flex-1">
+        <h1 className="text-xl sm:text-2xl font-bold italic break-words">Elaborare.info Forum</h1>
+        <div className="text-xs mt-1 text-[#D1D7DC]">Indice del forum ➔ Mercatino Vendo Auto</div></div><LocationGuide guideId="used"/>
       </div>
       
       <div className="px-4 mb-4 space-y-3 text-sm">

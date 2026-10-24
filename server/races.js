@@ -1,3 +1,4 @@
+const { CLUB_REWARDS, clubReward } = require('../shared/clubRacing.mjs');
 const { randomInt } = require('node:crypto');
 const { fail, positiveId, restoredHandlingStats, checkChampionship, charge, cents, publicPlayer } = require('./gameRules');
 const { inventory, garageInclude } = require('./persistence');
@@ -159,6 +160,7 @@ async function startRace(tx, userId, body) {
     car: carSnapshot(garage), pilot,
     opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
     moves: inv.moves.filter(move => inv.equippedMoves.includes(move.id)), index: 0, gap: 0, logs: [], rng: seed,
+    ...(mode === 'track' && !sandbox ? {clubRewardVersion:CLUB_REWARDS.version} : {}),
     finished: false, sandbox, entryId: entry?.id || null, round: round?.ord || null,
     wager: streetMatch?.wager || 0,
     ...(body.timeTrial ? {timeTrial:true,trialSetup:{carName:`${garage.car.brand?.name||''} ${garage.car.name}`.trim(),cv:garage.cv,performanceIndex:performanceIndex(garage),configuration:trialConfiguration(garage)}} : {}),
@@ -212,6 +214,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     let reward = { money: 0, xp: 0 };
     if (state.street) reward = await settleStreet(tx, userId, state);
     else if (race.mode === 'championship') reward = await settleChampionship(tx, userId, state);
+    else if (race.mode === 'track' && state.clubRewardVersion === 1) reward = clubReward(state);
     else if (!state.sandbox && state.outcome === 'win') reward = race.mode === 'street' ? { money: 1500, xp: 150 } : { money: 500, xp: 100 };
     else if (!state.sandbox && race.mode === 'street' && state.outcome === 'draw') reward = { money: 500, xp: 50 };
     const growth = await settleDevelopment(tx, userId, state);

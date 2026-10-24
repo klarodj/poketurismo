@@ -61,7 +61,7 @@ export default function GarageCarDetail() {
   };
 
   return (
-    <Win98Window title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/garage.png">
+    <Win98Window guideId="garage" title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
         <GarageTabs />

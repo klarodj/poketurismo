@@ -38,7 +38,7 @@ export default function RacePage({ mode }) {
   const [tracks, setTracks] = useState([]);
   const [customTracks, setCustomTracks] = useState([]);
   const [opponents, setOpponents] = useState([]);
-  const [trackChoice, setTrackChoice] = useState(initialTrack ? `db-${initialTrack}` : mode === 'track' && !entryId && !timeTrial ? 'demo' : '');
+  const [trackChoice, setTrackChoice] = useState(initialTrack ? `db-${initialTrack}` : '');
   const [demoPreset, setDemoPreset] = useState('matched');
   const [opponentChoice, setOpponentChoice] = useState('similar');
   const [loaded, setLoaded] = useState(false);
@@ -62,6 +62,7 @@ export default function RacePage({ mode }) {
       const setup = { ...(timeTrial?{timeTrial:true}:{}), mode: entryId ? 'championship' : mode, ...(entryId ? { entryId: Number(entryId) } : {}) };
       if (trackChoice === 'demo' && !entryId) { setup.demo = true; setup.demoPreset = demoPreset; }
       if (trackChoice.startsWith('db-')) setup.trackId = Number(trackChoice.slice(3));
+      else if (mode === 'track' && !entryId && !trackChoice && tracks[0]) setup.trackId = tracks[0].id;
       if (trackChoice.startsWith('custom-')) setup.customTrackId = Number(trackChoice.slice(7));
       if (opponentChoice.startsWith('custom-')) setup.opponentId = Number(opponentChoice.slice(7));
       else setup.opponentKind = opponentChoice;
@@ -92,7 +93,7 @@ export default function RacePage({ mode }) {
   const previewDistance = selectedTrack ? Math.max(1, Number(selectedTrack.lenght || previewSource.length) / (Number(selectedTrack.lenght) >= 100 ? 1000 : 1)) : 0;
   const previewSections = trackChoice === 'demo' ? DEMO_TRACK.sections : previewSource.length ? buildTacticalTrack(previewSource.map(item => item.section), previewDistance, previewProfile) : [];
 
-  return <Win98Window title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? '/images/street.png' : '/images/track.png') : undefined}>
+  return <Win98Window guideId={!race ? mode === 'street' ? 'street' : 'autodrome' : undefined} title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? '/images/street.png' : '/images/track.png') : undefined}>
     <div className={`${race ? 'p-1 sm:p-3' : 'p-4'} space-y-4 text-black`}>
       {error && <div role="alert" className="bg-red-100 border border-red-500 p-3">{error} <button className="underline" onClick={() => window.location.reload()}>Ricarica salvataggio</button></div>}
       {!loaded || !userId ? <p>Caricamento gara e salvataggio…</p> : !race ? mode === 'street' && !entryId ? <>
@@ -103,8 +104,8 @@ export default function RacePage({ mode }) {
         {entryId && <p className="text-sm">Durante il round vedrai la classifica degli otto piloti, la tua posizione e i distacchi davanti e dietro, aggiornati al termine di ogni settore.</p>}
         {car ? <p>Auto: <strong>{car.brand} {car.name}</strong> · {car.currentFuel.toFixed(2)} L · motore {car.engineHealth.toFixed(1)}% · gomme {car.tireGrip.toFixed(1)}%</p> : <button className={button} onClick={() => navigate('/garage/auto')}>Equipaggia un’auto</button>}
         {!entryId && <label className="block font-bold">Tracciato<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event => setTrackChoice(event.target.value)}>
-          {mode === 'track' && !timeTrial && <option value="demo">Circuito Scuola · 8 decisioni · prova gratuita</option>}
-          <option value="">{mode === 'street' ? 'Tracciato casuale' : 'Primo circuito disponibile'}</option>
+          {mode === 'track' && !timeTrial && <option value="demo">Circuito Scuola · allenamento senza premi</option>}
+          <option value="">{mode === 'street' ? 'Tracciato casuale' : 'Gara del club · primo circuito disponibile'}</option>
           {tracks.map(track => <option key={track.id} value={`db-${track.id}`}>{track.name}{track.catalog ? ` · difficoltà ${track.catalog.difficulty}/5` : ''}</option>)}
           {customTracks.map(track => <option key={`custom-${track.id}`} value={`custom-${track.id}`}>{track.name} · allenamento senza premi</option>)}
         </select></label>}
@@ -124,7 +125,7 @@ export default function RacePage({ mode }) {
           <option value="similar">Auto di categoria simile dal catalogo</option><option value="random">Auto casuale dal catalogo</option>
           {opponents.map(opponent => <option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name} · {opponent.car.name} · allenamento senza premi</option>)}
         </select></label>}
-        <p className="text-sm">{timeTrial ? 'Prova a tempo personale: nessun premio o XP. Consumi e usura reali.' : trackChoice === 'demo' && !entryId ? 'Allenamento gratuito: nessun premio economico o XP. Per riparare o cambiare auto, termina o abbandona la sessione.' : mode === 'street' ? 'Sfida: quota €500 alla partenza. Vittoria: €1.500 restituiti (guadagno netto €1.000). Pareggio: quota restituita. Avversari e tracciati personalizzati: allenamento gratuito senza premi.' : entryId ? 'Il server registra il round e assegna i premi al termine del campionato.' : 'Vittoria: €500 e 100 XP. Usura e carburante vengono salvati dopo ogni settore.'}</p>
+        <p className="text-sm">{timeTrial ? 'Prova a tempo personale: nessun premio o XP. Consumi e usura reali.' : trackChoice === 'demo' && !entryId ? 'Allenamento gratuito: nessun premio economico o XP. Per riparare o cambiare auto, termina o abbandona la sessione.' : mode === 'street' ? 'Prove personalizzate: allenamento gratuito, senza premi o scommesse.' : entryId ? 'Il server registra il round e assegna i premi al termine del campionato.' : 'Gara del club: ingresso gratuito. Vittoria: €500 totali e 100 XP; altri arrivi al traguardo: €100 e 20 XP, più eventuali progressi di guida. Nessun premio per ritiri o guasti. Consumi e usura reali. Metà del premio rimborsa eventuali anticipi del meccanico.'}</p>
         <button className={button} disabled={!car || pending > 0} onClick={begin}>Inizia gara</button>
       </> : <RaceDashboard race={race} pending={pending} onAbandon={abandon}>
         {race.status === 'active' && section ? <>

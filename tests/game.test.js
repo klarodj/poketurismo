@@ -1125,3 +1125,45 @@ test('grid checkpoints update on every sector, survive reads/retries and match f
 test('reading an old in-progress grid race adds live standings without rewriting its existing checkpoint',async()=>{
  const entry=await modernCup(),race=await begin('championship',{entryId:entry.id}),row=await prisma.raceSession.findUnique({where:{id:race.id}});assert.equal(JSON.parse(row.state).gridTiming,undefined);const view=(await get(`/races/active/1`)).data;assert.equal(view.gridTiming.total,8);assert.equal(view.gridTiming.position,null);assert.deepEqual(await prisma.raceSession.findUnique({where:{id:race.id}}),row);
 });
+
+async function finishClubRace(race, {legacy=false, lose=false}={}) {
+  const row=await prisma.raceSession.findUnique({where:{id:race.id}}),state=JSON.parse(row.state);
+  if(legacy)delete state.clubRewardVersion;
+  if(lose){state.playerTime=100000;state.gapSeconds=-100000;state.gap=-100000000;}
+  await prisma.raceSession.update({where:{id:race.id},data:{state:JSON.stringify(state)}});
+  let result,key,body;
+  for(let turn=0;turn<30&&race.status==='active';turn++){
+    key=randomUUID();body={version:race.version,moveId:null};
+    result=await post(`/races/${race.id}/turns`,body,key);
+    assert.equal(result.status,200,JSON.stringify(result.data));race=result.data.race;
+  }
+  assert.equal(race.status,'completed');
+  return {race,result,key,body};
+}
+test('a pilot with 42 euros or zero can enter a club race without a fee and earn exactly once on a loss',async()=>{
+  for(const balance of [4200,0]){
+    await prisma.user.update({where:{id:1},data:{moneyCents:balance}});
+    const race=await begin();assert.equal(await wallet(),balance);assert.equal(race.clubRewardVersion,1);
+    const finish=await finishClubRace(race,{lose:true});assert.equal(finish.race.outcome,'loss');assert.equal(finish.race.reward.money,100);assert.equal(await wallet(),balance+10000);
+    const fuel=await prisma.garage.findUnique({where:{id:garage.id}});
+    await post(`/races/${race.id}/turns`,finish.body,finish.key);assert.equal(await wallet(),balance+10000);assert.deepEqual(await prisma.garage.findUnique({where:{id:garage.id}}),fuel);
+    assert.equal((await post(`/races/${race.id}/turns`,finish.body)).status,409);
+  }
+});
+test('new club victories remain 500 total and past loss contracts do not acquire a participation prize',async()=>{
+  const winning=await finishClubRace(await begin());assert.equal(winning.race.outcome,'win');assert.equal(winning.race.reward.money,500);
+  const balance=await wallet(),old=await finishClubRace(await begin(),{legacy:true,lose:true});assert.equal(old.race.outcome,'loss');assert.equal(old.race.reward.money,0);assert.equal(await wallet(),balance);
+});
+test('club completion money repays half of mechanic debt without granting free cash on a failed start or retirement',async()=>{
+  await prisma.user.update({where:{id:1},data:{moneyCents:4200}});
+  await prisma.playerProgress.create({data:{userId:1,recoveryState:JSON.stringify({debtCents:100000,carIds:[garage.id]})}});
+  const finish=await finishClubRace(await begin(),{lose:true});assert.equal(finish.race.reward.money,50);assert.equal(finish.race.recoveryRepayment.paidCents,5000);assert.equal(await wallet(),9200);
+  const race=await begin();const result=await post(`/races/${race.id}/abandon`,{version:0});assert.equal(result.data.race.reward.money,0);assert.equal(await wallet(),9200);
+  await prisma.garage.update({where:{id:garage.id},data:{currentFuel:0}});assert.equal((await post('/races',{mode:'track',clubRewardVersion:1,rewardMoney:99999})).status,400);assert.equal(await wallet(),9200);
+});
+test('club participation cannot be requested for sandbox or time trials by the browser',async()=>{
+  for(const setup of [{demo:true},{timeTrial:true}]){
+    const race=await begin('track',{...setup,clubRewardVersion:1,rewardMoney:99999});assert.equal(race.clubRewardVersion,undefined);
+    const finish=await finishClubRace(race,{lose:true});assert.equal(finish.race.reward.money,0);assert.equal(await wallet(),10000000);
+  }
+});

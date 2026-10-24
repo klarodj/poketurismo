@@ -44,3 +44,5 @@ Migrazioni additive SQLite 0007 e PostgreSQL 0004: colonna `ChampionshipEntry.co
 Simulazioni della prima coppa: sei auto da ingresso, 16 semi e tre round (288 round di campionato, 2304 prestazioni simulate), pilota base a 11 e auto al 90% motore / 82% gomme. Le Fiat da 55 CV hanno ottenuto il podio in 10/16 e 11/16 stagioni; le auto iniziali più costose hanno un vantaggio coerente. Nessuna garanzia di vittoria per una singola partita. Script di sola lettura `scripts/championship-balance.mjs`.
 
 Nessun browser collegato disponibile per un controllo visivo interattivo; build e rendering dei componenti di gara coperti dai controlli automatici.
+
+Aggiornamento 24 ottobre 2026: le nuove gare singole standard del club restano senza quota e premiano anche gli arrivi senza vittoria (100 €; vittoria 500 € totali). Le gare già in corso e tutti i campionati mantengono le regole precedenti. Dettagli in [CICERONI_E_RIPARTENZA.md](CICERONI_E_RIPARTENZA.md).

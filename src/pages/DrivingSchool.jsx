@@ -21,7 +21,7 @@ export default function DrivingSchool() {
     } catch { /* The shared request banner reports errors. */ }
   };
 
-  return <Win98Window title="Scuola guida — Il piazzale dell’istruttore" imageUrl="/images/places/scuola-guida.png">
+  return <Win98Window guideId="school" title="Scuola guida — Il piazzale dell’istruttore" imageUrl="/images/places/scuola-guida.png">
     <div className="flex flex-col bg-win98-gray text-black">
       <div className="p-4">
         <TechniqueSchoolPanel development={development} pending={pending} activeRace={activeRace} onRead={techniqueId => readTechniqueLesson(userId, techniqueId)} onStart={beginLesson} />

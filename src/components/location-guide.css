@@ -1,0 +1,19 @@
+.location-guide-trigger { display:flex; align-items:center; gap:6px; flex-shrink:0; margin-left:auto; padding:2px 6px 2px 2px; color:#000; background:#c0c0c0; border:2px solid; border-color:#fff #000 #000 #fff; font-family:inherit; font-size:16px; line-height:1; text-align:left; cursor:pointer; }
+.location-guide-trigger:active { border-color:#000 #fff #fff #000; }
+.location-guide-trigger:focus-visible { outline:2px dotted #000; outline-offset:-4px; }
+.location-guide-trigger img { width:40px; height:40px; image-rendering:pixelated; border:1px solid #808080; }
+.location-guide-profile { display:flex; align-items:center; gap:12px; }
+.location-guide-profile img { width:64px; height:64px; image-rendering:pixelated; border:2px solid; border-color:#808080 #fff #fff #808080; }
+.location-guide-profile h3 { font-size:24px; line-height:1.1; }
+.location-guide-profile p { color:#333; }
+.location-guide-speech { margin:16px 0; font-size:21px; line-height:1.25; }
+.location-guide-details { border-top:1px solid #808080; padding-top:8px; }
+.location-guide-details summary { cursor:pointer; color:#000080; text-decoration:underline; }
+.location-guide-details section { margin-top:12px; }
+.location-guide-details h4 { font-weight:bold; }
+.location-guide-links { display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:16px; }
+.location-guide-links a,.club-recovery-hint a { color:#000080; text-decoration:underline; }
+.club-recovery-hint { background:#ffffe1; color:#000; border:1px solid #808080; padding:8px; margin:8px 0; }
+.club-recovery-hint p { margin:4px 0; }
+.period-web .location-guide-trigger { font-family:Tahoma, sans-serif; font-size:12px; }
+@media(max-width:480px) { .game-window-title-text { min-width:0; } .game-window-title .location-guide-trigger { gap:3px; padding-right:3px; font-size:14px; } .game-window-title:has(.location-guide-trigger) .game-window-controls span { display:none; } }

@@ -1,0 +1,67 @@
+{
+  "tool": "image_gen integrato",
+  "useCase": "stylized-concept",
+  "preparation": "Ritratto quadrato ridotto a64×64 con nearest-neighbor; palette64 colori. Originali conservati.",
+  "portraits": [
+    {
+      "id": "andrea",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Andrea Bassi, adult Italian man aged 28, short tousled dark hair, slight stubble, faded maroon hoodie, workshop keys clipped at collar, relaxed practical car enthusiast.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c84b0430-39f2-4209-8338-840d52eac1dc.png",
+      "file": "public/images/guides/andrea.png"
+    },
+    {
+      "id": "paolo",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Paolo Riva, adult Italian man aged 44, receding chestnut hair neatly combed, clean shaven, white shirt and loosened navy tie, friendly concrete car salesman.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2959af91-123e-42bb-bfef-cc04a28ecdfc.png",
+      "file": "public/images/guides/paolo.png"
+    },
+    {
+      "id": "elena",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Elena Ferri, adult Italian woman aged 38, dark bob hairstyle, dark green motorsport club polo, lap-timing clipboard edge at chest, precise confident expression.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-fb84dc46-b704-469f-af3d-b6915919514e.png",
+      "file": "public/images/guides/elena.png"
+    },
+    {
+      "id": "franco",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Franco Colombo, adult Italian man aged 56, salt-and-pepper moustache and thick brows, worn blue mechanic overalls, warm gruff expression, no hat.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0647c3ef-a3fc-48a5-b06f-d5ffb6ecbf1b.png",
+      "file": "public/images/guides/franco.png"
+    },
+    {
+      "id": "lara",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Lara Sartori, adult Italian woman aged 30, short auburn hair, dark red work polo under worn navy apron, competent parts counter owner, direct friendly expression.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4c330a91-b73b-40cf-bfca-a87e616f26c8.png",
+      "file": "public/images/guides/lara.png"
+    },
+    {
+      "id": "roby",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Roberto Galli, adult Italian man aged 36, curly brown hair, oval wire glasses, green plaid shirt, approachable used-car forum enthusiast.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-017fdf52-ccaa-4700-a842-7af60f3c0522.png",
+      "file": "public/images/guides/roby.png"
+    },
+    {
+      "id": "marina",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Marina Valli, adult Italian woman aged 45, dark wavy shoulder-length hair, yellow and navy unbranded petrol-station work vest, welcoming weathered face.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-90c05133-b0df-430d-b21f-f006799377a0.png",
+      "file": "public/images/guides/marina.png"
+    },
+    {
+      "id": "teo",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Matteo Moretti, adult Italian man aged 25, short gelled brown hair, light olive bomber jacket over white t-shirt, confident cheerful local car club organizer.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e6d1f8a4-6394-4cdc-b4f7-269561e08c17.png",
+      "file": "public/images/guides/teo.png"
+    },
+    {
+      "id": "sara",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Sara Pellegrini, adult Italian woman aged 34, brown hair tied back in ponytail, royal blue driving instructor jacket with white collar, calm exacting expression.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f5934bc7-e4b6-413e-bd9f-19f804dec370.png",
+      "file": "public/images/guides/sara.png"
+    },
+    {
+      "id": "dade",
+      "prompt": "Use case: stylized-concept. Asset type: one square NPC portrait for a retro automotive game. Single head-and-shoulders portrait, front three-quarter view centered, top of head and shoulders entirely within frame. Northern Italy, year 2002. Authentic low-resolution 64x64 pixel art enlarged to fill a square image: very coarse visible square pixels, dark outlined facial features, limited muted 32-colour palette, flat solid light grey background. Match late-1990s PC character-select portrait sprites, natural adult proportions, warm recognisable face. No text, no lettering, no logo, no borders, no interface, no extra characters, no modern gadgets, no smooth digital painting, no gradients. Subject: Dario Bernasconi, adult Italian man aged 30, black short hair and sideburns, black zip jacket over dark grey shirt, thoughtful calm expression, after-shift local bartender car enthusiast.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-34d71b67-1b50-4fd3-94a0-00f7f941d4fb.png",
+      "file": "public/images/guides/dade.png"
+    }
+  ]
+}
