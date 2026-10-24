@@ -36,7 +36,7 @@ Per le nuove gare singole standard:
 
 Il premio è assegnato solo dal server nella transazione finale, con versione e identificativo operazione per impedire duplicazioni. La regola è fissata alla partenza con `clubRewardVersion:1`, esclusa per demo, prove a tempo, lezioni e sfide del raduno. Gare già salvate, campionati e clandestine conservano i loro contratti. Nessun accredito manuale agli utenti, nessun nuovo prestito in denaro e nessuna modifica ai prezzi o al budget iniziale.
 
-Un promemoria compare sotto 500 € in garage/auto, tuning e autodromo, con collegamenti alla gara gratuita e al soccorso. Il soccorso esistente permette di ripartire anche a saldo zero quando non c’è nessuna vettura pronta, finanziando solo auto/intervento/carburante, mai contanti. In questo modo si può tornare a guadagnare senza rischiare una puntata né pagare l’iscrizione a un campionato.
+Un promemoria compare sotto 500 € in garage/auto e tuning; in autodromo solo sotto la quota minima del catalogo campionati (attualmente 300 €), con collegamenti alla gara gratuita e al soccorso. Il soccorso esistente permette di ripartire anche a saldo zero quando non c’è nessuna vettura pronta, finanziando solo auto/intervento/carburante, mai contanti. In questo modo si può tornare a guadagnare senza rischiare una puntata né pagare l’iscrizione a un campionato.
 
 ## Collaudo
 
