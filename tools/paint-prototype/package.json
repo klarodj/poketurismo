@@ -1,0 +1,7 @@
+{
+  "name": "poketurismo-paint-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Preparazione offline delle anteprime di verniciatura, senza modificare gli originali",
+  "dependencies": { "pngjs": "7.0.0" }
+}

@@ -1,0 +1,64 @@
+{
+  "model": "Fiat Seicento Sporting",
+  "prototype": true,
+  "proposedPrice": 2500,
+  "source": "public/images/car/seicento.png",
+  "sourceSha256": "baf30f17a326f0d16acb341e91900954c7342febc15c2a2689f01f2e41d6faca",
+  "mask": "mask.png",
+  "colours": [
+    {
+      "id": "rosso",
+      "name": "Rosso pastello",
+      "rgb": [
+        195,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "blu",
+      "name": "Blu scuro",
+      "rgb": [
+        28,
+        60,
+        148
+      ]
+    },
+    {
+      "id": "verde",
+      "name": "Verde bottiglia",
+      "rgb": [
+        27,
+        82,
+        54
+      ]
+    },
+    {
+      "id": "nero",
+      "name": "Nero",
+      "rgb": [
+        29,
+        32,
+        36
+      ]
+    },
+    {
+      "id": "bianco",
+      "name": "Bianco",
+      "rgb": [
+        237,
+        238,
+        234
+      ]
+    },
+    {
+      "id": "argento",
+      "name": "Grigio argento",
+      "rgb": [
+        159,
+        168,
+        178
+      ]
+    }
+  ]
+}

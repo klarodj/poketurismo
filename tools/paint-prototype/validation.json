@@ -1,0 +1,51 @@
+{
+  "source": "public/images/car/seicento.png",
+  "sourceSha256": "baf30f17a326f0d16acb341e91900954c7342febc15c2a2689f01f2e41d6faca",
+  "width": 400,
+  "height": 130,
+  "selectedPixels": 13112,
+  "variants": [
+    {
+      "id": "rosso",
+      "file": "rosso.png",
+      "changedPixels": 13112,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "id": "blu",
+      "file": "blu.png",
+      "changedPixels": 13112,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "id": "verde",
+      "file": "verde.png",
+      "changedPixels": 13112,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "id": "nero",
+      "file": "nero.png",
+      "changedPixels": 13112,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "id": "bianco",
+      "file": "bianco.png",
+      "changedPixels": 13112,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    },
+    {
+      "id": "argento",
+      "file": "argento.png",
+      "changedPixels": 13112,
+      "alphaIdentical": true,
+      "outsideMaskIdentical": true
+    }
+  ]
+}

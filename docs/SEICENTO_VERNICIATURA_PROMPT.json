@@ -1,0 +1,16 @@
+{
+  "tool": "image_gen integrato, solo bozza della maschera; varianti renderizzate deterministicamente dall'originale con la maschera rifinita",
+  "prompt": "Use case: precise-object-edit. Input image: original game sprite Fiat Seicento Sporting, 400x130, view from front left, yellow body, dark blue windows. Produce only a BODY PAINT SELECTION MASK for that EXACT input, not a new car illustration. Maintain identical composition, silhouette placement and horizontal aspect ratio, full uncropped original canvas with all original margins. White (#ffffff) over the yellow painted body panels only (hood, roof, front bumper, doors, mirrors and fenders). Pure black (#000000) everywhere else, including background, glass, windows, lights, badges, number plate, black grille, tyres, wheels, black trim and shadows. The mask should precisely trace the original yellow body pixels. Flat binary black and white image, no lettering, no border, no extra object, no texture, no greyscale shaded car. This is a technical mask used to recolour only the yellow paint of the original low-resolution pixel sprite, so do not change the viewpoint, geometry, wheels, bodykit or any details.",
+  "generatedSource": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-220336d4-407e-4267-ba90-be4e129ce788.png",
+  "draft": "tools/paint-prototype/seicento-mask-draft.png",
+  "mask": "public/images/paint/seicento/mask.png",
+  "variants": [
+    "public/images/paint/seicento/rosso.png",
+    "public/images/paint/seicento/blu.png",
+    "public/images/paint/seicento/verde.png",
+    "public/images/paint/seicento/nero.png",
+    "public/images/paint/seicento/bianco.png",
+    "public/images/paint/seicento/argento.png"
+  ],
+  "preview": "public/previews/seicento/index.html"
+}
