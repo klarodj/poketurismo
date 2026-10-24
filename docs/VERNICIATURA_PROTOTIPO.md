@@ -61,3 +61,9 @@ Le maschere nuove sono una prima versione pronta per la revisione dell’utente:
 Ricostruzione di controllo con le maschere salvate: tutti i 1.400 PNG (maschere e sei varianti per modello) identici byte per byte prima della rifinitura finale della Primera. Rifinito poi il bordo inferiore/posteriore della foto 404×138, con estensione locale limitata ai pixel della vernice rossa; i sei colori e la navigazione sono stati ricontrollati su tre larghezze. La build pubblicabile è stata confrontata con tutti gli asset della cartella di revisione. Lint, controllo sintattico degli strumenti e build superati.
 
 [Prompt individuali e provenienza delle 199 nuove maschere](../tools/paint-prototype/catalog-mask-sources.json).
+
+### Pubblicazione verificata
+
+Pubblicato il catalogo completo il 24 ottobre 2026 sull’istanza unica 5174, gateway 5184 e indirizzi Funnel 443/8443. URL conservato: `/previews/seicento/`. Backup completo Auth + gioco prima e dopo e build precedente in `/home/klaro/.backups/poketurismo/paint-catalog-2026-10-24T18-32-39-230Z` (accesso privato). Nessuna migrazione o operazione di modifica dei salvataggi.
+
+Verificati su gateway e su entrambi gli indirizzi pubblici HTML, JavaScript, CSS, indice dei 200 modelli e PNG rappresentativi identici agli asset collaudati. Salute HTTP 200, API personali anonime HTTP 401. Ricontrollati gli hash di tutti i 200 originali. Servizi attivi e report in `.preview/paint-catalog-qa`; server temporaneo rimosso dopo il collaudo.
