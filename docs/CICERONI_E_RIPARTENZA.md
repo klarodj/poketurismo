@@ -47,3 +47,9 @@ Browser headless con copia PostgreSQL e pilota sintetico: 30 verifiche delle die
 Prova reale sulla copia: pilota livello 1, Seicento Sporting, saldo 42 €, dieci settori conclusi con sconfitta e senza guasti; premio 100 €, saldo finale 142 €. Nessuna quota alla partenza. Report e catture in `.preview/guides-qa`. Nessun account reale modificato durante il collaudo.
 
 Verificata anche la build finale servita come anteprima: il circuito avviato coincide con quello mostrato nella selezione iniziale (ID esplicitamente inviato, senza dipendere dall’ordine dei circuiti nel server). Seconda gara completata da interfaccia, venti settori: sconfitta, 100 € di premio, saldo 42 → 142 €. Ritratti e finestra nella build finale corretti; rapporto `.preview/guides-qa/report-built.json`.
+
+## Rilascio
+
+Pubblicato il 24 ottobre 2026 sull’unica istanza 5174, tramite il gateway 5184 e gli stessi indirizzi Funnel 443/8443. Backup completo Auth + gioco prima e dopo; build precedente e confronto privato in `/home/klaro/.backups/poketurismo/guides-club-2026-10-24T10-28-01-816Z`. Tutte le 32 tabelle del gioco identiche durante il rilascio: nessuna migrazione, nessun saldo o gara in corso ritoccato.
+
+Servizi attivi, salute HTTP 200, pagina autodromo HTTP 200, API personali anonime HTTP 401. Verificati gateway locale ed entrambi gli indirizzi pubblici: bundle corretto e dieci ritratti identici ai file collaudati su ciascun endpoint. Backup finale completato con successo. Anteprime e database temporaneo di collaudo rimossi; report e catture conservati in `.preview/guides-qa`.
