@@ -5,15 +5,15 @@ import Win98Window from '../components/Win98Window';
 
 const LOCATIONS = [
   { path: '/garage',        name: 'Garage / Casa',      id: 'garage',    image: '/images/garage.png', desc: 'Il tuo quartier generale' },
-  { path: '/dealership',    name: 'Concessionario',     id: 'dealership',image: '/images/dealer.png', desc: 'Auto nuove di zecca' },
+  { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
   { path: '/autodrome',    name: 'Autodromo',          id: 'track',     image: '/images/track.png', desc: 'Gare ufficiali in pista' },
+  { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/street.png', desc: 'Solo per i coraggiosi' },
   { path: '/workshop',      name: 'Meccanico',          id: 'workshop',  image: '/images/workshop.png', desc: 'Riparazioni e tagliandi' },
   { path: '/parts-shop',    name: 'Negozio Tuning',     id: 'parts',     image: '/images/shop.png',  desc: 'Potenzia il tuo bolide' },
+  { path: '/dealership',    name: 'Concessionario',     id: 'dealership',image: '/images/dealer.png', desc: 'Auto nuove di zecca' },
   { path: '/used-cars',     name: 'Auto Usate',         id: 'used',      image: '/images/used.png', desc: 'Forum compravendita' },
-  { path: '/gas-station',   name: 'Benzinaio',          id: 'fuel',      image: '/images/fuel.png', desc: 'Fai il pieno' },
   { path: '/meet',          name: 'Raduno del club',           id: 'meet',      image: '/images/meet.png', desc: 'Piazzale, posta e sfide tra piloti' },
-  { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
-  { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/street.png', desc: 'Solo per i coraggiosi' },
+  { path: '/gas-station',   name: 'Benzinaio',          id: 'fuel',      image: '/images/fuel.png', desc: 'Fai il pieno' },
 ];
 
 export default function CityMap() {
