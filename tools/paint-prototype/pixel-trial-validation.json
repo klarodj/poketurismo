@@ -1,0 +1,32 @@
+[
+  {
+    "key": "punto",
+    "inputSha256": "519749fe57fae2f5ae72099cf8bde476fd00f1a2a2b5fc1cdf9e468dc270dd8d",
+    "originalSha256": "d985ae5ba3187e721202f5c0dd762687c7705ddb9028a3124178c5012646971b",
+    "nativeSize": [
+      320,
+      128
+    ],
+    "bodyPixels": 12540,
+    "detailPixels": 9814,
+    "protectedPixels": 198940,
+    "variants": 7,
+    "alphaIdentical": true,
+    "detailsIdentical": true
+  },
+  {
+    "key": "e30",
+    "inputSha256": "64d6d99821734e3c45b62e4f0c36207a71012bb1c8fa30a38d0f89acd1edd8b5",
+    "originalSha256": "5694b7e4874a4f9e142c4efeacc34a1ac3eb205c21ee70c61ae602275e156fb4",
+    "nativeSize": [
+      320,
+      128
+    ],
+    "bodyPixels": 13480,
+    "detailPixels": 12504,
+    "protectedPixels": 192360,
+    "variants": 7,
+    "alphaIdentical": true,
+    "detailsIdentical": true
+  }
+]

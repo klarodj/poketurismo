@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "width": 320,
+  "height": 128,
+  "colours": [
+    {
+      "id": "rosso",
+      "name": "Rosso pastello",
+      "rgb": [
+        195,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "blu",
+      "name": "Blu scuro",
+      "rgb": [
+        28,
+        60,
+        148
+      ]
+    },
+    {
+      "id": "verde",
+      "name": "Verde bottiglia",
+      "rgb": [
+        27,
+        82,
+        54
+      ]
+    },
+    {
+      "id": "nero",
+      "name": "Nero",
+      "rgb": [
+        29,
+        32,
+        36
+      ]
+    },
+    {
+      "id": "bianco",
+      "name": "Bianco",
+      "rgb": [
+        237,
+        238,
+        234
+      ]
+    },
+    {
+      "id": "argento",
+      "name": "Grigio argento",
+      "rgb": [
+        159,
+        168,
+        178
+      ]
+    },
+    {
+      "id": "giallo",
+      "name": "Giallo pastello",
+      "rgb": [
+        242,
+        198,
+        27
+      ]
+    }
+  ],
+  "models": [
+    {
+      "key": "punto",
+      "name": "Fiat Punto GT",
+      "original": "/images/car/punto.png",
+      "legacyPaint": "/images/paint/punto/",
+      "images": {
+        "rosso": "/images/pixel-cars/punto/rosso.png",
+        "blu": "/images/pixel-cars/punto/blu.png",
+        "verde": "/images/pixel-cars/punto/verde.png",
+        "nero": "/images/pixel-cars/punto/nero.png",
+        "bianco": "/images/pixel-cars/punto/bianco.png",
+        "argento": "/images/pixel-cars/punto/argento.png",
+        "giallo": "/images/pixel-cars/punto/giallo.png"
+      },
+      "body": "/images/pixel-cars/punto/body.png",
+      "details": "/images/pixel-cars/punto/details.png",
+      "sources": [
+        "https://www.italdesign.it/it/project/punto/",
+        "https://www.giorgettofabriziogiugiaro.it/projects/vehicles/punto"
+      ]
+    },
+    {
+      "key": "e30",
+      "name": "BMW M3 E30",
+      "original": "/images/car/e30.png",
+      "legacyPaint": "/images/paint/e30/",
+      "images": {
+        "rosso": "/images/pixel-cars/e30/rosso.png",
+        "blu": "/images/pixel-cars/e30/blu.png",
+        "verde": "/images/pixel-cars/e30/verde.png",
+        "nero": "/images/pixel-cars/e30/nero.png",
+        "bianco": "/images/pixel-cars/e30/bianco.png",
+        "argento": "/images/pixel-cars/e30/argento.png",
+        "giallo": "/images/pixel-cars/e30/giallo.png"
+      },
+      "body": "/images/pixel-cars/e30/body.png",
+      "details": "/images/pixel-cars/e30/details.png",
+      "sources": [
+        "https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m3-e30-portraet.html"
+      ]
+    }
+  ]
+}
