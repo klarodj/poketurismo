@@ -11,7 +11,7 @@ const special={
  punto:{spots:[[231,42,9],[312,83,11]],archRepair:true},
  '300zx':{spots:[[252,30,10],[326,80,14]],paintPolygons:[[[244,22],[260,22],[261,33],[244,34]]],archRepair:true},
  calibra:{archRepair:true},megane:{archRepair:true},sainz:{archRepair:true},celica:{archRepair:true},
- trueno:{trimPolygons:[[[237,6],[244,7],[240,39],[235,39]],[[268,8],[273,9],[291,39],[285,39]],[[283,12],[288,13],[330,39],[324,40]]]},
+ trueno:{trimPolygons:[[[237,6],[244,7],[240,39],[235,39]],[[268,8],[273,9],[291,39],[285,39]],[[277,6],[286,8],[336,40],[328,44]]]},
  corrado:{spots:[[268,25,4]]},
  seicento:{spots:[[150,74,24],[92,72,12]],protectPolygons:[[[160,68],[166,68],[170,70],[172,73],[168,78],[158,78]]],hue:49},
  vantage:{hueRepair:true},astrag:{hueRepair:true},

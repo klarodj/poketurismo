@@ -6307,9 +6307,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 10407,
+      "selectedPixels": 10448,
       "visiblePixels": 27560,
-      "coverage": 37.8,
+      "coverage": 37.9,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -6325,9 +6325,9 @@
     },
     "manualRepair": {
       "revision": 3,
-      "added": 1386,
+      "added": 1427,
       "removed": 0,
-      "newSeams": 1202,
+      "newSeams": 1399,
       "smoothing": false
     }
   },
