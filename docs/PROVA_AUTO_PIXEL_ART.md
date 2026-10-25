@@ -32,3 +32,9 @@ Questi sono bozzetti da approvare, non repliche tecniche certificate. La carrozz
 ## Collaudo
 
 Verificati i due modelli in tutte le sette tinte, più i 14 confronti con le vecchie vernici. Larghezze 320, 390 e 1280: nessuno scorrimento orizzontale esterno, anche ingrandendo lo sprite. Tavola completa, collegamento diretto modello/colore, passaggio dalla vecchia cartella, font e immagini caricati; nessun errore JavaScript o richiesta di scrittura. Controllo visivo desktop e telefono. Tutti i 200 originali e le 1.400 vernici precedenti identici ai file già pubblicati. Ricostruzione degli sprite ripetuta: 22 PNG identici byte per byte. Lint e build superati. Catture e report in `.preview/pixel-car-qa`.
+
+## Pubblicazione
+
+Album pubblicato il 25 ottobre 2026 sulla sola istanza 5174 attraverso il gateway 5184. Backup completo Auth + gioco e copia della build precedente in `/home/klaro/.backups/poketurismo/pixel-trial-2026-10-25T20-53-35-939Z`; backup ripetuto dopo la pubblicazione con esito positivo. Nessuna migrazione o operazione sui salvataggi.
+
+Verifica dopo l'avvio dei servizi: gateway locale e indirizzi pubblici 443/8443, undici file HTML/JS/CSS/catalogo/PNG per indirizzo identici a quelli collaudati, salute HTTP 200 e API personali anonime HTTP 401. Catalogo di due modelli e sette colori. Servizi attivi; checkout e server temporanei rimossi. Rapporto in `.preview/pixel-car-qa/report-public.json`.
