@@ -94,3 +94,9 @@ Test mirati per bordino rosso, fanali e sfondo protetti, giunzioni scure, rifles
 Esito: 119 anteprime effettivamente aggiornate, sulle 71 foto rosse/calde e sulle foto chiare/argento con bordi da correggere. Le 81 anteprime non interessate restano identiche, compresa la Seicento. Controllati oltre 61 milioni di pixel non coinvolti dal ritocco: tutti identici alla preview precedente, con alpha e dimensioni conservati. Ricostruzione normale ripetuta: 1.520 PNG identici byte per byte, compresi i livelli dei contorni.
 
 Browser finale: aperti tutti i 200 modelli e tutte le 1.200 varianti, nessuna immagine mancante o errore JavaScript; larghezze 320, 390 e 1280 senza scorrimento orizzontale. Verificate vecchie note conservate, approvazioni da ricontrollare solo sulle immagini modificate, vecchie segnalazioni mantenute, conferma della nuova revisione e filtro «Anteprime aggiornate». Nessuna richiesta di scrittura verso il gioco. Tavole prima/dopo e rapporti in `.preview/paint-edge-qa`.
+
+### Pubblicazione della revisione
+
+Revisione pubblicata il 25 ottobre 2026 sull'istanza unica, dopo backup completo Auth + gioco e copia della build precedente in `/home/klaro/.backups/poketurismo/paint-edges-2026-10-25T02-42-01-195Z`. Backup ripetuto dopo il rilascio, con esito positivo. Nessuna migrazione o scrittura sui salvataggi.
+
+Controllati gateway 5184 e indirizzi pubblici 443/8443: HTML, JavaScript, CSS, indice e sei PNG rappresentativi identici ai file collaudati; 200 modelli, 119 revisioni aggiornate. Il catalogo pubblico ha richiesto circa 20–22 secondi in questo controllo: il primo timeout a 15 secondi è stato risolto estendendo il tempo del collaudo, senza modificare la configurazione Funnel. Salute HTTP 200 e API personali anonime HTTP 401 su tutti e tre gli indirizzi. Hash dei 200 originali verificati; servizi attivi. Rapporto in `.preview/paint-edge-qa/report-public.json`; server e checkout temporanei rimossi.
