@@ -1,0 +1,18 @@
+{
+  "calibration": {
+    "chromatic": true,
+    "hue": 49,
+    "baseValue": 0.96,
+    "baseSaturation": 0.7,
+    "medianValue": 0.8,
+    "darkPaint": false,
+    "shadeExponent": 1.25
+  },
+  "manualRepair": {
+    "revision": 3,
+    "added": 135,
+    "removed": 16,
+    "newSeams": 0,
+    "smoothing": false
+  }
+}

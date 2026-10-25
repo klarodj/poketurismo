@@ -1,0 +1,666 @@
+[
+  {
+    "key": "155",
+    "revision": 3,
+    "added": 11,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "33",
+    "revision": 3,
+    "added": 815,
+    "removed": 0,
+    "newSeams": 362,
+    "smoothing": false
+  },
+  {
+    "key": "75",
+    "revision": 3,
+    "added": 608,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "gtv",
+    "revision": 3,
+    "added": 261,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "vantage",
+    "revision": 3,
+    "added": 2165,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "s3",
+    "revision": 3,
+    "added": 855,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "tt",
+    "revision": 3,
+    "added": 532,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "850",
+    "revision": 3,
+    "added": 528,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "m1",
+    "revision": 3,
+    "added": 415,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "e30",
+    "revision": 3,
+    "added": 102,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "e39",
+    "revision": 3,
+    "added": 584,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "m635",
+    "revision": 3,
+    "added": 452,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "z3m",
+    "revision": 3,
+    "added": 1232,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "continental",
+    "revision": 3,
+    "added": 1294,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "c5",
+    "revision": 3,
+    "added": 1232,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "ax",
+    "revision": 3,
+    "added": 39,
+    "removed": 625,
+    "newSeams": 0,
+    "smoothing": true
+  },
+  {
+    "key": "saxo",
+    "revision": 3,
+    "added": 14,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "visa",
+    "revision": 3,
+    "added": 481,
+    "removed": 346,
+    "newSeams": 297,
+    "smoothing": false
+  },
+  {
+    "key": "charade",
+    "revision": 3,
+    "added": 481,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "barchetta",
+    "revision": 3,
+    "added": 309,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "cinquecento",
+    "revision": 3,
+    "added": 872,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "coupe",
+    "revision": 3,
+    "added": 1473,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "punto",
+    "revision": 3,
+    "added": 184,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "seicento",
+    "revision": 3,
+    "added": 135,
+    "removed": 16,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "mondeo",
+    "revision": 3,
+    "added": 1721,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "mustang",
+    "revision": 3,
+    "added": 468,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "puma",
+    "revision": 3,
+    "added": 253,
+    "removed": 0,
+    "newSeams": 147,
+    "smoothing": false
+  },
+  {
+    "key": "crx",
+    "revision": 3,
+    "added": 1134,
+    "removed": 0,
+    "newSeams": 399,
+    "smoothing": false
+  },
+  {
+    "key": "integra",
+    "revision": 3,
+    "added": 890,
+    "removed": 0,
+    "newSeams": 186,
+    "smoothing": false
+  },
+  {
+    "key": "hyundai",
+    "revision": 3,
+    "added": 913,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "xj220",
+    "revision": 3,
+    "added": 2864,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "evoluzione",
+    "revision": 3,
+    "added": 1056,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "hpe",
+    "revision": 3,
+    "added": 24,
+    "removed": 579,
+    "newSeams": 0,
+    "smoothing": true
+  },
+  {
+    "key": "is200",
+    "revision": 3,
+    "added": 395,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "exige",
+    "revision": 3,
+    "added": 840,
+    "removed": 0,
+    "newSeams": 574,
+    "smoothing": false
+  },
+  {
+    "key": "zs",
+    "revision": 3,
+    "added": 1333,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "3200",
+    "revision": 3,
+    "added": 604,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "323",
+    "revision": 3,
+    "added": 21,
+    "removed": 475,
+    "newSeams": 0,
+    "smoothing": true
+  },
+  {
+    "key": "na",
+    "revision": 3,
+    "added": 715,
+    "removed": 0,
+    "newSeams": 682,
+    "smoothing": false
+  },
+  {
+    "key": "c43",
+    "revision": 3,
+    "added": 464,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "slk",
+    "revision": 3,
+    "added": 753,
+    "removed": 0,
+    "newSeams": 603,
+    "smoothing": false
+  },
+  {
+    "key": "evo5",
+    "revision": 3,
+    "added": 822,
+    "removed": 0,
+    "newSeams": 405,
+    "smoothing": false
+  },
+  {
+    "key": "evo6",
+    "revision": 3,
+    "added": 1103,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "180sx",
+    "revision": 3,
+    "added": 36,
+    "removed": 509,
+    "newSeams": 0,
+    "smoothing": true
+  },
+  {
+    "key": "s13",
+    "revision": 3,
+    "added": 519,
+    "removed": 0,
+    "newSeams": 335,
+    "smoothing": false
+  },
+  {
+    "key": "s14",
+    "revision": 3,
+    "added": 312,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "300zx",
+    "revision": 3,
+    "added": 1429,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "r32",
+    "revision": 3,
+    "added": 622,
+    "removed": 0,
+    "newSeams": 271,
+    "smoothing": false
+  },
+  {
+    "key": "astrag",
+    "revision": 3,
+    "added": 1299,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "calibra",
+    "revision": 3,
+    "added": 641,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "corsa2",
+    "revision": 3,
+    "added": 702,
+    "removed": 0,
+    "newSeams": 301,
+    "smoothing": false
+  },
+  {
+    "key": "kadett",
+    "revision": 3,
+    "added": 755,
+    "removed": 0,
+    "newSeams": 517,
+    "smoothing": false
+  },
+  {
+    "key": "manta",
+    "revision": 3,
+    "added": 262,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "speedster",
+    "revision": 3,
+    "added": 681,
+    "removed": 0,
+    "newSeams": 519,
+    "smoothing": false
+  },
+  {
+    "key": "zonda",
+    "revision": 3,
+    "added": 793,
+    "removed": 0,
+    "newSeams": 482,
+    "smoothing": false
+  },
+  {
+    "key": "rallye",
+    "revision": 3,
+    "added": 535,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "205",
+    "revision": 3,
+    "added": 437,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "206",
+    "revision": 3,
+    "added": 249,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "930",
+    "revision": 3,
+    "added": 465,
+    "removed": 0,
+    "newSeams": 214,
+    "smoothing": false
+  },
+  {
+    "key": "964",
+    "revision": 3,
+    "added": 236,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "964t",
+    "revision": 3,
+    "added": 1180,
+    "removed": 0,
+    "newSeams": 1035,
+    "smoothing": false
+  },
+  {
+    "key": "gt2",
+    "revision": 3,
+    "added": 1589,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "993",
+    "revision": 3,
+    "added": 959,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "5",
+    "revision": 3,
+    "added": 191,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "5maxi",
+    "revision": 3,
+    "added": 1024,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "clio",
+    "revision": 3,
+    "added": 418,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "v6",
+    "revision": 3,
+    "added": 695,
+    "removed": 0,
+    "newSeams": 375,
+    "smoothing": false
+  },
+  {
+    "key": "megane",
+    "revision": 3,
+    "added": 294,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "cordoba",
+    "revision": 3,
+    "added": 1915,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "leon",
+    "revision": 3,
+    "added": 1192,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "octavia",
+    "revision": 3,
+    "added": 560,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "22b",
+    "revision": 3,
+    "added": 1679,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "impreza",
+    "revision": 3,
+    "added": 664,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "legacy",
+    "revision": 3,
+    "added": 839,
+    "removed": 0,
+    "newSeams": 413,
+    "smoothing": false
+  },
+  {
+    "key": "svx",
+    "revision": 3,
+    "added": 661,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "sainz",
+    "revision": 3,
+    "added": 284,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "celica",
+    "revision": 3,
+    "added": 1875,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "corolla",
+    "revision": 3,
+    "added": 385,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "trueno",
+    "revision": 3,
+    "added": 1386,
+    "removed": 0,
+    "newSeams": 1202,
+    "smoothing": false
+  },
+  {
+    "key": "yaris",
+    "revision": 3,
+    "added": 446,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "s40",
+    "revision": 3,
+    "added": 409,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "corrado",
+    "revision": 3,
+    "added": 18,
+    "removed": 0,
+    "newSeams": 0,
+    "smoothing": false
+  },
+  {
+    "key": "beetle",
+    "revision": 3,
+    "added": 568,
+    "removed": 0,
+    "newSeams": 221,
+    "smoothing": false
+  }
+]

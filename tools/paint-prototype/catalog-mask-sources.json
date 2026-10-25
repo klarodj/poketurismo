@@ -52,7 +52,7 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17676,
+      "selectedPixels": 17687,
       "visiblePixels": 29220,
       "coverage": 60.5,
       "maskOverlap": 99.9
@@ -67,6 +67,13 @@
       "seamComponents": 0,
       "selectedPixels": 17676,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 11,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -87,9 +94,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15345,
+      "selectedPixels": 16160,
       "visiblePixels": 31344,
-      "coverage": 49,
+      "coverage": 51.6,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -102,6 +109,13 @@
       "seamComponents": 13,
       "selectedPixels": 15345,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 815,
+      "removed": 0,
+      "newSeams": 362,
+      "smoothing": false
     }
   },
   {
@@ -122,9 +136,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16624,
+      "selectedPixels": 17232,
       "visiblePixels": 29928,
-      "coverage": 55.5,
+      "coverage": 57.6,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -137,6 +151,13 @@
       "seamComponents": 0,
       "selectedPixels": 16624,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 608,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -157,9 +178,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 18938,
+      "selectedPixels": 19199,
       "visiblePixels": 27560,
-      "coverage": 68.7,
+      "coverage": 69.7,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -172,6 +193,13 @@
       "seamComponents": 0,
       "selectedPixels": 18938,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 261,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -192,13 +220,20 @@
       "darkPaint": true
     },
     "metrics": {
-      "selectedPixels": 13600,
+      "selectedPixels": 15765,
       "visiblePixels": 30912,
-      "coverage": 44,
+      "coverage": 51,
       "maskOverlap": 99.8
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 2165,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 7,
@@ -305,13 +340,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15550,
+      "selectedPixels": 16405,
       "visiblePixels": 29268,
-      "coverage": 53.1,
+      "coverage": 56.1,
       "maskOverlap": 99.7
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 855,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 11,
@@ -357,9 +399,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12621,
+      "selectedPixels": 13153,
       "visiblePixels": 28396,
-      "coverage": 44.4,
+      "coverage": 46.3,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -372,6 +414,13 @@
       "seamComponents": 3,
       "selectedPixels": 12621,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 532,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -462,9 +511,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16875,
+      "selectedPixels": 17403,
       "visiblePixels": 33892,
-      "coverage": 49.8,
+      "coverage": 51.3,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -477,6 +526,13 @@
       "seamComponents": 4,
       "selectedPixels": 16875,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 528,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -497,9 +553,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15195,
+      "selectedPixels": 15610,
       "visiblePixels": 30544,
-      "coverage": 49.7,
+      "coverage": 51.1,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -512,6 +568,13 @@
       "seamComponents": 3,
       "selectedPixels": 15195,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 415,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -532,9 +595,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17587,
+      "selectedPixels": 17689,
       "visiblePixels": 32236,
-      "coverage": 54.6,
+      "coverage": 54.9,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -547,6 +610,13 @@
       "seamComponents": 0,
       "selectedPixels": 17587,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 102,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -654,9 +724,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16597,
+      "selectedPixels": 17181,
       "visiblePixels": 33600,
-      "coverage": 49.4,
+      "coverage": 51.1,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -669,6 +739,13 @@
       "seamComponents": 7,
       "selectedPixels": 16597,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 584,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -689,9 +766,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 19308,
+      "selectedPixels": 19760,
       "visiblePixels": 34928,
-      "coverage": 55.3,
+      "coverage": 56.6,
       "maskOverlap": 99.6
     },
     "notes": [],
@@ -704,6 +781,13 @@
       "seamComponents": 0,
       "selectedPixels": 19308,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 452,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -724,13 +808,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16689,
+      "selectedPixels": 17921,
       "visiblePixels": 32584,
-      "coverage": 51.2,
+      "coverage": 55,
       "maskOverlap": 99.8
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1232,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 15,
@@ -750,13 +841,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17443,
+      "selectedPixels": 18737,
       "visiblePixels": 30368,
-      "coverage": 57.4,
+      "coverage": 61.7,
       "maskOverlap": 99.9
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1294,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 25,
@@ -916,13 +1014,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 21895,
+      "selectedPixels": 23127,
       "visiblePixels": 36136,
-      "coverage": 60.6,
+      "coverage": 64,
       "maskOverlap": 100
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1232,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 30,
@@ -939,16 +1044,26 @@
       "baseValue": 0.2627450980392157,
       "baseSaturation": 0.2888888888888889,
       "medianValue": 0.17647058823529413,
-      "darkPaint": true
+      "darkPaint": true,
+      "shadeSmoothing": 1,
+      "darkPaintFloor": 0.64,
+      "specularScale": 0.25
     },
     "metrics": {
-      "selectedPixels": 12801,
+      "selectedPixels": 12215,
       "visiblePixels": 28164,
-      "coverage": 45.5,
+      "coverage": 43.4,
       "maskOverlap": 99.5
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 39,
+      "removed": 625,
+      "newSeams": 0,
+      "smoothing": true
+    }
   },
   {
     "id": 31,
@@ -968,7 +1083,7 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16054,
+      "selectedPixels": 16068,
       "visiblePixels": 32504,
       "coverage": 49.4,
       "maskOverlap": 99.9
@@ -983,6 +1098,13 @@
       "seamComponents": 0,
       "selectedPixels": 16054,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 14,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -1003,9 +1125,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 10948,
+      "selectedPixels": 11083,
       "visiblePixels": 27700,
-      "coverage": 39.5,
+      "coverage": 40,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -1018,6 +1140,13 @@
       "seamComponents": 3,
       "selectedPixels": 10948,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 481,
+      "removed": 346,
+      "newSeams": 297,
+      "smoothing": false
     }
   },
   {
@@ -1090,9 +1219,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12408,
+      "selectedPixels": 12889,
       "visiblePixels": 25800,
-      "coverage": 48.1,
+      "coverage": 50,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -1105,6 +1234,13 @@
       "seamComponents": 3,
       "selectedPixels": 12408,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 481,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -1536,9 +1672,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15710,
+      "selectedPixels": 16019,
       "visiblePixels": 30196,
-      "coverage": 52,
+      "coverage": 53.1,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -1551,6 +1687,13 @@
       "seamComponents": 5,
       "selectedPixels": 15710,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 309,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -1597,13 +1740,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 14153,
+      "selectedPixels": 15025,
       "visiblePixels": 27820,
-      "coverage": 50.9,
+      "coverage": 54,
       "maskOverlap": 99.6
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 872,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 51,
@@ -1623,13 +1773,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15318,
+      "selectedPixels": 16791,
       "visiblePixels": 27900,
-      "coverage": 54.9,
+      "coverage": 60.2,
       "maskOverlap": 99.9
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1473,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 52,
@@ -1649,9 +1806,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 14863,
+      "selectedPixels": 15047,
       "visiblePixels": 25224,
-      "coverage": 58.9,
+      "coverage": 59.7,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -1664,6 +1821,13 @@
       "seamComponents": 0,
       "selectedPixels": 14863,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 184,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -1849,13 +2013,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17594,
+      "selectedPixels": 19315,
       "visiblePixels": 27992,
-      "coverage": 62.9,
+      "coverage": 69,
       "maskOverlap": 99.4
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1721,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 61,
@@ -1875,9 +2046,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 22887,
+      "selectedPixels": 23355,
       "visiblePixels": 35976,
-      "coverage": 63.6,
+      "coverage": 64.9,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -1890,6 +2061,13 @@
       "seamComponents": 0,
       "selectedPixels": 22887,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 468,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -1910,9 +2088,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12841,
+      "selectedPixels": 13094,
       "visiblePixels": 27136,
-      "coverage": 47.3,
+      "coverage": 48.3,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -1925,6 +2103,13 @@
       "seamComponents": 3,
       "selectedPixels": 12841,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 253,
+      "removed": 0,
+      "newSeams": 147,
+      "smoothing": false
     }
   },
   {
@@ -2006,9 +2191,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 10965,
+      "selectedPixels": 12099,
       "visiblePixels": 27984,
-      "coverage": 39.2,
+      "coverage": 43.2,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -2021,6 +2206,13 @@
       "seamComponents": 9,
       "selectedPixels": 10965,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 1134,
+      "removed": 0,
+      "newSeams": 399,
+      "smoothing": false
     }
   },
   {
@@ -2137,9 +2329,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17732,
+      "selectedPixels": 18622,
       "visiblePixels": 35036,
-      "coverage": 50.6,
+      "coverage": 53.2,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -2152,6 +2344,13 @@
       "seamComponents": 6,
       "selectedPixels": 17732,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 890,
+      "removed": 0,
+      "newSeams": 186,
+      "smoothing": false
     }
   },
   {
@@ -2268,13 +2467,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 19670,
+      "selectedPixels": 20583,
       "visiblePixels": 35132,
-      "coverage": 56,
+      "coverage": 58.6,
       "maskOverlap": 99.8
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 913,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 74,
@@ -2320,13 +2526,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 20804,
+      "selectedPixels": 23668,
       "visiblePixels": 35016,
-      "coverage": 59.4,
+      "coverage": 67.6,
       "maskOverlap": 99.6
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 2864,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 76,
@@ -2477,13 +2690,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16451,
+      "selectedPixels": 17507,
       "visiblePixels": 29864,
-      "coverage": 55.1,
+      "coverage": 58.6,
       "maskOverlap": 99.9
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1056,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 81,
@@ -2535,16 +2755,26 @@
       "baseValue": 0.33725490196078434,
       "baseSaturation": 0.686046511627907,
       "medianValue": 0.22745098039215686,
-      "darkPaint": true
+      "darkPaint": true,
+      "shadeSmoothing": 1,
+      "darkPaintFloor": 0.64,
+      "specularScale": 0.25
     },
     "metrics": {
-      "selectedPixels": 14025,
+      "selectedPixels": 13470,
       "visiblePixels": 24952,
-      "coverage": 56.2,
+      "coverage": 54,
       "maskOverlap": 99.5
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 24,
+      "removed": 579,
+      "newSeams": 0,
+      "smoothing": true
+    }
   },
   {
     "id": 83,
@@ -2599,9 +2829,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15272,
+      "selectedPixels": 15667,
       "visiblePixels": 30500,
-      "coverage": 50.1,
+      "coverage": 51.4,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -2614,6 +2844,13 @@
       "seamComponents": 6,
       "selectedPixels": 15272,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 395,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -2686,9 +2923,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17138,
+      "selectedPixels": 17978,
       "visiblePixels": 32748,
-      "coverage": 52.3,
+      "coverage": 54.9,
       "maskOverlap": 99.5
     },
     "notes": [],
@@ -2701,6 +2938,13 @@
       "seamComponents": 6,
       "selectedPixels": 17138,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 840,
+      "removed": 0,
+      "newSeams": 574,
+      "smoothing": false
     }
   },
   {
@@ -2782,13 +3026,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17208,
+      "selectedPixels": 18541,
       "visiblePixels": 34020,
-      "coverage": 50.6,
+      "coverage": 54.5,
       "maskOverlap": 99.9
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1333,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 88,
@@ -2808,9 +3059,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16858,
+      "selectedPixels": 17462,
       "visiblePixels": 33016,
-      "coverage": 51.1,
+      "coverage": 52.9,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -2823,6 +3074,13 @@
       "seamComponents": 5,
       "selectedPixels": 16858,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 604,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -2910,16 +3168,26 @@
       "baseValue": 0.38823529411764707,
       "baseSaturation": 0.48333333333333334,
       "medianValue": 0.23921568627450981,
-      "darkPaint": true
+      "darkPaint": true,
+      "shadeSmoothing": 1,
+      "darkPaintFloor": 0.64,
+      "specularScale": 0.25
     },
     "metrics": {
-      "selectedPixels": 15657,
+      "selectedPixels": 15203,
       "visiblePixels": 30148,
-      "coverage": 51.9,
+      "coverage": 50.4,
       "maskOverlap": 99.8
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 21,
+      "removed": 475,
+      "newSeams": 0,
+      "smoothing": true
+    }
   },
   {
     "id": 92,
@@ -3009,13 +3277,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13992,
+      "selectedPixels": 14707,
       "visiblePixels": 30428,
-      "coverage": 46,
+      "coverage": 48.3,
       "maskOverlap": 99.9
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 715,
+      "removed": 0,
+      "newSeams": 682,
+      "smoothing": false
+    }
   },
   {
     "id": 95,
@@ -3183,9 +3458,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16584,
+      "selectedPixels": 17048,
       "visiblePixels": 33924,
-      "coverage": 48.9,
+      "coverage": 50.3,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -3198,6 +3473,13 @@
       "seamComponents": 7,
       "selectedPixels": 16584,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 464,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -3244,9 +3526,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15305,
+      "selectedPixels": 16058,
       "visiblePixels": 28904,
-      "coverage": 53,
+      "coverage": 55.6,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -3259,6 +3541,13 @@
       "seamComponents": 3,
       "selectedPixels": 15305,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 753,
+      "removed": 0,
+      "newSeams": 603,
+      "smoothing": false
     }
   },
   {
@@ -3392,9 +3681,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17393,
+      "selectedPixels": 18215,
       "visiblePixels": 33868,
-      "coverage": 51.4,
+      "coverage": 53.8,
       "maskOverlap": 99.4
     },
     "notes": [],
@@ -3407,6 +3696,13 @@
       "seamComponents": 5,
       "selectedPixels": 17393,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 822,
+      "removed": 0,
+      "newSeams": 405,
+      "smoothing": false
     }
   },
   {
@@ -3427,13 +3723,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16561,
+      "selectedPixels": 17664,
       "visiblePixels": 30992,
-      "coverage": 53.4,
+      "coverage": 57,
       "maskOverlap": 99.7
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1103,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 112,
@@ -3485,16 +3788,26 @@
       "baseValue": 0.5215686274509804,
       "baseSaturation": 0.4363636363636364,
       "medianValue": 0.30196078431372547,
-      "darkPaint": true
+      "darkPaint": true,
+      "shadeSmoothing": 1,
+      "darkPaintFloor": 0.64,
+      "specularScale": 0.25
     },
     "metrics": {
-      "selectedPixels": 18047,
+      "selectedPixels": 17574,
       "visiblePixels": 33244,
-      "coverage": 54.3,
+      "coverage": 52.9,
       "maskOverlap": 99.1
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 36,
+      "removed": 509,
+      "newSeams": 0,
+      "smoothing": true
+    }
   },
   {
     "id": 114,
@@ -3514,9 +3827,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 11562,
+      "selectedPixels": 12081,
       "visiblePixels": 32636,
-      "coverage": 35.4,
+      "coverage": 37,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -3529,6 +3842,13 @@
       "seamComponents": 4,
       "selectedPixels": 11562,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 519,
+      "removed": 0,
+      "newSeams": 335,
+      "smoothing": false
     }
   },
   {
@@ -3549,9 +3869,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 14700,
+      "selectedPixels": 15012,
       "visiblePixels": 27528,
-      "coverage": 53.4,
+      "coverage": 54.5,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -3564,6 +3884,13 @@
       "seamComponents": 7,
       "selectedPixels": 14700,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 312,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -3584,9 +3911,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17964,
+      "selectedPixels": 19393,
       "visiblePixels": 29396,
-      "coverage": 61.1,
+      "coverage": 66,
       "maskOverlap": 100
     },
     "notes": [],
@@ -3599,6 +3926,13 @@
       "seamComponents": 0,
       "selectedPixels": 17964,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 1429,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -3725,9 +4059,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15648,
+      "selectedPixels": 16270,
       "visiblePixels": 29108,
-      "coverage": 53.8,
+      "coverage": 55.9,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -3740,6 +4074,13 @@
       "seamComponents": 4,
       "selectedPixels": 15648,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 622,
+      "removed": 0,
+      "newSeams": 271,
+      "smoothing": false
     }
   },
   {
@@ -3847,13 +4188,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13312,
+      "selectedPixels": 14611,
       "visiblePixels": 27592,
-      "coverage": 48.2,
+      "coverage": 53,
       "maskOverlap": 99.9
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1299,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 125,
@@ -3899,9 +4247,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 18828,
+      "selectedPixels": 19469,
       "visiblePixels": 33500,
-      "coverage": 56.2,
+      "coverage": 58.1,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -3914,6 +4262,13 @@
       "seamComponents": 0,
       "selectedPixels": 18828,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 641,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -3969,9 +4324,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13576,
+      "selectedPixels": 14278,
       "visiblePixels": 26376,
-      "coverage": 51.5,
+      "coverage": 54.1,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -3984,6 +4339,13 @@
       "seamComponents": 4,
       "selectedPixels": 13576,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 702,
+      "removed": 0,
+      "newSeams": 301,
+      "smoothing": false
     }
   },
   {
@@ -4004,9 +4366,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13169,
+      "selectedPixels": 13924,
       "visiblePixels": 31804,
-      "coverage": 41.4,
+      "coverage": 43.8,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -4019,6 +4381,13 @@
       "seamComponents": 4,
       "selectedPixels": 13169,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 755,
+      "removed": 0,
+      "newSeams": 517,
+      "smoothing": false
     }
   },
   {
@@ -4039,9 +4408,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12794,
+      "selectedPixels": 13056,
       "visiblePixels": 27286,
-      "coverage": 46.9,
+      "coverage": 47.8,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -4054,6 +4423,13 @@
       "seamComponents": 4,
       "selectedPixels": 12794,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 262,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -4100,9 +4476,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12496,
+      "selectedPixels": 13177,
       "visiblePixels": 28310,
-      "coverage": 44.1,
+      "coverage": 46.5,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -4115,6 +4491,13 @@
       "seamComponents": 3,
       "selectedPixels": 12496,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 681,
+      "removed": 0,
+      "newSeams": 519,
+      "smoothing": false
     }
   },
   {
@@ -4161,9 +4544,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 19122,
+      "selectedPixels": 19915,
       "visiblePixels": 38048,
-      "coverage": 50.3,
+      "coverage": 52.3,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -4176,6 +4559,13 @@
       "seamComponents": 12,
       "selectedPixels": 19122,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 793,
+      "removed": 0,
+      "newSeams": 482,
+      "smoothing": false
     }
   },
   {
@@ -4222,9 +4612,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15456,
+      "selectedPixels": 15991,
       "visiblePixels": 32044,
-      "coverage": 48.2,
+      "coverage": 49.9,
       "maskOverlap": 100
     },
     "notes": [],
@@ -4237,6 +4627,13 @@
       "seamComponents": 7,
       "selectedPixels": 15456,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 535,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -4257,9 +4654,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12295,
+      "selectedPixels": 12732,
       "visiblePixels": 30342,
-      "coverage": 40.5,
+      "coverage": 42,
       "maskOverlap": 99.6
     },
     "notes": [],
@@ -4272,6 +4669,13 @@
       "seamComponents": 8,
       "selectedPixels": 12295,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 437,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -4292,9 +4696,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12747,
+      "selectedPixels": 12996,
       "visiblePixels": 24336,
-      "coverage": 52.4,
+      "coverage": 53.4,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -4307,6 +4711,13 @@
       "seamComponents": 3,
       "selectedPixels": 12747,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 249,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -4519,9 +4930,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12548,
+      "selectedPixels": 13013,
       "visiblePixels": 29708,
-      "coverage": 42.2,
+      "coverage": 43.8,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -4534,6 +4945,13 @@
       "seamComponents": 4,
       "selectedPixels": 12548,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 465,
+      "removed": 0,
+      "newSeams": 214,
+      "smoothing": false
     }
   },
   {
@@ -4624,9 +5042,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16071,
+      "selectedPixels": 16307,
       "visiblePixels": 27806,
-      "coverage": 57.8,
+      "coverage": 58.6,
       "maskOverlap": 99.2
     },
     "notes": [],
@@ -4639,6 +5057,13 @@
       "seamComponents": 0,
       "selectedPixels": 16071,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 236,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -4659,13 +5084,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13443,
+      "selectedPixels": 14623,
       "visiblePixels": 29892,
-      "coverage": 45,
+      "coverage": 48.9,
       "maskOverlap": 99.7
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1180,
+      "removed": 0,
+      "newSeams": 1035,
+      "smoothing": false
+    }
   },
   {
     "id": 150,
@@ -4720,13 +5152,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 18706,
+      "selectedPixels": 20295,
       "visiblePixels": 30348,
-      "coverage": 61.6,
+      "coverage": 66.9,
       "maskOverlap": 99.5
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1589,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 152,
@@ -4746,13 +5185,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 18648,
+      "selectedPixels": 19607,
       "visiblePixels": 29646,
-      "coverage": 62.9,
+      "coverage": 66.1,
       "maskOverlap": 99.5
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 959,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 153,
@@ -4868,9 +5314,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 11640,
+      "selectedPixels": 11831,
       "visiblePixels": 26062,
-      "coverage": 44.7,
+      "coverage": 45.4,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -4883,6 +5329,13 @@
       "seamComponents": 5,
       "selectedPixels": 11640,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 191,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -4903,13 +5356,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 14413,
+      "selectedPixels": 15437,
       "visiblePixels": 25512,
-      "coverage": 56.5,
+      "coverage": 60.5,
       "maskOverlap": 99.6
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1024,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 158,
@@ -4955,9 +5415,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12504,
+      "selectedPixels": 12922,
       "visiblePixels": 24576,
-      "coverage": 50.9,
+      "coverage": 52.6,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -4970,6 +5430,13 @@
       "seamComponents": 2,
       "selectedPixels": 12504,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 418,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5016,9 +5483,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13535,
+      "selectedPixels": 14230,
       "visiblePixels": 27942,
-      "coverage": 48.4,
+      "coverage": 50.9,
       "maskOverlap": 99.6
     },
     "notes": [],
@@ -5031,6 +5498,13 @@
       "seamComponents": 5,
       "selectedPixels": 13535,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 695,
+      "removed": 0,
+      "newSeams": 375,
+      "smoothing": false
     }
   },
   {
@@ -5077,9 +5551,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16815,
+      "selectedPixels": 17109,
       "visiblePixels": 30864,
-      "coverage": 54.5,
+      "coverage": 55.4,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -5092,6 +5566,13 @@
       "seamComponents": 0,
       "selectedPixels": 16815,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 294,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5225,13 +5706,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16932,
+      "selectedPixels": 18847,
       "visiblePixels": 30908,
-      "coverage": 54.8,
+      "coverage": 61,
       "maskOverlap": 99.6
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1915,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 169,
@@ -5277,13 +5765,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 14697,
+      "selectedPixels": 15889,
       "visiblePixels": 27152,
-      "coverage": 54.1,
+      "coverage": 58.5,
       "maskOverlap": 100
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1192,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 171,
@@ -5303,9 +5798,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 13661,
+      "selectedPixels": 14221,
       "visiblePixels": 30154,
-      "coverage": 45.3,
+      "coverage": 47.2,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -5318,6 +5813,13 @@
       "seamComponents": 5,
       "selectedPixels": 13661,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 560,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5338,13 +5840,20 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15857,
+      "selectedPixels": 17536,
       "visiblePixels": 26880,
-      "coverage": 59,
+      "coverage": 65.2,
       "maskOverlap": 99.4
     },
     "notes": [],
-    "edgeRepair": null
+    "edgeRepair": null,
+    "manualRepair": {
+      "revision": 3,
+      "added": 1679,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
+    }
   },
   {
     "id": 173,
@@ -5364,9 +5873,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15372,
+      "selectedPixels": 16036,
       "visiblePixels": 32772,
-      "coverage": 46.9,
+      "coverage": 48.9,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -5378,6 +5887,13 @@
       "seamPixels": 0,
       "seamComponents": 0,
       "selectedPixels": 15372
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 664,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5398,9 +5914,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15722,
+      "selectedPixels": 16561,
       "visiblePixels": 32968,
-      "coverage": 47.7,
+      "coverage": 50.2,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -5413,6 +5929,13 @@
       "seamComponents": 5,
       "selectedPixels": 15722,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 839,
+      "removed": 0,
+      "newSeams": 413,
+      "smoothing": false
     }
   },
   {
@@ -5433,9 +5956,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17431,
+      "selectedPixels": 18092,
       "visiblePixels": 34698,
-      "coverage": 50.2,
+      "coverage": 52.1,
       "maskOverlap": 99.4
     },
     "notes": [],
@@ -5448,6 +5971,13 @@
       "seamComponents": 2,
       "selectedPixels": 17431,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 661,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5503,9 +6033,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 18691,
+      "selectedPixels": 18975,
       "visiblePixels": 29520,
-      "coverage": 63.3,
+      "coverage": 64.3,
       "maskOverlap": 99.7
     },
     "notes": [],
@@ -5518,6 +6048,13 @@
       "seamComponents": 0,
       "selectedPixels": 18691,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 284,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5564,9 +6101,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 17036,
+      "selectedPixels": 18911,
       "visiblePixels": 30976,
-      "coverage": 55,
+      "coverage": 61.1,
       "maskOverlap": 99.5
     },
     "notes": [],
@@ -5579,6 +6116,13 @@
       "seamComponents": 0,
       "selectedPixels": 17036,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 1875,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5599,9 +6143,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16018,
+      "selectedPixels": 16403,
       "visiblePixels": 35400,
-      "coverage": 45.2,
+      "coverage": 46.3,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -5614,6 +6158,13 @@
       "seamComponents": 4,
       "selectedPixels": 16018,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 385,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5756,9 +6307,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 9021,
+      "selectedPixels": 10407,
       "visiblePixels": 27560,
-      "coverage": 32.7,
+      "coverage": 37.8,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -5771,6 +6322,13 @@
       "seamComponents": 6,
       "selectedPixels": 9021,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 1386,
+      "removed": 0,
+      "newSeams": 1202,
+      "smoothing": false
     }
   },
   {
@@ -5791,9 +6349,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 12806,
+      "selectedPixels": 13252,
       "visiblePixels": 26896,
-      "coverage": 47.6,
+      "coverage": 49.3,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -5806,6 +6364,13 @@
       "seamComponents": 1,
       "selectedPixels": 12806,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 446,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5913,9 +6478,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 19570,
+      "selectedPixels": 19979,
       "visiblePixels": 36708,
-      "coverage": 53.3,
+      "coverage": 54.4,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -5928,6 +6493,13 @@
       "seamComponents": 5,
       "selectedPixels": 19570,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 409,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -5974,9 +6546,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 16551,
+      "selectedPixels": 16569,
       "visiblePixels": 28084,
-      "coverage": 58.9,
+      "coverage": 59,
       "maskOverlap": 99.8
     },
     "notes": [],
@@ -5989,6 +6561,13 @@
       "seamComponents": 0,
       "selectedPixels": 16551,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 18,
+      "removed": 0,
+      "newSeams": 0,
+      "smoothing": false
     }
   },
   {
@@ -6175,9 +6754,9 @@
       "darkPaint": false
     },
     "metrics": {
-      "selectedPixels": 15024,
+      "selectedPixels": 15592,
       "visiblePixels": 29600,
-      "coverage": 50.8,
+      "coverage": 52.7,
       "maskOverlap": 99.9
     },
     "notes": [],
@@ -6190,6 +6769,13 @@
       "seamComponents": 5,
       "selectedPixels": 15024,
       "changed": true
+    },
+    "manualRepair": {
+      "revision": 3,
+      "added": 568,
+      "removed": 0,
+      "newSeams": 221,
+      "smoothing": false
     }
   },
   {

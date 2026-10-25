@@ -10,17 +10,18 @@ const versioned=(url,model)=>(model.revision||1)>1?`${url}?rev=${model.revision}
 const original=model=>model.source;
 const image=(model,tint)=>tint==='originale'?original(model):versioned(model.images[tint],model);
 const colourName=id=>id==='originale'?'Colore originale':catalog.colours.find(c=>c.id===id)?.name||id;
+const updated=model=>(model.revision||1)===(catalog.reviewRevision||2);
 function announce(text){$('notice').textContent=text;}
 function shareURL(model=active,tint=colour){const url=new URL(location.pathname,location.origin);url.searchParams.set('auto',model.key);url.searchParams.set('colore',tint);return url.href;}
 function updateURL(){history.replaceState(null,'',shareURL());}
-function stats(){const counts={pending:0,approved:0,fix:0};for(const model of models)counts[status(model)]++;$('progress').textContent=`${models.length} modelli · ${counts.pending} da valutare · ${counts.approved} ${counts.approved===1?'va bene':'vanno bene'} · ${counts.fix} da correggere${models.some(m=>(m.revision||1)>1)?` · ${models.filter(m=>(m.revision||1)>1).length} anteprime aggiornate`:''}`;}
+function stats(){const counts={pending:0,approved:0,fix:0};for(const model of models)counts[status(model)]++;$('progress').textContent=`${models.length} modelli · ${counts.pending} da valutare · ${counts.approved} ${counts.approved===1?'va bene':'vanno bene'} · ${counts.fix} da correggere${models.some(updated)?` · ${models.filter(updated).length} anteprime aggiornate`:''}`;}
 function save(){try{localStorage.setItem(STORAGE,JSON.stringify(reviews));$('saved').textContent='Valutazione salvata su questo browser.';}catch{$('saved').textContent='Il browser non salva le note: usa «Esporta correzioni» per conservarle.';}stats();}
 function saveReview(){if(!active)return;reviews[active.key]={status:$('review-state').value,note:$('note').value.slice(0,1200),colour,revision:active.revision||1,updatedAt:new Date().toISOString()};save();updateButtonStatus();}
 function updateButtonStatus(){for(const button of $('model-list').querySelectorAll('button')){const model=models.find(m=>m.key===button.dataset.model),small=button.querySelector('small');small.textContent=`${model.brand} · ${labels[status(model)]}`;small.className=status(model)==='fix'?'review-status-fix':'';}}
 function navState(){const at=filtered.findIndex(m=>m.key===active?.key);$('position').textContent=at>=0?`${at+1} / ${filtered.length}`:'Fuori dal filtro';$('previous').disabled=at<=0;$('next').disabled=at<0||at>=filtered.length-1;}
 function filterModels(selectFirst=true){
  const query=$('search').value.trim().toLocaleLowerCase('it'),brand=$('brand').value,filter=$('filter').value;
- filtered=models.filter(model=>(!brand||model.brand===brand)&&(filter==='all'||(filter==='updated'?(model.revision||1)>1:status(model)===filter))&&`${model.id} ${model.brand} ${model.name}`.toLocaleLowerCase('it').includes(query));
+ filtered=models.filter(model=>(!brand||model.brand===brand)&&(filter==='all'||(filter==='updated'?updated(model):status(model)===filter))&&`${model.id} ${model.brand} ${model.name}`.toLocaleLowerCase('it').includes(query));
  $('results').textContent=`${filtered.length} ${filtered.length===1?'modello trovato':'modelli trovati'}`;$('model-list').replaceChildren();$('model-picker').replaceChildren();
  for(const model of filtered){const option=new Option(`#${model.id} · ${model.brand} ${model.name}`,model.key);$('model-picker').append(option);const button=document.createElement('button');button.type='button';button.dataset.model=model.key;button.append(document.createTextNode(`#${model.id} · ${model.name}`));const small=document.createElement('small');small.textContent=`${model.brand} · ${labels[status(model)]}`;small.className=status(model)==='fix'?'review-status-fix':'';button.append(small);button.addEventListener('click',()=>openModel(model));$('model-list').append(button);}
  if(!filtered.length){const p=document.createElement('p');p.className='empty';p.textContent='Nessun modello corrisponde ai filtri.';$('model-list').append(p);}
@@ -29,7 +30,7 @@ function filterModels(selectFirst=true){
 }
 function selectColour(id,writeURL=true){colour=id;$('preview').src=image(active,id);$('preview').alt=`${active.brand} ${active.name} · ${colourName(id)}`;$('selected-name').textContent=colourName(id);for(const button of $('palette').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.colour===id));if(writeURL)updateURL();}
 function openModel(model){
- active=model;$('model-name').textContent=`#${model.id} · ${model.brand} ${model.name}`;$('model-info').textContent=`${model.year} · ${model.approved?'Prova Seicento già approvata':(model.revision||1)>1?'Bordi aggiornati':'Prova da valutare'}`;
+ active=model;$('model-name').textContent=`#${model.id} · ${model.brand} ${model.name}`;$('model-info').textContent=`${model.year} · ${updated(model)?'Appunti applicati a tutte le tinte':model.approved?'Prova già approvata':'Prova da valutare'}`;
  for(const id of ['original','preview','mask']){$(id).width=model.width;$(id).height=model.height;$(id).dataset.wide=String(model.width>400);}
  $('original').src=original(model);$('original').alt=`${model.brand} ${model.name} · originale`;$('mask').src=versioned(model.mask,model);$('mask').alt=`Area verniciata · ${model.brand} ${model.name}`;
  $('review-state').value=status(model);$('note').value=typeof reviews[model.key]?.note==='string'?reviews[model.key].note.slice(0,1200):'';$('saved').textContent=stale(model)?'Anteprima aggiornata. Le note precedenti sono conservate: ricontrolla il risultato e conferma la valutazione.':'';$('model-picker').value=model.key;

@@ -1,5 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
+  "reviewRevision": 3,
+  "paletteRevision": 3,
   "proposedPrice": 2500,
   "colours": [
     {
@@ -55,6 +57,15 @@
         168,
         178
       ]
+    },
+    {
+      "id": "giallo",
+      "name": "Giallo pastello",
+      "rgb": [
+        242,
+        198,
+        27
+      ]
     }
   ],
   "models": [
@@ -76,7 +87,8 @@
         "verde": "/images/paint/145/verde.png",
         "nero": "/images/paint/145/nero.png",
         "bianco": "/images/paint/145/bianco.png",
-        "argento": "/images/paint/145/argento.png"
+        "argento": "/images/paint/145/argento.png",
+        "giallo": "/images/paint/145/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -96,6 +108,7 @@
         "selectedPixels": 16842,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -116,12 +129,13 @@
         "verde": "/images/paint/155/verde.png",
         "nero": "/images/paint/155/nero.png",
         "bianco": "/images/paint/155/bianco.png",
-        "argento": "/images/paint/155/argento.png"
+        "argento": "/images/paint/155/argento.png",
+        "giallo": "/images/paint/155/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17676,
+        "selectedPixels": 17687,
         "visiblePixels": 29220,
         "coverage": 60.5,
         "maskOverlap": 99.9
@@ -135,6 +149,13 @@
         "seamComponents": 0,
         "selectedPixels": 17676,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 11,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -156,14 +177,15 @@
         "verde": "/images/paint/33/verde.png",
         "nero": "/images/paint/33/nero.png",
         "bianco": "/images/paint/33/bianco.png",
-        "argento": "/images/paint/33/argento.png"
+        "argento": "/images/paint/33/argento.png",
+        "giallo": "/images/paint/33/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15345,
+        "selectedPixels": 16160,
         "visiblePixels": 31344,
-        "coverage": 49,
+        "coverage": 51.6,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -175,6 +197,13 @@
         "seamComponents": 13,
         "selectedPixels": 15345,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 815,
+        "removed": 0,
+        "newSeams": 362,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -196,14 +225,15 @@
         "verde": "/images/paint/75/verde.png",
         "nero": "/images/paint/75/nero.png",
         "bianco": "/images/paint/75/bianco.png",
-        "argento": "/images/paint/75/argento.png"
+        "argento": "/images/paint/75/argento.png",
+        "giallo": "/images/paint/75/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16624,
+        "selectedPixels": 17232,
         "visiblePixels": 29928,
-        "coverage": 55.5,
+        "coverage": 57.6,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -215,6 +245,13 @@
         "seamComponents": 0,
         "selectedPixels": 16624,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 608,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -236,14 +273,15 @@
         "verde": "/images/paint/gtv/verde.png",
         "nero": "/images/paint/gtv/nero.png",
         "bianco": "/images/paint/gtv/bianco.png",
-        "argento": "/images/paint/gtv/argento.png"
+        "argento": "/images/paint/gtv/argento.png",
+        "giallo": "/images/paint/gtv/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 18938,
+        "selectedPixels": 19199,
         "visiblePixels": 27560,
-        "coverage": 68.7,
+        "coverage": 69.7,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -255,6 +293,13 @@
         "seamComponents": 0,
         "selectedPixels": 18938,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 261,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -276,17 +321,25 @@
         "verde": "/images/paint/vantage/verde.png",
         "nero": "/images/paint/vantage/nero.png",
         "bianco": "/images/paint/vantage/bianco.png",
-        "argento": "/images/paint/vantage/argento.png"
+        "argento": "/images/paint/vantage/argento.png",
+        "giallo": "/images/paint/vantage/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13600,
+        "selectedPixels": 15765,
         "visiblePixels": 30912,
-        "coverage": 44,
+        "coverage": 51,
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 2165,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -307,7 +360,8 @@
         "verde": "/images/paint/80/verde.png",
         "nero": "/images/paint/80/nero.png",
         "bianco": "/images/paint/80/bianco.png",
-        "argento": "/images/paint/80/argento.png"
+        "argento": "/images/paint/80/argento.png",
+        "giallo": "/images/paint/80/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -318,6 +372,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -338,7 +393,8 @@
         "verde": "/images/paint/s2/verde.png",
         "nero": "/images/paint/s2/nero.png",
         "bianco": "/images/paint/s2/bianco.png",
-        "argento": "/images/paint/s2/argento.png"
+        "argento": "/images/paint/s2/argento.png",
+        "giallo": "/images/paint/s2/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -358,6 +414,7 @@
         "selectedPixels": 14100,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -378,7 +435,8 @@
         "verde": "/images/paint/rs4/verde.png",
         "nero": "/images/paint/rs4/nero.png",
         "bianco": "/images/paint/rs4/bianco.png",
-        "argento": "/images/paint/rs4/argento.png"
+        "argento": "/images/paint/rs4/argento.png",
+        "giallo": "/images/paint/rs4/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -389,6 +447,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -409,17 +468,25 @@
         "verde": "/images/paint/s3/verde.png",
         "nero": "/images/paint/s3/nero.png",
         "bianco": "/images/paint/s3/bianco.png",
-        "argento": "/images/paint/s3/argento.png"
+        "argento": "/images/paint/s3/argento.png",
+        "giallo": "/images/paint/s3/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15550,
+        "selectedPixels": 16405,
         "visiblePixels": 29268,
-        "coverage": 53.1,
+        "coverage": 56.1,
         "maskOverlap": 99.7
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 855,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -440,7 +507,8 @@
         "verde": "/images/paint/s6/verde.png",
         "nero": "/images/paint/s6/nero.png",
         "bianco": "/images/paint/s6/bianco.png",
-        "argento": "/images/paint/s6/argento.png"
+        "argento": "/images/paint/s6/argento.png",
+        "giallo": "/images/paint/s6/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -451,6 +519,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -471,14 +540,15 @@
         "verde": "/images/paint/tt/verde.png",
         "nero": "/images/paint/tt/nero.png",
         "bianco": "/images/paint/tt/bianco.png",
-        "argento": "/images/paint/tt/argento.png"
+        "argento": "/images/paint/tt/argento.png",
+        "giallo": "/images/paint/tt/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12621,
+        "selectedPixels": 13153,
         "visiblePixels": 28396,
-        "coverage": 44.4,
+        "coverage": 46.3,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -490,6 +560,13 @@
         "seamComponents": 3,
         "selectedPixels": 12621,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 532,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -511,7 +588,8 @@
         "verde": "/images/paint/a112/verde.png",
         "nero": "/images/paint/a112/nero.png",
         "bianco": "/images/paint/a112/bianco.png",
-        "argento": "/images/paint/a112/argento.png"
+        "argento": "/images/paint/a112/argento.png",
+        "giallo": "/images/paint/a112/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -531,6 +609,7 @@
         "selectedPixels": 9388,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -551,7 +630,8 @@
         "verde": "/images/paint/y10/verde.png",
         "nero": "/images/paint/y10/nero.png",
         "bianco": "/images/paint/y10/bianco.png",
-        "argento": "/images/paint/y10/argento.png"
+        "argento": "/images/paint/y10/argento.png",
+        "giallo": "/images/paint/y10/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -571,6 +651,7 @@
         "selectedPixels": 11307,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -591,14 +672,15 @@
         "verde": "/images/paint/850/verde.png",
         "nero": "/images/paint/850/nero.png",
         "bianco": "/images/paint/850/bianco.png",
-        "argento": "/images/paint/850/argento.png"
+        "argento": "/images/paint/850/argento.png",
+        "giallo": "/images/paint/850/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16875,
+        "selectedPixels": 17403,
         "visiblePixels": 33892,
-        "coverage": 49.8,
+        "coverage": 51.3,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -610,6 +692,13 @@
         "seamComponents": 4,
         "selectedPixels": 16875,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 528,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -631,14 +720,15 @@
         "verde": "/images/paint/m1/verde.png",
         "nero": "/images/paint/m1/nero.png",
         "bianco": "/images/paint/m1/bianco.png",
-        "argento": "/images/paint/m1/argento.png"
+        "argento": "/images/paint/m1/argento.png",
+        "giallo": "/images/paint/m1/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15195,
+        "selectedPixels": 15610,
         "visiblePixels": 30544,
-        "coverage": 49.7,
+        "coverage": 51.1,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -650,6 +740,13 @@
         "seamComponents": 3,
         "selectedPixels": 15195,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 415,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -671,14 +768,15 @@
         "verde": "/images/paint/e30/verde.png",
         "nero": "/images/paint/e30/nero.png",
         "bianco": "/images/paint/e30/bianco.png",
-        "argento": "/images/paint/e30/argento.png"
+        "argento": "/images/paint/e30/argento.png",
+        "giallo": "/images/paint/e30/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17587,
+        "selectedPixels": 17689,
         "visiblePixels": 32236,
-        "coverage": 54.6,
+        "coverage": 54.9,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -690,6 +788,13 @@
         "seamComponents": 0,
         "selectedPixels": 17587,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 102,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -711,7 +816,8 @@
         "verde": "/images/paint/e36/verde.png",
         "nero": "/images/paint/e36/nero.png",
         "bianco": "/images/paint/e36/bianco.png",
-        "argento": "/images/paint/e36/argento.png"
+        "argento": "/images/paint/e36/argento.png",
+        "giallo": "/images/paint/e36/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -722,6 +828,7 @@
         "maskOverlap": 98.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -742,7 +849,8 @@
         "verde": "/images/paint/e46/verde.png",
         "nero": "/images/paint/e46/nero.png",
         "bianco": "/images/paint/e46/bianco.png",
-        "argento": "/images/paint/e46/argento.png"
+        "argento": "/images/paint/e46/argento.png",
+        "giallo": "/images/paint/e46/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -762,6 +870,7 @@
         "selectedPixels": 17701,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -782,7 +891,8 @@
         "verde": "/images/paint/e34/verde.png",
         "nero": "/images/paint/e34/nero.png",
         "bianco": "/images/paint/e34/bianco.png",
-        "argento": "/images/paint/e34/argento.png"
+        "argento": "/images/paint/e34/argento.png",
+        "giallo": "/images/paint/e34/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -793,6 +903,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -813,14 +924,15 @@
         "verde": "/images/paint/e39/verde.png",
         "nero": "/images/paint/e39/nero.png",
         "bianco": "/images/paint/e39/bianco.png",
-        "argento": "/images/paint/e39/argento.png"
+        "argento": "/images/paint/e39/argento.png",
+        "giallo": "/images/paint/e39/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16597,
+        "selectedPixels": 17181,
         "visiblePixels": 33600,
-        "coverage": 49.4,
+        "coverage": 51.1,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -832,6 +944,13 @@
         "seamComponents": 7,
         "selectedPixels": 16597,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 584,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -853,14 +972,15 @@
         "verde": "/images/paint/m635/verde.png",
         "nero": "/images/paint/m635/nero.png",
         "bianco": "/images/paint/m635/bianco.png",
-        "argento": "/images/paint/m635/argento.png"
+        "argento": "/images/paint/m635/argento.png",
+        "giallo": "/images/paint/m635/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 19308,
+        "selectedPixels": 19760,
         "visiblePixels": 34928,
-        "coverage": 55.3,
+        "coverage": 56.6,
         "maskOverlap": 99.6
       },
       "edgeRepair": {
@@ -872,6 +992,13 @@
         "seamComponents": 0,
         "selectedPixels": 19308,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 452,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -893,17 +1020,25 @@
         "verde": "/images/paint/z3m/verde.png",
         "nero": "/images/paint/z3m/nero.png",
         "bianco": "/images/paint/z3m/bianco.png",
-        "argento": "/images/paint/z3m/argento.png"
+        "argento": "/images/paint/z3m/argento.png",
+        "giallo": "/images/paint/z3m/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16689,
+        "selectedPixels": 17921,
         "visiblePixels": 32584,
-        "coverage": 51.2,
+        "coverage": 55,
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1232,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -924,17 +1059,25 @@
         "verde": "/images/paint/continental/verde.png",
         "nero": "/images/paint/continental/nero.png",
         "bianco": "/images/paint/continental/bianco.png",
-        "argento": "/images/paint/continental/argento.png"
+        "argento": "/images/paint/continental/argento.png",
+        "giallo": "/images/paint/continental/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17443,
+        "selectedPixels": 18737,
         "visiblePixels": 30368,
-        "coverage": 57.4,
+        "coverage": 61.7,
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1294,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -955,7 +1098,8 @@
         "verde": "/images/paint/eb110/verde.png",
         "nero": "/images/paint/eb110/nero.png",
         "bianco": "/images/paint/eb110/bianco.png",
-        "argento": "/images/paint/eb110/argento.png"
+        "argento": "/images/paint/eb110/argento.png",
+        "giallo": "/images/paint/eb110/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -975,6 +1119,7 @@
         "selectedPixels": 20304,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -995,7 +1140,8 @@
         "verde": "/images/paint/seven/verde.png",
         "nero": "/images/paint/seven/nero.png",
         "bianco": "/images/paint/seven/bianco.png",
-        "argento": "/images/paint/seven/argento.png"
+        "argento": "/images/paint/seven/argento.png",
+        "giallo": "/images/paint/seven/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1015,6 +1161,7 @@
         "selectedPixels": 9215,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1035,7 +1182,8 @@
         "verde": "/images/paint/camaro/verde.png",
         "nero": "/images/paint/camaro/nero.png",
         "bianco": "/images/paint/camaro/bianco.png",
-        "argento": "/images/paint/camaro/argento.png"
+        "argento": "/images/paint/camaro/argento.png",
+        "giallo": "/images/paint/camaro/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1055,6 +1203,7 @@
         "selectedPixels": 17744,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1075,7 +1224,8 @@
         "verde": "/images/paint/c4/verde.png",
         "nero": "/images/paint/c4/nero.png",
         "bianco": "/images/paint/c4/bianco.png",
-        "argento": "/images/paint/c4/argento.png"
+        "argento": "/images/paint/c4/argento.png",
+        "giallo": "/images/paint/c4/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1095,6 +1245,7 @@
         "selectedPixels": 19732,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1115,17 +1266,25 @@
         "verde": "/images/paint/c5/verde.png",
         "nero": "/images/paint/c5/nero.png",
         "bianco": "/images/paint/c5/bianco.png",
-        "argento": "/images/paint/c5/argento.png"
+        "argento": "/images/paint/c5/argento.png",
+        "giallo": "/images/paint/c5/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 21895,
+        "selectedPixels": 23127,
         "visiblePixels": 36136,
-        "coverage": 60.6,
+        "coverage": 64,
         "maskOverlap": 100
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1232,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -1146,17 +1305,25 @@
         "verde": "/images/paint/ax/verde.png",
         "nero": "/images/paint/ax/nero.png",
         "bianco": "/images/paint/ax/bianco.png",
-        "argento": "/images/paint/ax/argento.png"
+        "argento": "/images/paint/ax/argento.png",
+        "giallo": "/images/paint/ax/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12801,
+        "selectedPixels": 12215,
         "visiblePixels": 28164,
-        "coverage": 45.5,
+        "coverage": 43.4,
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 39,
+        "removed": 625,
+        "newSeams": 0,
+        "smoothing": true
+      },
       "reviewHints": []
     },
     {
@@ -1177,12 +1344,13 @@
         "verde": "/images/paint/saxo/verde.png",
         "nero": "/images/paint/saxo/nero.png",
         "bianco": "/images/paint/saxo/bianco.png",
-        "argento": "/images/paint/saxo/argento.png"
+        "argento": "/images/paint/saxo/argento.png",
+        "giallo": "/images/paint/saxo/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16054,
+        "selectedPixels": 16068,
         "visiblePixels": 32504,
         "coverage": 49.4,
         "maskOverlap": 99.9
@@ -1196,6 +1364,13 @@
         "seamComponents": 0,
         "selectedPixels": 16054,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 14,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -1217,14 +1392,15 @@
         "verde": "/images/paint/visa/verde.png",
         "nero": "/images/paint/visa/nero.png",
         "bianco": "/images/paint/visa/bianco.png",
-        "argento": "/images/paint/visa/argento.png"
+        "argento": "/images/paint/visa/argento.png",
+        "giallo": "/images/paint/visa/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 10948,
+        "selectedPixels": 11083,
         "visiblePixels": 27700,
-        "coverage": 39.5,
+        "coverage": 40,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -1236,6 +1412,13 @@
         "seamComponents": 3,
         "selectedPixels": 10948,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 481,
+        "removed": 346,
+        "newSeams": 297,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -1257,7 +1440,8 @@
         "verde": "/images/paint/xsara/verde.png",
         "nero": "/images/paint/xsara/nero.png",
         "bianco": "/images/paint/xsara/bianco.png",
-        "argento": "/images/paint/xsara/argento.png"
+        "argento": "/images/paint/xsara/argento.png",
+        "giallo": "/images/paint/xsara/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -1268,6 +1452,7 @@
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1288,7 +1473,8 @@
         "verde": "/images/paint/zx/verde.png",
         "nero": "/images/paint/zx/nero.png",
         "bianco": "/images/paint/zx/bianco.png",
-        "argento": "/images/paint/zx/argento.png"
+        "argento": "/images/paint/zx/argento.png",
+        "giallo": "/images/paint/zx/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -1299,6 +1485,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1319,14 +1506,15 @@
         "verde": "/images/paint/charade/verde.png",
         "nero": "/images/paint/charade/nero.png",
         "bianco": "/images/paint/charade/bianco.png",
-        "argento": "/images/paint/charade/argento.png"
+        "argento": "/images/paint/charade/argento.png",
+        "giallo": "/images/paint/charade/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12408,
+        "selectedPixels": 12889,
         "visiblePixels": 25800,
-        "coverage": 48.1,
+        "coverage": 50,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -1338,6 +1526,13 @@
         "seamComponents": 3,
         "selectedPixels": 12408,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 481,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -1359,7 +1554,8 @@
         "verde": "/images/paint/minit/verde.png",
         "nero": "/images/paint/minit/nero.png",
         "bianco": "/images/paint/minit/bianco.png",
-        "argento": "/images/paint/minit/argento.png"
+        "argento": "/images/paint/minit/argento.png",
+        "giallo": "/images/paint/minit/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1379,6 +1575,7 @@
         "selectedPixels": 8702,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1399,7 +1596,8 @@
         "verde": "/images/paint/pantera/verde.png",
         "nero": "/images/paint/pantera/nero.png",
         "bianco": "/images/paint/pantera/bianco.png",
-        "argento": "/images/paint/pantera/argento.png"
+        "argento": "/images/paint/pantera/argento.png",
+        "giallo": "/images/paint/pantera/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -1410,6 +1608,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1430,7 +1629,8 @@
         "verde": "/images/paint/viper/verde.png",
         "nero": "/images/paint/viper/nero.png",
         "bianco": "/images/paint/viper/bianco.png",
-        "argento": "/images/paint/viper/argento.png"
+        "argento": "/images/paint/viper/argento.png",
+        "giallo": "/images/paint/viper/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1450,6 +1650,7 @@
         "selectedPixels": 18325,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1470,7 +1671,8 @@
         "verde": "/images/paint/288/verde.png",
         "nero": "/images/paint/288/nero.png",
         "bianco": "/images/paint/288/bianco.png",
-        "argento": "/images/paint/288/argento.png"
+        "argento": "/images/paint/288/argento.png",
+        "giallo": "/images/paint/288/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1490,6 +1692,7 @@
         "selectedPixels": 21390,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1510,7 +1713,8 @@
         "verde": "/images/paint/348/verde.png",
         "nero": "/images/paint/348/nero.png",
         "bianco": "/images/paint/348/bianco.png",
-        "argento": "/images/paint/348/argento.png"
+        "argento": "/images/paint/348/argento.png",
+        "giallo": "/images/paint/348/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1530,6 +1734,7 @@
         "selectedPixels": 18157,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1550,7 +1755,8 @@
         "verde": "/images/paint/360/verde.png",
         "nero": "/images/paint/360/nero.png",
         "bianco": "/images/paint/360/bianco.png",
-        "argento": "/images/paint/360/argento.png"
+        "argento": "/images/paint/360/argento.png",
+        "giallo": "/images/paint/360/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1570,6 +1776,7 @@
         "selectedPixels": 21117,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1590,7 +1797,8 @@
         "verde": "/images/paint/550/verde.png",
         "nero": "/images/paint/550/nero.png",
         "bianco": "/images/paint/550/bianco.png",
-        "argento": "/images/paint/550/argento.png"
+        "argento": "/images/paint/550/argento.png",
+        "giallo": "/images/paint/550/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1610,6 +1818,7 @@
         "selectedPixels": 20643,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1630,7 +1839,8 @@
         "verde": "/images/paint/355/verde.png",
         "nero": "/images/paint/355/nero.png",
         "bianco": "/images/paint/355/bianco.png",
-        "argento": "/images/paint/355/argento.png"
+        "argento": "/images/paint/355/argento.png",
+        "giallo": "/images/paint/355/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1650,6 +1860,7 @@
         "selectedPixels": 21683,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1670,7 +1881,8 @@
         "verde": "/images/paint/f40/verde.png",
         "nero": "/images/paint/f40/nero.png",
         "bianco": "/images/paint/f40/bianco.png",
-        "argento": "/images/paint/f40/argento.png"
+        "argento": "/images/paint/f40/argento.png",
+        "giallo": "/images/paint/f40/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1690,6 +1902,7 @@
         "selectedPixels": 24639,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1710,7 +1923,8 @@
         "verde": "/images/paint/f50/verde.png",
         "nero": "/images/paint/f50/nero.png",
         "bianco": "/images/paint/f50/bianco.png",
-        "argento": "/images/paint/f50/argento.png"
+        "argento": "/images/paint/f50/argento.png",
+        "giallo": "/images/paint/f50/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1730,6 +1944,7 @@
         "selectedPixels": 24788,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1750,7 +1965,8 @@
         "verde": "/images/paint/testarossa/verde.png",
         "nero": "/images/paint/testarossa/nero.png",
         "bianco": "/images/paint/testarossa/bianco.png",
-        "argento": "/images/paint/testarossa/argento.png"
+        "argento": "/images/paint/testarossa/argento.png",
+        "giallo": "/images/paint/testarossa/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1770,6 +1986,7 @@
         "selectedPixels": 21397,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1790,7 +2007,8 @@
         "verde": "/images/paint/131/verde.png",
         "nero": "/images/paint/131/nero.png",
         "bianco": "/images/paint/131/bianco.png",
-        "argento": "/images/paint/131/argento.png"
+        "argento": "/images/paint/131/argento.png",
+        "giallo": "/images/paint/131/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -1810,6 +2028,7 @@
         "selectedPixels": 16724,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1830,14 +2049,15 @@
         "verde": "/images/paint/barchetta/verde.png",
         "nero": "/images/paint/barchetta/nero.png",
         "bianco": "/images/paint/barchetta/bianco.png",
-        "argento": "/images/paint/barchetta/argento.png"
+        "argento": "/images/paint/barchetta/argento.png",
+        "giallo": "/images/paint/barchetta/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15710,
+        "selectedPixels": 16019,
         "visiblePixels": 30196,
-        "coverage": 52,
+        "coverage": 53.1,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -1849,6 +2069,13 @@
         "seamComponents": 5,
         "selectedPixels": 15710,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 309,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -1870,7 +2097,8 @@
         "verde": "/images/paint/bravo/verde.png",
         "nero": "/images/paint/bravo/nero.png",
         "bianco": "/images/paint/bravo/bianco.png",
-        "argento": "/images/paint/bravo/argento.png"
+        "argento": "/images/paint/bravo/argento.png",
+        "giallo": "/images/paint/bravo/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -1881,6 +2109,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -1901,17 +2130,25 @@
         "verde": "/images/paint/cinquecento/verde.png",
         "nero": "/images/paint/cinquecento/nero.png",
         "bianco": "/images/paint/cinquecento/bianco.png",
-        "argento": "/images/paint/cinquecento/argento.png"
+        "argento": "/images/paint/cinquecento/argento.png",
+        "giallo": "/images/paint/cinquecento/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 14153,
+        "selectedPixels": 15025,
         "visiblePixels": 27820,
-        "coverage": 50.9,
+        "coverage": 54,
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 872,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -1932,17 +2169,25 @@
         "verde": "/images/paint/coupe/verde.png",
         "nero": "/images/paint/coupe/nero.png",
         "bianco": "/images/paint/coupe/bianco.png",
-        "argento": "/images/paint/coupe/argento.png"
+        "argento": "/images/paint/coupe/argento.png",
+        "giallo": "/images/paint/coupe/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15318,
+        "selectedPixels": 16791,
         "visiblePixels": 27900,
-        "coverage": 54.9,
+        "coverage": 60.2,
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1473,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -1963,14 +2208,15 @@
         "verde": "/images/paint/punto/verde.png",
         "nero": "/images/paint/punto/nero.png",
         "bianco": "/images/paint/punto/bianco.png",
-        "argento": "/images/paint/punto/argento.png"
+        "argento": "/images/paint/punto/argento.png",
+        "giallo": "/images/paint/punto/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 14863,
+        "selectedPixels": 15047,
         "visiblePixels": 25224,
-        "coverage": 58.9,
+        "coverage": 59.7,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -1982,6 +2228,13 @@
         "seamComponents": 0,
         "selectedPixels": 14863,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 184,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -2003,7 +2256,8 @@
         "verde": "/images/paint/ritmo/verde.png",
         "nero": "/images/paint/ritmo/nero.png",
         "bianco": "/images/paint/ritmo/bianco.png",
-        "argento": "/images/paint/ritmo/argento.png"
+        "argento": "/images/paint/ritmo/argento.png",
+        "giallo": "/images/paint/ritmo/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2023,6 +2277,7 @@
         "selectedPixels": 11049,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2043,14 +2298,22 @@
         "verde": "/images/paint/seicento/verde.png",
         "nero": "/images/paint/seicento/nero.png",
         "bianco": "/images/paint/seicento/bianco.png",
-        "argento": "/images/paint/seicento/argento.png"
+        "argento": "/images/paint/seicento/argento.png",
+        "giallo": "/images/paint/seicento/giallo.png"
       },
-      "approved": true,
-      "revision": 1,
+      "approved": false,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13112
+        "selectedPixels": 13231
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 135,
+        "removed": 16,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -2071,7 +2334,8 @@
         "verde": "/images/paint/tipo/verde.png",
         "nero": "/images/paint/tipo/nero.png",
         "bianco": "/images/paint/tipo/bianco.png",
-        "argento": "/images/paint/tipo/argento.png"
+        "argento": "/images/paint/tipo/argento.png",
+        "giallo": "/images/paint/tipo/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2082,6 +2346,7 @@
         "maskOverlap": 100
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2102,7 +2367,8 @@
         "verde": "/images/paint/uno/verde.png",
         "nero": "/images/paint/uno/nero.png",
         "bianco": "/images/paint/uno/bianco.png",
-        "argento": "/images/paint/uno/argento.png"
+        "argento": "/images/paint/uno/argento.png",
+        "giallo": "/images/paint/uno/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2113,6 +2379,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2133,7 +2400,8 @@
         "verde": "/images/paint/escortc/verde.png",
         "nero": "/images/paint/escortc/nero.png",
         "bianco": "/images/paint/escortc/bianco.png",
-        "argento": "/images/paint/escortc/argento.png"
+        "argento": "/images/paint/escortc/argento.png",
+        "giallo": "/images/paint/escortc/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2144,6 +2412,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2164,7 +2433,8 @@
         "verde": "/images/paint/escortt/verde.png",
         "nero": "/images/paint/escortt/nero.png",
         "bianco": "/images/paint/escortt/bianco.png",
-        "argento": "/images/paint/escortt/argento.png"
+        "argento": "/images/paint/escortt/argento.png",
+        "giallo": "/images/paint/escortt/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2175,6 +2445,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2195,7 +2466,8 @@
         "verde": "/images/paint/fiesta/verde.png",
         "nero": "/images/paint/fiesta/nero.png",
         "bianco": "/images/paint/fiesta/bianco.png",
-        "argento": "/images/paint/fiesta/argento.png"
+        "argento": "/images/paint/fiesta/argento.png",
+        "giallo": "/images/paint/fiesta/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2206,6 +2478,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2226,17 +2499,25 @@
         "verde": "/images/paint/mondeo/verde.png",
         "nero": "/images/paint/mondeo/nero.png",
         "bianco": "/images/paint/mondeo/bianco.png",
-        "argento": "/images/paint/mondeo/argento.png"
+        "argento": "/images/paint/mondeo/argento.png",
+        "giallo": "/images/paint/mondeo/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17594,
+        "selectedPixels": 19315,
         "visiblePixels": 27992,
-        "coverage": 62.9,
+        "coverage": 69,
         "maskOverlap": 99.4
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1721,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -2257,14 +2538,15 @@
         "verde": "/images/paint/mustang/verde.png",
         "nero": "/images/paint/mustang/nero.png",
         "bianco": "/images/paint/mustang/bianco.png",
-        "argento": "/images/paint/mustang/argento.png"
+        "argento": "/images/paint/mustang/argento.png",
+        "giallo": "/images/paint/mustang/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 22887,
+        "selectedPixels": 23355,
         "visiblePixels": 35976,
-        "coverage": 63.6,
+        "coverage": 64.9,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -2276,6 +2558,13 @@
         "seamComponents": 0,
         "selectedPixels": 22887,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 468,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -2297,14 +2586,15 @@
         "verde": "/images/paint/puma/verde.png",
         "nero": "/images/paint/puma/nero.png",
         "bianco": "/images/paint/puma/bianco.png",
-        "argento": "/images/paint/puma/argento.png"
+        "argento": "/images/paint/puma/argento.png",
+        "giallo": "/images/paint/puma/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12841,
+        "selectedPixels": 13094,
         "visiblePixels": 27136,
-        "coverage": 47.3,
+        "coverage": 48.3,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -2316,6 +2606,13 @@
         "seamComponents": 3,
         "selectedPixels": 12841,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 253,
+        "removed": 0,
+        "newSeams": 147,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -2337,7 +2634,8 @@
         "verde": "/images/paint/sierra4/verde.png",
         "nero": "/images/paint/sierra4/nero.png",
         "bianco": "/images/paint/sierra4/bianco.png",
-        "argento": "/images/paint/sierra4/argento.png"
+        "argento": "/images/paint/sierra4/argento.png",
+        "giallo": "/images/paint/sierra4/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2348,6 +2646,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2368,7 +2667,8 @@
         "verde": "/images/paint/sierrac/verde.png",
         "nero": "/images/paint/sierrac/nero.png",
         "bianco": "/images/paint/sierrac/bianco.png",
-        "argento": "/images/paint/sierrac/argento.png"
+        "argento": "/images/paint/sierrac/argento.png",
+        "giallo": "/images/paint/sierrac/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2388,6 +2688,7 @@
         "selectedPixels": 15554,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2408,14 +2709,15 @@
         "verde": "/images/paint/crx/verde.png",
         "nero": "/images/paint/crx/nero.png",
         "bianco": "/images/paint/crx/bianco.png",
-        "argento": "/images/paint/crx/argento.png"
+        "argento": "/images/paint/crx/argento.png",
+        "giallo": "/images/paint/crx/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 10965,
+        "selectedPixels": 12099,
         "visiblePixels": 27984,
-        "coverage": 39.2,
+        "coverage": 43.2,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -2427,6 +2729,13 @@
         "seamComponents": 9,
         "selectedPixels": 10965,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 1134,
+        "removed": 0,
+        "newSeams": 399,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -2448,7 +2757,8 @@
         "verde": "/images/paint/ef/verde.png",
         "nero": "/images/paint/ef/nero.png",
         "bianco": "/images/paint/ef/bianco.png",
-        "argento": "/images/paint/ef/argento.png"
+        "argento": "/images/paint/ef/argento.png",
+        "giallo": "/images/paint/ef/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2468,6 +2778,7 @@
         "selectedPixels": 17175,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2488,7 +2799,8 @@
         "verde": "/images/paint/eg/verde.png",
         "nero": "/images/paint/eg/nero.png",
         "bianco": "/images/paint/eg/bianco.png",
-        "argento": "/images/paint/eg/argento.png"
+        "argento": "/images/paint/eg/argento.png",
+        "giallo": "/images/paint/eg/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2508,6 +2820,7 @@
         "selectedPixels": 14824,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2528,7 +2841,8 @@
         "verde": "/images/paint/ek/verde.png",
         "nero": "/images/paint/ek/nero.png",
         "bianco": "/images/paint/ek/bianco.png",
-        "argento": "/images/paint/ek/argento.png"
+        "argento": "/images/paint/ek/argento.png",
+        "giallo": "/images/paint/ek/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2539,6 +2853,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2559,14 +2874,15 @@
         "verde": "/images/paint/integra/verde.png",
         "nero": "/images/paint/integra/nero.png",
         "bianco": "/images/paint/integra/bianco.png",
-        "argento": "/images/paint/integra/argento.png"
+        "argento": "/images/paint/integra/argento.png",
+        "giallo": "/images/paint/integra/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17732,
+        "selectedPixels": 18622,
         "visiblePixels": 35036,
-        "coverage": 50.6,
+        "coverage": 53.2,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -2578,6 +2894,13 @@
         "seamComponents": 6,
         "selectedPixels": 17732,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 890,
+        "removed": 0,
+        "newSeams": 186,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -2599,7 +2922,8 @@
         "verde": "/images/paint/nsx/verde.png",
         "nero": "/images/paint/nsx/nero.png",
         "bianco": "/images/paint/nsx/bianco.png",
-        "argento": "/images/paint/nsx/argento.png"
+        "argento": "/images/paint/nsx/argento.png",
+        "giallo": "/images/paint/nsx/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2619,6 +2943,7 @@
         "selectedPixels": 22207,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2639,7 +2964,8 @@
         "verde": "/images/paint/prelude/verde.png",
         "nero": "/images/paint/prelude/nero.png",
         "bianco": "/images/paint/prelude/bianco.png",
-        "argento": "/images/paint/prelude/argento.png"
+        "argento": "/images/paint/prelude/argento.png",
+        "giallo": "/images/paint/prelude/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2659,6 +2985,7 @@
         "selectedPixels": 22480,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2679,7 +3006,8 @@
         "verde": "/images/paint/s2000/verde.png",
         "nero": "/images/paint/s2000/nero.png",
         "bianco": "/images/paint/s2000/bianco.png",
-        "argento": "/images/paint/s2000/argento.png"
+        "argento": "/images/paint/s2000/argento.png",
+        "giallo": "/images/paint/s2000/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2690,6 +3018,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2710,17 +3039,25 @@
         "verde": "/images/paint/hyundai/verde.png",
         "nero": "/images/paint/hyundai/nero.png",
         "bianco": "/images/paint/hyundai/bianco.png",
-        "argento": "/images/paint/hyundai/argento.png"
+        "argento": "/images/paint/hyundai/argento.png",
+        "giallo": "/images/paint/hyundai/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 19670,
+        "selectedPixels": 20583,
         "visiblePixels": 35132,
-        "coverage": 56,
+        "coverage": 58.6,
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 913,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -2741,7 +3078,8 @@
         "verde": "/images/paint/xj/verde.png",
         "nero": "/images/paint/xj/nero.png",
         "bianco": "/images/paint/xj/bianco.png",
-        "argento": "/images/paint/xj/argento.png"
+        "argento": "/images/paint/xj/argento.png",
+        "giallo": "/images/paint/xj/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2752,6 +3090,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2772,17 +3111,25 @@
         "verde": "/images/paint/xj220/verde.png",
         "nero": "/images/paint/xj220/nero.png",
         "bianco": "/images/paint/xj220/bianco.png",
-        "argento": "/images/paint/xj220/argento.png"
+        "argento": "/images/paint/xj220/argento.png",
+        "giallo": "/images/paint/xj220/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 20804,
+        "selectedPixels": 23668,
         "visiblePixels": 35016,
-        "coverage": 59.4,
+        "coverage": 67.6,
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 2864,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -2803,7 +3150,8 @@
         "verde": "/images/paint/xkr/verde.png",
         "nero": "/images/paint/xkr/nero.png",
         "bianco": "/images/paint/xkr/bianco.png",
-        "argento": "/images/paint/xkr/argento.png"
+        "argento": "/images/paint/xkr/argento.png",
+        "giallo": "/images/paint/xkr/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2823,6 +3171,7 @@
         "selectedPixels": 16757,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2843,7 +3192,8 @@
         "verde": "/images/paint/countach/verde.png",
         "nero": "/images/paint/countach/nero.png",
         "bianco": "/images/paint/countach/bianco.png",
-        "argento": "/images/paint/countach/argento.png"
+        "argento": "/images/paint/countach/argento.png",
+        "giallo": "/images/paint/countach/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2863,6 +3213,7 @@
         "selectedPixels": 27999,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2883,7 +3234,8 @@
         "verde": "/images/paint/diablo/verde.png",
         "nero": "/images/paint/diablo/nero.png",
         "bianco": "/images/paint/diablo/bianco.png",
-        "argento": "/images/paint/diablo/argento.png"
+        "argento": "/images/paint/diablo/argento.png",
+        "giallo": "/images/paint/diablo/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -2903,6 +3255,7 @@
         "selectedPixels": 27163,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2923,7 +3276,8 @@
         "verde": "/images/paint/dedra/verde.png",
         "nero": "/images/paint/dedra/nero.png",
         "bianco": "/images/paint/dedra/bianco.png",
-        "argento": "/images/paint/dedra/argento.png"
+        "argento": "/images/paint/dedra/argento.png",
+        "giallo": "/images/paint/dedra/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -2934,6 +3288,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -2954,17 +3309,25 @@
         "verde": "/images/paint/evoluzione/verde.png",
         "nero": "/images/paint/evoluzione/nero.png",
         "bianco": "/images/paint/evoluzione/bianco.png",
-        "argento": "/images/paint/evoluzione/argento.png"
+        "argento": "/images/paint/evoluzione/argento.png",
+        "giallo": "/images/paint/evoluzione/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16451,
+        "selectedPixels": 17507,
         "visiblePixels": 29864,
-        "coverage": 55.1,
+        "coverage": 58.6,
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1056,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -2985,7 +3348,8 @@
         "verde": "/images/paint/delta16/verde.png",
         "nero": "/images/paint/delta16/nero.png",
         "bianco": "/images/paint/delta16/bianco.png",
-        "argento": "/images/paint/delta16/argento.png"
+        "argento": "/images/paint/delta16/argento.png",
+        "giallo": "/images/paint/delta16/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3005,6 +3369,7 @@
         "selectedPixels": 15819,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3025,17 +3390,25 @@
         "verde": "/images/paint/hpe/verde.png",
         "nero": "/images/paint/hpe/nero.png",
         "bianco": "/images/paint/hpe/bianco.png",
-        "argento": "/images/paint/hpe/argento.png"
+        "argento": "/images/paint/hpe/argento.png",
+        "giallo": "/images/paint/hpe/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 14025,
+        "selectedPixels": 13470,
         "visiblePixels": 24952,
-        "coverage": 56.2,
+        "coverage": 54,
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 24,
+        "removed": 579,
+        "newSeams": 0,
+        "smoothing": true
+      },
       "reviewHints": []
     },
     {
@@ -3056,7 +3429,8 @@
         "verde": "/images/paint/thema/verde.png",
         "nero": "/images/paint/thema/nero.png",
         "bianco": "/images/paint/thema/bianco.png",
-        "argento": "/images/paint/thema/argento.png"
+        "argento": "/images/paint/thema/argento.png",
+        "giallo": "/images/paint/thema/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3076,6 +3450,7 @@
         "selectedPixels": 14409,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3096,14 +3471,15 @@
         "verde": "/images/paint/is200/verde.png",
         "nero": "/images/paint/is200/nero.png",
         "bianco": "/images/paint/is200/bianco.png",
-        "argento": "/images/paint/is200/argento.png"
+        "argento": "/images/paint/is200/argento.png",
+        "giallo": "/images/paint/is200/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15272,
+        "selectedPixels": 15667,
         "visiblePixels": 30500,
-        "coverage": 50.1,
+        "coverage": 51.4,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -3115,6 +3491,13 @@
         "seamComponents": 6,
         "selectedPixels": 15272,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 395,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -3136,7 +3519,8 @@
         "verde": "/images/paint/elise/verde.png",
         "nero": "/images/paint/elise/nero.png",
         "bianco": "/images/paint/elise/bianco.png",
-        "argento": "/images/paint/elise/argento.png"
+        "argento": "/images/paint/elise/argento.png",
+        "giallo": "/images/paint/elise/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3147,6 +3531,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3167,7 +3552,8 @@
         "verde": "/images/paint/esprit/verde.png",
         "nero": "/images/paint/esprit/nero.png",
         "bianco": "/images/paint/esprit/bianco.png",
-        "argento": "/images/paint/esprit/argento.png"
+        "argento": "/images/paint/esprit/argento.png",
+        "giallo": "/images/paint/esprit/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3178,6 +3564,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3198,14 +3585,15 @@
         "verde": "/images/paint/exige/verde.png",
         "nero": "/images/paint/exige/nero.png",
         "bianco": "/images/paint/exige/bianco.png",
-        "argento": "/images/paint/exige/argento.png"
+        "argento": "/images/paint/exige/argento.png",
+        "giallo": "/images/paint/exige/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17138,
+        "selectedPixels": 17978,
         "visiblePixels": 32748,
-        "coverage": 52.3,
+        "coverage": 54.9,
         "maskOverlap": 99.5
       },
       "edgeRepair": {
@@ -3217,6 +3605,13 @@
         "seamComponents": 6,
         "selectedPixels": 17138,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 840,
+        "removed": 0,
+        "newSeams": 574,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -3238,7 +3633,8 @@
         "verde": "/images/paint/mgf/verde.png",
         "nero": "/images/paint/mgf/nero.png",
         "bianco": "/images/paint/mgf/bianco.png",
-        "argento": "/images/paint/mgf/argento.png"
+        "argento": "/images/paint/mgf/argento.png",
+        "giallo": "/images/paint/mgf/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3249,6 +3645,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3269,7 +3666,8 @@
         "verde": "/images/paint/zr/verde.png",
         "nero": "/images/paint/zr/nero.png",
         "bianco": "/images/paint/zr/bianco.png",
-        "argento": "/images/paint/zr/argento.png"
+        "argento": "/images/paint/zr/argento.png",
+        "giallo": "/images/paint/zr/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3289,6 +3687,7 @@
         "selectedPixels": 17235,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3309,17 +3708,25 @@
         "verde": "/images/paint/zs/verde.png",
         "nero": "/images/paint/zs/nero.png",
         "bianco": "/images/paint/zs/bianco.png",
-        "argento": "/images/paint/zs/argento.png"
+        "argento": "/images/paint/zs/argento.png",
+        "giallo": "/images/paint/zs/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17208,
+        "selectedPixels": 18541,
         "visiblePixels": 34020,
-        "coverage": 50.6,
+        "coverage": 54.5,
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1333,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -3340,14 +3747,15 @@
         "verde": "/images/paint/3200/verde.png",
         "nero": "/images/paint/3200/nero.png",
         "bianco": "/images/paint/3200/bianco.png",
-        "argento": "/images/paint/3200/argento.png"
+        "argento": "/images/paint/3200/argento.png",
+        "giallo": "/images/paint/3200/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16858,
+        "selectedPixels": 17462,
         "visiblePixels": 33016,
-        "coverage": 51.1,
+        "coverage": 52.9,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -3359,6 +3767,13 @@
         "seamComponents": 5,
         "selectedPixels": 16858,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 604,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -3380,7 +3795,8 @@
         "verde": "/images/paint/biturbo/verde.png",
         "nero": "/images/paint/biturbo/nero.png",
         "bianco": "/images/paint/biturbo/bianco.png",
-        "argento": "/images/paint/biturbo/argento.png"
+        "argento": "/images/paint/biturbo/argento.png",
+        "giallo": "/images/paint/biturbo/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3400,6 +3816,7 @@
         "selectedPixels": 20177,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3420,7 +3837,8 @@
         "verde": "/images/paint/shamal/verde.png",
         "nero": "/images/paint/shamal/nero.png",
         "bianco": "/images/paint/shamal/bianco.png",
-        "argento": "/images/paint/shamal/argento.png"
+        "argento": "/images/paint/shamal/argento.png",
+        "giallo": "/images/paint/shamal/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3440,6 +3858,7 @@
         "selectedPixels": 21712,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3460,17 +3879,25 @@
         "verde": "/images/paint/323/verde.png",
         "nero": "/images/paint/323/nero.png",
         "bianco": "/images/paint/323/bianco.png",
-        "argento": "/images/paint/323/argento.png"
+        "argento": "/images/paint/323/argento.png",
+        "giallo": "/images/paint/323/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15657,
+        "selectedPixels": 15203,
         "visiblePixels": 30148,
-        "coverage": 51.9,
+        "coverage": 50.4,
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 21,
+        "removed": 475,
+        "newSeams": 0,
+        "smoothing": true
+      },
       "reviewHints": []
     },
     {
@@ -3491,7 +3918,8 @@
         "verde": "/images/paint/lantis/verde.png",
         "nero": "/images/paint/lantis/nero.png",
         "bianco": "/images/paint/lantis/bianco.png",
-        "argento": "/images/paint/lantis/argento.png"
+        "argento": "/images/paint/lantis/argento.png",
+        "giallo": "/images/paint/lantis/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3511,6 +3939,7 @@
         "selectedPixels": 14106,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3531,7 +3960,8 @@
         "verde": "/images/paint/mx3/verde.png",
         "nero": "/images/paint/mx3/nero.png",
         "bianco": "/images/paint/mx3/bianco.png",
-        "argento": "/images/paint/mx3/argento.png"
+        "argento": "/images/paint/mx3/argento.png",
+        "giallo": "/images/paint/mx3/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3551,6 +3981,7 @@
         "selectedPixels": 18017,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3571,17 +4002,25 @@
         "verde": "/images/paint/na/verde.png",
         "nero": "/images/paint/na/nero.png",
         "bianco": "/images/paint/na/bianco.png",
-        "argento": "/images/paint/na/argento.png"
+        "argento": "/images/paint/na/argento.png",
+        "giallo": "/images/paint/na/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13992,
+        "selectedPixels": 14707,
         "visiblePixels": 30428,
-        "coverage": 46,
+        "coverage": 48.3,
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 715,
+        "removed": 0,
+        "newSeams": 682,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -3602,7 +4041,8 @@
         "verde": "/images/paint/nb/verde.png",
         "nero": "/images/paint/nb/nero.png",
         "bianco": "/images/paint/nb/bianco.png",
-        "argento": "/images/paint/nb/argento.png"
+        "argento": "/images/paint/nb/argento.png",
+        "giallo": "/images/paint/nb/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3622,6 +4062,7 @@
         "selectedPixels": 18669,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3642,7 +4083,8 @@
         "verde": "/images/paint/fc/verde.png",
         "nero": "/images/paint/fc/nero.png",
         "bianco": "/images/paint/fc/bianco.png",
-        "argento": "/images/paint/fc/argento.png"
+        "argento": "/images/paint/fc/argento.png",
+        "giallo": "/images/paint/fc/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3653,6 +4095,7 @@
         "maskOverlap": 98.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3673,7 +4116,8 @@
         "verde": "/images/paint/fd/verde.png",
         "nero": "/images/paint/fd/nero.png",
         "bianco": "/images/paint/fd/bianco.png",
-        "argento": "/images/paint/fd/argento.png"
+        "argento": "/images/paint/fd/argento.png",
+        "giallo": "/images/paint/fd/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3693,6 +4137,7 @@
         "selectedPixels": 22262,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3713,7 +4158,8 @@
         "verde": "/images/paint/f1/verde.png",
         "nero": "/images/paint/f1/nero.png",
         "bianco": "/images/paint/f1/bianco.png",
-        "argento": "/images/paint/f1/argento.png"
+        "argento": "/images/paint/f1/argento.png",
+        "giallo": "/images/paint/f1/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3724,6 +4170,7 @@
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3744,7 +4191,8 @@
         "verde": "/images/paint/190/verde.png",
         "nero": "/images/paint/190/nero.png",
         "bianco": "/images/paint/190/bianco.png",
-        "argento": "/images/paint/190/argento.png"
+        "argento": "/images/paint/190/argento.png",
+        "giallo": "/images/paint/190/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3755,6 +4203,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3775,14 +4224,15 @@
         "verde": "/images/paint/c43/verde.png",
         "nero": "/images/paint/c43/nero.png",
         "bianco": "/images/paint/c43/bianco.png",
-        "argento": "/images/paint/c43/argento.png"
+        "argento": "/images/paint/c43/argento.png",
+        "giallo": "/images/paint/c43/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16584,
+        "selectedPixels": 17048,
         "visiblePixels": 33924,
-        "coverage": 48.9,
+        "coverage": 50.3,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -3794,6 +4244,13 @@
         "seamComponents": 7,
         "selectedPixels": 16584,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 464,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -3815,7 +4272,8 @@
         "verde": "/images/paint/clk/verde.png",
         "nero": "/images/paint/clk/nero.png",
         "bianco": "/images/paint/clk/bianco.png",
-        "argento": "/images/paint/clk/argento.png"
+        "argento": "/images/paint/clk/argento.png",
+        "giallo": "/images/paint/clk/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3826,6 +4284,7 @@
         "maskOverlap": 100
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3846,14 +4305,15 @@
         "verde": "/images/paint/slk/verde.png",
         "nero": "/images/paint/slk/nero.png",
         "bianco": "/images/paint/slk/bianco.png",
-        "argento": "/images/paint/slk/argento.png"
+        "argento": "/images/paint/slk/argento.png",
+        "giallo": "/images/paint/slk/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15305,
+        "selectedPixels": 16058,
         "visiblePixels": 28904,
-        "coverage": 53,
+        "coverage": 55.6,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -3865,6 +4325,13 @@
         "seamComponents": 3,
         "selectedPixels": 15305,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 753,
+        "removed": 0,
+        "newSeams": 603,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -3886,7 +4353,8 @@
         "verde": "/images/paint/cooper/verde.png",
         "nero": "/images/paint/cooper/nero.png",
         "bianco": "/images/paint/cooper/bianco.png",
-        "argento": "/images/paint/cooper/argento.png"
+        "argento": "/images/paint/cooper/argento.png",
+        "giallo": "/images/paint/cooper/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3897,6 +4365,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3917,7 +4386,8 @@
         "verde": "/images/paint/3000gt/verde.png",
         "nero": "/images/paint/3000gt/nero.png",
         "bianco": "/images/paint/3000gt/bianco.png",
-        "argento": "/images/paint/3000gt/argento.png"
+        "argento": "/images/paint/3000gt/argento.png",
+        "giallo": "/images/paint/3000gt/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -3937,6 +4407,7 @@
         "selectedPixels": 20842,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3957,7 +4428,8 @@
         "verde": "/images/paint/colt/verde.png",
         "nero": "/images/paint/colt/nero.png",
         "bianco": "/images/paint/colt/bianco.png",
-        "argento": "/images/paint/colt/argento.png"
+        "argento": "/images/paint/colt/argento.png",
+        "giallo": "/images/paint/colt/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3968,6 +4440,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -3988,7 +4461,8 @@
         "verde": "/images/paint/eclipse/verde.png",
         "nero": "/images/paint/eclipse/nero.png",
         "bianco": "/images/paint/eclipse/bianco.png",
-        "argento": "/images/paint/eclipse/argento.png"
+        "argento": "/images/paint/eclipse/argento.png",
+        "giallo": "/images/paint/eclipse/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -3999,6 +4473,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4019,14 +4494,15 @@
         "verde": "/images/paint/evo5/verde.png",
         "nero": "/images/paint/evo5/nero.png",
         "bianco": "/images/paint/evo5/bianco.png",
-        "argento": "/images/paint/evo5/argento.png"
+        "argento": "/images/paint/evo5/argento.png",
+        "giallo": "/images/paint/evo5/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17393,
+        "selectedPixels": 18215,
         "visiblePixels": 33868,
-        "coverage": 51.4,
+        "coverage": 53.8,
         "maskOverlap": 99.4
       },
       "edgeRepair": {
@@ -4038,6 +4514,13 @@
         "seamComponents": 5,
         "selectedPixels": 17393,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 822,
+        "removed": 0,
+        "newSeams": 405,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4059,17 +4542,25 @@
         "verde": "/images/paint/evo6/verde.png",
         "nero": "/images/paint/evo6/nero.png",
         "bianco": "/images/paint/evo6/bianco.png",
-        "argento": "/images/paint/evo6/argento.png"
+        "argento": "/images/paint/evo6/argento.png",
+        "giallo": "/images/paint/evo6/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16561,
+        "selectedPixels": 17664,
         "visiblePixels": 30992,
-        "coverage": 53.4,
+        "coverage": 57,
         "maskOverlap": 99.7
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1103,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -4090,7 +4581,8 @@
         "verde": "/images/paint/evo7/verde.png",
         "nero": "/images/paint/evo7/nero.png",
         "bianco": "/images/paint/evo7/bianco.png",
-        "argento": "/images/paint/evo7/argento.png"
+        "argento": "/images/paint/evo7/argento.png",
+        "giallo": "/images/paint/evo7/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -4110,6 +4602,7 @@
         "selectedPixels": 21792,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4130,17 +4623,25 @@
         "verde": "/images/paint/180sx/verde.png",
         "nero": "/images/paint/180sx/nero.png",
         "bianco": "/images/paint/180sx/bianco.png",
-        "argento": "/images/paint/180sx/argento.png"
+        "argento": "/images/paint/180sx/argento.png",
+        "giallo": "/images/paint/180sx/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 18047,
+        "selectedPixels": 17574,
         "visiblePixels": 33244,
-        "coverage": 54.3,
+        "coverage": 52.9,
         "maskOverlap": 99.1
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 36,
+        "removed": 509,
+        "newSeams": 0,
+        "smoothing": true
+      },
       "reviewHints": []
     },
     {
@@ -4161,14 +4662,15 @@
         "verde": "/images/paint/s13/verde.png",
         "nero": "/images/paint/s13/nero.png",
         "bianco": "/images/paint/s13/bianco.png",
-        "argento": "/images/paint/s13/argento.png"
+        "argento": "/images/paint/s13/argento.png",
+        "giallo": "/images/paint/s13/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 11562,
+        "selectedPixels": 12081,
         "visiblePixels": 32636,
-        "coverage": 35.4,
+        "coverage": 37,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -4180,6 +4682,13 @@
         "seamComponents": 4,
         "selectedPixels": 11562,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 519,
+        "removed": 0,
+        "newSeams": 335,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4201,14 +4710,15 @@
         "verde": "/images/paint/s14/verde.png",
         "nero": "/images/paint/s14/nero.png",
         "bianco": "/images/paint/s14/bianco.png",
-        "argento": "/images/paint/s14/argento.png"
+        "argento": "/images/paint/s14/argento.png",
+        "giallo": "/images/paint/s14/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 14700,
+        "selectedPixels": 15012,
         "visiblePixels": 27528,
-        "coverage": 53.4,
+        "coverage": 54.5,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -4220,6 +4730,13 @@
         "seamComponents": 7,
         "selectedPixels": 14700,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 312,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4241,14 +4758,15 @@
         "verde": "/images/paint/300zx/verde.png",
         "nero": "/images/paint/300zx/nero.png",
         "bianco": "/images/paint/300zx/bianco.png",
-        "argento": "/images/paint/300zx/argento.png"
+        "argento": "/images/paint/300zx/argento.png",
+        "giallo": "/images/paint/300zx/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17964,
+        "selectedPixels": 19393,
         "visiblePixels": 29396,
-        "coverage": 61.1,
+        "coverage": 66,
         "maskOverlap": 100
       },
       "edgeRepair": {
@@ -4260,6 +4778,13 @@
         "seamComponents": 0,
         "selectedPixels": 17964,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 1429,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4281,7 +4806,8 @@
         "verde": "/images/paint/almera/verde.png",
         "nero": "/images/paint/almera/nero.png",
         "bianco": "/images/paint/almera/bianco.png",
-        "argento": "/images/paint/almera/argento.png"
+        "argento": "/images/paint/almera/argento.png",
+        "giallo": "/images/paint/almera/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -4301,6 +4827,7 @@
         "selectedPixels": 12689,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4321,7 +4848,8 @@
         "verde": "/images/paint/micra/verde.png",
         "nero": "/images/paint/micra/nero.png",
         "bianco": "/images/paint/micra/bianco.png",
-        "argento": "/images/paint/micra/argento.png"
+        "argento": "/images/paint/micra/argento.png",
+        "giallo": "/images/paint/micra/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -4341,6 +4869,7 @@
         "selectedPixels": 15473,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4361,7 +4890,8 @@
         "verde": "/images/paint/primera/verde.png",
         "nero": "/images/paint/primera/nero.png",
         "bianco": "/images/paint/primera/bianco.png",
-        "argento": "/images/paint/primera/argento.png"
+        "argento": "/images/paint/primera/argento.png",
+        "giallo": "/images/paint/primera/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -4381,6 +4911,7 @@
         "selectedPixels": 20540,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4401,14 +4932,15 @@
         "verde": "/images/paint/r32/verde.png",
         "nero": "/images/paint/r32/nero.png",
         "bianco": "/images/paint/r32/bianco.png",
-        "argento": "/images/paint/r32/argento.png"
+        "argento": "/images/paint/r32/argento.png",
+        "giallo": "/images/paint/r32/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15648,
+        "selectedPixels": 16270,
         "visiblePixels": 29108,
-        "coverage": 53.8,
+        "coverage": 55.9,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -4420,6 +4952,13 @@
         "seamComponents": 4,
         "selectedPixels": 15648,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 622,
+        "removed": 0,
+        "newSeams": 271,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4441,7 +4980,8 @@
         "verde": "/images/paint/r33/verde.png",
         "nero": "/images/paint/r33/nero.png",
         "bianco": "/images/paint/r33/bianco.png",
-        "argento": "/images/paint/r33/argento.png"
+        "argento": "/images/paint/r33/argento.png",
+        "giallo": "/images/paint/r33/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -4452,6 +4992,7 @@
         "maskOverlap": 99.7
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4472,7 +5013,8 @@
         "verde": "/images/paint/sunny/verde.png",
         "nero": "/images/paint/sunny/nero.png",
         "bianco": "/images/paint/sunny/bianco.png",
-        "argento": "/images/paint/sunny/argento.png"
+        "argento": "/images/paint/sunny/argento.png",
+        "giallo": "/images/paint/sunny/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -4483,6 +5025,7 @@
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4503,7 +5046,8 @@
         "verde": "/images/paint/astrac/verde.png",
         "nero": "/images/paint/astrac/nero.png",
         "bianco": "/images/paint/astrac/bianco.png",
-        "argento": "/images/paint/astrac/argento.png"
+        "argento": "/images/paint/astrac/argento.png",
+        "giallo": "/images/paint/astrac/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -4523,6 +5067,7 @@
         "selectedPixels": 18150,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4543,17 +5088,25 @@
         "verde": "/images/paint/astrag/verde.png",
         "nero": "/images/paint/astrag/nero.png",
         "bianco": "/images/paint/astrag/bianco.png",
-        "argento": "/images/paint/astrag/argento.png"
+        "argento": "/images/paint/astrag/argento.png",
+        "giallo": "/images/paint/astrag/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13312,
+        "selectedPixels": 14611,
         "visiblePixels": 27592,
-        "coverage": 48.2,
+        "coverage": 53,
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1299,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -4574,7 +5127,8 @@
         "verde": "/images/paint/opc/verde.png",
         "nero": "/images/paint/opc/nero.png",
         "bianco": "/images/paint/opc/bianco.png",
-        "argento": "/images/paint/opc/argento.png"
+        "argento": "/images/paint/opc/argento.png",
+        "giallo": "/images/paint/opc/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -4585,6 +5139,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4605,14 +5160,15 @@
         "verde": "/images/paint/calibra/verde.png",
         "nero": "/images/paint/calibra/nero.png",
         "bianco": "/images/paint/calibra/bianco.png",
-        "argento": "/images/paint/calibra/argento.png"
+        "argento": "/images/paint/calibra/argento.png",
+        "giallo": "/images/paint/calibra/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 18828,
+        "selectedPixels": 19469,
         "visiblePixels": 33500,
-        "coverage": 56.2,
+        "coverage": 58.1,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -4624,6 +5180,13 @@
         "seamComponents": 0,
         "selectedPixels": 18828,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 641,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4645,7 +5208,8 @@
         "verde": "/images/paint/corsa1/verde.png",
         "nero": "/images/paint/corsa1/nero.png",
         "bianco": "/images/paint/corsa1/bianco.png",
-        "argento": "/images/paint/corsa1/argento.png"
+        "argento": "/images/paint/corsa1/argento.png",
+        "giallo": "/images/paint/corsa1/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -4665,6 +5229,7 @@
         "selectedPixels": 14925,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4685,14 +5250,15 @@
         "verde": "/images/paint/corsa2/verde.png",
         "nero": "/images/paint/corsa2/nero.png",
         "bianco": "/images/paint/corsa2/bianco.png",
-        "argento": "/images/paint/corsa2/argento.png"
+        "argento": "/images/paint/corsa2/argento.png",
+        "giallo": "/images/paint/corsa2/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13576,
+        "selectedPixels": 14278,
         "visiblePixels": 26376,
-        "coverage": 51.5,
+        "coverage": 54.1,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -4704,6 +5270,13 @@
         "seamComponents": 4,
         "selectedPixels": 13576,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 702,
+        "removed": 0,
+        "newSeams": 301,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4725,14 +5298,15 @@
         "verde": "/images/paint/kadett/verde.png",
         "nero": "/images/paint/kadett/nero.png",
         "bianco": "/images/paint/kadett/bianco.png",
-        "argento": "/images/paint/kadett/argento.png"
+        "argento": "/images/paint/kadett/argento.png",
+        "giallo": "/images/paint/kadett/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13169,
+        "selectedPixels": 13924,
         "visiblePixels": 31804,
-        "coverage": 41.4,
+        "coverage": 43.8,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -4744,6 +5318,13 @@
         "seamComponents": 4,
         "selectedPixels": 13169,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 755,
+        "removed": 0,
+        "newSeams": 517,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4765,14 +5346,15 @@
         "verde": "/images/paint/manta/verde.png",
         "nero": "/images/paint/manta/nero.png",
         "bianco": "/images/paint/manta/bianco.png",
-        "argento": "/images/paint/manta/argento.png"
+        "argento": "/images/paint/manta/argento.png",
+        "giallo": "/images/paint/manta/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12794,
+        "selectedPixels": 13056,
         "visiblePixels": 27286,
-        "coverage": 46.9,
+        "coverage": 47.8,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -4784,6 +5366,13 @@
         "seamComponents": 4,
         "selectedPixels": 12794,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 262,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4805,7 +5394,8 @@
         "verde": "/images/paint/omega/verde.png",
         "nero": "/images/paint/omega/nero.png",
         "bianco": "/images/paint/omega/bianco.png",
-        "argento": "/images/paint/omega/argento.png"
+        "argento": "/images/paint/omega/argento.png",
+        "giallo": "/images/paint/omega/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -4816,6 +5406,7 @@
         "maskOverlap": 99.3
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4836,14 +5427,15 @@
         "verde": "/images/paint/speedster/verde.png",
         "nero": "/images/paint/speedster/nero.png",
         "bianco": "/images/paint/speedster/bianco.png",
-        "argento": "/images/paint/speedster/argento.png"
+        "argento": "/images/paint/speedster/argento.png",
+        "giallo": "/images/paint/speedster/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12496,
+        "selectedPixels": 13177,
         "visiblePixels": 28310,
-        "coverage": 44.1,
+        "coverage": 46.5,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -4855,6 +5447,13 @@
         "seamComponents": 3,
         "selectedPixels": 12496,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 681,
+        "removed": 0,
+        "newSeams": 519,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4876,7 +5475,8 @@
         "verde": "/images/paint/tigra/verde.png",
         "nero": "/images/paint/tigra/nero.png",
         "bianco": "/images/paint/tigra/bianco.png",
-        "argento": "/images/paint/tigra/argento.png"
+        "argento": "/images/paint/tigra/argento.png",
+        "giallo": "/images/paint/tigra/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -4887,6 +5487,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4907,14 +5508,15 @@
         "verde": "/images/paint/zonda/verde.png",
         "nero": "/images/paint/zonda/nero.png",
         "bianco": "/images/paint/zonda/bianco.png",
-        "argento": "/images/paint/zonda/argento.png"
+        "argento": "/images/paint/zonda/argento.png",
+        "giallo": "/images/paint/zonda/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 19122,
+        "selectedPixels": 19915,
         "visiblePixels": 38048,
-        "coverage": 50.3,
+        "coverage": 52.3,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -4926,6 +5528,13 @@
         "seamComponents": 12,
         "selectedPixels": 19122,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 793,
+        "removed": 0,
+        "newSeams": 482,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -4947,7 +5556,8 @@
         "verde": "/images/paint/106/verde.png",
         "nero": "/images/paint/106/nero.png",
         "bianco": "/images/paint/106/bianco.png",
-        "argento": "/images/paint/106/argento.png"
+        "argento": "/images/paint/106/argento.png",
+        "giallo": "/images/paint/106/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -4958,6 +5568,7 @@
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -4978,14 +5589,15 @@
         "verde": "/images/paint/rallye/verde.png",
         "nero": "/images/paint/rallye/nero.png",
         "bianco": "/images/paint/rallye/bianco.png",
-        "argento": "/images/paint/rallye/argento.png"
+        "argento": "/images/paint/rallye/argento.png",
+        "giallo": "/images/paint/rallye/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15456,
+        "selectedPixels": 15991,
         "visiblePixels": 32044,
-        "coverage": 48.2,
+        "coverage": 49.9,
         "maskOverlap": 100
       },
       "edgeRepair": {
@@ -4997,6 +5609,13 @@
         "seamComponents": 7,
         "selectedPixels": 15456,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 535,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5018,14 +5637,15 @@
         "verde": "/images/paint/205/verde.png",
         "nero": "/images/paint/205/nero.png",
         "bianco": "/images/paint/205/bianco.png",
-        "argento": "/images/paint/205/argento.png"
+        "argento": "/images/paint/205/argento.png",
+        "giallo": "/images/paint/205/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12295,
+        "selectedPixels": 12732,
         "visiblePixels": 30342,
-        "coverage": 40.5,
+        "coverage": 42,
         "maskOverlap": 99.6
       },
       "edgeRepair": {
@@ -5037,6 +5657,13 @@
         "seamComponents": 8,
         "selectedPixels": 12295,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 437,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5058,14 +5685,15 @@
         "verde": "/images/paint/206/verde.png",
         "nero": "/images/paint/206/nero.png",
         "bianco": "/images/paint/206/bianco.png",
-        "argento": "/images/paint/206/argento.png"
+        "argento": "/images/paint/206/argento.png",
+        "giallo": "/images/paint/206/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12747,
+        "selectedPixels": 12996,
         "visiblePixels": 24336,
-        "coverage": 52.4,
+        "coverage": 53.4,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -5077,6 +5705,13 @@
         "seamComponents": 3,
         "selectedPixels": 12747,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 249,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5098,7 +5733,8 @@
         "verde": "/images/paint/306/verde.png",
         "nero": "/images/paint/306/nero.png",
         "bianco": "/images/paint/306/bianco.png",
-        "argento": "/images/paint/306/argento.png"
+        "argento": "/images/paint/306/argento.png",
+        "giallo": "/images/paint/306/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5118,6 +5754,7 @@
         "selectedPixels": 17744,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5138,7 +5775,8 @@
         "verde": "/images/paint/309/verde.png",
         "nero": "/images/paint/309/nero.png",
         "bianco": "/images/paint/309/bianco.png",
-        "argento": "/images/paint/309/argento.png"
+        "argento": "/images/paint/309/argento.png",
+        "giallo": "/images/paint/309/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -5149,6 +5787,7 @@
         "maskOverlap": 99.3
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5169,7 +5808,8 @@
         "verde": "/images/paint/405/verde.png",
         "nero": "/images/paint/405/nero.png",
         "bianco": "/images/paint/405/bianco.png",
-        "argento": "/images/paint/405/argento.png"
+        "argento": "/images/paint/405/argento.png",
+        "giallo": "/images/paint/405/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5189,6 +5829,7 @@
         "selectedPixels": 18667,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5209,7 +5850,8 @@
         "verde": "/images/paint/406/verde.png",
         "nero": "/images/paint/406/nero.png",
         "bianco": "/images/paint/406/bianco.png",
-        "argento": "/images/paint/406/argento.png"
+        "argento": "/images/paint/406/argento.png",
+        "giallo": "/images/paint/406/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5229,6 +5871,7 @@
         "selectedPixels": 17810,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5249,7 +5892,8 @@
         "verde": "/images/paint/911/verde.png",
         "nero": "/images/paint/911/nero.png",
         "bianco": "/images/paint/911/bianco.png",
-        "argento": "/images/paint/911/argento.png"
+        "argento": "/images/paint/911/argento.png",
+        "giallo": "/images/paint/911/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -5260,6 +5904,7 @@
         "maskOverlap": 99.4
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5280,7 +5925,8 @@
         "verde": "/images/paint/gt1/verde.png",
         "nero": "/images/paint/gt1/nero.png",
         "bianco": "/images/paint/gt1/bianco.png",
-        "argento": "/images/paint/gt1/argento.png"
+        "argento": "/images/paint/gt1/argento.png",
+        "giallo": "/images/paint/gt1/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5300,6 +5946,7 @@
         "selectedPixels": 17935,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5320,14 +5967,15 @@
         "verde": "/images/paint/930/verde.png",
         "nero": "/images/paint/930/nero.png",
         "bianco": "/images/paint/930/bianco.png",
-        "argento": "/images/paint/930/argento.png"
+        "argento": "/images/paint/930/argento.png",
+        "giallo": "/images/paint/930/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12548,
+        "selectedPixels": 13013,
         "visiblePixels": 29708,
-        "coverage": 42.2,
+        "coverage": 43.8,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -5339,6 +5987,13 @@
         "seamComponents": 4,
         "selectedPixels": 12548,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 465,
+        "removed": 0,
+        "newSeams": 214,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5360,7 +6015,8 @@
         "verde": "/images/paint/944/verde.png",
         "nero": "/images/paint/944/nero.png",
         "bianco": "/images/paint/944/bianco.png",
-        "argento": "/images/paint/944/argento.png"
+        "argento": "/images/paint/944/argento.png",
+        "giallo": "/images/paint/944/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5380,6 +6036,7 @@
         "selectedPixels": 20119,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5400,7 +6057,8 @@
         "verde": "/images/paint/959/verde.png",
         "nero": "/images/paint/959/nero.png",
         "bianco": "/images/paint/959/bianco.png",
-        "argento": "/images/paint/959/argento.png"
+        "argento": "/images/paint/959/argento.png",
+        "giallo": "/images/paint/959/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5420,6 +6078,7 @@
         "selectedPixels": 15023,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5440,14 +6099,15 @@
         "verde": "/images/paint/964/verde.png",
         "nero": "/images/paint/964/nero.png",
         "bianco": "/images/paint/964/bianco.png",
-        "argento": "/images/paint/964/argento.png"
+        "argento": "/images/paint/964/argento.png",
+        "giallo": "/images/paint/964/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16071,
+        "selectedPixels": 16307,
         "visiblePixels": 27806,
-        "coverage": 57.8,
+        "coverage": 58.6,
         "maskOverlap": 99.2
       },
       "edgeRepair": {
@@ -5459,6 +6119,13 @@
         "seamComponents": 0,
         "selectedPixels": 16071,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 236,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5480,17 +6147,25 @@
         "verde": "/images/paint/964t/verde.png",
         "nero": "/images/paint/964t/nero.png",
         "bianco": "/images/paint/964t/bianco.png",
-        "argento": "/images/paint/964t/argento.png"
+        "argento": "/images/paint/964t/argento.png",
+        "giallo": "/images/paint/964t/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13443,
+        "selectedPixels": 14623,
         "visiblePixels": 29892,
-        "coverage": 45,
+        "coverage": 48.9,
         "maskOverlap": 99.7
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1180,
+        "removed": 0,
+        "newSeams": 1035,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -5511,7 +6186,8 @@
         "verde": "/images/paint/968/verde.png",
         "nero": "/images/paint/968/nero.png",
         "bianco": "/images/paint/968/bianco.png",
-        "argento": "/images/paint/968/argento.png"
+        "argento": "/images/paint/968/argento.png",
+        "giallo": "/images/paint/968/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5531,6 +6207,7 @@
         "selectedPixels": 20998,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5551,17 +6228,25 @@
         "verde": "/images/paint/gt2/verde.png",
         "nero": "/images/paint/gt2/nero.png",
         "bianco": "/images/paint/gt2/bianco.png",
-        "argento": "/images/paint/gt2/argento.png"
+        "argento": "/images/paint/gt2/argento.png",
+        "giallo": "/images/paint/gt2/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 18706,
+        "selectedPixels": 20295,
         "visiblePixels": 30348,
-        "coverage": 61.6,
+        "coverage": 66.9,
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1589,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -5582,17 +6267,25 @@
         "verde": "/images/paint/993/verde.png",
         "nero": "/images/paint/993/nero.png",
         "bianco": "/images/paint/993/bianco.png",
-        "argento": "/images/paint/993/argento.png"
+        "argento": "/images/paint/993/argento.png",
+        "giallo": "/images/paint/993/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 18648,
+        "selectedPixels": 19607,
         "visiblePixels": 29646,
-        "coverage": 62.9,
+        "coverage": 66.1,
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 959,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -5613,7 +6306,8 @@
         "verde": "/images/paint/996/verde.png",
         "nero": "/images/paint/996/nero.png",
         "bianco": "/images/paint/996/bianco.png",
-        "argento": "/images/paint/996/argento.png"
+        "argento": "/images/paint/996/argento.png",
+        "giallo": "/images/paint/996/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5633,6 +6327,7 @@
         "selectedPixels": 18795,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5653,7 +6348,8 @@
         "verde": "/images/paint/boxster/verde.png",
         "nero": "/images/paint/boxster/nero.png",
         "bianco": "/images/paint/boxster/bianco.png",
-        "argento": "/images/paint/boxster/argento.png"
+        "argento": "/images/paint/boxster/argento.png",
+        "giallo": "/images/paint/boxster/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -5664,6 +6360,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5684,7 +6381,8 @@
         "verde": "/images/paint/19/verde.png",
         "nero": "/images/paint/19/nero.png",
         "bianco": "/images/paint/19/bianco.png",
-        "argento": "/images/paint/19/argento.png"
+        "argento": "/images/paint/19/argento.png",
+        "giallo": "/images/paint/19/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -5704,6 +6402,7 @@
         "selectedPixels": 15526,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5724,14 +6423,15 @@
         "verde": "/images/paint/5/verde.png",
         "nero": "/images/paint/5/nero.png",
         "bianco": "/images/paint/5/bianco.png",
-        "argento": "/images/paint/5/argento.png"
+        "argento": "/images/paint/5/argento.png",
+        "giallo": "/images/paint/5/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 11640,
+        "selectedPixels": 11831,
         "visiblePixels": 26062,
-        "coverage": 44.7,
+        "coverage": 45.4,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -5743,6 +6443,13 @@
         "seamComponents": 5,
         "selectedPixels": 11640,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 191,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5764,17 +6471,25 @@
         "verde": "/images/paint/5maxi/verde.png",
         "nero": "/images/paint/5maxi/nero.png",
         "bianco": "/images/paint/5maxi/bianco.png",
-        "argento": "/images/paint/5maxi/argento.png"
+        "argento": "/images/paint/5maxi/argento.png",
+        "giallo": "/images/paint/5maxi/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 14413,
+        "selectedPixels": 15437,
         "visiblePixels": 25512,
-        "coverage": 56.5,
+        "coverage": 60.5,
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1024,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -5795,7 +6510,8 @@
         "verde": "/images/paint/alpine/verde.png",
         "nero": "/images/paint/alpine/nero.png",
         "bianco": "/images/paint/alpine/bianco.png",
-        "argento": "/images/paint/alpine/argento.png"
+        "argento": "/images/paint/alpine/argento.png",
+        "giallo": "/images/paint/alpine/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -5806,6 +6522,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5826,14 +6543,15 @@
         "verde": "/images/paint/clio/verde.png",
         "nero": "/images/paint/clio/nero.png",
         "bianco": "/images/paint/clio/bianco.png",
-        "argento": "/images/paint/clio/argento.png"
+        "argento": "/images/paint/clio/argento.png",
+        "giallo": "/images/paint/clio/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12504,
+        "selectedPixels": 12922,
         "visiblePixels": 24576,
-        "coverage": 50.9,
+        "coverage": 52.6,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -5845,6 +6563,13 @@
         "seamComponents": 2,
         "selectedPixels": 12504,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 418,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5866,7 +6591,8 @@
         "verde": "/images/paint/williams/verde.png",
         "nero": "/images/paint/williams/nero.png",
         "bianco": "/images/paint/williams/bianco.png",
-        "argento": "/images/paint/williams/argento.png"
+        "argento": "/images/paint/williams/argento.png",
+        "giallo": "/images/paint/williams/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -5877,6 +6603,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5897,14 +6624,15 @@
         "verde": "/images/paint/v6/verde.png",
         "nero": "/images/paint/v6/nero.png",
         "bianco": "/images/paint/v6/bianco.png",
-        "argento": "/images/paint/v6/argento.png"
+        "argento": "/images/paint/v6/argento.png",
+        "giallo": "/images/paint/v6/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13535,
+        "selectedPixels": 14230,
         "visiblePixels": 27942,
-        "coverage": 48.4,
+        "coverage": 50.9,
         "maskOverlap": 99.6
       },
       "edgeRepair": {
@@ -5916,6 +6644,13 @@
         "seamComponents": 5,
         "selectedPixels": 13535,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 695,
+        "removed": 0,
+        "newSeams": 375,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -5937,7 +6672,8 @@
         "verde": "/images/paint/laguna/verde.png",
         "nero": "/images/paint/laguna/nero.png",
         "bianco": "/images/paint/laguna/bianco.png",
-        "argento": "/images/paint/laguna/argento.png"
+        "argento": "/images/paint/laguna/argento.png",
+        "giallo": "/images/paint/laguna/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -5948,6 +6684,7 @@
         "maskOverlap": 99.5
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -5968,14 +6705,15 @@
         "verde": "/images/paint/megane/verde.png",
         "nero": "/images/paint/megane/nero.png",
         "bianco": "/images/paint/megane/bianco.png",
-        "argento": "/images/paint/megane/argento.png"
+        "argento": "/images/paint/megane/argento.png",
+        "giallo": "/images/paint/megane/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16815,
+        "selectedPixels": 17109,
         "visiblePixels": 30864,
-        "coverage": 54.5,
+        "coverage": 55.4,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -5987,6 +6725,13 @@
         "seamComponents": 0,
         "selectedPixels": 16815,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 294,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6008,7 +6753,8 @@
         "verde": "/images/paint/114/verde.png",
         "nero": "/images/paint/114/nero.png",
         "bianco": "/images/paint/114/bianco.png",
-        "argento": "/images/paint/114/argento.png"
+        "argento": "/images/paint/114/argento.png",
+        "giallo": "/images/paint/114/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -6028,6 +6774,7 @@
         "selectedPixels": 13961,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6048,7 +6795,8 @@
         "verde": "/images/paint/220/verde.png",
         "nero": "/images/paint/220/nero.png",
         "bianco": "/images/paint/220/bianco.png",
-        "argento": "/images/paint/220/argento.png"
+        "argento": "/images/paint/220/argento.png",
+        "giallo": "/images/paint/220/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6059,6 +6807,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6079,7 +6828,8 @@
         "verde": "/images/paint/93/verde.png",
         "nero": "/images/paint/93/nero.png",
         "bianco": "/images/paint/93/bianco.png",
-        "argento": "/images/paint/93/argento.png"
+        "argento": "/images/paint/93/argento.png",
+        "giallo": "/images/paint/93/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6090,6 +6840,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6110,7 +6861,8 @@
         "verde": "/images/paint/900/verde.png",
         "nero": "/images/paint/900/nero.png",
         "bianco": "/images/paint/900/bianco.png",
-        "argento": "/images/paint/900/argento.png"
+        "argento": "/images/paint/900/argento.png",
+        "giallo": "/images/paint/900/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6121,6 +6873,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6141,17 +6894,25 @@
         "verde": "/images/paint/cordoba/verde.png",
         "nero": "/images/paint/cordoba/nero.png",
         "bianco": "/images/paint/cordoba/bianco.png",
-        "argento": "/images/paint/cordoba/argento.png"
+        "argento": "/images/paint/cordoba/argento.png",
+        "giallo": "/images/paint/cordoba/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16932,
+        "selectedPixels": 18847,
         "visiblePixels": 30908,
-        "coverage": 54.8,
+        "coverage": 61,
         "maskOverlap": 99.6
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1915,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -6172,7 +6933,8 @@
         "verde": "/images/paint/ibiza/verde.png",
         "nero": "/images/paint/ibiza/nero.png",
         "bianco": "/images/paint/ibiza/bianco.png",
-        "argento": "/images/paint/ibiza/argento.png"
+        "argento": "/images/paint/ibiza/argento.png",
+        "giallo": "/images/paint/ibiza/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6183,6 +6945,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6203,17 +6966,25 @@
         "verde": "/images/paint/leon/verde.png",
         "nero": "/images/paint/leon/nero.png",
         "bianco": "/images/paint/leon/bianco.png",
-        "argento": "/images/paint/leon/argento.png"
+        "argento": "/images/paint/leon/argento.png",
+        "giallo": "/images/paint/leon/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 14697,
+        "selectedPixels": 15889,
         "visiblePixels": 27152,
-        "coverage": 54.1,
+        "coverage": 58.5,
         "maskOverlap": 100
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1192,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -6234,14 +7005,15 @@
         "verde": "/images/paint/octavia/verde.png",
         "nero": "/images/paint/octavia/nero.png",
         "bianco": "/images/paint/octavia/bianco.png",
-        "argento": "/images/paint/octavia/argento.png"
+        "argento": "/images/paint/octavia/argento.png",
+        "giallo": "/images/paint/octavia/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 13661,
+        "selectedPixels": 14221,
         "visiblePixels": 30154,
-        "coverage": 45.3,
+        "coverage": 47.2,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -6253,6 +7025,13 @@
         "seamComponents": 5,
         "selectedPixels": 13661,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 560,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6274,17 +7053,25 @@
         "verde": "/images/paint/22b/verde.png",
         "nero": "/images/paint/22b/nero.png",
         "bianco": "/images/paint/22b/bianco.png",
-        "argento": "/images/paint/22b/argento.png"
+        "argento": "/images/paint/22b/argento.png",
+        "giallo": "/images/paint/22b/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15857,
+        "selectedPixels": 17536,
         "visiblePixels": 26880,
-        "coverage": 59,
+        "coverage": 65.2,
         "maskOverlap": 99.4
       },
       "edgeRepair": null,
+      "manualRepair": {
+        "revision": 3,
+        "added": 1679,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
+      },
       "reviewHints": []
     },
     {
@@ -6305,14 +7092,15 @@
         "verde": "/images/paint/impreza/verde.png",
         "nero": "/images/paint/impreza/nero.png",
         "bianco": "/images/paint/impreza/bianco.png",
-        "argento": "/images/paint/impreza/argento.png"
+        "argento": "/images/paint/impreza/argento.png",
+        "giallo": "/images/paint/impreza/giallo.png"
       },
       "approved": false,
-      "revision": 1,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15372,
+        "selectedPixels": 16036,
         "visiblePixels": 32772,
-        "coverage": 46.9,
+        "coverage": 48.9,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -6323,6 +7111,13 @@
         "seamPixels": 0,
         "seamComponents": 0,
         "selectedPixels": 15372
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 664,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6344,14 +7139,15 @@
         "verde": "/images/paint/legacy/verde.png",
         "nero": "/images/paint/legacy/nero.png",
         "bianco": "/images/paint/legacy/bianco.png",
-        "argento": "/images/paint/legacy/argento.png"
+        "argento": "/images/paint/legacy/argento.png",
+        "giallo": "/images/paint/legacy/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15722,
+        "selectedPixels": 16561,
         "visiblePixels": 32968,
-        "coverage": 47.7,
+        "coverage": 50.2,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -6363,6 +7159,13 @@
         "seamComponents": 5,
         "selectedPixels": 15722,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 839,
+        "removed": 0,
+        "newSeams": 413,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6384,14 +7187,15 @@
         "verde": "/images/paint/svx/verde.png",
         "nero": "/images/paint/svx/nero.png",
         "bianco": "/images/paint/svx/bianco.png",
-        "argento": "/images/paint/svx/argento.png"
+        "argento": "/images/paint/svx/argento.png",
+        "giallo": "/images/paint/svx/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17431,
+        "selectedPixels": 18092,
         "visiblePixels": 34698,
-        "coverage": 50.2,
+        "coverage": 52.1,
         "maskOverlap": 99.4
       },
       "edgeRepair": {
@@ -6403,6 +7207,13 @@
         "seamComponents": 2,
         "selectedPixels": 17431,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 661,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6424,7 +7235,8 @@
         "verde": "/images/paint/swift/verde.png",
         "nero": "/images/paint/swift/nero.png",
         "bianco": "/images/paint/swift/bianco.png",
-        "argento": "/images/paint/swift/argento.png"
+        "argento": "/images/paint/swift/argento.png",
+        "giallo": "/images/paint/swift/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -6444,6 +7256,7 @@
         "selectedPixels": 16877,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6464,14 +7277,15 @@
         "verde": "/images/paint/sainz/verde.png",
         "nero": "/images/paint/sainz/nero.png",
         "bianco": "/images/paint/sainz/bianco.png",
-        "argento": "/images/paint/sainz/argento.png"
+        "argento": "/images/paint/sainz/argento.png",
+        "giallo": "/images/paint/sainz/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 18691,
+        "selectedPixels": 18975,
         "visiblePixels": 29520,
-        "coverage": 63.3,
+        "coverage": 64.3,
         "maskOverlap": 99.7
       },
       "edgeRepair": {
@@ -6483,6 +7297,13 @@
         "seamComponents": 0,
         "selectedPixels": 18691,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 284,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6504,7 +7325,8 @@
         "verde": "/images/paint/gtfour/verde.png",
         "nero": "/images/paint/gtfour/nero.png",
         "bianco": "/images/paint/gtfour/bianco.png",
-        "argento": "/images/paint/gtfour/argento.png"
+        "argento": "/images/paint/gtfour/argento.png",
+        "giallo": "/images/paint/gtfour/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6515,6 +7337,7 @@
         "maskOverlap": 99.4
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6535,14 +7358,15 @@
         "verde": "/images/paint/celica/verde.png",
         "nero": "/images/paint/celica/nero.png",
         "bianco": "/images/paint/celica/bianco.png",
-        "argento": "/images/paint/celica/argento.png"
+        "argento": "/images/paint/celica/argento.png",
+        "giallo": "/images/paint/celica/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 17036,
+        "selectedPixels": 18911,
         "visiblePixels": 30976,
-        "coverage": 55,
+        "coverage": 61.1,
         "maskOverlap": 99.5
       },
       "edgeRepair": {
@@ -6554,6 +7378,13 @@
         "seamComponents": 0,
         "selectedPixels": 17036,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 1875,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6575,14 +7406,15 @@
         "verde": "/images/paint/corolla/verde.png",
         "nero": "/images/paint/corolla/nero.png",
         "bianco": "/images/paint/corolla/bianco.png",
-        "argento": "/images/paint/corolla/argento.png"
+        "argento": "/images/paint/corolla/argento.png",
+        "giallo": "/images/paint/corolla/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16018,
+        "selectedPixels": 16403,
         "visiblePixels": 35400,
-        "coverage": 45.2,
+        "coverage": 46.3,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -6594,6 +7426,13 @@
         "seamComponents": 4,
         "selectedPixels": 16018,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 385,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6615,7 +7454,8 @@
         "verde": "/images/paint/mr2/verde.png",
         "nero": "/images/paint/mr2/nero.png",
         "bianco": "/images/paint/mr2/bianco.png",
-        "argento": "/images/paint/mr2/argento.png"
+        "argento": "/images/paint/mr2/argento.png",
+        "giallo": "/images/paint/mr2/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -6635,6 +7475,7 @@
         "selectedPixels": 18256,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6655,7 +7496,8 @@
         "verde": "/images/paint/mrs/verde.png",
         "nero": "/images/paint/mrs/nero.png",
         "bianco": "/images/paint/mrs/bianco.png",
-        "argento": "/images/paint/mrs/argento.png"
+        "argento": "/images/paint/mrs/argento.png",
+        "giallo": "/images/paint/mrs/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -6675,6 +7517,7 @@
         "selectedPixels": 15987,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6695,7 +7538,8 @@
         "verde": "/images/paint/supra3/verde.png",
         "nero": "/images/paint/supra3/nero.png",
         "bianco": "/images/paint/supra3/bianco.png",
-        "argento": "/images/paint/supra3/argento.png"
+        "argento": "/images/paint/supra3/argento.png",
+        "giallo": "/images/paint/supra3/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6706,6 +7550,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6726,7 +7571,8 @@
         "verde": "/images/paint/supra4/verde.png",
         "nero": "/images/paint/supra4/nero.png",
         "bianco": "/images/paint/supra4/bianco.png",
-        "argento": "/images/paint/supra4/argento.png"
+        "argento": "/images/paint/supra4/argento.png",
+        "giallo": "/images/paint/supra4/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6737,6 +7583,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6757,14 +7604,15 @@
         "verde": "/images/paint/trueno/verde.png",
         "nero": "/images/paint/trueno/nero.png",
         "bianco": "/images/paint/trueno/bianco.png",
-        "argento": "/images/paint/trueno/argento.png"
+        "argento": "/images/paint/trueno/argento.png",
+        "giallo": "/images/paint/trueno/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 9021,
+        "selectedPixels": 10407,
         "visiblePixels": 27560,
-        "coverage": 32.7,
+        "coverage": 37.8,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -6776,6 +7624,13 @@
         "seamComponents": 6,
         "selectedPixels": 9021,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 1386,
+        "removed": 0,
+        "newSeams": 1202,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6797,14 +7652,15 @@
         "verde": "/images/paint/yaris/verde.png",
         "nero": "/images/paint/yaris/nero.png",
         "bianco": "/images/paint/yaris/bianco.png",
-        "argento": "/images/paint/yaris/argento.png"
+        "argento": "/images/paint/yaris/argento.png",
+        "giallo": "/images/paint/yaris/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 12806,
+        "selectedPixels": 13252,
         "visiblePixels": 26896,
-        "coverage": 47.6,
+        "coverage": 49.3,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -6816,6 +7672,13 @@
         "seamComponents": 1,
         "selectedPixels": 12806,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 446,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6837,7 +7700,8 @@
         "verde": "/images/paint/cerbera/verde.png",
         "nero": "/images/paint/cerbera/nero.png",
         "bianco": "/images/paint/cerbera/bianco.png",
-        "argento": "/images/paint/cerbera/argento.png"
+        "argento": "/images/paint/cerbera/argento.png",
+        "giallo": "/images/paint/cerbera/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6848,6 +7712,7 @@
         "maskOverlap": 99.9
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6868,7 +7733,8 @@
         "verde": "/images/paint/speed12/verde.png",
         "nero": "/images/paint/speed12/nero.png",
         "bianco": "/images/paint/speed12/bianco.png",
-        "argento": "/images/paint/speed12/argento.png"
+        "argento": "/images/paint/speed12/argento.png",
+        "giallo": "/images/paint/speed12/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -6888,6 +7754,7 @@
         "selectedPixels": 19493,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6908,7 +7775,8 @@
         "verde": "/images/paint/850t/verde.png",
         "nero": "/images/paint/850t/nero.png",
         "bianco": "/images/paint/850t/bianco.png",
-        "argento": "/images/paint/850t/argento.png"
+        "argento": "/images/paint/850t/argento.png",
+        "giallo": "/images/paint/850t/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6919,6 +7787,7 @@
         "maskOverlap": 99.4
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -6939,14 +7808,15 @@
         "verde": "/images/paint/s40/verde.png",
         "nero": "/images/paint/s40/nero.png",
         "bianco": "/images/paint/s40/bianco.png",
-        "argento": "/images/paint/s40/argento.png"
+        "argento": "/images/paint/s40/argento.png",
+        "giallo": "/images/paint/s40/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 19570,
+        "selectedPixels": 19979,
         "visiblePixels": 36708,
-        "coverage": 53.3,
+        "coverage": 54.4,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -6958,6 +7828,13 @@
         "seamComponents": 5,
         "selectedPixels": 19570,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 409,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -6979,7 +7856,8 @@
         "verde": "/images/paint/s60/verde.png",
         "nero": "/images/paint/s60/nero.png",
         "bianco": "/images/paint/s60/bianco.png",
-        "argento": "/images/paint/s60/argento.png"
+        "argento": "/images/paint/s60/argento.png",
+        "giallo": "/images/paint/s60/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -6990,6 +7868,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7010,14 +7889,15 @@
         "verde": "/images/paint/corrado/verde.png",
         "nero": "/images/paint/corrado/nero.png",
         "bianco": "/images/paint/corrado/bianco.png",
-        "argento": "/images/paint/corrado/argento.png"
+        "argento": "/images/paint/corrado/argento.png",
+        "giallo": "/images/paint/corrado/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 16551,
+        "selectedPixels": 16569,
         "visiblePixels": 28084,
-        "coverage": 58.9,
+        "coverage": 59,
         "maskOverlap": 99.8
       },
       "edgeRepair": {
@@ -7029,6 +7909,13 @@
         "seamComponents": 0,
         "selectedPixels": 16551,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 18,
+        "removed": 0,
+        "newSeams": 0,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -7050,7 +7937,8 @@
         "verde": "/images/paint/g60/verde.png",
         "nero": "/images/paint/g60/nero.png",
         "bianco": "/images/paint/g60/bianco.png",
-        "argento": "/images/paint/g60/argento.png"
+        "argento": "/images/paint/g60/argento.png",
+        "giallo": "/images/paint/g60/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -7070,6 +7958,7 @@
         "selectedPixels": 13333,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7090,7 +7979,8 @@
         "verde": "/images/paint/gti1/verde.png",
         "nero": "/images/paint/gti1/nero.png",
         "bianco": "/images/paint/gti1/bianco.png",
-        "argento": "/images/paint/gti1/argento.png"
+        "argento": "/images/paint/gti1/argento.png",
+        "giallo": "/images/paint/gti1/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -7110,6 +8000,7 @@
         "selectedPixels": 12334,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7130,7 +8021,8 @@
         "verde": "/images/paint/gti4/verde.png",
         "nero": "/images/paint/gti4/nero.png",
         "bianco": "/images/paint/gti4/bianco.png",
-        "argento": "/images/paint/gti4/argento.png"
+        "argento": "/images/paint/gti4/argento.png",
+        "giallo": "/images/paint/gti4/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -7150,6 +8042,7 @@
         "selectedPixels": 16568,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7170,7 +8063,8 @@
         "verde": "/images/paint/vr6/verde.png",
         "nero": "/images/paint/vr6/nero.png",
         "bianco": "/images/paint/vr6/bianco.png",
-        "argento": "/images/paint/vr6/argento.png"
+        "argento": "/images/paint/vr6/argento.png",
+        "giallo": "/images/paint/vr6/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -7181,6 +8075,7 @@
         "maskOverlap": 99.8
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7201,7 +8096,8 @@
         "verde": "/images/paint/lupo/verde.png",
         "nero": "/images/paint/lupo/nero.png",
         "bianco": "/images/paint/lupo/bianco.png",
-        "argento": "/images/paint/lupo/argento.png"
+        "argento": "/images/paint/lupo/argento.png",
+        "giallo": "/images/paint/lupo/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -7221,6 +8117,7 @@
         "selectedPixels": 13631,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7241,14 +8138,15 @@
         "verde": "/images/paint/beetle/verde.png",
         "nero": "/images/paint/beetle/nero.png",
         "bianco": "/images/paint/beetle/bianco.png",
-        "argento": "/images/paint/beetle/argento.png"
+        "argento": "/images/paint/beetle/argento.png",
+        "giallo": "/images/paint/beetle/giallo.png"
       },
       "approved": false,
-      "revision": 2,
+      "revision": 3,
       "metrics": {
-        "selectedPixels": 15024,
+        "selectedPixels": 15592,
         "visiblePixels": 29600,
-        "coverage": 50.8,
+        "coverage": 52.7,
         "maskOverlap": 99.9
       },
       "edgeRepair": {
@@ -7260,6 +8158,13 @@
         "seamComponents": 5,
         "selectedPixels": 15024,
         "changed": true
+      },
+      "manualRepair": {
+        "revision": 3,
+        "added": 568,
+        "removed": 0,
+        "newSeams": 221,
+        "smoothing": false
       },
       "reviewHints": []
     },
@@ -7281,7 +8186,8 @@
         "verde": "/images/paint/polo/verde.png",
         "nero": "/images/paint/polo/nero.png",
         "bianco": "/images/paint/polo/bianco.png",
-        "argento": "/images/paint/polo/argento.png"
+        "argento": "/images/paint/polo/argento.png",
+        "giallo": "/images/paint/polo/giallo.png"
       },
       "approved": false,
       "revision": 2,
@@ -7301,6 +8207,7 @@
         "selectedPixels": 13177,
         "changed": true
       },
+      "manualRepair": null,
       "reviewHints": []
     },
     {
@@ -7321,7 +8228,8 @@
         "verde": "/images/paint/scirocco/verde.png",
         "nero": "/images/paint/scirocco/nero.png",
         "bianco": "/images/paint/scirocco/bianco.png",
-        "argento": "/images/paint/scirocco/argento.png"
+        "argento": "/images/paint/scirocco/argento.png",
+        "giallo": "/images/paint/scirocco/giallo.png"
       },
       "approved": false,
       "revision": 1,
@@ -7332,6 +8240,7 @@
         "maskOverlap": 99.2
       },
       "edgeRepair": null,
+      "manualRepair": null,
       "reviewHints": []
     }
   ]

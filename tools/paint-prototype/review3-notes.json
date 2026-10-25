@@ -1,0 +1,583 @@
+[
+  {
+    "id": 2,
+    "name": "Alfa Romeo 155 Q4",
+    "colour": "blu",
+    "key": "155",
+    "note": "Ha un puntino rosso tra carrozzeria e specchietto che resta cambiando colore"
+  },
+  {
+    "id": 3,
+    "name": "Alfa Romeo 33 Quadrifoglio",
+    "colour": "blu",
+    "key": "33",
+    "note": "Quando cambi colore, rimangono le divisioni dei pannelli come il cofano,  bianche invece che nere"
+  },
+  {
+    "id": 4,
+    "name": "Alfa Romeo 75 Quadrifoglio",
+    "colour": "blu",
+    "key": "75",
+    "note": "Sul passaruota posteriore resta un bordino rosso cambiando colori"
+  },
+  {
+    "id": 5,
+    "name": "Alfa Romeo GTV v6 Cup",
+    "colour": "verde",
+    "key": "gtv",
+    "note": "Cambiando colori resta un bordino rosso sull angolo della minigomna verso la ruota posteriore"
+  },
+  {
+    "id": 6,
+    "name": "Aston Martin Vantage",
+    "colour": "blu",
+    "key": "vantage",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e passaruota nel punto piu basso"
+  },
+  {
+    "id": 10,
+    "name": "Audi S3",
+    "colour": "blu",
+    "key": "s3",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e madcherina nel punto piu basso"
+  },
+  {
+    "id": 12,
+    "name": "Audi TT",
+    "colour": "bianco",
+    "key": "tt",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 16,
+    "name": "BMW 850 CSI",
+    "colour": "verde",
+    "key": "850",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 17,
+    "name": "BMW M1",
+    "colour": "verde",
+    "key": "m1",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 18,
+    "name": "BMW M3 E30",
+    "colour": "nero",
+    "key": "e30",
+    "note": "Cambaindo colore resta un bordino del colore originale nella zona bassa del parabrezza"
+  },
+  {
+    "id": 22,
+    "name": "BMW M5 E39",
+    "colour": "blu",
+    "key": "e39",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 23,
+    "name": "BMW M635",
+    "colour": "nero",
+    "key": "m635",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti in basso zona passaruota e nel bordo destro del faro destro"
+  },
+  {
+    "id": 24,
+    "name": "BMW Z3 M",
+    "colour": "nero",
+    "key": "z3m",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 15,
+    "name": "Bentley Continental R",
+    "colour": "nero",
+    "key": "continental",
+    "note": "Cambiando colore resta un bordino sul paraurti e minigonne nel bordo inferiore del colore originale"
+  },
+  {
+    "id": 29,
+    "name": "Chevrolet Corvette C5 Z06",
+    "colour": "rosso",
+    "key": "c5",
+    "note": "La punta anteriore sul paraurti non è la targa deve cambiare anche lei colore"
+  },
+  {
+    "id": 30,
+    "name": "Citroen AX Gti",
+    "colour": "bianco",
+    "key": "ax",
+    "note": "Bianca grigia e rossa escono molto pixellate nella zona vetri"
+  },
+  {
+    "id": 31,
+    "name": "Citroen Saxo VTS",
+    "colour": "verde",
+    "key": "saxo",
+    "note": "Tra carrozzerie e soecchietto resta un puntino rosso cambiando colore"
+  },
+  {
+    "id": 32,
+    "name": "Citroen Visa Gti",
+    "colour": "blu",
+    "key": "visa",
+    "note": "I fari cambiano colore e anche le fessure fra pannelli e portiere restano chiare invece che scure cambiando colore"
+  },
+  {
+    "id": 35,
+    "name": "Daihatsu Charade Gtti",
+    "colour": "nero",
+    "key": "charade",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 48,
+    "name": "Fiat Barchetta",
+    "colour": "rosso",
+    "key": "barchetta",
+    "note": "Quando cambi colore rimane una parte grigia nel basso del paraurti"
+  },
+  {
+    "id": 50,
+    "name": "Fiat Cinquecento Sporting",
+    "colour": "blu",
+    "key": "cinquecento",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 51,
+    "name": "Fiat Coupè 20v",
+    "colour": "nero",
+    "key": "coupe",
+    "note": "Cambiando colore resta il bordo in basso del pauarurti passaruota e minugonne del colore originale"
+  },
+  {
+    "id": 52,
+    "name": "Fiat Punto GT",
+    "colour": "verde",
+    "key": "punto",
+    "note": "Cambiando colori resta un puntino rosso sul bordo dello specchietto, e del passaruota posteriore col colore originale"
+  },
+  {
+    "id": 54,
+    "name": "Fiat Seicento Sporting",
+    "colour": "blu",
+    "key": "seicento",
+    "note": "Resta un borino giallo intorno al faro cambiando colore auto"
+  },
+  {
+    "id": 60,
+    "name": "Ford Mondeo ST200",
+    "colour": "nero",
+    "key": "mondeo",
+    "note": "Rimane un bordini del colore originale in basse in fondo a paraurti minigonne e passaruota"
+  },
+  {
+    "id": 61,
+    "name": "Ford Mustang Cobra",
+    "colour": "nero",
+    "key": "mustang",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 62,
+    "name": "Ford Puma",
+    "colour": "nero",
+    "key": "puma",
+    "note": "Cambiando colore rimangono i bordi grigi dei pannelli invece che neri"
+  },
+  {
+    "id": 68,
+    "name": "Honda CRX",
+    "colour": "verde",
+    "key": "crx",
+    "note": "Quando cambi colore rimangon dei bordi bianchi"
+  },
+  {
+    "id": 69,
+    "name": "Honda Integra",
+    "colour": "verde",
+    "key": "integra",
+    "note": "Cambiando colore rimangono dei bordi del colore originale in giro"
+  },
+  {
+    "id": 73,
+    "name": "Hyundai Coupè",
+    "colour": "nero",
+    "key": "hyundai",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 75,
+    "name": "Jaguar XJ220",
+    "colour": "argento",
+    "key": "xj220",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 80,
+    "name": "Lancia Delta Evoluzione",
+    "colour": "rosso",
+    "key": "evoluzione",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 82,
+    "name": "Lancia Delta HPE",
+    "colour": "bianco",
+    "key": "hpe",
+    "note": "Bianca e grigia rimangono tanto pixellate"
+  },
+  {
+    "id": 84,
+    "name": "Lexus IS200 RS",
+    "colour": "blu",
+    "key": "is200",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 87,
+    "name": "Lotus Exige",
+    "colour": "blu",
+    "key": "exige",
+    "note": "Cambiando colore rimangono i bordi dei pannelli del colore originale invece che nero o scuro"
+  },
+  {
+    "id": 105,
+    "name": "MG ZS",
+    "colour": "argento",
+    "key": "zs",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 88,
+    "name": "Maserati 3200GT",
+    "colour": "blu",
+    "key": "3200",
+    "note": "Cambiando colori resta un bordino del colore originale su paraurti e minigonne nel punto piu basso"
+  },
+  {
+    "id": 91,
+    "name": "Mazda 323 GT-r",
+    "colour": "argento",
+    "key": "323",
+    "note": "Bianca e grigia vengon pixellate"
+  },
+  {
+    "id": 94,
+    "name": "Mazda Mx-5 NA",
+    "colour": "rosso",
+    "key": "na",
+    "note": "Cambiando colore rimangono bordi dei pannelli e portiere chiari mentre son meglio meri o scuri"
+  },
+  {
+    "id": 100,
+    "name": "Mercedes C43 AMG",
+    "colour": "nero",
+    "key": "c43",
+    "note": "Cambiando colore restano i bordi in basso del colore originale"
+  },
+  {
+    "id": 102,
+    "name": "Mercedes SLK AMG",
+    "colour": "nero",
+    "key": "slk",
+    "note": "Cambiando colore rimangono i bordi sei pannelli e delle portiere del colore chiaro originale, meglio neri o scuri"
+  },
+  {
+    "id": 110,
+    "name": "Mitsubishi Lancer Evo 5",
+    "colour": "rosso",
+    "key": "evo5",
+    "note": "Cambiando colore restano i bordo dei pannelli e delle portiere del colore chiaro mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 111,
+    "name": "Mitsubishi Lancer Evo 6",
+    "colour": "rosso",
+    "key": "evo6",
+    "note": "Cambiando colore rimangono i bordi bassi di mascherina e paraurti del colore originale"
+  },
+  {
+    "id": 113,
+    "name": "Nissan 180SX",
+    "colour": "bianco",
+    "key": "180sx",
+    "note": "Bianca e grigia restano molto pixellate"
+  },
+  {
+    "id": 114,
+    "name": "Nissan 200SX S13",
+    "colour": "originale",
+    "key": "s13",
+    "note": "Cambiando colore rimangono i bordi dei pannelli e delle portiere di colore chiaro mentre sarebbe meglio o scuri o neri"
+  },
+  {
+    "id": 115,
+    "name": "Nissan 200SX S14",
+    "colour": "nero",
+    "key": "s14",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 116,
+    "name": "Nissan 300ZX",
+    "colour": "nero",
+    "key": "300zx",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale passaruota posteriore e specchietti l"
+  },
+  {
+    "id": 120,
+    "name": "Nissan Skyline GTR R32",
+    "colour": "nero",
+    "key": "r32",
+    "note": "Cambiando colore rimangono i bordi dei pannelli e delle portiere di colore chiaro mentre sarebbe meglio scuri o neri"
+  },
+  {
+    "id": 124,
+    "name": "Opel Astra Gsi",
+    "colour": "rosso",
+    "key": "astrag",
+    "note": "Cambainco colore restano dei pezzi con il blu roginale su madcherina e parti basse della carrozzeria"
+  },
+  {
+    "id": 126,
+    "name": "Opel Calibra Turbo",
+    "colour": "nero",
+    "key": "calibra",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su passaruota nella parta piu basse"
+  },
+  {
+    "id": 128,
+    "name": "Opel Corsa Gsi mk2",
+    "colour": "verde",
+    "key": "corsa2",
+    "note": "Cambiando colore rimangono i bordi dei pannelli e delle portiere di colore chiaro mentre sarebbero meglio scuri o neri"
+  },
+  {
+    "id": 129,
+    "name": "Opel Kadett Gsi",
+    "colour": "verde",
+    "key": "kadett",
+    "note": "Cambiando colore rimangono i bordi dei pannelli e delle portiere chiari mentre sarebbero meglio neri o scuri"
+  },
+  {
+    "id": 130,
+    "name": "Opel Manta Gsi",
+    "colour": "verde",
+    "key": "manta",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 132,
+    "name": "Opel Speedster",
+    "colour": "rosso",
+    "key": "speedster",
+    "note": "Cambiando colore rimangono i bordi dei pannelli chiari mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 134,
+    "name": "Pagani Zonda",
+    "colour": "bianco",
+    "key": "zonda",
+    "note": "Cambiando colore rimangono i bordi dei pannelli chiari mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 136,
+    "name": "Peugeot 106 Rallye 1.3",
+    "colour": "verde",
+    "key": "rallye",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 137,
+    "name": "Peugeot 205 Gti 1.9",
+    "colour": "rosso",
+    "key": "205",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 138,
+    "name": "Peugeot 206 Gti",
+    "colour": "nero",
+    "key": "206",
+    "note": "Sulla parte bassa della carrozzeria rimangono dei bordi del colore originale"
+  },
+  {
+    "id": 145,
+    "name": "Porsche 930 Turbo",
+    "colour": "nero",
+    "key": "930",
+    "note": "Cambiando colore rimangono i bordi dei pannelli di colore chiaro mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 148,
+    "name": "Porsche 964 RS",
+    "colour": "nero",
+    "key": "964",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale sotto ai vetri nella parta piu bassa e vicino al passaruota posteriore"
+  },
+  {
+    "id": 149,
+    "name": "Porsche 964 Turbo",
+    "colour": "rosso",
+    "key": "964t",
+    "note": "Cambiando colore rinangono i bordi dei pannelli di colore chiaro mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 151,
+    "name": "Porsche 993 GT2",
+    "colour": "verde",
+    "key": "gt2",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 152,
+    "name": "Porsche 993 RS",
+    "colour": "verde",
+    "key": "993",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 156,
+    "name": "Renault 5 Gt",
+    "colour": "verde",
+    "key": "5",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 157,
+    "name": "Renault 5 Maxi Turbo",
+    "colour": "verde",
+    "key": "5maxi",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 159,
+    "name": "Renault Clio Rs",
+    "colour": "nero",
+    "key": "clio",
+    "note": "Cambiando colore resta jn po di quello originale nella paraurti d nei bordi bassi della carrozzeria"
+  },
+  {
+    "id": 160,
+    "name": "Renault Clio v6",
+    "colour": "blu",
+    "key": "v6",
+    "note": "Cambiando colore rimangono chiari i bordi dei pannelli e delle portiere mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 163,
+    "name": "Renault Megane Coupè",
+    "colour": "blu",
+    "key": "megane",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su passaruota posteriore"
+  },
+  {
+    "id": 168,
+    "name": "Seat Cordoba Gt",
+    "colour": "nero",
+    "key": "cordoba",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 170,
+    "name": "Seat Leon Cupra",
+    "colour": "nero",
+    "key": "leon",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 171,
+    "name": "Skoda Octavia Rs",
+    "colour": "nero",
+    "key": "octavia",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 172,
+    "name": "Subaru Impreza 22b",
+    "colour": "nero",
+    "key": "22b",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 173,
+    "name": "Subaru Impreza Gt",
+    "colour": "nero",
+    "key": "impreza",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 174,
+    "name": "Subaru Legacy Turbo",
+    "colour": "nero",
+    "key": "legacy",
+    "note": "Cambiando colore i bordi dei pannelli e delle portiere restano chiari mentre sarebbero meglio scuri"
+  },
+  {
+    "id": 175,
+    "name": "Subaru Svx",
+    "colour": "nero",
+    "key": "svx",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 177,
+    "name": "Toyota Celica Carlos Sainz",
+    "colour": "nero",
+    "key": "sainz",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su passaruota posteriore"
+  },
+  {
+    "id": 179,
+    "name": "Toyota Celica Ts",
+    "colour": "verde",
+    "key": "celica",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su passaruota posteriore"
+  },
+  {
+    "id": 180,
+    "name": "Toyota Corolla GT-i",
+    "colour": "verde",
+    "key": "corolla",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 185,
+    "name": "Toyota Trueno Gt-Apex",
+    "colour": "nero",
+    "key": "trueno",
+    "note": "Rimangono dei bordi chiari intorno si vetri, meglio farli neri"
+  },
+  {
+    "id": 186,
+    "name": "Toyota Yaris Ts",
+    "colour": "rosso",
+    "key": "yaris",
+    "note": "Rimangono i bordi bassi carrozzeria del colore originale"
+  },
+  {
+    "id": 190,
+    "name": "Volvo S40 T4",
+    "colour": "blu",
+    "key": "s40",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale su minigonne paraurti e passaruota nella parta piu basse"
+  },
+  {
+    "id": 192,
+    "name": "Vw Corrado vr6",
+    "colour": "nero",
+    "key": "corrado",
+    "note": "Cambiando colore rimane un bordino sottile del colore originale sullo soecchietto in alto"
+  },
+  {
+    "id": 198,
+    "name": "Vw New Beetle RS",
+    "colour": "rosso",
+    "key": "beetle",
+    "note": "Cambiando colore rimangono i bordi dei pannelli e delle portiere, chiari, mentre sarebbero meglio scuri"
+  }
+]

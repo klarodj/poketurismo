@@ -1,5 +1,5 @@
 const {PNG}=require('pngjs');
-const COLOURS=[{id:'rosso',name:'Rosso pastello',rgb:[195,27,32]},{id:'blu',name:'Blu scuro',rgb:[28,60,148]},{id:'verde',name:'Verde bottiglia',rgb:[27,82,54]},{id:'nero',name:'Nero',rgb:[29,32,36]},{id:'bianco',name:'Bianco',rgb:[237,238,234]},{id:'argento',name:'Grigio argento',rgb:[159,168,178]}];
+const COLOURS=[{id:'rosso',name:'Rosso pastello',rgb:[195,27,32]},{id:'blu',name:'Blu scuro',rgb:[28,60,148]},{id:'verde',name:'Verde bottiglia',rgb:[27,82,54]},{id:'nero',name:'Nero',rgb:[29,32,36]},{id:'bianco',name:'Bianco',rgb:[237,238,234]},{id:'argento',name:'Grigio argento',rgb:[159,168,178]},{id:'giallo',name:'Giallo pastello',rgb:[242,198,27]}];
 function hsv(r,g,b){r/=255;g/=255;b/=255;const max=Math.max(r,g,b),min=Math.min(r,g,b),d=max-min;let h=0;if(d){h=max===r?((g-b)/d)%6:max===g?(b-r)/d+2:(r-g)/d+4;h*=60;if(h<0)h+=360;}return{h,s:max?d/max:0,v:max};}
 const hueDistance=(a,b)=>Math.min(Math.abs(a-b),360-Math.abs(a-b));
 const quantile=(values,q)=>{const list=values.slice().sort((a,b)=>a-b);return list[Math.min(list.length-1,Math.floor(q*(list.length-1)))]||.5;};
@@ -26,9 +26,11 @@ function prepareMask(source,draft){
 function renderColour(source,mask,rgb,calibration,outline=null){
  const out=new PNG({width:source.width,height:source.height});source.data.copy(out.data);
  for(let p=0;p<source.data.length;p+=4){if(!mask.data[p])continue;if(outline?.data[p]){const value=14+Math.round(Math.max(source.data[p],source.data[p+1],source.data[p+2])/255*7);out.data[p]=value;out.data[p+1]=value;out.data[p+2]=value+1;continue;}const c=hsv(source.data[p],source.data[p+1],source.data[p+2]);let shade,specular;
- if(calibration.chromatic){shade=Math.pow(Math.min(1,c.v/Math.max(.12,calibration.baseValue)),1.2);specular=Math.pow(1-c.s,2.7)*c.v;}
+ if(calibration.shadeSmoothing){const i=p/4,x=i%source.width,y=Math.floor(i/source.width),values=[];for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){const xx=x+dx,yy=y+dy,q=(yy*source.width+xx)*4;if(xx>=0&&yy>=0&&xx<source.width&&yy<source.height&&mask.data[q]&&!outline?.data[q])values.push(Math.max(source.data[q],source.data[q+1],source.data[q+2])/255);}values.sort((a,b)=>a-b);if(values.length>=4)c.v=c.v*.35+values[Math.floor(values.length/2)]*.65;}
+ if(calibration.chromatic){shade=Math.pow(Math.min(1,c.v/Math.max(.12,calibration.baseValue)),calibration.shadeExponent||1.2);specular=Math.pow(1-c.s,2.7)*c.v;}
  else{const base=calibration.baseValue;shade=Math.pow(Math.min(1,c.v/base),.9);specular=c.v>base?Math.min(.7,(c.v-base)/Math.max(.1,1-base))*.65:0;}
- if(calibration.darkPaint)shade=.38+.62*Math.pow(Math.min(1,c.v/calibration.baseValue),.7);
+ if(calibration.darkPaint){const floor=calibration.darkPaintFloor??.38;shade=floor+(1-floor)*Math.pow(Math.min(1,c.v/calibration.baseValue),.7);}
+ specular*=calibration.specularScale??1;
  for(let k=0;k<3;k++)out.data[p+k]=Math.round(Math.min(255,rgb[k]*shade*(1-specular)+255*specular));
  }return out;
 }

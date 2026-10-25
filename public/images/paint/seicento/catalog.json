@@ -59,6 +59,15 @@
         168,
         178
       ]
+    },
+    {
+      "id": "giallo",
+      "name": "Giallo pastello",
+      "rgb": [
+        242,
+        198,
+        27
+      ]
     }
   ]
 }
