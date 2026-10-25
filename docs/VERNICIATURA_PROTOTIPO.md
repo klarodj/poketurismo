@@ -67,3 +67,30 @@ Ricostruzione di controllo con le maschere salvate: tutti i 1.400 PNG (maschere 
 Pubblicato il catalogo completo il 24 ottobre 2026 sull’istanza unica 5174, gateway 5184 e indirizzi Funnel 443/8443. URL conservato: `/previews/seicento/`. Backup completo Auth + gioco prima e dopo e build precedente in `/home/klaro/.backups/poketurismo/paint-catalog-2026-10-24T18-32-39-230Z` (accesso privato). Nessuna migrazione o operazione di modifica dei salvataggi.
 
 Verificati su gateway e su entrambi gli indirizzi pubblici HTML, JavaScript, CSS, indice dei 200 modelli e PNG rappresentativi identici agli asset collaudati. Salute HTTP 200, API personali anonime HTTP 401. Ricontrollati gli hash di tutti i 200 originali. Servizi attivi e report in `.preview/paint-catalog-qa`; server temporaneo rimosso dopo il collaudo.
+
+## Revisione dei bordi · 25 ottobre 2026
+
+Feedback dell’utente: sulle foto rosse restava una frangia della tinta originale sotto paraurti, passaruota e minigonne; sulle foto bianche/argento alcuni contorni dei pannelli rimanevano chiari dopo la verniciatura.
+
+Correzione offline con `edge-repair.cjs`, riusando le maschere native e i pixel originali. Nessuna nuova generazione delle automobili e nessun filtro applicato all’intera immagine. La Seicento approvata conserva esattamente i suoi sette PNG.
+
+- Vernice rossa: estensione selettiva della maschera sui pixel compatibili con la tinta originale, nella parte inferiore della carrozzeria. Banda limitata e riferita sempre alla maschera iniziale, con esclusione della zona dei fanali posteriori e del centro delle ruote. Recuperate anche le sfumature calde del bordo sotto i pannelli. Le strisce rosse decorative di vetture originariamente bianche non rientrano in questo intervento.
+- Vernice chiara: selezione delle strette giunzioni fra pannelli e dei bordi luminosi adiacenti alla vernice. Contorni riportati a un tono quasi nero, distinto dalla ricolorazione della lamiera. Dimensioni minime e controlli sulle forme escludono piccoli marchi/maniglie e aperture dei fari; i riflessi ampi all’interno dei pannelli non vengono trasformati in linee. Controllate anche le fotografie argento con ombre che ne abbassano la luminosità mediana.
+
+`mask.png` ora descrive l’unione delle aree modificabili: vernice e contorni. `outline.png` distingue i contorni da rendere scuri. I valori alpha restano quelli dell’originale, e i pixel esterni alle aree autorizzate non cambiano. Le maschere di partenza sono conservate in `tools/paint-prototype/mask-bases-v1`: ripetere la revisione non allarga progressivamente la selezione.
+
+La ricostruzione normale rimane `node tools/paint-prototype/build-catalog.cjs`: riusa maschere e contorni già corretti. `--repair-edges` applica esplicitamente questa revisione globale dalle basi conservate; non usarlo per sovrascrivere successive correzioni manuali senza aggiornare la base o la revisione. Nessun `--prepare` necessario.
+
+### Nuovo controllo nella preview
+
+Stesso URL e stessi 200 modelli. Il filtro «Anteprime aggiornate» mostra le immagini effettivamente modificate. Il numero di revisione impedisce di riusare per errore immagini in cache.
+
+Le note locali preesistenti rimangono salvate. Sui modelli modificati una precedente approvazione torna «Da valutare»; le segnalazioni «Da correggere» restano tali, accompagnate dall’indicazione che l’immagine è stata aggiornata. «Conferma valutazione» permette di confermare anche uno stato rimasto identico. Le auto non modificate e la Seicento conservano le approvazioni precedenti. L’esportazione segnala le note che si riferiscono ancora alla versione vecchia.
+
+### Controlli della revisione
+
+Test mirati per bordino rosso, fanali e sfondo protetti, giunzioni scure, riflessi ampi e piccoli dettagli conservati, famiglie di colore non coinvolte, punti della minigonna M635 e dei pannelli E39, striscia rossa originale della Peugeot 205. Verificati per tutte le 1.200 varianti alpha, dimensioni e conservazione dei pixel non interessati dal ritocco rispetto alla preview precedente. Nessuna modifica alle 200 foto originali o ai salvataggi del gioco.
+
+Esito: 119 anteprime effettivamente aggiornate, sulle 71 foto rosse/calde e sulle foto chiare/argento con bordi da correggere. Le 81 anteprime non interessate restano identiche, compresa la Seicento. Controllati oltre 61 milioni di pixel non coinvolti dal ritocco: tutti identici alla preview precedente, con alpha e dimensioni conservati. Ricostruzione normale ripetuta: 1.520 PNG identici byte per byte, compresi i livelli dei contorni.
+
+Browser finale: aperti tutti i 200 modelli e tutte le 1.200 varianti, nessuna immagine mancante o errore JavaScript; larghezze 320, 390 e 1280 senza scorrimento orizzontale. Verificate vecchie note conservate, approvazioni da ricontrollare solo sulle immagini modificate, vecchie segnalazioni mantenute, conferma della nuova revisione e filtro «Anteprime aggiornate». Nessuna richiesta di scrittura verso il gioco. Tavole prima/dopo e rapporti in `.preview/paint-edge-qa`.

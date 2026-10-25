@@ -79,11 +79,22 @@
         "argento": "/images/paint/145/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16475,
+        "selectedPixels": 16842,
         "visiblePixels": 29744,
-        "coverage": 55.4,
+        "coverage": 56.6,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 367,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16842,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -108,11 +119,22 @@
         "argento": "/images/paint/155/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17022,
+        "selectedPixels": 17676,
         "visiblePixels": 29220,
-        "coverage": 58.3,
+        "coverage": 60.5,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 654,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17676,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -137,11 +159,22 @@
         "argento": "/images/paint/33/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14259,
+        "selectedPixels": 15345,
         "visiblePixels": 31344,
-        "coverage": 45.5,
+        "coverage": 49,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 1147,
+        "seamComponents": 13,
+        "selectedPixels": 15345,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -166,11 +199,22 @@
         "argento": "/images/paint/75/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15628,
+        "selectedPixels": 16624,
         "visiblePixels": 29928,
-        "coverage": 52.2,
+        "coverage": 55.5,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 996,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16624,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -195,11 +239,22 @@
         "argento": "/images/paint/gtv/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17923,
+        "selectedPixels": 18938,
         "visiblePixels": 27560,
-        "coverage": 65,
+        "coverage": 68.7,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1015,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18938,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -224,12 +279,14 @@
         "argento": "/images/paint/vantage/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13600,
         "visiblePixels": 30912,
         "coverage": 44,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -253,12 +310,14 @@
         "argento": "/images/paint/80/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15931,
         "visiblePixels": 30012,
         "coverage": 53.1,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -282,11 +341,22 @@
         "argento": "/images/paint/s2/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 13908,
+        "selectedPixels": 14100,
         "visiblePixels": 32160,
-        "coverage": 43.2,
+        "coverage": 43.8,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 192,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 14100,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -311,12 +381,14 @@
         "argento": "/images/paint/rs4/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18942,
         "visiblePixels": 34772,
         "coverage": 54.5,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -340,12 +412,14 @@
         "argento": "/images/paint/s3/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15550,
         "visiblePixels": 29268,
         "coverage": 53.1,
         "maskOverlap": 99.7
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -369,12 +443,14 @@
         "argento": "/images/paint/s6/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13200,
         "visiblePixels": 27572,
         "coverage": 47.9,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -398,11 +474,22 @@
         "argento": "/images/paint/tt/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12447,
+        "selectedPixels": 12621,
         "visiblePixels": 28396,
-        "coverage": 43.8,
+        "coverage": 44.4,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 174,
+        "seamComponents": 3,
+        "selectedPixels": 12621,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -427,11 +514,22 @@
         "argento": "/images/paint/a112/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 9102,
+        "selectedPixels": 9388,
         "visiblePixels": 25628,
-        "coverage": 35.5,
+        "coverage": 36.6,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 286,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 9388,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -456,11 +554,22 @@
         "argento": "/images/paint/y10/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 10988,
+        "selectedPixels": 11307,
         "visiblePixels": 24800,
-        "coverage": 44.3,
+        "coverage": 45.6,
         "maskOverlap": 99.4
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 319,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 11307,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -485,11 +594,22 @@
         "argento": "/images/paint/850/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16569,
+        "selectedPixels": 16875,
         "visiblePixels": 33892,
-        "coverage": 48.9,
+        "coverage": 49.8,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 329,
+        "seamComponents": 4,
+        "selectedPixels": 16875,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -514,11 +634,22 @@
         "argento": "/images/paint/m1/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14527,
+        "selectedPixels": 15195,
         "visiblePixels": 30544,
-        "coverage": 47.6,
+        "coverage": 49.7,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 693,
+        "seamComponents": 3,
+        "selectedPixels": 15195,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -543,11 +674,22 @@
         "argento": "/images/paint/e30/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17509,
+        "selectedPixels": 17587,
         "visiblePixels": 32236,
-        "coverage": 54.3,
+        "coverage": 54.6,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 78,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17587,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -572,12 +714,14 @@
         "argento": "/images/paint/e36/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17423,
         "visiblePixels": 32660,
         "coverage": 53.3,
         "maskOverlap": 98.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -601,11 +745,22 @@
         "argento": "/images/paint/e46/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16980,
+        "selectedPixels": 17701,
         "visiblePixels": 32076,
-        "coverage": 52.9,
+        "coverage": 55.2,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 721,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17701,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -630,12 +785,14 @@
         "argento": "/images/paint/e34/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 12015,
         "visiblePixels": 29432,
         "coverage": 40.8,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -659,11 +816,22 @@
         "argento": "/images/paint/e39/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15708,
+        "selectedPixels": 16597,
         "visiblePixels": 33600,
-        "coverage": 46.8,
+        "coverage": 49.4,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 911,
+        "seamComponents": 7,
+        "selectedPixels": 16597,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -688,11 +856,22 @@
         "argento": "/images/paint/m635/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17630,
+        "selectedPixels": 19308,
         "visiblePixels": 34928,
-        "coverage": 50.5,
+        "coverage": 55.3,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1678,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 19308,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -717,12 +896,14 @@
         "argento": "/images/paint/z3m/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16689,
         "visiblePixels": 32584,
         "coverage": 51.2,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -746,12 +927,14 @@
         "argento": "/images/paint/continental/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17443,
         "visiblePixels": 30368,
         "coverage": 57.4,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -775,11 +958,22 @@
         "argento": "/images/paint/eb110/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 19736,
+        "selectedPixels": 20304,
         "visiblePixels": 37464,
-        "coverage": 52.7,
+        "coverage": 54.2,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 594,
+        "seamComponents": 8,
+        "selectedPixels": 20304,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -804,11 +998,22 @@
         "argento": "/images/paint/seven/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 8942,
+        "selectedPixels": 9215,
         "visiblePixels": 29476,
-        "coverage": 30.3,
+        "coverage": 31.3,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 273,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 9215,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -833,11 +1038,22 @@
         "argento": "/images/paint/camaro/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17048,
+        "selectedPixels": 17744,
         "visiblePixels": 30540,
-        "coverage": 55.8,
+        "coverage": 58.1,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 696,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17744,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -862,11 +1078,22 @@
         "argento": "/images/paint/c4/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 18923,
+        "selectedPixels": 19732,
         "visiblePixels": 35772,
-        "coverage": 52.9,
+        "coverage": 55.2,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 809,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 19732,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -891,12 +1118,14 @@
         "argento": "/images/paint/c5/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 21895,
         "visiblePixels": 36136,
         "coverage": 60.6,
         "maskOverlap": 100
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -920,12 +1149,14 @@
         "argento": "/images/paint/ax/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 12801,
         "visiblePixels": 28164,
         "coverage": 45.5,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -949,11 +1180,22 @@
         "argento": "/images/paint/saxo/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15639,
+        "selectedPixels": 16054,
         "visiblePixels": 32504,
-        "coverage": 48.1,
+        "coverage": 49.4,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 415,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16054,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -978,11 +1220,22 @@
         "argento": "/images/paint/visa/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 10479,
+        "selectedPixels": 10948,
         "visiblePixels": 27700,
-        "coverage": 37.8,
+        "coverage": 39.5,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 512,
+        "seamComponents": 3,
+        "selectedPixels": 10948,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1007,12 +1260,14 @@
         "argento": "/images/paint/xsara/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14816,
         "visiblePixels": 33952,
         "coverage": 43.6,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1036,12 +1291,14 @@
         "argento": "/images/paint/zx/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18804,
         "visiblePixels": 35072,
         "coverage": 53.6,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1065,11 +1322,22 @@
         "argento": "/images/paint/charade/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 11453,
+        "selectedPixels": 12408,
         "visiblePixels": 25800,
-        "coverage": 44.4,
+        "coverage": 48.1,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 1087,
+        "seamComponents": 3,
+        "selectedPixels": 12408,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1094,11 +1362,22 @@
         "argento": "/images/paint/minit/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 8622,
+        "selectedPixels": 8702,
         "visiblePixels": 24920,
-        "coverage": 34.6,
+        "coverage": 34.9,
         "maskOverlap": 98.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 80,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 8702,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1123,12 +1402,14 @@
         "argento": "/images/paint/pantera/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17356,
         "visiblePixels": 40228,
         "coverage": 43.1,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1152,11 +1433,22 @@
         "argento": "/images/paint/viper/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17892,
+        "selectedPixels": 18325,
         "visiblePixels": 28448,
-        "coverage": 62.9,
+        "coverage": 64.4,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 433,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18325,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1181,11 +1473,22 @@
         "argento": "/images/paint/288/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 21052,
+        "selectedPixels": 21390,
         "visiblePixels": 35996,
-        "coverage": 58.5,
+        "coverage": 59.4,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 338,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 21390,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1210,11 +1513,22 @@
         "argento": "/images/paint/348/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 18029,
+        "selectedPixels": 18157,
         "visiblePixels": 36152,
-        "coverage": 49.9,
+        "coverage": 50.2,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 128,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18157,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1239,11 +1553,22 @@
         "argento": "/images/paint/360/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20671,
+        "selectedPixels": 21117,
         "visiblePixels": 36088,
-        "coverage": 57.3,
+        "coverage": 58.5,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 446,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 21117,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1268,11 +1593,22 @@
         "argento": "/images/paint/550/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20382,
+        "selectedPixels": 20643,
         "visiblePixels": 37348,
-        "coverage": 54.6,
+        "coverage": 55.3,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 261,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 20643,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1297,11 +1633,22 @@
         "argento": "/images/paint/355/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 21008,
+        "selectedPixels": 21683,
         "visiblePixels": 33144,
-        "coverage": 63.4,
+        "coverage": 65.4,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 675,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 21683,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1326,11 +1673,22 @@
         "argento": "/images/paint/f40/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 24034,
+        "selectedPixels": 24639,
         "visiblePixels": 37408,
-        "coverage": 64.2,
+        "coverage": 65.9,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 605,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 24639,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1355,11 +1713,22 @@
         "argento": "/images/paint/f50/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 24160,
+        "selectedPixels": 24788,
         "visiblePixels": 37880,
-        "coverage": 63.8,
+        "coverage": 65.4,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 628,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 24788,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1384,11 +1753,22 @@
         "argento": "/images/paint/testarossa/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20302,
+        "selectedPixels": 21397,
         "visiblePixels": 33696,
-        "coverage": 60.3,
+        "coverage": 63.5,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1095,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 21397,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1413,11 +1793,22 @@
         "argento": "/images/paint/131/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15883,
+        "selectedPixels": 16724,
         "visiblePixels": 29156,
-        "coverage": 54.5,
+        "coverage": 57.4,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 841,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16724,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1442,11 +1833,22 @@
         "argento": "/images/paint/barchetta/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15540,
+        "selectedPixels": 15710,
         "visiblePixels": 30196,
-        "coverage": 51.5,
+        "coverage": 52,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 174,
+        "seamComponents": 5,
+        "selectedPixels": 15710,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1471,12 +1873,14 @@
         "argento": "/images/paint/bravo/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 19795,
         "visiblePixels": 33916,
         "coverage": 58.4,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1500,12 +1904,14 @@
         "argento": "/images/paint/cinquecento/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14153,
         "visiblePixels": 27820,
         "coverage": 50.9,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1529,12 +1935,14 @@
         "argento": "/images/paint/coupe/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15318,
         "visiblePixels": 27900,
         "coverage": 54.9,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1558,11 +1966,22 @@
         "argento": "/images/paint/punto/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14088,
+        "selectedPixels": 14863,
         "visiblePixels": 25224,
-        "coverage": 55.9,
+        "coverage": 58.9,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 775,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 14863,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1587,11 +2006,22 @@
         "argento": "/images/paint/ritmo/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 10787,
+        "selectedPixels": 11049,
         "visiblePixels": 25776,
-        "coverage": 41.8,
+        "coverage": 42.9,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 262,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 11049,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1616,9 +2046,11 @@
         "argento": "/images/paint/seicento/argento.png"
       },
       "approved": true,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13112
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1642,12 +2074,14 @@
         "argento": "/images/paint/tipo/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14294,
         "visiblePixels": 34740,
         "coverage": 41.1,
         "maskOverlap": 100
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1671,12 +2105,14 @@
         "argento": "/images/paint/uno/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 11541,
         "visiblePixels": 31056,
         "coverage": 37.2,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1700,12 +2136,14 @@
         "argento": "/images/paint/escortc/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15662,
         "visiblePixels": 30012,
         "coverage": 52.2,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1729,12 +2167,14 @@
         "argento": "/images/paint/escortt/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13684,
         "visiblePixels": 33964,
         "coverage": 40.3,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1758,12 +2198,14 @@
         "argento": "/images/paint/fiesta/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 10614,
         "visiblePixels": 27012,
         "coverage": 39.3,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1787,12 +2229,14 @@
         "argento": "/images/paint/mondeo/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17594,
         "visiblePixels": 27992,
         "coverage": 62.9,
         "maskOverlap": 99.4
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1816,11 +2260,22 @@
         "argento": "/images/paint/mustang/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 21723,
+        "selectedPixels": 22887,
         "visiblePixels": 35976,
-        "coverage": 60.4,
+        "coverage": 63.6,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1164,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 22887,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1845,11 +2300,22 @@
         "argento": "/images/paint/puma/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12752,
+        "selectedPixels": 12841,
         "visiblePixels": 27136,
-        "coverage": 47,
+        "coverage": 47.3,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 104,
+        "seamComponents": 3,
+        "selectedPixels": 12841,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1874,12 +2340,14 @@
         "argento": "/images/paint/sierra4/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 21550,
         "visiblePixels": 36116,
         "coverage": 59.7,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -1903,11 +2371,22 @@
         "argento": "/images/paint/sierrac/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15215,
+        "selectedPixels": 15554,
         "visiblePixels": 30392,
-        "coverage": 50.1,
+        "coverage": 51.2,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 538,
+        "seamComponents": 11,
+        "selectedPixels": 15554,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1932,11 +2411,22 @@
         "argento": "/images/paint/crx/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 10633,
+        "selectedPixels": 10965,
         "visiblePixels": 27984,
-        "coverage": 38,
+        "coverage": 39.2,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 366,
+        "seamComponents": 9,
+        "selectedPixels": 10965,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1961,11 +2451,22 @@
         "argento": "/images/paint/ef/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16287,
+        "selectedPixels": 17175,
         "visiblePixels": 34952,
-        "coverage": 46.6,
+        "coverage": 49.1,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 888,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17175,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -1990,11 +2491,22 @@
         "argento": "/images/paint/eg/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14394,
+        "selectedPixels": 14824,
         "visiblePixels": 28032,
-        "coverage": 51.3,
+        "coverage": 52.9,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 430,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 14824,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2019,12 +2531,14 @@
         "argento": "/images/paint/ek/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14998,
         "visiblePixels": 33984,
         "coverage": 44.1,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2048,11 +2562,22 @@
         "argento": "/images/paint/integra/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17370,
+        "selectedPixels": 17732,
         "visiblePixels": 35036,
-        "coverage": 49.6,
+        "coverage": 50.6,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 386,
+        "seamComponents": 6,
+        "selectedPixels": 17732,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2077,11 +2602,22 @@
         "argento": "/images/paint/nsx/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20976,
+        "selectedPixels": 22207,
         "visiblePixels": 36588,
-        "coverage": 57.3,
+        "coverage": 60.7,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1231,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 22207,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2106,11 +2642,22 @@
         "argento": "/images/paint/prelude/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 21072,
+        "selectedPixels": 22480,
         "visiblePixels": 36628,
-        "coverage": 57.5,
+        "coverage": 61.4,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1408,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 22480,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2135,12 +2682,14 @@
         "argento": "/images/paint/s2000/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16083,
         "visiblePixels": 28840,
         "coverage": 55.8,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2164,12 +2713,14 @@
         "argento": "/images/paint/hyundai/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 19670,
         "visiblePixels": 35132,
         "coverage": 56,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2193,12 +2744,14 @@
         "argento": "/images/paint/xj/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13178,
         "visiblePixels": 36388,
         "coverage": 36.2,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2222,12 +2775,14 @@
         "argento": "/images/paint/xj220/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 20804,
         "visiblePixels": 35016,
         "coverage": 59.4,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2251,11 +2806,22 @@
         "argento": "/images/paint/xkr/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16622,
+        "selectedPixels": 16757,
         "visiblePixels": 36268,
-        "coverage": 45.8,
+        "coverage": 46.2,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 145,
+        "seamComponents": 4,
+        "selectedPixels": 16757,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2280,11 +2846,22 @@
         "argento": "/images/paint/countach/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 27109,
+        "selectedPixels": 27999,
         "visiblePixels": 41856,
-        "coverage": 64.8,
+        "coverage": 66.9,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 890,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 27999,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2309,11 +2886,22 @@
         "argento": "/images/paint/diablo/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 26410,
+        "selectedPixels": 27163,
         "visiblePixels": 35464,
-        "coverage": 74.5,
+        "coverage": 76.6,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 753,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 27163,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2338,12 +2926,14 @@
         "argento": "/images/paint/dedra/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 12236,
         "visiblePixels": 28740,
         "coverage": 42.6,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2367,12 +2957,14 @@
         "argento": "/images/paint/evoluzione/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16451,
         "visiblePixels": 29864,
         "coverage": 55.1,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2396,11 +2988,22 @@
         "argento": "/images/paint/delta16/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15005,
+        "selectedPixels": 15819,
         "visiblePixels": 29676,
-        "coverage": 50.6,
+        "coverage": 53.3,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 814,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 15819,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2425,12 +3028,14 @@
         "argento": "/images/paint/hpe/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14025,
         "visiblePixels": 24952,
         "coverage": 56.2,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2454,11 +3059,22 @@
         "argento": "/images/paint/thema/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14221,
+        "selectedPixels": 14409,
         "visiblePixels": 31120,
-        "coverage": 45.7,
+        "coverage": 46.3,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 188,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 14409,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2483,11 +3099,22 @@
         "argento": "/images/paint/is200/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15119,
+        "selectedPixels": 15272,
         "visiblePixels": 30500,
-        "coverage": 49.6,
+        "coverage": 50.1,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 178,
+        "seamComponents": 6,
+        "selectedPixels": 15272,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2512,12 +3139,14 @@
         "argento": "/images/paint/elise/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18569,
         "visiblePixels": 34624,
         "coverage": 53.6,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2541,12 +3170,14 @@
         "argento": "/images/paint/esprit/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 25183,
         "visiblePixels": 39364,
         "coverage": 64,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2570,11 +3201,22 @@
         "argento": "/images/paint/exige/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16669,
+        "selectedPixels": 17138,
         "visiblePixels": 32748,
-        "coverage": 50.9,
+        "coverage": 52.3,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 512,
+        "seamComponents": 6,
+        "selectedPixels": 17138,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2599,12 +3241,14 @@
         "argento": "/images/paint/mgf/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17998,
         "visiblePixels": 33072,
         "coverage": 54.4,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2628,11 +3272,22 @@
         "argento": "/images/paint/zr/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16601,
+        "selectedPixels": 17235,
         "visiblePixels": 29624,
-        "coverage": 56,
+        "coverage": 58.2,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 634,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17235,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2657,12 +3312,14 @@
         "argento": "/images/paint/zs/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17208,
         "visiblePixels": 34020,
         "coverage": 50.6,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2686,11 +3343,22 @@
         "argento": "/images/paint/3200/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16679,
+        "selectedPixels": 16858,
         "visiblePixels": 33016,
-        "coverage": 50.5,
+        "coverage": 51.1,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 217,
+        "seamComponents": 5,
+        "selectedPixels": 16858,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2715,11 +3383,22 @@
         "argento": "/images/paint/biturbo/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 19076,
+        "selectedPixels": 20177,
         "visiblePixels": 33520,
-        "coverage": 56.9,
+        "coverage": 60.2,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1101,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 20177,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2744,11 +3423,22 @@
         "argento": "/images/paint/shamal/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 21094,
+        "selectedPixels": 21712,
         "visiblePixels": 32792,
-        "coverage": 64.3,
+        "coverage": 66.2,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 618,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 21712,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2773,12 +3463,14 @@
         "argento": "/images/paint/323/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15657,
         "visiblePixels": 30148,
         "coverage": 51.9,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2802,11 +3494,22 @@
         "argento": "/images/paint/lantis/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 13836,
+        "selectedPixels": 14106,
         "visiblePixels": 31940,
-        "coverage": 43.3,
+        "coverage": 44.2,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 352,
+        "seamComponents": 6,
+        "selectedPixels": 14106,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2831,11 +3534,22 @@
         "argento": "/images/paint/mx3/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17032,
+        "selectedPixels": 18017,
         "visiblePixels": 31144,
-        "coverage": 54.7,
+        "coverage": 57.9,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 985,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18017,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2860,12 +3574,14 @@
         "argento": "/images/paint/na/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13992,
         "visiblePixels": 30428,
         "coverage": 46,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2889,11 +3605,22 @@
         "argento": "/images/paint/nb/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17973,
+        "selectedPixels": 18669,
         "visiblePixels": 32116,
-        "coverage": 56,
+        "coverage": 58.1,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 696,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18669,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2918,12 +3645,14 @@
         "argento": "/images/paint/fc/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16742,
         "visiblePixels": 37628,
         "coverage": 44.5,
         "maskOverlap": 98.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -2947,11 +3676,22 @@
         "argento": "/images/paint/fd/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20911,
+        "selectedPixels": 22262,
         "visiblePixels": 36384,
-        "coverage": 57.5,
+        "coverage": 61.2,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1351,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 22262,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -2976,12 +3716,14 @@
         "argento": "/images/paint/f1/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16886,
         "visiblePixels": 38012,
         "coverage": 44.4,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3005,12 +3747,14 @@
         "argento": "/images/paint/190/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13072,
         "visiblePixels": 30408,
         "coverage": 43,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3034,11 +3778,22 @@
         "argento": "/images/paint/c43/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16268,
+        "selectedPixels": 16584,
         "visiblePixels": 33924,
-        "coverage": 48,
+        "coverage": 48.9,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 470,
+        "seamComponents": 7,
+        "selectedPixels": 16584,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3063,12 +3818,14 @@
         "argento": "/images/paint/clk/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18304,
         "visiblePixels": 30900,
         "coverage": 59.2,
         "maskOverlap": 100
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3092,11 +3849,22 @@
         "argento": "/images/paint/slk/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15211,
+        "selectedPixels": 15305,
         "visiblePixels": 28904,
-        "coverage": 52.6,
+        "coverage": 53,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 94,
+        "seamComponents": 3,
+        "selectedPixels": 15305,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3121,12 +3889,14 @@
         "argento": "/images/paint/cooper/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 9821,
         "visiblePixels": 24028,
         "coverage": 40.9,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3150,11 +3920,22 @@
         "argento": "/images/paint/3000gt/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20303,
+        "selectedPixels": 20842,
         "visiblePixels": 36664,
-        "coverage": 55.4,
+        "coverage": 56.8,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 539,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 20842,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3179,12 +3960,14 @@
         "argento": "/images/paint/colt/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 12340,
         "visiblePixels": 29652,
         "coverage": 41.6,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3208,12 +3991,14 @@
         "argento": "/images/paint/eclipse/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 19419,
         "visiblePixels": 33104,
         "coverage": 58.7,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3237,11 +4022,22 @@
         "argento": "/images/paint/evo5/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16813,
+        "selectedPixels": 17393,
         "visiblePixels": 33868,
-        "coverage": 49.6,
+        "coverage": 51.4,
         "maskOverlap": 99.4
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 598,
+        "seamComponents": 5,
+        "selectedPixels": 17393,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3266,12 +4062,14 @@
         "argento": "/images/paint/evo6/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16561,
         "visiblePixels": 30992,
         "coverage": 53.4,
         "maskOverlap": 99.7
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3295,11 +4093,22 @@
         "argento": "/images/paint/evo7/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20695,
+        "selectedPixels": 21792,
         "visiblePixels": 35016,
-        "coverage": 59.1,
+        "coverage": 62.2,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1097,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 21792,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3324,12 +4133,14 @@
         "argento": "/images/paint/180sx/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18047,
         "visiblePixels": 33244,
         "coverage": 54.3,
         "maskOverlap": 99.1
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3353,11 +4164,22 @@
         "argento": "/images/paint/s13/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 11412,
+        "selectedPixels": 11562,
         "visiblePixels": 32636,
-        "coverage": 35,
+        "coverage": 35.4,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 158,
+        "seamComponents": 4,
+        "selectedPixels": 11562,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3382,11 +4204,22 @@
         "argento": "/images/paint/s14/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14226,
+        "selectedPixels": 14700,
         "visiblePixels": 27528,
-        "coverage": 51.7,
+        "coverage": 53.4,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 564,
+        "seamComponents": 7,
+        "selectedPixels": 14700,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3411,11 +4244,22 @@
         "argento": "/images/paint/300zx/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16603,
+        "selectedPixels": 17964,
         "visiblePixels": 29396,
-        "coverage": 56.5,
+        "coverage": 61.1,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1361,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17964,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3440,11 +4284,22 @@
         "argento": "/images/paint/almera/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12271,
+        "selectedPixels": 12689,
         "visiblePixels": 22740,
-        "coverage": 54,
+        "coverage": 55.8,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 418,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 12689,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3469,11 +4324,22 @@
         "argento": "/images/paint/micra/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14696,
+        "selectedPixels": 15473,
         "visiblePixels": 26024,
-        "coverage": 56.5,
+        "coverage": 59.5,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 777,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 15473,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3498,11 +4364,22 @@
         "argento": "/images/paint/primera/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20090,
+        "selectedPixels": 20540,
         "visiblePixels": 33200,
-        "coverage": 60.5,
+        "coverage": 61.9,
         "maskOverlap": 97.1
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 450,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 20540,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3527,11 +4404,22 @@
         "argento": "/images/paint/r32/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14911,
+        "selectedPixels": 15648,
         "visiblePixels": 29108,
-        "coverage": 51.2,
+        "coverage": 53.8,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 778,
+        "seamComponents": 4,
+        "selectedPixels": 15648,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3556,12 +4444,14 @@
         "argento": "/images/paint/r33/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14982,
         "visiblePixels": 24708,
         "coverage": 60.6,
         "maskOverlap": 99.7
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3585,12 +4475,14 @@
         "argento": "/images/paint/sunny/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 12933,
         "visiblePixels": 29644,
         "coverage": 43.6,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3614,11 +4506,22 @@
         "argento": "/images/paint/astrac/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17478,
+        "selectedPixels": 18150,
         "visiblePixels": 29520,
-        "coverage": 59.2,
+        "coverage": 61.5,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 672,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18150,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3643,12 +4546,14 @@
         "argento": "/images/paint/astrag/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13312,
         "visiblePixels": 27592,
         "coverage": 48.2,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3672,12 +4577,14 @@
         "argento": "/images/paint/opc/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16434,
         "visiblePixels": 27888,
         "coverage": 58.9,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3701,11 +4608,22 @@
         "argento": "/images/paint/calibra/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17937,
+        "selectedPixels": 18828,
         "visiblePixels": 33500,
-        "coverage": 53.5,
+        "coverage": 56.2,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 891,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18828,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3730,11 +4648,22 @@
         "argento": "/images/paint/corsa1/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 13803,
+        "selectedPixels": 14925,
         "visiblePixels": 29036,
-        "coverage": 47.5,
+        "coverage": 51.4,
         "maskOverlap": 99.2
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1122,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 14925,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3759,11 +4688,22 @@
         "argento": "/images/paint/corsa2/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12971,
+        "selectedPixels": 13576,
         "visiblePixels": 26376,
-        "coverage": 49.2,
+        "coverage": 51.5,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 647,
+        "seamComponents": 4,
+        "selectedPixels": 13576,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3788,11 +4728,22 @@
         "argento": "/images/paint/kadett/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12781,
+        "selectedPixels": 13169,
         "visiblePixels": 31804,
-        "coverage": 40.2,
+        "coverage": 41.4,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 391,
+        "seamComponents": 4,
+        "selectedPixels": 13169,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3817,11 +4768,22 @@
         "argento": "/images/paint/manta/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 11982,
+        "selectedPixels": 12794,
         "visiblePixels": 27286,
-        "coverage": 43.9,
+        "coverage": 46.9,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 835,
+        "seamComponents": 4,
+        "selectedPixels": 12794,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3846,12 +4808,14 @@
         "argento": "/images/paint/omega/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13735,
         "visiblePixels": 31488,
         "coverage": 43.6,
         "maskOverlap": 99.3
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3875,11 +4839,22 @@
         "argento": "/images/paint/speedster/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12400,
+        "selectedPixels": 12496,
         "visiblePixels": 28310,
-        "coverage": 43.8,
+        "coverage": 44.1,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 105,
+        "seamComponents": 3,
+        "selectedPixels": 12496,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3904,12 +4879,14 @@
         "argento": "/images/paint/tigra/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16271,
         "visiblePixels": 30180,
         "coverage": 53.9,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3933,11 +4910,22 @@
         "argento": "/images/paint/zonda/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 18494,
+        "selectedPixels": 19122,
         "visiblePixels": 38048,
-        "coverage": 48.6,
+        "coverage": 50.3,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 737,
+        "seamComponents": 12,
+        "selectedPixels": 19122,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -3962,12 +4950,14 @@
         "argento": "/images/paint/106/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14452,
         "visiblePixels": 25650,
         "coverage": 56.3,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -3991,11 +4981,22 @@
         "argento": "/images/paint/rallye/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14620,
+        "selectedPixels": 15456,
         "visiblePixels": 32044,
-        "coverage": 45.6,
+        "coverage": 48.2,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 894,
+        "seamComponents": 7,
+        "selectedPixels": 15456,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4020,11 +5021,22 @@
         "argento": "/images/paint/205/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 11666,
+        "selectedPixels": 12295,
         "visiblePixels": 30342,
-        "coverage": 38.4,
+        "coverage": 40.5,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 665,
+        "seamComponents": 8,
+        "selectedPixels": 12295,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4049,11 +5061,22 @@
         "argento": "/images/paint/206/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12492,
+        "selectedPixels": 12747,
         "visiblePixels": 24336,
-        "coverage": 51.3,
+        "coverage": 52.4,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 269,
+        "seamComponents": 3,
+        "selectedPixels": 12747,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4078,11 +5101,22 @@
         "argento": "/images/paint/306/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17169,
+        "selectedPixels": 17744,
         "visiblePixels": 33272,
-        "coverage": 51.6,
+        "coverage": 53.3,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 575,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17744,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4107,12 +5141,14 @@
         "argento": "/images/paint/309/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 10336,
         "visiblePixels": 28552,
         "coverage": 36.2,
         "maskOverlap": 99.3
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4136,11 +5172,22 @@
         "argento": "/images/paint/405/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17640,
+        "selectedPixels": 18667,
         "visiblePixels": 35090,
-        "coverage": 50.3,
+        "coverage": 53.2,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1027,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18667,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4165,11 +5212,22 @@
         "argento": "/images/paint/406/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17560,
+        "selectedPixels": 17810,
         "visiblePixels": 31688,
-        "coverage": 55.4,
+        "coverage": 56.2,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 250,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17810,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4194,12 +5252,14 @@
         "argento": "/images/paint/911/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 10829,
         "visiblePixels": 25616,
         "coverage": 42.3,
         "maskOverlap": 99.4
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4223,11 +5283,22 @@
         "argento": "/images/paint/gt1/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17528,
+        "selectedPixels": 17935,
         "visiblePixels": 31520,
-        "coverage": 55.6,
+        "coverage": 56.9,
         "maskOverlap": 98.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 430,
+        "seamComponents": 5,
+        "selectedPixels": 17935,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4252,11 +5323,22 @@
         "argento": "/images/paint/930/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12183,
+        "selectedPixels": 12548,
         "visiblePixels": 29708,
-        "coverage": 41,
+        "coverage": 42.2,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 410,
+        "seamComponents": 4,
+        "selectedPixels": 12548,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4281,11 +5363,22 @@
         "argento": "/images/paint/944/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 19832,
+        "selectedPixels": 20119,
         "visiblePixels": 31172,
-        "coverage": 63.6,
+        "coverage": 64.5,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 287,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 20119,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4310,11 +5403,22 @@
         "argento": "/images/paint/959/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14993,
+        "selectedPixels": 15023,
         "visiblePixels": 32756,
-        "coverage": 45.8,
+        "coverage": 45.9,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 31,
+        "seamComponents": 1,
+        "selectedPixels": 15023,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4339,11 +5443,22 @@
         "argento": "/images/paint/964/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15709,
+        "selectedPixels": 16071,
         "visiblePixels": 27806,
-        "coverage": 56.5,
+        "coverage": 57.8,
         "maskOverlap": 99.2
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 362,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16071,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4368,12 +5483,14 @@
         "argento": "/images/paint/964t/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13443,
         "visiblePixels": 29892,
         "coverage": 45,
         "maskOverlap": 99.7
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4397,11 +5514,22 @@
         "argento": "/images/paint/968/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 20687,
+        "selectedPixels": 20998,
         "visiblePixels": 34246,
-        "coverage": 60.4,
+        "coverage": 61.3,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 311,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 20998,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4426,12 +5554,14 @@
         "argento": "/images/paint/gt2/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18706,
         "visiblePixels": 30348,
         "coverage": 61.6,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4455,12 +5585,14 @@
         "argento": "/images/paint/993/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 18648,
         "visiblePixels": 29646,
         "coverage": 62.9,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4484,11 +5616,22 @@
         "argento": "/images/paint/996/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17907,
+        "selectedPixels": 18795,
         "visiblePixels": 30324,
-        "coverage": 59.1,
+        "coverage": 62,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 888,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18795,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4513,12 +5656,14 @@
         "argento": "/images/paint/boxster/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17448,
         "visiblePixels": 30288,
         "coverage": 57.6,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4542,11 +5687,22 @@
         "argento": "/images/paint/19/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14406,
+        "selectedPixels": 15526,
         "visiblePixels": 26702,
-        "coverage": 54,
+        "coverage": 58.1,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1120,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 15526,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4571,11 +5727,22 @@
         "argento": "/images/paint/5/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 11065,
+        "selectedPixels": 11640,
         "visiblePixels": 26062,
-        "coverage": 42.5,
+        "coverage": 44.7,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 587,
+        "seamComponents": 5,
+        "selectedPixels": 11640,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4600,12 +5767,14 @@
         "argento": "/images/paint/5maxi/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14413,
         "visiblePixels": 25512,
         "coverage": 56.5,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4629,12 +5798,14 @@
         "argento": "/images/paint/alpine/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17855,
         "visiblePixels": 32424,
         "coverage": 55.1,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4658,11 +5829,22 @@
         "argento": "/images/paint/clio/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12363,
+        "selectedPixels": 12504,
         "visiblePixels": 24576,
-        "coverage": 50.3,
+        "coverage": 50.9,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 158,
+        "seamComponents": 2,
+        "selectedPixels": 12504,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4687,12 +5869,14 @@
         "argento": "/images/paint/williams/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14390,
         "visiblePixels": 28888,
         "coverage": 49.8,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4716,11 +5900,22 @@
         "argento": "/images/paint/v6/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 13099,
+        "selectedPixels": 13535,
         "visiblePixels": 27942,
-        "coverage": 46.9,
+        "coverage": 48.4,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 483,
+        "seamComponents": 5,
+        "selectedPixels": 13535,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4745,12 +5940,14 @@
         "argento": "/images/paint/laguna/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 12255,
         "visiblePixels": 27790,
         "coverage": 44.1,
         "maskOverlap": 99.5
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4774,11 +5971,22 @@
         "argento": "/images/paint/megane/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15883,
+        "selectedPixels": 16815,
         "visiblePixels": 30864,
-        "coverage": 51.5,
+        "coverage": 54.5,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 932,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16815,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4803,11 +6011,22 @@
         "argento": "/images/paint/114/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 13625,
+        "selectedPixels": 13961,
         "visiblePixels": 24800,
-        "coverage": 54.9,
+        "coverage": 56.3,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 336,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 13961,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -4832,12 +6051,14 @@
         "argento": "/images/paint/220/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14153,
         "visiblePixels": 26880,
         "coverage": 52.7,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4861,12 +6082,14 @@
         "argento": "/images/paint/93/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15231,
         "visiblePixels": 26360,
         "coverage": 57.8,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4890,12 +6113,14 @@
         "argento": "/images/paint/900/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 11450,
         "visiblePixels": 27884,
         "coverage": 41.1,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4919,12 +6144,14 @@
         "argento": "/images/paint/cordoba/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16932,
         "visiblePixels": 30908,
         "coverage": 54.8,
         "maskOverlap": 99.6
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4948,12 +6175,14 @@
         "argento": "/images/paint/ibiza/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 16779,
         "visiblePixels": 29332,
         "coverage": 57.2,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -4977,12 +6206,14 @@
         "argento": "/images/paint/leon/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14697,
         "visiblePixels": 27152,
         "coverage": 54.1,
         "maskOverlap": 100
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5006,11 +6237,22 @@
         "argento": "/images/paint/octavia/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12879,
+        "selectedPixels": 13661,
         "visiblePixels": 30154,
-        "coverage": 42.7,
+        "coverage": 45.3,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 786,
+        "seamComponents": 5,
+        "selectedPixels": 13661,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5035,12 +6277,14 @@
         "argento": "/images/paint/22b/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15857,
         "visiblePixels": 26880,
         "coverage": 59,
         "maskOverlap": 99.4
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5064,11 +6308,21 @@
         "argento": "/images/paint/impreza/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15372,
         "visiblePixels": 32772,
         "coverage": 46.9,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 15372
       },
       "reviewHints": []
     },
@@ -5093,11 +6347,22 @@
         "argento": "/images/paint/legacy/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15004,
+        "selectedPixels": 15722,
         "visiblePixels": 32968,
-        "coverage": 45.5,
+        "coverage": 47.7,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 756,
+        "seamComponents": 5,
+        "selectedPixels": 15722,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5122,11 +6387,22 @@
         "argento": "/images/paint/svx/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17080,
+        "selectedPixels": 17431,
         "visiblePixels": 34698,
-        "coverage": 49.2,
+        "coverage": 50.2,
         "maskOverlap": 99.4
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 354,
+        "seamComponents": 2,
+        "selectedPixels": 17431,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5151,11 +6427,22 @@
         "argento": "/images/paint/swift/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 16387,
+        "selectedPixels": 16877,
         "visiblePixels": 29572,
-        "coverage": 55.4,
+        "coverage": 57.1,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 490,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16877,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5180,11 +6467,22 @@
         "argento": "/images/paint/sainz/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 18056,
+        "selectedPixels": 18691,
         "visiblePixels": 29520,
-        "coverage": 61.2,
+        "coverage": 63.3,
         "maskOverlap": 99.7
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 635,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18691,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5209,12 +6507,14 @@
         "argento": "/images/paint/gtfour/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 17397,
         "visiblePixels": 28742,
         "coverage": 60.5,
         "maskOverlap": 99.4
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5238,11 +6538,22 @@
         "argento": "/images/paint/celica/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15592,
+        "selectedPixels": 17036,
         "visiblePixels": 30976,
-        "coverage": 50.3,
+        "coverage": 55,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1444,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 17036,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5267,11 +6578,22 @@
         "argento": "/images/paint/corolla/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15672,
+        "selectedPixels": 16018,
         "visiblePixels": 35400,
-        "coverage": 44.3,
+        "coverage": 45.2,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 435,
+        "seamComponents": 4,
+        "selectedPixels": 16018,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5296,11 +6618,22 @@
         "argento": "/images/paint/mr2/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 17430,
+        "selectedPixels": 18256,
         "visiblePixels": 31158,
-        "coverage": 55.9,
+        "coverage": 58.6,
         "maskOverlap": 99.6
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 826,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 18256,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5325,11 +6658,22 @@
         "argento": "/images/paint/mrs/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14767,
+        "selectedPixels": 15987,
         "visiblePixels": 29676,
-        "coverage": 49.8,
+        "coverage": 53.9,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1220,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 15987,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5354,12 +6698,14 @@
         "argento": "/images/paint/supra3/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13282,
         "visiblePixels": 34182,
         "coverage": 38.9,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5383,12 +6729,14 @@
         "argento": "/images/paint/supra4/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 15668,
         "visiblePixels": 34370,
         "coverage": 45.6,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5412,11 +6760,22 @@
         "argento": "/images/paint/trueno/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 8953,
+        "selectedPixels": 9021,
         "visiblePixels": 27560,
-        "coverage": 32.5,
+        "coverage": 32.7,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 116,
+        "seamComponents": 6,
+        "selectedPixels": 9021,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5441,11 +6800,22 @@
         "argento": "/images/paint/yaris/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
         "selectedPixels": 12806,
         "visiblePixels": 26896,
         "coverage": 47.6,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 13,
+        "seamComponents": 1,
+        "selectedPixels": 12806,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5470,12 +6840,14 @@
         "argento": "/images/paint/cerbera/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 20668,
         "visiblePixels": 35670,
         "coverage": 57.9,
         "maskOverlap": 99.9
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5499,11 +6871,22 @@
         "argento": "/images/paint/speed12/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 19403,
+        "selectedPixels": 19493,
         "visiblePixels": 38174,
-        "coverage": 50.8,
+        "coverage": 51.1,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 108,
+        "seamComponents": 5,
+        "selectedPixels": 19493,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5528,12 +6911,14 @@
         "argento": "/images/paint/850t/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 19461,
         "visiblePixels": 36568,
         "coverage": 53.2,
         "maskOverlap": 99.4
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5557,11 +6942,22 @@
         "argento": "/images/paint/s40/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 18671,
+        "selectedPixels": 19570,
         "visiblePixels": 36708,
-        "coverage": 50.9,
+        "coverage": 53.3,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 954,
+        "seamComponents": 5,
+        "selectedPixels": 19570,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5586,12 +6982,14 @@
         "argento": "/images/paint/s60/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 14126,
         "visiblePixels": 31918,
         "coverage": 44.3,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5615,11 +7013,22 @@
         "argento": "/images/paint/corrado/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15457,
+        "selectedPixels": 16551,
         "visiblePixels": 28084,
-        "coverage": 55,
+        "coverage": 58.9,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 1094,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16551,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5644,11 +7053,22 @@
         "argento": "/images/paint/g60/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12713,
+        "selectedPixels": 13333,
         "visiblePixels": 27148,
-        "coverage": 46.8,
+        "coverage": 49.1,
         "maskOverlap": 99.8
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 620,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 13333,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5673,11 +7093,22 @@
         "argento": "/images/paint/gti1/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 11955,
+        "selectedPixels": 12334,
         "visiblePixels": 25704,
-        "coverage": 46.5,
+        "coverage": 48,
         "maskOverlap": 99.5
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 379,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 12334,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5702,11 +7133,22 @@
         "argento": "/images/paint/gti4/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 15934,
+        "selectedPixels": 16568,
         "visiblePixels": 28060,
-        "coverage": 56.8,
+        "coverage": 59,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 634,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 16568,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5731,12 +7173,14 @@
         "argento": "/images/paint/vr6/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 9130,
         "visiblePixels": 25780,
         "coverage": 35.4,
         "maskOverlap": 99.8
       },
+      "edgeRepair": null,
       "reviewHints": []
     },
     {
@@ -5760,11 +7204,22 @@
         "argento": "/images/paint/lupo/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 12976,
+        "selectedPixels": 13631,
         "visiblePixels": 24928,
-        "coverage": 52.1,
+        "coverage": 54.7,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 704,
+        "seamComponents": 5,
+        "selectedPixels": 13631,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5789,11 +7244,22 @@
         "argento": "/images/paint/beetle/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 14296,
+        "selectedPixels": 15024,
         "visiblePixels": 29600,
-        "coverage": 48.3,
+        "coverage": 50.8,
         "maskOverlap": 99.9
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": false,
+        "light": true,
+        "redAdded": 0,
+        "seamPixels": 771,
+        "seamComponents": 5,
+        "selectedPixels": 15024,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5818,11 +7284,22 @@
         "argento": "/images/paint/polo/argento.png"
       },
       "approved": false,
+      "revision": 2,
       "metrics": {
-        "selectedPixels": 13015,
+        "selectedPixels": 13177,
         "visiblePixels": 25534,
-        "coverage": 51,
+        "coverage": 51.6,
         "maskOverlap": 100
+      },
+      "edgeRepair": {
+        "version": 2,
+        "red": true,
+        "light": false,
+        "redAdded": 162,
+        "seamPixels": 0,
+        "seamComponents": 0,
+        "selectedPixels": 13177,
+        "changed": true
       },
       "reviewHints": []
     },
@@ -5847,12 +7324,14 @@
         "argento": "/images/paint/scirocco/argento.png"
       },
       "approved": false,
+      "revision": 1,
       "metrics": {
         "selectedPixels": 13299,
         "visiblePixels": 31266,
         "coverage": 42.5,
         "maskOverlap": 99.2
       },
+      "edgeRepair": null,
       "reviewHints": []
     }
   ]

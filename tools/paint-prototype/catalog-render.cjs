@@ -23,9 +23,9 @@ function prepareMask(source,draft){
  const notes=[];if(overlap/Math.max(white,1)<.9)notes.push('Controllare il bordo della carrozzeria.');if(selected/Math.max(visible,1)<.2)notes.push('Controllare la copertura delle zone in ombra.');if(selected/Math.max(visible,1)>.82)notes.push('Controllare vetri, fari e finiture.');
  return{mask,calibration,metrics:{selectedPixels:selected,visiblePixels:visible,coverage:Math.round(selected/Math.max(1,visible)*1000)/10,maskOverlap:Math.round(overlap/Math.max(1,white)*1000)/10},notes};
 }
-function renderColour(source,mask,rgb,calibration){
+function renderColour(source,mask,rgb,calibration,outline=null){
  const out=new PNG({width:source.width,height:source.height});source.data.copy(out.data);
- for(let p=0;p<source.data.length;p+=4){if(!mask.data[p])continue;const c=hsv(source.data[p],source.data[p+1],source.data[p+2]);let shade,specular;
+ for(let p=0;p<source.data.length;p+=4){if(!mask.data[p])continue;if(outline?.data[p]){const value=14+Math.round(Math.max(source.data[p],source.data[p+1],source.data[p+2])/255*7);out.data[p]=value;out.data[p+1]=value;out.data[p+2]=value+1;continue;}const c=hsv(source.data[p],source.data[p+1],source.data[p+2]);let shade,specular;
  if(calibration.chromatic){shade=Math.pow(Math.min(1,c.v/Math.max(.12,calibration.baseValue)),1.2);specular=Math.pow(1-c.s,2.7)*c.v;}
  else{const base=calibration.baseValue;shade=Math.pow(Math.min(1,c.v/base),.9);specular=c.v>base?Math.min(.7,(c.v-base)/Math.max(.1,1-base))*.65:0;}
  if(calibration.darkPaint)shade=.38+.62*Math.pow(Math.min(1,c.v/calibration.baseValue),.7);
