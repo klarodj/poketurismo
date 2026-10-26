@@ -79,3 +79,9 @@ Rifinita la sola Volvo 850 station wagon con una seconda generazione mirata, per
 Browser completo: 1.400 selezioni delle tinte pixel art e 1.400 confronti con le vernici precedenti caricati correttamente. Ricerca, marca, stato, assenza di risultati, note mantenute al ricaricamento, esportazione TXT e collegamenti modello/colore verificati. Larghezze 320, 390 e 1280 senza scorrimento esterno, anche con zoom. Nessun errore JavaScript, immagine mancante o richiesta di scrittura. Le vecchie note delle fotografie restano identiche. Lint e build superati; rimane soltanto l'avviso preesistente sulla dimensione del bundle del gioco.
 
 Validazioni di alpha/dettagli per tutte le tinte; 198 input generati individualmente e distinti, due prototipi e loro 22 PNG conservati, 200 foto originali e 1.400 vecchie vernici immutati. Ricostruzione ordinaria ripetuta con confronto dei 2.200 PNG nativi: identici byte per byte. Rapporti, tavole e catture in `.preview/pixel-catalog-qa`.
+
+### Pubblicazione del catalogo completo
+
+Pubblicato il 26 ottobre 2026 sulla sola istanza 5174, tramite il gateway 5184. Backup completo Auth + gioco e copia della build precedente in `/home/klaro/.backups/poketurismo/pixel-catalog-2026-10-26T08-54-39-555Z`; backup completo ripetuto dopo la pubblicazione con esito positivo. Nessuna migrazione, modifica dei salvataggi o sostituzione delle immagini nella partita.
+
+Verificati gateway locale e indirizzi pubblici 443/8443: 17 file HTML/JS/CSS/catalogo/PNG per indirizzo identici ai file collaudati, indice a 200 modelli e sette colori, salute HTTP 200 e API personali anonime HTTP 401. Servizi attivi; checkout di lavorazione e server temporaneo rimossi. Risultati in `.preview/pixel-catalog-qa/report-public.json`. Pagina conservata: `/previews/pixel-cars/`, raggiungibile anche dalla cartella delle vecchie vernici.
