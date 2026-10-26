@@ -1,0 +1,8 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{PNG}=require('pngjs'),{prepareNative,renderNative}=require('./pixel-sprite.cjs');
+const root=path.resolve(__dirname,'../..'),[key,rawPath]=process.argv.slice(2);if(!/^[A-Za-z0-9_-]+$/.test(key)||!rawPath?.startsWith('/home/klaro/.codex/generated_images/'))throw Error('Invalid generation input');
+const metadata=require('./pixel-catalog-sources.json').models.find(m=>m.key===key);if(!metadata||metadata.status==='approved-trial')throw Error('Unknown/already approved model');const raw=fs.readFileSync(rawPath),native=prepareNative(PNG.sync.read(raw)),result=renderNative(native),output=path.join(root,metadata.output);fs.mkdirSync(output,{recursive:true});
+fs.writeFileSync(path.join(root,metadata.input),PNG.sync.write(native));for(const [name,image]of Object.entries(result.images))fs.writeFileSync(path.join(output,name+'.png'),PNG.sync.write(image));
+const previousFile=root+'/.preview/pixel-generated/'+key+'.json',previous=fs.existsSync(previousFile)?JSON.parse(fs.readFileSync(previousFile)):metadata;
+const revision=previous.status==='generated'?(previous.revision||1)+1:1;
+const record={...metadata,status:'generated',revision,generatedPath:rawPath,rawSha256:crypto.createHash('sha256').update(raw).digest('hex'),generatedAt:new Date().toISOString(),metrics:{bodyPixels:result.bodyPixels,detailPixels:result.detailPixels,protectedPixels:result.protectedPixels}};
+fs.writeFileSync(root+'/.preview/pixel-generated/'+key+'.json',JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify({key,status:record.status,...record.metrics}));
