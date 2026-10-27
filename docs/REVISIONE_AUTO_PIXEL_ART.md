@@ -44,3 +44,9 @@ I 182 modelli non segnalati conservano tutti gli undici PNG byte per byte, inclu
 Controllati visivamente i 18 confronti prima/dopo e le 126 varianti. Validazione completa di alpha e dettagli sulle 1.400 tinte del catalogo; ricostruzione dei 2.200 PNG ripetuta senza differenze. Confronto con la versione pubblicata: 182 modelli invariati byte per byte, 18 revisioni incrementate e tutte le rispettive tinte aggiornate, 200 foto e 1.400 vecchie vernici conservate.
 
 Browser: caricate tutte le 1.400 tinte e i 1.400 confronti fotografici, verificati ricerca, filtri, note persistenti, esportazione, vecchie approvazioni da ricontrollare solo sui modelli modificati e mantenimento delle segnalazioni precedenti. Filtro aggiornate e collegamenti verificati anche dopo ricaricamento; pagina a 320, 390 e 1280 pixel senza scorrimento orizzontale esterno. Nessun errore JavaScript, file mancante o richiesta di scrittura. Rapporti e tavole in `.preview/pixel-rear-qa`.
+
+## Pubblicazione
+
+Pubblicata il 27 ottobre 2026 sull'unica istanza 5174 tramite il gateway 5184. Build e lint superati. Backup completo Auth + gioco prima e dopo la pubblicazione; build precedente conservata in `/home/klaro/.backups/poketurismo/pixel-rear-2026-10-27T07-50-06-102Z`. Nessuna migrazione o modifica dei dati del gioco.
+
+Verificati gateway locale e i due indirizzi pubblici HTTPS 443/8443: 17 risorse HTML, JavaScript, CSS, catalogo e immagini per ciascun indirizzo corrispondono ai file collaudati; catalogo di 200 modelli e sette colori, salute HTTP 200 e API private anonime HTTP 401. Entrambi i servizi attivi. Rapporto in `.preview/pixel-rear-qa/report-public.json`.
