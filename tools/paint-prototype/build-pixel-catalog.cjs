@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const {renderNative}=require('./pixel-sprite.cjs'),{COLOURS}=require('./catalog-render.cjs');
 const root=path.resolve(__dirname,'../..'),file=path.join(__dirname,'pixel-catalog-sources.json'),sources=JSON.parse(fs.readFileSync(file)),approved=require('./pixel-approved-hashes.json'),references=require('./pixel-catalog-references.json'),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const save=(file,bytes)=>{if(!fs.existsSync(file)||!fs.readFileSync(file).equals(bytes))fs.writeFileSync(file,bytes);};
-const catalog={version:2,width:320,height:128,colours:COLOURS,models:[]},report=[],missing=[];
+const catalog={version:2,reviewBatch:sources.reviewBatch,width:320,height:128,colours:COLOURS,models:[]},report=[],missing=[];
 for(let model of sources.models){
  const record=root+'/.preview/pixel-generated/'+model.key+'.json';if(fs.existsSync(record))model={...model,...JSON.parse(fs.readFileSync(record))};
  const at=sources.models.findIndex(m=>m.key===model.key);sources.models[at]=model;
@@ -16,7 +16,7 @@ for(let model of sources.models){
  }
  const base=PNG.sync.read(fs.readFileSync(folder+'/base.png')),details=PNG.sync.read(fs.readFileSync(folder+'/details.png')),index=PNG.sync.read(fs.readFileSync(folder+'/index.png'));
  for(const tint of COLOURS){const png=PNG.sync.read(fs.readFileSync(folder+'/'+tint.id+'.png'));assert.equal(png.width,320);assert.equal(png.height,128);for(let p=0;p<png.data.length;p+=4){assert.equal(png.data[p+3],base.data[p+3]);if(!index.data[p])assert(png.data.subarray(p,p+4).equals(details.data.subarray(p,p+4)));}}
- const original=PNG.sync.read(originalBytes);catalog.models.push({id:model.id,key:model.key,name:model.name,brand:model.brand,year:model.year,width:320,height:128,originalWidth:original.width,originalHeight:original.height,source:'/'+model.reference.replace('public/',''),originalSha256:sha(originalBytes),legacyPaint:`/images/paint/${model.key}/`,images:Object.fromEntries(COLOURS.map(c=>[c.id,`/images/pixel-cars/${model.key}/${c.id}.png`])),mask:`/images/pixel-cars/${model.key}/body.png`,details:`/images/pixel-cars/${model.key}/details.png`,sources:[...new Set([...(model.sources||[]),...(references[model.key]||[])])],revision:model.revision||1,approved:model.status==='approved-trial'});
+ const original=PNG.sync.read(originalBytes);catalog.models.push({id:model.id,key:model.key,name:model.name,brand:model.brand,year:model.year,width:320,height:128,originalWidth:original.width,originalHeight:original.height,source:'/'+model.reference.replace('public/',''),originalSha256:sha(originalBytes),legacyPaint:`/images/paint/${model.key}/`,images:Object.fromEntries(COLOURS.map(c=>[c.id,`/images/pixel-cars/${model.key}/${c.id}.png`])),mask:`/images/pixel-cars/${model.key}/body.png`,details:`/images/pixel-cars/${model.key}/details.png`,sources:[...new Set([...(model.sources||[]),...(references[model.key]||[])])],revision:model.revision||1,...(model.reviewBatch?{reviewBatch:model.reviewBatch}:{}),approved:model.status==='approved-trial'});
  report.push({key:model.key,inputSha256:sha(inputBytes),originalSha256:sha(originalBytes),nativeSize:[320,128],...metrics,variants:COLOURS.length,alphaIdentical:true,detailsIdentical:true});
 }
 const summary={models:catalog.models.length,expected:200,variants:catalog.models.length*COLOURS.length,missing,checks:report};

@@ -1,0 +1,400 @@
+{
+  "batch": "rear-2026-10-27",
+  "date": "2026-10-27",
+  "method": "Built-in image_gen, one independent correction per model, seven palette variants",
+  "models": [
+    {
+      "key": "19",
+      "id": 155,
+      "model": "Renault 19 16v",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Renault 19 16V PHASE 2 THREE-DOOR hatch as red original. Correct entire rear quarter: ONE long side door, no rear door/handle; very broad sloping C-pillar and triangular rear side glass; sharply raked hatch with short clipped tail, low slim factory lip spoiler and broad horizontal rear lamps. Not a five-door, not Chamade sedan, not an upright boxy Clio. Keep phase-2 elongated headlamps and original 5-spoke silver wheels.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/19.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://media-eu.invisioncic.com/m304542/monthly_2009_02/DSC05085.jpg.3ec5a3452d7b171ce987ffba5450c0b3.jpg",
+          "page": "https://forum-auto.caradisiac.com/topic/379344-r19-16s-de-1993/"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "33",
+      "id": 3,
+      "model": "Alfa Romeo 33 Quadrifoglio",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Alfa Romeo 33 series 907 facelift five-door hatchback, original white photo is exact variant. Make rear tail visibly SHORTER and more abruptly TRUNCATED; compact Kamm hatch tail behind steeply raked rear glass, not a long three-box sedan boot. Preserve four side doors, angular front, small rear lip from identity photo (do not add oversized wing from rear reference). Rear reference is for body and horizontal corner lamps.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/33.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://prod.pictures.autoscout24.net/listing-images/bf5a2662-ff08-467d-bf27-a1c917cced75_d4f63ac6-b2f6-4aeb-a1b7-003cdca641bd.jpg/1280x960.webp",
+          "page": "https://www.autoscout24.it/annunci/alfa-romeo-33-1-7-ie-16v-quadrifoglio-verde-da-collezione-benzina-rosso-bf5a2662-ff08-467d-bf27-a1c917cced75"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "ax",
+      "id": 30,
+      "model": "Citroen AX Gti",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Citroen AX GTi three-door. Correct rear lamps: short vertical trapezoid clusters strictly BELOW the rear glass at outer tailgate corners, top red, thin amber mid-band, red lower section. They do NOT climb the roof pillar and must not become a tall amber stripe alongside glass. Black bumpers and black wheel arch trim as original photo, small roof lip only.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/ax.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_9c59ae4339cf22999580216d9e3cefce.jpg",
+          "page": "https://www.classic-trader.com/de/automobile/inserat/citroen/ax/ax-gti/1991/445713"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "charade",
+      "id": 35,
+      "model": "Daihatsu Charade Gtti",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Daihatsu Charade G100 GTti three-door 1987-1991, original silver reference. Correct rear arches: rear wheel opening has a FLATTENED nearly horizontal upper edge and upright sides, rear wheel partly tucked, not a perfectly round bubble opening. Rear lights form a LOW HORIZONTAL red strip across tailgate with amber OUTER corner sections below rear glass, not vertical roof-pillar lamps. Preserve characteristic short blunt G100 rear and black side trim.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/charade.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_d991cee5669a3b8a7e906604df875055.jpg",
+          "page": "https://www.classic-trader.com/fr/voitures/annonce/daihatsu/charade/charade-gtti/1988/424290"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "seicento",
+      "id": 54,
+      "model": "Fiat Seicento Sporting",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Fiat Seicento Sporting first series 1998 as yellow original. Correct tail lights: LOW, WIDE HORIZONTAL rounded red clusters at lower outer corners of tailgate just above rear bumper. Completely remove any vertical lamp from rear roof pillar: C pillar is body colour uninterrupted green, rear glass black. Preserve tiny rounded tall three-door body, front Sporting bumper, period silver wheels. Rear reference defines lamp height and orientation.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/seicento.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://i.iplsc.com/sportowe-wersje-sporting-1998-2002-schumacher-2001-2002-dyna/0001VB3HJIYAKY87-C122-F4.jpg",
+          "page": "https://motoryzacja.interia.pl/samochody-uzywane/news-uzywany-fiat-seicento-1998-2010%2CnId%2C717671"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "fiesta",
+      "id": 59,
+      "model": "Ford Fiesta Turbo",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Ford Fiesta Mk3 RS Turbo three-door. Correct rear lights: compact vertical trapezoidal clusters BELOW rear window corners only, red upper and bottom, thin amber and white middle bands. No long pillar strips running up beside rear glass. Preserve RS Turbo four square bumper driving lamps, stock 3-spoke silver wheels, black bumper moulding and thin green/turquoise trim independently from painted green panels.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/fiesta.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://assets.carandclassic.com/listing-assets/ford/fiesta-rs-turbo/1991-ford-fiesta-rs-turbo-14998499896-4wEwxg/9I2vvckFyTfj55RckQQNZgGZajpqYc25oolu1zbJ.jpg?fit=fillmax&h=800&ixlib=php-4.1.0&q=85&s=22718259730bbd98073e25dc0e25a8be&w=800",
+          "page": "https://www.carandclassic.com/auctions/1991-ford-fiesta-mk-3-rs-turbo-g6MLP8"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "eg",
+      "id": 66,
+      "model": "Honda Civic EG",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Honda Civic EG three-door hatchback (1991-1995). Tail lamps must be LOW and HORIZONTAL with rounded rectangular red/amber sections straddling the lower tailgate corners; NO vertical lights along the rear pillars. Body-colour uninterrupted C-pillar above the small low lamp. Preserve rounded EG roof, wide doors and split rear hatch architecture; original front bumper and silver wheels.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/eg.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://cdn.shopify.com/s/files/1/0505/1537/8365/files/IMG_6176.jpg?v=1745325614",
+          "page": "https://ipgparts.com/blogs/blog/golden-era-honda-civic-perfection"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "evoluzione",
+      "id": 80,
+      "model": "Lancia Delta Evoluzione",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Lancia Delta HF Integrale Evoluzione five-door. Correct rear spoiler to the real adjustable rectangular SINGLE airfoil panel perched directly at the TOP of the rear hatch, with its broad flat panel tilted upward and two compact side mounting brackets. No huge sedan boot wing, double wing, downward tail spike, or shapeless solid block. Preserve squared extended arches, four circular headlamps, real Delta proportions.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/evoluzione.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://www.auctomobile.com/data/media/foto/large/lancia-delta-integrale-evoi-73.jpg",
+          "page": "https://www.auctomobile.com/auctions/results/1991-lancia-delta-integrale-evoluzione.html"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "hpe",
+      "id": 82,
+      "model": "Lancia Delta HPE",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Redraw accurately as SECOND-GENERATION Lancia Delta HPE HF type 836 THREE-DOOR 1998. ONE LONG door each side, broad thick sloping rear C pillar, small upward-tapering triangular rear side window, high blunt hatch and very short tail, pronounced rear shoulders. HPE is NOT a five-door first-generation Delta, NOT Peugeot 306, NOT Fiat Tipo. Exact slim horizontal front lamps either side of narrow upright Lancia shield grille with chrome perimeter, horizontal black bumper intakes, HF side skirts and mesh silver wheels from original dark blue reference. Rear lamp shape from real HPE photos, compact low wide corner clusters below glass; proper body-colour horizontal spoiler at the hatch mid-height just BELOW the rear glass, not at the roof edge. No rear side door/seam/handle.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.\nExtra front photo before style reference shows the correct HPE nose and THREE-DOOR body. Rear wing sits below rear glass, follow rear reference exactly.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/hpe.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://www.planetcarsz.com/img/carros/galeria/2025/05/lancia-delta-hpe-16-1998-008-20250518193912-1600x1067.jpg",
+          "page": "https://www.planetcarsz.com/carros/lancia-delta-hpe-16-1998"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://assets.carandclassic.com/listing-assets/lancia/delta-hpe-hf-turbo/1998-lancia-delta-hpe-hf-turbo-lhd-nPwZXg-v2/AEcFFRbkSwYnaoDBLUjI1jWvEYvjef1UyXU10loq.jpg?ar=16%3A9&auto=&fit=crop&h=1200&ixlib=php-4.1.0&q=75&s=7b5f7372f2e30f2dbfe9de0eae7fd413&w=1200",
+          "page": "https://www.carandclassic.com/auctions/1998-lancia-delta-hpe-hf-turbo-lhd-nPwZXg"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "colt",
+      "id": 108,
+      "model": "Mitsubishi Colt GTI",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Completely redraw as MITSUBISHI COLT fourth-generation CA0/CA4A GTi 1.8 (1992-1996), also fourth-generation MIRAGE THREE-DOOR hatch. The original black photograph defines this rounded CA0 shell; DO NOT draw older boxy C50 Colt, Suzuki Swift, Civic, or later CJ0. Very rounded low bubble roof, broad swept-back oval/triangular headlights with pointed inner tips, smooth narrow grille, short bonnet, long single side door, tiny curved triangular rear side window tapering into very thick sloping C-pillar. Rear is a distinctive curved descending fastback hatch with horizontal/rounded rear lamp corners, NOT a square vertical box tail. Use true CA0 rear reference; no transplanted C50 rear wing. Preserve original factory small silver multi-spoke wheels and stock black bumpers/trim.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.\nCA0 rear reference has short WIDE HORIZONTAL OVAL red lamp housings at tailgate mid-height just below glass, with a pale lower inset. No tall vertical light strip, no roof-pillar lamp.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/colt.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://static.cargurus.com/images/site/2008/08/27/16/37/1994_mitsubishi_colt-pic-54264-1600x1200.jpeg",
+          "page": "https://www.cargurus.com/research/1994-Mitsubishi-Colt-c9489"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "micra",
+      "id": 118,
+      "model": "Nissan Micra Super S",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Nissan Micra K11 pre-facelift Super S three-door. Correct tail lamps: SHORT compact vertically stacked rounded corner clusters entirely BELOW rear window lower edge, at bumper/tailgate level. NO long rear lamps climbing beside the rear window or roof pillar. High rounded roof, short tall bonnet, small square-rounded front headlights, not sport-coupe profile. Preserve Super S bumper and original small silver wheels.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/micra.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://i.pinimg.com/736x/f5/8e/b9/f58eb971c55ab26cc9d0e6e1c1c8d4f7.jpg",
+          "page": "https://mx.pinterest.com/pin/851039660872039759/"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "corsa2",
+      "id": 128,
+      "model": "Opel Corsa Gsi mk2",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Completely redraw as OPEL CORSA B GSi 16V MK2 THREE-DOOR 1993. Rounded egg-shaped three-door body, steep HIGH rear hatch, large oval almost circular front headlight housings with small outer amber area, narrow split grille around central Opel badge, early GSi smooth bumper with small round fog lights, black arch trim and side mouldings, silver wheels. Rear lamps are the proper broad oval/tapered upright Corsa B clusters flanking the hatch from rear-glass base to bumper, NEVER skinny roof-pillar strips. Not a Corsa A, not a Peugeot 106. Preserve body generation shown in original white photo.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.\nExtra front manufacturer photo before style reference defines early Corsa B GSi nose/rounded headlights. Use its stock wide lower intake and factory wheels, not a tuned bumper.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/corsa2.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://s1.cdn.autoevolution.com/images/gallery/OPEL-Corsa-3-Doors-1007_20.jpg",
+          "page": "https://www.autoevolution.com/cars/opel-corsa-3-doors-1993.html"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://stellantis3.dam-broadcast.com/medias/domain12808/media107432/2229798-m1vlq3g9fv-whr.jpg",
+          "page": "https://www.media.stellantis.com/em-en/opel/press/30-years-opel-corsa-b-innovative-and-independent-sales-hit"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "kadett",
+      "id": 129,
+      "model": "Opel Kadett Gsi",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Opel Kadett E GSi THREE-DOOR. Rear hatch window is MUCH MORE RAKED: strong diagonal descending roof/glass from the rear roof to short tail, with a thick triangular C-pillar; not a vertical station wagon or upright generic hatch. Very broad single front side door and triangular rear side glass, NO rear door. GSi horizontal rear lip spoiler on hatch lower trailing edge, low horizontal rectangular tail lights. Preserve original white car nose, aero wheel covers and body skirts.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/kadett.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/1990_Opel_Kadett_E_2.0_GSi_%2810559495226%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File%3A1990_Opel_Kadett_E_2.0_GSi_%2810559495226%29.jpg"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "clio",
+      "id": 159,
+      "model": "Renault Clio Rs",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Renault Clio II Renault Sport 172 PHASE 1 (1999-2001), THREE-DOOR. Correct front headlights to LARGE ROUNDED double-element/teardrop housings, bulging oval outline, not tiny narrow rectangular Clio I lamps and not facelift sharp triangular lamps. Short slim split grille with centre Renault diamond, original RS bumper round fog lamps. Rear lights: correct short broad triangular/oval wedge clusters flanking the hatch BELOW rear glass, red outer area with pale small inset, not tall thin pillar lights. Preserve Clio II bulbous rear glass/rounded tall roof, original silver OZ wheels.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.\nExtra FRONT real Clio RS phase-1 photograph before final style reference controls the large rounded twin-element headlights. Rear real photo shows broad triangular clusters below glass, follow actual outline.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/clio.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://cdn.themarket.co.uk/1ab8e11d-7ab0-4339-8cd5-83cc49d32fce.jpg?format=jpg&optimizer=image&width=900",
+          "page": "https://www.themarket.co.uk/en/listings/renault/clio-rs-172-phase-1/ae3b85e5-75fd-4ae8-a51f-c68adfb453b1"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://cdn.themarket.co.uk/ae3b85e5-75fd-4ae8-a51f-c68adfb453b1/43a58378-181e-46d1-9b79-9c7ef539b8b1.jpg?height=450&optimizer=image&width=600",
+          "page": "https://www.themarket.co.uk/en/listings/renault/clio-rs-172-phase-1/ae3b85e5-75fd-4ae8-a51f-c68adfb453b1?status=live"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "williams",
+      "id": 161,
+      "model": "Renault Clio Williams",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Renault Clio I Williams three-door. REMOVE the rear spoiler COMPLETELY as explicitly requested: smooth unadorned rear roof/hatch trailing edge, no projecting wing or lip at roof or boot. Keep gold Speedline wheels and all other identity traits of original blue car: compact Clio I roof, rectangular headlights, black bumper and rubbing strips, wide single door. Rear reference only for tail and lamp anatomy, do not copy its spoiler.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/williams.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://www.planetcarsz.com/img/carros/galeria/2022/08/renault-clio-williams-phase-1-1993-05-20220824103333-1600x1066.jpg",
+          "page": "https://www.planetcarsz.com/carros/renault-clio-williams-phase-1"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "laguna",
+      "id": 162,
+      "model": "Renault Laguna",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Renault Laguna I PHASE 1 five-door liftback, exact dark 1997 original. Correct nose/grille: extremely slim body-colour smooth bridge between elongated rounded headlights, small Renault diamond centred above the slit; narrow paired horizontal black vents either side/under the emblem, NOT a wide black honeycomb mouth between headlights and NOT Clio grille. Broad horizontal lower bumper intake and separate fog-light recesses per front photo. Preserve long flowing Laguna I liftback silhouette and full-size car proportions.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.\nIn the front photograph the bonnet descends in a CENTRAL V/BEAK carrying the Renault diamond between two narrow black horizontal vents. Copy this distinctive phase-1 nose exactly, not a simple generic straight grille.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/laguna.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://i0.wp.com/www.curbsideclassic.com/wp-content/uploads/2025/10/IMG20250827102640_edited.jpg?quality=75&ssl=1",
+          "page": "https://www.curbsideclassic.com/curbside-classics-european/curbside-classic-1997-renault-laguna-boring-sells/"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "22b",
+      "id": 172,
+      "model": "Subaru Impreza 22b",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Subaru Impreza 22B STi TWO-DOOR widebody coupe. Correct rear arch flare to distinctive rally-derived BROAD FACETED BLISTER with a STRAIGHT FLATTENED upper shoulder/crease and angular taper into quarter panel, not a smooth circular swollen bubble. Wheel opening upper arc is subtly flattened and flare sides broad angular; do not square off the tyre. Preserve long single doors, broad body, bonnet scoop, tall proper 22B rear wing, gold BBS wheels.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/22b.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://am-s3-bucket-assets.s3.eu-west-2.amazonaws.com/silverstone/prod/lot_images/large/REC15736-1/REC15736-1_35.jpg.webp?dummy=1775346201",
+          "page": "https://www.iconicauctioneers.com/1998-subaru-22b-sti-rec15736-1-silverston-0825"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    },
+    {
+      "key": "swift",
+      "id": 176,
+      "model": "Suzuki Swift GTI",
+      "prompt": "Use case: stylized-concept. Asset type: corrected production pixel-art car sprite for Poketurismo, Italian automotive RPG circa 2002.\nInput roles: Image 1 is ORIGINAL FRONT identity photograph; Image 2 is REAL REAR anatomy photograph (copy only correct factory body and lamp shapes, no unrelated modifications or stickers); final image is ONLY PIXEL STYLE AND CAMERA reference, never borrow its car shape.\nSubject and essential correction: Suzuki Swift GTi SF413 / second generation 1991 THREE-DOOR. Correct rear lamps to LOW BROAD HORIZONTAL red/amber rectangular corner clusters below the rear glass, wrapping slightly onto side and aligned with hatch lower panel. NO tall vertical lights alongside roof pillars. Preserve sloping rear hatch, black glass surround, small stock rear lip, short pointed bonnet, slim lamps and factory silver multi-spoke wheels from orange original.\nCreate ONE whole car, transparent background. Match approved pixel-art front-left three-quarter camera, NOSE POINTING DOWN-LEFT, about 40% front and 60% side, full car and straight wheels visible, wide 3:1 canvas. Do not turn to rear view to show lamps: use the rear photo to correctly draw only what is naturally visible in this FRONT three-quarter view. Never add an invented vertical taillight to fill a C-pillar; if a lamp is hidden, leave it hidden. Preserve actual stock body proportions, don't stretch or squash.\nHand-constructed authentic pixel art on logical 320x128 grid: crisp square clusters, dark one-pixel seams, six tones per material, clean low-noise shade blocks like approved sprite. No photo filter, anti-aliasing, vector outline, smooth 3D rendering, excessive glossy gradients or noisy dithering.\nRECOLOUR MATERIAL CONTRACT: ALL painted surfaces and every painted highlight/edge use saturated GREEN shades ONLY: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Painted highlights remain green, G at least 20 greater than R and B, NO near-neutral grey or white flecks on paint. Do NOT use green on any nonpaint material. Glass dark steel-blue/cool-grey, rubber/grille/seams charcoal/black, headlights ivory, indicators amber, taillights red/amber. Wheels factory silver except Williams and 22B gold. Keep genuine black trims independent from paint.\nKeep original doors, trim and period wheels. No extra doors, modern lights, tuning changes, custom body kit, background, text, watermarks or extra cars. Priority: identifiable accurate model anatomy and user correction, then coherent catalog pixel style. Draw the real car, not a generic hatchback.",
+      "referenceImages": [
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/swift.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://images.autoweek.nl/261144504/width/800/261144504",
+          "page": "https://www.autoweek.nl/autonieuws/artikel/suzuki-swift-gti-1991-liefhebber-gezocht/"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
+        }
+      ]
+    }
+  ]
+}

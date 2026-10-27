@@ -36,15 +36,15 @@
     },
     {
       "key": "33",
-      "inputSha256": "4d468f2e5c131b0f2e2a68a90ab35642f546107d3d0dfc919648076c41de7881",
+      "inputSha256": "5bed778444f0472870948a3a830816d923b66c15bac26eaac714daa15f58b4c0",
       "originalSha256": "73f3aba7b1a2e3d53bef8e0ccc7e54feb85e085243d658779a1547f0d2413235",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12956,
-      "detailPixels": 12720,
-      "protectedPixels": 196028,
+      "bodyPixels": 12847,
+      "detailPixels": 12536,
+      "protectedPixels": 196791,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -441,15 +441,15 @@
     },
     {
       "key": "ax",
-      "inputSha256": "f497e1d628e1ecf0558f7054725c56eb56919b2b597aae09153084b23afe7a6b",
+      "inputSha256": "08cfa697ad456ef7fc77ceb3a934f3d68b4cbf0e37dc935c6af7f029b8f59bd3",
       "originalSha256": "81ea58cc6972a0e5c5889bd6857a083603b4e496c440a39dda099f8da161ba6f",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 11927,
-      "detailPixels": 10691,
-      "protectedPixels": 203231,
+      "bodyPixels": 8296,
+      "detailPixels": 10740,
+      "protectedPixels": 228648,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -516,15 +516,15 @@
     },
     {
       "key": "charade",
-      "inputSha256": "8a59134c264851ae56ca859c8677542566b0ce92844ac3cb7d09c1162a18cefb",
+      "inputSha256": "28f7ded27677ccbc8f3b48bfbcc705a922842c9daf221aacf7997f9578664042",
       "originalSha256": "44e96d58d1ce2e242c42b8b0660ae6af3b5d6d8470f5c6dcf267301285a0321c",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12184,
-      "detailPixels": 11035,
-      "protectedPixels": 201432,
+      "bodyPixels": 10731,
+      "detailPixels": 9938,
+      "protectedPixels": 211603,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -801,15 +801,15 @@
     },
     {
       "key": "seicento",
-      "inputSha256": "cb4aea365c775b0f05f0e3f4dee55e1313d1234db8fca024c33bb931c253b32b",
+      "inputSha256": "2cad89ce9967c1e993e17eea4604043c82ad0cfe8daad63244caf90b614660a5",
       "originalSha256": "baf30f17a326f0d16acb341e91900954c7342febc15c2a2689f01f2e41d6faca",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 11380,
-      "detailPixels": 9207,
-      "protectedPixels": 207060,
+      "bodyPixels": 9961,
+      "detailPixels": 8098,
+      "protectedPixels": 216993,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -876,15 +876,15 @@
     },
     {
       "key": "fiesta",
-      "inputSha256": "06694209b596ef358c78567848a6425f939624ea6d79f5d9f01406ab04d32366",
+      "inputSha256": "456e6baf65beab22b61bb35916e6a7d35302f5fc90114103108484d99308fa6f",
       "originalSha256": "df837892a010cf0906db030006d5fd064a482da8c64749c4fffd0379055856cd",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 10560,
-      "detailPixels": 12418,
-      "protectedPixels": 212800,
+      "bodyPixels": 10696,
+      "detailPixels": 12192,
+      "protectedPixels": 211848,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -996,15 +996,15 @@
     },
     {
       "key": "eg",
-      "inputSha256": "113c95223f71d1e8ab27d49f2567726e07e4c6ee39341c28e2aea7c0b9efd0c0",
+      "inputSha256": "15853cbc89f13754e05c17426b56fdf10785b3fae4cc253c74d77bd638606b6c",
       "originalSha256": "31c63fe5242d8b5f2b3e4793f079ee47c7a827e2be803a80bc8bd0d7b862ffd9",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 11951,
-      "detailPixels": 11797,
-      "protectedPixels": 203063,
+      "bodyPixels": 11419,
+      "detailPixels": 11884,
+      "protectedPixels": 206787,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -1191,15 +1191,15 @@
     },
     {
       "key": "evoluzione",
-      "inputSha256": "79731b6e92ab54e9148369357cd38a7767e6b866130e03c8a791c11aa3030948",
+      "inputSha256": "40fedd221b8352d59a487c85ff07b42fd5d1df5afb37a050e9cb902049048d25",
       "originalSha256": "31b54b896bd467016441c27c8bd9b5e2d708f1411e7595d9e5c86e4e96b8ffde",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12879,
-      "detailPixels": 10925,
-      "protectedPixels": 196567,
+      "bodyPixels": 11274,
+      "detailPixels": 10715,
+      "protectedPixels": 207802,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -1221,15 +1221,15 @@
     },
     {
       "key": "hpe",
-      "inputSha256": "db9fcbf4b38fb48a9a95d3db21e9da95123d11cfa14da624762cde80adabb3f0",
+      "inputSha256": "399c17e84fa0cb6d76b5712cdaf87ef16d88e841e7483b413b8796166de7ef1d",
       "originalSha256": "fda829fbe0e7629de1311afa7788280f385ead0707b3b218d57e471ad6b6a145",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13372,
-      "detailPixels": 10676,
-      "protectedPixels": 193116,
+      "bodyPixels": 12754,
+      "detailPixels": 10094,
+      "protectedPixels": 197442,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -1611,15 +1611,15 @@
     },
     {
       "key": "colt",
-      "inputSha256": "19a8a81308e30b8e10ee962818e934e3923a575d2c7dd363b900d3dd3b94c98d",
+      "inputSha256": "3a376f4a834000fedaba9296de0d63f85ac7aa48684f7075dcc457d510d50ab3",
       "originalSha256": "d71c9dc1cbe7ff680685f43bea4486de3f69f1ffdf1a318976261556c8fb8608",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12002,
-      "detailPixels": 11084,
-      "protectedPixels": 202706,
+      "bodyPixels": 11392,
+      "detailPixels": 12741,
+      "protectedPixels": 206976,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -1761,15 +1761,15 @@
     },
     {
       "key": "micra",
-      "inputSha256": "80cbd53f0df7781b5b43b5ddd3faef93bcd92c3e9b20896561f2e451df05940e",
+      "inputSha256": "b7b653f47c5191fffe5d6a83e2038067b962f9ab933991ab7fe1d88af5b38d0d",
       "originalSha256": "7a42883b8536653016f761a7ed411ff15211149c181763712e7fdf57d4e41cfc",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12173,
-      "detailPixels": 10385,
-      "protectedPixels": 201509,
+      "bodyPixels": 12279,
+      "detailPixels": 9779,
+      "protectedPixels": 200767,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -1911,30 +1911,30 @@
     },
     {
       "key": "corsa2",
-      "inputSha256": "d5d70820de99111551d2b9fe9312dc987221c242c674f54ddf40379406f64ad9",
+      "inputSha256": "c8c52ccacd149fcbd7ce17def00c8eefb6aef710910a0e59ee143a51900bbf86",
       "originalSha256": "386329a43325e9ffbd679fcd1b5d7e1001732aa62225783d625559df803fd7c8",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12700,
-      "detailPixels": 10342,
-      "protectedPixels": 197820,
+      "bodyPixels": 9792,
+      "detailPixels": 8845,
+      "protectedPixels": 218176,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
     },
     {
       "key": "kadett",
-      "inputSha256": "b70a528e5d3d63431ff2071f58e4607657a2bb9660dc84b5ab06bee6e9ed0c40",
+      "inputSha256": "e89e7021f356d858b282ce6a3e08f869b0a69eda884c9ce7e0f3bd9f192ba83f",
       "originalSha256": "4a45349a82478a9e17140f4aa8f94829e7b348b77d12c2b815cbda0355b6ae7d",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12932,
-      "detailPixels": 11190,
-      "protectedPixels": 196196,
+      "bodyPixels": 12164,
+      "detailPixels": 12657,
+      "protectedPixels": 201572,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -2316,15 +2316,15 @@
     },
     {
       "key": "19",
-      "inputSha256": "defcea2a8a6d7752409dcfbe63dd8b96306cf5115f6c3f723ccb11c19319104d",
+      "inputSha256": "3fe34e80a41eb74c7506ead284e4cb1093ce5648dab97ace34555ef6ba03444a",
       "originalSha256": "d016cb6b207295148e38c002fa2fe830ec311fe047fc45639de1fbb8f8f5b60b",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13363,
-      "detailPixels": 11677,
-      "protectedPixels": 193179,
+      "bodyPixels": 13971,
+      "detailPixels": 10117,
+      "protectedPixels": 188923,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -2376,30 +2376,30 @@
     },
     {
       "key": "clio",
-      "inputSha256": "a45a79f3c1a9784c76692236b47515aaeace65d930b67af6f10de9a8112925db",
+      "inputSha256": "d2a950e5ec503a7eb9b2a9b64605b146f5395d34ebaf2e32bbd1b78f5a590303",
       "originalSha256": "37101d8399f5aa9509be23c015239b3d6c1ee1667de0173dc5f6330a2b0029bf",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12325,
-      "detailPixels": 9858,
-      "protectedPixels": 200445,
+      "bodyPixels": 11878,
+      "detailPixels": 10804,
+      "protectedPixels": 203574,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
     },
     {
       "key": "williams",
-      "inputSha256": "0269bc30539cbbd6715e7984498b7254c57aff585ea3bad29d1fd69edaae3982",
+      "inputSha256": "3177e7b7fd6f4dc60ca76f2b7f56ec8060b40b7c1403a59dc8ee0451afb3da09",
       "originalSha256": "40b2ede53f32b9bcacd1c4fbdff54d0c05f3a717cc7ae38aa4f8535f75cbb496",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 10646,
-      "detailPixels": 11600,
-      "protectedPixels": 212198,
+      "bodyPixels": 10809,
+      "detailPixels": 11532,
+      "protectedPixels": 211057,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -2421,15 +2421,15 @@
     },
     {
       "key": "laguna",
-      "inputSha256": "6bfebd3a5cd371d82e962d196daf08464b3efcfbecda4d887280ec9f706ff9f3",
+      "inputSha256": "e79095b9aecacd030ee9d906d2ff19ec0a7069a96d27d01909fc7e5f16cd921a",
       "originalSha256": "dde31a604c337c5d5e213b319657759d5ad856dd5e00b3a8ff928c9c70b99e41",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13527,
-      "detailPixels": 11473,
-      "protectedPixels": 192031,
+      "bodyPixels": 11033,
+      "detailPixels": 12265,
+      "protectedPixels": 209489,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -2571,15 +2571,15 @@
     },
     {
       "key": "22b",
-      "inputSha256": "28054a71efe0226d15dcd391314728adc73ca018052f3c2094ab22c81019bf39",
+      "inputSha256": "79a042164532d85bb0df60dca05ffa5a4b5807bb045d9105ec2c89102fd5e3c8",
       "originalSha256": "d20a7aa4a1ddac400d705b5a13e2f24a70a833df2a1a1ea27c28c2ab3ab74534",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13616,
-      "detailPixels": 9149,
-      "protectedPixels": 191408,
+      "bodyPixels": 12692,
+      "detailPixels": 9447,
+      "protectedPixels": 197876,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -2631,15 +2631,15 @@
     },
     {
       "key": "swift",
-      "inputSha256": "e156a7ccb10b597650210195978f638ecc0c88aa6f4e059b85a1391574fba2e5",
+      "inputSha256": "63b55bea585053d77118165c5aa7ab6402405d5e6209b87522a8296d7458a1c1",
       "originalSha256": "19f9401c2804faaa755b1164a96ab800ae4f15234e54626cff44025a7224f3da",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 12424,
-      "detailPixels": 10970,
-      "protectedPixels": 199752,
+      "bodyPixels": 13614,
+      "detailPixels": 10680,
+      "protectedPixels": 191422,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
