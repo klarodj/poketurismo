@@ -1,3 +1,4 @@
+const {paintFor}=require('./carPaint');
 const {createHash}=require('node:crypto');
 const {fail,positiveId,restoredHandlingStats}=require('./gameRules');
 const {garageInclude}=require('./persistence');
@@ -9,7 +10,7 @@ const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex
 const pilot=user=>({id:user.id,name:user.username,level:user.level,avatar:user.avatar||null});
 function publicShowcase(user,item){
  const garage={...item,...restoredHandlingStats(item)};
- return {pilot:pilot(user),car:{id:garage.id,modelId:garage.carId,name:garage.car.name,brand:garage.car.brand?.name||'',image:garage.car.image,year:garage.car.year,cv:garage.cv,nm:garage.nm,kg:garage.kg,driveType:garage.car.driveType,engineType:garage.car.engineType,km:garage.km,engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,performanceIndex:performanceIndex(garage),tier:marketTier(garage.car,garage).name,
+ return {pilot:pilot(user),car:{id:garage.id,modelId:garage.carId,name:garage.car.name,brand:garage.car.brand?.name||'',image:garage.car.image,paintColour:paintFor(garage),year:garage.car.year,cv:garage.cv,nm:garage.nm,kg:garage.kg,driveType:garage.car.driveType,engineType:garage.car.engineType,km:garage.km,engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,performanceIndex:performanceIndex(garage),tier:marketTier(garage.car,garage).name,
  parts:garage.mods.map(mod=>({id:mod.part.id,name:mod.part.name,description:mod.part.description,category:mod.part.category,level:mod.part.level}))}};
 }
 async function visibleParticipants(tx){
@@ -46,7 +47,7 @@ function projectTime(row,user,cars,currentLayout,modelId,fuelModelVersion=2){
  if(!model||model.id!==modelId)return null;
  const saved=state.trialSetup?.configuration;
  const configuration=saved?{setupKey:saved.setupKey,engineHealth:saved.engineHealth,tireGrip:saved.tireGrip,currentFuel:saved.currentFuel,fuelType:saved.fuelType,parts:(saved.parts||[]).map(part=>({name:part.name,level:part.level}))}:null;
- return {pilot:pilot(user),timeMs:Math.round(state.playerTime*1000),date:new Date(row.createdAt).toISOString(),car:{modelId:model.id,name:snapshot.name,brand:snapshot.brand,image:snapshot.image,cv:snapshot.cv,kg:snapshot.kg,performanceIndex:state.trialSetup?.performanceIndex??null},configuration};
+ return {pilot:pilot(user),timeMs:Math.round(state.playerTime*1000),date:new Date(row.createdAt).toISOString(),car:{modelId:model.id,name:snapshot.name,brand:snapshot.brand,image:snapshot.image,paintColour:paintFor(snapshot),cv:snapshot.cv,kg:snapshot.kg,performanceIndex:state.trialSetup?.performanceIndex??null},configuration};
 }
 async function leaderboard(tx,query){
  if(Object.keys(query).some(key=>!['trackId','modelId','setupKey','fuelVersion'].includes(key)))fail(400,'Filtri classifica non validi');

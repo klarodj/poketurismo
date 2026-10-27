@@ -1,3 +1,4 @@
+const {seededPaint}=require('./carPaint');
 const {randomInt,randomUUID,createHash}=require('node:crypto');
 const {STREET_ZONES,STREET_STYLES,streetPerformance,streetPilot,streetReward,repeatFactor,streetAccessReasons:access}=require('../shared/streetCatalog.mjs');
 const {buildTacticalTrack}=require('../shared/trackGeometry.mjs');
@@ -38,7 +39,7 @@ async function describeOffer(tx,ctx,zone,offer){
   const bankroll=Math.max(0,Math.min(Math.floor(ctx.user.moneyCents/100*0.15),Math.floor(ctx.user.moneyCents/100)-1000));
   const maximum=Math.min(bankroll,Math.floor(zone.maxWager*(easy?0.25:1)*repeatFactor(wins)));
   const wagers=[...new Set([0,...[Math.floor(maximum/4),Math.floor(maximum/2),maximum].filter(value=>value>0)])];
-  return {id:offer.id,zoneId:zone.id,rival:{id:rival.id,name:rival.name,style:STREET_STYLES[rival.style],skill:rival.skill,car:{id:car.id,name:car.name,brand:car.brand?.name||'',image:car.image,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,cv:car.cv,kg:car.kg,performance:streetPerformance(rivalCar(car,rival))}},
+  return {id:offer.id,zoneId:zone.id,rival:{id:rival.id,name:rival.name,style:STREET_STYLES[rival.style],skill:rival.skill,car:{id:car.id,paintColour:seededPaint('street:'+rival.id),name:car.name,brand:car.brand?.name||'',image:car.image,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,cv:car.cv,kg:car.kg,performance:streetPerformance(rivalCar(car,rival))}},
     track:{id:track.id,name:track.name,distanceKm,weather:track.meteo.name,surface:track.surface.name,builds:track.builds},
     challenge:ratio>1.1?'Sei favorito':ratio<0.9?'Avversario impegnativo':'Sfida equilibrata',easy,races,rewardFactor:repeatFactor(wins)*(easy?0.2:1),wagers,maxWager:maximum,
     record:ctx.state[zone.id]?.rivals?.[rival.id]||{races:0,wins:0,losses:0,draws:0},
@@ -85,7 +86,7 @@ async function acceptEncounter(tx,userId,body){
   const street={zoneId:zone.id,zoneName:zone.name,rivalId:rival.id,offerId:offer.id,easy:offer.easy,racesBefore:offer.races,style:rival.style};
   delete saved.offer;ctx.state[zone.id]=saved;
   await tx.playerProgress.update({where:{userId},data:{streetState:JSON.stringify(ctx.state)}});
-  return {track,opponentCar:findCar(ctx,rival),opponentPilot:streetPilot(rival),opponentName:rival.name,opponentCondition:{engineHealth:rival.engineHealth,tireGrip:rival.tireGrip},wager:body.wager,street};
+  return {track,opponentCar:{...findCar(ctx,rival),paintColour:seededPaint('street:'+rival.id)},opponentPilot:streetPilot(rival),opponentName:rival.name,opponentCondition:{engineHealth:rival.engineHealth,tireGrip:rival.tireGrip},wager:body.wager,street};
 }
 async function settleStreet(tx,userId,state){
   const row=await tx.playerProgress.findUnique({where:{userId}});const saved=parseProgress(row);const zone=saved[state.street.zoneId]||{};const rivals=zone.rivals||{};const rival=rivals[state.street.rivalId]||{races:0,wins:0,losses:0,draws:0};

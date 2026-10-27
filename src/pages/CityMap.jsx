@@ -8,7 +8,7 @@ const LOCATIONS = [
   { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
   { path: '/autodrome',    name: 'Autodromo',          id: 'track',     image: '/images/track.png', desc: 'Gare ufficiali in pista' },
   { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/street.png', desc: 'Solo per i coraggiosi' },
-  { path: '/workshop',      name: 'Meccanico',          id: 'workshop',  image: '/images/workshop.png', desc: 'Riparazioni e tagliandi' },
+  { path: '/workshop',      name: 'Meccanico',          id: 'workshop',  image: '/images/workshop.png', desc: 'Riparazioni, tagliandi e vernici' },
   { path: '/parts-shop',    name: 'Negozio Tuning',     id: 'parts',     image: '/images/shop.png',  desc: 'Potenzia il tuo bolide' },
   { path: '/dealership',    name: 'Concessionario',     id: 'dealership',image: '/images/dealer.png', desc: 'Auto nuove di zecca' },
   { path: '/used-cars',     name: 'Auto Usate',         id: 'used',      image: '/images/used.png', desc: 'Forum compravendita' },

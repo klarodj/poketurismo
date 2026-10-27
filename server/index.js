@@ -14,6 +14,7 @@ const { publicEntry, createContract } = require('./championships');
 const { championshipInfo } = require('../shared/championshipCatalog.mjs');
 const carMeet = require('./carMeet');
 const workshop = require('./workshop');
+const carPaint=require('./carPaint');
 const tuning=require('./tuning');
 const meetSocial=require('./meetSocial');
 const app = express();
@@ -92,14 +93,16 @@ mutate('/api/purchase', 'purchase-car', async (tx, userId, body) => {
     const listing = await tx.garage.findFirst({ where: { id, userId: -1 }, include: garageInclude });
     if (!listing) fail(404, 'Annuncio non più disponibile');
     await charge(tx, userId, marketAskingPrice(listing.car, listing));
-    await tx.garage.update({ where: { id }, data: { userId, sellPrice: 0 } });
+    if(body.paintColour!==undefined)fail(400,'Il colore dell’usato è quello dell’annuncio');
+    await tx.garage.update({ where: { id }, data: { userId, sellPrice: 0,paintColour:carPaint.paintFor(listing) } });
   } else {
     const carId = positiveId(body.carId);
     const car = await tx.car.findUnique({ where: { id: carId } });
     if (!car) fail(404, 'Auto inesistente');
+    const paintColour=carPaint.selectedPaint(body.paintColour,car);
     await charge(tx, userId, newCarPrice(car));
     const stats = Object.fromEntries(['cv', 'nm', 'kg', 'speed', 'acceleration', 'revving', 'transmission', 'turnSlow', 'turnFast', 'brake', 'traction'].map(key => [key, car[key]]));
-    await tx.garage.create({ data: { userId, carId, ...stats } });
+    await tx.garage.create({ data: { userId, carId, paintColour,...stats } });
   }
   return snapshot(tx, userId);
 });
@@ -153,6 +156,7 @@ mutate('/api/garage/:garageId/mods/:modId', 'unmount-part', async (tx, userId, b
 }, 'delete');
 app.get('/api/workshop/:userId', endpoint(req => transaction(prisma,tx => workshop.workshop(tx,accounts.playerId(req,req.params.userId)))));
 mutate('/api/garage/:garageId/service','service',workshop.service);
+mutate('/api/garage/:garageId/paint','paint-car',carPaint.repaint);
 mutate('/api/workshop/recover','workshop-recover',workshop.recover);
 mutate('/api/workshop/repay','workshop-repay',workshop.repay);
 mutate('/api/garage/:garageId/refuel', 'refuel', async (tx, userId, body, params) => {

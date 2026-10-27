@@ -1,3 +1,5 @@
+import {carArtwork} from '../../shared/carArtwork.mjs';
+import {paintFor,paintName} from '../../shared/carPaint.mjs';
 import ClubRecoveryHint from '../components/ClubRecoveryHint';
 import RaceDetailDialog from '../components/RaceDetailDialog';
 import useRaceStore from '../store/raceStore';
@@ -22,7 +24,7 @@ export default function GarageAuto() {
   const activeRace=useRaceStore(s=>s.activeRace),pending=useRequestStore(s=>s.pending);
   const [selling,setSelling]=useState(false);
 
-  const [selectedCarId, setSelectedCarId] = useState(equippedCarId || (cars.length > 0 ? cars[0].id : null));
+  const [selectedCarId, setSelectedCarId] = useState(null);
 
   const selectedCar = cars.find(c => c.id === selectedCarId) || cars.find(c => c.id === equippedCarId) || cars[0];
   const raceStats = selectedCar ? getCarStats(selectedCar.id) : null;
@@ -93,14 +95,14 @@ export default function GarageAuto() {
                <div className="flex flex-col xl:flex-row gap-4 mb-4">
                   <div className="w-full xl:w-1/2 h-40 bg-white border-2 border-gray-500 shadow-win98-inset flex items-center justify-center p-2">
                      {selectedCar.image ? (
-                        <img src={`/images/car/${selectedCar.image}`} alt={selectedCar.name} className="max-w-full max-h-full object-contain mix-blend-multiply" onError={(e) => e.target.style.display='none'}/>
+                        <img src={carArtwork(selectedCar)} alt={`${selectedCar.name} · ${paintName(paintFor(selectedCar))}`} className="max-w-full max-h-full object-contain pixel-car-image" onError={(e) => e.target.style.display='none'}/>
                      ) : (
                         <span className="text-gray-400 italic font-bold">Nessun file immagine</span>
                      )}
                   </div>
                   
                   <div className="w-full xl:w-1/2 flex flex-col justify-center">
-                     <div className="bg-win98-gray border border-gray-400 p-2 text-sm space-y-1">
+                     <div className="bg-win98-gray border border-gray-400 p-2 text-sm space-y-1"><div className="flex justify-between"><span>Colore:</span><strong>{paintName(paintFor(selectedCar))}</strong></div>
                         <div className="flex justify-between font-bold border-b border-gray-300">
                            <span>Motore:</span> <span className="text-blue-800">{selectedCar.cv} CV / {selectedCar.nm} Nm</span>
                         </div>

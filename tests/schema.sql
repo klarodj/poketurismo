@@ -80,6 +80,7 @@ CREATE TABLE "User" (
 
 -- CreateTable
 CREATE TABLE "Garage" (
+ "paintColour" TEXT,
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "userId" INTEGER NOT NULL,
     "carId" INTEGER NOT NULL,

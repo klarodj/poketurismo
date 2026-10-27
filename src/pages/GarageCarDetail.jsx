@@ -1,3 +1,5 @@
+import {carArtwork} from '../../shared/carArtwork.mjs';
+import {paintFor,paintName} from '../../shared/carPaint.mjs';
 import {partName,partDescription} from '../logic/partLabels.mjs';
 import FuelConsumption from '../components/FuelConsumption';
 import React, { useState } from 'react';
@@ -86,9 +88,9 @@ export default function GarageCarDetail() {
           <div className="w-full lg:w-1/2 flex flex-col p-4 border-r-2 border-win98-darkerGray bg-gray-100">
              <div className="bg-white border-2 border-win98-darkerGray shadow-win98-inset p-4 mb-4 flex items-center justify-center min-h-[170px]">
                 <img 
-                  src={`/images/car/${car.image}`} 
-                  alt={car.name} 
-                  className="max-w-full max-h-[200px] object-contain"
+                  src={carArtwork(car)}
+                  alt={`${car.name} · ${paintName(paintFor(car))}`}
+                  className="pixel-car-image max-w-full max-h-[200px] object-contain"
                   onError={(e) => e.target.src = '/images/garage.png'}
                 />
              </div>

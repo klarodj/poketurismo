@@ -78,7 +78,7 @@ export const fetchActiveChampionshipEntry = id => request(`/championship-entries
 export const fetchChampionshipHistory = id => request(`/championship-entries/history/${id}`);
 export const fetchChampionshipEntry = (id, userId) => request(`/championship-entries/${id}?userId=${userId}`);
 export const equipCar = (userId, carDrive) => action(`/player/${userId}/equip`, { userId, carDrive }, 'PUT');
-export const purchaseCar = (userId, carId, marketGarageId) => action('/purchase', { userId, ...(marketGarageId ? { marketGarageId } : { carId }) });
+export const purchaseCar = (userId, carId, marketGarageId,paintColour) => action('/purchase', { userId, ...(marketGarageId ? { marketGarageId } : { carId,...(paintColour?{paintColour}:{}) }) });
 export const sellCar = (userId, garageId) => action('/market/sell', { userId, garageId });
 export const purchasePart = (userId, partId, preparation) => action('/parts/purchase', { userId, partId, ...preparation });
 export const mountPart = (garageId, partId, userId, quoteKey) => action(`/garage/${garageId}/mount`, { userId, partId, ...(quoteKey ? {quoteKey}: {}) });
@@ -128,3 +128,5 @@ export const fetchPhoneNotifications=userId=>request(`/phone/${userId}/notificat
 export const fetchPhoneInbox=userId=>request(`/phone/${userId}`);
 
 export const changeFriendship=(userId,peerId,choice,requestKey)=>action('/meet/friendship',{userId,peerId,action:choice,...(requestKey?{requestKey}:{})});
+
+export const repaintCar=(garageId,userId,paintColour,quoteKey)=>action(`/garage/${garageId}/paint`,{userId,paintColour,quoteKey});

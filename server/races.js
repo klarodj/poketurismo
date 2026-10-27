@@ -1,5 +1,6 @@
 const { CLUB_REWARDS, clubReward } = require('../shared/clubRacing.mjs');
 const { randomInt } = require('node:crypto');
+const {paintFor,seededPaint}=require('./carPaint');
 const { fail, positiveId, restoredHandlingStats, checkChampionship, charge, cents, publicPlayer } = require('./gameRules');
 const { inventory, garageInclude } = require('./persistence');
 const { tradeInValue } = require('../shared/carEconomy.mjs');
@@ -43,7 +44,7 @@ async function snapshot(tx, userId, race) {
 function carSnapshot(garage) {
   return { ...Object.fromEntries([...CAR_STATS, 'cv', 'nm', 'kg', 'km', 'engineHealth', 'tireGrip', 'serviceKm', 'currentFuel', 'fuelType'].map(key => [key, garage[key]])),
     cc:garage.car.cc,engineType:garage.car.engineType,baseCv: garage.car.cv, baseKg: garage.car.kg, velMax: garage.car.velMax, zeroToHundred: garage.car.zeroToHundred, driveType: garage.car.driveType,
-    id: garage.id, name: garage.car.name, brand: garage.car.brand?.name || '', image: garage.car.image };
+    id: garage.id, name: garage.car.name, brand: garage.car.brand?.name || '', image: garage.car.image,paintColour:paintFor(garage) };
 }
 async function startRace(tx, userId, body) {
   const mode = body.mode;
@@ -158,7 +159,7 @@ async function startRace(tx, userId, body) {
     rulesVersion, fuelModelVersion:rulesVersion!==3?1:gridMatch?(gridMatch.contract.fuelModelVersion||1):2, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
     car: carSnapshot(garage), pilot,
-    opponent: { name: opponentName, car: { ...opponentCar, name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
+    opponent: { name: opponentName, car: { ...opponentCar, paintColour:opponentCar.paintColour||seededPaint('race:'+seed+':'+opponentName),name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
     moves: inv.moves.filter(move => inv.equippedMoves.includes(move.id)), index: 0, gap: 0, logs: [], rng: seed,
     ...(mode === 'track' && !sandbox ? {clubRewardVersion:CLUB_REWARDS.version} : {}),
     finished: false, sandbox, entryId: entry?.id || null, round: round?.ord || null,

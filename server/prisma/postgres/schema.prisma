@@ -122,6 +122,7 @@ model User {
 }
 
 model Garage {
+  paintColour  String?
   id           Int    @id @default(autoincrement())
   userId       Int
   user         User   @relation(fields: [userId], references: [id])

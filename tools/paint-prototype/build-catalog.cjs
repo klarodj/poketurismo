@@ -1,3 +1,4 @@
+if(!require('node:fs').existsSync(require('node:path').resolve(__dirname,'../../public/images/car')))throw Error('Vernici fotografiche archiviate. Usa build-pixel-catalog.cjs per gli asset attivi.');
 const {groups,repairEdges}=require('./edge-repair.cjs');
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');const {PNG}=require('pngjs');const {COLOURS,prepareMask,renderColour,verify}=require('./catalog-render.cjs');
 const root=path.resolve(__dirname,'../..');const input=path.join(root,'.preview/mask-inputs');const models=JSON.parse(fs.readFileSync(path.join(__dirname,'models.json')));const sha=b=>crypto.createHash('sha256').update(b).digest('hex');

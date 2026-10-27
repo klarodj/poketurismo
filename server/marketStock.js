@@ -1,3 +1,4 @@
+const {seededPaint}=require('./carPaint');
 const { CAR_STATS, PILOT_STATS } = require('./raceEngine');
 const { marketTier, newCarPrice, usedRetailPrice } = require('../shared/carEconomy.mjs');
 const STOCK_KEY = 'used-market-opening-v1';
@@ -17,7 +18,7 @@ function planStock(cars) {
       const km= tier===0?45000+index*11000:25000+((index*41+tier*23)%150)*1000;
       const engineHealth=tier===0?94-index%4*2:95-((index+tier)%6)*3;
       const tireGrip=tier===0?88-index%4*3:90-((index*2+tier)%7)*4;
-      const data={userId:-1,carId:car.id,cv:car.cv,nm:car.nm,kg:car.kg,...Object.fromEntries(CAR_STATS.map(key=>[key,car[key]])),
+      const data={userId:-1,carId:car.id,paintColour:seededPaint(`market:${tier}:${index}:${car.id}`),cv:car.cv,nm:car.nm,kg:car.kg,...Object.fromEntries(CAR_STATS.map(key=>[key,car[key]])),
         km,engineHealth,tireGrip,serviceKm:Math.max(0,km-3000-index*700),currentFuel:10+index%4*2,fuelType:'Normale'};
       const sellPrice=usedRetailPrice(car,data);
       listings.push({data:{...data,sellPrice},car,tier:marketTier(car).name});

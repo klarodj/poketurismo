@@ -4,13 +4,14 @@ const {PILOT_STATS}=require('./raceEngine');
 const {advanceTacticalRace,DEFAULT_DECISION}=require('../shared/tacticalRace.mjs');
 const {incidentCue,routeProfileFor}=require('../shared/raceContext.mjs');
 const {fail}=require('./gameRules');
+const {seededPaint}=require('./carPaint');
 const trackInclude={type:true,surface:true,meteo:true,builds:{include:{section:true},orderBy:{ord:'asc'}}};
 function readContract(entry){return JSON.parse(entry.contract||'{}');}
 function publicEntry(entry){if(!entry)return null;const contract=readContract(entry);const results=typeof entry.results==='string'?JSON.parse(entry.results):entry.results;const {contract:_,...safe}=entry;return require('./periodWorld').presentPeriodEntry({...safe,results,...(contract.version===1?{championship:contract.championship,format:'grid',standings:gridStandings(results,[{id:'player',name:contract.playerName},...contract.drivers.map(d=>({id:d.id,name:d.name,carName:d.car.name}))])}:{format:'duel'})});}
 async function createContract(tx,user,championship){
  const spec=championshipInfo(championship.name);if(!spec)return '{}';
  const cars=await tx.car.findMany({include:{brand:true}});
- const drivers=spec.rivals.map(rival=>{const car=cars.find(car=>car.name===rival.carName);if(!car)fail(409,`Auto avversaria mancante: ${rival.carName}`);return {id:rival.id,name:rival.name,car:{...car,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,km:0,serviceKm:0,currentFuel:35,fuelType:'Normale'},pilot:Object.fromEntries(PILOT_STATS.map(key=>[key,rival.skill]))};});
+ const drivers=spec.rivals.map(rival=>{const car=cars.find(car=>car.name===rival.carName);if(!car)fail(409,`Auto avversaria mancante: ${rival.carName}`);return {id:rival.id,name:rival.name,car:{...car,paintColour:seededPaint('cup:'+championship.id+':'+rival.id),engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,km:0,serviceKm:0,currentFuel:35,fuelType:'Normale'},pilot:Object.fromEntries(PILOT_STATS.map(key=>[key,rival.skill]))};});
  const rounds=[];for(const round of championship.rounds.slice().sort((a,b)=>a.ord-b.ord)){const track=await tx.track.findUnique({where:{id:round.trackId},include:trackInclude});if(!track?.builds.length)fail(409,'Calendario incompleto');rounds.push({...round,track});}
  return JSON.stringify({version:1,fuelModelVersion:2,playerName:user.username,championship:{...championship,rules:{drives:spec.drives,engineTypes:spec.engineTypes,brands:spec.brands},rounds},drivers});
 }

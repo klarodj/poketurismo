@@ -8,8 +8,8 @@ const stale=model=>reviews[model.key]&&(reviews[model.key].revision||1)<(model.r
 const status=model=>stale(model)&&reviews[model.key].status==='approved'?'pending':['pending','approved','fix'].includes(reviews[model.key]?.status)?reviews[model.key].status:model.approved?'approved':'pending';
 const versioned=(url,model)=>(model.revision||1)>1?`${url}?rev=${model.revision}`:url;
 const revised=model=>Boolean(catalog?.reviewBatch)&&model.reviewBatch===catalog.reviewBatch;
-const original=model=>$('legacy-paint').checked?`${model.legacyPaint}${colour}.png?rev=3`:model.source;
-const image=(model,tint)=>tint==='originale'?original(model):versioned(model.images[tint],model);
+
+const image=(model,tint)=>versioned(model.images[tint],model);
 const colourName=id=>id==='originale'?'Colore originale':catalog.colours.find(c=>c.id===id)?.name||id;
 function announce(text){$('notice').textContent=text;}
 function shareURL(model=active,tint=colour){const url=new URL(location.pathname,location.origin);url.searchParams.set('auto',model.key);url.searchParams.set('colore',tint);if($('filter').value==='updated')url.searchParams.set('filtro','aggiornate');return url.href;}
@@ -28,18 +28,18 @@ function filterModels(selectFirst=true){
  if(selectFirst&&filtered.length&&!filtered.some(m=>m.key===active?.key))openModel(filtered[0]);
  else if(active){$('model-picker').value=active.key;for(const b of $('model-list').querySelectorAll('button'))b.setAttribute('aria-current',String(b.dataset.model===active.key));navState();}
 }
-function selectColour(id,writeURL=true){colour=id;$('original').src=original(active);$('original').alt=`${active.brand} ${active.name} · ${$('legacy-paint').checked?colourName(id):'originale'}`;$('original-caption').textContent=$('legacy-paint').checked?`Verniciatura attuale · ${colourName(id)}`:'Immagine attuale · originale';$('preview').src=image(active,id);$('preview').alt=`${active.brand} ${active.name} · ${colourName(id)}`;$('selected-name').textContent=colourName(id);for(const button of $('palette').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.colour===id));if(writeURL)updateURL();}
+function selectColour(id,writeURL=true){colour=id;$('preview').src=image(active,id);$('preview').alt=`${active.brand} ${active.name} · ${colourName(id)}`;$('selected-name').textContent=colourName(id);for(const button of $('palette').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.colour===id));if(writeURL)updateURL();}
 function openModel(model){
  active=model;$('model-name').textContent=`#${model.id} · ${model.brand} ${model.name}`;$('model-info').textContent=`${model.year} · ${revised(model)?'Rivista con riferimenti fotografici':model.approved?'Prova già approvata':'Bozzetto da valutare'}`;
- for(const id of ['preview','mask','details-layer']){$(id).width=320;$(id).height=128;}$('original').width=model.originalWidth;$('original').height=model.originalHeight;$('details-layer').src=versioned(model.details,model);
- $('original').src=original(model);$('original').alt=`${model.brand} ${model.name} · originale`;$('mask').src=versioned(model.mask,model);$('mask').alt=`Area verniciata · ${model.brand} ${model.name}`;
+ for(const id of ['preview','mask','details-layer']){$(id).width=320;$(id).height=128;}$('details-layer').src=versioned(model.details,model);
+ $('mask').src=versioned(model.mask,model);$('mask').alt=`Area verniciata · ${model.brand} ${model.name}`;
  $('review-state').value=status(model);$('note').value=typeof reviews[model.key]?.note==='string'?reviews[model.key].note.slice(0,1200):'';$('saved').textContent=stale(model)?'Anteprima aggiornata. Le note precedenti sono conservate: ricontrolla il risultato e conferma la valutazione.':'';$('model-picker').value=model.key;
  for(const button of $('model-list').querySelectorAll('button'))button.setAttribute('aria-current',String(button.dataset.model===model.key));
  selectColour(colour);$('board').replaceChildren();for(const tint of catalog.colours){const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');img.src=image(model,tint.id);img.alt=`${model.brand} ${model.name} · ${tint.name}`;img.width=model.width;img.height=model.height;img.loading='lazy';caption.textContent=tint.name;figure.append(img,caption);$('board').append(figure);}navState();
 }
 function correctionText(){const fixes=models.filter(model=>status(model)==='fix');return ['POKETURISMO · REVISIONE AUTO PIXEL ART',`${fixes.length} modelli da correggere`,'',...fixes.flatMap(model=>{const r=reviews[model.key];return [`#${model.id} · ${model.brand} ${model.name}`,`Colore selezionato: ${colourName(r?.colour||'rosso')}`,stale(model)?'Valutazione precedente alla revisione del bozzetto: da ricontrollare.':'',r?.note?.trim()||'(Nessuna nota)',shareURL(model,r?.colour||'rosso'),''];})].join('\n');}
 async function copy(text){try{await navigator.clipboard.writeText(text);announce('Copiato negli appunti.');}catch{$('copy-fallback').hidden=false;$('copy-text').value=text;$('copy-text').focus();$('copy-text').select();announce('Seleziona e copia il testo qui sotto.');}}
-$('legacy-paint').addEventListener('change',()=>selectColour(colour,false));
+
 $('search').addEventListener('input',()=>filterModels());$('brand').addEventListener('change',()=>filterModels());$('filter').addEventListener('change',()=>{filterModels();if(active)updateURL();});$('model-picker').addEventListener('change',()=>{const model=models.find(m=>m.key===$('model-picker').value);if(model)openModel(model);});
 $('previous').addEventListener('click',()=>{const at=filtered.findIndex(m=>m.key===active.key);if(at>0){openModel(filtered[at-1]);$('model-name').scrollIntoView({block:'start'});}});$('next').addEventListener('click',()=>{const at=filtered.findIndex(m=>m.key===active.key);if(at>=0&&at<filtered.length-1){openModel(filtered[at+1]);$('model-name').scrollIntoView({block:'start'});}});
 $('confirm-review').addEventListener('click',saveReview);$('review-state').addEventListener('change',saveReview);$('note').addEventListener('input',saveReview);$('zoom').addEventListener('click',()=>{zoom=!zoom;document.querySelector('.selected').classList.toggle('pixel-zoom',zoom);$('zoom').setAttribute('aria-pressed',String(zoom));$('zoom').textContent=zoom?'Dimensione normale':'Ingrandisci pixel art ×2';});

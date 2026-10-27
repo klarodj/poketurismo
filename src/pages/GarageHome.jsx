@@ -1,3 +1,5 @@
+import {carArtwork} from '../../shared/carArtwork.mjs';
+import {paintFor,paintName} from '../../shared/carPaint.mjs';
 import PilotAvatar from '../components/PilotAvatar';
 import React from 'react';
 import usePlayerStore from '../store/playerStore';
@@ -51,7 +53,7 @@ export default function GarageHome() {
                 >
                   <div className="w-full sm:w-1/3 h-20 sm:h-24 bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white overflow-hidden flex items-center justify-center shrink-0 shadow-win98-inset">
                     {car.image ? (
-                      <img src={`/images/car/${car.image}`} alt={car.name} className="h-full w-auto max-w-full object-contain mix-blend-multiply" onError={(e) => e.target.style.display='none'} />
+                      <img src={carArtwork(car)} alt={`${car.name} · ${paintName(paintFor(car))}`} className="h-full w-auto max-w-full object-contain pixel-car-image" onError={(e) => e.target.style.display='none'} />
                     ) : (
                       <span className="text-[10px] text-gray-500 italic">No Img</span>
                     )}

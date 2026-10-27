@@ -1,16 +1,17 @@
 import {partName,partDescription} from '../logic/partLabels.mjs';
-import React, { useState } from 'react';
+import React from 'react';
+import RaceCarArtwork from './RaceCarArtwork';
+import {paintFor,paintName} from '../../shared/carPaint.mjs';
 import { CAR_STAT_LABELS, calculateRaceStats } from '../logic/raceEngine';
 
 const format = value => Number.isFinite(value) ? value.toLocaleString('it-IT', { maximumFractionDigits: 2 }) : '—';
 
 export default function UsedCarDetails({ listing }) {
-  const [imageFailed, setImageFailed] = useState(false);
   const car = listing.car;
   const mods = listing.mods ?? [];
   const stats = calculateRaceStats(listing);
   const specifications = [
-    ['Anno', car.year], ['Cilindrata', `${format(car.cc)} cm³`],
+    ['Colore',paintName(paintFor(listing))], ['Anno', car.year], ['Cilindrata', `${format(car.cc)} cm³`],
     ['Motore', car.engineType], ['Trazione', car.driveType],
     ['Potenza attuale', `${format(listing.cv)} CV`], ['Coppia attuale', `${format(listing.nm)} Nm`],
     ['Peso attuale', `${format(listing.kg)} kg`], ['Chilometri', `${format(listing.km)} km`],
@@ -29,9 +30,7 @@ export default function UsedCarDetails({ listing }) {
       <div className="border-t border-[#7799CC] p-3 space-y-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-white border border-gray-300 p-3 flex items-center justify-center min-h-40">
-            {car.image && !imageFailed ? (
-              <img src={`/images/car/${car.image}`} alt={`${car.brand?.name || ''} ${car.name}`} loading="lazy" className="max-w-full max-h-64 object-contain" onError={() => setImageFailed(true)} />
-            ) : <p className="text-gray-600 italic">Foto non disponibile</p>}
+            <RaceCarArtwork car={{...car,paintColour:listing.paintColour}} large/>
           </div>
           <div>
             <h3 className="font-bold text-[#006699] mb-2">Scheda dell’auto in vendita</h3>

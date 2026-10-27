@@ -5,6 +5,7 @@ const {performanceIndex}=require('../shared/vehiclePerformance.mjs');
 const {fail,positiveId,cents,charge,restoredHandlingStats}=require('./gameRules');
 const {garageInclude}=require('./persistence');
 const {CAR_STATS}=require('./raceEngine');
+const {paintQuote,paintFor}=require('./carPaint');
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const parse=row=>JSON.parse(row?.recoveryState||'{}');
 async function recoveryState(tx,userId){const state=parse(await tx.playerProgress.findUnique({where:{userId}}));return {debtCents:state.debtCents||0,lockedCarIds:(state.debtCents||0)>0?(state.carIds||[]):[]};}
@@ -29,7 +30,7 @@ async function recoveryPlan(tx,user,garages){
 async function workshop(tx,userId){
  const user=await tx.user.findUnique({where:{id:userId}});if(!user)fail(404,'Giocatore inesistente');
  const cars=(await tx.garage.findMany({where:{userId},include:garageInclude,orderBy:{id:'asc'}})).map(car=>({...car,...restoredHandlingStats(car)}));
- return {cars:cars.map(car=>({id:car.id,name:`${car.car.brand?.name||''} ${car.car.name}`.trim(),engineHealth:car.engineHealth,tireGrip:car.tireGrip,km:car.km,serviceKm:car.serviceKm,currentFuel:car.currentFuel,performanceIndex:performanceIndex(car),services:maintenanceQuotes(car).map(service=>({...service,key:hash([car,service])}))})),recovery:await recoveryPlan(tx,user,cars)};
+ return {cars:cars.map(car=>({id:car.id,image:car.car.image,paintColour:paintFor(car),paint:paintQuote(car),name:`${car.car.brand?.name||''} ${car.car.name}`.trim(),engineHealth:car.engineHealth,tireGrip:car.tireGrip,km:car.km,serviceKm:car.serviceKm,currentFuel:car.currentFuel,performanceIndex:performanceIndex(car),services:maintenanceQuotes(car).map(service=>({...service,key:hash([car,service])}))})),recovery:await recoveryPlan(tx,user,cars)};
 }
 async function service(tx,userId,body,params){
  const item=await tx.garage.findFirst({where:{id:positiveId(params.garageId),userId},include:garageInclude});if(!item)fail(403,'Auto non posseduta');const car={...item,...restoredHandlingStats(item)};
@@ -44,7 +45,7 @@ async function recover(tx,userId,body){
  if(plan.contributionCents)await charge(tx,userId,plan.contributionCents/100);
  let garageId=plan.garageId;
  if(plan.kind==='repair')await tx.garage.update({where:{id:garageId},data:plan.changes});
- else{const car=await tx.car.findUnique({where:{id:plan.carId}});const created=await tx.garage.create({data:{userId,carId:car.id,cv:car.cv,nm:car.nm,kg:car.kg,...Object.fromEntries(CAR_STATS.map(key=>[key,car[key]])),...plan.changes}});garageId=created.id;}
+ else{const car=await tx.car.findUnique({where:{id:plan.carId}});const created=await tx.garage.create({data:{userId,carId:car.id,paintColour:paintFor(car),cv:car.cv,nm:car.nm,kg:car.kg,...Object.fromEntries(CAR_STATS.map(key=>[key,car[key]])),...plan.changes}});garageId=created.id;}
  const total=plan.debtCents+plan.advanceCents;const carIds=[...new Set([...plan.lockedCarIds,...(plan.advanceCents>0?[garageId]:[])])];await saveDebt(tx,userId,{debtCents:total,carIds:total?carIds:[]});
  await tx.user.update({where:{id:userId},data:{carDrive:garageId}});
  return {...await require('./races').snapshot(tx,userId),recoveryReceipt:{name:plan.name,garageId,paidCents:plan.contributionCents,advancedCents:plan.advanceCents,debtCents:total}};

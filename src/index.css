@@ -49,3 +49,5 @@ html {
     display: block;
   }
 }
+
+.pixel-car-image{image-rendering:pixelated}

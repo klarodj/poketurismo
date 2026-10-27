@@ -215,3 +215,12 @@
  .championship-cockpit .race-heading-meta strong { white-space:nowrap; }
  .championship-cockpit .race-drive-button { font-size:.95rem; padding:8px 4px; }
 }
+
+.race-car-art img,.pixel-car-image { image-rendering:pixelated; }
+.car-paint-picker { border:2px groove #fff; padding:8px; margin:10px 0; min-width:0; }
+.car-paint-picker>div { display:flex;flex-wrap:wrap;gap:6px; }
+.car-paint-picker button { display:flex;align-items:center;gap:6px; }
+.car-paint-picker button[aria-pressed="true"],.workshop-tabs button[aria-pressed="true"] { box-shadow:inset 1px 1px #000; background:#fff;color:#000080; }
+.car-paint-swatch { width:16px;height:16px;display:inline-block;border:1px solid #000;flex-shrink:0; }
+.body-shop { background:#c0c0c0;border:2px inset #fff;padding:12px;min-width:0; }
+.workshop-tabs { display:flex;gap:8px;margin:12px 0; }

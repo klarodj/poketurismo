@@ -1,3 +1,4 @@
+import {carArtwork} from '../shared/carArtwork.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { transformWithOxc } from 'vite';
@@ -59,7 +60,7 @@ test('cockpit shows both real car images and keeps technical data out of the mai
   Object.assign(race, { status: 'active', mode: 'track', trackName: 'Circuito Scuola' });
   race.car.image = '106.png'; race.opponent.car.image = '114.png';
   const markup = renderToStaticMarkup(React.createElement(Dashboard, { race, pending: 0, onAbandon() {} }, 'CONTROLLI'));
-  assert.ok(markup.includes('/images/car/106.png')); assert.ok(markup.includes('/images/car/114.png'));
+  assert.ok(markup.includes(carArtwork(race.car))); assert.ok(markup.includes(carArtwork(race.opponent.car)));
   assert.ok(markup.includes('Apri dettaglio: La tua auto')); assert.ok(markup.includes('Apri dettaglio: Auto rivale'));
   assert.ok(markup.includes('Apri dettaglio: tempi e distacco')); assert.ok(markup.includes('Settore attuale'));
   assert.ok(markup.includes('CONTROLLI'));
@@ -124,8 +125,8 @@ test('driving school opens with available courses and keeps the fifty-course cat
 
 test('Car Meet cards and detail show actual photos, installed parts and a comparison',async()=>{
  const Card=await component('MeetShowcase','MeetShowcaseCard');const Details=await component('MeetShowcase','MeetCarDetails');
- const showcase={pilot:{id:1,name:'Pilota Uno',level:2},car:{id:1,name:'Seicento',brand:'Fiat',image:'fiat.png',year:1998,cv:55,nm:90,kg:735,driveType:'FF',engineType:'NA',km:80000,engineHealth:90,tireGrip:82,performanceIndex:40,tier:'Primi passi',parts:[{id:1,name:'Filtro sportivo',description:'Aspirazione migliorata',level:1}]}};
- const card=renderToStaticMarkup(React.createElement(Card,{showcase,mine:true,onOpen(){}}));assert.ok(card.includes('Pilota Uno'));assert.ok(card.includes('/images/car/fiat.png'));assert.ok(card.includes('1 pezzi installati'));
+ const showcase={pilot:{id:1,name:'Pilota Uno',level:2},car:{id:1,name:'Seicento',brand:'Fiat',image:'seicento.png',paintColour:'blu',year:1998,cv:55,nm:90,kg:735,driveType:'FF',engineType:'NA',km:80000,engineHealth:90,tireGrip:82,performanceIndex:40,tier:'Primi passi',parts:[{id:1,name:'Filtro sportivo',description:'Aspirazione migliorata',level:1}]}};
+ const card=renderToStaticMarkup(React.createElement(Card,{showcase,mine:true,onOpen(){}}));assert.ok(card.includes('Pilota Uno'));assert.ok(card.includes('/images/pixel-cars/seicento/blu.png'));assert.ok(card.includes('1 pezzi installati'));
  const details=renderToStaticMarkup(React.createElement(Details,{showcase,ownCar:showcase.car}));assert.ok(details.includes('Filtro sportivo'));assert.ok(details.includes('Confronto con la tua auto'));
 });
 test('shared timing UI explains missing legacy conditions and renders a useful empty state',async()=>{
@@ -209,7 +210,7 @@ test('grid cockpit keeps current neighbours, imagery and controls in one primary
  race.opponent.name='Ultimo QA';race.car.image='106.png';
  const Dashboard=await component('RaceDashboard'),Controls=await component('TacticalControls');
  const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}},React.createElement(Controls,{race,pending:0,onTurn:()=>{},showAlerts:false})));
- for(const text of ['aria-label="Posizione e distacchi"','2°','/ 4','Andrea','Sonia','Dopo il settore 1','san-rocco.png','106.png','settore 2 evidenziato','Percorri il settore','Classifica e settori'])assert.ok(html.includes(text),text);
+ for(const text of ['aria-label="Posizione e distacchi"','2°','/ 4','Andrea','Sonia','Dopo il settore 1','san-rocco.png','/images/pixel-cars/106/','settore 2 evidenziato','Percorri il settore','Classifica e settori'])assert.ok(html.includes(text),text);
  assert.equal((html.match(/Davanti a te/g)||[]).length,1);assert.equal((html.match(/Dietro di te/g)||[]).length,1);
  assert.ok(!html.includes('<table'));assert.ok(!html.includes('grid-sector-summary'));assert.ok(!html.includes('race-instruments'));
  assert.ok(!html.includes('aria-label="Duello e posizione"'));assert.ok(!html.includes('Sei davanti'));
@@ -225,7 +226,7 @@ test('location windows preserve artwork without offering inert window buttons',a
 test('used listings lead with the car photo, price and condition while keeping full inspection available',async()=>{
  const Post=await component('ForumPost');const car={name:'Seicento',brand:{name:'Fiat'},image:'106.png',year:1998,cc:1108,cv:55,nm:90,kg:735,engineType:'NA',driveType:'FF',velMax:150,zeroToHundred:13};const listing={car,cv:55,nm:90,kg:735,km:70000,serviceKm:65000,engineHealth:85,tireGrip:80,currentFuel:10,mods:[]};
  const html=renderToStaticMarkup(React.createElement(Post,{author:'Club',title:'Fiat Seicento',carDetails:{...listing,...car,brand:'Fiat'},listing,price:4200,remainingMoney:5800,onBuy:()=>{}}));
- assert.ok(html.indexOf('/images/car/106.png')<html.indexOf('<details'));assert.ok(html.includes((4200).toLocaleString('it-IT')));assert.ok(html.includes('motore')||html.includes('Motore'));assert.ok(html.includes('Apri foto, caratteristiche e pezzi installati'));assert.ok(!html.includes('Iscritto: 2001'));
+ assert.ok(html.indexOf('/images/pixel-cars/106/')<html.indexOf('<details'));assert.ok(html.includes((4200).toLocaleString('it-IT')));assert.ok(html.includes('motore')||html.includes('Motore'));assert.ok(html.includes('Apri foto, caratteristiche e pezzi installati'));assert.ok(!html.includes('Iscritto: 2001'));
 });
 
 test('compact fuel gauge and XP progress expose meaningful accessible values',async()=>{

@@ -94,7 +94,7 @@ export default function UsedCars() {
             title={`${item.car.brand.name} ${item.car.name}`}
             listing={item}
             carDetails={{
-              ...item.car,
+              ...item.car,paintColour:item.paintColour,
               brand: item.car.brand.name,
               cv: item.cv, kg: item.kg, currentFuel: item.currentFuel,
               marketTier: item.marketTier?.name, starterFriendly: item.starterFriendly,

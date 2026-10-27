@@ -1167,3 +1167,40 @@ test('club participation cannot be requested for sandbox or time trials by the b
     const finish=await finishClubRace(race,{lose:true});assert.equal(finish.race.reward.money,0);assert.equal(await wallet(),10000000);
   }
 });
+
+test('new-car colour is validated and kept through sale and used purchase without recolouring',async()=>{
+ const invalid=await post('/purchase',{carId:car.id,paintColour:'../nero'});assert.equal(invalid.status,400);assert.equal(await wallet(),10000000);
+ const bought=await post('/purchase',{carId:car.id,paintColour:'giallo'});assert.equal(bought.status,200);const item=bought.data.garage.find(g=>g.id!==garage.id);assert.equal(item.paintColour,'giallo');
+ assert.equal((await post('/market/sell',{garageId:item.id})).status,200);
+ const before=await wallet();assert.equal((await post('/purchase',{marketGarageId:item.id,paintColour:'rosso'})).status,400);assert.equal(await wallet(),before);
+ const used=await post('/purchase',{marketGarageId:item.id});assert.equal(used.status,200);assert.equal(used.data.garage.find(g=>g.id===item.id).paintColour,'giallo');
+});
+test('bodyshop charges once, changes paint only, rejects stale quotes, same colour and other owners',async()=>{
+ const {paintFor}=await import('../shared/carPaint.mjs');const before=await prisma.garage.findUnique({where:{id:garage.id}});const colour=paintFor({...before,car}),target=colour==='blu'?'giallo':'blu';
+ const quote=(await get('/workshop/1')).data.cars.find(c=>c.id===garage.id).paint;const body={paintColour:target,quoteKey:quote.key};
+ assert.equal((await post(`/garage/${otherGarage.id}/paint`,body)).status,403);
+ assert.equal((await post(`/garage/${garage.id}/paint`,{...body,paintColour:'invalid'})).status,400);
+ const key=randomUUID(),a=await post(`/garage/${garage.id}/paint`,body,key),b=await post(`/garage/${garage.id}/paint`,body,key);assert.equal(a.status,200);assert.equal(b.status,200);assert.equal(await wallet(),9750000);
+ const after=await prisma.garage.findUnique({where:{id:garage.id}});const {paintColour:_old,...oldPhysical}=before,{paintColour,...newPhysical}=after;assert.equal(paintColour,target);assert.deepEqual(newPhysical,oldPhysical);
+ assert.equal((await post(`/garage/${garage.id}/paint`,body)).status,400);
+ assert.equal((await post(`/garage/${garage.id}/paint`,{paintColour:colour,quoteKey:quote.key})).status,409);assert.equal(await wallet(),9750000);
+});
+test('bodyshop rolls back insufficient funds and blocks all active races; race keeps frozen colours',async()=>{
+ const info=(await get('/workshop/1')).data.cars.find(c=>c.id===garage.id),target=info.paint.paintColour==='rosso'?'verde':'rosso';
+ await prisma.user.update({where:{id:1},data:{moneyCents:100}});assert.equal((await post(`/garage/${garage.id}/paint`,{paintColour:target,quoteKey:info.paint.key})).status,400);assert.equal(await wallet(),100);
+ await prisma.user.update({where:{id:1},data:{moneyCents:1000000}});await prisma.garage.update({where:{id:garage.id},data:{paintColour:'giallo'}});const race=await begin();assert.equal(race.car.paintColour,'giallo');assert.ok(['rosso','blu','verde','nero','bianco','argento','giallo'].includes(race.opponent.car.paintColour));
+ assert.equal((await post(`/garage/${garage.id}/paint`,{paintColour:'verde',quoteKey:info.paint.key})).status,409);
+});
+
+test('cosmetic paint keeps meet preparation keys and time-trial setup unchanged',async()=>{
+ const social=require('../server/meetSocial');const before=await social.preparation(prisma,1,garage.id);
+ const {trialConfiguration}=require('../server/carMeet');const original=await prisma.garage.findUnique({where:{id:garage.id},include:{car:true,mods:{include:{part:true}}}}),configuration=trialConfiguration(original);
+ await prisma.garage.update({where:{id:garage.id},data:{paintColour:'nero'}});
+ const after=await social.preparation(prisma,1,garage.id);assert.equal(after.key,before.key);assert.equal(after.car.paintColour,'nero');
+ const modified=await prisma.garage.findUnique({where:{id:garage.id},include:{car:true,mods:{include:{part:true}}}});assert.deepEqual(trialConfiguration(modified),configuration);assert.ok(social);
+});
+
+test('street rival keeps the advertised paint when the encounter becomes a race',async()=>{
+ const setup=await streetSetup(0),hub=(await get('/street/1')).data,offer=hub.zones.find(z=>z.id===setup.zoneId).offer;
+ const started=await post('/races',setup);assert.equal(started.status,200);assert.equal(started.data.race.opponent.car.paintColour,offer.rival.car.paintColour);
+});
