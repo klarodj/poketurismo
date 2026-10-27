@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "reviewBatch": "detail-six-2026-10-27",
+  "reviewBatch": "rebuild-155-2026-10-27",
   "width": 320,
   "height": 128,
   "colours": [
@@ -125,10 +125,13 @@
       "mask": "/images/pixel-cars/155/body.png",
       "details": "/images/pixel-cars/155/details.png",
       "sources": [
-        "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+        "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html",
+        "https://www.invaluable.com/auction-lot/1992-alfa-romeo-155-q4-no-reserve-233-c-c4945bb90d",
+        "https://www.autoweek.com/car-life/classic-cars/a34573721/alfa-romeo-155-q4-stealth-bomber-heads-to-auction/",
+        "https://commons.wikimedia.org/wiki/File%3AAlfa_155_Q4_%28vista_posteriore%29.jpg"
       ],
-      "revision": 2,
-      "reviewBatch": "detail-six-2026-10-27",
+      "revision": 3,
+      "reviewBatch": "rebuild-155-2026-10-27",
       "approved": false
     },
     {

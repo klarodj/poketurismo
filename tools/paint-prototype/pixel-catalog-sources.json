@@ -82,19 +82,22 @@
       "input": "tools/paint-prototype/pixel-catalog-inputs/155.png",
       "preparedNative": true,
       "reference": "public/images/car/155.png",
-      "styleReference": "public/images/pixel-cars/e30/base.png",
-      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Correct the REAR QUARTER of Alfa Romeo 155 Q4 FIRST-SERIES 1992 four-door saloon. The tail must have a square high boxy boot, a fairly flat raised deck with sharp horizontal trailing edge and an almost VERTICAL high rear face, not a low sloping wedge or tapered hatch. Broad rectangular rear lamp corner sits on the vertical rear face BELOW the boot lid, at the end of the horizontal light band. Copy the real shape in the rear photo. Keep the current ORIGINAL front, factory silver multi-hole wheels and four side doors. The real rear reference has an aftermarket lip wing and black wheels: DO NOT transfer those, original identity photo and edit target have no wing and silver wheels.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "styleReference": "public/images/pixel-cars/punto/base.png",
+      "prompt": "Use case: stylized-concept. Asset type: replacement native pixel-art Alfa Romeo 155 Q4 sprite for an Italian automotive RPG circa 2002.\nDraw a FRESH accurate Alfa Romeo 155 Q4 FIRST SERIES narrow-body 1992 from the REAL PHOTOGRAPHS. The previous sprite was rejected because its rear quarter was too generic, blocky, short and incorrectly lit. Do not use a generic sedan or BMW rear.\nReference roles in order: Image 1 USER ORIGINAL FRONT identity photo: exact original front, stock trim and factory silver round-hole wheels. Image 2 REAL 1992 STOCK SIDE PROFILE: definitive roof, C-pillar, doors, wheelbase, rear overhang and tail silhouette. Image 3 REAL STOCK REAR THREE-QUARTER red car: definitive tail volume and lighting. Image 4 REAL Q4 REAR THREE-QUARTER white car: precise boot/taillight/bumper anatomy. Last Image 5 APPROVED PIXEL STYLE AND CAMERA ONLY, a Fiat Punto: never borrow its hatchback shape. Do not copy paint colours, photo backgrounds or neighbouring cars.\nMOST IMPORTANT ANATOMY: reproduce the actual 155 profile in Image 2, mirrored into the required front-left perspective. A sharply raked long rear window and BROAD SOLID diagonal C-pillar descend into a SHORT exposed boot deck. Rear side-door glass has the correct cut-off/sloping rear edge and little quarter pane. The rear wheel arch sits FORWARD of the tail with the real substantial rear overhang: rear axle-to-tail distance about one third of wheelbase in a pure side projection, not a tiny chopped stump. Keep the narrow-body Q4 rear arch subtly flat on top, partially covering upper tyre, not a huge round race-car flare.\nThe boot top has the real subtle bevel, corners and seam, and a modest integrated factory lip shape only; no protruding wing. Rear quarter is a tapered/faceted 155 form with a rear bumper that rounds/wraps into the side and TUCKS IN at the lower trailing corner. Do NOT turn rear body into a tall featureless rectangular vertical brick. Use the photos literally for roof-to-deck and deck-to-lamp relationships, not the words boxy saloon as an excuse for a generic square trunk. Body crease and rear door/quarter transitions align as in real side profile.\nLIGHTS: authentic rear lamps are broad LOW HORIZONTAL SMOKED-RED rectangular clusters across the rear face, with small pale upper sections and a red reflector band around the plate recess. No ORANGE vertical corner bar. From this FRONT-LEFT three-quarter view only the outer red tail-light corner is naturally visible on the far-right tail tip: render a short dark-red horizontal/trapezoid corner at correct height, not a tall amber pillar. Upper C-pillar remains body paint. Do NOT rotate to rear view merely to show the light bar. A broad dark charcoal bumper rubbing band is below lamps and wraps around the side at bumper height; the rest of bumper is body colour. No invented bright amber rear vertical indicators.\nCOMPOSITION: one entire isolated four-door car, transparent background, FRONT-LEFT three-quarter camera, nose towards DOWN-LEFT, approximately40% front60% side, low camera, straight wheels. Match the style sprite camera but allow a small natural angle difference to preserve actual car identity. No stretching or squeezing, all wheels intact, consistent realistic stock proportions. Wide3:1 canvas. No forced visible rear face inconsistent with front view.\nSTYLE: genuine hand-constructed pixel art on a logical320x128 grid, crisp square clusters, dark one-pixel panel gaps and silhouette stairs, clean compact shade groups. No vector drawing, 3D render, photo pixelation filter, antialiasing, blur, smooth gradients, noisy dithering, chibi or excessive gloss.\nRECOLOUR MATERIALS: ALL painted body, bumpers, mirrors, skirts, arch lips and highlights use saturated GREEN shades only: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Keep G at least20 greater than R and B on highlights, no white/grey flecks in paint. Black trim/grille/tyres/gaps stay charcoal/black; glass dark steel-blue/coolgrey; stock wheels SILVER with round holes; front headlights ivory and front indicator amber; rear lights dark RED not amber. No green on glass, lamps or wheels. Keep trim independent from body paint.\nNo other cars, background, road, people, text, watermark, new accessory, spoiler wing, DTM kit, widebody facelift or modern wheels. Image 2 stock side photo and Image 3 stock rear photo override any generic stylization or prior assumed rear shape. Fidelity of the REAR BODY is the highest priority.",
       "sources": [
-        "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+        "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html",
+        "https://www.invaluable.com/auction-lot/1992-alfa-romeo-155-q4-no-reserve-233-c-c4945bb90d",
+        "https://www.autoweek.com/car-life/classic-cars/a34573721/alfa-romeo-155-q4-stealth-bomber-heads-to-auction/",
+        "https://commons.wikimedia.org/wiki/File%3AAlfa_155_Q4_%28vista_posteriore%29.jpg"
       ],
-      "generatedPath": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3b488d3f-08ea-4508-bfa3-1472b37fcb1e.png",
+      "generatedPath": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ded73f52-278c-46eb-864a-07f7c112b931.png",
       "output": "public/images/pixel-cars/155/",
-      "rawSha256": "b1822ca55fdd9ddc06c207a6fd57bd2252162f3f2a90320f73364fa4fe2a18fc",
-      "generatedAt": "2026-10-27T09:34:50.116Z",
+      "rawSha256": "74997a754427a96cbe5b045b0d9c3e508c871753932fc48808dce6e7cab4489e",
+      "generatedAt": "2026-10-27T11:23:17.635Z",
       "metrics": {
-        "bodyPixels": 13938,
-        "detailPixels": 11696,
-        "protectedPixels": 189154
+        "bodyPixels": 14284,
+        "detailPixels": 10186,
+        "protectedPixels": 186732
       },
       "history": [
         {
@@ -106,28 +109,65 @@
           "styleReference": "public/images/pixel-cars/e30/base.png",
           "sources": [],
           "baseCommit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "revision": 2,
+          "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Correct the REAR QUARTER of Alfa Romeo 155 Q4 FIRST-SERIES 1992 four-door saloon. The tail must have a square high boxy boot, a fairly flat raised deck with sharp horizontal trailing edge and an almost VERTICAL high rear face, not a low sloping wedge or tapered hatch. Broad rectangular rear lamp corner sits on the vertical rear face BELOW the boot lid, at the end of the horizontal light band. Copy the real shape in the rear photo. Keep the current ORIGINAL front, factory silver multi-hole wheels and four side doors. The real rear reference has an aftermarket lip wing and black wheels: DO NOT transfer those, original identity photo and edit target have no wing and silver wheels.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+          "generatedPath": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3b488d3f-08ea-4508-bfa3-1472b37fcb1e.png",
+          "rawSha256": "b1822ca55fdd9ddc06c207a6fd57bd2252162f3f2a90320f73364fa4fe2a18fc",
+          "generatedAt": "2026-10-27T09:34:50.116Z",
+          "styleReference": "public/images/pixel-cars/e30/base.png",
+          "referenceImages": [
+            {
+              "role": "edit-target",
+              "path": "public/images/pixel-cars/155/base.png",
+              "sha256": "eedc7987c71bf9a294c347edba5f424e931236fa06a1a30664bdc56b551fbdea",
+              "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+            },
+            {
+              "role": "original-front-identity",
+              "path": "public/images/car/155.png"
+            },
+            {
+              "role": "real-photo-anatomy",
+              "url": "https://s1.cdn.autoevolution.com/images/news/gallery/alfa-155-q4-dons-lancia-integrale-internals-but-drives-and-feels-different-reviewer-says_2.jpg",
+              "page": "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+            }
+          ],
+          "sources": [
+            "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+          ],
+          "baseCommit": "8f083ffdf0d14561b26876e8e51051b3c6a6dfc9"
         }
       ],
-      "correction": "Correct the REAR QUARTER of Alfa Romeo 155 Q4 FIRST-SERIES 1992 four-door saloon. The tail must have a square high boxy boot, a fairly flat raised deck with sharp horizontal trailing edge and an almost VERTICAL high rear face, not a low sloping wedge or tapered hatch. Broad rectangular rear lamp corner sits on the vertical rear face BELOW the boot lid, at the end of the horizontal light band. Copy the real shape in the rear photo. Keep the current ORIGINAL front, factory silver multi-hole wheels and four side doors. The real rear reference has an aftermarket lip wing and black wheels: DO NOT transfer those, original identity photo and edit target have no wing and silver wheels.",
-      "reviewBatch": "detail-six-2026-10-27",
+      "correction": "Alfa Romeo 155 Q4 1992 narrow body: redraw from verified stock side and rear photos. Proper sloping C-pillar, short boot deck, substantial rear overhang and tucked lower bumper; smoked RED horizontal rear lamps with no tall orange corner bar. Stock silver round-hole wheels, no spoiler wing. Avoid generic box rear.",
+      "reviewBatch": "rebuild-155-2026-10-27",
       "referenceImages": [
-        {
-          "role": "edit-target",
-          "path": "public/images/pixel-cars/155/base.png",
-          "sha256": "eedc7987c71bf9a294c347edba5f424e931236fa06a1a30664bdc56b551fbdea",
-          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
-        },
         {
           "role": "original-front-identity",
           "path": "public/images/car/155.png"
         },
         {
           "role": "real-photo-anatomy",
-          "url": "https://s1.cdn.autoevolution.com/images/news/gallery/alfa-155-q4-dons-lancia-integrale-internals-but-drives-and-feels-different-reviewer-says_2.jpg",
-          "page": "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+          "url": "https://image.invaluable.com/housePhotos/artcurial/34/649534/H1118-L185868146.jpg",
+          "page": "https://www.invaluable.com/auction-lot/1992-alfa-romeo-155-q4-no-reserve-233-c-c4945bb90d"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://hips.hearstapps.com/hmg-prod/images/alfa2-1604503979.jpg",
+          "page": "https://www.autoweek.com/car-life/classic-cars/a34573721/alfa-romeo-155-q4-stealth-bomber-heads-to-auction/"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Alfa_155_Q4_%28vista_posteriore%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File%3AAlfa_155_Q4_%28vista_posteriore%29.jpg"
+        },
+        {
+          "role": "approved-pixel-style",
+          "path": "public/images/pixel-cars/punto/base.png"
         }
       ],
-      "revision": 2
+      "revision": 3
     },
     {
       "id": 3,
@@ -6227,5 +6267,5 @@
       }
     }
   ],
-  "reviewBatch": "detail-six-2026-10-27"
+  "reviewBatch": "rebuild-155-2026-10-27"
 }

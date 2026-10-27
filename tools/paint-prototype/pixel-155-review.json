@@ -1,0 +1,35 @@
+{
+  "batch": "rebuild-155-2026-10-27",
+  "baseCommit": "8f083ffdf0d14561b26876e8e51051b3c6a6dfc9",
+  "method": "Built-in image_gen: fresh redraw from stock side/rear photographs and original front, with approved pixel style reference",
+  "key": "155",
+  "model": "Alfa Romeo 155 Q4",
+  "previousRevision": 2,
+  "prompt": "Use case: stylized-concept. Asset type: replacement native pixel-art Alfa Romeo 155 Q4 sprite for an Italian automotive RPG circa 2002.\nDraw a FRESH accurate Alfa Romeo 155 Q4 FIRST SERIES narrow-body 1992 from the REAL PHOTOGRAPHS. The previous sprite was rejected because its rear quarter was too generic, blocky, short and incorrectly lit. Do not use a generic sedan or BMW rear.\nReference roles in order: Image 1 USER ORIGINAL FRONT identity photo: exact original front, stock trim and factory silver round-hole wheels. Image 2 REAL 1992 STOCK SIDE PROFILE: definitive roof, C-pillar, doors, wheelbase, rear overhang and tail silhouette. Image 3 REAL STOCK REAR THREE-QUARTER red car: definitive tail volume and lighting. Image 4 REAL Q4 REAR THREE-QUARTER white car: precise boot/taillight/bumper anatomy. Last Image 5 APPROVED PIXEL STYLE AND CAMERA ONLY, a Fiat Punto: never borrow its hatchback shape. Do not copy paint colours, photo backgrounds or neighbouring cars.\nMOST IMPORTANT ANATOMY: reproduce the actual 155 profile in Image 2, mirrored into the required front-left perspective. A sharply raked long rear window and BROAD SOLID diagonal C-pillar descend into a SHORT exposed boot deck. Rear side-door glass has the correct cut-off/sloping rear edge and little quarter pane. The rear wheel arch sits FORWARD of the tail with the real substantial rear overhang: rear axle-to-tail distance about one third of wheelbase in a pure side projection, not a tiny chopped stump. Keep the narrow-body Q4 rear arch subtly flat on top, partially covering upper tyre, not a huge round race-car flare.\nThe boot top has the real subtle bevel, corners and seam, and a modest integrated factory lip shape only; no protruding wing. Rear quarter is a tapered/faceted 155 form with a rear bumper that rounds/wraps into the side and TUCKS IN at the lower trailing corner. Do NOT turn rear body into a tall featureless rectangular vertical brick. Use the photos literally for roof-to-deck and deck-to-lamp relationships, not the words boxy saloon as an excuse for a generic square trunk. Body crease and rear door/quarter transitions align as in real side profile.\nLIGHTS: authentic rear lamps are broad LOW HORIZONTAL SMOKED-RED rectangular clusters across the rear face, with small pale upper sections and a red reflector band around the plate recess. No ORANGE vertical corner bar. From this FRONT-LEFT three-quarter view only the outer red tail-light corner is naturally visible on the far-right tail tip: render a short dark-red horizontal/trapezoid corner at correct height, not a tall amber pillar. Upper C-pillar remains body paint. Do NOT rotate to rear view merely to show the light bar. A broad dark charcoal bumper rubbing band is below lamps and wraps around the side at bumper height; the rest of bumper is body colour. No invented bright amber rear vertical indicators.\nCOMPOSITION: one entire isolated four-door car, transparent background, FRONT-LEFT three-quarter camera, nose towards DOWN-LEFT, approximately40% front60% side, low camera, straight wheels. Match the style sprite camera but allow a small natural angle difference to preserve actual car identity. No stretching or squeezing, all wheels intact, consistent realistic stock proportions. Wide3:1 canvas. No forced visible rear face inconsistent with front view.\nSTYLE: genuine hand-constructed pixel art on a logical320x128 grid, crisp square clusters, dark one-pixel panel gaps and silhouette stairs, clean compact shade groups. No vector drawing, 3D render, photo pixelation filter, antialiasing, blur, smooth gradients, noisy dithering, chibi or excessive gloss.\nRECOLOUR MATERIALS: ALL painted body, bumpers, mirrors, skirts, arch lips and highlights use saturated GREEN shades only: #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. Keep G at least20 greater than R and B on highlights, no white/grey flecks in paint. Black trim/grille/tyres/gaps stay charcoal/black; glass dark steel-blue/coolgrey; stock wheels SILVER with round holes; front headlights ivory and front indicator amber; rear lights dark RED not amber. No green on glass, lamps or wheels. Keep trim independent from body paint.\nNo other cars, background, road, people, text, watermark, new accessory, spoiler wing, DTM kit, widebody facelift or modern wheels. Image 2 stock side photo and Image 3 stock rear photo override any generic stylization or prior assumed rear shape. Fidelity of the REAR BODY is the highest priority.",
+  "correction": "Alfa Romeo 155 Q4 1992 narrow body: redraw from verified stock side and rear photos. Proper sloping C-pillar, short boot deck, substantial rear overhang and tucked lower bumper; smoked RED horizontal rear lamps with no tall orange corner bar. Stock silver round-hole wheels, no spoiler wing. Avoid generic box rear.",
+  "referenceImages": [
+    {
+      "role": "original-front-identity",
+      "path": "public/images/car/155.png"
+    },
+    {
+      "role": "real-photo-anatomy",
+      "url": "https://image.invaluable.com/housePhotos/artcurial/34/649534/H1118-L185868146.jpg",
+      "page": "https://www.invaluable.com/auction-lot/1992-alfa-romeo-155-q4-no-reserve-233-c-c4945bb90d"
+    },
+    {
+      "role": "real-photo-anatomy",
+      "url": "https://hips.hearstapps.com/hmg-prod/images/alfa2-1604503979.jpg",
+      "page": "https://www.autoweek.com/car-life/classic-cars/a34573721/alfa-romeo-155-q4-stealth-bomber-heads-to-auction/"
+    },
+    {
+      "role": "real-photo-anatomy",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Alfa_155_Q4_%28vista_posteriore%29.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File%3AAlfa_155_Q4_%28vista_posteriore%29.jpg"
+    },
+    {
+      "role": "approved-pixel-style",
+      "path": "public/images/pixel-cars/punto/base.png"
+    }
+  ]
+}

@@ -21,15 +21,15 @@
     },
     {
       "key": "155",
-      "inputSha256": "5e85ff890c1fe49e11dca77cddb79247a2d6d63d1d3ff6b202e0172717a9e69e",
+      "inputSha256": "c3324ffccb410e8ea4417443a62c4f5377d83e24fa60f524730bd998fc001ed6",
       "originalSha256": "4c39076dc33fd30fe234546a9885a07b784a4509de9b9fd72c4578094982e80e",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13938,
-      "detailPixels": 11696,
-      "protectedPixels": 189154,
+      "bodyPixels": 14284,
+      "detailPixels": 10186,
+      "protectedPixels": 186732,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
