@@ -6,30 +6,30 @@
   "checks": [
     {
       "key": "145",
-      "inputSha256": "99cf8258d123234e1df536bb9a8b34b0f957eea90348ed5af445bd090ff195b8",
+      "inputSha256": "8ecc64941907ef5b6dad3160ba368308e57ea7ecf56a684c82cd43457bb7d87c",
       "originalSha256": "c3707214e9832b4eb8d8e0ea5e43c322c044a0f0a024bc499d22954d405b49b4",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13383,
-      "detailPixels": 10884,
-      "protectedPixels": 193039,
+      "bodyPixels": 13162,
+      "detailPixels": 11421,
+      "protectedPixels": 194586,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
     },
     {
       "key": "155",
-      "inputSha256": "98ed849c3227e476c68378188b2865891ebb3475c73eb5a3ab578e9b04fc3329",
+      "inputSha256": "5e85ff890c1fe49e11dca77cddb79247a2d6d63d1d3ff6b202e0172717a9e69e",
       "originalSha256": "4c39076dc33fd30fe234546a9885a07b784a4509de9b9fd72c4578094982e80e",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13818,
-      "detailPixels": 11935,
-      "protectedPixels": 189994,
+      "bodyPixels": 13938,
+      "detailPixels": 11696,
+      "protectedPixels": 189154,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -51,15 +51,15 @@
     },
     {
       "key": "75",
-      "inputSha256": "d12ffe2c188668b44882f97c28f5871f5e57102592f982d9fb24e4aca3c017ed",
+      "inputSha256": "9547896dd7a553a7c86f90889b4c1dd66d680c13f88c1a6d0332b01dac9c5707",
       "originalSha256": "15aba3145dd7c28ff831f89d533c366de7dfda196e9e7fd3d9c2607f084260e1",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13531,
-      "detailPixels": 12072,
-      "protectedPixels": 192003,
+      "bodyPixels": 12811,
+      "detailPixels": 13203,
+      "protectedPixels": 197043,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -501,30 +501,30 @@
     },
     {
       "key": "zx",
-      "inputSha256": "f03e20d0d34aea93e6a4a64afe657309466347bafd570ce5bcecdc63fa4bd992",
+      "inputSha256": "dc16f1393ff5a04a736de53ef49dea46da0545db0277a69b5b6a25a0f639b205",
       "originalSha256": "d0e16c6ee79be6cd8b3804a9bdbe8daf7cb5d9b9b7d853a081904205b4897dd2",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 13840,
-      "detailPixels": 11253,
-      "protectedPixels": 189840,
+      "bodyPixels": 13484,
+      "detailPixels": 11537,
+      "protectedPixels": 192332,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
     },
     {
       "key": "charade",
-      "inputSha256": "28f7ded27677ccbc8f3b48bfbcc705a922842c9daf221aacf7997f9578664042",
+      "inputSha256": "e842e21ca039e68aa16713bee9454679026e1e311542f6f03d393aba2d2af20c",
       "originalSha256": "44e96d58d1ce2e242c42b8b0660ae6af3b5d6d8470f5c6dcf267301285a0321c",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 10731,
-      "detailPixels": 9938,
-      "protectedPixels": 211603,
+      "bodyPixels": 10244,
+      "detailPixels": 10225,
+      "protectedPixels": 215012,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true
@@ -2391,15 +2391,15 @@
     },
     {
       "key": "williams",
-      "inputSha256": "3177e7b7fd6f4dc60ca76f2b7f56ec8060b40b7c1403a59dc8ee0451afb3da09",
+      "inputSha256": "f8f4ead3c568ad776ddac396ce6fe137601ae8a47a4f3cb9d4d7553621857bcd",
       "originalSha256": "40b2ede53f32b9bcacd1c4fbdff54d0c05f3a717cc7ae38aa4f8535f75cbb496",
       "nativeSize": [
         320,
         128
       ],
-      "bodyPixels": 10809,
-      "detailPixels": 11532,
-      "protectedPixels": 211057,
+      "bodyPixels": 11642,
+      "detailPixels": 11197,
+      "protectedPixels": 205226,
       "variants": 7,
       "alphaIdentical": true,
       "detailsIdentical": true

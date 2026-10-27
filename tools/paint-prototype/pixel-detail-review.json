@@ -1,0 +1,167 @@
+{
+  "batch": "detail-six-2026-10-27",
+  "method": "Built-in image_gen precise-object-edit; separate request per model; seven palette variants",
+  "baseCommit": "601e8591856e66b0ee07c50e46e3c1072c58ef66",
+  "models": [
+    {
+      "id": 4,
+      "key": "75",
+      "model": "Alfa Romeo 75 Quadrifoglio",
+      "previousRevision": 1,
+      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Correct Alfa Romeo 75 Quadrifoglio FOUR-DOOR. Restore its distinctive thick DARK CHARCOAL/BLACK BELT-LINE STRIP running the FULL SIDE just below side-window sill from front wing through both doors to rear quarter, rising in a sharp dogleg on the C-pillar/rear quarter and wrapping across the boot trailing edge, as real photo. The strip is unpainted trim, NEVER green and NEVER recoloured. It is separate from black bumper rub strips. Redesign rear silhouette from authentic photo: angular wedge saloon with sharply slanted rear glass, short high horizontal boot deck, clipped vertical tail, integrated black trailing trim and low broad red/amber rear corner lamp band, not generic 155 tail. Keep original front, four doors, period silver wheels and no racing wing.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "correction": "Correct Alfa Romeo 75 Quadrifoglio FOUR-DOOR. Restore its distinctive thick DARK CHARCOAL/BLACK BELT-LINE STRIP running the FULL SIDE just below side-window sill from front wing through both doors to rear quarter, rising in a sharp dogleg on the C-pillar/rear quarter and wrapping across the boot trailing edge, as real photo. The strip is unpainted trim, NEVER green and NEVER recoloured. It is separate from black bumper rub strips. Redesign rear silhouette from authentic photo: angular wedge saloon with sharply slanted rear glass, short high horizontal boot deck, clipped vertical tail, integrated black trailing trim and low broad red/amber rear corner lamp band, not generic 155 tail. Keep original front, four doors, period silver wheels and no racing wing.",
+      "referenceImages": [
+        {
+          "role": "edit-target",
+          "path": "public/images/pixel-cars/75/base.png",
+          "sha256": "0b32284605438f6f8a0dc8c8f7b938eed05b87344e11a4e8eb2a51193255fc18",
+          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/75.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://alfasettantacinque.wordpress.com/wp-content/uploads/2021/01/000000000000000age1.jpg",
+          "page": "https://alfasettantacinque.wordpress.com/2-5-v6-quadrifoglio-verde/"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "key": "145",
+      "model": "Alfa Romeo 145 Quadrifoglio",
+      "previousRevision": 1,
+      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Correct the REAR QUARTER of Alfa Romeo 145 Quadrifoglio THREE-DOOR, not a 146. Match the authentic blunt tall upright truncated tail, distinctive sharp rear side-window/C-pillar geometry and real low corner lamps in rear references. Remove the generic sloped hatch tail of the edit target. Rear lights are SLIM HORIZONTAL red rectangles below rear glass, not vertical pillar lights. Rear glass/black surround sit above a broad painted waist; tall chopped tail with no boot extension or diagonal pointed overhang. Modest factory roof lip only. Keep the approved front, long single door, wheels, wheelbase, body kit and overall stock proportions.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "correction": "Correct the REAR QUARTER of Alfa Romeo 145 Quadrifoglio THREE-DOOR, not a 146. Match the authentic blunt tall upright truncated tail, distinctive sharp rear side-window/C-pillar geometry and real low corner lamps in rear references. Remove the generic sloped hatch tail of the edit target. Keep the approved front, long single door, wheels, wheelbase, body kit and overall stock proportions. Rear lights are SLIM HORIZONTAL red rectangles below rear glass, not vertical pillar lights. Rear glass and black surround sit above a broad painted waist; tall chopped tail with no boot extension or diagonal pointed overhang. Modest factory roof lip only.",
+      "referenceImages": [
+        {
+          "role": "edit-target",
+          "path": "public/images/pixel-cars/145/base.png",
+          "sha256": "1e91dc7857a1f47b03adb6be491f954479c927c557953559aee1316ff657eb22",
+          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/145.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://images.caradisiac.com/images/2/5/7/8/202578/S8-alfa-romeo-145-quadrifoglio-1994-2000-le-retour-du-coeur-sportif-des-4-500-eur-757153.jpg",
+          "page": "https://www.caradisiac.com/alfa-romeo-145-quadrifoglio-1995-2000-le-retour-du-coeur-sportif-des-4-500-eur-202578.htm"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://images.caradisiac.com/images/2/5/7/8/202578/S8-alfa-romeo-145-quadrifoglio-1994-2000-le-retour-du-coeur-sportif-des-4-500-eur-757159.jpg",
+          "page": "https://www.caradisiac.com/alfa-romeo-145-quadrifoglio-1995-2000-le-retour-du-coeur-sportif-des-4-500-eur-202578.htm"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "key": "155",
+      "model": "Alfa Romeo 155 Q4",
+      "previousRevision": 1,
+      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Correct the REAR QUARTER of Alfa Romeo 155 Q4 FIRST-SERIES 1992 four-door saloon. The tail must have a square high boxy boot, a fairly flat raised deck with sharp horizontal trailing edge and an almost VERTICAL high rear face, not a low sloping wedge or tapered hatch. Broad rectangular rear lamp corner sits on the vertical rear face BELOW the boot lid, at the end of the horizontal light band. Copy the real shape in the rear photo. Keep the current ORIGINAL front, factory silver multi-hole wheels and four side doors. The real rear reference has an aftermarket lip wing and black wheels: DO NOT transfer those, original identity photo and edit target have no wing and silver wheels.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "correction": "Correct the REAR QUARTER of Alfa Romeo 155 Q4 FIRST-SERIES 1992 four-door saloon. The tail must have a square high boxy boot, a fairly flat raised deck with sharp horizontal trailing edge and an almost VERTICAL high rear face, not a low sloping wedge or tapered hatch. Broad rectangular rear lamp corner sits on the vertical rear face BELOW the boot lid, at the end of the horizontal light band. Copy the real shape in the rear photo. Keep the current ORIGINAL front, factory silver multi-hole wheels and four side doors. The real rear reference has an aftermarket lip wing and black wheels: DO NOT transfer those, original identity photo and edit target have no wing and silver wheels.",
+      "referenceImages": [
+        {
+          "role": "edit-target",
+          "path": "public/images/pixel-cars/155/base.png",
+          "sha256": "eedc7987c71bf9a294c347edba5f424e931236fa06a1a30664bdc56b551fbdea",
+          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/155.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://s1.cdn.autoevolution.com/images/news/gallery/alfa-155-q4-dons-lancia-integrale-internals-but-drives-and-feels-different-reviewer-says_2.jpg",
+          "page": "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "key": "zx",
+      "model": "Citroen ZX 2.0",
+      "previousRevision": 1,
+      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "correction": "Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors.",
+      "referenceImages": [
+        {
+          "role": "edit-target",
+          "path": "public/images/pixel-cars/zx/base.png",
+          "sha256": "951422c7889d59c9c85cfa76906b76cae1476e455661d40a2fcb379163e1a425",
+          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/zx.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://images.caradisiac.com/images/2/9/0/2/182902/S0-citroen-zx-volcane-16v-1991-1998-ligne-banale-et-chassis-exceptionnel-des-3-000-eur-628748.jpg",
+          "page": "https://www.caradisiac.com/citroen-zx-volcane-16v-1991-1998-ligne-banale-et-chassis-exceptionnel-des-3-000-eur-182902.htm"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "key": "charade",
+      "model": "Daihatsu Charade Gtti",
+      "previousRevision": 2,
+      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Precise localized geometry edit of Daihatsu Charade G100 GTti rear WHEEL-ARCH OPENING. It is STILL TOO ROUND. Use the clean SIDE-ON photograph to draw the G100 distinctive FLAT-TOPPED SQUARED arch: a straight nearly HORIZONTAL upper edge spans most of tyre width, short angular shoulders transition into close-to-VERTICAL sides. The body panel overlaps/covers the upper tyre substantially. Front arch stays normally round; rear arch must be obviously visibly LESS ROUND and more squared than front. Keep the tyre and silver wheel CIRCULAR and unchanged in size, centre, stance; flatten the BODY OPENING only, not the tyre. Do not merely add an angular highlight above a circular opening. Keep already corrected low horizontal rear lights (no pillar lamps), all front details, three-door hatch proportions and black side trim.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "correction": "Precise localized geometry edit of Daihatsu Charade G100 GTti rear WHEEL-ARCH OPENING. It is STILL TOO ROUND. Use the clean SIDE-ON photograph to draw the G100 distinctive FLAT-TOPPED SQUARED arch: a straight nearly HORIZONTAL upper edge spans most of tyre width, short angular shoulders transition into close-to-VERTICAL sides. The body panel overlaps/covers the upper tyre substantially. Front arch stays normally round; rear arch must be obviously visibly LESS ROUND and more squared than front. Keep the tyre and silver wheel CIRCULAR and unchanged in size, centre, stance; flatten the BODY OPENING only, not the tyre. Do not merely add an angular highlight above a circular opening. Keep already corrected low horizontal rear lights (no pillar lamps), all front details, three-door hatch proportions and black side trim.",
+      "referenceImages": [
+        {
+          "role": "edit-target",
+          "path": "public/images/pixel-cars/charade/base.png",
+          "sha256": "b0410174e03e113fd32009d9d28daba5e625500fb24411a8bb3a67a2c6bd1535",
+          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/charade.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Daihatsu_Charade_GTti_G100_04.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Charade_GTti_G100_04.jpg"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_d991cee5669a3b8a7e906604df875055.jpg",
+          "page": "https://www.classic-trader.com/fr/voitures/annonce/daihatsu/charade/charade-gtti/1988/424290"
+        }
+      ]
+    },
+    {
+      "id": 161,
+      "key": "williams",
+      "model": "Renault Clio Williams",
+      "previousRevision": 2,
+      "prompt": "Use case: precise-object-edit. Asset type: targeted correction to existing native pixel-art car sprite in the Poketurismo catalog.\nInput images: IMAGE 1 is the EDIT TARGET, current approved-style GREEN pixel sprite. IMAGE 2 is the USER ORIGINAL photograph for identity and stock trim. Remaining photographs are REAL ANATOMY references for the requested correction only; do not transfer their colour, extra doors, modifications, backgrounds, stickers or wheels.\nRequested correction: Precise localized PAINT MATERIAL edit of Renault Clio I Williams THREE-DOOR. Main FRONT BUMPER IS BODY COLOUR, NOT a broad black plastic fascia. Repaint the substantial front bumper main panel surrounding the numberplate, fog lights and intake, its upper fascia and lower apron in the SAME GREEN BODY PAINT shades as the fenders. Leave only genuinely unpainted narrow black rubber rubbing strip, thin lower lip, grille/intake holes, lamp recess interiors and numberplate trim black. Most visible bumper must read painted GREEN, including areas around BOTH square fog lamps and below licence plate. Keep gold Speedline wheels, current three-door shape, headlights, black SIDE rubbing strip and every other detail. Maintain NO REAR SPOILER as explicitly approved correction; DO NOT add a spoiler or large wing from any supporting photo.\nPreserve invariants aggressively: same vehicle identity, same camera FRONT-LEFT three-quarter view, nose pointing DOWN-LEFT, about 40% front and 60% side. Full isolated car, straight wheels, clean transparent margins and genuinely transparent background. Preserve all unrelated front/body/wheel details of image 1; change the specified anatomy/material only. Do not turn the whole car to rear view: only show naturally visible rear corner, never invent a tall taillight to fill a hidden area.\nKeep EXACT same authentic hand-built logical 320x128 pixel-art style: sharp square clusters, clean one-pixel outlines, dark panel gaps, compact six-shade blocks, NO smooth render, antialiasing, photography filter, vector curves, soft gradients, blur or dithering/noisy stipple. Wide approximately 3:1 canvas. Do not squeeze or stretch the body.\nRECOLOUR CONTRACT: every PAINTED panel, bumper, mirror, skirt, edge and highlight uses distinctly SATURATED GREEN ramp only #103b24 #196137 #2f8a46 #4dac5a #80c773 #b4e89c. G at least20 higher than R and B on paint highlights; no neutral grey or white speckles on paint. All genuine black trim stays charcoal/black, including explicitly requested Alfa75 belt-line. Glass dark steel blue/cool grey, tyres black, wheels silver except Williams GOLD, headlamps ivory, rear lamps red/amber. No green in nonpaint details.\nNo text, caption, watermark, scenery, road, person, extra car, new accessory or modern modification. Preserve transparency. Single complete corrected car sprite.",
+      "correction": "Precise localized PAINT MATERIAL edit of Renault Clio I Williams THREE-DOOR. Main FRONT BUMPER IS BODY COLOUR, NOT a broad black plastic fascia. Repaint the substantial front bumper main panel surrounding the numberplate, fog lights and intake, its upper fascia and lower apron in the SAME GREEN BODY PAINT shades as the fenders. Leave only genuinely unpainted narrow black rubber rubbing strip, thin lower lip, grille/intake holes, lamp recess interiors and numberplate trim black. Most visible bumper must read painted GREEN, including areas around BOTH square fog lamps and below licence plate. Keep gold Speedline wheels, current three-door shape, headlights, black SIDE rubbing strip and every other detail. Maintain NO REAR SPOILER as explicitly approved correction; DO NOT add a spoiler or large wing from any supporting photo.",
+      "referenceImages": [
+        {
+          "role": "edit-target",
+          "path": "public/images/pixel-cars/williams/base.png",
+          "sha256": "3071643ddbf178faeebbfb899d68d34ceffad859c1af6eaebccc53ab22fd46a2",
+          "commit": "601e8591856e66b0ee07c50e46e3c1072c58ef66"
+        },
+        {
+          "role": "original-front-identity",
+          "path": "public/images/car/williams.png"
+        },
+        {
+          "role": "real-photo-anatomy",
+          "url": "https://assets.carandclassic.com/uploads/cars/renault/C1976306/1993-renault-clio-691df2c637ead.jpg?fit=fillmax&h=800&ixlib=php-4.1.0&q=85&s=aae3cddab97f7dc057e67a977c1a52fa&w=800",
+          "page": "https://www.carandclassic.com/es/vehiculo/C1976306"
+        }
+      ]
+    }
+  ]
+}

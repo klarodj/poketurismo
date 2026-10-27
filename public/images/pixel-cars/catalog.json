@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "reviewBatch": "rear-2026-10-27",
+  "reviewBatch": "detail-six-2026-10-27",
   "width": 320,
   "height": 128,
   "colours": [
@@ -93,8 +93,11 @@
       },
       "mask": "/images/pixel-cars/145/body.png",
       "details": "/images/pixel-cars/145/details.png",
-      "sources": [],
-      "revision": 1,
+      "sources": [
+        "https://www.caradisiac.com/alfa-romeo-145-quadrifoglio-1995-2000-le-retour-du-coeur-sportif-des-4-500-eur-202578.htm"
+      ],
+      "revision": 2,
+      "reviewBatch": "detail-six-2026-10-27",
       "approved": false
     },
     {
@@ -121,8 +124,11 @@
       },
       "mask": "/images/pixel-cars/155/body.png",
       "details": "/images/pixel-cars/155/details.png",
-      "sources": [],
-      "revision": 1,
+      "sources": [
+        "https://www.autoevolution.com/news/alfa-romeo-155-q4-might-have-lancia-integrale-internals-but-drives-different-200419.html"
+      ],
+      "revision": 2,
+      "reviewBatch": "detail-six-2026-10-27",
       "approved": false
     },
     {
@@ -180,8 +186,11 @@
       },
       "mask": "/images/pixel-cars/75/body.png",
       "details": "/images/pixel-cars/75/details.png",
-      "sources": [],
-      "revision": 1,
+      "sources": [
+        "https://alfasettantacinque.wordpress.com/2-5-v6-quadrifoglio-verde/"
+      ],
+      "revision": 2,
+      "reviewBatch": "detail-six-2026-10-27",
       "approved": false
     },
     {
@@ -1029,8 +1038,11 @@
       },
       "mask": "/images/pixel-cars/zx/body.png",
       "details": "/images/pixel-cars/zx/details.png",
-      "sources": [],
-      "revision": 1,
+      "sources": [
+        "https://www.caradisiac.com/citroen-zx-volcane-16v-1991-1998-ligne-banale-et-chassis-exceptionnel-des-3-000-eur-182902.htm"
+      ],
+      "revision": 2,
+      "reviewBatch": "detail-six-2026-10-27",
       "approved": false
     },
     {
@@ -1058,10 +1070,11 @@
       "mask": "/images/pixel-cars/charade/body.png",
       "details": "/images/pixel-cars/charade/details.png",
       "sources": [
-        "https://www.classic-trader.com/fr/voitures/annonce/daihatsu/charade/charade-gtti/1988/424290"
+        "https://www.classic-trader.com/fr/voitures/annonce/daihatsu/charade/charade-gtti/1988/424290",
+        "https://commons.wikimedia.org/wiki/File:Daihatsu_Charade_GTti_G100_04.jpg"
       ],
-      "revision": 2,
-      "reviewBatch": "rear-2026-10-27",
+      "revision": 3,
+      "reviewBatch": "detail-six-2026-10-27",
       "approved": false
     },
     {
@@ -4602,10 +4615,11 @@
       "mask": "/images/pixel-cars/williams/body.png",
       "details": "/images/pixel-cars/williams/details.png",
       "sources": [
-        "https://www.planetcarsz.com/carros/renault-clio-williams-phase-1"
+        "https://www.planetcarsz.com/carros/renault-clio-williams-phase-1",
+        "https://www.carandclassic.com/es/vehiculo/C1976306"
       ],
-      "revision": 2,
-      "reviewBatch": "rear-2026-10-27",
+      "revision": 3,
+      "reviewBatch": "detail-six-2026-10-27",
       "approved": false
     },
     {
