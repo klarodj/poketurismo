@@ -1,0 +1,19 @@
+{
+  "key": "ticino",
+  "name": "Pista club del Ticino · Novarese",
+  "format": "circuit",
+  "terrain": "plain",
+  "caption": "Risaie, filari e officine dietro la rete.",
+  "prompt": "Use case: stylized-concept. Asset type: one retro racing videogame track scenery postcard, Northern Italy circa 2002. Exact setting: Pista club del Ticino · Novarese. Location details: Risaie, filari e officine dietro la rete. A modest local club racing circuit: tarmac bend with red-white kerbs and low guardrails, small 1990s pit buildings, no contemporary stadium. One tiny red 1990s hatchback may establish scale. Camera is a landscape road-level three-quarter view with the road leading into the distance, NOT a map or a diagram. The first reference dictates REQUIRED pixel drawing style; the second is the game car sprite language. Strict hand-drawn retro pixel art on a 320x180 logical grid: flat 32-colour palette, deliberate square clusters and dark stepped outlines, at most 3-5 shades per material, clean simple shapes like late-1990s LucasArts/Amiga adventure backgrounds. No photograph or photo filtering, no photoreal textures, no tiny noisy details, gradients, blur, bloom, modern cars, readable text, signs with lettering, logos, UI or watermark. Wide 16:9 composition. Keep the place distinct from other circuits.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-38e24d36-732e-430c-a769-10f7592574ef.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/tracks/ticino.png",
+  "output": "public/images/tracks/ticino.png",
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "5be981ed1c2a38b198cc3464ad7bef07923a93f91a37129186cb898ce2647102",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/tracks/ticino.png",
+  "nativeInput": true
+}

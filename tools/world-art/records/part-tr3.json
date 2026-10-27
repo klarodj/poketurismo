@@ -1,0 +1,14 @@
+{
+  "key": "tr3",
+  "name": "Pneumatici",
+  "level": 3,
+  "subject": "two black racing slick tyres with completely smooth tread",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: two black racing slick tyres with completely smooth tread. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f8b58c3c-1a39-4e96-bdc7-751582865f52.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/tr3.png",
+  "output": "public/images/part/tr3.png",
+  "rawInputSha256": "7b85bc1f57369ba20f3a1e347917c89fd53e251e0620891c243d846aea649424",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/tr3.png",
+  "nativeInput": true
+}

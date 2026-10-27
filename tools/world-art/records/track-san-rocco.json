@@ -1,0 +1,19 @@
+{
+  "key": "san-rocco",
+  "name": "Pistino di San Rocco · Pavese",
+  "format": "circuit",
+  "terrain": "plain",
+  "caption": "Pochi box, gomme accatastate e utilitarie del club.",
+  "prompt": "Use case: stylized-concept. Asset type: one retro racing videogame track scenery postcard, Northern Italy circa 2002. Exact setting: Pistino di San Rocco · Pavese. Location details: Pochi box, gomme accatastate e utilitarie del club. A modest local club racing circuit: tarmac bend with red-white kerbs and low guardrails, small 1990s pit buildings, no contemporary stadium. One tiny red 1990s hatchback may establish scale. Camera is a landscape road-level three-quarter view with the road leading into the distance, NOT a map or a diagram. The first reference dictates REQUIRED pixel drawing style; the second is the game car sprite language. Strict hand-drawn retro pixel art on a 320x180 logical grid: flat 32-colour palette, deliberate square clusters and dark stepped outlines, at most 3-5 shades per material, clean simple shapes like late-1990s LucasArts/Amiga adventure backgrounds. No photograph or photo filtering, no photoreal textures, no tiny noisy details, gradients, blur, bloom, modern cars, readable text, signs with lettering, logos, UI or watermark. Wide 16:9 composition. Keep the place distinct from other circuits.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4cd06db0-5a61-4df3-8707-5848acbd0d9d.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/tracks/san-rocco.png",
+  "output": "public/images/tracks/san-rocco.png",
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "f8cc1f5f5586f294602349a6c773b6a10fa2df90534fa9d441d71588bfaff3e8",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/tracks/san-rocco.png",
+  "nativeInput": true
+}

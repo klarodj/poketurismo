@@ -1,0 +1,16 @@
+{
+  "key": "places/cronometraggio",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Club autodrome timekeeping hut in Northern Italy 2002, wooden desk with stopwatch, paper lap charts and beige CRT monitor, open window showing a red hatchback passing on track and red-white kerb, no readable writing. Wide scene. Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8b6e23da-1fbc-4a24-af90-68f71bea6dde.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/places-cronometraggio.png",
+  "output": "public/images/places/cronometraggio.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "05117c840a87da582b12b1be7be1d1aa7acc1884498190f3eaf677832fe1aca8",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/places-cronometraggio.png",
+  "nativeInput": true
+}

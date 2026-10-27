@@ -1,0 +1,14 @@
+{
+  "key": "ei3",
+  "name": "Preparazione interna motore",
+  "level": 3,
+  "subject": "an aluminium racing engine block with forged crankshaft and pistons",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: an aluminium racing engine block with forged crankshaft and pistons. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-86f943d6-04a7-4cc3-9532-215065aa0af5.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/ei3.png",
+  "output": "public/images/part/ei3.png",
+  "rawInputSha256": "ef2858671d7d686ce571e11d9a644659d934b46c85f025c5a422ed5980b5fed3",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/ei3.png",
+  "nativeInput": true
+}

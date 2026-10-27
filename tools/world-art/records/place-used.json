@@ -1,0 +1,16 @@
+{
+  "key": "used",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Small Italian used-car forecourt in 2002, modest prefabricated sales office, hanging triangular bunting, three affordable 1990s compact cars in red, yellow and blue, hand-written windscreen cards with no readable lettering, chain-link fence and low terracotta-roof houses. Wide eye-level view. Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-267bffac-439c-48b9-a544-b189cd24f9fb.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/used.png",
+  "output": "public/images/used.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "eb16b61f495365823d847f7aecc14592de2722445aa70684786b57736463cd86",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/used.png",
+  "nativeInput": true
+}

@@ -1,5 +1,7 @@
 # Poketurismo: provincia del Nord, circa 2002
 
+Aggiornamento autorizzato del 27 ottobre 2026: auto, luoghi, menu, servizi, ricambi e cartoline dei percorsi usano ora i nuovi disegni pixel art. Le indicazioni storiche sotto sulla conservazione delle fotografie si applicano agli archivi, non al loro impiego attivo nel gioco. Vedere [COLORI_E_CARROZZIERE.md](COLORI_E_CARROZZIERE.md) e [IMMAGINI_MONDO_PIXEL_ART.md](IMMAGINI_MONDO_PIXEL_ART.md). Originali conservati fuori da `public`; stile Windows 98 e ambientazione 2002 restano vincolanti.
+
 Direzione esplicita dell'utente: **Nord Italia tra fine anni Novanta e primi Duemila; Windows 98 e web dei primi anni 2000**. Questa è l'identità del gioco e vale anche per ogni nuova funzione. Il riferimento di stagione è il 2002, già coerente con il distributore AGIP e i prezzi in euro. Non cambiare questa direzione aggiungendo interfacce contemporanee.
 
 ## Interfaccia

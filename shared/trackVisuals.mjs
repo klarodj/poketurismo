@@ -30,7 +30,7 @@ const rows = [
  ['monza','Monza','circuit','park','Parco, vecchi box e lunghi rettilinei dell’autodromo.',[[93,155],[242,155],[272,134],[268,107],[245,90],[243,45],[222,27],[197,34],[163,34],[150,53],[135,45],[102,70],[68,88],[57,118],[75,135]]],
  ['scuola','Circuito Scuola · Laboratorio tattico','circuit','plain','Pistino di scuola, box bassi e officine del club.',null],
 ];
-export const TRACK_VISUALS=rows.map(([key,name,format,terrain,caption,points])=>({key,name,format,terrain,caption,points,image:`/images/tracks/${key}.png`}));
+export const TRACK_VISUALS=rows.map(([key,name,format,terrain,caption,points])=>({key,name,format,terrain,caption,points,image:`/images/world/tracks/${key}.png`}));
 export function trackVisual(name){return TRACK_VISUALS.find(track=>track.name===periodTrackName(name))||null;}
 // Split the illustrated roadbook in the same order and proportions as the actual sectors.
 export function mapSectors(points,sections=[],closed=false){

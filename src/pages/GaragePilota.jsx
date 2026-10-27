@@ -28,7 +28,7 @@ export default function GaragePilota() {
   };
 
   return (
-    <Win98Window guideId="garage" title="Profilo Pilota" imageUrl="/images/garage.png">
+    <Win98Window guideId="garage" title="Profilo Pilota" imageUrl="/images/world/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
         <GarageTabs />

@@ -1,0 +1,14 @@
+{
+  "key": "ec1",
+  "name": "Centralina ECU",
+  "level": 1,
+  "subject": "a late-1990s rectangular factory engine ECU with connector pins and open EPROM chip",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: a late-1990s rectangular factory engine ECU with connector pins and open EPROM chip. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ba6b9b34-f327-414c-94fe-ba785750e1e0.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/ec1.png",
+  "output": "public/images/part/ec1.png",
+  "rawInputSha256": "4e4b09f44ad6c91e95560a1f643ece2be4c26c895ab1b99a9a01bc0b14669d29",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/ec1.png",
+  "nativeInput": true
+}

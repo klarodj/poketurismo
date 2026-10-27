@@ -1,0 +1,14 @@
+{
+  "key": "es1",
+  "name": "Scarico",
+  "level": 1,
+  "subject": "a steel sport exhaust rear silencer with round polished tip",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: a steel sport exhaust rear silencer with round polished tip. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-761a38da-ef8c-48af-87db-e7fae054173d.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/es1.png",
+  "output": "public/images/part/es1.png",
+  "rawInputSha256": "e1dbb6f7cb25e81fd877d007042cf5e4f7a105e3852d0be41b6e467fcdf36d53",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/es1.png",
+  "nativeInput": true
+}

@@ -1,0 +1,11 @@
+{
+  "key": "oil",
+  "prompt": "Use case: historical-scene. Asset type: square workshop service illustration for a Northern Italian automotive RPG, year 2002. Close-up of a mechanic's hands pouring fresh golden motor oil from a plain unlabelled container through a funnel into a 1990s hatchback engine. Orange dipstick, oil filler clearly on engine. No whole person. Composition legible as a small 128x128 thumbnail, main subject centered, generous margin. Hand-drawn early PC game pixel art with crisp stepped dark outlines, visible square pixel clusters, restrained 48-colour palette of navy charcoal warm grey red and yellow, flat 5-step pixel shading, no photographs, no painting, no blur, no gradients, no writing or watermark.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-155c325b-f6b2-4cc6-a56b-8ad4781e476f.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/work/oil.png",
+  "output": "public/images/work/oil.png",
+  "rawInputSha256": "c5438521e05a4c9ff44cfef2fc35b5085687bb8295cdf2b21816b22c20a1a5b1",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/work/oil.png",
+  "nativeInput": true
+}

@@ -1,0 +1,19 @@
+{
+  "key": "bassa",
+  "name": "Autodromo della Bassa · Cremonese",
+  "format": "circuit",
+  "terrain": "plain",
+  "caption": "Campi, pioppi e il piccolo paddock del club.",
+  "prompt": "Use case: stylized-concept. Asset type: one retro racing videogame track scenery postcard, Northern Italy circa 2002. Exact setting: Autodromo della Bassa · Cremonese. Location details: Campi, pioppi e il piccolo paddock del club. A modest local club racing circuit: tarmac bend with red-white kerbs and low guardrails, small 1990s pit buildings, no contemporary stadium. One tiny red 1990s hatchback may establish scale. Camera is a landscape road-level three-quarter view with the road leading into the distance, NOT a map or a diagram. The first reference dictates REQUIRED pixel drawing style; the second is the game car sprite language. Strict hand-drawn retro pixel art on a 320x180 logical grid: flat 32-colour palette, deliberate square clusters and dark stepped outlines, at most 3-5 shades per material, clean simple shapes like late-1990s LucasArts/Amiga adventure backgrounds. No photograph or photo filtering, no photoreal textures, no tiny noisy details, gradients, blur, bloom, modern cars, readable text, signs with lettering, logos, UI or watermark. Wide 16:9 composition. Keep the place distinct from other circuits.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-89b19d58-9be1-4ece-bda4-3b529708ac4f.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/tracks/bassa.png",
+  "output": "public/images/tracks/bassa.png",
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "00dd85aa474a8926f26806174d706e69daba91e6ea89d51ccffe551adcabb747",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/tracks/bassa.png",
+  "nativeInput": true
+}

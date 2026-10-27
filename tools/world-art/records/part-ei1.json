@@ -1,0 +1,14 @@
+{
+  "key": "ei1",
+  "name": "Preparazione interna motore",
+  "level": 1,
+  "subject": "a pair of steel sport camshafts and an aluminium cylinder head",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: a pair of steel sport camshafts and an aluminium cylinder head. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8cbc4ab7-c453-431e-9b79-cfce0eaaa018.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/ei1.png",
+  "output": "public/images/part/ei1.png",
+  "rawInputSha256": "4c2f43831a1952ceed34bd87bfc2aeb55012b6fcb9a62446db13ca377ff35265",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/ei1.png",
+  "nativeInput": true
+}

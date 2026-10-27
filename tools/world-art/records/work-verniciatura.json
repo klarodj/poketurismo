@@ -1,0 +1,11 @@
+{
+  "key": "verniciatura",
+  "prompt": "Use case: historical-scene. Asset type: square workshop service illustration for a Northern Italian automotive RPG, year 2002. An Italian bodyshop in 2002, a compact 1990s hatchback inside a simple spray booth, professional wearing respirator and overalls applying yellow paint with a spray gun, masked windows and tyres, clear air hose, bright strip lights. Clearly automotive repainting service. Composition legible as a small 128x128 thumbnail, main subject centered, generous margin. Hand-drawn early PC game pixel art with crisp stepped dark outlines, visible square pixel clusters, restrained 48-colour palette of navy charcoal warm grey red and yellow, flat 5-step pixel shading, no photographs, no painting, no blur, no gradients, no writing or watermark.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-a9d44c52-aa95-44de-8d98-a9659be9cd5f.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/work/verniciatura.png",
+  "output": "public/images/work/verniciatura.png",
+  "rawInputSha256": "7552c885706e05d0708ee9f98087cc61fc21ebc8b88f6b5818734534b9642f1b",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/work/verniciatura.png",
+  "nativeInput": true
+}

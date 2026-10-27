@@ -1,0 +1,19 @@
+{
+  "key": "prealpi",
+  "name": "Salita della cava · Prealpi",
+  "format": "point-to-point",
+  "terrain": "quarry",
+  "caption": "Una cava, vecchi muri in pietra e tornanti prealpini.",
+  "prompt": "Use case: stylized-concept. Asset type: one retro racing videogame track scenery postcard, Northern Italy circa 2002. Exact setting: Salita della cava · Prealpi. Location details: Una cava, vecchi muri in pietra e tornanti prealpini. A real-looking provincial public road in the specified Northern Italian landscape, period steel guardrails and stone walls, correct Italian white road markings, no circuit kerbs. One tiny red 1990s hatchback may establish scale. Camera is a landscape road-level three-quarter view with the road leading into the distance, NOT a map or a diagram. The first reference dictates REQUIRED pixel drawing style; the second is the game car sprite language. Strict hand-drawn retro pixel art on a 320x180 logical grid: flat 32-colour palette, deliberate square clusters and dark stepped outlines, at most 3-5 shades per material, clean simple shapes like late-1990s LucasArts/Amiga adventure backgrounds. No photograph or photo filtering, no photoreal textures, no tiny noisy details, gradients, blur, bloom, modern cars, readable text, signs with lettering, logos, UI or watermark. Wide 16:9 composition. Keep the place distinct from other circuits.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d7b0589a-5dc9-4f0d-a42c-22e35b30eb6a.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/tracks/prealpi.png",
+  "output": "public/images/tracks/prealpi.png",
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "5c184571b39f5add0669772b8eae5698896edbda8b5e4153540560a6e9a3de7d",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/tracks/prealpi.png",
+  "nativeInput": true
+}

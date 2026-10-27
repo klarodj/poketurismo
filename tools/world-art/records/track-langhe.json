@@ -1,0 +1,19 @@
+{
+  "key": "langhe",
+  "name": "Circuito delle Colline · Langhe",
+  "format": "circuit",
+  "terrain": "hills",
+  "caption": "Nebbia leggera, vigneti e colline dietro i cordoli.",
+  "prompt": "Use case: stylized-concept. Asset type: one retro racing videogame track scenery postcard, Northern Italy circa 2002. Exact setting: Circuito delle Colline · Langhe. Location details: Nebbia leggera, vigneti e colline dietro i cordoli. A modest local club racing circuit: tarmac bend with red-white kerbs and low guardrails, small 1990s pit buildings, no contemporary stadium. One tiny red 1990s hatchback may establish scale. Camera is a landscape road-level three-quarter view with the road leading into the distance, NOT a map or a diagram. The first reference dictates REQUIRED pixel drawing style; the second is the game car sprite language. Strict hand-drawn retro pixel art on a 320x180 logical grid: flat 32-colour palette, deliberate square clusters and dark stepped outlines, at most 3-5 shades per material, clean simple shapes like late-1990s LucasArts/Amiga adventure backgrounds. No photograph or photo filtering, no photoreal textures, no tiny noisy details, gradients, blur, bloom, modern cars, readable text, signs with lettering, logos, UI or watermark. Wide 16:9 composition. Keep the place distinct from other circuits.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-cffadb8b-b0a3-4b49-911e-94d8896ba0da.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/tracks/langhe.png",
+  "output": "public/images/tracks/langhe.png",
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "6f9d33fb5e65d61871b8452d109c6ee3c09002abf443f0f8d45c525dc41c0254",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/tracks/langhe.png",
+  "nativeInput": true
+}

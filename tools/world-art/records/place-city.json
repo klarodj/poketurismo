@@ -1,0 +1,16 @@
+{
+  "key": "city",
+  "prompt": "Use case: stylized-concept. Create ONE new pixel-art game background. The first reference is the REQUIRED DRAWING STYLE: chunky simple pixel clusters and flat colour shading. The second reference is the game car sprite style. Subject: an oblique bird's-eye small Northern Italian town circa 2002, terracotta roofs, small piazza, modest home garages, workshop district, tiny petrol station, distant Alpine foothills. This is a retro point-and-click videogame SCENE, NOT an aerial photograph. Flat 32-colour palette, deliberate square pixels on a 320 by 180 logical canvas, each roof and tree constructed from large simple colour clusters, 3 shades per material maximum, no fine noisy textures, no photographic details, no realistic lighting, no gradients, no dithered photo, no blur. Architecture in simplified clear shapes like late-1990s LucasArts or Amiga adventure backgrounds. Wide 16:9 landscape, no labels, no logos, no text, no interface, no watermark. Match the references' hand-drawn pixel art language, not their exact subject.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-71ba3375-e404-4315-8215-30a157b1633d.png",
+  "tool": "image_gen built-in",
+  "iteration": 2,
+  "input": "tools/world-art/inputs/places/city.png",
+  "output": "public/images/city.png",
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "fd401752dfb8d590ca0fe529a16ff7ca53ae9196896b021c525f3192639e8e2f",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/city.png",
+  "nativeInput": true
+}

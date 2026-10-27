@@ -1,0 +1,956 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Nearest-neighbour only; generated alpha retained",
+  "assets": [
+    {
+      "key": "ar1",
+      "input": "tools/world-art/inputs/part/ar1.png",
+      "sourceSha256": "0a536543e53f2ab73484a67dc0ef0d125fae0b368eb7689f2580b0ef70e5fc75",
+      "output": "public/images/world/part/ar1.png",
+      "sha256": "0a536543e53f2ab73484a67dc0ef0d125fae0b368eb7689f2580b0ef70e5fc75",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ar1.png"
+    },
+    {
+      "key": "ar2",
+      "input": "tools/world-art/inputs/part/ar2.png",
+      "sourceSha256": "9479faa754d3a1ca1cad8a1f88b650e424fab69894cd51121831738968fe2b29",
+      "output": "public/images/world/part/ar2.png",
+      "sha256": "9479faa754d3a1ca1cad8a1f88b650e424fab69894cd51121831738968fe2b29",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ar2.png"
+    },
+    {
+      "key": "ar3",
+      "input": "tools/world-art/inputs/part/ar3.png",
+      "sourceSha256": "f4f59dadd2711331e3e5177f2c6121e9d7247daedebbd204cd1c42cae8858999",
+      "output": "public/images/world/part/ar3.png",
+      "sha256": "f4f59dadd2711331e3e5177f2c6121e9d7247daedebbd204cd1c42cae8858999",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ar3.png"
+    },
+    {
+      "key": "as1",
+      "input": "tools/world-art/inputs/part/as1.png",
+      "sourceSha256": "b317b25059fdefd61c4f3f2e61e946013bb15e66b98f0243be9244de809c80a4",
+      "output": "public/images/world/part/as1.png",
+      "sha256": "b317b25059fdefd61c4f3f2e61e946013bb15e66b98f0243be9244de809c80a4",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/as1.png"
+    },
+    {
+      "key": "as2",
+      "input": "tools/world-art/inputs/part/as2.png",
+      "sourceSha256": "afd3c4995fd128cd2a5dc68a265e053137ea361f7131d45b381ce6453227c95b",
+      "output": "public/images/world/part/as2.png",
+      "sha256": "afd3c4995fd128cd2a5dc68a265e053137ea361f7131d45b381ce6453227c95b",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/as2.png"
+    },
+    {
+      "key": "as3",
+      "input": "tools/world-art/inputs/part/as3.png",
+      "sourceSha256": "7202ade07f8dc394e1bd892ff31d1f861967b4a181bc38589aaf8d1ccfd8dcd8",
+      "output": "public/images/world/part/as3.png",
+      "sha256": "7202ade07f8dc394e1bd892ff31d1f861967b4a181bc38589aaf8d1ccfd8dcd8",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/as3.png"
+    },
+    {
+      "key": "bk1",
+      "input": "tools/world-art/inputs/part/bk1.png",
+      "sourceSha256": "57ee3d98713b6a202ad24529187dcb50aedec395f0dd52e8a783085fddf2db04",
+      "output": "public/images/world/part/bk1.png",
+      "sha256": "57ee3d98713b6a202ad24529187dcb50aedec395f0dd52e8a783085fddf2db04",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/bk1.png"
+    },
+    {
+      "key": "bk2",
+      "input": "tools/world-art/inputs/part/bk2.png",
+      "sourceSha256": "e7fd409864c9e7282d6afd3934f13dee912f68212270ec255a36db749560ca15",
+      "output": "public/images/world/part/bk2.png",
+      "sha256": "e7fd409864c9e7282d6afd3934f13dee912f68212270ec255a36db749560ca15",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/bk2.png"
+    },
+    {
+      "key": "bk3",
+      "input": "tools/world-art/inputs/part/bk3.png",
+      "sourceSha256": "63a80b0158415debd495b977921207e9bea0dd4e057e597fca288b0aa1a0dd61",
+      "output": "public/images/world/part/bk3.png",
+      "sha256": "63a80b0158415debd495b977921207e9bea0dd4e057e597fca288b0aa1a0dd61",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/bk3.png"
+    },
+    {
+      "key": "br1",
+      "input": "tools/world-art/inputs/part/br1.png",
+      "sourceSha256": "fcf30f4fee818b22ee913f60bcced487a6b226553e17ce813981bb37d96e90e9",
+      "output": "public/images/world/part/br1.png",
+      "sha256": "fcf30f4fee818b22ee913f60bcced487a6b226553e17ce813981bb37d96e90e9",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/br1.png"
+    },
+    {
+      "key": "br2",
+      "input": "tools/world-art/inputs/part/br2.png",
+      "sourceSha256": "0403dde0542567805baf0ac50ffb6d45bc0180486cb1293a262092f99cf66dae",
+      "output": "public/images/world/part/br2.png",
+      "sha256": "0403dde0542567805baf0ac50ffb6d45bc0180486cb1293a262092f99cf66dae",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/br2.png"
+    },
+    {
+      "key": "br3",
+      "input": "tools/world-art/inputs/part/br3.png",
+      "sourceSha256": "8ff2a4693d61df28310d82963dd9cac21966fdc3735d64c9970fb79c8b854b7f",
+      "output": "public/images/world/part/br3.png",
+      "sha256": "8ff2a4693d61df28310d82963dd9cac21966fdc3735d64c9970fb79c8b854b7f",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/br3.png"
+    },
+    {
+      "key": "cf1",
+      "input": "tools/world-art/inputs/part/cf1.png",
+      "sourceSha256": "18209cde0da3e34f47a5424bf2dbfa14c5781aedab80545b4fa496b958b8c792",
+      "output": "public/images/world/part/cf1.png",
+      "sha256": "18209cde0da3e34f47a5424bf2dbfa14c5781aedab80545b4fa496b958b8c792",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/cf1.png"
+    },
+    {
+      "key": "cf2",
+      "input": "tools/world-art/inputs/part/cf2.png",
+      "sourceSha256": "018029e4cf0ccb20ae7c3169504400fb39dc5032cc1fb015ea361a85b459405e",
+      "output": "public/images/world/part/cf2.png",
+      "sha256": "018029e4cf0ccb20ae7c3169504400fb39dc5032cc1fb015ea361a85b459405e",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/cf2.png"
+    },
+    {
+      "key": "cf3",
+      "input": "tools/world-art/inputs/part/cf3.png",
+      "sourceSha256": "cde410eb6a24d4b85665f19554861da7c3e39443cb8e282688673aafe3f6dce9",
+      "output": "public/images/world/part/cf3.png",
+      "sha256": "cde410eb6a24d4b85665f19554861da7c3e39443cb8e282688673aafe3f6dce9",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/cf3.png"
+    },
+    {
+      "key": "df1",
+      "input": "tools/world-art/inputs/part/df1.png",
+      "sourceSha256": "2b7a8b1b58a9f25890e4c8c9a9dce8d5fa72267873d7ee4e018bb714aee70f80",
+      "output": "public/images/world/part/df1.png",
+      "sha256": "2b7a8b1b58a9f25890e4c8c9a9dce8d5fa72267873d7ee4e018bb714aee70f80",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/df1.png"
+    },
+    {
+      "key": "df2",
+      "input": "tools/world-art/inputs/part/df2.png",
+      "sourceSha256": "d39601c85540eacb10b38af6b36f6d1555fca83836b015b03b3b27345b01c465",
+      "output": "public/images/world/part/df2.png",
+      "sha256": "d39601c85540eacb10b38af6b36f6d1555fca83836b015b03b3b27345b01c465",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/df2.png"
+    },
+    {
+      "key": "df3",
+      "input": "tools/world-art/inputs/part/df3.png",
+      "sourceSha256": "aaccef1cc865cdfb19eb1cc9505b3ff8a4b9773b1231c380b7d2aeb403e356fb",
+      "output": "public/images/world/part/df3.png",
+      "sha256": "aaccef1cc865cdfb19eb1cc9505b3ff8a4b9773b1231c380b7d2aeb403e356fb",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/df3.png"
+    },
+    {
+      "key": "ec1",
+      "input": "tools/world-art/inputs/part/ec1.png",
+      "sourceSha256": "689f2efa73d266ac3e91cea10f2e418b2683632134c72183462b005c01019bdf",
+      "output": "public/images/world/part/ec1.png",
+      "sha256": "689f2efa73d266ac3e91cea10f2e418b2683632134c72183462b005c01019bdf",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ec1.png"
+    },
+    {
+      "key": "ec2",
+      "input": "tools/world-art/inputs/part/ec2.png",
+      "sourceSha256": "8b0baa7a5874d7f5bc41dea64bdb051c98d5a8d426f3491b15d26c33f3828d98",
+      "output": "public/images/world/part/ec2.png",
+      "sha256": "8b0baa7a5874d7f5bc41dea64bdb051c98d5a8d426f3491b15d26c33f3828d98",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ec2.png"
+    },
+    {
+      "key": "ec3",
+      "input": "tools/world-art/inputs/part/ec3.png",
+      "sourceSha256": "42efafbbb11caa10257d583d7ded92b7148ebba6ce4c522f0055c6e3c23ea9a4",
+      "output": "public/images/world/part/ec3.png",
+      "sha256": "42efafbbb11caa10257d583d7ded92b7148ebba6ce4c522f0055c6e3c23ea9a4",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ec3.png"
+    },
+    {
+      "key": "ei1",
+      "input": "tools/world-art/inputs/part/ei1.png",
+      "sourceSha256": "ed79aacb482246a6c38cdeefdf05bd473424aeb82d1c09039643b5cc585938d8",
+      "output": "public/images/world/part/ei1.png",
+      "sha256": "ed79aacb482246a6c38cdeefdf05bd473424aeb82d1c09039643b5cc585938d8",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ei1.png"
+    },
+    {
+      "key": "ei2",
+      "input": "tools/world-art/inputs/part/ei2.png",
+      "sourceSha256": "9a753de56d8d983aa45228bace3c08760c04ba6fff604df4100ec318b8c71624",
+      "output": "public/images/world/part/ei2.png",
+      "sha256": "9a753de56d8d983aa45228bace3c08760c04ba6fff604df4100ec318b8c71624",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ei2.png"
+    },
+    {
+      "key": "ei3",
+      "input": "tools/world-art/inputs/part/ei3.png",
+      "sourceSha256": "ef65e127b1242d3fd3310eda88a998bdc89fff3683d8444ac815b58af3b577b0",
+      "output": "public/images/world/part/ei3.png",
+      "sha256": "ef65e127b1242d3fd3310eda88a998bdc89fff3683d8444ac815b58af3b577b0",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/ei3.png"
+    },
+    {
+      "key": "es1",
+      "input": "tools/world-art/inputs/part/es1.png",
+      "sourceSha256": "834fe39c68df810d1dd50719915348269a8609bf162537056ec7259875a689ea",
+      "output": "public/images/world/part/es1.png",
+      "sha256": "834fe39c68df810d1dd50719915348269a8609bf162537056ec7259875a689ea",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/es1.png"
+    },
+    {
+      "key": "es2",
+      "input": "tools/world-art/inputs/part/es2.png",
+      "sourceSha256": "ceea4617d28b6e9700bce3ecf93d8cacfaf720c4400adc4e2f999c8f2f23bb1e",
+      "output": "public/images/world/part/es2.png",
+      "sha256": "ceea4617d28b6e9700bce3ecf93d8cacfaf720c4400adc4e2f999c8f2f23bb1e",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/es2.png"
+    },
+    {
+      "key": "es3",
+      "input": "tools/world-art/inputs/part/es3.png",
+      "sourceSha256": "013b88c1c39268a8ceecf5716e4e4a45fb8e79c34f7d4e339c287784991146cc",
+      "output": "public/images/world/part/es3.png",
+      "sha256": "013b88c1c39268a8ceecf5716e4e4a45fb8e79c34f7d4e339c287784991146cc",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/es3.png"
+    },
+    {
+      "key": "fs1",
+      "input": "tools/world-art/inputs/part/fs1.png",
+      "sourceSha256": "61a16a31cf461d14a4122fb9af85a7ef2fd4c94d51cbe37e936b9647840cb453",
+      "output": "public/images/world/part/fs1.png",
+      "sha256": "61a16a31cf461d14a4122fb9af85a7ef2fd4c94d51cbe37e936b9647840cb453",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/fs1.png"
+    },
+    {
+      "key": "fs2",
+      "input": "tools/world-art/inputs/part/fs2.png",
+      "sourceSha256": "593f591fe2e9e95c5b253835e6d4d3394d35e7fe97011cc8a149126b88bf903c",
+      "output": "public/images/world/part/fs2.png",
+      "sha256": "593f591fe2e9e95c5b253835e6d4d3394d35e7fe97011cc8a149126b88bf903c",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/fs2.png"
+    },
+    {
+      "key": "fs3",
+      "input": "tools/world-art/inputs/part/fs3.png",
+      "sourceSha256": "df8fc4702ca1e3afe327982f772dd3782c754bc8dc7c49530c1c383eeea08011",
+      "output": "public/images/world/part/fs3.png",
+      "sha256": "df8fc4702ca1e3afe327982f772dd3782c754bc8dc7c49530c1c383eeea08011",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/fs3.png"
+    },
+    {
+      "key": "gb1",
+      "input": "tools/world-art/inputs/part/gb1.png",
+      "sourceSha256": "674b26740215ddac0a6517fb71aa4d801cc75826451ee995fb9e548d3f5e39ee",
+      "output": "public/images/world/part/gb1.png",
+      "sha256": "674b26740215ddac0a6517fb71aa4d801cc75826451ee995fb9e548d3f5e39ee",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/gb1.png"
+    },
+    {
+      "key": "gb2",
+      "input": "tools/world-art/inputs/part/gb2.png",
+      "sourceSha256": "e6f8745cd0f95fd4fa383a66b1a96ac57ee1afa95bdf77f1781c2825aa770345",
+      "output": "public/images/world/part/gb2.png",
+      "sha256": "e6f8745cd0f95fd4fa383a66b1a96ac57ee1afa95bdf77f1781c2825aa770345",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/gb2.png"
+    },
+    {
+      "key": "gb3",
+      "input": "tools/world-art/inputs/part/gb3.png",
+      "sourceSha256": "896b82a1bd0c45b45a3ad2ced2a6bad4e79b31e1c580c02c284403e62f51bec4",
+      "output": "public/images/world/part/gb3.png",
+      "sha256": "896b82a1bd0c45b45a3ad2ced2a6bad4e79b31e1c580c02c284403e62f51bec4",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/gb3.png"
+    },
+    {
+      "key": "su1",
+      "input": "tools/world-art/inputs/part/su1.png",
+      "sourceSha256": "fcc2686c48184201b80bd9ec3625961473feb4780afc7b5b30b0f6c846376d16",
+      "output": "public/images/world/part/su1.png",
+      "sha256": "fcc2686c48184201b80bd9ec3625961473feb4780afc7b5b30b0f6c846376d16",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/su1.png"
+    },
+    {
+      "key": "su2",
+      "input": "tools/world-art/inputs/part/su2.png",
+      "sourceSha256": "356f8ec4f0c45ab7ef9a65a7d20d441c9941e634143bb61df05152f762c07ab5",
+      "output": "public/images/world/part/su2.png",
+      "sha256": "356f8ec4f0c45ab7ef9a65a7d20d441c9941e634143bb61df05152f762c07ab5",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/su2.png"
+    },
+    {
+      "key": "su3",
+      "input": "tools/world-art/inputs/part/su3.png",
+      "sourceSha256": "91e7abcb723b29d8979d28e5c74755b747241598ca5cd32521261a15bfb43dd2",
+      "output": "public/images/world/part/su3.png",
+      "sha256": "91e7abcb723b29d8979d28e5c74755b747241598ca5cd32521261a15bfb43dd2",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/su3.png"
+    },
+    {
+      "key": "tb1",
+      "input": "tools/world-art/inputs/part/tb1.png",
+      "sourceSha256": "1360007300d7d70af617413e770dbb13c06f450d920e10443c33e7ee7796d4a5",
+      "output": "public/images/world/part/tb1.png",
+      "sha256": "1360007300d7d70af617413e770dbb13c06f450d920e10443c33e7ee7796d4a5",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/tb1.png"
+    },
+    {
+      "key": "tb2",
+      "input": "tools/world-art/inputs/part/tb2.png",
+      "sourceSha256": "bf5d92409456106615c8a2b0eb408fc3f0e9d7f8424242a76fde7de48ec9cc5d",
+      "output": "public/images/world/part/tb2.png",
+      "sha256": "bf5d92409456106615c8a2b0eb408fc3f0e9d7f8424242a76fde7de48ec9cc5d",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/tb2.png"
+    },
+    {
+      "key": "tb3",
+      "input": "tools/world-art/inputs/part/tb3.png",
+      "sourceSha256": "cbe49561ac9b7754ca4447f67b5f6eac4dc4ec7bd034a6e85ccf139874110277",
+      "output": "public/images/world/part/tb3.png",
+      "sha256": "cbe49561ac9b7754ca4447f67b5f6eac4dc4ec7bd034a6e85ccf139874110277",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/tb3.png"
+    },
+    {
+      "key": "tr1",
+      "input": "tools/world-art/inputs/part/tr1.png",
+      "sourceSha256": "d3d558406a5fddbcf8d20ce2247a14b29e3b85101456ac441385baa42556533c",
+      "output": "public/images/world/part/tr1.png",
+      "sha256": "d3d558406a5fddbcf8d20ce2247a14b29e3b85101456ac441385baa42556533c",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/tr1.png"
+    },
+    {
+      "key": "tr2",
+      "input": "tools/world-art/inputs/part/tr2.png",
+      "sourceSha256": "41693eb7f3d6c2858310416ad45198c21fb9500a94230ebe136a3f76d384ac12",
+      "output": "public/images/world/part/tr2.png",
+      "sha256": "41693eb7f3d6c2858310416ad45198c21fb9500a94230ebe136a3f76d384ac12",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/tr2.png"
+    },
+    {
+      "key": "tr3",
+      "input": "tools/world-art/inputs/part/tr3.png",
+      "sourceSha256": "bf7dbc499595e92c2fe4aa9a11d16ded2c5caa939b45830c4e5b017fbdbd6f88",
+      "output": "public/images/world/part/tr3.png",
+      "sha256": "bf7dbc499595e92c2fe4aa9a11d16ded2c5caa939b45830c4e5b017fbdbd6f88",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/tr3.png"
+    },
+    {
+      "key": "wh1",
+      "input": "tools/world-art/inputs/part/wh1.png",
+      "sourceSha256": "57896cd86de6cf3a96649f7e1e98650f61edf0aeba372011c093f679753b9ed7",
+      "output": "public/images/world/part/wh1.png",
+      "sha256": "57896cd86de6cf3a96649f7e1e98650f61edf0aeba372011c093f679753b9ed7",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/wh1.png"
+    },
+    {
+      "key": "wh2",
+      "input": "tools/world-art/inputs/part/wh2.png",
+      "sourceSha256": "e08f9f47ea21a6677c5a96aca1bcf75c06fd63685ec70881092a93fa688db846",
+      "output": "public/images/world/part/wh2.png",
+      "sha256": "e08f9f47ea21a6677c5a96aca1bcf75c06fd63685ec70881092a93fa688db846",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/wh2.png"
+    },
+    {
+      "key": "wh3",
+      "input": "tools/world-art/inputs/part/wh3.png",
+      "sourceSha256": "a58a84ead7a86f3f1c56bd6ba042f2f86e2f8e57b684fd39ac3d2fea39d60cf1",
+      "output": "public/images/world/part/wh3.png",
+      "sha256": "a58a84ead7a86f3f1c56bd6ba042f2f86e2f8e57b684fd39ac3d2fea39d60cf1",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/wh3.png"
+    },
+    {
+      "key": "wl1",
+      "input": "tools/world-art/inputs/part/wl1.png",
+      "sourceSha256": "134ecc451bc0135187175a91a8c3f096cd873ca1820abc66b720e9d7d9c1dc92",
+      "output": "public/images/world/part/wl1.png",
+      "sha256": "134ecc451bc0135187175a91a8c3f096cd873ca1820abc66b720e9d7d9c1dc92",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/wl1.png"
+    },
+    {
+      "key": "wl2",
+      "input": "tools/world-art/inputs/part/wl2.png",
+      "sourceSha256": "2c04f1eda95cb412c5bd04b51afaefb08210d6e5148f040cd568fea91427879e",
+      "output": "public/images/world/part/wl2.png",
+      "sha256": "2c04f1eda95cb412c5bd04b51afaefb08210d6e5148f040cd568fea91427879e",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/wl2.png"
+    },
+    {
+      "key": "wl3",
+      "input": "tools/world-art/inputs/part/wl3.png",
+      "sourceSha256": "731b2d76ca156387be6d313d18c989c0f4677e0ae792895a1491d3c14eb1b54e",
+      "output": "public/images/world/part/wl3.png",
+      "sha256": "731b2d76ca156387be6d313d18c989c0f4677e0ae792895a1491d3c14eb1b54e",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/part/wl3.png"
+    },
+    {
+      "key": "city",
+      "input": "tools/world-art/inputs/places/city.png",
+      "sourceSha256": "9f7f7c84facf68ccb92eda701ab61617b9dad1e659b379cf21fc5dd6853c4ec8",
+      "output": "public/images/world/city.png",
+      "sha256": "9f7f7c84facf68ccb92eda701ab61617b9dad1e659b379cf21fc5dd6853c4ec8",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/city.png"
+    },
+    {
+      "key": "dealer",
+      "input": "tools/world-art/inputs/places/dealer.png",
+      "sourceSha256": "1b5f87dad61786d695f0497eadc2f418075adaa6d6d971ab604de68d6f6977ce",
+      "output": "public/images/world/dealer.png",
+      "sha256": "1b5f87dad61786d695f0497eadc2f418075adaa6d6d971ab604de68d6f6977ce",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/dealer.png"
+    },
+    {
+      "key": "fuel",
+      "input": "tools/world-art/inputs/places/fuel.png",
+      "sourceSha256": "aecfe78e75069590fa3f2a9c0740ac968360acfd3571d60723de6f81fc04478e",
+      "output": "public/images/world/fuel.png",
+      "sha256": "aecfe78e75069590fa3f2a9c0740ac968360acfd3571d60723de6f81fc04478e",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/fuel.png"
+    },
+    {
+      "key": "garage",
+      "input": "tools/world-art/inputs/places/garage.png",
+      "sourceSha256": "c742e3a9598fe6f6264703b88daf4e809b7aaf9ca92970b9a8d2ae85dc527719",
+      "output": "public/images/world/garage.png",
+      "sha256": "c742e3a9598fe6f6264703b88daf4e809b7aaf9ca92970b9a8d2ae85dc527719",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/garage.png"
+    },
+    {
+      "key": "login",
+      "input": "tools/world-art/inputs/places/login.png",
+      "sourceSha256": "39c8d2a130593f9d68b9bd20cffbf28a43d0b46103a0cbdcbc74ba345d025d39",
+      "output": "public/images/world/login.png",
+      "sha256": "39c8d2a130593f9d68b9bd20cffbf28a43d0b46103a0cbdcbc74ba345d025d39",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/login.png"
+    },
+    {
+      "key": "meet",
+      "input": "tools/world-art/inputs/places/meet.png",
+      "sourceSha256": "f2370314da20c541b392465caadb6580348412073ba7cd7f41e1221db417b853",
+      "output": "public/images/world/meet.png",
+      "sha256": "f2370314da20c541b392465caadb6580348412073ba7cd7f41e1221db417b853",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/meet.png"
+    },
+    {
+      "key": "places/cronometraggio",
+      "input": "tools/world-art/inputs/places/places-cronometraggio.png",
+      "sourceSha256": "611a5b434664c56081ce82cf469cd727daf473721c3b1d71e5b77154ecb63035",
+      "output": "public/images/world/places/cronometraggio.png",
+      "sha256": "611a5b434664c56081ce82cf469cd727daf473721c3b1d71e5b77154ecb63035",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/places/cronometraggio.png"
+    },
+    {
+      "key": "places/scuola-guida",
+      "input": "tools/world-art/inputs/places/places-scuola-guida.png",
+      "sourceSha256": "dfe3f9cc6d944da3341c401f09fad4d8e9a2f78605d9629c280b9fedc645144d",
+      "output": "public/images/world/places/scuola-guida.png",
+      "sha256": "dfe3f9cc6d944da3341c401f09fad4d8e9a2f78605d9629c280b9fedc645144d",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/places/scuola-guida.png"
+    },
+    {
+      "key": "setting",
+      "input": "tools/world-art/inputs/places/setting.png",
+      "sourceSha256": "42bdf55fd445f236829940e45bd512813d17fcfc8c96096a4662896f37b36f71",
+      "output": "public/images/world/setting.png",
+      "sha256": "42bdf55fd445f236829940e45bd512813d17fcfc8c96096a4662896f37b36f71",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/setting.png"
+    },
+    {
+      "key": "shop",
+      "input": "tools/world-art/inputs/places/shop.png",
+      "sourceSha256": "f47a551af31e7084bdfd3b094a8cd5b0028d24cb215cb75c4a761d1a8df3fdfb",
+      "output": "public/images/world/shop.png",
+      "sha256": "f47a551af31e7084bdfd3b094a8cd5b0028d24cb215cb75c4a761d1a8df3fdfb",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/shop.png"
+    },
+    {
+      "key": "street",
+      "input": "tools/world-art/inputs/places/street.png",
+      "sourceSha256": "6b8035caf0fddb9309dd07fea9f88ad8d02c3b9408d4b8d5935ed07006aa9b74",
+      "output": "public/images/world/street.png",
+      "sha256": "6b8035caf0fddb9309dd07fea9f88ad8d02c3b9408d4b8d5935ed07006aa9b74",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/street.png"
+    },
+    {
+      "key": "track",
+      "input": "tools/world-art/inputs/places/track.png",
+      "sourceSha256": "8079c1b4618a9956b4d975b32d99acbb30e570955045fe16505b4fcb00846533",
+      "output": "public/images/world/track.png",
+      "sha256": "8079c1b4618a9956b4d975b32d99acbb30e570955045fe16505b4fcb00846533",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/track.png"
+    },
+    {
+      "key": "used",
+      "input": "tools/world-art/inputs/places/used.png",
+      "sourceSha256": "57468b82dffe88a17f0c78cc460e9e61a944bf5c9208840dcb06398e5633a283",
+      "output": "public/images/world/used.png",
+      "sha256": "57468b82dffe88a17f0c78cc460e9e61a944bf5c9208840dcb06398e5633a283",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/used.png"
+    },
+    {
+      "key": "workshop",
+      "input": "tools/world-art/inputs/places/workshop.png",
+      "sourceSha256": "e66a90fa93d4c818c295522f8056b4ec72f18959787729453c69cf84cc8c4477",
+      "output": "public/images/world/workshop.png",
+      "sha256": "e66a90fa93d4c818c295522f8056b4ec72f18959787729453c69cf84cc8c4477",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/workshop.png"
+    },
+    {
+      "key": "bassa-officine",
+      "input": "tools/world-art/inputs/tracks/bassa-officine.png",
+      "sourceSha256": "e7f70c30c2d00a4ca47f4614b6971d6ac9ab3c06a08100f5376714dc92297dfb",
+      "output": "public/images/world/tracks/bassa-officine.png",
+      "sha256": "e7f70c30c2d00a4ca47f4614b6971d6ac9ab3c06a08100f5376714dc92297dfb",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/bassa-officine.png"
+    },
+    {
+      "key": "bassa",
+      "input": "tools/world-art/inputs/tracks/bassa.png",
+      "sourceSha256": "0eb6379c5a6fdec87a06d7cd934b0f50e5337f3b6dbe0753479beec5327fadec",
+      "output": "public/images/world/tracks/bassa.png",
+      "sha256": "0eb6379c5a6fdec87a06d7cd934b0f50e5337f3b6dbe0753479beec5327fadec",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/bassa.png"
+    },
+    {
+      "key": "cadore",
+      "input": "tools/world-art/inputs/tracks/cadore.png",
+      "sourceSha256": "f9fa8d110589c047986607a6007ba41b8519661a67cad799f1932d75b50694ad",
+      "output": "public/images/world/tracks/cadore.png",
+      "sha256": "f9fa8d110589c047986607a6007ba41b8519661a67cad799f1932d75b50694ad",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/cadore.png"
+    },
+    {
+      "key": "cascina",
+      "input": "tools/world-art/inputs/tracks/cascina.png",
+      "sourceSha256": "52af703ae5383f3a40f774236a2721db49ffe05710b5415c606a82a3a688b810",
+      "output": "public/images/world/tracks/cascina.png",
+      "sha256": "52af703ae5383f3a40f774236a2721db49ffe05710b5415c606a82a3a688b810",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/cascina.png"
+    },
+    {
+      "key": "castagni",
+      "input": "tools/world-art/inputs/tracks/castagni.png",
+      "sourceSha256": "dde189308a0c109561957ef0f77ca4fd940c10145920aeb27ac6bc75a085ad8a",
+      "output": "public/images/world/tracks/castagni.png",
+      "sha256": "dde189308a0c109561957ef0f77ca4fd940c10145920aeb27ac6bc75a085ad8a",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/castagni.png"
+    },
+    {
+      "key": "cava",
+      "input": "tools/world-art/inputs/tracks/cava.png",
+      "sourceSha256": "c94ab3fb9d5b966298bb779668d545a2aada3c0d454c8f4294d257fb0810b81e",
+      "output": "public/images/world/tracks/cava.png",
+      "sha256": "c94ab3fb9d5b966298bb779668d545a2aada3c0d454c8f4294d257fb0810b81e",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/cava.png"
+    },
+    {
+      "key": "cervo",
+      "input": "tools/world-art/inputs/tracks/cervo.png",
+      "sourceSha256": "e79ce7403125dd0c2646a8cf43436736e89a5c51476aee1b9521a375088f647a",
+      "output": "public/images/world/tracks/cervo.png",
+      "sha256": "e79ce7403125dd0c2646a8cf43436736e89a5c51476aee1b9521a375088f647a",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/cervo.png"
+    },
+    {
+      "key": "cisa",
+      "input": "tools/world-art/inputs/tracks/cisa.png",
+      "sourceSha256": "01363eab55f8a41f0443af431ad54ef51472ed5436ce052f3eabf1aee9a619f0",
+      "output": "public/images/world/tracks/cisa.png",
+      "sha256": "01363eab55f8a41f0443af431ad54ef51472ed5436ce052f3eabf1aee9a619f0",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/cisa.png"
+    },
+    {
+      "key": "euganei",
+      "input": "tools/world-art/inputs/tracks/euganei.png",
+      "sourceSha256": "7793104f037410b82c0c32d2f79d316222cd2f1962568137479d7ba8bbbce286",
+      "output": "public/images/world/tracks/euganei.png",
+      "sha256": "7793104f037410b82c0c32d2f79d316222cd2f1962568137479d7ba8bbbce286",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/euganei.png"
+    },
+    {
+      "key": "garda",
+      "input": "tools/world-art/inputs/tracks/garda.png",
+      "sourceSha256": "71602ab68effdd0d2b4faeb2aa1cbd9c7e42ec8b9895c21917bc4bf01bd1b58e",
+      "output": "public/images/world/tracks/garda.png",
+      "sha256": "71602ab68effdd0d2b4faeb2aa1cbd9c7e42ec8b9895c21917bc4bf01bd1b58e",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/garda.png"
+    },
+    {
+      "key": "iseo",
+      "input": "tools/world-art/inputs/tracks/iseo.png",
+      "sourceSha256": "f1efb59cffe94c0afbb12f62490259776dbbdc74a25e09492c6fff97e4a62298",
+      "output": "public/images/world/tracks/iseo.png",
+      "sha256": "f1efb59cffe94c0afbb12f62490259776dbbdc74a25e09492c6fff97e4a62298",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/iseo.png"
+    },
+    {
+      "key": "langhe",
+      "input": "tools/world-art/inputs/tracks/langhe.png",
+      "sourceSha256": "9ea1eec10014465be29cad7f7bb75234f9e6de27daefface969703f4c298eda2",
+      "output": "public/images/world/tracks/langhe.png",
+      "sha256": "9ea1eec10014465be29cad7f7bb75234f9e6de27daefface969703f4c298eda2",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/langhe.png"
+    },
+    {
+      "key": "lario",
+      "input": "tools/world-art/inputs/tracks/lario.png",
+      "sourceSha256": "6fdf97c58a5901555d23f63985e36dda1074bc1d184dba4a83329b88c97515d5",
+      "output": "public/images/world/tracks/lario.png",
+      "sha256": "6fdf97c58a5901555d23f63985e36dda1074bc1d184dba4a83329b88c97515d5",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/lario.png"
+    },
+    {
+      "key": "monza",
+      "input": "tools/world-art/inputs/tracks/monza.png",
+      "sourceSha256": "b01b45380ee4e2a087bbc85486750c6d26e0293f8d4b8734686e0627177b59ef",
+      "output": "public/images/world/tracks/monza.png",
+      "sha256": "b01b45380ee4e2a087bbc85486750c6d26e0293f8d4b8734686e0627177b59ef",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/monza.png"
+    },
+    {
+      "key": "officine",
+      "input": "tools/world-art/inputs/tracks/officine.png",
+      "sourceSha256": "c4d3c70431b31b1a3968bff31fa7a92217b1850d73fc9e124ea9f821d4c990c3",
+      "output": "public/images/world/tracks/officine.png",
+      "sha256": "c4d3c70431b31b1a3968bff31fa7a92217b1850d73fc9e124ea9f821d4c990c3",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/officine.png"
+    },
+    {
+      "key": "parcheggio",
+      "input": "tools/world-art/inputs/tracks/parcheggio.png",
+      "sourceSha256": "8b4f506d0ce1bff5107ef42d898b261cf903d93b503a36ab8b183c56abb3dc93",
+      "output": "public/images/world/tracks/parcheggio.png",
+      "sha256": "8b4f506d0ce1bff5107ef42d898b261cf903d93b503a36ab8b183c56abb3dc93",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/parcheggio.png"
+    },
+    {
+      "key": "po",
+      "input": "tools/world-art/inputs/tracks/po.png",
+      "sourceSha256": "2a3a4e5e947c92249f86e59f0ee1e19a5d6700b871a8b1a407eab27473fc2641",
+      "output": "public/images/world/tracks/po.png",
+      "sha256": "2a3a4e5e947c92249f86e59f0ee1e19a5d6700b871a8b1a407eab27473fc2641",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/po.png"
+    },
+    {
+      "key": "prealpi",
+      "input": "tools/world-art/inputs/tracks/prealpi.png",
+      "sourceSha256": "fa7cc3084082467e8b27db21b3dbc2b8464eac8478bd237883c506d95376aba5",
+      "output": "public/images/world/tracks/prealpi.png",
+      "sha256": "fa7cc3084082467e8b27db21b3dbc2b8464eac8478bd237883c506d95376aba5",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/prealpi.png"
+    },
+    {
+      "key": "riviera",
+      "input": "tools/world-art/inputs/tracks/riviera.png",
+      "sourceSha256": "c762885bc19fff7f5c97700c8fc12738b2d31b796b3c3d6612957b776f8068cd",
+      "output": "public/images/world/tracks/riviera.png",
+      "sha256": "c762885bc19fff7f5c97700c8fc12738b2d31b796b3c3d6612957b776f8068cd",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/riviera.png"
+    },
+    {
+      "key": "san-rocco",
+      "input": "tools/world-art/inputs/tracks/san-rocco.png",
+      "sourceSha256": "19d2fe4f625443e12c95fe1de7f6391b32f4010a82a36d331b5d930e6071f31f",
+      "output": "public/images/world/tracks/san-rocco.png",
+      "sha256": "19d2fe4f625443e12c95fe1de7f6391b32f4010a82a36d331b5d930e6071f31f",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/san-rocco.png"
+    },
+    {
+      "key": "santerno",
+      "input": "tools/world-art/inputs/tracks/santerno.png",
+      "sourceSha256": "358dd2eaa1030879a94ccafb4a36026548e2860124beab89ccad9074f3957d92",
+      "output": "public/images/world/tracks/santerno.png",
+      "sha256": "358dd2eaa1030879a94ccafb4a36026548e2860124beab89ccad9074f3957d92",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/santerno.png"
+    },
+    {
+      "key": "santuario",
+      "input": "tools/world-art/inputs/tracks/santuario.png",
+      "sourceSha256": "c3247ccf5692e856fbe1385c7099f4902088770c0a5a6738d66f5a746364ec6d",
+      "output": "public/images/world/tracks/santuario.png",
+      "sha256": "c3247ccf5692e856fbe1385c7099f4902088770c0a5a6738d66f5a746364ec6d",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/santuario.png"
+    },
+    {
+      "key": "scuola",
+      "input": "tools/world-art/inputs/tracks/scuola.png",
+      "sourceSha256": "7a4fb5dd44794017d0a62164e113cc01f6e00fe71e2e2274dedd0df7098aefc2",
+      "output": "public/images/world/tracks/scuola.png",
+      "sha256": "7a4fb5dd44794017d0a62164e113cc01f6e00fe71e2e2274dedd0df7098aefc2",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/scuola.png"
+    },
+    {
+      "key": "seriana",
+      "input": "tools/world-art/inputs/tracks/seriana.png",
+      "sourceSha256": "558db3c8e173d21996718eadc077a4933fd1ef0de83abd8d83f3b229542a6f90",
+      "output": "public/images/world/tracks/seriana.png",
+      "sha256": "558db3c8e173d21996718eadc077a4933fd1ef0de83abd8d83f3b229542a6f90",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/seriana.png"
+    },
+    {
+      "key": "stelvio",
+      "input": "tools/world-art/inputs/tracks/stelvio.png",
+      "sourceSha256": "6cd9e1ae5cb90930828c1f11d2cdf56d8f9e0d9d0d62edd6293a1c498c9620b1",
+      "output": "public/images/world/tracks/stelvio.png",
+      "sha256": "6cd9e1ae5cb90930828c1f11d2cdf56d8f9e0d9d0d62edd6293a1c498c9620b1",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/stelvio.png"
+    },
+    {
+      "key": "tangenziale",
+      "input": "tools/world-art/inputs/tracks/tangenziale.png",
+      "sourceSha256": "3c75fc6685198889ec90224a1de0d1a437c9f908cd74c14094b9111425227f60",
+      "output": "public/images/world/tracks/tangenziale.png",
+      "sha256": "3c75fc6685198889ec90224a1de0d1a437c9f908cd74c14094b9111425227f60",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/tangenziale.png"
+    },
+    {
+      "key": "ticino",
+      "input": "tools/world-art/inputs/tracks/ticino.png",
+      "sourceSha256": "231f8684e890478d3333b5917d91e64f4f7507ef962f2b9098f7a4eed258a96c",
+      "output": "public/images/world/tracks/ticino.png",
+      "sha256": "231f8684e890478d3333b5917d91e64f4f7507ef962f2b9098f7a4eed258a96c",
+      "width": 320,
+      "height": 180,
+      "archivedOriginal": "tools/world-art/archive/tracks/ticino.png"
+    },
+    {
+      "key": "oil",
+      "input": "tools/world-art/inputs/work/oil.png",
+      "sourceSha256": "4d69d096fc8070987ff29ce3368e3afe853ba3be9fdfb0b366a29ca09bf8512f",
+      "output": "public/images/world/work/oil.png",
+      "sha256": "4d69d096fc8070987ff29ce3368e3afe853ba3be9fdfb0b366a29ca09bf8512f",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/work/oil.png"
+    },
+    {
+      "key": "rebuild",
+      "input": "tools/world-art/inputs/work/rebuild.png",
+      "sourceSha256": "8a3c5f34680c24e284ebf8c43b4ab10dd716068a82f0ebe3014c4843fc3a5462",
+      "output": "public/images/world/work/rebuild.png",
+      "sha256": "8a3c5f34680c24e284ebf8c43b4ab10dd716068a82f0ebe3014c4843fc3a5462",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/work/rebuild.png"
+    },
+    {
+      "key": "repair",
+      "input": "tools/world-art/inputs/work/repair.png",
+      "sourceSha256": "18bdc048d6abc3f305183f2560b263c21949be5315d1d78c70e30380e2b2739b",
+      "output": "public/images/world/work/repair.png",
+      "sha256": "18bdc048d6abc3f305183f2560b263c21949be5315d1d78c70e30380e2b2739b",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/work/repair.png"
+    },
+    {
+      "key": "soccorso",
+      "input": "tools/world-art/inputs/work/soccorso.png",
+      "sourceSha256": "985c8aba05c5a6b3efa1ff49b0aa04e2b7b3e6a44b5d228bb936f383e3ea325e",
+      "output": "public/images/world/work/soccorso.png",
+      "sha256": "985c8aba05c5a6b3efa1ff49b0aa04e2b7b3e6a44b5d228bb936f383e3ea325e",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/work/soccorso.png"
+    },
+    {
+      "key": "tyre",
+      "input": "tools/world-art/inputs/work/tyre.png",
+      "sourceSha256": "a8c79ec21e3352eadd14b4056befdf8caf1afd56ac4144ab32d983d629db2f82",
+      "output": "public/images/world/work/tyre.png",
+      "sha256": "a8c79ec21e3352eadd14b4056befdf8caf1afd56ac4144ab32d983d629db2f82",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": "tools/world-art/archive/work/tyre.png"
+    },
+    {
+      "key": "verniciatura",
+      "input": "tools/world-art/inputs/work/verniciatura.png",
+      "sourceSha256": "5036bbb6ee1f71bce3d31d4a33c35ad24d832d858c86002df5c5a7ea11b98c8b",
+      "output": "public/images/world/work/verniciatura.png",
+      "sha256": "5036bbb6ee1f71bce3d31d4a33c35ad24d832d858c86002df5c5a7ea11b98c8b",
+      "width": 128,
+      "height": 128,
+      "archivedOriginal": null
+    }
+  ]
+}

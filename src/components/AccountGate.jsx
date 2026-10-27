@@ -114,7 +114,7 @@ export default function AccountGate({ children }) {
   const creatingPilot = Boolean(session && profile && !profile.player);
   return <main className="account-desktop">
     <div className={'account-dialog' + (creatingPilot ? ' account-dialog-wide' : '')}>
-      <Win98Window title={creatingPilot ? 'Poketurismo — Nuovo pilota' : 'Benvenuto in Poketurismo'} showControls={false}>
+      <Win98Window title={creatingPilot ? 'Poketurismo — Nuovo pilota' : 'Benvenuto in Poketurismo'} showControls={false} imageUrl={creatingPilot ? undefined : "/images/world/login.png"}>
         <div className="account-brand">
           <div className="account-checkered" aria-hidden="true" />
           <div><span className="account-brand-name">Poketurismo</span><span className="account-brand-caption">Il tuo posto al volante.</span></div>

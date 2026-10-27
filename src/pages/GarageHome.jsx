@@ -14,7 +14,7 @@ export default function GarageHome() {
 
 
   return (
-    <Win98Window title="Garage / Casa" imageUrl="/images/garage.png">
+    <Win98Window title="Garage / Casa" imageUrl="/images/world/garage.png">
       <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
         
         {/* Left: Player ID Card */}

@@ -1,0 +1,16 @@
+{
+  "key": "street",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Northern Italian industrial estate at night circa 2002, two sporty compact hatchbacks (red Fiat Punto and blue Renault Clio) waiting side by side on a wide empty road under amber sodium street lamps, a few spectators safely beside a warehouse, distant Alpine silhouettes. Small local clandestine race, no police, no crash, no neon cyberpunk. Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d7c82026-ca19-4987-bb36-fbdd611fabcd.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/street.png",
+  "output": "public/images/street.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "a5e3296d9b1345df33d40f10e91f229bd7af56d346de931cfe0e4281042ac11f",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/street.png",
+  "nativeInput": true
+}

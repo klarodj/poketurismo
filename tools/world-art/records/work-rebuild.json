@@ -1,0 +1,11 @@
+{
+  "key": "rebuild",
+  "prompt": "Use case: historical-scene. Asset type: square workshop service illustration for a Northern Italian automotive RPG, year 2002. An opened four-cylinder 1990s petrol engine on a sturdy workshop bench, cylinder head removed, pistons and camshafts neatly laid out beside it, mechanic's gloved hands examining a piston. Clearly engine overhaul. Composition legible as a small 128x128 thumbnail, main subject centered, generous margin. Hand-drawn early PC game pixel art with crisp stepped dark outlines, visible square pixel clusters, restrained 48-colour palette of navy charcoal warm grey red and yellow, flat 5-step pixel shading, no photographs, no painting, no blur, no gradients, no writing or watermark.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0c57c780-2aa4-498f-8848-a90e04d8b4e6.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/work/rebuild.png",
+  "output": "public/images/work/rebuild.png",
+  "rawInputSha256": "790cf3da695b5ecebe00d0b13e9890f86c861b68b8b6c8452925b5102632fdaf",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/work/rebuild.png",
+  "nativeInput": true
+}

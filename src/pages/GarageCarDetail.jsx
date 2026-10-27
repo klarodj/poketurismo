@@ -63,7 +63,7 @@ export default function GarageCarDetail() {
   };
 
   return (
-    <Win98Window guideId="garage" title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/garage.png">
+    <Win98Window guideId="garage" title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/world/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
         <GarageTabs />
@@ -91,7 +91,7 @@ export default function GarageCarDetail() {
                   src={carArtwork(car)}
                   alt={`${car.name} · ${paintName(paintFor(car))}`}
                   className="pixel-car-image max-w-full max-h-[200px] object-contain"
-                  onError={(e) => e.target.src = '/images/garage.png'}
+                  onError={(e) => e.target.src = '/images/world/garage.png'}
                 />
              </div>
 
@@ -159,10 +159,10 @@ export default function GarageCarDetail() {
                         <div key={mod.id} className="bg-win98-gray border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray p-3 flex gap-3 shadow-win98-outset">
                            <div className="w-16 h-16 bg-white border border-gray-400 shrink-0 p-1">
                               <img 
-                                src={`/images/part/${mod.image}`} 
+                                src={`/images/world/part/${mod.image}`}
                                 alt={partName(mod.name)}
                                 className="w-full h-full object-contain"
-                                onError={(e) => e.target.src = '/images/shop.png'}
+                                onError={(e) => e.target.src = '/images/world/shop.png'}
                               />
                            </div>
                            <div className="flex-1 flex flex-col justify-between min-w-0">
@@ -203,10 +203,10 @@ export default function GarageCarDetail() {
                            <div className="w-16 h-16 bg-white border border-gray-400 shrink-0 p-1 relative">
                               <span className="absolute -top-1 -left-1 bg-win98-blue text-white text-[9px] px-1 font-bold border border-white">Lvl {part.level}</span>
                               <img 
-                                src={`/images/part/${part.image}`} 
+                                src={`/images/world/part/${part.image}`}
                                 alt={partName(part.name)}
                                 className="w-full h-full object-contain"
-                                onError={(e) => e.target.src = '/images/shop.png'}
+                                onError={(e) => e.target.src = '/images/world/shop.png'}
                               />
                            </div>
                            <div className="flex-1 flex flex-col justify-between min-w-0">

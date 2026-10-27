@@ -1,0 +1,14 @@
+{
+  "key": "wl1",
+  "name": "Alleggerimento",
+  "level": 1,
+  "subject": "a removed rear bench seat, floor carpet and spare wheel arranged as a kit of removed hatchback parts",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: a removed rear bench seat, floor carpet and spare wheel arranged as a kit of removed hatchback parts. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-72ab1360-18fc-4506-90a9-7397fb62622b.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/wl1.png",
+  "output": "public/images/part/wl1.png",
+  "rawInputSha256": "7800ec966a145284745df0be5df646b84eec34ac9fbdbc4f647aae3fc4592a82",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/wl1.png",
+  "nativeInput": true
+}

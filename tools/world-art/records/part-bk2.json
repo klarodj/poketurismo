@@ -1,0 +1,14 @@
+{
+  "key": "bk2",
+  "name": "Barre e rinforzi",
+  "level": 2,
+  "subject": "a red curved anti-roll bar with two short drop links",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: a red curved anti-roll bar with two short drop links. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-39ef3233-b681-4304-bde8-ac325e951b7e.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/bk2.png",
+  "output": "public/images/part/bk2.png",
+  "rawInputSha256": "6fec1facc5460ef0d2d1fff9d9f71ad9c8a53a516da9ea8f1888c870562d3048",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/bk2.png",
+  "nativeInput": true
+}

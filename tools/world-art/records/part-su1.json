@@ -1,0 +1,14 @@
+{
+  "key": "su1",
+  "name": "Sospensioni",
+  "level": 1,
+  "subject": "a pair of sport shock absorbers and separate red lowering springs",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: a pair of sport shock absorbers and separate red lowering springs. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4bf9cdc9-f700-4145-8d14-d044c8de4116.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/su1.png",
+  "output": "public/images/part/su1.png",
+  "rawInputSha256": "56879275be2cd74f9db51f2b59729ec7dbfa1870a6d39ecf07e2a800024d3c51",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/su1.png",
+  "nativeInput": true
+}

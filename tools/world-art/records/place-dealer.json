@@ -1,0 +1,16 @@
+{
+  "key": "dealer",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Northern Italian new-car dealership in 2002, modest glass showroom, blue Fiat Punto GT and silver Alfa Romeo 155 parked outside, concrete forecourt, small potted shrubs, low commercial building, bright afternoon. Wide three-quarter eye-level view, entire cars visible. undefined Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e1cdd7fb-e260-4738-8e87-647345d51451.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/dealer.png",
+  "output": "public/images/dealer.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "6e832e8ee610f2cb200208036da9baa9e61719dc252ee8993377a85fd83f0f66",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/dealer.png",
+  "nativeInput": true
+}

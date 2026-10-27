@@ -1,0 +1,14 @@
+{
+  "key": "fs1",
+  "name": "Alimentazione",
+  "level": 1,
+  "subject": "an adjustable metal fuel pressure regulator and short black hose",
+  "prompt": "Use case: stylized-concept. Asset type: inventory item sprite for Northern Italian automotive RPG set in 2002. Subject: an adjustable metal fuel pressure regulator and short black hose. Show the hardware correctly, recognizable automotive components, complete objects with generous empty margin, isolated genuine transparent background, no labels or packaging or writing, no floating decoration, no ground plane. Three-quarter product view. Hand-drawn 1990s PC game pixel art matching crisp car sprites: chunky square pixel clusters, dark navy outlines, 6-step metal shading, limited silver charcoal red gold palette, 128x128 logical pixel grid, no photographic texture, no antialiased painterly edges, no blur, no modern sci-fi. Single coherent item kit, centered square frame.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-cc6f49e8-fc40-4e23-99fe-79cb26bc50db.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/part/fs1.png",
+  "output": "public/images/part/fs1.png",
+  "rawInputSha256": "b3a72fc2a0da1a575e021473dece61e01e8d7adca1768016485675206ab34cc5",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/part/fs1.png",
+  "nativeInput": true
+}

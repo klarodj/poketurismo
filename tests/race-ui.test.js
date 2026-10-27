@@ -154,14 +154,14 @@ test('meet cockpit shows a personal clock and honest ghost rather than a live fi
  const Dashboard=await component('RaceDashboard');const race=makeRace();Object.assign(race,{status:'active',mode:'track',trackName:'Tsukuba',meetTrial:true,meetChallenge:{otherName:'Marta'},meetGhost:{splits:[30000],totalMs:60000}});const markup=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon(){}}));assert.ok(markup.includes('Sfida asincrona'));assert.ok(markup.includes('Fantasma disponibile'));assert.ok(markup.includes('Tempo personale'));assert.ok(!markup.includes('Auto rivale'));assert.ok(!markup.includes('Affiancati'));
 });
 
-test('mechanic previews keep all four original workshop pictures alongside their real quotes',async()=>{
- const Services=await component('WorkshopServices');const car={id:1,engineHealth:50,tireGrip:50,performanceIndex:40,services:['engine','tires','rebuild','full'].map(id=>({id,name:id,description:'Lavorazione',price:150,enabled:true,after:{engineHealth:100,tireGrip:100,performanceIndex:45}}))};const html=renderToStaticMarkup(React.createElement(Services,{car,money:1000,disabled:false,onService(){}}));for(const file of ['oil.png','tyre.png','rebuild.png','repair.png']){assert.ok(html.includes('/images/work/'+file));assert.ok(existsSync(resolve('public/images/work/'+file)));}
+test('mechanic previews show all four pixel art service pictures alongside their real quotes',async()=>{
+ const Services=await component('WorkshopServices');const car={id:1,engineHealth:50,tireGrip:50,performanceIndex:40,services:['engine','tires','rebuild','full'].map(id=>({id,name:id,description:'Lavorazione',price:150,enabled:true,after:{engineHealth:100,tireGrip:100,performanceIndex:45}}))};const html=renderToStaticMarkup(React.createElement(Services,{car,money:1000,disabled:false,onService(){}}));for(const file of ['oil.png','tyre.png','rebuild.png','repair.png']){assert.ok(html.includes('/images/world/work/'+file));assert.ok(existsSync(resolve('public/images/world/work/'+file)));}
 });
 
 test('track previews show the local scene, sector minimap, active sector and open-road finish',async()=>{
  const TrackPreview=await component('TrackPreview');
  const markup=renderToStaticMarkup(React.createElement(TrackPreview,{trackName:'Lario · statale del lago',sections:DEMO_TRACK.sections,index:2,profile:{kind:'road'}}));
- assert.ok(markup.includes('/images/tracks/lario.png'));assert.ok(markup.includes('Minimappa di Lario'));assert.ok(markup.includes('settore 3 evidenziato'));assert.ok(markup.includes('punto a punto'));assert.ok(markup.includes('P: partenza'));assert.ok(markup.includes('aria-current="step"'));assert.ok(markup.includes('Giallo: settore 3'));
+ assert.ok(markup.includes('/images/world/tracks/lario.png'));assert.ok(markup.includes('Minimappa di Lario'));assert.ok(markup.includes('settore 3 evidenziato'));assert.ok(markup.includes('punto a punto'));assert.ok(markup.includes('P: partenza'));assert.ok(markup.includes('aria-current="step"'));assert.ok(markup.includes('Giallo: settore 3'));
  const Illustration=await component('TrackIllustration');assert.equal(renderToStaticMarkup(React.createElement(Illustration,{name:'Percorso privato sconosciuto'})),'');
 });
 test('old track labels display the same illustration without altering the school map',async()=>{
@@ -181,7 +181,7 @@ test('track sector names are Italian in previews, map titles, progress and saved
 });
 
 test('active race always shows scene, live minimap and highlighted sector without opening a dialog',async()=>{
- const Dashboard=await component('RaceDashboard'),race=makeRace();race.trackName='Lario · statale del lago';race.status='active';race.index=2;const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));assert.ok(html.includes('Mappa e ambientazione durante la gara'));assert.ok(html.includes('/images/tracks/lario.png'));assert.ok(html.includes('settore 3 evidenziato'));assert.ok(html.includes('Esamina tutti i settori'));assert.ok(!html.includes('<dialog'));
+ const Dashboard=await component('RaceDashboard'),race=makeRace();race.trackName='Lario · statale del lago';race.status='active';race.index=2;const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));assert.ok(html.includes('Mappa e ambientazione durante la gara'));assert.ok(html.includes('/images/world/tracks/lario.png'));assert.ok(html.includes('settore 3 evidenziato'));assert.ok(html.includes('Esamina tutti i settori'));assert.ok(!html.includes('<dialog'));
 });
 
 test('avatar picker renders twenty labelled choices and selected local image with a safe legacy fallback',async()=>{

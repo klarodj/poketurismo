@@ -4,16 +4,16 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 
 const LOCATIONS = [
-  { path: '/garage',        name: 'Garage / Casa',      id: 'garage',    image: '/images/garage.png', desc: 'Il tuo quartier generale' },
-  { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
-  { path: '/autodrome',    name: 'Autodromo',          id: 'track',     image: '/images/track.png', desc: 'Gare ufficiali in pista' },
-  { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/street.png', desc: 'Solo per i coraggiosi' },
-  { path: '/workshop',      name: 'Meccanico',          id: 'workshop',  image: '/images/workshop.png', desc: 'Riparazioni, tagliandi e vernici' },
-  { path: '/parts-shop',    name: 'Negozio Tuning',     id: 'parts',     image: '/images/shop.png',  desc: 'Potenzia il tuo bolide' },
-  { path: '/dealership',    name: 'Concessionario',     id: 'dealership',image: '/images/dealer.png', desc: 'Auto nuove di zecca' },
-  { path: '/used-cars',     name: 'Auto Usate',         id: 'used',      image: '/images/used.png', desc: 'Forum compravendita' },
-  { path: '/meet',          name: 'Raduno del club',           id: 'meet',      image: '/images/meet.png', desc: 'Piazzale, posta e sfide tra piloti' },
-  { path: '/gas-station',   name: 'Benzinaio',          id: 'fuel',      image: '/images/fuel.png', desc: 'Fai il pieno' },
+  { path: '/garage',        name: 'Garage / Casa',      id: 'garage',    image: '/images/world/garage.png', desc: 'Il tuo quartier generale' },
+  { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/world/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
+  { path: '/autodrome',    name: 'Autodromo',          id: 'track',     image: '/images/world/track.png', desc: 'Gare ufficiali in pista' },
+  { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/world/street.png', desc: 'Solo per i coraggiosi' },
+  { path: '/workshop',      name: 'Meccanico',          id: 'workshop',  image: '/images/world/workshop.png', desc: 'Riparazioni, tagliandi e vernici' },
+  { path: '/parts-shop',    name: 'Negozio Tuning',     id: 'parts',     image: '/images/world/shop.png',  desc: 'Potenzia il tuo bolide' },
+  { path: '/dealership',    name: 'Concessionario',     id: 'dealership',image: '/images/world/dealer.png', desc: 'Auto nuove di zecca' },
+  { path: '/used-cars',     name: 'Auto Usate',         id: 'used',      image: '/images/world/used.png', desc: 'Forum compravendita' },
+  { path: '/meet',          name: 'Raduno del club',           id: 'meet',      image: '/images/world/meet.png', desc: 'Piazzale, posta e sfide tra piloti' },
+  { path: '/gas-station',   name: 'Benzinaio',          id: 'fuel',      image: '/images/world/fuel.png', desc: 'Fai il pieno' },
 ];
 
 export default function CityMap() {
@@ -31,7 +31,7 @@ export default function CityMap() {
     <Win98Window title="Mappa della Città">
       <div 
         className="city-map p-3 flex flex-col bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/city.png')" }}
+        style={{ backgroundImage: "url('/images/world/city.png')" }}
       >
 
         {/* Header */}
@@ -63,7 +63,7 @@ export default function CityMap() {
               <img 
                 src={loc.image} 
                 alt={loc.name} 
-                className="absolute inset-0 w-full h-full object-cover"
+                className="city-location-image"
                 style={{ imageRendering: 'pixelated' }}
               />
               

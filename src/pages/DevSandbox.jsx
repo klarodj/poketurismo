@@ -98,7 +98,7 @@ export default function DevSandbox() {
   };
 
   return (
-    <Win98Window title="Strumenti di sviluppo" imageUrl="/images/computer.png">
+    <Win98Window title="Strumenti di sviluppo" imageUrl="/images/world/setting.png">
       <div className="flex flex-col items-center justify-start p-2 bg-win98-gray border-4 border-gray-800 text-black shadow-[inset_0_10px_50px_rgba(0,0,0,0.2)] min-h-[400px]">
         
         {/* Tabs */}

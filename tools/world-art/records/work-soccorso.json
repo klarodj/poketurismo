@@ -1,0 +1,11 @@
+{
+  "key": "soccorso",
+  "prompt": "Use case: historical-scene. Asset type: square workshop service illustration for a Northern Italian automotive RPG, year 2002. An Italian 1990s white Iveco Daily-style flatbed recovery truck with orange warning beacon, carrying a small red hatchback along a Northern Italian provincial road, poplar trees, low hills and terracotta roofs. Correct practical tow truck proportions, no modern vehicle. Composition legible as a small 128x128 thumbnail, main subject centered, generous margin. Hand-drawn early PC game pixel art with crisp stepped dark outlines, visible square pixel clusters, restrained 48-colour palette of navy charcoal warm grey red and yellow, flat 5-step pixel shading, no photographs, no painting, no blur, no gradients, no writing or watermark.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d055d5ba-3b16-4f57-8425-1c7a6598798f.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/work/soccorso.png",
+  "output": "public/images/work/soccorso.png",
+  "rawInputSha256": "e0a15d6ca4b9c972018c1b6ed1effebc3697b72d8026ea05ff7f8e210bb42bfa",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/work/soccorso.png",
+  "nativeInput": true
+}

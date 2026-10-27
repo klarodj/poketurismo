@@ -1,0 +1,11 @@
+{
+  "key": "tyre",
+  "prompt": "Use case: historical-scene. Asset type: square workshop service illustration for a Northern Italian automotive RPG, year 2002. An Italian mechanic in blue overalls changing a black road tyre on a silver five-spoke wheel using a red tyre fitting machine, compact 2002 workshop interior. Focus on tyre service, not racing. Composition legible as a small 128x128 thumbnail, main subject centered, generous margin. Hand-drawn early PC game pixel art with crisp stepped dark outlines, visible square pixel clusters, restrained 48-colour palette of navy charcoal warm grey red and yellow, flat 5-step pixel shading, no photographs, no painting, no blur, no gradients, no writing or watermark.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-5f6cfb65-fc1e-4e6f-90a5-b1496834182f.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/work/tyre.png",
+  "output": "public/images/work/tyre.png",
+  "rawInputSha256": "26637fdd4e2c0cd4a0860ba17a2fc4928a9c31c15085a013feca21a5086c99dd",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/work/tyre.png",
+  "nativeInput": true
+}

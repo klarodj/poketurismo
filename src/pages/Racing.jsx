@@ -242,7 +242,7 @@ export default function Racing() {
     : championships.filter(c => c.category === filterCategory);
 
   return (
-    <Win98Window title="Autodromo — Centro Corse" imageUrl="/images/track.png">
+    <Win98Window title="Autodromo — Centro Corse" imageUrl="/images/world/track.png">
       <div className="racing-page flex flex-col bg-win98-gray text-black">
 
         <button className="win98-btn m-2" onClick={()=>navigate('/autodrome')}>Torna all’Autodromo</button>

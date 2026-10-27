@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Mondo pixel art del 27 ottobre 2026: l'utente ha autorizzato la sostituzione anche delle immagini di mappa e menu. Leggere `docs/IMMAGINI_MONDO_PIXEL_ART.md`. I nuovi asset sono in `public/images/world`, i 94 originali sono archiviati fuori da public in `tools/world-art/archive`. 95 generazioni singole image_gen: 14 scene, 6 servizi, 48 ricambi e 27 cartoline; prompt e input in `tools/world-art/records` e `inputs`, ricostruzione con `build.cjs`. Non ripristinare i prefissi fotografici o usare il vecchio integrate.cjs per altre trasformazioni. Auto approvate, ritratti, loghi e geometrie delle minimappe conservati; nessuna migrazione o modifica ai salvataggi.
+
 - Direzione vincolante richiesta dall’utente: Nord Italia fine anni 90/primi 2000, riferimento 2002; Windows 98 e web/forum dell’epoca. Prima di nuove interfacce o contenuti leggere docs/DIREZIONE_ARTISTICA.md. Conservare il font pixel e le immagini originali (incluse public/images/work/*). Usare grigi, blu classico, bordi a rilievo e layout da programma/forum; non introdurre grafica contemporanea o località internazionali nella mappa. I nomi cambiano solo con alias e ID conservati, mai ricreando tracciati o perdendo record.
 
 - Lavorare in questa copia. Dal 21 ottobre 2026 la direzione richiesta dall’utente è una sola istanza di sviluppo/test sulla porta 5174, dismettendo la vecchia 5173 e il suo backend 3001 dopo verifica e backup. La procedura e lo stato effettivo sono in `docs/AMBIENTE_UNICO.md`.

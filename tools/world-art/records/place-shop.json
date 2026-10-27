@@ -1,0 +1,16 @@
+{
+  "key": "shop",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Interior of a small Italian tuning-parts shop circa 2002: alloy wheels on wall racks, exhaust silencers, red coil springs, air filters in cardboard boxes, wooden sales counter, CRT computer and printed paper catalogue. Modest independent shop, eye-level wide scene. Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ce1e437e-57cb-4f4d-8760-0f64d5348c40.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/shop.png",
+  "output": "public/images/shop.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "affb319787fbce1311027b77c598c9584158f7f085211cc4615cb1dd3afd82ca",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/shop.png",
+  "nativeInput": true
+}

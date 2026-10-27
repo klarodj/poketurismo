@@ -1,0 +1,667 @@
+[
+  {
+    "group": "part",
+    "name": "Aerodinamica · Livello 1",
+    "image": "/images/world/part/ar1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Aerodinamica · Livello 2",
+    "image": "/images/world/part/ar2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Aerodinamica · Livello 3",
+    "image": "/images/world/part/ar3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Aspirazione · Livello 1",
+    "image": "/images/world/part/as1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Aspirazione · Livello 2",
+    "image": "/images/world/part/as2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Aspirazione · Livello 3",
+    "image": "/images/world/part/as3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Barre e rinforzi · Livello 1",
+    "image": "/images/world/part/bk1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Barre e rinforzi · Livello 2",
+    "image": "/images/world/part/bk2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Barre e rinforzi · Livello 3",
+    "image": "/images/world/part/bk3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Impianto frenante · Livello 1",
+    "image": "/images/world/part/br1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Impianto frenante · Livello 2",
+    "image": "/images/world/part/br2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Impianto frenante · Livello 3",
+    "image": "/images/world/part/br3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Frizione e volano · Livello 1",
+    "image": "/images/world/part/cf1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Frizione e volano · Livello 2",
+    "image": "/images/world/part/cf2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Frizione e volano · Livello 3",
+    "image": "/images/world/part/cf3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Differenziale · Livello 1",
+    "image": "/images/world/part/df1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Differenziale · Livello 2",
+    "image": "/images/world/part/df2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Differenziale · Livello 3",
+    "image": "/images/world/part/df3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Centralina ECU · Livello 1",
+    "image": "/images/world/part/ec1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Centralina ECU · Livello 2",
+    "image": "/images/world/part/ec2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Centralina ECU · Livello 3",
+    "image": "/images/world/part/ec3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Preparazione interna motore · Livello 1",
+    "image": "/images/world/part/ei1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Preparazione interna motore · Livello 2",
+    "image": "/images/world/part/ei2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Preparazione interna motore · Livello 3",
+    "image": "/images/world/part/ei3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Scarico · Livello 1",
+    "image": "/images/world/part/es1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Scarico · Livello 2",
+    "image": "/images/world/part/es2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Scarico · Livello 3",
+    "image": "/images/world/part/es3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Alimentazione · Livello 1",
+    "image": "/images/world/part/fs1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Alimentazione · Livello 2",
+    "image": "/images/world/part/fs2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Alimentazione · Livello 3",
+    "image": "/images/world/part/fs3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Cambio · Livello 1",
+    "image": "/images/world/part/gb1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Cambio · Livello 2",
+    "image": "/images/world/part/gb2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Cambio · Livello 3",
+    "image": "/images/world/part/gb3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Sospensioni · Livello 1",
+    "image": "/images/world/part/su1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Sospensioni · Livello 2",
+    "image": "/images/world/part/su2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Sospensioni · Livello 3",
+    "image": "/images/world/part/su3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Turbo · Livello 1",
+    "image": "/images/world/part/tb1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Turbo · Livello 2",
+    "image": "/images/world/part/tb2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Turbo · Livello 3",
+    "image": "/images/world/part/tb3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Pneumatici · Livello 1",
+    "image": "/images/world/part/tr1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Pneumatici · Livello 2",
+    "image": "/images/world/part/tr2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Pneumatici · Livello 3",
+    "image": "/images/world/part/tr3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Cerchi · Livello 1",
+    "image": "/images/world/part/wh1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Cerchi · Livello 2",
+    "image": "/images/world/part/wh2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Cerchi · Livello 3",
+    "image": "/images/world/part/wh3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Alleggerimento · Livello 1",
+    "image": "/images/world/part/wl1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Alleggerimento · Livello 2",
+    "image": "/images/world/part/wl2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "part",
+    "name": "Alleggerimento · Livello 3",
+    "image": "/images/world/part/wl3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "places",
+    "name": "La provincia",
+    "image": "/images/world/city.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Concessionario",
+    "image": "/images/world/dealer.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Benzinaio",
+    "image": "/images/world/fuel.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Garage / Casa",
+    "image": "/images/world/garage.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Benvenuto in provincia",
+    "image": "/images/world/login.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Raduno del club",
+    "image": "/images/world/meet.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Cronometraggio",
+    "image": "/images/world/places/cronometraggio.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Scuola guida",
+    "image": "/images/world/places/scuola-guida.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Il computer di casa",
+    "image": "/images/world/setting.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Negozio tuning",
+    "image": "/images/world/shop.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Corse clandestine",
+    "image": "/images/world/street.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Autodromo",
+    "image": "/images/world/track.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Auto usate",
+    "image": "/images/world/used.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "places",
+    "name": "Meccanico",
+    "image": "/images/world/workshop.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Strada delle officine · Bassa",
+    "image": "/images/world/tracks/bassa-officine.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Autodromo della Bassa · Cremonese",
+    "image": "/images/world/tracks/bassa.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Valico della Neve · Cadore",
+    "image": "/images/world/tracks/cadore.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Circuito della Cascina · Lodigiano",
+    "image": "/images/world/tracks/cascina.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Discesa dei Castagni · Valsesia",
+    "image": "/images/world/tracks/castagni.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Pista della Cava · Veronese",
+    "image": "/images/world/tracks/cava.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Passo del Cervo · Biellese",
+    "image": "/images/world/tracks/cervo.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Cisa · strada del passo",
+    "image": "/images/world/tracks/cisa.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Anello dei Colli · Euganei",
+    "image": "/images/world/tracks/euganei.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Autodromo del Garda · Bresciano",
+    "image": "/images/world/tracks/garda.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Lago d’Iseo · porto → galleria",
+    "image": "/images/world/tracks/iseo.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Circuito delle Colline · Langhe",
+    "image": "/images/world/tracks/langhe.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Lario · statale del lago",
+    "image": "/images/world/tracks/lario.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Monza",
+    "image": "/images/world/tracks/monza.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Zona industriale · viale delle officine",
+    "image": "/images/world/tracks/officine.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Parcheggio · anello dei magazzini",
+    "image": "/images/world/tracks/parcheggio.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Pista club del Po · Ferrarese",
+    "image": "/images/world/tracks/po.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Salita della cava · Prealpi",
+    "image": "/images/world/tracks/prealpi.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Riviera di Levante · statale costiera",
+    "image": "/images/world/tracks/riviera.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Pistino di San Rocco · Pavese",
+    "image": "/images/world/tracks/san-rocco.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Circuito del Santerno · Imolese",
+    "image": "/images/world/tracks/santerno.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Salita del Santuario · Canavese",
+    "image": "/images/world/tracks/santuario.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Circuito Scuola · Laboratorio tattico",
+    "image": "/images/world/tracks/scuola.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Val Seriana · strada delle cave",
+    "image": "/images/world/tracks/seriana.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Stelvio · Prato → passo",
+    "image": "/images/world/tracks/stelvio.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Tangenziale · svincolo nord → interporto",
+    "image": "/images/world/tracks/tangenziale.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "tracks",
+    "name": "Pista club del Ticino · Novarese",
+    "image": "/images/world/tracks/ticino.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "group": "work",
+    "name": "Tagliando",
+    "image": "/images/world/work/oil.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "work",
+    "name": "Revisione motore",
+    "image": "/images/world/work/rebuild.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "work",
+    "name": "Ripristino completo",
+    "image": "/images/world/work/repair.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "work",
+    "name": "Soccorso essenziale",
+    "image": "/images/world/work/soccorso.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "work",
+    "name": "Cambio gomme",
+    "image": "/images/world/work/tyre.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "group": "work",
+    "name": "Carrozziere",
+    "image": "/images/world/work/verniciatura.png",
+    "width": 128,
+    "height": 128
+  }
+]

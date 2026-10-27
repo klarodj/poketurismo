@@ -1,0 +1,16 @@
+{
+  "key": "meet",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Friday evening car-club meeting in a Northern Italian shopping-centre car park in 2002, red Fiat hatchback with bonnet open, blue BMW E30 and yellow Peugeot 106, small groups of young adult enthusiasts chatting, amber lamps, low industrial buildings, dusk purple-blue sky, calm welcoming local atmosphere. Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-bfd25513-390e-4e9b-9c46-28f20b0036fc.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/meet.png",
+  "output": "public/images/meet.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "38b6898a9bbe58e9b79c19d8c19e086c2649c3d2ff9eb2e82be3b6e7f04c4558",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/meet.png",
+  "nativeInput": true
+}

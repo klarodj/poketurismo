@@ -53,9 +53,9 @@ export default function GarageAuto() {
     }
   };
 
-  if(!cars.length)return <Win98Window guideId="garage" title="Il tuo garage" imageUrl="/images/garage.png"><GarageTabs/><ClubRecoveryHint/><div className="period-page"><h1>Qui inizia la tua collezione</h1><p>Il garage è ancora vuoto. Cerca un usato per partire, oppure sfoglia il nuovo.</p><button className="win98-btn" onClick={()=>navigate('/used-cars')}>Cerca la prima auto usata</button><button className="win98-btn" onClick={()=>navigate('/dealership')}>Visita il concessionario</button><p>La scuola guida ti presta una vettura anche prima del primo acquisto.</p></div></Win98Window>;
+  if(!cars.length)return <Win98Window guideId="garage" title="Il tuo garage" imageUrl="/images/world/garage.png"><GarageTabs/><ClubRecoveryHint/><div className="period-page"><h1>Qui inizia la tua collezione</h1><p>Il garage è ancora vuoto. Cerca un usato per partire, oppure sfoglia il nuovo.</p><button className="win98-btn" onClick={()=>navigate('/used-cars')}>Cerca la prima auto usata</button><button className="win98-btn" onClick={()=>navigate('/dealership')}>Visita il concessionario</button><p>La scuola guida ti presta una vettura anche prima del primo acquisto.</p></div></Win98Window>;
   return (
-    <Win98Window guideId="garage" title="Gestione Parco Auto" imageUrl="/images/garage.png">
+    <Win98Window guideId="garage" title="Gestione Parco Auto" imageUrl="/images/world/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
         <GarageTabs /><ClubRecoveryHint/>{activeRace&&<p className="period-notice">Auto e preparazione bloccate durante la gara. Puoi consultare tutte le schede.</p>}

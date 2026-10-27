@@ -1,0 +1,16 @@
+{
+  "key": "places/scuola-guida",
+  "prompt": "Use case: stylized-concept. ONE hand-drawn pixel-art videogame location background for Northern Italy, 2002. First reference: REQUIRED drawing style, deliberately simple chunky square pixel clusters and flat shading. Second reference: vehicle sprite shading and era. Subject: Northern Italian driving school practice area in 2002, instructor woman in practical jacket standing beside a small white 1990s hatchback, orange cones and painted slalom markings, low classroom building, distant foothills. Sunny wide scene with vehicle fully visible. Wide 16:9 composition, full main objects visible and generous margins. STRICT RETRO PIXEL ART on a 320x180 logical canvas. Flat limited 32-colour palette, 3 to 5 shades per material, simple readable shapes like late-1990s LucasArts / Amiga adventure backgrounds. Thick dark navy stepped outlines, large clean solid-colour regions. NOT a photograph or a filtered photo. No photorealistic surfaces, tiny realistic textures, ray tracing, painterly brushwork, fine detail noise, smooth gradients, bloom, blur, or modern cars. No text, logos, labels, interface, watermark. Do NOT copy the reference subject; illustrate the specified location with its style.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-afdbf058-b536-4868-8699-73985d915885.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/places/places-scuola-guida.png",
+  "output": "public/images/places/scuola-guida.png",
+  "iteration": 2,
+  "styleReferences": [
+    "public/images/world/work/verniciatura.png",
+    "public/images/pixel-cars/punto/rosso.png"
+  ],
+  "rawInputSha256": "60bc58848b16518a854d846a577e56d681beaede5435b5257f4dcd5cf6fbda7d",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/places/places-scuola-guida.png",
+  "nativeInput": true
+}

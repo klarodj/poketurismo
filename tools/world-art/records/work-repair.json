@@ -1,0 +1,11 @@
+{
+  "key": "repair",
+  "prompt": "Use case: historical-scene. Asset type: square workshop service illustration for a Northern Italian automotive RPG, year 2002. A red 1990s compact hatchback inside an Italian workshop, bonnet open, front wheel removed on axle stand, mechanic checking engine while tools and fresh tyres sit beside car. Clearly full mechanical restoration service. Composition legible as a small 128x128 thumbnail, main subject centered, generous margin. Hand-drawn early PC game pixel art with crisp stepped dark outlines, visible square pixel clusters, restrained 48-colour palette of navy charcoal warm grey red and yellow, flat 5-step pixel shading, no photographs, no painting, no blur, no gradients, no writing or watermark.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7464b5ae-22d8-4f57-a134-15261d26651b.png",
+  "tool": "image_gen built-in",
+  "input": "tools/world-art/inputs/work/repair.png",
+  "output": "public/images/work/repair.png",
+  "rawInputSha256": "21cd608e228f66dea5a0406becd6b5e3dcb2f1698bfa5b821a61e729f9bf2c4f",
+  "rawArchive": "/home/klaro/.backups/poketurismo/pixel-world-2026-10-27T17-48-22-212Z/generated-inputs/work/repair.png",
+  "nativeInput": true
+}
