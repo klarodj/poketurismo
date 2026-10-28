@@ -1,9 +1,9 @@
 {
   "key": "zx",
-  "candidate": "Citroen ZX Kit Car rally 1997",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Citroen ZX Kit Car rally 1997. USER CORRECTION: Exact ZX kit car wide arches and bumpers; correct ZX tail lamps. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the APPROVED ROAD SPRITE and the MANDATORY CAMERA template, NOT the paint or stock body-kit target. Image2 is existing RACING SPRITE to rebuild in that exact road-view perspective. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Rebuild the real ZX Kit Car with EXACT road sprite CAMERA, elevation and front-to-side visibility ratio. Prior race sprite is too front-on and small. Retain correct red Total kitcar body, spoiler, white rally wheels. Whole car fills same width as road reference without distortion. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
     "/home/klaro/poketurismo-work/public/images/pixel-cars/zx/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/zx.png",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/zx-reference.img"
   ],
   "referenceSources": [
@@ -13,21 +13,23 @@
       "title": "Citroen for sale | Classic Driver (https://www.classicdriver.com/en/car/citroen/zx/1996/473219)"
     }
   ],
-  "userCorrection": "Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Rebuild the real ZX Kit Car with EXACT road sprite CAMERA, elevation and front-to-side visibility ratio. Prior race sprite is too front-on and small. Retain correct red Total kitcar body, spoiler, white rally wheels. Whole car fills same width as road reference without distortion.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f8f718fe-b2ea-4b97-b6a0-17200a81acb1.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/zx-r2.png",
-  "sourceSha256": "931213f202482de1b30ceea58f181179bacbb52f32e3718b6fd385424d488b53",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-98cbfa89-224e-41c8-8b53-c4d69c4f1e65.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/zx-r3.png",
+  "sourceSha256": "392db685aa5548331267d05f60b55233da33903b854752594feb24b4276e863f",
   "input": "tools/race-conversions/inputs/zx.png",
   "output": "public/images/race-cars/zx.png",
-  "sha256": "8474cc6fe51c89fb8e1deec8ed0c9b3078575690891643c468dcbe77d97f39f5",
+  "sha256": "d76da89c9ae8821d252026d31f9953ff395283960da81d18e8158e9e4aeee611",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
     "/home/klaro/poketurismo-work/public/images/pixel-cars/zx/rosso.png": "7a8aa27d11e1ec0b6a80670d8bcb8095b2b83d5a5b68265d66883d523db3c2b2",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/zx.png": "8474cc6fe51c89fb8e1deec8ed0c9b3078575690891643c468dcbe77d97f39f5",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/zx-reference.img": "c8a63f96cec2fc220f3589be26f81c977a0a430fcb32eb83c9b310a4fd3e1292"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"

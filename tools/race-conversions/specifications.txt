@@ -28,7 +28,7 @@ camaro|inspired|touring|Camaro Z28 Trans-Am|1996|blue and yellow American racing
 c4|inspired|cup|Corvette Challenge C4|1989|white and blue Chevrolet racing|C4 ZR1 shape retained, period low front splitter, modest side skirts, flared rear lips, low rear wing, silver mesh wheels; no C5 body
 c5|inspired|gt|Corvette C5-R|2001|yellow and black Corvette Racing|actual C5-R broad fenders, ducted front bumper and splitter, vented bonnet, tall rear wing, silver centre-lock racing wheels
 ax|inspired|rally|AX GTi Gruppo A|1992|white with red and blue Citroën Sport|preserve approved AX glass and lights, period rally bumper, modest squared arch lips, white 14-inch rally wheels, mud flaps
-saxo|historic|rally|Saxo VTS Kit Car|1997|white with blue and red Citroën Sport|actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels
+saxo|inspired|rally|Saxo VTS · ispirazione Super1600|2001|white with blue and red Citroën Sport|actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels
 visa|historic|rally|Visa 1000 Pistes|1984|white with red and blue Citroën bands|authentic square rally arch extensions and front apron, auxiliary rally lamps, white compact wheels and red mud flaps; no modern GT body
 xsara|historic|rally|Xsara Kit Car|1999|Livrea della vettura reale fotografata, come nei riferimenti della revisione|Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.
 zx|historic|touring|ZX Kit Car|1993|Livrea della vettura reale fotografata, come nei riferimenti della revisione|Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.

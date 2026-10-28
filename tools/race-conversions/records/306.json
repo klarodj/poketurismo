@@ -1,9 +1,9 @@
 {
   "key": "306",
-  "candidate": "Peugeot 306 Maxi Kit Car 1997",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Peugeot 306 Maxi Kit Car 1997. USER CORRECTION: Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the APPROVED ROAD SPRITE and the MANDATORY CAMERA template, NOT the paint or stock body-kit target. Image2 is existing RACING SPRITE to rebuild in that exact road-view perspective. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Rebuild real Peugeot 306 Maxi Kit Car with EXACT road sprite CAMERA: same elevation, heading, front-to-side visibility ratio. Previous race drawing too front-on. Preserve correct broad kitcar arches and bumper, yellow Motul #29 livery, wheels and roof vent from race photo. No driver. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
     "/home/klaro/poketurismo-work/public/images/pixel-cars/306/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/306.png",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/306-reference.img"
   ],
   "referenceSources": [
@@ -16,21 +16,23 @@
       "license": ""
     }
   ],
-  "userCorrection": "Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Rebuild real Peugeot 306 Maxi Kit Car with EXACT road sprite CAMERA: same elevation, heading, front-to-side visibility ratio. Previous race drawing too front-on. Preserve correct broad kitcar arches and bumper, yellow Motul #29 livery, wheels and roof vent from race photo. No driver.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f57e9a00-729f-43eb-8091-e0ef9760ae7e.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/306-r2.png",
-  "sourceSha256": "fdc6851bf99b966054ff38846ae97815f5de4fddd2c7b0d8c804b9bac64c41a9",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c68e5d8e-5e1d-4e99-b265-1a59370bd6b6.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/306-r3.png",
+  "sourceSha256": "bac9fcf0feb6a691589983d03a2dbde2d6b1248b8b7430314a89f224d5af2d66",
   "input": "tools/race-conversions/inputs/306.png",
   "output": "public/images/race-cars/306.png",
-  "sha256": "47b3e057858d154707bffac2f0f99717ef5e8c3e1091c57e50f87aa28bdf689b",
+  "sha256": "65bb4d8cd10fc3043ab1f93075c90d177a9e108d09191af34301a216ef025359",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
     "/home/klaro/poketurismo-work/public/images/pixel-cars/306/rosso.png": "660bc52dd436aff1ee29c934609ee8696a3a3ac1ebdcf976ef1d1f5bae63334b",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/306.png": "47b3e057858d154707bffac2f0f99717ef5e8c3e1091c57e50f87aa28bdf689b",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/306-reference.img": "dfcbc85ad04646ff22ca823d2bd4f765b53237f9896093505e7a69ae74f39ffc"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"

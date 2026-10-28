@@ -1,9 +1,9 @@
 {
   "key": "106",
-  "candidate": "Peugeot 106 Maxi Kit Car rally",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Peugeot 106 Maxi Kit Car rally. USER CORRECTION: Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the APPROVED ROAD SPRITE and the MANDATORY CAMERA template, NOT the paint or stock body-kit target. Image2 is existing RACING SPRITE to rebuild in that exact road-view perspective. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Rebuild real Peugeot 106 Maxi Kit Car with EXACT road sprite CAMERA: same elevation, heading, front-to-side visibility ratio, wheels in same perspective. Previous race drawing too front-on. Preserve the correct photographed wide arches, deep kitcar bumper, racing wheels and blue white Esso Ultron livery. Do not add driver or scenery. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
     "/home/klaro/poketurismo-work/public/images/pixel-cars/106/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/106.png",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/106-reference.img"
   ],
   "referenceSources": [
@@ -13,21 +13,23 @@
       "title": "Kit Cars (V): Los A6, precursores de los S1600 (https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856)"
     }
   ],
-  "userCorrection": "Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Rebuild real Peugeot 106 Maxi Kit Car with EXACT road sprite CAMERA: same elevation, heading, front-to-side visibility ratio, wheels in same perspective. Previous race drawing too front-on. Preserve the correct photographed wide arches, deep kitcar bumper, racing wheels and blue white Esso Ultron livery. Do not add driver or scenery.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8cc53c00-d419-47f7-b8e1-df039c016bbd.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/106-r2.png",
-  "sourceSha256": "3e6e30a91b4f50610f4c6ef010963d696dc0485cbba4c7ac425d7cb3d600c06b",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e44d8fd7-7a8b-415d-8d5e-91265381dda3.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/106-r3.png",
+  "sourceSha256": "5829ea8fd373cf80bda91c46b021f27bfd413256adb388ac232e809dc473e21c",
   "input": "tools/race-conversions/inputs/106.png",
   "output": "public/images/race-cars/106.png",
-  "sha256": "2e4b3ca82fd2be57051b7041ee439610a902ed9823025556e54486878a0a2084",
+  "sha256": "d5da91abf398ee84f4ea54d02b863c1961b3e0624ffa2d99e67498df0c071884",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
     "/home/klaro/poketurismo-work/public/images/pixel-cars/106/rosso.png": "0ec1f7effb1f7b89f0f052845726cd58975df87227660248030a0003990bddc4",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/106.png": "2e4b3ca82fd2be57051b7041ee439610a902ed9823025556e54486878a0a2084",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/106-reference.img": "e53cc1caeaf138531f25385b01d7915b030c716e2bb279b3b3a0cec181ca784d"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"

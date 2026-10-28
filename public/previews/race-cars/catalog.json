@@ -1470,27 +1470,35 @@
       "name": "Saxo VTS",
       "brand": "Citroen",
       "year": 1998,
-      "classification": "historic",
+      "classification": "inspired",
       "profile": "rally",
-      "reference": "Saxo VTS Kit Car",
-      "referenceYear": 1997,
+      "reference": "Saxo VTS · ispirazione Super1600",
+      "referenceYear": 2001,
       "livery": "white with blue and red Citroën Sport",
       "bodywork": "actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels",
-      "reviewBatch": null,
-      "bodyworkDetails": null,
-      "notes": "",
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Passaruota raccordati e lisci, senza rivetti, ispirati alla Saxo Super1600.",
+        "Identità e livrea della Saxo del gioco conservate."
+      ],
+      "notes": "Passaruota ispirati alla vera Super1600, mantenendo fari, generazione e livrea della Saxo del gioco: non una replica integrale del modello successivo.",
       "researchStatus": "reference-reviewed",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Citroën Saxo Super1600 · vettura reale in esposizione",
+          "url": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600"
+        }
+      ],
       "imageReferences": [
         {
-          "title": "Racecarsdirect.com  - JSCC CITROEN SAXO VTR RACE CAR",
-          "url": "https://racecarsdirect.com/content/UserImages/87091/486945.jpg?v=0",
-          "page": "https://racecarsdirect.com/Advert/Details/87091/jscc-citroen-saxo-vtr-race-car"
+          "title": "Citroën Saxo Super1600 · vettura reale in esposizione",
+          "url": "https://4.bp.blogspot.com/-bHMeZPkPUrI/TcqcGvE73YI/AAAAAAAAATk/mWB3F7WopLI/s1600/CITROEN_SAXO_Super1600.jpg",
+          "page": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600"
         }
       ],
       "stockImage": "/images/pixel-cars/saxo/rosso.png",
-      "image": "/images/race-cars/saxo.png?rev=1",
-      "artRevision": 1,
+      "image": "/images/race-cars/saxo.png?rev=2",
+      "artRevision": 2,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -1574,8 +1582,11 @@
       "referenceYear": 1999,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Carrozzeria e livrea della Xsara Kit Car, nella stessa prospettiva della stradale.",
+        "Abitacolo senza pilota o copilota."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -1592,8 +1603,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/xsara/rosso.png",
-      "image": "/images/race-cars/xsara.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/xsara.png?rev=4",
+      "artRevision": 4,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -1628,8 +1639,10 @@
       "referenceYear": 1993,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Carrozzeria e livrea della ZX Kit Car, nella stessa prospettiva della stradale."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -1650,8 +1663,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/zx/rosso.png",
-      "image": "/images/race-cars/zx.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/zx.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 34000,
@@ -3058,8 +3071,11 @@
       "referenceYear": 2001,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy real S1600 highly widened arches, bumpers, spoiler and Ford racing livery.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Paraspruzzi rimossi da tutte le ruote.",
+        "Lip anteriore più pronunciato, come sulla Puma Super1600 reale."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -3082,11 +3098,16 @@
           "title": "1999 Ford Puma S1600 | Monaco 2024 | RM  Sotheby's (https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/)",
           "url": "https://rmsothebys-cdn.azureedge.net/c/3/9/0/8/1/c390814b2bb943a78108d00512e1342715bcefd7.webp",
           "page": "https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/"
+        },
+        {
+          "title": "Lot 73 - 2001 Ford Puma S1600 'Works' Rally Car (https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1)",
+          "url": "https://handh.blob.core.windows.net/stock/20058128-19.jpg?v=63818785544733",
+          "page": "https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1"
         }
       ],
       "stockImage": "/images/pixel-cars/puma/rosso.png",
-      "image": "/images/race-cars/puma.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/puma.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -3175,18 +3196,18 @@
       "referenceYear": 1987,
       "livery": "black red and white Texaco style",
       "bodywork": "CHANGE ONLY rear wing: restore original homologation RS500 whale-tail upper wing and boot spoiler from stock reference2. Keep livery and everything else.",
-      "reviewBatch": "historical-34-2026-10-28",
+      "reviewBatch": "details-10-2026-10-28",
       "bodyworkDetails": [
-        "Ala superiore originale RS500 a coda di balena, con spoiler inferiore sul portellone.",
-        "Livrea e carrozzeria della preparazione precedente conservate."
+        "Alettone posteriore ripreso esattamente dalla versione stradale del gioco.",
+        "Livrea Texaco e altre parti della preparazione conservate."
       ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [],
       "imageReferences": [],
       "stockImage": "/images/pixel-cars/sierrac/rosso.png",
-      "image": "/images/race-cars/sierrac.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/sierrac.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 46000,
@@ -3599,8 +3620,11 @@
       "referenceYear": 1998,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy real F2 kit car wide arches, bumpers, wing, Hyundai blue white livery.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Lip anteriore riparato: bordo integro e continuo.",
+        "Livrea, cerchi e restante carrozzeria conservati."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -3617,8 +3641,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/hyundai/rosso.png",
-      "image": "/images/race-cars/hyundai.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/hyundai.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -6594,8 +6618,11 @@
       "referenceYear": 1998,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Kit della vera 106 Maxi, nella stessa prospettiva della stradale.",
+        "Livrea, allargamenti e cerchi da gara conservati."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -6612,8 +6639,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/106/rosso.png",
-      "image": "/images/race-cars/106.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/106.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -6789,8 +6816,11 @@
       "referenceYear": 1997,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Kit della vera 306 Maxi, nella stessa prospettiva della stradale.",
+        "Livrea gialla Motul e dotazioni della preparazione conservate."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -6807,8 +6837,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/306/rosso.png",
-      "image": "/images/race-cars/306.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/306.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -7995,8 +8025,11 @@
       "referenceYear": 1996,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Spoiler posteriore corretto usando fotografie frontali e posteriori della Mégane Maxi reale.",
+        "Restante carrozzeria e livrea Renault Sport conservate."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -8010,11 +8043,21 @@
           "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)",
           "url": "https://www.confidential-renault.fr/doss_images/1577698062_Megane_Maxi_CR_redef_0002.jpg",
           "page": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car"
+        },
+        {
+          "title": "Ref. RSD43-049: Renault Megane Maxi - Luis Climent - Rally Vinho de Madeira'99 - Rally Slot Decals (https://rallyslotdecals.weebly.com/ref-rsd43-049-renault-megane-maxi---luis-climent---rally-vinho-de-madeira99.html)",
+          "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/15492602-648115798683583-9040025831084621197-n.jpg",
+          "page": "https://rallyslotdecals.weebly.com/ref-rsd43-049-renault-megane-maxi---luis-climent---rally-vinho-de-madeira99.html"
+        },
+        {
+          "title": "RALLYAZORES: TOUR DE CORSE 1995 e 1996 (https://rallyazores.blogspot.com/2011/04/tour-de-corse-1995-e-1996.html)",
+          "url": "https://3.bp.blogspot.com/-pyNcF8imHkI/TbtsDqTGGAI/AAAAAAAAPWk/UepZeQsXXJQ/s1600/11%2B1996-megane-gomez-16.jpg",
+          "page": "https://rallyazores.blogspot.com/2011/04/tour-de-corse-1995-e-1996.html"
         }
       ],
       "stockImage": "/images/pixel-cars/megane/rosso.png",
-      "image": "/images/race-cars/megane.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/megane.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -8308,8 +8351,12 @@
       "referenceYear": 2001,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "bodyworkDetails": null,
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Kit Car Evo 2 in assetto da asfalto, nella stessa prospettiva della stradale.",
+        "Abitacolo senza pilota o copilota.",
+        "Presa d’aria del paraurti frontale aperta, senza griglia protettiva."
+      ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
       "sources": [
@@ -8323,11 +8370,16 @@
           "title": "KIT CAR E2 (https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php)",
           "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/assets/sasego9801_240825_6fd0b1ac.jpg",
           "page": "https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php"
+        },
+        {
+          "title": "A la venta el primer SEAT Ibiza Kit Car Evo2, chasis 6 (https://revistascratch.com/historicos/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6-53595)",
+          "url": "https://staticv2.revistascratch.com/images/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6_full.jpg",
+          "page": "https://revistascratch.com/historicos/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6-53595"
         }
       ],
       "stockImage": "/images/pixel-cars/ibiza/rosso.png",
-      "image": "/images/race-cars/ibiza.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/ibiza.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 42000,

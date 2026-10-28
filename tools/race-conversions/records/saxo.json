@@ -1,50 +1,37 @@
 {
-  "classification": "historic",
-  "candidate": "Saxo VTS Kit Car",
-  "livery": "white with blue and red Citroën Sport",
-  "bodywork": "actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels",
+  "key": "saxo",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the EDIT TARGET racing sprite. Image2 is approved ROAD sprite identity. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Remove EVERY rivet, bolt head and bolt-on dotted edge on wheel arches. Make smooth integrated molded fender flares inspired by the real Saxo Super1600 photo. Keep approved white blue red Citroen Sport livery, original car generation/headlights, camera, wheels and remaining body unchanged. Do not copy the newer facelift lamps from the reference. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/saxo/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/saxo-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/saxo.png",
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/saxo/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/saxo.img"
   ],
   "referenceSources": [
     {
-      "url": "https://racecarsdirect.com/content/UserImages/87091/486945.jpg?v=0",
-      "page": "https://racecarsdirect.com/Advert/Details/87091/jscc-citroen-saxo-vtr-race-car",
-      "title": "Racecarsdirect.com  - JSCC CITROEN SAXO VTR RACE CAR",
-      "description": "A striking green Citroën Saxo VTR, built for the Junior Saloon Car Championship, stands ready for the track. Its exterior is adorned with sponsor logos including Brentwood Karting and the Teenage Cancer Trust, while the front bumper features a red tow hook and a ‘TOW’ label. Black alloy wheels and removable vinyl graphics complete its race-ready appearance.\n\nThis car was first raced in October 2016 and has been fitted with a host of new components: a custom roll cage, homologated race seat, OMP steering wheel, Sabelt six-point belts, a fuel-safe cell, fire extinguisher, new back axle, drive shafts, steering arms, bottom arms, radiator, and a fully rebuilt Mk 2 roller rocker engine. Originally listed at £9,950 on Racecarsdirect.com, the sale included spare tyres, wheels, panels, and lights, making it a comprehensive package for any aspiring JSCC competitor.",
-      "artist": "",
-      "license": ""
+      "key": "saxo",
+      "url": "https://4.bp.blogspot.com/-bHMeZPkPUrI/TcqcGvE73YI/AAAAAAAAATk/mWB3F7WopLI/s1600/CITROEN_SAXO_Super1600.jpg",
+      "page": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600",
+      "title": "Citroën Saxo Super1600 · vettura reale in esposizione"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Remove EVERY rivet, bolt head and bolt-on dotted edge on wheel arches. Make smooth integrated molded fender flares inspired by the real Saxo Super1600 photo. Keep approved white blue red Citroen Sport livery, original car generation/headlights, camera, wheels and remaining body unchanged. Do not copy the newer facelift lamps from the reference.",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Citroen Saxo VTS, racing preparation referencing Saxo VTS Kit Car (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Racecarsdirect.com  - JSCC CITROEN SAXO VTR RACE CAR. Its description: A striking green Citroën Saxo VTR, built for the Junior Saloon Car Championship, stands ready for the track. Its exterior is adorned with sponsor logos including Brentwood Karting and the Teenage Cancer Trust, while the front bumper features a red tow hook and a ‘TOW’ label. Black alloy wheels and removable vinyl graphics complete its race-ready appearance.\n\nThis car was first raced in October 2016 and has been fitted with a host of new components: a custom roll cage, homologated race seat, OMP steering wheel, Sabelt six-point belts, a fuel-safe cell, fire extinguisher, new back axle, drive shafts, steering arms, bottom arms, radiator, and a fully rebuilt Mk 2 roller rocker engine. Originally listed at £9,950 on Racecarsdirect.com, the sale included spare tyres, wheels, panels, and lights, making it a comprehensive package for any aspiring JSCC competitor.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue and red Citroën Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "saxo",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 1,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-38c546dc-74cf-4e7d-a5ed-5439b22d9366.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/saxo.png",
-  "sourceSha256": "4245ab376c6ac2dd5beabf697eeebcfa70ec1b2e84c5256e699dd7f9a5fe11e3",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-03464d60-c199-48b0-9bf7-0b8bd12e42dc.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/saxo-r2.png",
+  "sourceSha256": "b615bfc14f6fd069c7622f266f25895180fe2517f57c2c0611663493b63310f8",
   "input": "tools/race-conversions/inputs/saxo.png",
   "output": "public/images/race-cars/saxo.png",
-  "sha256": "23fae5691f0b5f431f1dc618c84ae9359099305405153163bd7cc9ab8b8a99ce",
+  "sha256": "e952f97285651a757360a15eb9609f443c0b07fd8ab98bccd6941cb1e377e199",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/saxo/rosso.png",
-      "sha256": "3ac25a624a0c0416fa9ac39f6c0c1048f32895db14d0799fc78552f2e8f90d67"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/saxo-web-0.img",
-      "sha256": "aea533409ddfc02cc6ac834b98ed5dd6122993e377ca44e76616b894c2a59fe7"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/saxo.png": "23fae5691f0b5f431f1dc618c84ae9359099305405153163bd7cc9ab8b8a99ce",
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/saxo/rosso.png": "3ac25a624a0c0416fa9ac39f6c0c1048f32895db14d0799fc78552f2e8f90d67",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/saxo.img": "2f60558f7dfa3f2f6386b5cc1f1a9ead3e8957abde0cb26906ebb9281cfad924"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

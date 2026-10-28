@@ -1,34 +1,52 @@
 {
   "key": "megane",
-  "candidate": "Renault Megane Maxi Kit Car 1997",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Renault Megane Maxi Kit Car 1997. USER CORRECTION: Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the EDIT TARGET racing sprite. Image2 is approved ROAD sprite identity. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Modify ONLY the rear spoiler to the real Megane Maxi Kit Car geometry shown in the front-side AND rear photographs: period narrow horizontal plane spanning rear above trunk, actual low supports/end shape. Do NOT use oversized GT wing, generic curved road spoiler, extra tiers, or supports invented from imagination. Keep current yellow blue Renault Sport #5 livery, body, wheels, front and camera unchanged. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/megane.png",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/megane/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/megane-reference.img"
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/megane-reference.img",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/megane-rear.img",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/megane-side.img"
   ],
   "referenceSources": [
     {
       "url": "https://www.confidential-renault.fr/doss_images/1577698062_Megane_Maxi_CR_redef_0002.jpg",
       "page": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car",
       "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)"
+    },
+    {
+      "key": "megane-rear",
+      "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/15492602-648115798683583-9040025831084621197-n.jpg",
+      "page": "https://rallyslotdecals.weebly.com/ref-rsd43-049-renault-megane-maxi---luis-climent---rally-vinho-de-madeira99.html",
+      "title": "Ref. RSD43-049: Renault Megane Maxi - Luis Climent - Rally Vinho de Madeira'99 - Rally Slot Decals (https://rallyslotdecals.weebly.com/ref-rsd43-049-renault-megane-maxi---luis-climent---rally-vinho-de-madeira99.html)"
+    },
+    {
+      "key": "megane-side",
+      "url": "https://3.bp.blogspot.com/-pyNcF8imHkI/TbtsDqTGGAI/AAAAAAAAPWk/UepZeQsXXJQ/s1600/11%2B1996-megane-gomez-16.jpg",
+      "page": "https://rallyazores.blogspot.com/2011/04/tour-de-corse-1995-e-1996.html",
+      "title": "RALLYAZORES: TOUR DE CORSE 1995 e 1996 (https://rallyazores.blogspot.com/2011/04/tour-de-corse-1995-e-1996.html)"
     }
   ],
-  "userCorrection": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Modify ONLY the rear spoiler to the real Megane Maxi Kit Car geometry shown in the front-side AND rear photographs: period narrow horizontal plane spanning rear above trunk, actual low supports/end shape. Do NOT use oversized GT wing, generic curved road spoiler, extra tiers, or supports invented from imagination. Keep current yellow blue Renault Sport #5 livery, body, wheels, front and camera unchanged.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane-r2.png",
-  "sourceSha256": "29888db1eb92080f92569719aa4d8fe67ebc3914aa32b77a4a28186793bbe668",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f1d6d07f-82d8-44c6-b364-5f067e6daf87.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane-r3.png",
+  "sourceSha256": "7a1a1e2e70558db95f11b38e0fb38a88b62965d89981c90b9330f0a8e09cdda2",
   "input": "tools/race-conversions/inputs/megane.png",
   "output": "public/images/race-cars/megane.png",
-  "sha256": "404196da52895a40aa38493b252b15ea0922f728ddb485e1feb5f116af2119b4",
+  "sha256": "748b872cdd38578b7d0d52a4f3e5ec96ea845d134a193e5fc92bbff0edb9e9e6",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/megane.png": "404196da52895a40aa38493b252b15ea0922f728ddb485e1feb5f116af2119b4",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/megane/rosso.png": "f1b391f4141118145dbf656dfc5a5dbccc1fde09d25828f23440510bfb5b13f0",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/megane-reference.img": "ee6584cd0cca84ac099a4b15c1d34e1aa4d6b47fef94e5168c91da3e561b807c"
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/megane-reference.img": "ee6584cd0cca84ac099a4b15c1d34e1aa4d6b47fef94e5168c91da3e561b807c",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/megane-rear.img": "94a2a97cbbd7d1d88efd50de50dacc26f2a0739077623924f2f31e6a6580cbd2",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/megane-side.img": "34773970bea9ed7c809ae7b902b47bfd2cfc32606049d33d7f40e28da61bd101"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

@@ -1,10 +1,9 @@
 {
   "key": "xsara",
-  "candidate": "Citroen Xsara Kit Car 1999 Philippe Bugalski",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Citroen Xsara Kit Car 1999 Philippe Bugalski. USER CORRECTION: Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Image1 is the ROAD car CAMERA TEMPLATE. Image2 is the racing car EDIT TARGET. Correct ONLY its CAMERA/PROJECTION: racing Xsara is still MUCH TOO SIDE-ON. Orbit the camera distinctly toward the FRONT of the car by about20degrees relative to image2 and raise it slightly until the projection matches image1 EXACTLY. Show a substantially wider FRONT BUMPER PLANE and bonnet; show a SHORTER SIDE, larger windshield face, stronger diagonal roof and hood. Match the road car wheelbase foreshortening. Nose points down-left, front LEFT headlight must be distinctly separated in depth from far right headlight. Do NOT preserve the side-on camera of image2. Keep real Xsara Kit Car anatomy, wide arches, red/yellow Citroen Total number16 livery, correct wheels and wing, no pilot/copilot or helmet through windows, empty seats and roll cage only. One whole car transparent320x128 pixel-art sprite, crisp pixel clusters and stepped outlines, compact shaded palette, no photo, no antialiasing, no shadow/ground/scenery. Ample clear margins. EXACT same front-left three-quarter viewing angle as image1, not profile.",
   "referencedImagePaths": [
     "/home/klaro/poketurismo-work/public/images/pixel-cars/xsara/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/xsara-reference.img"
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/xsara-intermediate.png"
   ],
   "referenceSources": [
     {
@@ -13,22 +12,23 @@
       "title": "Rally Catalunya 1999: Philippe Bugalski y la histórica victoria del Citroën Xsara Kit Car (https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html)"
     }
   ],
-  "userCorrection": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Rebuild the real Xsara Kit Car, using road sprite CAMERA EXACTLY: same front-to-side visibility ratio, same elevation and heading. The previous racing image is too side-on. Keep its correct red yellow 1999 Citroen Total #16 Kit Car body and livery. Remove driver and co-driver entirely: dark EMPTY cockpit with only cage and seats, no face, helmet or human. Refined camera further toward front after visual QA.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7a8437cb-ef2a-4f95-9ca1-1e9c358ec28f.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/xsara-r2.png",
-  "sourceSha256": "92f556e8d367fe092cd7247a1cb18bf4df87eaca0edeb66320068d44d5d3f3b4",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ccc4a631-64a3-4ec5-a81f-f9555c639708.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/xsara-r4.png",
+  "sourceSha256": "2bb0f263b380f7f390f290895d2295026e523ac1675c13059dfa4b482b43fab6",
   "input": "tools/race-conversions/inputs/xsara.png",
   "output": "public/images/race-cars/xsara.png",
-  "sha256": "8f83643cd8866c21e7f8ac0e022975f15d19993bbf6ea429d16b492ec984e365",
+  "sha256": "88bb8fcaf959141bd6aef351af37a6e06d49ecec78b6c788330ed0ab3570a4ad",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 4,
   "referenceHashes": {
     "/home/klaro/poketurismo-work/public/images/pixel-cars/xsara/rosso.png": "a8372adf4cfd5d3624cdb20a28d8e22290b64dc667c56d10b8c21f34ecc8c787",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/xsara-reference.img": "2d44cc59285916ce71f7914557ccc9034b969201328f57ae6de925da2b0273da"
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/xsara-intermediate.png": "108a3fd7e76ca3bbbcecca22aec7db8a57c04efd73d336596593df0853619420"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

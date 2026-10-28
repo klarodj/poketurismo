@@ -1,11 +1,12 @@
 {
   "key": "puma",
-  "candidate": "Ford Puma Super 1600 rally 2001",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Ford Puma Super 1600 rally 2001. USER CORRECTION: Copy real S1600 highly widened arches, bumpers, spoiler and Ford racing livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the EDIT TARGET racing sprite. Image2 is approved ROAD sprite identity. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Remove ALL mudflaps/paraspruzzi behind ALL wheels. Replace lower front lip with correct deeper projecting undamaged S1600 front lip as shown in real closeup photograph. Keep Rapid Fit blue yellow livery, other bodywork, exact camera and wheels unchanged. No modern GT3 splitter, no huge canards. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/puma.png",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/puma/rosso.png",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/puma-reference.img",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/puma-extra-reference.img"
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/puma-extra-reference.img",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/puma-lip.img"
   ],
   "referenceSources": [
     {
@@ -17,25 +18,34 @@
       "url": "https://rmsothebys-cdn.azureedge.net/c/3/9/0/8/1/c390814b2bb943a78108d00512e1342715bcefd7.webp",
       "page": "https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/",
       "title": "1999 Ford Puma S1600 | Monaco 2024 | RM  Sotheby's (https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/)"
+    },
+    {
+      "key": "puma-lip",
+      "url": "https://handh.blob.core.windows.net/stock/20058128-19.jpg?v=63818785544733",
+      "page": "https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1",
+      "title": "Lot 73 - 2001 Ford Puma S1600 'Works' Rally Car (https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1)"
     }
   ],
-  "userCorrection": "Copy real S1600 highly widened arches, bumpers, spoiler and Ford racing livery.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Remove ALL mudflaps/paraspruzzi behind ALL wheels. Replace lower front lip with correct deeper projecting undamaged S1600 front lip as shown in real closeup photograph. Keep Rapid Fit blue yellow livery, other bodywork, exact camera and wheels unchanged. No modern GT3 splitter, no huge canards.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3bd74e54-2a37-4369-bb40-80d1d9591e45.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/puma-r2.png",
-  "sourceSha256": "30affd3d822ce025c1d78338725242c7396afb36991252a7b53e58c63a99ec37",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ef8a5833-38a5-469f-bec0-09fae1624d3b.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/puma-r3.png",
+  "sourceSha256": "5f31043bab420e64c99c4a54aec7de4f5abb66989fd204953c3701061961059a",
   "input": "tools/race-conversions/inputs/puma.png",
   "output": "public/images/race-cars/puma.png",
-  "sha256": "50bc226eed5a7b189b24886312f32edab587fb02ce721cc01c008cf94ce2af3d",
+  "sha256": "8929354aa87620e982edd2154eef85f4b8fbfbd9c6f29a707d20594c36615143",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/puma.png": "50bc226eed5a7b189b24886312f32edab587fb02ce721cc01c008cf94ce2af3d",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/puma/rosso.png": "236a22732472c078345a7fd3a86b6fef9681f0347274b83b6c81742891671903",
     "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/puma-reference.img": "36c470744bef335374a98c5f500bdc0002f12561dfcef4cd81949f457ca03298",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/puma-extra-reference.img": "37103dd265ba9c3a4e5052f5c058d81abdb73ed41d48b843ec4cff2ea657d705"
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/puma-extra-reference.img": "37103dd265ba9c3a4e5052f5c058d81abdb73ed41d48b843ec4cff2ea657d705",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/puma-lip.img": "a1066ef8fa097eea9890822811c179ca666cfa81c711248009f0c6169daf3fc6"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

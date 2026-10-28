@@ -1,27 +1,27 @@
 {
   "key": "sierrac",
-  "candidate": "Sierra RS500 Cosworth Gruppo A",
-  "prompt": "Use case: precise-object-edit. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is EDIT TARGET, keep every unrequested part unchanged. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Sierra RS500 Cosworth Gruppo A. USER CORRECTION: CHANGE ONLY rear wing: restore original homologation RS500 whale-tail upper wing and boot spoiler from stock reference2. Keep livery and everything else. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the EDIT TARGET racing sprite. Image2 is approved ROAD sprite identity and EXACT rear-wing geometry to copy. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Replace ONLY the rear wing with the EXACT wing visible in the ROAD sprite, matching its silhouette, mounting height and profile. Do NOT use the previous tall angular racing wing or invent a taller RS500 wing. Preserve the Texaco black red racing livery, wheels, bumper, model and view unchanged. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/public/images/race-cars/sierrac.png",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/sierrac.png",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/sierrac/rosso.png"
   ],
   "referenceSources": [],
-  "userCorrection": "CHANGE ONLY rear wing: restore original homologation RS500 whale-tail upper wing and boot spoiler from stock reference2. Keep livery and everything else.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Replace ONLY the rear wing with the EXACT wing visible in the ROAD sprite, matching its silhouette, mounting height and profile. Do NOT use the previous tall angular racing wing or invent a taller RS500 wing. Preserve the Texaco black red racing livery, wheels, bumper, model and view unchanged.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-268ea604-5809-4978-ad9c-8e7d05d513bc.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/sierrac-r2.png",
-  "sourceSha256": "6bf557429966a23226efc0ce8ff2cb47d25316d84cef30eafdaae4f155bab38b",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-bfac380f-85f0-497a-a156-929c6fb1996c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/sierrac-r3.png",
+  "sourceSha256": "7d6af981e1d7d40757bfff8b7a33bb7a3417852d33f9e5987a57f4a172e3e5b8",
   "input": "tools/race-conversions/inputs/sierrac.png",
   "output": "public/images/race-cars/sierrac.png",
-  "sha256": "f59a0908b5afc744e7bda18782b1c00eb92a34df1a6e169ad84a77f42111b2c5",
+  "sha256": "ad77c0933e5af24b2344884e223b42018d23fbf3f35f0da1401502bfb2f6cffa",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
-    "/home/klaro/poketurismo-work/public/images/race-cars/sierrac.png": "f59a0908b5afc744e7bda18782b1c00eb92a34df1a6e169ad84a77f42111b2c5",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/sierrac.png": "f59a0908b5afc744e7bda18782b1c00eb92a34df1a6e169ad84a77f42111b2c5",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/sierrac/rosso.png": "009fbf62a50b11195200bcdbc7b74f7b4b5c371dbd8213a9116a92e87da13f20"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"

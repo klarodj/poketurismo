@@ -1808,16 +1808,27 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Citroën Saxo Super1600 · vettura reale in esposizione",
+          "url": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "historic",
-      "candidate": "Saxo VTS Kit Car",
-      "referenceYear": 1997,
+      "classification": "inspired",
+      "candidate": "Saxo VTS · ispirazione Super1600",
+      "referenceYear": 2001,
       "liveryDirection": "white with blue and red Citroën Sport",
       "bodywork": "actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels",
-      "identityNotes": "Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips."
+      "identityNotes": "Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips.",
+      "reviewBatch": "details-10-2026-10-28",
+      "bodyworkDetails": [
+        "Passaruota raccordati e lisci, senza rivetti, ispirati alla Saxo Super1600.",
+        "Identità e livrea della Saxo del gioco conservate."
+      ],
+      "notes": "Passaruota ispirati alla vera Super1600, mantenendo fari, generazione e livrea della Saxo del gioco: non una replica integrale del modello successivo."
     },
     {
       "key": "visa",
@@ -1939,8 +1950,12 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
       "identityNotes": "First-generation Citroen Xsara VTS three-door coupe hatch, pre-facelift lamps as reference.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Carrozzeria e livrea della Xsara Kit Car, nella stessa prospettiva della stradale.",
+        "Abitacolo senza pilota o copilota."
+      ]
     },
     {
       "key": "zx",
@@ -2004,8 +2019,11 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.",
       "identityNotes": "Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Carrozzeria e livrea della ZX Kit Car, nella stessa prospettiva della stradale."
+      ]
     },
     {
       "key": "charade",
@@ -3709,8 +3727,12 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy real S1600 highly widened arches, bumpers, spoiler and Ford racing livery.",
       "identityNotes": "Original 1990s Ford Puma coupe, NOT modern crossover, rounded roof and swept triangular oval headlamps.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Paraspruzzi rimossi da tutte le ruote.",
+        "Lip anteriore più pronunciato, come sulla Puma Super1600 reale."
+      ]
     },
     {
       "key": "sierra4",
@@ -3834,11 +3856,11 @@
       "liveryDirection": "black red and white Texaco style",
       "bodywork": "CHANGE ONLY rear wing: restore original homologation RS500 whale-tail upper wing and boot spoiler from stock reference2. Keep livery and everything else.",
       "identityNotes": "Ford Sierra RS Cosworth three-door hatch with large whale-tail wing, as reference; NOT Sapphire saloon.",
-      "reviewBatch": "historical-34-2026-10-28",
+      "reviewBatch": "details-10-2026-10-28",
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "bodyworkDetails": [
-        "Ala superiore originale RS500 a coda di balena, con spoiler inferiore sul portellone.",
-        "Livrea e carrozzeria della preparazione precedente conservate."
+        "Alettone posteriore ripreso esattamente dalla versione stradale del gioco.",
+        "Livrea Texaco e altre parti della preparazione conservate."
       ]
     },
     {
@@ -4374,8 +4396,12 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy real F2 kit car wide arches, bumpers, wing, Hyundai blue white livery.",
       "identityNotes": "First-generation Hyundai Coupe RD as photo, rounded nose, almond headlamps, NOT later Tiburon/Coupe generations.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Lip anteriore riparato: bordo integro e continuo.",
+        "Livrea, cerchi e restante carrozzeria conservati."
+      ]
     },
     {
       "key": "xj",
@@ -8036,8 +8062,12 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery.",
       "identityNotes": "Peugeot 106 S16/GTi facelift three-door hatch, narrow rounded rectangular lamps, sporty colour bumpers.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Kit della vera 106 Maxi, nella stessa prospettiva della stradale.",
+        "Livrea, allargamenti e cerchi da gara conservati."
+      ]
     },
     {
       "key": "rallye",
@@ -8275,8 +8305,12 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit.",
       "identityNotes": "Peugeot 306 GTi three-door hatch, narrow swept front lamps and long single side door.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Kit della vera 306 Maxi, nella stessa prospettiva della stradale.",
+        "Livrea gialla Motul e dotazioni della preparazione conservate."
+      ]
     },
     {
       "key": "309",
@@ -9699,8 +9733,12 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
       "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Spoiler posteriore corretto usando fotografie frontali e posteriori della Mégane Maxi reale.",
+        "Restante carrozzeria e livrea Renault Sport conservate."
+      ]
     },
     {
       "key": "114",
@@ -10065,8 +10103,13 @@
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
       "bodywork": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
       "identityNotes": "Seat Ibiza Cupra R 6K facelift three-door hatch, narrow lamps, deep bumper and period small wheels.",
-      "reviewBatch": "historical-34-2026-10-28",
-      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
+      "reviewBatch": "details-10-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Kit Car Evo 2 in assetto da asfalto, nella stessa prospettiva della stradale.",
+        "Abitacolo senza pilota o copilota.",
+        "Presa d’aria del paraurti frontale aperta, senza griglia protettiva."
+      ]
     },
     {
       "key": "leon",

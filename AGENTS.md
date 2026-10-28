@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Revisione corsa 10 dettagli del 28 ottobre: `tools/race-conversions/review-10.json`, batch `details-10-2026-10-28` e filtro Aggiornate · 10 modelli. 190 altre PNG invariate; prospettiva delle stradali prioritaria, abitacoli senza piloti, Sierra con ala stradale. Saxo rev2, Xsara rev4, altre otto rev3. Note locali conservate, conversione ancora solo in anteprima; leggere `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
+
 - Revisione corsa 34 del 28 ottobre: `tools/race-conversions/review-34.json`, soli 34 sprite a revisione 2, batch `historical-34-2026-10-28` e filtro Aggiornate nell’album. Repliche da fotografie reali; 288/F50 con livrea immaginaria dichiarata, Celica ZZT231 JGTC del 2003 esplicitamente fuori riferimento. Non azzerare note locali, non cambiare le altre 166 immagini o attivare acquisti. Dettagli in `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
 
 - Anteprima conversioni da corsa del 28 ottobre 2026: leggere `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`. 200 sprite trasparenti 320×128 in `public/images/race-cars`, input e prompt in `tools/race-conversions`. Album nascosto `/previews/race-cars/` con note separate dalle auto stradali. Ricostruire con `node tools/race-conversions/build.mjs`; proposta meccanica offline, nessun acquisto o migrazione attiva. L’utente richiede revisione delle immagini prima dell’integrazione acquistabile. Conservare tutte le immagini stradali e i salvataggi.

@@ -1,34 +1,44 @@
 {
   "key": "ibiza",
-  "candidate": "Seat Ibiza Kit Car Evo 2 1998 rally",
-  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Seat Ibiza Kit Car Evo 2 1998 rally. USER CORRECTION: Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the APPROVED ROAD SPRITE and the MANDATORY CAMERA template, NOT the paint or stock body-kit target. Image2 is existing RACING SPRITE to rebuild in that exact road-view perspective. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Rebuild REAL Ibiza Maxi Kit Car Evo2 in TARMAC setup: low ride height, wide slick/tarmac tires on white racing wheels, correct smooth arches and bumper. EXACT CAMERA/elevation/heading/front-to-side visibility ratio of ROAD sprite; previous image too front-on. Remove ALL driver and co-driver: EMPTY dark cockpit, roll cage and seats allowed. Remove the FRONT BUMPER protective mesh/grille: clear dark open air intake without yellow mesh, wire grid or slats. Keep period yellow blue SEAT Ibiza Sport livery. No gravel mudflaps or knobby tires. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
   "referencedImagePaths": [
     "/home/klaro/poketurismo-work/public/images/pixel-cars/ibiza/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/ibiza-reference.img"
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/ibiza.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/ibiza-reference.img",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/ibiza-tarmac.img"
   ],
   "referenceSources": [
     {
       "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/assets/sasego9801_240825_6fd0b1ac.jpg",
       "page": "https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php",
       "title": "KIT CAR E2 (https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php)"
+    },
+    {
+      "key": "ibiza-tarmac",
+      "url": "https://staticv2.revistascratch.com/images/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6_full.jpg",
+      "page": "https://revistascratch.com/historicos/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6-53595",
+      "title": "A la venta el primer SEAT Ibiza Kit Car Evo2, chasis 6 (https://revistascratch.com/historicos/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6-53595)"
     }
   ],
-  "userCorrection": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
-  "photoReview": "References visually inspected; real car photographs, no models or game renders",
+  "userCorrection": "Rebuild REAL Ibiza Maxi Kit Car Evo2 in TARMAC setup: low ride height, wide slick/tarmac tires on white racing wheels, correct smooth arches and bumper. EXACT CAMERA/elevation/heading/front-to-side visibility ratio of ROAD sprite; previous image too front-on. Remove ALL driver and co-driver: EMPTY dark cockpit, roll cage and seats allowed. Remove the FRONT BUMPER protective mesh/grille: clear dark open air intake without yellow mesh, wire grid or slats. Keep period yellow blue SEAT Ibiza Sport livery. No gravel mudflaps or knobby tires.",
   "generationDate": "2026-10-28",
+  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
+  "previousRevision": 2,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7311a7aa-00ca-4a5e-9670-b6b044d10a8c.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/ibiza-r2.png",
-  "sourceSha256": "c6467a4c017490d3e0536bd7a0a5f043be9105c43e13a2248905bcaba9b65c2b",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1712604a-b14d-4c1c-90c8-f6a6c40087f2.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/ibiza-r3.png",
+  "sourceSha256": "846313b6d22c1017f7b52f3279fe8c3f3324def25741e5a917bdb0d09eb18d0b",
   "input": "tools/race-conversions/inputs/ibiza.png",
   "output": "public/images/race-cars/ibiza.png",
-  "sha256": "a7be57bf5b1d9130df8b32bc15cea25cf1fec4dc4841494761e67f4a2ad54fb8",
+  "sha256": "8c0df41e1c178480699f950a9fe1af5c0453a7fdd0cd9f7b1f10b7e080f28819",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
     "/home/klaro/poketurismo-work/public/images/pixel-cars/ibiza/rosso.png": "3ad918f19132f8bb415ef00ef9a7844e3ee470bfacbbdeef10d2e0d5e40cceec",
-    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/ibiza-reference.img": "d70d16c0261e14cff358631f84c8438cf5fc5a0d3bc4eefed5b88bba8f4bfdca"
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/ibiza.png": "a7be57bf5b1d9130df8b32bc15cea25cf1fec4dc4841494761e67f4a2ad54fb8",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/ibiza-reference.img": "d70d16c0261e14cff358631f84c8438cf5fc5a0d3bc4eefed5b88bba8f4bfdca",
+    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/ibiza-tarmac.img": "b0f839a565062a83802059dc0c13163642f52098325e47b64654ee4c7f8003a6"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }
