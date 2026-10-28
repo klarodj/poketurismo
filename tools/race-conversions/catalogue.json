@@ -1825,12 +1825,13 @@
       "candidate": "Saxo Super1600",
       "referenceYear": 2001,
       "liveryDirection": "Rossa Citroën Sport · Total / PlayStation, vettura n.53",
-      "bodywork": "REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people.",
+      "bodywork": "REMOVE antenna COMPLETELY, including stalk and base. Enlarge/reframe car to occupy the same image width and scale as the ROAD car; matching relative body, glass and wheel proportions. Keep existing red Citroen Super1600 Total PlayStation53 livery, kit, wheels, lights and camera unchanged. No replacement antenna or tall object above roof. Whole car must remain uncropped.",
       "identityNotes": "Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips.",
-      "reviewBatch": "body-four-2026-10-28",
+      "reviewBatch": "size-two-2026-10-28",
       "bodyworkDetails": [
-        "Carrozzeria, passaruota integrati senza rivetti e livrea della vera Saxo Super1600.",
-        "Prospettiva ripresa dall’immagine stradale; abitacolo senza persone."
+        "Antenna rimossa completamente.",
+        "Larghezza del disegno allineata alla Saxo stradale, senza deformare le proporzioni.",
+        "Kit e livrea Super1600 conservati."
       ],
       "notes": "Aspetto della vera Saxo Super1600 ripreso dalle fotografie Citroën Origins. La preparazione estetica non trasferisce il motore o le prestazioni della vettura storica."
     },
@@ -9735,13 +9736,13 @@
       "candidate": "Mégane Maxi Kit Car",
       "referenceYear": 1996,
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "REBUILD ENTIRE REAR QUARTER from actual rear and rear-three-quarter Megane Maxi photos: correct wide flared rear fenders, rear window slope and short rounded coupe boot, rear bumper contour, distinctive ROUND tail-lamp clusters within the correct horizontal panel and real low-supported wide rear wing, correctly proportioned rear overhang. Prior sprite rear is inaccurate; do not merely change spoiler. Keep front bumper, bonnet, yellow/blue Renault Sport #5 livery, wheels and current front-left CAMERA unchanged. Only depict visible rear details from that camera; do not rotate to rear view.",
+      "bodywork": "RECONSTRUCT from ROAD CAR GEOMETRY in image1, not the malformed racing image2. The previous racing car rear is DEFORMED and TOO LONG. Copy EXACT road roof, rear quarter glass, C-pillar, rear axle location, wheelbase and VERY SHORT rear body overhang. Same coupe silhouette and overall body length/height ratio. Road rear wheel sits very near rear extremity; do not move it forwards or stretch the tail/boot. NO long tail, no extended hatch, no elongated rear deck, no oversized rear arch. Apply ONLY period Maxi wide fenders around the unchanged road body geometry and race bumper. Transfer yellow/blue Renault Sport5 livery and wheels from image2, and the small period Maxi rear spoiler, without stretching the rear body to accommodate wing. Keep front-left camera EXACTLY road image1. Image2 is ONLY paint/kit style reference: its distorted rear geometry must NOT survive. Rear lamps only where visible in the unchanged road camera. Empty cockpit.",
       "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps.",
-      "reviewBatch": "body-four-2026-10-28",
+      "reviewBatch": "size-two-2026-10-28",
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "bodyworkDetails": [
-        "Coda, raccordi dei parafanghi, fanali e spoiler ricostruiti da fotografie posteriori e a tre quarti della Mégane Maxi.",
-        "Frontale e livrea Renault Sport conservati."
+        "Retrotreno ricostruito sulla sagoma della Mégane stradale: coda corta, posizione della ruota e proporzioni della scocca corrette.",
+        "Kit Maxi, cerchi e livrea Renault Sport conservati."
       ]
     },
     {

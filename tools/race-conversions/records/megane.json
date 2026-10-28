@@ -1,11 +1,10 @@
 {
   "key": "megane",
-  "prompt": "Use case: precise-object-edit. Asset ONE transparent native pixel-art car sprite. Image1 is racing EDIT TARGET, image2 is road identity/style reference. Other images are REAL competition bodywork reference. USER REQUEST: REBUILD ENTIRE REAR QUARTER from actual rear and rear-three-quarter Megane Maxi photos: correct wide flared rear fenders, rear window slope and short rounded coupe boot, rear bumper contour, distinctive ROUND tail-lamp clusters within the correct horizontal panel and real low-supported wide rear wing, correctly proportioned rear overhang. Prior sprite rear is inaccurate; do not merely change spoiler. Keep front bumper, bonnet, yellow/blue Renault Sport #5 livery, wheels and current front-left CAMERA unchanged. Only depict visible rear details from that camera; do not rotate to rear view. Preserve every other unrequested feature. STRICT1990s game hand pixel art logical320x128, crisp square clusters, hard stepped dark outlines, compact shading, dark panel seams. No photo/pixelated-photo, vector, gradients or antialiasing. Correct front-left three-quarter game view, car nose down-left, ONE WHOLE CAR only, straight wheels and correct generation/door count. Transparent background, ample clear margins, wide3:1 composition, no ground/shadow/scenery/UI/captions/watermark. NO DRIVER/COPILOT/HELMET/FACE anywhere. No fantasy modern aero. Body and wheel geometry must be plausible, not deformed. Photographs control physical kit, road sprite controls camera where requested.",
+  "prompt": "Use case: precise-object-edit. EDIT IMAGE1 (RED ROAD RENAULT MEGANE COUPE), NOT image2. Keep image1's EXACT BODY SHAPE, PROPORTIONS and CAMERA. Preserve its short coupe rear, C-pillar, rear quarter window size/shape, rear roofline, position of rear wheel and compact rear overhang exactly. Do NOT lengthen, lower, widen vertically or reshape the rear quarter. The rear fender must NOT turn into an elongated bulbous long teardrop. The rear wheel must remain close to the rear bumper as in image1. APPLY RACING APPEARANCE ONTO IMAGE1: bright yellow body with blue Renault Sport swooshes and white number5 door panel, white period racing wheels, front Maxi bumper, modest wheel arch lips and small yellow rear spoiler. Image2 is ONLY the yellow/blue LIVERY and accessory reference; IGNORE its ENTIRE BODY GEOMETRY because its rear is rejected as deformed. Do not reproduce image2's overly elongated rear glass or long swollen rear haunches. Road model image1 must remain recognizably identical in roof, glass, side door, rear wheel location and short tail silhouette. No extra rear body for wing supports. Native1990s PC pixel art 320x128, crisp dark stepped outlines, clean colour clusters, compact shading. SAME road car front-left three-quarter view, nose down-left. Empty cockpit, transparent background, whole car with margins, no ground/shadow/scenery/UI/captions/watermark, no antialiasing or gradient. Make an actual repaint/race-preparation of image1 rather than another copy of image2.",
+  "userCorrection": "RECONSTRUCT from ROAD CAR GEOMETRY in image1, not the malformed racing image2. The previous racing car rear is DEFORMED and TOO LONG. Copy EXACT road roof, rear quarter glass, C-pillar, rear axle location, wheelbase and VERY SHORT rear body overhang. Same coupe silhouette and overall body length/height ratio. Road rear wheel sits very near rear extremity; do not move it forwards or stretch the tail/boot. NO long tail, no extended hatch, no elongated rear deck, no oversized rear arch. Apply ONLY period Maxi wide fenders around the unchanged road body geometry and race bumper. Transfer yellow/blue Renault Sport5 livery and wheels from image2, and the small period Maxi rear spoiler, without stretching the rear body to accommodate wing. Keep front-left camera EXACTLY road image1. Image2 is ONLY paint/kit style reference: its distorted rear geometry must NOT survive. Rear lamps only where visible in the unchanged road camera. Empty cockpit.",
   "referencedImagePaths": [
-    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/before/public/images/race-cars/megane.png",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/megane/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/megane-rear.img",
-    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/megane-quarter.img"
+    "/home/klaro/.backups/poketurismo/race-review5-2026-10-28/before/public/images/race-cars/megane.png"
   ],
   "referenceSources": [
     {
@@ -21,25 +20,23 @@
       "title": "Mégane Maxi · fotografia tre quarti posteriore Tour de Corse"
     }
   ],
-  "userCorrection": "REBUILD ENTIRE REAR QUARTER from actual rear and rear-three-quarter Megane Maxi photos: correct wide flared rear fenders, rear window slope and short rounded coupe boot, rear bumper contour, distinctive ROUND tail-lamp clusters within the correct horizontal panel and real low-supported wide rear wing, correctly proportioned rear overhang. Prior sprite rear is inaccurate; do not merely change spoiler. Keep front bumper, bonnet, yellow/blue Renault Sport #5 livery, wheels and current front-left CAMERA unchanged. Only depict visible rear details from that camera; do not rotate to rear view.",
-  "previousRevision": 3,
+  "previousRevision": 4,
   "generationDate": "2026-10-28",
-  "photoReview": "Real reference photographs and current road/race sprites visually inspected",
+  "photoReview": "Approved road and current racing sprites compared directly",
+  "matchRoadWidth": true,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9b39a16a-a358-43a2-bb5e-801a367f6c31.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane-r4.png",
-  "sourceSha256": "c5648bee5cc65db1339602d437a76d5b56329b450ecd32fb22c34f68868a2301",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6521a267-f38c-47be-8db7-5f323f7930b4.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane-r6.png",
+  "sourceSha256": "43f42e8f53e50da163501a56311c38e9472aff73941e3753448dac729d436a67",
   "input": "tools/race-conversions/inputs/megane.png",
   "output": "public/images/race-cars/megane.png",
-  "sha256": "6fe28d442a67c8e5f08666f782578c60fa1e00b15898e327418dcdefedca4967",
+  "sha256": "d511b2f48a0944f116cecc24f414be8f32f6267fb7f9f5a5658b89df72a32d6c",
   "width": 320,
   "height": 128,
-  "revision": 4,
+  "revision": 6,
   "referenceHashes": {
-    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/before/public/images/race-cars/megane.png": "748b872cdd38578b7d0d52a4f3e5ec96ea845d134a193e5fc92bbff0edb9e9e6",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/megane/rosso.png": "f1b391f4141118145dbf656dfc5a5dbccc1fde09d25828f23440510bfb5b13f0",
-    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/megane-rear.img": "fad2b7d0be0c4a93f0a10f1fd41613a5dea96691fde43e34f88d13cc7d6e5e79",
-    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/megane-quarter.img": "154b9cd8d7058ac7f5a5bd40a0e1c43240dd6002052f4a186ef7a5eb88f338f1"
+    "/home/klaro/.backups/poketurismo/race-review5-2026-10-28/before/public/images/race-cars/megane.png": "6fe28d442a67c8e5f08666f782578c60fa1e00b15898e327418dcdefedca4967"
   },
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin; width matched to approved road sprite"
 }
