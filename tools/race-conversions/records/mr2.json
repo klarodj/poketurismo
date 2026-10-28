@@ -1,50 +1,33 @@
 {
-  "classification": "inspired",
-  "candidate": "MR2 SW20 JGTC GT300",
-  "livery": "white blue and pink Japanese GT racing bands",
-  "bodywork": "retain SW20 MR2 coupe and pop-up lamp identity, actual period GT broad arch kit, deep front ducts, high rear wing and white race wheels",
+  "key": "mr2",
+  "candidate": "Toyota MR2 SW20 JGTC GT300 1999 MOMOCORSE",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Toyota MR2 SW20 JGTC GT300 1999 MOMOCORSE. USER CORRECTION: Copy actual SW20 JGTC GT300 racing widebody, side intakes, bumper, wing, wheels and real period livery. Not MR-S. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/mr2/rosso.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/mr2.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/mr2/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/mr2-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "",
-      "page": "",
-      "title": "Fotografia originale del modello stradale · Toyota MR2 Turbo",
-      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
-      "artist": "",
-      "license": ""
+      "url": "https://cdn-image.as-web.jp/2021/05/06155922/asimg_Photo01_90s-vol2_photo_01_8c609393c9f02b5.jpg",
+      "title": "cite忘れがたき銘車たち “職人”が情熱を注いだ『つちやMR2』と土屋春雄さんからのお誘い／番外編 | レーシングオン | autosport web (https://www.as-web.jp/racing-on/695424)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy actual SW20 JGTC GT300 racing widebody, side intakes, bumper, wing, wheels and real period livery. Not MR-S.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Toyota MR2 Turbo, racing preparation referencing MR2 SW20 JGTC GT300 (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Toyota MR2 Turbo. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Toyota MR2 SW20 mid-engine closed coupe, pop-up lamps closed and side air scoop behind door.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain SW20 MR2 coupe and pop-up lamp identity, actual period GT broad arch kit, deep front ducts, high rear wing and white race wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and pink Japanese GT racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "mr2",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f6ee649a-3476-4c05-9370-3bb51fb5a1d2.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/mr2-r1.png",
-  "sourceSha256": "49aa810d3c3777556a3762a458156c27d6b3615b0c00fb408dc992a9426496c7",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-079c9e9a-7cab-4869-beed-75512f455159.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/mr2-r2.png",
+  "sourceSha256": "e85b43e99cd9f49470c99c717d8f872fc3bea14dc5badbd7b0e07c33779b3591",
   "input": "tools/race-conversions/inputs/mr2.png",
   "output": "public/images/race-cars/mr2.png",
-  "sha256": "e89ffac95e2373a029016a4a81600dd5c83e790674a03512bcc5212f54fdc915",
+  "sha256": "8b9fe2b510a6dd79f7c336df74c1274301892da3f5409b1b69dfbe3858a3ffa7",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/mr2/rosso.png",
-      "sha256": "8ce4bfe54f092bfb134f4afd8a2df93c43b62c1d82ad57a09740cb8bd4f11b4d"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/mr2.png",
-      "sha256": "fd7fe340ad23fa8f00aedcd9e95cde45bbb2373801383577d2a31f3794452aed"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ],
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/mr2/rosso.png": "8ce4bfe54f092bfb134f4afd8a2df93c43b62c1d82ad57a09740cb8bd4f11b4d",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/mr2-reference.img": "41b1f5e50b9b1eaa17465329c18c7a12717288434439a79b5cf9cd373f76f336"
+  },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

@@ -1,50 +1,34 @@
 {
-  "classification": "historic",
-  "candidate": "106 S16 Maxi",
-  "livery": "white blue red and yellow Peugeot Sport",
-  "bodywork": "retain second-series 106 lamps, real Maxi wide arches, deep rally bumper, roof vent, rear spoiler, white rally wheels",
+  "key": "106",
+  "candidate": "Peugeot 106 Maxi Kit Car rally",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Peugeot 106 Maxi Kit Car rally. USER CORRECTION: Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/106/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/106-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/106/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/106-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://rallybodykits.com/images/peugeot-106-maxi-ph2-trasera.jpg",
-      "page": "https://rallybodykits.com/peugeot-106-mk1-body-kits.html",
-      "title": "Peugeot 106 Ph1 body kits, Peugeot 106 Ph1 fibre and bodywork parts for competition",
-      "description": "A white Peugeot 106 Maxi rally car powers through a narrow mountain pass, its rear tires spraying gravel and dust. The vehicle’s wide fenders, roll cage, and Michelin-branded bumpers underscore its competition-ready setup. The license plate “878 AAN 13” and the “Auto Body Shop Epifasione” decal on the hatch add authentic rally details.\n\nThe accompanying metadata lists a full range of body kits and parts for the Peugeot 106 Mk1, including Rallye, XSI, and Maxi variants. Components such as carbon fiber bumpers, fiberglass fenders, Kevlar protectors, and polycarbonate windows are detailed with reference codes and prices. Complete kits for wide-body and Maxi configurations, as well as rally lamp pods and mounting hardware, are offered, all priced in euros excluding VAT and freight.",
-      "artist": "",
-      "license": ""
+      "url": "https://staticv2.revistascratch.com/images/imagenes/peugeot-106-maxi-kit-car.jpg",
+      "page": "https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856",
+      "title": "Kit Cars (V): Los A6, precursores de los S1600 (https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856)"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 106 Gti 16v, racing preparation referencing 106 S16 Maxi (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Peugeot 106 Ph1 body kits, Peugeot 106 Ph1 fibre and bodywork parts for competition. Its description: A white Peugeot 106 Maxi rally car powers through a narrow mountain pass, its rear tires spraying gravel and dust. The vehicle’s wide fenders, roll cage, and Michelin-branded bumpers underscore its competition-ready setup. The license plate “878 AAN 13” and the “Auto Body Shop Epifasione” decal on the hatch add authentic rally details.\n\nThe accompanying metadata lists a full range of body kits and parts for the Peugeot 106 Mk1, including Rallye, XSI, and Maxi variants. Components such as carbon fiber bumpers, fiberglass fenders, Kevlar protectors, and polycarbonate windows are detailed with reference codes and prices. Complete kits for wide-body and Maxi configurations, as well as rally lamp pods and mounting hardware, are offered, all priced in euros excluding VAT and freight.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 106 S16/GTi facelift three-door hatch, narrow rounded rectangular lamps, sporty colour bumpers.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain second-series 106 lamps, real Maxi wide arches, deep rally bumper, roof vent, rear spoiler, white rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue red and yellow Peugeot Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "106",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-efa2c010-02a5-4e15-ad09-5f862bffa204.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/106.png",
-  "sourceSha256": "fb49837546265f56f5278fc173d16bdf69ad8a08f46c2e1e8c58a8e162b8a1d7",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8cc53c00-d419-47f7-b8e1-df039c016bbd.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/106-r2.png",
+  "sourceSha256": "3e6e30a91b4f50610f4c6ef010963d696dc0485cbba4c7ac425d7cb3d600c06b",
   "input": "tools/race-conversions/inputs/106.png",
   "output": "public/images/race-cars/106.png",
-  "sha256": "d7ea684bb430c3ee41e6f2804bbfcef7cd3c167b6c088134dddd07264e3af9bc",
+  "sha256": "2e4b3ca82fd2be57051b7041ee439610a902ed9823025556e54486878a0a2084",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/106/rosso.png",
-      "sha256": "0ec1f7effb1f7b89f0f052845726cd58975df87227660248030a0003990bddc4"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/106-web-0.img",
-      "sha256": "35d2ed7c14d39fdbef25ad960375ad73a0b32596ce1470a13fcc25960e7eed11"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/106/rosso.png": "0ec1f7effb1f7b89f0f052845726cd58975df87227660248030a0003990bddc4",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/106-reference.img": "e53cc1caeaf138531f25385b01d7915b030c716e2bb279b3b3a0cec181ca784d"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

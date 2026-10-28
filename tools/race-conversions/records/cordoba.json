@@ -1,50 +1,41 @@
 {
-  "classification": "inspired",
-  "candidate": "Córdoba WRC",
-  "livery": "yellow green and white Seat racing",
-  "bodywork": "real Cordoba WRC broad arches, rally front bumper, roof vent, large boot wing, white multi-spoke rally wheels",
+  "key": "cordoba",
+  "candidate": "Seat Cordoba WRC 1999",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Seat Cordoba WRC 1999. USER CORRECTION: Copy true Cordoba WRC body arches bumpers wing and real yellow Repsol Seat livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/cordoba/rosso.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/cordoba.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/cordoba/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/cordoba-reference.img",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/cordoba-extra-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "",
-      "page": "",
-      "title": "Fotografia originale del modello stradale · Seat Cordoba Gt",
-      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
-      "artist": "",
-      "license": ""
+      "url": "https://cdn-inveltcollection.arsy.cz/UserFiles/Product/Image/1651580911DSC03940.jpg",
+      "page": "https://www.inveltcollection.com/seat-cordoba-wrc/p-60/",
+      "title": "Seat Cordoba WRC | invelt Rallied & Raced (https://www.inveltcollection.com/seat-cordoba-wrc/p-60/)"
+    },
+    {
+      "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/assets/16601_126_250888_6fd0b1ac.jpg",
+      "page": "https://www.seatcocheshistoricos.es/SEATHistoricos/2000/CordobaWRCEvoI.php",
+      "title": "Córdoba WRC Evo 1 (https://www.seatcocheshistoricos.es/SEATHistoricos/2000/CordobaWRCEvoI.php)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy true Cordoba WRC body arches bumpers wing and real yellow Repsol Seat livery.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Seat Cordoba Gt, racing preparation referencing Córdoba WRC (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Seat Cordoba Gt. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Seat Cordoba first-generation facelift TWO-door notchback saloon as reference, not five-door Ibiza.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Cordoba WRC broad arches, rally front bumper, roof vent, large boot wing, white multi-spoke rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow green and white Seat racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "cordoba",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6612f8c3-5a47-4d20-85ed-cce75c5ec200.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/cordoba-r1.png",
-  "sourceSha256": "68426e84b0d71885e5a25b1c706a8fef6f2301243b177cd78799955e15a6fe06",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-713951af-09af-402a-a77a-7f81d4fec653.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/cordoba-r2.png",
+  "sourceSha256": "b3111015913ba650c3ef99fcc47de8e2331955e18739f1bb58766d9b436b1526",
   "input": "tools/race-conversions/inputs/cordoba.png",
   "output": "public/images/race-cars/cordoba.png",
-  "sha256": "8c2057b1dec4386e87059d5624e31fc3a16c9555046b850c6ea70c2d4fff5223",
+  "sha256": "4ea62fb9a872b6bd8b6627a5086d002d00c061e80ac1d333ab6316be5cf46a4c",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/cordoba/rosso.png",
-      "sha256": "1c0c34299608550f6c81488de259b1a4afa8e407c1cd8b16b0c3e730c68de0b4"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/cordoba.png",
-      "sha256": "f957b470246ca4a57e8ec5ab60e6f0b86956511d2c782f0a1d011b8870d157a3"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ],
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/cordoba/rosso.png": "1c0c34299608550f6c81488de259b1a4afa8e407c1cd8b16b0c3e730c68de0b4",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/cordoba-reference.img": "7353a0a13ddc9a4f317924d2f61612d02b6e99eef62d75b3d9296cf37c556618",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/cordoba-extra-reference.img": "f7818d43ce04a2a3c463bd067eadb947aa77d06d819aa7fdf3f3efb692ece047"
+  },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

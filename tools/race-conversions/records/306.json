@@ -1,12 +1,10 @@
 {
-  "classification": "historic",
-  "candidate": "306 Maxi",
-  "livery": "white blue red and yellow Peugeot Sport",
-  "bodywork": "actual Maxi broad arches, front cooling bumper, roof vent, hatch wing, white multi-spoke rally wheels",
+  "key": "306",
+  "candidate": "Peugeot 306 Maxi Kit Car 1997",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Peugeot 306 Maxi Kit Car 1997. USER CORRECTION: Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/306/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/306-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/306/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/306-reference.img"
   ],
   "referenceSources": [
     {
@@ -18,33 +16,22 @@
       "license": ""
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 306 Gti, racing preparation referencing 306 Maxi (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: A vendre 306 Maxi V1 - Voitures de course • GoToTheGrid  🏁. Its description: A striking yellow Peugeot 306 Maxi V1 is captured mid-stage on a winding, forest-lined tarmac road. The car’s livery features bold Motul branding on the hood and front bumper, alongside Garage Jenatton and VRAT logos. The number 29 is displayed on the windshield, indicating its competition entry.\n\nUnder the hood, this V1 chassis houses an EV7 engine upgraded with an EV9 crankshaft, delivering 291 hp at 9800 rpm. It’s paired with a revised X-TRAC 6-speed gearbox, V1 front suspension with V2 dampers, and V2 rear suspension. High-performance braking is provided by 355 mm Brembo 8-piston front calipers and 260 mm Alcon Peugeot Sport rear calipers. This rally-prepared machine is listed for sale in France, with price available on request.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 306 GTi three-door hatch, narrow swept front lamps and long single side door.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Maxi broad arches, front cooling bumper, roof vent, hatch wing, white multi-spoke rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue red and yellow Peugeot Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "306",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-59cd9c87-edd8-4e04-b87d-a15749baa231.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/306-r1.png",
-  "sourceSha256": "2ef865fadeddbaa2429907aa01cc0ba8cbf32a6f77005e3718f351e99f5c17a7",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f57e9a00-729f-43eb-8091-e0ef9760ae7e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/306-r2.png",
+  "sourceSha256": "fdc6851bf99b966054ff38846ae97815f5de4fddd2c7b0d8c804b9bac64c41a9",
   "input": "tools/race-conversions/inputs/306.png",
   "output": "public/images/race-cars/306.png",
-  "sha256": "6982d9ec20b3d3a0ac2df42b7eb873d88fc3b630d21ed69b29b9964724784d3d",
+  "sha256": "47b3e057858d154707bffac2f0f99717ef5e8c3e1091c57e50f87aa28bdf689b",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/306/rosso.png",
-      "sha256": "660bc52dd436aff1ee29c934609ee8696a3a3ac1ebdcf976ef1d1f5bae63334b"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/306-web-0.img",
-      "sha256": "dfcbc85ad04646ff22ca823d2bd4f765b53237f9896093505e7a69ae74f39ffc"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ],
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/306/rosso.png": "660bc52dd436aff1ee29c934609ee8696a3a3ac1ebdcf976ef1d1f5bae63334b",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/306-reference.img": "dfcbc85ad04646ff22ca823d2bd4f765b53237f9896093505e7a69ae74f39ffc"
+  },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

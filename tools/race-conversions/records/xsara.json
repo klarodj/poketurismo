@@ -1,50 +1,34 @@
 {
-  "classification": "historic",
-  "candidate": "Xsara Kit Car",
-  "livery": "white red and blue Citroën Sport",
-  "bodywork": "real F2 Kit Car wide arches, deep front intakes, roof vent and roof spoiler, white racing wheels; not later C4",
+  "key": "xsara",
+  "candidate": "Citroen Xsara Kit Car 1999 Philippe Bugalski",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Citroen Xsara Kit Car 1999 Philippe Bugalski. USER CORRECTION: Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/xsara/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/xsara-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/xsara/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/xsara-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://antilag.files.wordpress.com/2018/04/hjxtekk.jpg",
-      "page": "https://www.12cilindros.es/citroen-xsara-kit-car-retrospectiva-golden-age-parte-1/",
-      "title": "Citroën Xsara Kit Car retrospectiva: Golden Age Parte 1. -",
-      "description": "A white Citroën Xsara Kit Car is parked on a narrow, winding road bordered by a stone wall. The car’s rear wing, flared wheel arches, and slick rally tires emphasize its competition‑ready setup. Prominent Michelin and Total branding on the bumper and sides highlight its sponsorship livery, while the red double‑chevron logo on the roof and “3618 W 92” license plate identify its French origins.\n\nDeveloped under F2 Kit Car regulations in the late 1990s, the Xsara featured a 2.0‑liter, 280 hp engine and weighed just 960 kg. It achieved national titles in France and Spain with drivers Philippe Bugalski and Jesús “Chus” Puras, and scored notable WRC asphalt results at Rally Catalunya and Tour de Corse. The car’s advanced braking system, differential, and traction control made it a formidable asphalt specialist before FIA rule changes ended the Kit Car era.",
-      "artist": "",
-      "license": ""
+      "url": "https://fotografias.lasexta.com/clipping/cmsimages02/2019/10/23/8723C99C-4EFD-4E2C-9A2E-6089A9D2957C/69.jpg?crop=1959%2C1102%2Cx127%2Cy0&format=jpg&height=720&optimize=low&width=1280",
+      "page": "https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html",
+      "title": "Rally Catalunya 1999: Philippe Bugalski y la histórica victoria del Citroën Xsara Kit Car (https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html)"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Citroen Xsara VTS, racing preparation referencing Xsara Kit Car (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Citroën Xsara Kit Car retrospectiva: Golden Age Parte 1. -. Its description: A white Citroën Xsara Kit Car is parked on a narrow, winding road bordered by a stone wall. The car’s rear wing, flared wheel arches, and slick rally tires emphasize its competition‑ready setup. Prominent Michelin and Total branding on the bumper and sides highlight its sponsorship livery, while the red double‑chevron logo on the roof and “3618 W 92” license plate identify its French origins.\n\nDeveloped under F2 Kit Car regulations in the late 1990s, the Xsara featured a 2.0‑liter, 280 hp engine and weighed just 960 kg. It achieved national titles in France and Spain with drivers Philippe Bugalski and Jesús “Chus” Puras, and scored notable WRC asphalt results at Rally Catalunya and Tour de Corse. The car’s advanced braking system, differential, and traction control made it a formidable asphalt specialist before FIA rule changes ended the Kit Car era.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: First-generation Citroen Xsara VTS three-door coupe hatch, pre-facelift lamps as reference.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real F2 Kit Car wide arches, deep front intakes, roof vent and roof spoiler, white racing wheels; not later C4. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white red and blue Citroën Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "xsara",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-330e232d-8e49-424f-bb0f-6771223f235e.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/xsara.png",
-  "sourceSha256": "ffdf84786485cb1a173afd7c663513a2c56d2dbde7ad89706dfb1f91444d272d",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7a8437cb-ef2a-4f95-9ca1-1e9c358ec28f.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/xsara-r2.png",
+  "sourceSha256": "92f556e8d367fe092cd7247a1cb18bf4df87eaca0edeb66320068d44d5d3f3b4",
   "input": "tools/race-conversions/inputs/xsara.png",
   "output": "public/images/race-cars/xsara.png",
-  "sha256": "9c55de58f1df09f6f13848a530f145a2ef25e8ab79398b4fc8a2a82c50f08ee7",
+  "sha256": "8f83643cd8866c21e7f8ac0e022975f15d19993bbf6ea429d16b492ec984e365",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/xsara/rosso.png",
-      "sha256": "a8372adf4cfd5d3624cdb20a28d8e22290b64dc667c56d10b8c21f34ecc8c787"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/xsara-web-0.img",
-      "sha256": "bc6b47906572d7080839f454ebeabae2af78c495305bc556ba4a61b3bafd8553"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/xsara/rosso.png": "a8372adf4cfd5d3624cdb20a28d8e22290b64dc667c56d10b8c21f34ecc8c787",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/xsara-reference.img": "2d44cc59285916ce71f7914557ccc9034b969201328f57ae6de925da2b0273da"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

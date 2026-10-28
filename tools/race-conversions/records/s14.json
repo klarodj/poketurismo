@@ -1,50 +1,34 @@
 {
-  "classification": "inspired",
-  "candidate": "200SX S14 · N1 Endurance",
-  "livery": "blue white and red Nissan racing bands",
-  "bodywork": "retain S14 coupe shell and approved nose generation, deeper cooling bumper, wide arch lips, skirts, flat rear wing, silver racing wheels",
+  "key": "s14",
+  "candidate": "Nissan Silvia S14 Xanavi JGTC 1998",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Nissan Silvia S14 Xanavi JGTC 1998. USER CORRECTION: Copy actual Xanavi S14 JGTC widebody, spoiler, bumper, vents, wheels and actual livery. No later S15. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/s14/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/s14-web-2.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/s14/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/s14-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://modified1.com/photos/project/676/4528/origin.jpg",
-      "page": "https://modified1.com/car-builds/nissan/s14/676/",
-      "title": "Nissan S14 custom wheels Enkei RPF1 17x9.5, ET -2, tire size 235/40 R17. 17x10.0 ET+18 235/40 R17",
-      "description": "A 1997 Nissan S14 coupe is showcased in bright white paint, rolling on green Enkei RPF1 wheels. The front wheels measure 17x9.5 inches with an effective -2mm offset and 5.17\" backspacing, while the rear wheels are 17x10.0 inches with a +18mm offset and 6.21\" backspacing. Wrapped in Maxxis MA-Z1 Drift 235/40 R17 tires, the setup delivers a classic deep-dish drift stance.\n\nUnderneath, KTS coilovers, SPL tension rods, outer tie rod ends, TEIN Z33 inner tie rods with spacers, and SPL subframe spacers refine the suspension geometry. A NISMO power brace adds chassis rigidity, and Z32 30mm front brakes improve stopping power. Inside, Sparco Pro2000 seats and harnesses are visible, along with a bold \"15\" decal and \"D2K\" marking on the windshield, highlighting its track-focused modifications.",
-      "artist": "",
-      "license": ""
+      "url": "https://www.nissan.co.jp/HERITAGE/COMMON/IMAGES/CAR/2400/150.jpg",
+      "page": "https://www.nissan.co.jp/HERITAGE/DETAIL/150.html",
+      "title": "日産： NISSAN HERITAGE COLLECTION｜ザナヴィ・シルビア 1998JGTC No.15 (https://www.nissan.co.jp/HERITAGE/DETAIL/150.html)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy actual Xanavi S14 JGTC widebody, spoiler, bumper, vents, wheels and actual livery. No later S15.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Nissan 200SX S14, racing preparation referencing 200SX S14 · N1 Endurance (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Nissan S14 custom wheels Enkei RPF1 17x9.5, ET -2, tire size 235/40 R17. 17x10.0 ET+18 235/40 R17. Its description: A 1997 Nissan S14 coupe is showcased in bright white paint, rolling on green Enkei RPF1 wheels. The front wheels measure 17x9.5 inches with an effective -2mm offset and 5.17\" backspacing, while the rear wheels are 17x10.0 inches with a +18mm offset and 6.21\" backspacing. Wrapped in Maxxis MA-Z1 Drift 235/40 R17 tires, the setup delivers a classic deep-dish drift stance.\n\nUnderneath, KTS coilovers, SPL tension rods, outer tie rod ends, TEIN Z33 inner tie rods with spacers, and SPL subframe spacers refine the suspension geometry. A NISMO power brace adds chassis rigidity, and Z32 30mm front brakes improve stopping power. Inside, Sparco Pro2000 seats and harnesses are visible, along with a bold \"15\" decal and \"D2K\" marking on the windshield, highlighting its track-focused modifications.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Nissan S14 Silvia facelift angular fixed headlamps shown, notchback two-door coupe, subtle original rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain S14 coupe shell and approved nose generation, deeper cooling bumper, wide arch lips, skirts, flat rear wing, silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue white and red Nissan racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "s14",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ec90007a-9d3f-4d6d-ac04-d46523f5c5af.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/s14.png",
-  "sourceSha256": "b035a71eb2444e5c43113d3a1f5a0f0e0951a2549e0359b3b54a1ba416a1ac55",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-89a736d2-4d62-4047-9b11-99123fc5d171.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/s14-r2.png",
+  "sourceSha256": "14d8ada7de02251a81427c5c2b4e561386b47286cc4325243e20d6c769e83fda",
   "input": "tools/race-conversions/inputs/s14.png",
   "output": "public/images/race-cars/s14.png",
-  "sha256": "f70c76eb4e5f67359a9a6e0f432f049eb739045a6e9740956323323276514bf7",
+  "sha256": "859d06ca99424076f004333e10eb8c813ccb2f58b4b5419b708a797ec27ab302",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/s14/rosso.png",
-      "sha256": "6ae622058da94ef2f521275702e7fba1665fbaaebb31b0d7056579c1b1918043"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/s14-web-2.img",
-      "sha256": "2524ba674716cf36a2677f20f9120a66cd1a66a70cf72a197289fa914a20a7f3"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/s14/rosso.png": "6ae622058da94ef2f521275702e7fba1665fbaaebb31b0d7056579c1b1918043",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/s14-reference.img": "41fddb15ad4c47cc86ccc9330611c7cd5ea33e63449c804619720313b97052df"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

@@ -1,50 +1,34 @@
 {
-  "classification": "inspired",
-  "candidate": "Delta HF Integrale 16V Gruppo A",
-  "livery": "white Martini blue and red bands",
-  "bodywork": "retain earlier Integrale body and correct squared rear, rally bumper and arches, modest hatch wing, white compact wheels and mud flaps",
+  "key": "delta16",
+  "candidate": "Lancia Delta Integrale 16v Sanremo 1989 Martini",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Lancia Delta Integrale 16v Sanremo 1989 Martini. USER CORRECTION: Copy actual red Martini Sanremo 1989 livery. Keep EXACT stock original 16V bumper and arches unchanged, no extra body kit. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/delta16/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/delta16-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/delta16/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/delta16-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://img.pistonheads.com/Fullsize/lancia/delta/hf-int-16v/lancia-delta-hf-int-16v-S4830109-4.jpg?resize=1000",
-      "page": "https://www.pistonheads.com/buy/lancia/delta",
-      "title": "Used Lancia Delta cars for sale - PistonHeads UK",
-      "description": "A grey Lancia Delta HF Integrale 16v stands on a gravel driveway framed by dense green foliage. The rear of the car features its signature rectangular taillights, dual exhaust outlets, and a centrally mounted tow hook. A UK registration plate, H457 GRX, is affixed between the Lancia badge and the model designation. The HF Integrale 16v badge highlights the car’s performance pedigree, while the overall scene suggests a casual outdoor setting, likely for a sales listing or enthusiast showcase.\n\nThis photograph appears on a PistonHeads UK listing for used Lancia Delta models, where private sellers and dealers advertise these iconic rally-bred hatchbacks. The image emphasizes the vehicle’s condition and distinctive styling cues to attract potential buyers.",
-      "artist": "",
-      "license": ""
+      "url": "https://i.ebayimg.com/images/g/8UQAAOSwgsdhxZkv/s-l500.jpg",
+      "page": "https://www.ebay.fr/itm/403373590690",
+      "title": "Photo A.034662 LANCIA DELTA INTEGRALE 16V BIASION-SIVIERO SANREMO RALLY 1989  | eBay (https://www.ebay.fr/itm/403373590690)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy actual red Martini Sanremo 1989 livery. Keep EXACT stock original 16V bumper and arches unchanged, no extra body kit.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lancia Delta HF 16v, racing preparation referencing Delta HF Integrale 16V Gruppo A (1989). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Used Lancia Delta cars for sale - PistonHeads UK. Its description: A grey Lancia Delta HF Integrale 16v stands on a gravel driveway framed by dense green foliage. The rear of the car features its signature rectangular taillights, dual exhaust outlets, and a centrally mounted tow hook. A UK registration plate, H457 GRX, is affixed between the Lancia badge and the model designation. The HF Integrale 16v badge highlights the car’s performance pedigree, while the overall scene suggests a casual outdoor setting, likely for a sales listing or enthusiast showcase.\n\nThis photograph appears on a PistonHeads UK listing for used Lancia Delta models, where private sellers and dealers advertise these iconic rally-bred hatchbacks. The image emphasizes the vehicle’s condition and distinctive styling cues to attract potential buyers.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Lancia Delta HF Integrale 16v five-door hatch, four circular lights and moderate box arches, distinct from later Evoluzione.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain earlier Integrale body and correct squared rear, rally bumper and arches, modest hatch wing, white compact wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white Martini blue and red bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "delta16",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ef73335a-4d8b-4369-a4d8-f4e83ed903a7.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/delta16.png",
-  "sourceSha256": "1b1394066c22dc814b3e99f39ecb9548322964bcb447c2437eed6ed0d4db4e8e",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-63b69385-3f9f-4c05-8dbb-ac0b24e9eb39.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/delta16-r2.png",
+  "sourceSha256": "6e0e75a3c35f5549577d05d3773731f175f97468dad83c53862299f1cdc90770",
   "input": "tools/race-conversions/inputs/delta16.png",
   "output": "public/images/race-cars/delta16.png",
-  "sha256": "9227b3efe757b58649dbe392f9f9688382ad8ebbbc1e86af0925592a530af79b",
+  "sha256": "ed99b803849a0dbe1012d6d4459ee968075c7e242bed3c4ac470e08964ce377b",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/delta16/rosso.png",
-      "sha256": "3d63f28c2943e7bdddf863c4286f4f0219688988070ff3ff177dc192876a8fa6"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/delta16-web-0.img",
-      "sha256": "e6cf8cab99c35375b0524517fb6ac74234733fa986734174550e81e5adad208f"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/delta16/rosso.png": "3d63f28c2943e7bdddf863c4286f4f0219688988070ff3ff177dc192876a8fa6",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/delta16-reference.img": "a753151e93e600e6f358149f6aef6b78cb9b51c34e29c6f7335e8cb685379650"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

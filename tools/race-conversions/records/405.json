@@ -1,50 +1,34 @@
 {
-  "classification": "inspired",
-  "candidate": "405 Mi16 Superturismo",
-  "livery": "white blue and red Peugeot racing bands",
-  "bodywork": "retain 405 FOUR-door road saloon, touring front bumper, mild flares, skirts and boot wing, white racing wheels; not two-door Pikes Peak prototype",
+  "key": "405",
+  "candidate": "Peugeot 405 BTCC 1995 Total",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Peugeot 405 BTCC 1995 Total. USER CORRECTION: Copy exact 405 BTCC supertouring bumpers, low stance, large white wheels, wing and real livery. No T16 Pikes Peak. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/405/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/405-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/405/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/405-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://cdn.prod.website-files.com/637dd83cd93444d7a965962c/63d7ee7e6930949094ab98e7_Peugeot%2520405%2520MI16%2520AR.jpeg",
-      "page": "https://www.mecanicus.com/news/la-peugeot-405-mi16-rien-a-voir-avec-une-gti",
-      "title": "La Peugeot 405 MI16, rien à voir avec une GTI",
-      "description": "The Peugeot 405 MI16, introduced in 1987, combined Pininfarina styling with a 1.9‑liter, 16‑valve engine delivering 160 hp. Capable of 220 km/h and 0–100 km/h in 9 seconds, it offered a refined alternative to hot hatches. The sedan’s understated rear spoiler, black side moldings, and 14‑inch alloy wheels underscored its blend of elegance and sportiness.\n\nOver its production run, the MI16 evolved with a 4x4 variant, a facelift in 1992, and a final Le Mans special edition in 1994. Despite strong competition from German rivals and Citroën’s turbocharged models, the 405 MI16 remains a celebrated example of French automotive engineering from the late 1980s and early 1990s.",
-      "artist": "",
-      "license": ""
+      "url": "https://assets.carandclassic.com/listing-assets/peugeot/405-mi-16v/1993-peugeot-405-mi-16v-12685235531-8W1Mmn/WNWzkWpaOOg18cFHkenD5RC8tF01QoomnpQtqAA7.jpg?fit=fillmax&h=1200&ixlib=php-4.1.0&q=85&s=eeca10686e43248e2c16b7a0b54fb0fa&w=1200",
+      "page": "https://www.carandclassic.com/auctions/1993-peugeot-405-mi-16v-8W1Mmn",
+      "title": "1993 Peugeot 405 Mi 16V For Sale By Auction (https://www.carandclassic.com/auctions/1993-peugeot-405-mi-16v-8W1Mmn)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy exact 405 BTCC supertouring bumpers, low stance, large white wheels, wing and real livery. No T16 Pikes Peak.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 405 T16, racing preparation referencing 405 Mi16 Superturismo (1994). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: La Peugeot 405 MI16, rien à voir avec une GTI. Its description: The Peugeot 405 MI16, introduced in 1987, combined Pininfarina styling with a 1.9‑liter, 16‑valve engine delivering 160 hp. Capable of 220 km/h and 0–100 km/h in 9 seconds, it offered a refined alternative to hot hatches. The sedan’s understated rear spoiler, black side moldings, and 14‑inch alloy wheels underscored its blend of elegance and sportiness.\n\nOver its production run, the MI16 evolved with a 4x4 variant, a facelift in 1992, and a final Le Mans special edition in 1994. Despite strong competition from German rivals and Citroën’s turbocharged models, the 405 MI16 remains a celebrated example of French automotive engineering from the late 1980s and early 1990s.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 405 T16 four-door saloon, squared Pininfarina body, rectangular lamps and modest boot spoiler.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain 405 FOUR-door road saloon, touring front bumper, mild flares, skirts and boot wing, white racing wheels; not two-door Pikes Peak prototype. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Peugeot racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "405",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2e56d0cc-bf27-441d-8db6-265a1f3ac31a.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/405-r1.png",
-  "sourceSha256": "57c2a0bc5f52dd74f2f59d41324ccc6edbda0e0e9ff9a57d301c38bc6553d220",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b834e236-9dc2-4cb3-809b-8125df331b4a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/405-r2.png",
+  "sourceSha256": "0399ebd68b42e8b938312afb981f778da949744b61cff97428ebb8ec11f59688",
   "input": "tools/race-conversions/inputs/405.png",
   "output": "public/images/race-cars/405.png",
-  "sha256": "d53dabecd9c408667b2af4bc0473048a5beacfe178c85c1c0a02d5f84f34e223",
+  "sha256": "cd7970282a1f3c1ddd657a1d3653adda7e69d920fc68927053398e4d578741ad",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/405/rosso.png",
-      "sha256": "1e263a556648a3cd95f185ec6e29fde2cff01fdfd0204bd90b37553e0326a909"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/405-web-0.img",
-      "sha256": "1c04286bbf6ffef3ce3c48826bf069abef5fc7df91de2309f41ec9425f1adcd9"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ],
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/405/rosso.png": "1e263a556648a3cd95f185ec6e29fde2cff01fdfd0204bd90b37553e0326a909",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/405-reference.img": "31cd45cb6b4af5514550af266349aa99b981d9da230e99d16df20fcea3ca736f"
+  },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

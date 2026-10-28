@@ -1,50 +1,34 @@
 {
-  "classification": "historic",
-  "candidate": "Laguna Superturismo BTCC",
-  "livery": "green yellow and white Williams Renault racing",
-  "bodywork": "real Laguna I touring front splitter and bumper, arch lips, side skirts, large rear wing and white wheels; original Laguna lamp generation preserved",
+  "key": "laguna",
+  "candidate": "Renault Laguna BTCC 1997 Nescafe",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Renault Laguna BTCC 1997 Nescafe. USER CORRECTION: Copy EXACT actual green Nescafe Blend37 Laguna BTCC photograph including long supertouring bumper, gold multispoke racing wheels, correct wing and actual green livery. Do not replace with yellow blue. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/laguna/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/laguna-commons-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/laguna/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/laguna-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/1999_BTCC_Renault_Laguna_Jean-Christophe_Boullion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "page": "https://commons.wikimedia.org/wiki/File:1999_BTCC_Renault_Laguna_Jean-Christophe_Boullion.jpg",
-      "title": "File:1999 BTCC Renault Laguna Jean-Christophe Boullion.jpg",
-      "description": "Jean-Christophe Boullion 1999 BTCC Reuault Laguna",
-      "artist": "HP111999",
-      "license": "CC BY-SA 4.0"
+      "url": "https://cdn.rmsothebys.com/1/f/0/2/7/1/1f0271fb0f2d0f608071c87fa609dd23024fbf23.webp",
+      "page": "https://rmsothebys.com/auctions/lf16/lots/r114-1997-renault-laguna-btcc-super-touring/",
+      "title": "1997 Renault Laguna BTCC Super Touring | London 2016 | RM  Sotheby's (https://rmsothebys.com/auctions/lf16/lots/r114-1997-renault-laguna-btcc-super-touring/)"
     }
   ],
-  "photoReview": "Real competition car visually checked against approved road model; keep road identity where variants differ",
+  "userCorrection": "Copy EXACT actual green Nescafe Blend37 Laguna BTCC photograph including long supertouring bumper, gold multispoke racing wheels, correct wing and actual green livery. Do not replace with yellow blue.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault Laguna, racing preparation referencing Laguna Superturismo BTCC (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL RACING PHOTOGRAPH: File:1999 BTCC Renault Laguna Jean-Christophe Boullion.jpg. Its description: Jean-Christophe Boullion 1999 BTCC Reuault Laguna. Use the actual period racing hardware and bodywork rather than inventing generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Renault Laguna I PHASE 1 five-door liftback, exact dark 1997 original. Correct nose/grille: extremely slim body-colour smooth bridge between elongated rounded headlights, small Renault diamond centred above the slit; narrow paired horizontal black vents either side/under the emblem, NOT a wide black honeycomb mouth between headlights and NOT Clio grille. Broad horizontal lower bumper intake and separate fog-light recesses per front photo. Preserve long flowing Laguna I liftback silhouette and full-size car proportions.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Laguna I touring front splitter and bumper, arch lips, side skirts, large rear wing and white wheels; original Laguna lamp generation preserved. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is green yellow and white Williams Renault racing. Keep small sponsor/number panels coherent with the historical racing reference; simplify tiny lettering into clean pixel marks without UI text. Where the real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "laguna",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-dbb784c5-2fca-447a-a8a4-3128d4c6ef4e.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/laguna.png",
-  "sourceSha256": "0370a452abe8e4de02fadeff024cdfb7d02dfa4511a1555436b6b81581772fff",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c6ded0a1-0467-41ca-b8bd-4a533d0c24d7.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/laguna-r2.png",
+  "sourceSha256": "917d5d5ae1311a2619b0a04115259af0e6cd48943498f4e4ccda08faf7d8dffe",
   "input": "tools/race-conversions/inputs/laguna.png",
   "output": "public/images/race-cars/laguna.png",
-  "sha256": "06c9e13e3ccd7dac92537a7fd5d8ac67e8c3de779a954918f9346989e02e7973",
+  "sha256": "47b81abd6014cebedfe7b49dd5a1a8da601caa9208abeac5a8363916c42a01da",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/laguna/rosso.png",
-      "sha256": "8a91f87f44c3a6dbc4645e112a4bd381b88e8fc423114811a268ad46d833f8b0"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/laguna-commons-0.img",
-      "sha256": "d08a74c6d68a6b83c81e0ba4be592e1e7fe4c53e1269f657c9b1eab9314291ca"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/laguna/rosso.png": "8a91f87f44c3a6dbc4645e112a4bd381b88e8fc423114811a268ad46d833f8b0",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/laguna-reference.img": "8c19ca2aed3c6ed22d5e36f389880c941247a1ae2c94f5fa7734a3a4e982cb59"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

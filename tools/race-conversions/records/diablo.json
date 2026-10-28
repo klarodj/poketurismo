@@ -1,50 +1,34 @@
 {
-  "classification": "historic",
-  "candidate": "Diablo GTR Supertrofeo",
-  "livery": "yellow and black Lamborghini racing",
-  "bodywork": "real GTR deeper front bumper, roof intake, wider fenders, large rear wing, black or gold centre-lock racing wheels",
+  "key": "diablo",
+  "candidate": "Lamborghini Diablo GTR Supertrophy 2000",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is EDIT TARGET, keep every unrequested part unchanged. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Lamborghini Diablo GTR Supertrophy 2000. USER CORRECTION: Keep GTR body, add actual period racing sponsor livery from real photo. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/diablo/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/diablo-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/race-cars/diablo.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/diablo-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://s3.us-east-2.amazonaws.com/prod.mm.com/uploads/2024/12/27/03_thumb.jpg",
-      "page": "https://classicmotorsports.com/cars-for-sale/diablo-gtr-one-of-only-30-made-for-lamborghinis-one-make-series-2000-diablo-gtr/",
-      "title": "   | Lamborghini Diablo GTR | Cars for Sale | Classic Motorsports",
-      "description": "A rare Giallo Fly Diablo GTR is presented in a clean studio environment, emphasizing its aggressive rear design. The wide bodywork, center‑lock Speedline wheels, and large chassis‑mounted spoiler underscore its track‑focused upgrades over the standard Diablo GT. Badges reading “Lamborghini” and “GTR” flank the rear grille, and a “BINGO” plate hints at its auction listing.\n\nBuilt for Lamborghini’s one‑make Supertrophy series in 2000, this example—chassis No. 18—retains its original 6.0‑liter V12, now tuned to nearly 600 horsepower. With only 6,770 kilometers on the odometer, it has passed through Germany, the United States, and Japan before being offered by Bingo Co. at an estimated ¥110,000,000–¥130,000,000 (approximately $697,228–$823,997 USD).",
-      "artist": "",
-      "license": ""
+      "url": "https://www.dkeng.co.uk/sales_images/1719788400/large_1720707260_bloxhamresize_5.jpg",
+      "page": "https://www.dkeng.co.uk/ferrari-sales/1974/blue_chip_competition_cars/lamborghini_diablo_gtr.html",
+      "title": "Lamborghini Diablo GTR for sale - Vehicle Sales - DK Engineering (https://www.dkeng.co.uk/ferrari-sales/1974/blue_chip_competition_cars/lamborghini_diablo_gtr.html)"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Keep GTR body, add actual period racing sponsor livery from real photo.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lamborghini Diablo, racing preparation referencing Diablo GTR Supertrofeo (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork:    | Lamborghini Diablo GTR | Cars for Sale | Classic Motorsports. Its description: A rare Giallo Fly Diablo GTR is presented in a clean studio environment, emphasizing its aggressive rear design. The wide bodywork, center‑lock Speedline wheels, and large chassis‑mounted spoiler underscore its track‑focused upgrades over the standard Diablo GT. Badges reading “Lamborghini” and “GTR” flank the rear grille, and a “BINGO” plate hints at its auction listing.\n\nBuilt for Lamborghini’s one‑make Supertrophy series in 2000, this example—chassis No. 18—retains its original 6.0‑liter V12, now tuned to nearly 600 horsepower. With only 6,770 kilometers on the odometer, it has passed through Germany, the United States, and Japan before being offered by Bingo Co. at an estimated ¥110,000,000–¥130,000,000 (approximately $697,228–$823,997 USD).. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Lamborghini Diablo circa 2000 as reference, low wedge and broad rear haunches; match reference headlamp treatment, no Aventador.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real GTR deeper front bumper, roof intake, wider fenders, large rear wing, black or gold centre-lock racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow and black Lamborghini racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "diablo",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-36563cd6-c08d-4c0e-bfa1-ca344df382fb.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/diablo.png",
-  "sourceSha256": "3ae40cfb1038a35343ff908c8c07710c856766294a9085bddb0b0a0f7f6f9ad1",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-a7e81fe6-c1f5-4709-a523-c8af77395215.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/diablo-r2.png",
+  "sourceSha256": "6d02cd996b411be8ee048b8cd7cadc6f4cf2b89b4c39ea9c3956bdc7bf8cfb85",
   "input": "tools/race-conversions/inputs/diablo.png",
   "output": "public/images/race-cars/diablo.png",
-  "sha256": "d471800140dc5adddb4fccf8debf0c2d17767139c00e5c6c5069a60d85288370",
+  "sha256": "d4faff7bbfdc3eccf9f171bf93e342ac70696c58ca49964f68e0193b668610dd",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/diablo/rosso.png",
-      "sha256": "17792acca6e8de44f0085dbd2e86dbbdf323f1c5bb7ba111410e8d1721023a43"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/diablo-web-0.img",
-      "sha256": "2e17db9dea649d31b2ff72d0d09d1031e8844cac099d98b836fc9ca8c049da52"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/race-cars/diablo.png": "d4faff7bbfdc3eccf9f171bf93e342ac70696c58ca49964f68e0193b668610dd",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/diablo-reference.img": "af855ee39308d5fc611cf62f5e6a90242d85672825d3f1fc8acec15b2a77ec50"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

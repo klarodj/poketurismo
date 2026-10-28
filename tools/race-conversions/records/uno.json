@@ -1,50 +1,34 @@
 {
-  "classification": "inspired",
-  "candidate": "Uno Turbo Gruppo A",
-  "livery": "white with red blue Fiat Auto Corse",
-  "bodywork": "real Uno Turbo proportions and lamp generation retained, period bumper and small arch flares, low roof spoiler, silver rally wheels and mud flaps",
+  "key": "uno",
+  "candidate": "Fiat Uno Turbo Gruppo A Totip rally",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Fiat Uno Turbo Gruppo A Totip rally. USER CORRECTION: Copy Totip white orange green rally livery and actual production-based group A body, no invented widebody. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/uno/rosso.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/uno.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/uno/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/uno-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "",
-      "page": "",
-      "title": "Fotografia originale del modello stradale · Fiat Uno Turbo",
-      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
-      "artist": "",
-      "license": ""
+      "url": "https://images.everyeye.it/img-notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-v4-745975-1280x720.webp",
+      "page": "https://auto.everyeye.it/notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-745975.html",
+      "title": "Fiat Uno Turbo Rally, la storia della Gr. A preparata a fianco della Lancia Delta S4 (https://auto.everyeye.it/notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-745975.html)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy Totip white orange green rally livery and actual production-based group A body, no invented widebody.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Fiat Uno Turbo, racing preparation referencing Uno Turbo Gruppo A (1986). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Fiat Uno Turbo. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Fiat Uno Turbo first-series shape in reference, three doors, rectangular headlights and upright tail.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Uno Turbo proportions and lamp generation retained, period bumper and small arch flares, low roof spoiler, silver rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red blue Fiat Auto Corse. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "uno",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-bcf16a23-c23f-4448-9db8-7f1b98e9ca30.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/uno.png",
-  "sourceSha256": "3c26a1bd98dcb67e0bcb7784e275a8e872a3e42cf21cf55152747b85d475e077",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-67b9b97e-032b-49de-9b66-0909021fe864.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/uno-r2.png",
+  "sourceSha256": "2a9d2988fd7d21dcf4c74676499846c13ba73dfaf392713a439bfae8c2527097",
   "input": "tools/race-conversions/inputs/uno.png",
   "output": "public/images/race-cars/uno.png",
-  "sha256": "a5d15e78a73c506e7e666ea4176789907202883a18b5dc9842a0e9f698c5256a",
+  "sha256": "b7fb9cb366bce6229895cb245f4a93ccc32433f0fc516671c2fdee2674701af3",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/uno/rosso.png",
-      "sha256": "4424476f72cd3221a1429c0ecf62623d9e5100700d6764024d6728e886a9c3fa"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/uno.png",
-      "sha256": "67b4e6345a2eff0209db4cdacc0ad0d5022cf26d82481b7d5cd9b226b66bceb1"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/uno/rosso.png": "4424476f72cd3221a1429c0ecf62623d9e5100700d6764024d6728e886a9c3fa",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/uno-reference.img": "823e71c5b4ccc4f79f5c2181372d5e3bf767c772cdc68c68427c3370b1295b6c"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

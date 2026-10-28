@@ -1,50 +1,34 @@
 {
-  "classification": "prototype",
-  "candidate": "288 GTO Evoluzione",
-  "livery": "Rosso Corsa with black aero",
-  "bodywork": "real Evoluzione prototype body, very wide arch extensions, vented front and rear body, deep air dam and broad fixed rear wing; documented prototype, not a race winner",
+  "key": "288",
+  "candidate": "Ferrari 288 GTO Evoluzione",
+  "prompt": "Use case: precise-object-edit. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is EDIT TARGET, keep every unrequested part unchanged. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Ferrari 288 GTO Evoluzione. USER CORRECTION: Keep current body geometry; add credible period Agip, Magneti Marelli, Goodyear sponsor livery. Fictional livery explicitly declared. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/288/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/288-web-1.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/race-cars/288.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/288-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://www.topcarrating.com/ferrari/1986-ferrari-288-gto-evoluzione-3.jpg",
-      "page": "https://www.topcarrating.com/1986-ferrari-288-gto-evoluzione.php",
-      "title": "1986 Ferrari 288 GTO Evoluzione - price and specifications",
-      "description": "The 1986 Ferrari 288 GTO Evoluzione stands out with its vivid red paint, wide rear fenders, and large adjustable rear wing. Its louvered engine cover and side vents underscore the car’s race-bred heritage, while polished multi-piece wheels complete the aggressive look. Parked on a smooth asphalt surface, the supercar’s aerodynamic enhancements and sculpted bodywork are on full display.\n\nUnder the hood, the Evoluzione is powered by a 2.9‑liter twin‑turbo V8 producing 650 hp, enabling a top speed of 370 km/h (230 mph) and a 0–100 km/h sprint in 4.1 seconds. Weighing 1114 kg, it achieves a power-to-weight ratio of 584 hp per tonne. Priced around $2 million, this limited-run model represents one of Ferrari’s most extreme homologation specials, bridging the gap between road car and track weapon.",
-      "artist": "",
-      "license": ""
+      "url": "https://soymotor.com/sites/default/files/usuarios/redaccion/portal/jmvinuesa/ferrari-288-gto-evoluzione.jpg",
+      "page": "https://soymotor.com/coches/noticias/ferrari-288-gto-964921",
+      "title": "Ferrari 288 GTO: que comiencen los superdeportivos | SoyMotor.com (https://soymotor.com/coches/noticias/ferrari-288-gto-964921)"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Keep current body geometry; add credible period Agip, Magneti Marelli, Goodyear sponsor livery. Fictional livery explicitly declared.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ferrari 288 Gto, racing preparation referencing 288 GTO Evoluzione (1986). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1986 Ferrari 288 GTO Evoluzione - price and specifications. Its description: The 1986 Ferrari 288 GTO Evoluzione stands out with its vivid red paint, wide rear fenders, and large adjustable rear wing. Its louvered engine cover and side vents underscore the car’s race-bred heritage, while polished multi-piece wheels complete the aggressive look. Parked on a smooth asphalt surface, the supercar’s aerodynamic enhancements and sculpted bodywork are on full display.\n\nUnder the hood, the Evoluzione is powered by a 2.9‑liter twin‑turbo V8 producing 650 hp, enabling a top speed of 370 km/h (230 mph) and a 0–100 km/h sprint in 4.1 seconds. Weighing 1114 kg, it achieves a power-to-weight ratio of 584 hp per tonne. Priced around $2 million, this limited-run model represents one of Ferrari’s most extreme homologation specials, bridging the gap between road car and track weapon.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ferrari 288 GTO closed coupe, pop-up headlamps closed, paired low round fog lights, sculpted rear quarter intakes.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Evoluzione prototype body, very wide arch extensions, vented front and rear body, deep air dam and broad fixed rear wing; documented prototype, not a race winner. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is Rosso Corsa with black aero. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "288",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8d3b078a-2d36-4878-9142-4aafcd45f7ea.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/288.png",
-  "sourceSha256": "b6383afeac32d27af7c814bc43d607ed5b2994f566ddc95e824ea001ed4d6ab0",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-99203751-6a29-4c32-b575-974b4ae01c43.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/288-r2.png",
+  "sourceSha256": "d915e83c8b17999b391bd72535cd1377de15a33ae59b158ee5c53a1007e8881d",
   "input": "tools/race-conversions/inputs/288.png",
   "output": "public/images/race-cars/288.png",
-  "sha256": "349d32e49809d1833395fd6716aac47a084b79945ea9983f61648fa4dea270aa",
+  "sha256": "284b176659ae69c32393ec45bfd0d27c0647a2adc28433c27a28fd10694cb4d0",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/288/rosso.png",
-      "sha256": "f5a93eeb6debbb1df30c97a7ab97200e6cec561d626c6a82544b2fe6187917af"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/288-web-1.img",
-      "sha256": "9a54b1a9c44d846fe3dd89d0fd77796b6470d309db9111d1d6ac3b96aa88716e"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/race-cars/288.png": "284b176659ae69c32393ec45bfd0d27c0647a2adc28433c27a28fd10694cb4d0",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/288-reference.img": "0b94d1e6f77954ae46ecad4fc2886fc247c82352a4abdd853db4379837bd10a0"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

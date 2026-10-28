@@ -1,50 +1,41 @@
 {
-  "classification": "inspired",
-  "candidate": "360 Challenge",
-  "livery": "red with white Ferrari Challenge graphics",
-  "bodywork": "authentic Challenge front splitter, low racing stance, vented bumper, silver mesh racing wheels, roll cage and modest rear aero; no post-2002 GT kit",
+  "key": "360",
+  "candidate": "Ferrari 360 N GT Michelotto 2001 JMB",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Ferrari 360 N GT Michelotto 2001 JMB. USER CORRECTION: Copy real 360 N-GT racing body, vents, deep splitter, rear wing and actual livery. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/360/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/360-web-1.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/360/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/360-reference.img",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/360-extra-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://img.cdn.dragon2000.net/C3927/U208/IMG_9231-large.jpg",
-      "page": "https://morgancars.net/vehicle-details/used-ferrari-360-3-6-challenge-stradale-f1-2dr-for-sale-in-co-down-u208/",
-      "title": "Used 2004 Ferrari 360 3.6 Challenge Stradale F1 2dr For Sale (U208) | Morgan Cars Ltd",
-      "description": "A Rosso Scuderia Ferrari 360 Challenge Stradale is presented from the rear, emphasizing its sporty design and racing pedigree. The factory Tricolore stripe runs along the center of the engine cover, while the black mesh panel houses the prancing horse badge and the “Challenge Stradale” script. Quad exhaust tips and circular taillights frame the lower section, complemented by a Morgan Cars specialist sales plate.\n\nThis 2004 model features a 3.6L V8 engine with 425 bhp, an F1 automatic gearbox, and extensive weight-saving measures including carbon fibre mirrors, racing seats, and a Plexiglas engine cover. With just 21,723 miles on the odometer, UK registration, and full Ferrari certification, it’s offered by Morgan Cars Ltd with export VAT qualification, delivery options, and flexible finance arrangements.",
-      "artist": "",
-      "license": ""
+      "url": "https://cdn.rmsothebys.com/9/2/d/a/4/f/92da4f56ffeea62e4e641b3942fbf2284fb5f893.webp",
+      "page": "https://rmsothebys.com/auctions/wp26/lots/r0016-2001-ferrari-360-ngt/",
+      "title": "2001 Ferrari 360 N-GT | The Woodcote Park Auction 2026 | RM  Sotheby's (https://rmsothebys.com/auctions/wp26/lots/r0016-2001-ferrari-360-ngt/)"
+    },
+    {
+      "url": "https://www.artandrevs.com/upload/cars/gal/xl_170_3277.jpg",
+      "page": "https://www.artandrevs.com/car.php?id=170",
+      "title": "Ferrari 360 N/GT for sale (https://www.artandrevs.com/car.php?id=170)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy real 360 N-GT racing body, vents, deep splitter, rear wing and actual livery.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ferrari 360, racing preparation referencing 360 Challenge (2000). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Used 2004 Ferrari 360 3.6 Challenge Stradale F1 2dr For Sale (U208) | Morgan Cars Ltd. Its description: A Rosso Scuderia Ferrari 360 Challenge Stradale is presented from the rear, emphasizing its sporty design and racing pedigree. The factory Tricolore stripe runs along the center of the engine cover, while the black mesh panel houses the prancing horse badge and the “Challenge Stradale” script. Quad exhaust tips and circular taillights frame the lower section, complemented by a Morgan Cars specialist sales plate.\n\nThis 2004 model features a 3.6L V8 engine with 425 bhp, an F1 automatic gearbox, and extensive weight-saving measures including carbon fibre mirrors, racing seats, and a Plexiglas engine cover. With just 21,723 miles on the odometer, UK registration, and full Ferrari certification, it’s offered by Morgan Cars Ltd with export VAT qualification, delivery options, and flexible finance arrangements.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ferrari 360 Modena closed coupe, oval clear headlamp housings, two broad front air intakes and side scoop.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: authentic Challenge front splitter, low racing stance, vented bumper, silver mesh racing wheels, roll cage and modest rear aero; no post-2002 GT kit. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red with white Ferrari Challenge graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "360",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9369d98f-4548-4b80-8cbb-10be2c9a607f.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/360.png",
-  "sourceSha256": "a75fd3ad58741262d4ef2ace10e30891d917db9599c418d837f6cd839f10121d",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-dccc8a6e-eadd-4b24-a496-d50acc987337.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/360-r2.png",
+  "sourceSha256": "8a8a761548b6070b42b61a207ffdaf0054404dd27ef6988ea90cdd5c9a196d9f",
   "input": "tools/race-conversions/inputs/360.png",
   "output": "public/images/race-cars/360.png",
-  "sha256": "4bcb6b7bf690b973b2b69201729228c9859cdbb8e4e666718c382ae27f9499eb",
+  "sha256": "a9413f8ec6e516b800fd7fbac0d275160303aa75cf3f6c5889daf3803290e6cf",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/360/rosso.png",
-      "sha256": "29d6001110af1eb6b5dd6febba4f90e4e809e9faebe109aeeb565af6aea8192a"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/360-web-1.img",
-      "sha256": "918c91af5cd64a3aa50f72755cec8cb84eaace66ba5a45c3b8b8ad4b31cbb784"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/360/rosso.png": "29d6001110af1eb6b5dd6febba4f90e4e809e9faebe109aeeb565af6aea8192a",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/360-reference.img": "061e44918578dbd8fca981eccf09f312671ff37db635b77abdd5632ac2052a56",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/360-extra-reference.img": "ea82176e6656b785f49f5180ca9689268c0ac6589f7699d1c0aa403b95ce9986"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

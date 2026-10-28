@@ -110,24 +110,21 @@
       "historicalYear": 1992,
       "historicalSources": [
         {
-          "title": "Alfa Romeo · Storia sportiva ufficiale",
-          "url": "https://www.media.stellantis.com/de-de/alfa-romeo/press/90-jahre-alfa-romeo-die-wichtigsten-modelle"
-        },
-        {
-          "title": "Collezione Kuno Schaer · Esemplare originale SE051",
-          "url": "https://www.kunoschaer.ch/touringcar-gt-collection-kunoschaer/alfa-romeo-155-gta-s1-1992/"
+          "title": "Ex-works 1995 Alfa Romeo 155 V6 Ti Class 1 For Sale in Monaco — Supercar Nostalgia (https://supercarnostalgia.com/blog/one-to-buy-ex-works-1995-alfa-romeo-155-v6-ti-class-1)",
+          "url": "https://supercarnostalgia.com/blog/one-to-buy-ex-works-1995-alfa-romeo-155-v6-ti-class-1"
         }
       ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "notes": "Riferimento GTA 1992 derivato dalla Q4, non confondere con la successiva V6 TI DTM. La conversione del gioco mantiene motore e trazione della propria vettura.",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "classification": "historic",
-      "candidate": "155 GTA Martini Superturismo",
-      "referenceYear": 1992,
-      "liveryDirection": "red with blue and white Martini bands",
-      "bodywork": "actual GTA bumpers and ducts, square arch extensions, side skirts, period large boot wing, white multi-spoke racing wheels",
-      "identityNotes": "Alfa Romeo 155 Q4 1992 narrow body: redraw from verified stock side and rear photos. Proper sloping C-pillar, short boot deck, substantial rear overhang and tucked lower bumper; smoked RED horizontal rear lamps with no tall orange corner bar. Stock silver round-hole wheels, no spoiler wing. Avoid generic box rear."
+      "candidate": "155 V6 TI DTM · Martini",
+      "referenceYear": 1995,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual 1995 DTM wide body, deep bumper, splitter, OZ wheels and Martini livery; do not reuse GTA Superturismo kit.",
+      "identityNotes": "Alfa Romeo 155 Q4 1992 narrow body: redraw from verified stock side and rear photos. Proper sloping C-pillar, short boot deck, substantial rear overhang and tucked lower bumper; smoked RED horizontal rear lamps with no tall orange corner bar. Stock silver round-hole wheels, no spoiler wing. Avoid generic box rear.",
+      "reviewBatch": "historical-34-2026-10-28"
     },
     {
       "key": "33",
@@ -1927,16 +1924,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Rally Catalunya 1999: Philippe Bugalski y la histórica victoria del Citroën Xsara Kit Car (https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html)",
+          "url": "https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
       "candidate": "Xsara Kit Car",
       "referenceYear": 1999,
-      "liveryDirection": "white red and blue Citroën Sport",
-      "bodywork": "real F2 Kit Car wide arches, deep front intakes, roof vent and roof spoiler, white racing wheels; not later C4",
-      "identityNotes": "First-generation Citroen Xsara VTS three-door coupe hatch, pre-facelift lamps as reference."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
+      "identityNotes": "First-generation Citroen Xsara VTS three-door coupe hatch, pre-facelift lamps as reference.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "zx",
@@ -1982,19 +1986,26 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Citroen for sale | Classic Driver (https://www.classicdriver.com/en/car/citroen/zx/1996/473219)",
+          "url": "https://www.classicdriver.com/en/car/citroen/zx/1996/473219"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "ZX 2.0 · Gruppo A",
+      "classification": "historic",
+      "candidate": "ZX Kit Car",
       "referenceYear": 1993,
-      "liveryDirection": "white with red and blue Citroën racing bands",
-      "bodywork": "retain approved ZX hatch and rear lights, touring bumper and splitter, restrained wide arches, modest roof spoiler, silver multi-spoke wheels; not rally-raid prototype",
-      "identityNotes": "Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.",
+      "identityNotes": "Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "charade",
@@ -2275,16 +2286,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Ferrari 288 GTO: que comiencen los superdeportivos | SoyMotor.com (https://soymotor.com/coches/noticias/ferrari-288-gto-964921)",
+          "url": "https://soymotor.com/coches/noticias/ferrari-288-gto-964921"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "prototype",
       "candidate": "288 GTO Evoluzione",
       "referenceYear": 1986,
-      "liveryDirection": "Rosso Corsa with black aero",
-      "bodywork": "real Evoluzione prototype body, very wide arch extensions, vented front and rear body, deep air dam and broad fixed rear wing; documented prototype, not a race winner",
-      "identityNotes": "Ferrari 288 GTO closed coupe, pop-up headlamps closed, paired low round fog lights, sculpted rear quarter intakes."
+      "liveryDirection": "Livrea immaginaria con sponsor d’epoca, richiesta dall’utente",
+      "bodywork": "Keep current body geometry; add credible period Agip, Magneti Marelli, Goodyear sponsor livery. Fictional livery explicitly declared.",
+      "identityNotes": "Ferrari 288 GTO closed coupe, pop-up headlamps closed, paired low round fog lights, sculpted rear quarter intakes.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Carrozzeria del prototipo storico; livrea con sponsor d’epoca aggiunta su richiesta e dichiaratamente immaginaria. Non rappresenta una partecipazione in gara del prototipo."
     },
     {
       "key": "348",
@@ -2388,19 +2406,30 @@
         }
       },
       "profile": "cup",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "2001 Ferrari 360 N-GT | The Woodcote Park Auction 2026 | RM  Sotheby's (https://rmsothebys.com/auctions/wp26/lots/r0016-2001-ferrari-360-ngt/)",
+          "url": "https://rmsothebys.com/auctions/wp26/lots/r0016-2001-ferrari-360-ngt/"
+        },
+        {
+          "title": "Ferrari 360 N/GT for sale (https://www.artandrevs.com/car.php?id=170)",
+          "url": "https://www.artandrevs.com/car.php?id=170"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "360 Challenge",
-      "referenceYear": 2000,
-      "liveryDirection": "red with white Ferrari Challenge graphics",
-      "bodywork": "authentic Challenge front splitter, low racing stance, vented bumper, silver mesh racing wheels, roll cage and modest rear aero; no post-2002 GT kit",
-      "identityNotes": "Ferrari 360 Modena closed coupe, oval clear headlamp housings, two broad front air intakes and side scoop."
+      "classification": "historic",
+      "candidate": "360 N-GT",
+      "referenceYear": 2001,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real 360 N-GT racing body, vents, deep splitter, rear wing and actual livery.",
+      "identityNotes": "Ferrari 360 Modena closed coupe, oval clear headlamp housings, two broad front air intakes and side scoop.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "550",
@@ -2449,16 +2478,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "2002 Ferrari 550 Maranello Prodrive | Girardo & Co (https://girardo.com/car/2002-ferrari-550-maranello-prodrive/)",
+          "url": "https://girardo.com/car/2002-ferrari-550-maranello-prodrive/"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "550 GTS Prodrive",
-      "referenceYear": 2001,
-      "liveryDirection": "red with white GT racing panels",
-      "bodywork": "real 2001 GTS wide arches, deep ducted bumper, vented bonnet, large rear wing and white centre-lock wheels; no claim of later 2003 victories",
-      "identityNotes": "Ferrari 550 Maranello front-engine coupe, long bonnet with small scoop, recessed clear lamp units."
+      "candidate": "550 Maranello Prodrive GTS",
+      "referenceYear": 2002,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "User wrote 500 Maranello; model is 550. Copy Prodrive GT body and actual 2001-2002 livery, not later Aston or 575.",
+      "identityNotes": "Ferrari 550 Maranello front-engine coupe, long bonnet with small scoop, recessed clear lamp units.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "355",
@@ -2623,16 +2659,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "1996 Ferrari F50 GT - price and specifications (https://www.topcarrating.com/1996-ferrari-f50-gt.php)",
+          "url": "https://www.topcarrating.com/1996-ferrari-f50-gt.php"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "prototype",
       "candidate": "F50 GT",
       "referenceYear": 1996,
-      "liveryDirection": "Rosso Corsa with black race aero",
-      "bodywork": "real F50 GT closed roof, roof air intake, deep front splitter, broad fenders and large braced rear wing; documented prototype that did not race",
-      "identityNotes": "Ferrari F50 body as reference, integrated curved rear wing, long oval clear headlamp units and front nostrils."
+      "liveryDirection": "Livrea immaginaria con sponsor d’epoca, richiesta dall’utente",
+      "bodywork": "Keep exact F50 GT prototype body; add credible period Agip, Magneti Marelli, Goodyear sponsor livery. Fictional livery explicitly declared.",
+      "identityNotes": "Ferrari F50 body as reference, integrated curved rear wing, long oval clear headlamp units and front nostrils.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Carrozzeria del prototipo storico; livrea con sponsor d’epoca aggiunta su richiesta e dichiaratamente immaginaria. Non rappresenta una partecipazione in gara del prototipo."
     },
     {
       "key": "testarossa",
@@ -2968,7 +3011,7 @@
         }
       },
       "profile": "gt",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
@@ -2979,8 +3022,14 @@
       "candidate": "Coupé 20v · GT del club",
       "referenceYear": 1997,
       "liveryDirection": "red white and dark blue Fiat period racing bands",
-      "bodywork": "retain Fiat Coupé diagonal wheel-arch cuts and round rear lamps, deeper front intakes, modest widebody, side skirts, period rear wing and silver racing wheels",
-      "identityNotes": "Fiat Coupe 20v two-door coupe, distinctive double diagonal slashes over wheel arches and faired bonnet lamps."
+      "bodywork": "CHANGE ONLY wheels to sporty period silver multi-spoke motorsport wheels. Keep all body, livery, camera, lights and proportions unchanged.",
+      "identityNotes": "Fiat Coupe 20v two-door coupe, distinctive double diagonal slashes over wheel arches and faired bonnet lamps.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Cerchi sportivi multirazze d’epoca.",
+        "Livrea, carrozzeria, fari e proporzioni della versione già valutata conservati."
+      ]
     },
     {
       "key": "punto",
@@ -3272,19 +3321,26 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Fiat Uno Turbo Rally, la storia della Gr. A preparata a fianco della Lancia Delta S4 (https://auto.everyeye.it/notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-745975.html)",
+          "url": "https://auto.everyeye.it/notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-745975.html"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Uno Turbo Gruppo A",
+      "classification": "historic",
+      "candidate": "Uno Turbo Gruppo A · Totip",
       "referenceYear": 1986,
-      "liveryDirection": "white with red blue Fiat Auto Corse",
-      "bodywork": "real Uno Turbo proportions and lamp generation retained, period bumper and small arch flares, low roof spoiler, silver rally wheels and mud flaps",
-      "identityNotes": "Fiat Uno Turbo first-series shape in reference, three doors, rectangular headlights and upright tail."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy Totip white orange green rally livery and actual production-based group A body, no invented widebody.",
+      "identityNotes": "Fiat Uno Turbo first-series shape in reference, three doors, rectangular headlights and upright tail.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "escortc",
@@ -3330,19 +3386,30 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Ex-Carlos Sainz 1997 Ford Escort RS Cosworth WRC For Sale in the UK — Supercar Nostalgia (https://supercarnostalgia.com/blog/one-to-buy-ex-works-1997-ford-escort-cosworth-wrc)",
+          "url": "https://supercarnostalgia.com/blog/one-to-buy-ex-works-1997-ford-escort-cosworth-wrc"
+        },
+        {
+          "title": "Sale a subasta el Ford Escort WRC ex Carlos Sainz y podría llegar a los 400.000 euros (https://revistascratch.com/wrc/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400-000-euros-74178)",
+          "url": "https://revistascratch.com/wrc/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400-000-euros-74178"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Escort RS Cosworth Gruppo A",
-      "referenceYear": 1994,
-      "liveryDirection": "blue white and yellow Ford Motorsport",
-      "bodywork": "real Cosworth widened fenders, rally front vents, whale-tail rear spoiler, white multi-spoke rally wheels, roof vent and mud flaps",
-      "identityNotes": "Ford Escort RS Cosworth three-door hatch, very large whale-tail double rear wing, bonnet vents and widened arches."
+      "classification": "historic",
+      "candidate": "Escort WRC · Repsol",
+      "referenceYear": 1997,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy Repsol WRC body kit, intakes, wheel arches and correct WRC rear wing.",
+      "identityNotes": "Ford Escort RS Cosworth three-door hatch, very large whale-tail double rear wing, bonnet vents and widened arches.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "escortt",
@@ -3623,16 +3690,27 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Lot 73 - 2001 Ford Puma S1600 'Works' Rally Car (https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1)",
+          "url": "https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1"
+        },
+        {
+          "title": "1999 Ford Puma S1600 | Monaco 2024 | RM  Sotheby's (https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/)",
+          "url": "https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
       "candidate": "Puma Super1600",
       "referenceYear": 2001,
-      "liveryDirection": "white and blue Ford Motorsport",
-      "bodywork": "real small COUPE Puma Kit Car wide arches and deep bumper, roof vent, large hatch wing, white rally wheels; never modern Puma crossover",
-      "identityNotes": "Original 1990s Ford Puma coupe, NOT modern crossover, rounded roof and swept triangular oval headlamps."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real S1600 highly widened arches, bumpers, spoiler and Ford racing livery.",
+      "identityNotes": "Original 1990s Ford Puma coupe, NOT modern crossover, rounded roof and swept triangular oval headlamps.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "sierra4",
@@ -3678,19 +3756,26 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "The WRC beginnings of a current driver's father – DirtFish (https://dirtfish.com/rally/wrc/the-wrc-beginnings-of-a-current-drivers-father/)",
+          "url": "https://dirtfish.com/rally/wrc/the-wrc-beginnings-of-a-current-drivers-father/"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Sierra Sapphire Cosworth Gruppo A",
+      "classification": "historic",
+      "candidate": "Sierra Sapphire Cosworth Gruppo A · Q8",
       "referenceYear": 1990,
-      "liveryDirection": "white blue red Ford rally bands",
-      "bodywork": "retain FOUR-door Sapphire saloon, real rally apron, modest arch lips, boot spoiler, white multi-spoke rally wheels and mud flaps",
-      "identityNotes": "Ford Sierra Sapphire RS Cosworth four-door saloon, long stepped boot, modest boot wing; NOT the three-door hatch."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real Q8 livery and four-door Sapphire group A body, not three-door RS500.",
+      "identityNotes": "Ford Sierra Sapphire RS Cosworth four-door saloon, long stepped boot, modest boot wing; NOT the three-door hatch.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "sierrac",
@@ -3736,19 +3821,25 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
+      "classification": "historic",
       "candidate": "Sierra RS500 Cosworth Gruppo A",
       "referenceYear": 1987,
       "liveryDirection": "black red and white Texaco style",
-      "bodywork": "real THREE-door Sierra hatch, deep RS500 bumper and cooling ducts, box arch flares, double-level whale-tail wing, gold mesh race wheels",
-      "identityNotes": "Ford Sierra RS Cosworth three-door hatch with large whale-tail wing, as reference; NOT Sapphire saloon."
+      "bodywork": "CHANGE ONLY rear wing: restore original homologation RS500 whale-tail upper wing and boot spoiler from stock reference2. Keep livery and everything else.",
+      "identityNotes": "Ford Sierra RS Cosworth three-door hatch with large whale-tail wing, as reference; NOT Sapphire saloon.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Ala superiore originale RS500 a coda di balena, con spoiler inferiore sul portellone.",
+        "Livrea e carrozzeria della preparazione precedente conservate."
+      ]
     },
     {
       "key": "crx",
@@ -4087,16 +4178,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "ホンダコレクションホール、全日本GT選手権（JGTC）の企画展 - Car Watch (https://car.watch.impress.co.jp/docs/news/1008974.html)",
+          "url": "https://car.watch.impress.co.jp/docs/news/1008974.html"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "NSX GT500 JGTC",
+      "candidate": "NSX GT500 JGTC · Castrol Mugen",
       "referenceYear": 1997,
-      "liveryDirection": "white green and red Castrol Mugen",
-      "bodywork": "real 1990s NSX GT wide fenders, bumper ducts, low splitter, roof intake and high flat rear wing, white racing wheels; no modern NSX",
-      "identityNotes": "Honda NSX original pre-facelift coupe, pop-up lamps closed as reference, black roof and original rear spoiler."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Keep approved Castrol white green red livery; rebuild actual contemporary NSX GT500 wide body, intakes, splitter, roof and wing from real reference.",
+      "identityNotes": "Honda NSX original pre-facelift coupe, pop-up lamps closed as reference, black roof and original rear spoiler.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "prelude",
@@ -4258,19 +4356,26 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Hyundai Coupe RD Evo 2 (1998) - Racing Cars (https://tech-racingcars.wikidot.com/hyundai-coupe-rd-evo-2)",
+          "url": "https://tech-racingcars.wikidot.com/hyundai-coupe-rd-evo-2"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
+      "classification": "historic",
       "candidate": "Coupé Kit Car F2",
       "referenceYear": 1998,
-      "liveryDirection": "white blue and yellow Hyundai rally colours",
-      "bodywork": "real first-generation COUPE F2 broad arches, bumper ducts, roof vent, rally rear wing and white racing wheels; no later Tiburon",
-      "identityNotes": "First-generation Hyundai Coupe RD as photo, rounded nose, almond headlamps, NOT later Tiburon/Coupe generations."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real F2 kit car wide arches, bumpers, wing, Hyundai blue white livery.",
+      "identityNotes": "First-generation Hyundai Coupe RD as photo, rounded nose, almond headlamps, NOT later Tiburon/Coupe generations.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "xj",
@@ -4551,16 +4656,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Lamborghini Diablo GTR for sale - Vehicle Sales - DK Engineering (https://www.dkeng.co.uk/ferrari-sales/1974/blue_chip_competition_cars/lamborghini_diablo_gtr.html)",
+          "url": "https://www.dkeng.co.uk/ferrari-sales/1974/blue_chip_competition_cars/lamborghini_diablo_gtr.html"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "Diablo GTR Supertrofeo",
+      "candidate": "Diablo GTR · Charriol",
       "referenceYear": 1999,
-      "liveryDirection": "yellow and black Lamborghini racing",
-      "bodywork": "real GTR deeper front bumper, roof intake, wider fenders, large rear wing, black or gold centre-lock racing wheels",
-      "identityNotes": "Lamborghini Diablo circa 2000 as reference, low wedge and broad rear haunches; match reference headlamp treatment, no Aventador."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Keep GTR body, add actual period racing sponsor livery from real photo.",
+      "identityNotes": "Lamborghini Diablo circa 2000 as reference, low wedge and broad rear haunches; match reference headlamp treatment, no Aventador.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "dedra",
@@ -4664,19 +4776,31 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "1992 Lancia Delta HF Integrale Group A | Private Sales | RM  Private Sales (https://rmsothebys.com/ps00/inventory/r5634-1992-lancia-delta-hf-integrale-group-a/)",
+          "url": "https://rmsothebys.com/ps00/inventory/r5634-1992-lancia-delta-hf-integrale-group-a/"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
+      "classification": "historic",
       "candidate": "Delta HF Integrale Evoluzione Gruppo A",
       "referenceYear": 1992,
-      "liveryDirection": "white Martini blue and red bands",
-      "bodywork": "real Evo box arch extensions, deeper rally bumper, roof vent, raised hatch spoiler, white compact rally wheels and mud flaps",
-      "identityNotes": "Lancia Delta HF Integrale Evoluzione five-door. Correct rear spoiler to the real adjustable rectangular SINGLE airfoil panel perched directly at the TOP of the rear hatch, with its broad flat panel tilted upward and two compact side mounting brackets. No huge sedan boot wing, double wing, downward tail spike, or shapeless solid block. Preserve squared extended arches, four circular headlamps, real Delta proportions."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real Group A Martini livery, rally wheels; KEEP exact original stock Evoluzione broad angular arches and bumper. Do NOT invent extra arch extensions.",
+      "identityNotes": "Lancia Delta HF Integrale Evoluzione five-door. Correct rear spoiler to the real adjustable rectangular SINGLE airfoil panel perched directly at the TOP of the rear hatch, with its broad flat panel tilted upward and two compact side mounting brackets. No huge sedan boot wing, double wing, downward tail spike, or shapeless solid block. Preserve squared extended arches, four circular headlamps, real Delta proportions.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Paraurti e passaruota originali del modello stradale conservati, senza ulteriori allargamenti.",
+        "Cerchi e dotazioni della vera preparazione Gruppo A.",
+        "Livrea Martini della vettura di riferimento."
+      ]
     },
     {
       "key": "delta16",
@@ -4722,19 +4846,31 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Photo A.034662 LANCIA DELTA INTEGRALE 16V BIASION-SIVIERO SANREMO RALLY 1989  | eBay (https://www.ebay.fr/itm/403373590690)",
+          "url": "https://www.ebay.fr/itm/403373590690"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Delta HF Integrale 16V Gruppo A",
+      "classification": "historic",
+      "candidate": "Delta HF Integrale 16V · Sanremo 1989",
       "referenceYear": 1989,
-      "liveryDirection": "white Martini blue and red bands",
-      "bodywork": "retain earlier Integrale body and correct squared rear, rally bumper and arches, modest hatch wing, white compact wheels and mud flaps",
-      "identityNotes": "Lancia Delta HF Integrale 16v five-door hatch, four circular lights and moderate box arches, distinct from later Evoluzione."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual red Martini Sanremo 1989 livery. Keep EXACT stock original 16V bumper and arches unchanged, no extra body kit.",
+      "identityNotes": "Lancia Delta HF Integrale 16v five-door hatch, four circular lights and moderate box arches, distinct from later Evoluzione.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
+      "bodyworkDetails": [
+        "Paraurti e passaruota originali del modello stradale conservati, senza ulteriori allargamenti.",
+        "Cerchi e dotazioni della vera preparazione Gruppo A.",
+        "Livrea Martini della vettura di riferimento al Sanremo 1989."
+      ]
     },
     {
       "key": "hpe",
@@ -6230,19 +6366,26 @@
         }
       },
       "profile": "gt",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "PUMA GTO N1 1995 · photographs of the real car",
+          "url": "https://drifting.com/wp-content/uploads/2015/09/tbt-Puma-Mitsubishi-GTO-N1-Super-Taikyu-race-on-WORK-Meister-S1-1995-artofwheel.jpg"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "GTO 3000 GT · GT giapponese",
-      "referenceYear": 1994,
-      "liveryDirection": "white blue and red Mitsubishi racing graphics",
-      "bodywork": "retain real 3000GT coupe roof and nose, deep GT bumper and cooling ducts, broad arches, large rear wing and silver racing wheels",
-      "identityNotes": "Mitsubishi 3000GT/GTO Z16A closed coupe as photo, wide low body, side gills and raised rear spoiler, match reference headlamp version."
+      "classification": "historic",
+      "candidate": "GTO PUMA · N1 Endurance",
+      "referenceYear": 1995,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Rebuild from REAL PUMA GTO N1 endurance photographs: production-derived body, green white checker PUMA livery, actual WORK racing wheels, modest original wing. Not JGTC; no invented widebody. Retain 3000GT early-generation headlight identity.",
+      "identityNotes": "Mitsubishi 3000GT/GTO Z16A closed coupe as photo, wide low body, side gills and raised rear spoiler, match reference headlamp version.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "colt",
@@ -6694,19 +6837,26 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "日産： NISSAN HERITAGE COLLECTION｜ザナヴィ・シルビア 1998JGTC No.15 (https://www.nissan.co.jp/HERITAGE/DETAIL/150.html)",
+          "url": "https://www.nissan.co.jp/HERITAGE/DETAIL/150.html"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "200SX S14 · N1 Endurance",
-      "referenceYear": 1996,
-      "liveryDirection": "blue white and red Nissan racing bands",
-      "bodywork": "retain S14 coupe shell and approved nose generation, deeper cooling bumper, wide arch lips, skirts, flat rear wing, silver racing wheels",
-      "identityNotes": "Nissan S14 Silvia facelift angular fixed headlamps shown, notchback two-door coupe, subtle original rear wing."
+      "classification": "historic",
+      "candidate": "Silvia S14 JGTC · Xanavi",
+      "referenceYear": 1998,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual Xanavi S14 JGTC widebody, spoiler, bumper, vents, wheels and actual livery. No later S15.",
+      "identityNotes": "Nissan S14 Silvia facelift angular fixed headlamps shown, notchback two-door coupe, subtle original rear wing.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "300zx",
@@ -6926,19 +7076,26 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "«Btcc» HD wallpapers (https://wallpapercrafter.com/xfsearch/alt/btcc/)",
+          "url": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/Primera_GT.html"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Primera Superturismo",
+      "classification": "historic",
+      "candidate": "Primera GT BTCC",
       "referenceYear": 1999,
-      "liveryDirection": "red white and black Nissan touring graphics",
-      "bodywork": "retain approved Primera generation exactly, real touring bumper and skirts, widened arch lips, large boot wing and white racing wheels",
-      "identityNotes": "Nissan Primera P11 GT four-door saloon, long boot, small rear wing and narrow rectangular lamps."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual P11 BTCC body, low stance, white racing wheels, rear wing and actual red silver Vodafone livery.",
+      "identityNotes": "Nissan Primera P11 GT four-door saloon, long boot, small rear wing and narrow rectangular lamps.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "r32",
@@ -6984,19 +7141,26 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "『ニッサン・スカイラインGT-R（BNR32型）JGTC編』新天地でも最強だったGT-Rcite忘れがたき銘車たち | レーシングオン | autosport web (https://www.as-web.jp/racing-on/867902)",
+          "url": "https://cdn-image.as-web.jp/2022/10/04093834/asimg_Photo01_1994_GT_Rd2_KT_0074_6c633b8089aacc0-764x510.jpg"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Skyline GT-R R32 Gruppo A",
-      "referenceYear": 1990,
-      "liveryDirection": "Calsonic blue with white racing panels",
-      "bodywork": "actual R32 Group A front ducting and splitter, side skirts, broad arch lips, low racing boot spoiler and white racing wheels",
-      "identityNotes": "Nissan Skyline GT-R R32 two-door coupe, understated boxy arches, slim rectangular lamps and fixed rear wing."
+      "classification": "historic",
+      "candidate": "Skyline GT-R R32 JGTC · Calsonic",
+      "referenceYear": 1994,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real 1994 JGTC R32 Calsonic blue body, bumper, aero, wheels and wing, not standard group A.",
+      "identityNotes": "Nissan Skyline GT-R R32 two-door coupe, understated boxy arches, slim rectangular lamps and fixed rear wing.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "r33",
@@ -7857,16 +8021,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Kit Cars (V): Los A6, precursores de los S1600 (https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856)",
+          "url": "https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "106 S16 Maxi",
+      "candidate": "106 Maxi Kit Car",
       "referenceYear": 1998,
-      "liveryDirection": "white blue red and yellow Peugeot Sport",
-      "bodywork": "retain second-series 106 lamps, real Maxi wide arches, deep rally bumper, roof vent, rear spoiler, white rally wheels",
-      "identityNotes": "Peugeot 106 S16/GTi facelift three-door hatch, narrow rounded rectangular lamps, sporty colour bumpers."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery.",
+      "identityNotes": "Peugeot 106 S16/GTi facelift three-door hatch, narrow rounded rectangular lamps, sporty colour bumpers.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "rallye",
@@ -8089,16 +8260,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "A vendre 306 Maxi V1 - Voitures de course • GoToTheGrid  🏁",
+          "url": "https://www.gotothegrid.com/fr/annonces/voitures-de-course/rallye/peugeot/a-vendre/2840-a-vendre-306-maxi-v1"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "306 Maxi",
+      "candidate": "306 Maxi Kit Car",
       "referenceYear": 1997,
-      "liveryDirection": "white blue red and yellow Peugeot Sport",
-      "bodywork": "actual Maxi broad arches, front cooling bumper, roof vent, hatch wing, white multi-spoke rally wheels",
-      "identityNotes": "Peugeot 306 GTi three-door hatch, narrow swept front lamps and long single side door."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit.",
+      "identityNotes": "Peugeot 306 GTi three-door hatch, narrow swept front lamps and long single side door.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "309",
@@ -8202,19 +8380,26 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "1993 Peugeot 405 Mi 16V For Sale By Auction (https://www.carandclassic.com/auctions/1993-peugeot-405-mi-16v-8W1Mmn)",
+          "url": "https://www.carandclassic.com/auctions/1993-peugeot-405-mi-16v-8W1Mmn"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "405 Mi16 Superturismo",
-      "referenceYear": 1994,
-      "liveryDirection": "white blue and red Peugeot racing bands",
-      "bodywork": "retain 405 FOUR-door road saloon, touring front bumper, mild flares, skirts and boot wing, white racing wheels; not two-door Pikes Peak prototype",
-      "identityNotes": "Peugeot 405 T16 four-door saloon, squared Pininfarina body, rectangular lamps and modest boot spoiler."
+      "classification": "historic",
+      "candidate": "405 Mi16 BTCC",
+      "referenceYear": 1993,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy exact 405 BTCC supertouring bumpers, low stance, large white wheels, wing and real livery. No T16 Pikes Peak.",
+      "identityNotes": "Peugeot 405 T16 four-door saloon, squared Pininfarina body, rectangular lamps and modest boot spoiler.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "406",
@@ -9304,19 +9489,30 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "1995 Renault Clio Maxi \" Kit car \" (https://www.artcurial.com/ventes/4058/lots/16-a)",
+          "url": "https://www.artcurial.com/ventes/4058/lots/16-a"
+        },
+        {
+          "title": "Clio Maxi Kit Car - The Originals Museum (https://theoriginals.renault.com/en/clio-maxi)",
+          "url": "https://theoriginals.renault.com/en/clio-maxi"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Clio Maxi",
+      "classification": "historic",
+      "candidate": "Clio Maxi Kit Car",
       "referenceYear": 1995,
-      "liveryDirection": "blue and yellow Renault Diac-style racing",
-      "bodywork": "retain first Clio Williams shell, real Maxi wide arches and multi-duct front bumper, roof vent, proper Maxi hatch wing and white/gold racing wheels",
-      "identityNotes": "Precise localized PAINT MATERIAL edit of Renault Clio I Williams THREE-DOOR. Main FRONT BUMPER IS BODY COLOUR, NOT a broad black plastic fascia. Repaint the substantial front bumper main panel surrounding the numberplate, fog lights and intake, its upper fascia and lower apron in the SAME GREEN BODY PAINT shades as the fenders. Leave only genuinely unpainted narrow black rubber rubbing strip, thin lower lip, grille/intake holes, lamp recess interiors and numberplate trim black. Most visible bumper must read painted GREEN, including areas around BOTH square fog lamps and below licence plate. Keep gold Speedline wheels, current three-door shape, headlights, black SIDE rubbing strip and every other detail. Maintain NO REAR SPOILER as explicitly approved correction; DO NOT add a spoiler or large wing from any supporting photo."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real Renault museum Clio Maxi kit car body, strongly widened arches, rectangular bumper vents, silver Diac blue yellow livery and actual white racing wheels. Do not use ordinary Williams body with decals.",
+      "identityNotes": "Precise localized PAINT MATERIAL edit of Renault Clio I Williams THREE-DOOR. Main FRONT BUMPER IS BODY COLOUR, NOT a broad black plastic fascia. Repaint the substantial front bumper main panel surrounding the numberplate, fog lights and intake, its upper fascia and lower apron in the SAME GREEN BODY PAINT shades as the fenders. Leave only genuinely unpainted narrow black rubber rubbing strip, thin lower lip, grille/intake holes, lamp recess interiors and numberplate trim black. Most visible bumper must read painted GREEN, including areas around BOTH square fog lamps and below licence plate. Keep gold Speedline wheels, current three-door shape, headlights, black SIDE rubbing strip and every other detail. Maintain NO REAR SPOILER as explicitly approved correction; DO NOT add a spoiler or large wing from any supporting photo.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "v6",
@@ -9423,16 +9619,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "1997 Renault Laguna BTCC Super Touring | London 2016 | RM  Sotheby's (https://rmsothebys.com/auctions/lf16/lots/r114-1997-renault-laguna-btcc-super-touring/)",
+          "url": "https://rmsothebys.com/auctions/lf16/lots/r114-1997-renault-laguna-btcc-super-touring/"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "Laguna Superturismo BTCC",
+      "candidate": "Laguna BTCC · Nescafé",
       "referenceYear": 1997,
-      "liveryDirection": "green yellow and white Williams Renault racing",
-      "bodywork": "real Laguna I touring front splitter and bumper, arch lips, side skirts, large rear wing and white wheels; original Laguna lamp generation preserved",
-      "identityNotes": "Renault Laguna I PHASE 1 five-door liftback, exact dark 1997 original. Correct nose/grille: extremely slim body-colour smooth bridge between elongated rounded headlights, small Renault diamond centred above the slit; narrow paired horizontal black vents either side/under the emblem, NOT a wide black honeycomb mouth between headlights and NOT Clio grille. Broad horizontal lower bumper intake and separate fog-light recesses per front photo. Preserve long flowing Laguna I liftback silhouette and full-size car proportions."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy EXACT actual green Nescafe Blend37 Laguna BTCC photograph including long supertouring bumper, gold multispoke racing wheels, correct wing and actual green livery. Do not replace with yellow blue.",
+      "identityNotes": "Renault Laguna I PHASE 1 five-door liftback, exact dark 1997 original. Correct nose/grille: extremely slim body-colour smooth bridge between elongated rounded headlights, small Renault diamond centred above the slit; narrow paired horizontal black vents either side/under the emblem, NOT a wide black honeycomb mouth between headlights and NOT Clio grille. Broad horizontal lower bumper intake and separate fog-light recesses per front photo. Preserve long flowing Laguna I liftback silhouette and full-size car proportions.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "megane",
@@ -9481,16 +9684,23 @@
       "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)",
+          "url": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
       "classification": "historic",
-      "candidate": "Mégane Maxi",
+      "candidate": "Mégane Maxi Kit Car",
       "referenceYear": 1996,
-      "liveryDirection": "yellow blue and white Renault Sport",
-      "bodywork": "actual first COUPE Megane Maxi broad arch extensions, deep rally bumper, roof vent, large boot wing and white rally wheels",
-      "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
+      "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "114",
@@ -9768,19 +9978,30 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Seat Cordoba WRC | invelt Rallied & Raced (https://www.inveltcollection.com/seat-cordoba-wrc/p-60/)",
+          "url": "https://www.inveltcollection.com/seat-cordoba-wrc/p-60/"
+        },
+        {
+          "title": "Córdoba WRC Evo 1 (https://www.seatcocheshistoricos.es/SEATHistoricos/2000/CordobaWRCEvoI.php)",
+          "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/2000/CordobaWRCEvoI.php"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
+      "classification": "historic",
       "candidate": "Córdoba WRC",
       "referenceYear": 1998,
-      "liveryDirection": "yellow green and white Seat racing",
-      "bodywork": "real Cordoba WRC broad arches, rally front bumper, roof vent, large boot wing, white multi-spoke rally wheels",
-      "identityNotes": "Seat Cordoba first-generation facelift TWO-door notchback saloon as reference, not five-door Ibiza."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy true Cordoba WRC body arches bumpers wing and real yellow Repsol Seat livery.",
+      "identityNotes": "Seat Cordoba first-generation facelift TWO-door notchback saloon as reference, not five-door Ibiza.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "ibiza",
@@ -9826,19 +10047,26 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "KIT CAR E2 (https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php)",
+          "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Ibiza Cupra R · Kit Car",
+      "classification": "historic",
+      "candidate": "Ibiza Kit Car Evo 2",
       "referenceYear": 2001,
-      "liveryDirection": "yellow blue and red Seat period racing",
-      "bodywork": "retain approved Cupra R nose and THREE-door shell, period Ibiza Kit Car-style wide arches and bumper, roof vent and rear spoiler, white racing wheels; do not swap to older nose",
-      "identityNotes": "Seat Ibiza Cupra R 6K facelift three-door hatch, narrow lamps, deep bumper and period small wheels."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
+      "identityNotes": "Seat Ibiza Cupra R 6K facelift three-door hatch, narrow lamps, deep bumper and period small wheels.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "leon",
@@ -10116,19 +10344,26 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "Może idealna karoseria jest myląca, ale tym Subaru Legacy RS jeździł Colin McRae. Ostatnia szansa na odkup auta, którym seryjnie wygrywał (https://wrc.net.pl/moze-idealna-karoseria-jest-mylaca-ale-tym-subaru-legacy-rs-jezdzil-colin-mcrae-ostatnia-szansa-na-odkup-auta-ktorym-seryjnie-wygrywal/)",
+          "url": "https://wrc.net.pl/moze-idealna-karoseria-jest-mylaca-ale-tym-subaru-legacy-rs-jezdzil-colin-mcrae-ostatnia-szansa-na-odkup-auta-ktorym-seryjnie-wygrywal/"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Legacy RS Gruppo A",
-      "referenceYear": 1993,
-      "liveryDirection": "blue with yellow Subaru rally bands",
-      "bodywork": "retain approved first Legacy body, period rally bumper and modest arch kit, boot spoiler, roof vent, gold small rally wheels; no Impreza roof swap",
-      "identityNotes": "Subaru Legacy BC first-generation four-door boxy saloon, thin rectangular lamps and long boot."
+      "classification": "historic",
+      "candidate": "Legacy RS Gruppo A · Rothmans",
+      "referenceYear": 1991,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy true Legacy RS Group A body and real rally livery. No Impreza or invented modern body.",
+      "identityNotes": "Subaru Legacy BC first-generation four-door boxy saloon, thin rectangular lamps and long boot.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "svx",
@@ -10290,19 +10525,26 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "1992 TOYOTA CELICA ST185 Ex Carlos Sainz (https://en.ascottcollection.com/toyota-celica-st185-fr)",
+          "url": "https://en.ascottcollection.com/toyota-celica-st185-fr"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Celica ST185 Gruppo A",
+      "classification": "historic",
+      "candidate": "Celica ST185 Gruppo A · Carlos Sainz",
       "referenceYear": 1992,
-      "liveryDirection": "white red and green Castrol Toyota",
-      "bodywork": "retain ST185 rounded nose and pop-up lamp identity, real rally bumper, bonnet vent, period rear spoiler, white rally wheels and mud flaps",
-      "identityNotes": "Toyota Celica ST185 Carlos Sainz GT-Four liftback, pop-up lamps closed, bonnet vents and modest rear spoiler."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual Carlos Sainz ST185 Group A Repsol car in photograph: WHITE RED ORANGE REPSOL and Marlboro livery, correct original Group A bumper and hood vents, stock-like arches and OZ racing wheels. NOT Castrol, NOT ST205. Historic photograph overrides previous incorrect written livery.",
+      "identityNotes": "Toyota Celica ST185 Carlos Sainz GT-Four liftback, pop-up lamps closed, bonnet vents and modest rear spoiler.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "gtfour",
@@ -10406,19 +10648,26 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "GT300　ウェッズスポーツセリカ　青木孝行/谷口信輝 組｜CELICA_Love (https://note.com/zzt231kai/n/n396bf6ff825b)",
+          "url": "https://note.com/zzt231kai/n/n396bf6ff825b"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "club",
-      "candidate": "Celica TS · Turismo del club",
-      "referenceYear": 2001,
-      "liveryDirection": "white red and green Toyota period racing bands",
-      "bodywork": "retain T230 triangular headlights and angular coupe roof, plausible period touring wide arches and splitter, skirts, rear wing and white racing wheels; no unverified post-2002 GT300 claim",
-      "identityNotes": "Toyota Celica seventh-generation T23 TS coupe liftback, sharp wedge nose and tall triangular headlights, not GT86."
+      "classification": "historic",
+      "candidate": "Celica ZZT231 JGTC GT300 · WedsSport",
+      "referenceYear": 2003,
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy real 2003 seventh generation Celica JGTC300 widebody, huge arches, vents, bumpers, wing and actual livery. Not ST185 or Supra. This is an explicitly requested 2003 historical exception in preview: copy real blue yellow WedsSport photo exactly, do not invent a 2002 version.",
+      "identityNotes": "Toyota Celica seventh-generation T23 TS coupe liftback, sharp wedge nose and tall triangular headlights, not GT86.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Riferimento reale del 2003: eccezione al riferimento 2002, mostrata in anteprima su richiesta. Non viene retrodatata né attivata nelle partite."
     },
     {
       "key": "corolla",
@@ -10522,19 +10771,26 @@
         }
       },
       "profile": "gt",
-      "researchStatus": "interpretation",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
-      "historicalSources": [],
+      "historicalSources": [
+        {
+          "title": "cite忘れがたき銘車たち “職人”が情熱を注いだ『つちやMR2』と土屋春雄さんからのお誘い／番外編 | レーシングオン | autosport web (https://www.as-web.jp/racing-on/695424)",
+          "url": "https://cdn-image.as-web.jp/2021/05/06155922/asimg_Photo01_90s-vol2_photo_01_8c609393c9f02b5.jpg"
+        }
+      ],
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "MR2 SW20 JGTC GT300",
+      "classification": "historic",
+      "candidate": "MR2 SW20 JGTC GT300 · Momo Corse",
       "referenceYear": 1998,
-      "liveryDirection": "white blue and pink Japanese GT racing bands",
-      "bodywork": "retain SW20 MR2 coupe and pop-up lamp identity, actual period GT broad arch kit, deep front ducts, high rear wing and white race wheels",
-      "identityNotes": "Toyota MR2 SW20 mid-engine closed coupe, pop-up lamps closed and side air scoop behind door."
+      "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
+      "bodywork": "Copy actual SW20 JGTC GT300 racing widebody, side intakes, bumper, wing, wheels and real period livery. Not MR-S.",
+      "identityNotes": "Toyota MR2 SW20 mid-engine closed coupe, pop-up lamps closed and side air scoop behind door.",
+      "reviewBatch": "historical-34-2026-10-28",
+      "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco."
     },
     {
       "key": "mrs",

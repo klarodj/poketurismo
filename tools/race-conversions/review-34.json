@@ -1,0 +1,392 @@
+{
+  "batch": "historical-34-2026-10-28",
+  "models": [
+    {
+      "key": "155",
+      "userCorrection": "Copy actual 1995 DTM wide body, deep bumper, splitter, OZ wheels and Martini livery; do not reuse GTA Superturismo kit.",
+      "referenceSources": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/51b15b34-cd7b-44f2-8499-334af72e478e/05.jpg",
+          "page": "https://supercarnostalgia.com/blog/one-to-buy-ex-works-1995-alfa-romeo-155-v6-ti-class-1",
+          "title": "Ex-works 1995 Alfa Romeo 155 V6 Ti Class 1 For Sale in Monaco — Supercar Nostalgia (https://supercarnostalgia.com/blog/one-to-buy-ex-works-1995-alfa-romeo-155-v6-ti-class-1)"
+        }
+      ]
+    },
+    {
+      "key": "xsara",
+      "userCorrection": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
+      "referenceSources": [
+        {
+          "url": "https://fotografias.lasexta.com/clipping/cmsimages02/2019/10/23/8723C99C-4EFD-4E2C-9A2E-6089A9D2957C/69.jpg?crop=1959%2C1102%2Cx127%2Cy0&format=jpg&height=720&optimize=low&width=1280",
+          "page": "https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html",
+          "title": "Rally Catalunya 1999: Philippe Bugalski y la histórica victoria del Citroën Xsara Kit Car (https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html)"
+        }
+      ]
+    },
+    {
+      "key": "zx",
+      "userCorrection": "Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.",
+      "referenceSources": [
+        {
+          "url": "https://www.classicdriver.com/sites/default/files/cars_images/img_1762.gif",
+          "page": "https://www.classicdriver.com/en/car/citroen/zx/1996/473219",
+          "title": "Citroen for sale | Classic Driver (https://www.classicdriver.com/en/car/citroen/zx/1996/473219)"
+        }
+      ]
+    },
+    {
+      "key": "288",
+      "userCorrection": "Keep current body geometry; add credible period Agip, Magneti Marelli, Goodyear sponsor livery. Fictional livery explicitly declared.",
+      "referenceSources": [
+        {
+          "url": "https://soymotor.com/sites/default/files/usuarios/redaccion/portal/jmvinuesa/ferrari-288-gto-evoluzione.jpg",
+          "page": "https://soymotor.com/coches/noticias/ferrari-288-gto-964921",
+          "title": "Ferrari 288 GTO: que comiencen los superdeportivos | SoyMotor.com (https://soymotor.com/coches/noticias/ferrari-288-gto-964921)"
+        }
+      ]
+    },
+    {
+      "key": "360",
+      "userCorrection": "Copy real 360 N-GT racing body, vents, deep splitter, rear wing and actual livery.",
+      "referenceSources": [
+        {
+          "url": "https://cdn.rmsothebys.com/9/2/d/a/4/f/92da4f56ffeea62e4e641b3942fbf2284fb5f893.webp",
+          "page": "https://rmsothebys.com/auctions/wp26/lots/r0016-2001-ferrari-360-ngt/",
+          "title": "2001 Ferrari 360 N-GT | The Woodcote Park Auction 2026 | RM  Sotheby's (https://rmsothebys.com/auctions/wp26/lots/r0016-2001-ferrari-360-ngt/)"
+        },
+        {
+          "url": "https://www.artandrevs.com/upload/cars/gal/xl_170_3277.jpg",
+          "page": "https://www.artandrevs.com/car.php?id=170",
+          "title": "Ferrari 360 N/GT for sale (https://www.artandrevs.com/car.php?id=170)"
+        }
+      ]
+    },
+    {
+      "key": "550",
+      "userCorrection": "User wrote 500 Maranello; model is 550. Copy Prodrive GT body and actual 2001-2002 livery, not later Aston or 575.",
+      "referenceSources": [
+        {
+          "url": "https://images.girardo.com/girardo/image/upload/2023/CS272%20-%202002%20Ferrari%20550%20Prodrive%20-%20Read/038A2005.jpg",
+          "page": "https://girardo.com/car/2002-ferrari-550-maranello-prodrive/",
+          "title": "2002 Ferrari 550 Maranello Prodrive | Girardo & Co (https://girardo.com/car/2002-ferrari-550-maranello-prodrive/)"
+        }
+      ]
+    },
+    {
+      "key": "f50",
+      "userCorrection": "Keep exact F50 GT prototype body; add credible period Agip, Magneti Marelli, Goodyear sponsor livery. Fictional livery explicitly declared.",
+      "referenceSources": [
+        {
+          "url": "https://www.topcarrating.com/ferrari/1996-ferrari-f50-gt.jpg",
+          "page": "https://www.topcarrating.com/1996-ferrari-f50-gt.php",
+          "title": "1996 Ferrari F50 GT - price and specifications (https://www.topcarrating.com/1996-ferrari-f50-gt.php)"
+        }
+      ]
+    },
+    {
+      "key": "coupe",
+      "userCorrection": "CHANGE ONLY wheels to sporty period silver multi-spoke motorsport wheels. Keep all body, livery, camera, lights and proportions unchanged.",
+      "referenceSources": []
+    },
+    {
+      "key": "uno",
+      "userCorrection": "Copy Totip white orange green rally livery and actual production-based group A body, no invented widebody.",
+      "referenceSources": [
+        {
+          "url": "https://images.everyeye.it/img-notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-v4-745975-1280x720.webp",
+          "page": "https://auto.everyeye.it/notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-745975.html",
+          "title": "Fiat Uno Turbo Rally, la storia della Gr. A preparata a fianco della Lancia Delta S4 (https://auto.everyeye.it/notizie/fiat-turbo-rally-storia-gr-preparata-fianco-lancia-delta-s4-745975.html)"
+        }
+      ]
+    },
+    {
+      "key": "escortc",
+      "userCorrection": "Copy Repsol WRC body kit, intakes, wheel arches and correct WRC rear wing.",
+      "referenceSources": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/1755544805743-70N11OUO6A1S08YBDUUV/06.jpg",
+          "page": "https://supercarnostalgia.com/blog/one-to-buy-ex-works-1997-ford-escort-cosworth-wrc",
+          "title": "Ex-Carlos Sainz 1997 Ford Escort RS Cosworth WRC For Sale in the UK — Supercar Nostalgia (https://supercarnostalgia.com/blog/one-to-buy-ex-works-1997-ford-escort-cosworth-wrc)"
+        },
+        {
+          "url": "https://staticv2.revistascratch.com/images/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400000-euros_full.jpg",
+          "page": "https://revistascratch.com/wrc/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400-000-euros-74178",
+          "title": "Sale a subasta el Ford Escort WRC ex Carlos Sainz y podría llegar a los 400.000 euros (https://revistascratch.com/wrc/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400-000-euros-74178)"
+        }
+      ]
+    },
+    {
+      "key": "puma",
+      "userCorrection": "Copy real S1600 highly widened arches, bumpers, spoiler and Ford racing livery.",
+      "referenceSources": [
+        {
+          "url": "https://handh.blob.core.windows.net/stock/20058128-30-medium.jpg?v=63818785644700",
+          "page": "https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1",
+          "title": "Lot 73 - 2001 Ford Puma S1600 'Works' Rally Car (https://www.handh.co.uk/auction/lot/73-2001-ford-puma-s1600-works-rally-car/?lot=57652&sd=1)"
+        },
+        {
+          "url": "https://rmsothebys-cdn.azureedge.net/c/3/9/0/8/1/c390814b2bb943a78108d00512e1342715bcefd7.webp",
+          "page": "https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/",
+          "title": "1999 Ford Puma S1600 | Monaco 2024 | RM  Sotheby's (https://rmsothebys.com/auctions/mc24/lots/r0070-1999-ford-puma-s1600/)"
+        }
+      ]
+    },
+    {
+      "key": "sierra4",
+      "userCorrection": "Copy real Q8 livery and four-door Sapphire group A body, not three-door RS500.",
+      "referenceSources": [
+        {
+          "url": "https://dirtfish-editorial.s3-accelerate.amazonaws.com/2023/08/POTW-rally-car-on-a-rallyt-stage.jpg",
+          "page": "https://dirtfish.com/rally/wrc/the-wrc-beginnings-of-a-current-drivers-father/",
+          "title": "The WRC beginnings of a current driver's father – DirtFish (https://dirtfish.com/rally/wrc/the-wrc-beginnings-of-a-current-drivers-father/)"
+        }
+      ]
+    },
+    {
+      "key": "sierrac",
+      "userCorrection": "CHANGE ONLY rear wing: restore original homologation RS500 whale-tail upper wing and boot spoiler from stock reference2. Keep livery and everything else.",
+      "referenceSources": []
+    },
+    {
+      "key": "nsx",
+      "userCorrection": "Keep approved Castrol white green red livery; rebuild actual contemporary NSX GT500 wide body, intakes, splitter, roof and wing from real reference.",
+      "referenceSources": [
+        {
+          "url": "https://car.watch.impress.co.jp/img/car/list/1008/974/04.jpg",
+          "page": "https://car.watch.impress.co.jp/docs/news/1008974.html",
+          "title": "ホンダコレクションホール、全日本GT選手権（JGTC）の企画展 - Car Watch (https://car.watch.impress.co.jp/docs/news/1008974.html)"
+        }
+      ]
+    },
+    {
+      "key": "hyundai",
+      "userCorrection": "Copy real F2 kit car wide arches, bumpers, wing, Hyundai blue white livery.",
+      "referenceSources": [
+        {
+          "url": "https://tech-racingcars.wdfiles.com/local--files/hyundai-coupe-rd-evo-2/hyundai_1.jpg",
+          "page": "https://tech-racingcars.wikidot.com/hyundai-coupe-rd-evo-2",
+          "title": "Hyundai Coupe RD Evo 2 (1998) - Racing Cars (https://tech-racingcars.wikidot.com/hyundai-coupe-rd-evo-2)"
+        }
+      ]
+    },
+    {
+      "key": "diablo",
+      "userCorrection": "Keep GTR body, add actual period racing sponsor livery from real photo.",
+      "referenceSources": [
+        {
+          "url": "https://www.dkeng.co.uk/sales_images/1719788400/large_1720707260_bloxhamresize_5.jpg",
+          "page": "https://www.dkeng.co.uk/ferrari-sales/1974/blue_chip_competition_cars/lamborghini_diablo_gtr.html",
+          "title": "Lamborghini Diablo GTR for sale - Vehicle Sales - DK Engineering (https://www.dkeng.co.uk/ferrari-sales/1974/blue_chip_competition_cars/lamborghini_diablo_gtr.html)"
+        }
+      ]
+    },
+    {
+      "key": "evoluzione",
+      "userCorrection": "Copy real Group A Martini livery, rally wheels; KEEP exact original stock Evoluzione broad angular arches and bumper. Do NOT invent extra arch extensions.",
+      "referenceSources": [
+        {
+          "url": "https://cdn.rmsothebys.com/1/d/b/f/3/f/1dbf3f8a4d8a08ce7852ddc8c7676246ed7c73d9.webp",
+          "page": "https://rmsothebys.com/ps00/inventory/r5634-1992-lancia-delta-hf-integrale-group-a/",
+          "title": "1992 Lancia Delta HF Integrale Group A | Private Sales | RM  Private Sales (https://rmsothebys.com/ps00/inventory/r5634-1992-lancia-delta-hf-integrale-group-a/)"
+        }
+      ]
+    },
+    {
+      "key": "delta16",
+      "userCorrection": "Copy actual red Martini Sanremo 1989 livery. Keep EXACT stock original 16V bumper and arches unchanged, no extra body kit.",
+      "referenceSources": [
+        {
+          "url": "https://i.ebayimg.com/images/g/8UQAAOSwgsdhxZkv/s-l500.jpg",
+          "page": "https://www.ebay.fr/itm/403373590690",
+          "title": "Photo A.034662 LANCIA DELTA INTEGRALE 16V BIASION-SIVIERO SANREMO RALLY 1989  | eBay (https://www.ebay.fr/itm/403373590690)"
+        }
+      ]
+    },
+    {
+      "key": "3000gt",
+      "userCorrection": "Rebuild from REAL PUMA GTO N1 endurance photographs: production-derived body, green white checker PUMA livery, actual WORK racing wheels, modest original wing. Not JGTC; no invented widebody. Retain 3000GT early-generation headlight identity.",
+      "referenceSources": [
+        {
+          "url": "https://drifting.com/wp-content/uploads/2015/09/tbt-Puma-Mitsubishi-GTO-N1-Super-Taikyu-race-on-WORK-Meister-S1-1995-artofwheel.jpg",
+          "title": "PUMA GTO N1 1995 · photographs of the real car"
+        }
+      ]
+    },
+    {
+      "key": "s14",
+      "userCorrection": "Copy actual Xanavi S14 JGTC widebody, spoiler, bumper, vents, wheels and actual livery. No later S15.",
+      "referenceSources": [
+        {
+          "url": "https://www.nissan.co.jp/HERITAGE/COMMON/IMAGES/CAR/2400/150.jpg",
+          "page": "https://www.nissan.co.jp/HERITAGE/DETAIL/150.html",
+          "title": "日産： NISSAN HERITAGE COLLECTION｜ザナヴィ・シルビア 1998JGTC No.15 (https://www.nissan.co.jp/HERITAGE/DETAIL/150.html)"
+        }
+      ]
+    },
+    {
+      "key": "primera",
+      "userCorrection": "Copy actual P11 BTCC body, low stance, white racing wheels, rear wing and actual red silver Vodafone livery.",
+      "referenceSources": [
+        {
+          "url": "https://www.nissan.co.jp/HERITAGE/COMMON/IMAGES/CAR/2400/175.jpg",
+          "page": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/Primera_GT.html",
+          "title": "«Btcc» HD wallpapers (https://wallpapercrafter.com/xfsearch/alt/btcc/)"
+        }
+      ]
+    },
+    {
+      "key": "r32",
+      "userCorrection": "Copy real 1994 JGTC R32 Calsonic blue body, bumper, aero, wheels and wing, not standard group A.",
+      "referenceSources": [
+        {
+          "url": "https://cdn-image.as-web.jp/2022/10/04093834/asimg_Photo01_1994_GT_Rd2_KT_0074_6c633b8089aacc0-764x510.jpg",
+          "title": "『ニッサン・スカイラインGT-R（BNR32型）JGTC編』新天地でも最強だったGT-Rcite忘れがたき銘車たち | レーシングオン | autosport web (https://www.as-web.jp/racing-on/867902)"
+        }
+      ]
+    },
+    {
+      "key": "106",
+      "userCorrection": "Copy true 106 Maxi broad flared arches, deep bumper, track width, roof vent and exact real livery.",
+      "referenceSources": [
+        {
+          "url": "https://staticv2.revistascratch.com/images/imagenes/peugeot-106-maxi-kit-car.jpg",
+          "page": "https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856",
+          "title": "Kit Cars (V): Los A6, precursores de los S1600 (https://revistascratch.com/historicos/noticia/kit-cars-v-los-a6-precursores-de-los-s1600-39856)"
+        }
+      ]
+    },
+    {
+      "key": "306",
+      "userCorrection": "Rebuild actual 306 Maxi Kit Car from real yellow Motul car photograph. Copy EXACT arches, bumper, wide track, roof vent and rear spoiler from the photograph, and its real yellow Motul livery. No invented extra vents or arbitrary racing kit.",
+      "referenceSources": [
+        {
+          "url": "https://www.gotothegrid.com/storage/ads/ijIBh8pyYtyr3IrfjvYY0OVwbQtbJwxFfkwr7zDb-800.webp",
+          "page": "https://www.gotothegrid.com/fr/annonces/voitures-de-course/rallye/peugeot/a-vendre/2840-a-vendre-306-maxi-v1",
+          "title": "A vendre 306 Maxi V1 - Voitures de course • GoToTheGrid  🏁",
+          "description": "A striking yellow Peugeot 306 Maxi V1 is captured mid-stage on a winding, forest-lined tarmac road. The car’s livery features bold Motul branding on the hood and front bumper, alongside Garage Jenatton and VRAT logos. The number 29 is displayed on the windshield, indicating its competition entry.\n\nUnder the hood, this V1 chassis houses an EV7 engine upgraded with an EV9 crankshaft, delivering 291 hp at 9800 rpm. It’s paired with a revised X-TRAC 6-speed gearbox, V1 front suspension with V2 dampers, and V2 rear suspension. High-performance braking is provided by 355 mm Brembo 8-piston front calipers and 260 mm Alcon Peugeot Sport rear calipers. This rally-prepared machine is listed for sale in France, with price available on request.",
+          "artist": "",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "key": "405",
+      "userCorrection": "Copy exact 405 BTCC supertouring bumpers, low stance, large white wheels, wing and real livery. No T16 Pikes Peak.",
+      "referenceSources": [
+        {
+          "url": "https://assets.carandclassic.com/listing-assets/peugeot/405-mi-16v/1993-peugeot-405-mi-16v-12685235531-8W1Mmn/WNWzkWpaOOg18cFHkenD5RC8tF01QoomnpQtqAA7.jpg?fit=fillmax&h=1200&ixlib=php-4.1.0&q=85&s=eeca10686e43248e2c16b7a0b54fb0fa&w=1200",
+          "page": "https://www.carandclassic.com/auctions/1993-peugeot-405-mi-16v-8W1Mmn",
+          "title": "1993 Peugeot 405 Mi 16V For Sale By Auction (https://www.carandclassic.com/auctions/1993-peugeot-405-mi-16v-8W1Mmn)"
+        }
+      ]
+    },
+    {
+      "key": "williams",
+      "userCorrection": "Copy real Renault museum Clio Maxi kit car body, strongly widened arches, rectangular bumper vents, silver Diac blue yellow livery and actual white racing wheels. Do not use ordinary Williams body with decals.",
+      "referenceSources": [
+        {
+          "url": "https://www.artcurial.com/item-images/FR/397/10692397_Vue%2006.jpg?force_webp=true&w=700",
+          "page": "https://www.artcurial.com/ventes/4058/lots/16-a",
+          "title": "1995 Renault Clio Maxi \" Kit car \" (https://www.artcurial.com/ventes/4058/lots/16-a)"
+        },
+        {
+          "url": "https://a.storyblok.com/f/118112/1800x2100/362d970fb8/twinner_maxi-clio_001.jpg/m/1536x0/filters%3Aformat%28jpeg%29%3Aquality%2880%29",
+          "page": "https://theoriginals.renault.com/en/clio-maxi",
+          "title": "Clio Maxi Kit Car - The Originals Museum (https://theoriginals.renault.com/en/clio-maxi)"
+        }
+      ]
+    },
+    {
+      "key": "laguna",
+      "userCorrection": "Copy EXACT actual green Nescafe Blend37 Laguna BTCC photograph including long supertouring bumper, gold multispoke racing wheels, correct wing and actual green livery. Do not replace with yellow blue.",
+      "referenceSources": [
+        {
+          "url": "https://cdn.rmsothebys.com/1/f/0/2/7/1/1f0271fb0f2d0f608071c87fa609dd23024fbf23.webp",
+          "page": "https://rmsothebys.com/auctions/lf16/lots/r114-1997-renault-laguna-btcc-super-touring/",
+          "title": "1997 Renault Laguna BTCC Super Touring | London 2016 | RM  Sotheby's (https://rmsothebys.com/auctions/lf16/lots/r114-1997-renault-laguna-btcc-super-touring/)"
+        }
+      ]
+    },
+    {
+      "key": "megane",
+      "userCorrection": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
+      "referenceSources": [
+        {
+          "url": "https://www.confidential-renault.fr/doss_images/1577698062_Megane_Maxi_CR_redef_0002.jpg",
+          "page": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car",
+          "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)"
+        }
+      ]
+    },
+    {
+      "key": "cordoba",
+      "userCorrection": "Copy true Cordoba WRC body arches bumpers wing and real yellow Repsol Seat livery.",
+      "referenceSources": [
+        {
+          "url": "https://cdn-inveltcollection.arsy.cz/UserFiles/Product/Image/1651580911DSC03940.jpg",
+          "page": "https://www.inveltcollection.com/seat-cordoba-wrc/p-60/",
+          "title": "Seat Cordoba WRC | invelt Rallied & Raced (https://www.inveltcollection.com/seat-cordoba-wrc/p-60/)"
+        },
+        {
+          "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/assets/16601_126_250888_6fd0b1ac.jpg",
+          "page": "https://www.seatcocheshistoricos.es/SEATHistoricos/2000/CordobaWRCEvoI.php",
+          "title": "Córdoba WRC Evo 1 (https://www.seatcocheshistoricos.es/SEATHistoricos/2000/CordobaWRCEvoI.php)"
+        }
+      ]
+    },
+    {
+      "key": "ibiza",
+      "userCorrection": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
+      "referenceSources": [
+        {
+          "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/assets/sasego9801_240825_6fd0b1ac.jpg",
+          "page": "https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php",
+          "title": "KIT CAR E2 (https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php)"
+        }
+      ]
+    },
+    {
+      "key": "legacy",
+      "userCorrection": "Copy true Legacy RS Group A body and real rally livery. No Impreza or invented modern body.",
+      "referenceSources": [
+        {
+          "url": "https://wrc.net.pl/media.php?url=https%3A%2F%2Focs-pl.oktawave.com%2Fv1%2FAUTH_31b548cfed58484085a001af5d8ac982%2Fwrc-prod%2F2025%2F04%2F2025-03-19-1090.webp",
+          "page": "https://wrc.net.pl/moze-idealna-karoseria-jest-mylaca-ale-tym-subaru-legacy-rs-jezdzil-colin-mcrae-ostatnia-szansa-na-odkup-auta-ktorym-seryjnie-wygrywal/",
+          "title": "Może idealna karoseria jest myląca, ale tym Subaru Legacy RS jeździł Colin McRae. Ostatnia szansa na odkup auta, którym seryjnie wygrywał (https://wrc.net.pl/moze-idealna-karoseria-jest-mylaca-ale-tym-subaru-legacy-rs-jezdzil-colin-mcrae-ostatnia-szansa-na-odkup-auta-ktorym-seryjnie-wygrywal/)"
+        }
+      ]
+    },
+    {
+      "key": "sainz",
+      "userCorrection": "Copy actual Carlos Sainz ST185 Group A Repsol car in photograph: WHITE RED ORANGE REPSOL and Marlboro livery, correct original Group A bumper and hood vents, stock-like arches and OZ racing wheels. NOT Castrol, NOT ST205. Historic photograph overrides previous incorrect written livery.",
+      "referenceSources": [
+        {
+          "url": "https://static.wixstatic.com/media/b5ed70_6acfd1e0a7944c2abb94cff0b621495b~mv2.jpg/v1/fill/w_2500%2Ch_1875%2Cal_c/b5ed70_6acfd1e0a7944c2abb94cff0b621495b~mv2.jpg",
+          "page": "https://en.ascottcollection.com/toyota-celica-st185-fr",
+          "title": "1992 TOYOTA CELICA ST185 Ex Carlos Sainz (https://en.ascottcollection.com/toyota-celica-st185-fr)"
+        }
+      ]
+    },
+    {
+      "key": "celica",
+      "userCorrection": "Copy real 2003 seventh generation Celica JGTC300 widebody, huge arches, vents, bumpers, wing and actual livery. Not ST185 or Supra. This is an explicitly requested 2003 historical exception in preview: copy real blue yellow WedsSport photo exactly, do not invent a 2002 version.",
+      "referenceSources": [
+        {
+          "url": "https://assets.st-note.com/production/uploads/images/251479696/rectangle_large_type_2_7bd405d1c8eca0a054ed1c5f3836c5e5.jpeg?width=1280",
+          "page": "https://note.com/zzt231kai/n/n396bf6ff825b",
+          "title": "GT300　ウェッズスポーツセリカ　青木孝行/谷口信輝 組｜CELICA_Love (https://note.com/zzt231kai/n/n396bf6ff825b)"
+        }
+      ]
+    },
+    {
+      "key": "mr2",
+      "userCorrection": "Copy actual SW20 JGTC GT300 racing widebody, side intakes, bumper, wing, wheels and real period livery. Not MR-S.",
+      "referenceSources": [
+        {
+          "url": "https://cdn-image.as-web.jp/2021/05/06155922/asimg_Photo01_90s-vol2_photo_01_8c609393c9f02b5.jpg",
+          "title": "cite忘れがたき銘車たち “職人”が情熱を注いだ『つちやMR2』と土屋春雄さんからのお誘い／番外編 | レーシングオン | autosport web (https://www.as-web.jp/racing-on/695424)"
+        }
+      ]
+    }
+  ]
+}

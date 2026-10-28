@@ -1,50 +1,34 @@
 {
-  "classification": "historic",
-  "candidate": "NSX GT500 JGTC",
-  "livery": "white green and red Castrol Mugen",
-  "bodywork": "real 1990s NSX GT wide fenders, bumper ducts, low splitter, roof intake and high flat rear wing, white racing wheels; no modern NSX",
+  "key": "nsx",
+  "candidate": "Honda NSX Castrol Mugen JGTC 2000",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Honda NSX Castrol Mugen JGTC 2000. USER CORRECTION: Keep approved Castrol white green red livery; rebuild actual contemporary NSX GT500 wide body, intakes, splitter, roof and wing from real reference. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/nsx/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/nsx-web-1.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/nsx/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/nsx-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://cdn.ccdiscussion.com/original/3X/9/b/9b580ef57fb4fe3e42f1e773bae39479c0ad20a6.jpeg",
-      "page": "https://ccdiscussion.com/t/the-ultimate-nsx-gt-gt500-database-with-pictures-1997-2009/81147",
-      "title": "The ultimate NSX-GT GT500 database with pictures (1997-2009) - Off Topic - Car Crushers Forum",
-      "description": "A striking red and black Honda NSX GT500, car number 100, blasts down the circuit with sponsor decals from BP, Kenwood, and Advan. The aerodynamic bodywork, including a large rear wing and side vents, reflects the early JGTC modifications that transformed the road-going NSX into a competitive race machine. Team Kunimitsu’s entry was one of the few to run the 3.0L C30A V6 engine in 1996, marking Honda’s initial foray into GT500 competition.\n\nThis image is part of a comprehensive database chronicling NSX-GT evolution from 1996 to 2009. Over thirteen seasons, Honda experimented with naturally aspirated and twin-turbo engines, updated chassis designs, and navigated regulatory changes. The NSX-GT achieved multiple race wins, drivers’ and teams’ championships, and remained a JGTC/Super GT stalwart until its final appearance at Motegi in 2009.",
-      "artist": "",
-      "license": ""
+      "url": "https://car.watch.impress.co.jp/img/car/list/1008/974/04.jpg",
+      "page": "https://car.watch.impress.co.jp/docs/news/1008974.html",
+      "title": "ホンダコレクションホール、全日本GT選手権（JGTC）の企画展 - Car Watch (https://car.watch.impress.co.jp/docs/news/1008974.html)"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Keep approved Castrol white green red livery; rebuild actual contemporary NSX GT500 wide body, intakes, splitter, roof and wing from real reference.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Honda NSX, racing preparation referencing NSX GT500 JGTC (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: The ultimate NSX-GT GT500 database with pictures (1997-2009) - Off Topic - Car Crushers Forum. Its description: A striking red and black Honda NSX GT500, car number 100, blasts down the circuit with sponsor decals from BP, Kenwood, and Advan. The aerodynamic bodywork, including a large rear wing and side vents, reflects the early JGTC modifications that transformed the road-going NSX into a competitive race machine. Team Kunimitsu’s entry was one of the few to run the 3.0L C30A V6 engine in 1996, marking Honda’s initial foray into GT500 competition.\n\nThis image is part of a comprehensive database chronicling NSX-GT evolution from 1996 to 2009. Over thirteen seasons, Honda experimented with naturally aspirated and twin-turbo engines, updated chassis designs, and navigated regulatory changes. The NSX-GT achieved multiple race wins, drivers’ and teams’ championships, and remained a JGTC/Super GT stalwart until its final appearance at Motegi in 2009.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Honda NSX original pre-facelift coupe, pop-up lamps closed as reference, black roof and original rear spoiler.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real 1990s NSX GT wide fenders, bumper ducts, low splitter, roof intake and high flat rear wing, white racing wheels; no modern NSX. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white green and red Castrol Mugen. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "nsx",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e0689181-e5af-4054-8300-18ad70ccdb7b.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/nsx.png",
-  "sourceSha256": "6f5e2421cf4da4a1b35e9de5640720a658e79391e0e3f164836831b8a3e1a6a5",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-70a14b90-d930-4b86-849e-ef8908c997e9.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/nsx-r2.png",
+  "sourceSha256": "9eee3a7b40a1ee0ae7c2c9fc09a4dfdca3d5b5c55c66c85cbb75e20109177f4b",
   "input": "tools/race-conversions/inputs/nsx.png",
   "output": "public/images/race-cars/nsx.png",
-  "sha256": "bbf5479ce7d2754cbd7aafdd928378dc3a6e07d3f0455fccafc837a4ed6b22ff",
+  "sha256": "1404ebeeac67180a57c7d39c1e12c60fe356f30ce2b9c9062cb32f5842af74e8",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/nsx/rosso.png",
-      "sha256": "e4d1fc95e54a9ff434877cc7bc896c3ce79f18a3e9e420c9ba315acd28d3cb31"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/nsx-web-1.img",
-      "sha256": "a3555594d981e41809132eed198d1ac1293112b6e6a8dfcd0a92e079f6a44393"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/nsx/rosso.png": "e4d1fc95e54a9ff434877cc7bc896c3ce79f18a3e9e420c9ba315acd28d3cb31",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/nsx-reference.img": "cdee00def9adc8eeef694f3853b4765a1c2919a0d8f9826274999e3109dcad1e"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

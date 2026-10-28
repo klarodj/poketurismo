@@ -1,50 +1,34 @@
 {
-  "classification": "inspired",
-  "candidate": "ZX 2.0 · Gruppo A",
-  "livery": "white with red and blue Citroën racing bands",
-  "bodywork": "retain approved ZX hatch and rear lights, touring bumper and splitter, restrained wide arches, modest roof spoiler, silver multi-spoke wheels; not rally-raid prototype",
+  "key": "zx",
+  "candidate": "Citroen ZX Kit Car rally 1997",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Citroen ZX Kit Car rally 1997. USER CORRECTION: Exact ZX kit car wide arches and bumpers; correct ZX tail lamps. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/zx/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/zx-web-2.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/zx/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/zx-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://rallybodykits.com/images/citroen/citroen-zx-maxi-enjolras.jpg",
-      "page": "https://rallybodykits.com/citroen-zx-body-kits.html",
-      "title": "Citroen ZX body kits, Citroen ZX fibre and bodywork parts for competition",
-      "description": "A striking red Citroën ZX rally car is showcased in a garage setting, its body adorned with bold TOTAL and Michelin branding. The front end features a set of four auxiliary rally lights mounted on the hood, ready for night stages, while the white multi-spoke wheels and roof spoiler enhance its competitive appearance. The windshield carries the name “Enjolras,” and the rear side panel is emblazoned with the Citroën logo in large white letters.\n\nThis image appears on a specialized rally body kits website offering a comprehensive catalog of Citroën ZX competition parts. The site lists reference codes, descriptions, and prices for components such as carbon fiber hoods, bumpers, fenders, door panels, lamp pods, and polycarbonate windows. It also includes FIA homologation details for the ZX Kit Car, emphasizing the requirement for original stamped forms. Additional accessories like driving and fog lights, mounting hardware, and connectors are itemized with their specifications and costs, catering to rally enthusiasts and builders.",
-      "artist": "",
-      "license": ""
+      "url": "https://www.classicdriver.com/sites/default/files/cars_images/img_1762.gif",
+      "page": "https://www.classicdriver.com/en/car/citroen/zx/1996/473219",
+      "title": "Citroen for sale | Classic Driver (https://www.classicdriver.com/en/car/citroen/zx/1996/473219)"
     }
   ],
-  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "userCorrection": "Exact ZX kit car wide arches and bumpers; correct ZX tail lamps.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Citroen ZX 2.0, racing preparation referencing ZX 2.0 · Gruppo A (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Citroen ZX body kits, Citroen ZX fibre and bodywork parts for competition. Its description: A striking red Citroën ZX rally car is showcased in a garage setting, its body adorned with bold TOTAL and Michelin branding. The front end features a set of four auxiliary rally lights mounted on the hood, ready for night stages, while the white multi-spoke wheels and roof spoiler enhance its competitive appearance. The windshield carries the name “Enjolras,” and the rear side panel is emblazoned with the Citroën logo in large white letters.\n\nThis image appears on a specialized rally body kits website offering a comprehensive catalog of Citroën ZX competition parts. The site lists reference codes, descriptions, and prices for components such as carbon fiber hoods, bumpers, fenders, door panels, lamp pods, and polycarbonate windows. It also includes FIA homologation details for the ZX Kit Car, emphasizing the requirement for original stamped forms. Additional accessories like driving and. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved ZX hatch and rear lights, touring bumper and splitter, restrained wide arches, modest roof spoiler, silver multi-spoke wheels; not rally-raid prototype. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red and blue Citroën racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "zx",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9452c1cc-ddd0-4e6b-ae87-e04a52fd3543.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/zx.png",
-  "sourceSha256": "33265882d469fa28f227ff4fa8b254b111e1832649559ec15fc0683507723b0e",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f8f718fe-b2ea-4b97-b6a0-17200a81acb1.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/zx-r2.png",
+  "sourceSha256": "931213f202482de1b30ceea58f181179bacbb52f32e3718b6fd385424d488b53",
   "input": "tools/race-conversions/inputs/zx.png",
   "output": "public/images/race-cars/zx.png",
-  "sha256": "af5d18394b5c0568eb688d9031eb8f63d91e92fdc1cf5b4bcb04b5a80923550a",
+  "sha256": "8474cc6fe51c89fb8e1deec8ed0c9b3078575690891643c468dcbe77d97f39f5",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/zx/rosso.png",
-      "sha256": "7a8aa27d11e1ec0b6a80670d8bcb8095b2b83d5a5b68265d66883d523db3c2b2"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/zx-web-2.img",
-      "sha256": "0d10c43133b9543cffca7981f8f72a69b962412bd23727ac221ea412a64cd6f0"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/zx/rosso.png": "7a8aa27d11e1ec0b6a80670d8bcb8095b2b83d5a5b68265d66883d523db3c2b2",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/zx-reference.img": "c8a63f96cec2fc220f3589be26f81c977a0a430fcb32eb83c9b310a4fd3e1292"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

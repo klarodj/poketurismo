@@ -1,50 +1,33 @@
 {
-  "classification": "inspired",
-  "candidate": "GTO 3000 GT · GT giapponese",
-  "livery": "white blue and red Mitsubishi racing graphics",
-  "bodywork": "retain real 3000GT coupe roof and nose, deep GT bumper and cooling ducts, broad arches, large rear wing and silver racing wheels",
+  "key": "3000gt",
+  "candidate": "Mitsubishi GTO PUMA N1 Super Taikyu 1995",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Mitsubishi GTO PUMA N1 Super Taikyu 1995. USER CORRECTION: Rebuild from REAL PUMA GTO N1 endurance photographs: production-derived body, green white checker PUMA livery, actual WORK racing wheels, modest original wing. Not JGTC; no invented widebody. Retain 3000GT early-generation headlight identity. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/3000gt/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/3000gt-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/3000gt/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/3000gt-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://imagenes.autobild.es/files/image_1920_1080/uploads/imagenes/2023/05/29/68cdbaac59567.jpeg",
-      "page": "https://www.autobild.es/reportajes/increible-historia-mitsubishi-3000-gt-824023",
-      "title": "La increíble historia del Mitsubishi 3000 GT",
-      "description": "The image features a silver Mitsubishi 3000 GT sports coupe viewed from the rear, showcasing its active rear spoiler, quad exhaust outlets, and continuous taillight strip emblazoned with the GTO badge. The car’s smooth, aerodynamic bodywork and integrated wing reflect the advanced design elements that defined Japanese performance cars of the early 1990s.\n\nThis 2+2 coupe, produced between 1990 and 2000, combined permanent all-wheel drive, four-wheel steering, and adaptive suspension in a 4.60-meter-long chassis. Under the hood, twin-turbo V6 variants delivered up to 320 CV, while the base model featured a 225 CV naturally aspirated engine. Despite its weight and electronic quirks, the 3000 GT remains a sought-after classic, with special editions like the lightweight MR and the Spyder convertible adding to its legacy.",
-      "artist": "",
-      "license": ""
+      "url": "https://drifting.com/wp-content/uploads/2015/09/tbt-Puma-Mitsubishi-GTO-N1-Super-Taikyu-race-on-WORK-Meister-S1-1995-artofwheel.jpg",
+      "title": "PUMA GTO N1 1995 · photographs of the real car"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Rebuild from REAL PUMA GTO N1 endurance photographs: production-derived body, green white checker PUMA livery, actual WORK racing wheels, modest original wing. Not JGTC; no invented widebody. Retain 3000GT early-generation headlight identity.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mitsubishi 3000GT, racing preparation referencing GTO 3000 GT · GT giapponese (1994). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: La increíble historia del Mitsubishi 3000 GT. Its description: The image features a silver Mitsubishi 3000 GT sports coupe viewed from the rear, showcasing its active rear spoiler, quad exhaust outlets, and continuous taillight strip emblazoned with the GTO badge. The car’s smooth, aerodynamic bodywork and integrated wing reflect the advanced design elements that defined Japanese performance cars of the early 1990s.\n\nThis 2+2 coupe, produced between 1990 and 2000, combined permanent all-wheel drive, four-wheel steering, and adaptive suspension in a 4.60-meter-long chassis. Under the hood, twin-turbo V6 variants delivered up to 320 CV, while the base model featured a 225 CV naturally aspirated engine. Despite its weight and electronic quirks, the 3000 GT remains a sought-after classic, with special editions like the lightweight MR and the Spyder convertible adding to its legacy.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mitsubishi 3000GT/GTO Z16A closed coupe as photo, wide low body, side gills and raised rear spoiler, match reference headlamp version.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain real 3000GT coupe roof and nose, deep GT bumper and cooling ducts, broad arches, large rear wing and silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Mitsubishi racing graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "3000gt",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-27f3ce38-c3af-44cd-a14b-5951b64b7f0a.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/3000gt.png",
-  "sourceSha256": "2c17cfd9e32c9787751c21069f87bf9a2a65001fc6ffb2a48656bf4ca6829a80",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b0d449c8-faeb-47a0-a6fe-a3617ea81750.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/3000gt-r2.png",
+  "sourceSha256": "d77f13e7f4c91af89e58d1ce5a15b1b3ff9e6fa36d046da9036edb0763239a1c",
   "input": "tools/race-conversions/inputs/3000gt.png",
   "output": "public/images/race-cars/3000gt.png",
-  "sha256": "6f09d2ffd67cadd289f2dbfcb609072ad40b2a8e2bb4d85e22be726ce3c35c50",
+  "sha256": "cd9f18375be149a96d95f39f07ebd1f20c344bfe7e7dfd1f3019aad4cb8629c9",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/3000gt/rosso.png",
-      "sha256": "f71cc5cc2d7f23ede4653c2b435b4dfbc30c178fa423fb01ff8a26db6a7f3f84"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/3000gt-web-0.img",
-      "sha256": "8b6ffe0d02af7ca7bf00dd91110cf1c33c70242b899ab0184552d86a9318465a"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/3000gt/rosso.png": "f71cc5cc2d7f23ede4653c2b435b4dfbc30c178fa423fb01ff8a26db6a7f3f84",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/3000gt-reference.img": "44980482e9800423d22207b242d13e9ee1c7740430636c7b665747000b85850e"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

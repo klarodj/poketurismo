@@ -1,45 +1,34 @@
 {
   "key": "celica",
-  "prompt": "Use case: stylized-concept. Asset type: one automotive RPG racing conversion sprite, Northern Italy circa 2002. Draw Toyota Celica Ts (2000), transformed into a credible PERIOD club racing car. This is explicitly a fictional but historically plausible 2002 preparation, NOT a claim of a factory race version. Reference 1 is the APPROVED ROAD PIXEL MODEL: preserve its exact vehicle identity, roof, door count, glass shape, headlights and rear-lamp anatomy, and front-left camera. Reference 2 is the REAL ORIGINAL STOCK PHOTOGRAPH: use it to confirm the precise model generation and proportions. Reference 3 is STYLE/CAMERA ONLY; NEVER copy the Fiat Punto shape. CRITICAL MODEL IDENTITY: Toyota Celica seventh-generation T23 TS coupe liftback, sharp wedge nose and tall triangular headlights, not GT86. Those road-car instructions that prohibit wings/arches are superseded ONLY for the requested racing conversion; body identity and correct tail remain locked. PHYSICAL BODYWORK, MUST BE VISIBLY DIFFERENT FROM STOCK, not just paint: retain T230 triangular headlights and angular coupe roof, plausible period touring wide arches and splitter, skirts, rear wing and white racing wheels; no unverified post-2002 GT300 claim. Purposeful motorsport stance, period race tyres, visible dark roll-cage through glass where suitable. Dedicated livery: white red and green Toyota period racing bands. Add coherent restrained 1990s racing number panels and tiny period-style sponsor marks; do NOT invent an official team or victory story. Use period wheel sizes and correct plausible aero; never modern giant wheels, 2020s canards, LED lights or GT3 body replacements. Keep the original engine bay arrangement and drivetrain implied by stock body; do not turn a front-engined car into a rear-engined prototype. COMPOSITION: one entire car, nose towards lower left, front-left three-quarter approximately 40% front/60% side, wheels straight, true proportions, all aero within a wide 3:1 canvas with generous transparent margins. GENUINE TRANSPARENT background, no people, scenery, ground plane, cast shadow, multiple views, UI, captions or watermark. STYLE: hand-drawn 1990s PC racing game pixel art, logical 320x128 grid, crisp square pixel clusters, dark one-pixel panel seams and stepped outline, compact 5-6-tone shading. No photo filter, vector, 3D render, antialiasing, gradients, blur or noisy textures. The finished car should clearly read as this same exact road model rebuilt for racing, with the listed bumpers, arches, aero and wheels.",
+  "candidate": "Toyota Celica ZZT231 WedsSport JGTC GT300 2003",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Toyota Celica ZZT231 WedsSport JGTC GT300 2003. USER CORRECTION: Copy real 2003 seventh generation Celica JGTC300 widebody, huge arches, vents, bumpers, wing and actual livery. Not ST185 or Supra. This is an explicitly requested 2003 historical exception in preview: copy real blue yellow WedsSport photo exactly, do not invent a 2002 version. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/celica/rosso.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/celica.png",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/celica/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/celica-reference.img"
   ],
-  "classification": "club",
-  "candidate": "Celica TS · Turismo del club",
-  "livery": "white red and green Toyota period racing bands",
-  "bodywork": "retain T230 triangular headlights and angular coupe roof, plausible period touring wide arches and splitter, skirts, rear wing and white racing wheels; no unverified post-2002 GT300 claim",
   "referenceSources": [
     {
-      "role": "Real original road-car photograph supplied for the game",
-      "file": "tools/paint-prototype/archive/images/car/celica.png"
+      "url": "https://assets.st-note.com/production/uploads/images/251479696/rectangle_large_type_2_7bd405d1c8eca0a054ed1c5f3836c5e5.jpeg?width=1280",
+      "page": "https://note.com/zzt231kai/n/n396bf6ff825b",
+      "title": "GT300　ウェッズスポーツセリカ　青木孝行/谷口信輝 組｜CELICA_Love (https://note.com/zzt231kai/n/n396bf6ff825b)"
     }
   ],
+  "userCorrection": "Copy real 2003 seventh generation Celica JGTC300 widebody, huge arches, vents, bumpers, wing and actual livery. Not ST185 or Supra. This is an explicitly requested 2003 historical exception in preview: copy real blue yellow WedsSport photo exactly, do not invent a 2002 version.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-71b0ece6-061a-4704-86cf-ffc01a03b579.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/celica.png",
-  "sourceSha256": "136b58a954bd27611b1325256dcdb89af88424173d0681929c2f8104b9d1c58c",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-26c3cf2f-93e9-4bad-b8b1-93a05b789efc.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/celica-r2.png",
+  "sourceSha256": "46271f111121f8f36a02776420adb074a15c66350596776e3eb06e0b393b4905",
   "input": "tools/race-conversions/inputs/celica.png",
   "output": "public/images/race-cars/celica.png",
-  "sha256": "b836eb45803641d9d87b999b6d5beb3eac2b4478b2c298db5584b9b6dcff15af",
+  "sha256": "c42ec408e80b4239e4f57fe0dbb68ef719d84bb575c57d38c6fb5c72acc17719",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/celica/rosso.png",
-      "sha256": "9d7dd22d677a0e8115735a9b083258baeabbd42a20596344e1d331b906336e03"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/celica.png",
-      "sha256": "ad24db2952565ca3a0871e5bb3057afe70e0f3cfb28f2abe9723ce42deaced45"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/celica/rosso.png": "9d7dd22d677a0e8115735a9b083258baeabbd42a20596344e1d331b906336e03",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/celica-reference.img": "c5f0a07efa70a88849cd2982b0b797192e81f51f66c475eccbb5129bff13d815"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

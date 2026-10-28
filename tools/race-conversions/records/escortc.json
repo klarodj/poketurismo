@@ -1,50 +1,41 @@
 {
-  "classification": "inspired",
-  "candidate": "Escort RS Cosworth Gruppo A",
-  "livery": "blue white and yellow Ford Motorsport",
-  "bodywork": "real Cosworth widened fenders, rally front vents, whale-tail rear spoiler, white multi-spoke rally wheels, roof vent and mud flaps",
+  "key": "escortc",
+  "candidate": "Ford Escort WRC Repsol 1997",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Ford Escort WRC Repsol 1997. USER CORRECTION: Copy Repsol WRC body kit, intakes, wheel arches and correct WRC rear wing. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/escortc/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/escortc-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/escortc/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/escortc-reference.img",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/escortc-extra-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://am-s3-bucket-assets.s3.eu-west-2.amazonaws.com/silverstone/prod/lot_images/large/REC12964-4/rec12964-4_6.jpg.webp?dummy=1772658323",
-      "page": "https://www.iconicauctioneers.com/1994-ford-escort-rs-cosworth-rec12964-4-nec-1123",
-      "title": "Iconic Auctioneers | 1994 Ford Escort RS Cosworth -For Sale",
-      "description": "A Mallard Green 1994 Ford Escort RS Cosworth is presented from the rear, highlighting its distinctive high-mounted spoiler, wide body panels, and single exhaust outlet. The right-hand drive rally homologation special wears the cherished registration K11 CSY on a bright yellow plate. Its clean paint and well-kept tires hint at the car’s low mileage of just 21,888 miles.\n\nThis example was offered by Iconic Auctioneers at a live auction on 11th November 2023 at NEC Birmingham. Finished in Mallard Green with a cloth interior, it is one of the small-turbo variants producing 214 bhp. Accompanied by a comprehensive history file and a new MOT, the car remained unsold and awaits its next enthusiast owner.",
-      "artist": "",
-      "license": ""
+      "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/1755544805743-70N11OUO6A1S08YBDUUV/06.jpg",
+      "page": "https://supercarnostalgia.com/blog/one-to-buy-ex-works-1997-ford-escort-cosworth-wrc",
+      "title": "Ex-Carlos Sainz 1997 Ford Escort RS Cosworth WRC For Sale in the UK — Supercar Nostalgia (https://supercarnostalgia.com/blog/one-to-buy-ex-works-1997-ford-escort-cosworth-wrc)"
+    },
+    {
+      "url": "https://staticv2.revistascratch.com/images/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400000-euros_full.jpg",
+      "page": "https://revistascratch.com/wrc/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400-000-euros-74178",
+      "title": "Sale a subasta el Ford Escort WRC ex Carlos Sainz y podría llegar a los 400.000 euros (https://revistascratch.com/wrc/noticia/sale-a-subasta-el-ford-escort-wrc-ex-carlos-sainz-y-podria-llegar-a-los-400-000-euros-74178)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy Repsol WRC body kit, intakes, wheel arches and correct WRC rear wing.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ford Escort RS Cosworth, racing preparation referencing Escort RS Cosworth Gruppo A (1994). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Iconic Auctioneers | 1994 Ford Escort RS Cosworth -For Sale. Its description: A Mallard Green 1994 Ford Escort RS Cosworth is presented from the rear, highlighting its distinctive high-mounted spoiler, wide body panels, and single exhaust outlet. The right-hand drive rally homologation special wears the cherished registration K11 CSY on a bright yellow plate. Its clean paint and well-kept tires hint at the car’s low mileage of just 21,888 miles.\n\nThis example was offered by Iconic Auctioneers at a live auction on 11th November 2023 at NEC Birmingham. Finished in Mallard Green with a cloth interior, it is one of the small-turbo variants producing 214 bhp. Accompanied by a comprehensive history file and a new MOT, the car remained unsold and awaits its next enthusiast owner.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ford Escort RS Cosworth three-door hatch, very large whale-tail double rear wing, bonnet vents and widened arches.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Cosworth widened fenders, rally front vents, whale-tail rear spoiler, white multi-spoke rally wheels, roof vent and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue white and yellow Ford Motorsport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "escortc",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-fbda02a3-5932-4a33-ac50-d6fc752dff13.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/escortc.png",
-  "sourceSha256": "46e4fa4c34ef6b3ce0e1920a5359fd94a8b3735bce242eb06d927e20d3a81e74",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7862c5fd-1e11-424f-8f39-dca0ec91ac0e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/escortc-r2.png",
+  "sourceSha256": "55942dfe9ca2df3c168fb4e42aac7b1b40f86e6f636e032211090767bf024205",
   "input": "tools/race-conversions/inputs/escortc.png",
   "output": "public/images/race-cars/escortc.png",
-  "sha256": "324faa9963e9a9b3dcc45379d87fb32e7f9600d88f0a5d138f20adb99f9aeeac",
+  "sha256": "596abdcd57bc671d4d0d198b3b8bcc6fe5ce3419491447748024670a2335fe02",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/escortc/rosso.png",
-      "sha256": "19d1718d2bfcd7e77315ab1778223d3817eede7905005a3375aae3be5967cef0"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/escortc-web-0.img",
-      "sha256": "0dc19ec26830bbb0994d1a89e74cc1c79e89908c6c3e7dc3fc76724fd74b54c1"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ]
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/escortc/rosso.png": "19d1718d2bfcd7e77315ab1778223d3817eede7905005a3375aae3be5967cef0",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/escortc-reference.img": "12ecd0566c700dcae152815b04fb3d41072e8025b8aad5ef29909b2d899850ba",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/escortc-extra-reference.img": "1120d26fbe16cec1855819621c43f48e478c97d67c45bd8ade89fdf72e4504b6"
+  },
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

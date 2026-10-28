@@ -1,50 +1,34 @@
 {
-  "classification": "inspired",
-  "candidate": "Legacy RS Gruppo A",
-  "livery": "blue with yellow Subaru rally bands",
-  "bodywork": "retain approved first Legacy body, period rally bumper and modest arch kit, boot spoiler, roof vent, gold small rally wheels; no Impreza roof swap",
+  "key": "legacy",
+  "candidate": "Subaru Legacy RS Group A 1993 Rothmans rally",
+  "prompt": "Use case: stylized-concept. Asset: ONE transparent native pixel-art car sprite for Poketurismo. Input1 is ONLY the approved ROAD MODEL identity and pixel-style/camera reference. Do NOT copy its road bumper, track width or wheels when race photo differs. Do NOT reuse the previous rejected racing sprite. Inputs2 onward are REAL RACING PHOTO references; copy actual bodywork geometry and livery, front AND rear details. Photos control the design. SUBJECT: Subaru Legacy RS Group A 1993 Rothmans rally. USER CORRECTION: Copy true Legacy RS Group A body and real rally livery. No Impreza or invented modern body. Historical fidelity: reproduce the photographed competition car, its specific bumpers, exact shape of arch flares, wing supports, wheel style, number and sponsor positions; do not add fantasy aero, generic modern GT3 parts or extra logos. If a requested-only sponsor livery is fictional, preserve historically accurate body and add only period sponsor decals as specified. Composition: whole car front-left three-quarter view, nose facing down-left, approx 40%front60%side, matching approved game camera; straight wheels, real proportions, ample clear margin. STRICT 1990s PC game hand pixel art, logical320x128, crisp square clusters and stair-step dark outlines, 5-6 tones per material, dark panel seams. Not photography or a pixelation filter, no vector or smooth gradient/antialiasing. GENUINELY TRANSPARENT background, no ground/shadow/scenery/people/captions/watermark, no contact sheet. ONE car only. Preserve correct generation, door count, roof, rear silhouette and tail light anatomy. Wide3:1 framing.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/legacy/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/legacy-web-0.img",
-    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/legacy/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/legacy-reference.img"
   ],
   "referenceSources": [
     {
-      "url": "https://images.nosweb.jp/articles/1000/1386/ORG/352094e56cd7d32331ed59b9252110f4.jpg",
-      "page": "https://nosweb.jp/nostalgichero/articles/detail/1386",
-      "title": "STIのハンドメイド！　競技用ベース車「RS type R」発売直後に登場したコンペティション・グレード「RS type RA」｜90年式 スバル レガシィ RS タイプ RA　Vol.1 | Nostalgic Hero | 芸文総合WEB｜日本の旧車Webマガジン[ノスウェブドットジェイピー]",
-      "description": "A white 1990 Subaru Legacy RS Type RA is photographed on a grassy field at dusk, its gold alloy wheels and black roof contrasting against the muted sky. The handcrafted STI tuning badge on the side and the roof antenna mark its competition-grade pedigree. \n\nIntroduced in December 1989 as a limited-production model, the RS Type RA built on the RS Type R’s EJ20 turbocharged engine with port polishing, balanced internals, and reinforced rods and pistons. It also featured a variable-quick power steering, strengthened suspension tuned for low-μ surfaces, and four-wheel ventilated disc brakes, making it ready for rally competition straight from the factory.",
-      "artist": "",
-      "license": ""
+      "url": "https://wrc.net.pl/media.php?url=https%3A%2F%2Focs-pl.oktawave.com%2Fv1%2FAUTH_31b548cfed58484085a001af5d8ac982%2Fwrc-prod%2F2025%2F04%2F2025-03-19-1090.webp",
+      "page": "https://wrc.net.pl/moze-idealna-karoseria-jest-mylaca-ale-tym-subaru-legacy-rs-jezdzil-colin-mcrae-ostatnia-szansa-na-odkup-auta-ktorym-seryjnie-wygrywal/",
+      "title": "Może idealna karoseria jest myląca, ale tym Subaru Legacy RS jeździł Colin McRae. Ostatnia szansa na odkup auta, którym seryjnie wygrywał (https://wrc.net.pl/moze-idealna-karoseria-jest-mylaca-ale-tym-subaru-legacy-rs-jezdzil-colin-mcrae-ostatnia-szansa-na-odkup-auta-ktorym-seryjnie-wygrywal/)"
     }
   ],
-  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "userCorrection": "Copy true Legacy RS Group A body and real rally livery. No Impreza or invented modern body.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Subaru Legacy Turbo, racing preparation referencing Legacy RS Gruppo A (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: STIのハンドメイド！　競技用ベース車「RS type R」発売直後に登場したコンペティション・グレード「RS type RA」｜90年式 スバル レガシィ RS タイプ RA　Vol.1 | Nostalgic Hero | 芸文総合WEB｜日本の旧車Webマガジン[ノスウェブドットジェイピー]. Its description: A white 1990 Subaru Legacy RS Type RA is photographed on a grassy field at dusk, its gold alloy wheels and black roof contrasting against the muted sky. The handcrafted STI tuning badge on the side and the roof antenna mark its competition-grade pedigree. \n\nIntroduced in December 1989 as a limited-production model, the RS Type RA built on the RS Type R’s EJ20 turbocharged engine with port polishing, balanced internals, and reinforced rods and pistons. It also featured a variable-quick power steering, strengthened suspension tuned for low-μ surfaces, and four-wheel ventilated disc brakes, making it ready for rally competition straight from the factory.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Subaru Legacy BC first-generation four-door boxy saloon, thin rectangular lamps and long boot.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved first Legacy body, period rally bumper and modest arch kit, boot spoiler, roof vent, gold small rally wheels; no Impreza roof swap. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue with yellow Subaru rally bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
-  "key": "legacy",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-83993487-7aa9-4faa-b4c1-3f1c147cf5bb.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/legacy-r1.png",
-  "sourceSha256": "7521844dec6b627798cbfd43736357bde2909c303665b81a8eacedb4ffd0db5e",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ca7ff93b-96dc-494b-a8ff-cc29dd67c528.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/legacy-r2.png",
+  "sourceSha256": "c3f2ccaaa3877ecff27e80e9a3092dee16c4e1be5c092c8203d357f67da5fb56",
   "input": "tools/race-conversions/inputs/legacy.png",
   "output": "public/images/race-cars/legacy.png",
-  "sha256": "9281e25540a063845aa9f72b69391d28846e68a55e6e10ea005d673cc3a66213",
+  "sha256": "d05bc935d3fd7157a800560e28397ff17f652be15d5c5d985ed020ce56663ab8",
   "width": 320,
   "height": 128,
-  "revision": 1,
-  "referenceHashes": [
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/legacy/rosso.png",
-      "sha256": "69a056905b6c21ae4f957f944787ee658a30424aa64e2614a9495d23333aa6dd"
-    },
-    {
-      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/legacy-web-0.img",
-      "sha256": "181b39a8e273ce1c50a1e625f84bfe8b2faa41a545692dde5c53296a53ed9e33"
-    },
-    {
-      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
-      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
-    }
-  ],
+  "revision": 2,
+  "referenceHashes": {
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/legacy/rosso.png": "69a056905b6c21ae4f957f944787ee658a30424aa64e2614a9495d23333aa6dd",
+    "/home/klaro/.backups/poketurismo/race-review2-2026-10-28/working/legacy-reference.img": "fdb2676d6535c8c0e474fe2a70f444927207a8f69020e36199ed7ada62b0a268"
+  },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }
