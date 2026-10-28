@@ -1,12 +1,19 @@
 {
   "key": "saxo",
-  "prompt": "Use case: precise-object-edit. Asset: ONE transparent pixel-art car sprite for Poketurismo, Northern Italy circa2002. Image1 is the EDIT TARGET racing sprite. Image2 is approved ROAD sprite identity. Remaining images are real photographic reference of race bodywork; copy geometry/details, never camera if it differs from road. PRIMARY USER CORRECTION: Remove EVERY rivet, bolt head and bolt-on dotted edge on wheel arches. Make smooth integrated molded fender flares inspired by the real Saxo Super1600 photo. Keep approved white blue red Citroen Sport livery, original car generation/headlights, camera, wheels and remaining body unchanged. Do not copy the newer facelift lamps from the reference. Keep every unrequested feature of the racing image unchanged. No people anywhere, no helmets/faces through glass. Make the difference between FRONT and SIDE planes exactly match the road sprite where requested. Car nose down-left in coherent front-left three-quarter, not full profile or head-on. Strict native 1990s game PIXEL ART logical320x128: crisp square clusters, dark single-pixel seams, hard stepped outline, compact shade ramps. No photorealism, pixelated photo, smooth gradients, vector or antialiasing. ONE whole car on genuinely TRANSPARENT background with clear margins, wide3:1 framing, realistic proportions, no ground plane/shadow, UI, text captions or watermark. Retain correct door count, headlights and tail anatomy. Do not invent racing hardware absent from references.",
+  "prompt": "Use case: precise-object-edit. Asset ONE transparent native pixel-art car sprite. Image1 is MANDATORY APPROVED ROAD CAMERA and PROPORTIONS TEMPLATE. Image2 is the previous racing sprite, rejected in proportions/body where specified. Other images are REAL competition bodywork reference. USER REQUEST: REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people. Preserve every other unrequested feature. STRICT1990s game hand pixel art logical320x128, crisp square clusters, hard stepped dark outlines, compact shading, dark panel seams. No photo/pixelated-photo, vector, gradients or antialiasing. Correct front-left three-quarter game view, car nose down-left, ONE WHOLE CAR only, straight wheels and correct generation/door count. Transparent background, ample clear margins, wide3:1 composition, no ground/shadow/scenery/UI/captions/watermark. NO DRIVER/COPILOT/HELMET/FACE anywhere. No fantasy modern aero. Body and wheel geometry must be plausible, not deformed. Photographs control physical kit, road sprite controls camera where requested.",
   "referencedImagePaths": [
-    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/saxo.png",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/saxo/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/saxo.img"
+    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/before/public/images/race-cars/saxo.png",
+    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/saxo.img",
+    "/home/klaro/poketurismo-work/.preview/race-review3/saxo.img"
   ],
   "referenceSources": [
+    {
+      "key": "saxo",
+      "url": "https://www.citroenorigins.co.uk/sites/default/files/styles/640/public/2023-07/saxo_kit_car_301600x1000extension.png",
+      "page": "https://www.citroenorigins.co.uk/en/cars/saxo-super-1600",
+      "title": "Citroën Saxo Super 1600 - Photos, détails et équipements - Citroën Origins (https://www.citroenorigins.co.uk/en/cars/saxo-super-1600)"
+    },
     {
       "key": "saxo",
       "url": "https://4.bp.blogspot.com/-bHMeZPkPUrI/TcqcGvE73YI/AAAAAAAAATk/mWB3F7WopLI/s1600/CITROEN_SAXO_Super1600.jpg",
@@ -14,24 +21,25 @@
       "title": "Citroën Saxo Super1600 · vettura reale in esposizione"
     }
   ],
-  "userCorrection": "Remove EVERY rivet, bolt head and bolt-on dotted edge on wheel arches. Make smooth integrated molded fender flares inspired by the real Saxo Super1600 photo. Keep approved white blue red Citroen Sport livery, original car generation/headlights, camera, wheels and remaining body unchanged. Do not copy the newer facelift lamps from the reference.",
+  "userCorrection": "REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people.",
+  "previousRevision": 2,
   "generationDate": "2026-10-28",
-  "photoReview": "Original road/racing sprites and real reference photographs visually inspected",
-  "previousRevision": 1,
+  "photoReview": "Real reference photographs and current road/race sprites visually inspected",
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-03464d60-c199-48b0-9bf7-0b8bd12e42dc.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/saxo-r2.png",
-  "sourceSha256": "b615bfc14f6fd069c7622f266f25895180fe2517f57c2c0611663493b63310f8",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8660843c-bd4f-4c83-89b0-104282363e0a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/saxo-r3.png",
+  "sourceSha256": "010ac5db705671158eedff51a3c62645d7a55ab913975a968678c0074eed9711",
   "input": "tools/race-conversions/inputs/saxo.png",
   "output": "public/images/race-cars/saxo.png",
-  "sha256": "e952f97285651a757360a15eb9609f443c0b07fd8ab98bccd6941cb1e377e199",
+  "sha256": "c1c6a36a14c509ccb6254454e9d434f4c0dba7dff5c29e1d4c4efc99e0dae6d3",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "referenceHashes": {
-    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/before/public/images/race-cars/saxo.png": "23fae5691f0b5f431f1dc618c84ae9359099305405153163bd7cc9ab8b8a99ce",
     "/home/klaro/poketurismo-work/public/images/pixel-cars/saxo/rosso.png": "3ac25a624a0c0416fa9ac39f6c0c1048f32895db14d0799fc78552f2e8f90d67",
-    "/home/klaro/.backups/poketurismo/race-review3-2026-10-28/working/saxo.img": "2f60558f7dfa3f2f6386b5cc1f1a9ead3e8957abde0cb26906ebb9281cfad924"
+    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/before/public/images/race-cars/saxo.png": "e952f97285651a757360a15eb9609f443c0b07fd8ab98bccd6941cb1e377e199",
+    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/saxo.img": "de549e9a68358d3bbb48c55c9e1b76a50f001382cb5644d08d8f930d3587c7f6",
+    "/home/klaro/poketurismo-work/.preview/race-review3/saxo.img": "2f60558f7dfa3f2f6386b5cc1f1a9ead3e8957abde0cb26906ebb9281cfad924"
   },
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
 }

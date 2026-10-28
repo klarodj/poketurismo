@@ -1810,6 +1810,10 @@
       "historicalYear": null,
       "historicalSources": [
         {
+          "title": "Citroën Saxo Super 1600 - Photos, détails et équipements - Citroën Origins (https://www.citroenorigins.co.uk/en/cars/saxo-super-1600)",
+          "url": "https://www.citroenorigins.co.uk/en/cars/saxo-super-1600"
+        },
+        {
           "title": "Citroën Saxo Super1600 · vettura reale in esposizione",
           "url": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600"
         }
@@ -1817,18 +1821,18 @@
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "classification": "inspired",
-      "candidate": "Saxo VTS · ispirazione Super1600",
+      "classification": "historic",
+      "candidate": "Saxo Super1600",
       "referenceYear": 2001,
-      "liveryDirection": "white with blue and red Citroën Sport",
-      "bodywork": "actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels",
+      "liveryDirection": "Rossa Citroën Sport · Total / PlayStation, vettura n.53",
+      "bodywork": "REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people.",
       "identityNotes": "Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips.",
-      "reviewBatch": "details-10-2026-10-28",
+      "reviewBatch": "body-four-2026-10-28",
       "bodyworkDetails": [
-        "Passaruota raccordati e lisci, senza rivetti, ispirati alla Saxo Super1600.",
-        "Identità e livrea della Saxo del gioco conservate."
+        "Carrozzeria, passaruota integrati senza rivetti e livrea della vera Saxo Super1600.",
+        "Prospettiva ripresa dall’immagine stradale; abitacolo senza persone."
       ],
-      "notes": "Passaruota ispirati alla vera Super1600, mantenendo fari, generazione e livrea della Saxo del gioco: non una replica integrale del modello successivo."
+      "notes": "Aspetto della vera Saxo Super1600 ripreso dalle fotografie Citroën Origins. La preparazione estetica non trasferisce il motore o le prestazioni della vettura storica."
     },
     {
       "key": "visa",
@@ -1948,13 +1952,13 @@
       "candidate": "Xsara Kit Car",
       "referenceYear": 1999,
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
+      "bodywork": "CHANGE BODY FLANKS and fenders to the REAL Xsara Maxi Kit Car: substantially BROADER front AND rear haunches, deep smoothly integrated bulging quarters visibly projecting outboard from narrow cabin, WIDER track and period wide race wheels tucked into these large arches, correct broad kitcar bumper. Previous sprite flanks are too stock/narrow. Follow the REAL photo, not a generic invented bolt-on flare. Keep approved red yellow #16 Citroen Total livery, existing corrected CAMERA, roof/glass, no pilot. Genuine Xsara Kit Car, NOT later Xsara WRC.",
       "identityNotes": "First-generation Citroen Xsara VTS three-door coupe hatch, pre-facelift lamps as reference.",
-      "reviewBatch": "details-10-2026-10-28",
+      "reviewBatch": "body-four-2026-10-28",
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "bodyworkDetails": [
-        "Carrozzeria e livrea della Xsara Kit Car, nella stessa prospettiva della stradale.",
-        "Abitacolo senza pilota o copilota."
+        "Fianchi e parafanghi anteriori e posteriori più larghi, come sulla vera Xsara Kit Car.",
+        "Livrea e angolo di ripresa conservati; abitacolo senza persone."
       ]
     },
     {
@@ -9731,13 +9735,13 @@
       "candidate": "Mégane Maxi Kit Car",
       "referenceYear": 1996,
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
+      "bodywork": "REBUILD ENTIRE REAR QUARTER from actual rear and rear-three-quarter Megane Maxi photos: correct wide flared rear fenders, rear window slope and short rounded coupe boot, rear bumper contour, distinctive ROUND tail-lamp clusters within the correct horizontal panel and real low-supported wide rear wing, correctly proportioned rear overhang. Prior sprite rear is inaccurate; do not merely change spoiler. Keep front bumper, bonnet, yellow/blue Renault Sport #5 livery, wheels and current front-left CAMERA unchanged. Only depict visible rear details from that camera; do not rotate to rear view.",
       "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps.",
-      "reviewBatch": "details-10-2026-10-28",
+      "reviewBatch": "body-four-2026-10-28",
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "bodyworkDetails": [
-        "Spoiler posteriore corretto usando fotografie frontali e posteriori della Mégane Maxi reale.",
-        "Restante carrozzeria e livrea Renault Sport conservate."
+        "Coda, raccordi dei parafanghi, fanali e spoiler ricostruiti da fotografie posteriori e a tre quarti della Mégane Maxi.",
+        "Frontale e livrea Renault Sport conservati."
       ]
     },
     {
@@ -10101,14 +10105,13 @@
       "candidate": "Ibiza Kit Car Evo 2",
       "referenceYear": 2001,
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
+      "bodywork": "The racing body kit and yellow/blue livery are APPROVED; FIX ONLY BODY PROPORTIONS and CAMERA to match ROAD sprite exactly. Prior race drawing is visibly too SHORT, TALL and front-on. Match road silhouette length-to-height, roof/cabin proportions, bonnet length, axle/wheelbase spacing and three-quarter projection. Lengthen the body and wheelbase relative to its height, do not stretch by image resampling. Show same longer side and bonnet proportions as road. Correct race body must occupy about same width as road within320x128, not appear miniature or squashed. Short period antenna must not force the entire body to shrink. Retain wide Kit Car arches, asphalt stance, white race wheels, approved spoiler, dark OPEN front intake without mesh, EMPTY cockpit no drivers. Do not change kit style or invent a different model.",
       "identityNotes": "Seat Ibiza Cupra R 6K facelift three-door hatch, narrow lamps, deep bumper and period small wheels.",
-      "reviewBatch": "details-10-2026-10-28",
+      "reviewBatch": "body-four-2026-10-28",
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "bodyworkDetails": [
-        "Kit Car Evo 2 in assetto da asfalto, nella stessa prospettiva della stradale.",
-        "Abitacolo senza pilota o copilota.",
-        "Presa d’aria del paraurti frontale aperta, senza griglia protettiva."
+        "Proporzioni della scocca e prospettiva allineate all’immagine stradale.",
+        "Kit Car da asfalto e livrea conservati; presa frontale senza griglia e abitacolo senza piloti."
       ]
     },
     {

@@ -1,0 +1,76 @@
+{
+  "batch": "body-four-2026-10-28",
+  "models": [
+    {
+      "key": "saxo",
+      "userCorrection": "REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people.",
+      "referenceSources": [
+        {
+          "key": "saxo",
+          "url": "https://www.citroenorigins.co.uk/sites/default/files/styles/640/public/2023-07/saxo_kit_car_301600x1000extension.png",
+          "page": "https://www.citroenorigins.co.uk/en/cars/saxo-super-1600",
+          "title": "Citroën Saxo Super 1600 - Photos, détails et équipements - Citroën Origins (https://www.citroenorigins.co.uk/en/cars/saxo-super-1600)"
+        },
+        {
+          "key": "saxo",
+          "url": "https://4.bp.blogspot.com/-bHMeZPkPUrI/TcqcGvE73YI/AAAAAAAAATk/mWB3F7WopLI/s1600/CITROEN_SAXO_Super1600.jpg",
+          "page": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600",
+          "title": "Citroën Saxo Super1600 · vettura reale in esposizione"
+        }
+      ]
+    },
+    {
+      "key": "xsara",
+      "userCorrection": "CHANGE BODY FLANKS and fenders to the REAL Xsara Maxi Kit Car: substantially BROADER front AND rear haunches, deep smoothly integrated bulging quarters visibly projecting outboard from narrow cabin, WIDER track and period wide race wheels tucked into these large arches, correct broad kitcar bumper. Previous sprite flanks are too stock/narrow. Follow the REAL photo, not a generic invented bolt-on flare. Keep approved red yellow #16 Citroen Total livery, existing corrected CAMERA, roof/glass, no pilot. Genuine Xsara Kit Car, NOT later Xsara WRC.",
+      "referenceSources": [
+        {
+          "key": "xsara",
+          "url": "https://www.rallybodykits.com/images/citroen/citroen-xsara-kit-car-maxi-phase-1.jpg",
+          "page": "https://www.rallybodykits.com/citroen-xsara-body-kits.html",
+          "title": "Citroen Xsara body kits, Citroen Xsara fibre and bodywork parts for competition (https://www.rallybodykits.com/citroen-xsara-body-kits.html)"
+        },
+        {
+          "key": "xsara-side",
+          "url": "https://delessencedansmesveines.com/wp-content/uploads/2016/08/DLEDMV-Citroen-Xsara-kit-Car-04.jpg",
+          "page": "https://delessencedansmesveines.com/2016/08/engine-sound-xsara-kit-he-oui-citroen/",
+          "title": "Engine sound : Xsara Kit Car - Hé oui, une Citroën ! De l'essence dans mes veines (https://delessencedansmesveines.com/2016/08/engine-sound-xsara-kit-he-oui-citroen/)"
+        }
+      ]
+    },
+    {
+      "key": "megane",
+      "userCorrection": "REBUILD ENTIRE REAR QUARTER from actual rear and rear-three-quarter Megane Maxi photos: correct wide flared rear fenders, rear window slope and short rounded coupe boot, rear bumper contour, distinctive ROUND tail-lamp clusters within the correct horizontal panel and real low-supported wide rear wing, correctly proportioned rear overhang. Prior sprite rear is inaccurate; do not merely change spoiler. Keep front bumper, bonnet, yellow/blue Renault Sport #5 livery, wheels and current front-left CAMERA unchanged. Only depict visible rear details from that camera; do not rotate to rear view.",
+      "referenceSources": [
+        {
+          "key": "megane-rear",
+          "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/oriol-ou-96-3_orig.jpg",
+          "page": "https://rallyslotdecals.weebly.com/ref-rsd-132---renault-maxi-megane---oriol-goacutemez---rally-ourense96.html",
+          "title": "Mégane Maxi · fotografia posteriore Ourense 1996"
+        },
+        {
+          "key": "megane-quarter",
+          "url": "https://3.bp.blogspot.com/-WarDJ2uoo7E/Tb2_oL3YS8I/AAAAAAAAPYQ/s329Zo5UKFs/s1600/11%2Bmegane-9.jpg",
+          "page": "https://rallyazores.blogspot.com/2011/05/tour-de-corse-1997-e-1998.html",
+          "title": "Mégane Maxi · fotografia tre quarti posteriore Tour de Corse"
+        }
+      ]
+    },
+    {
+      "key": "ibiza",
+      "userCorrection": "The racing body kit and yellow/blue livery are APPROVED; FIX ONLY BODY PROPORTIONS and CAMERA to match ROAD sprite exactly. Prior race drawing is visibly too SHORT, TALL and front-on. Match road silhouette length-to-height, roof/cabin proportions, bonnet length, axle/wheelbase spacing and three-quarter projection. Lengthen the body and wheelbase relative to its height, do not stretch by image resampling. Show same longer side and bonnet proportions as road. Correct race body must occupy about same width as road within320x128, not appear miniature or squashed. Short period antenna must not force the entire body to shrink. Retain wide Kit Car arches, asphalt stance, white race wheels, approved spoiler, dark OPEN front intake without mesh, EMPTY cockpit no drivers. Do not change kit style or invent a different model.",
+      "referenceSources": [
+        {
+          "url": "https://www.seatcocheshistoricos.es/SEATHistoricos/assets/sasego9801_240825_6fd0b1ac.jpg",
+          "page": "https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php",
+          "title": "KIT CAR E2 (https://www.seatcocheshistoricos.es/SEATHistoricos/1990/kitcarevo2.php)"
+        },
+        {
+          "key": "ibiza-tarmac",
+          "url": "https://staticv2.revistascratch.com/images/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6_full.jpg",
+          "page": "https://revistascratch.com/historicos/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6-53595",
+          "title": "A la venta el primer SEAT Ibiza Kit Car Evo2, chasis 6 (https://revistascratch.com/historicos/noticia/a-la-venta-el-primer-seat-ibiza-kit-car-evo2-chasis-6-53595)"
+        }
+      ]
+    }
+  ]
+}

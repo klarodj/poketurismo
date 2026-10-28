@@ -1470,20 +1470,24 @@
       "name": "Saxo VTS",
       "brand": "Citroen",
       "year": 1998,
-      "classification": "inspired",
+      "classification": "historic",
       "profile": "rally",
-      "reference": "Saxo VTS · ispirazione Super1600",
+      "reference": "Saxo Super1600",
       "referenceYear": 2001,
-      "livery": "white with blue and red Citroën Sport",
-      "bodywork": "actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels",
-      "reviewBatch": "details-10-2026-10-28",
+      "livery": "Rossa Citroën Sport · Total / PlayStation, vettura n.53",
+      "bodywork": "REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people.",
+      "reviewBatch": "body-four-2026-10-28",
       "bodyworkDetails": [
-        "Passaruota raccordati e lisci, senza rivetti, ispirati alla Saxo Super1600.",
-        "Identità e livrea della Saxo del gioco conservate."
+        "Carrozzeria, passaruota integrati senza rivetti e livrea della vera Saxo Super1600.",
+        "Prospettiva ripresa dall’immagine stradale; abitacolo senza persone."
       ],
-      "notes": "Passaruota ispirati alla vera Super1600, mantenendo fari, generazione e livrea della Saxo del gioco: non una replica integrale del modello successivo.",
+      "notes": "Aspetto della vera Saxo Super1600 ripreso dalle fotografie Citroën Origins. La preparazione estetica non trasferisce il motore o le prestazioni della vettura storica.",
       "researchStatus": "reference-reviewed",
       "sources": [
+        {
+          "title": "Citroën Saxo Super 1600 - Photos, détails et équipements - Citroën Origins (https://www.citroenorigins.co.uk/en/cars/saxo-super-1600)",
+          "url": "https://www.citroenorigins.co.uk/en/cars/saxo-super-1600"
+        },
         {
           "title": "Citroën Saxo Super1600 · vettura reale in esposizione",
           "url": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600"
@@ -1491,14 +1495,19 @@
       ],
       "imageReferences": [
         {
+          "title": "Citroën Saxo Super 1600 - Photos, détails et équipements - Citroën Origins (https://www.citroenorigins.co.uk/en/cars/saxo-super-1600)",
+          "url": "https://www.citroenorigins.co.uk/sites/default/files/styles/640/public/2023-07/saxo_kit_car_301600x1000extension.png",
+          "page": "https://www.citroenorigins.co.uk/en/cars/saxo-super-1600"
+        },
+        {
           "title": "Citroën Saxo Super1600 · vettura reale in esposizione",
           "url": "https://4.bp.blogspot.com/-bHMeZPkPUrI/TcqcGvE73YI/AAAAAAAAATk/mWB3F7WopLI/s1600/CITROEN_SAXO_Super1600.jpg",
           "page": "https://tech-racingcars.wikidot.com/citroen-saxo-ii-s1600"
         }
       ],
       "stockImage": "/images/pixel-cars/saxo/rosso.png",
-      "image": "/images/race-cars/saxo.png?rev=2",
-      "artRevision": 2,
+      "image": "/images/race-cars/saxo.png?rev=3",
+      "artRevision": 3,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -1581,11 +1590,11 @@
       "reference": "Xsara Kit Car",
       "referenceYear": 1999,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "Exact kitcar bulging arches, bumper intakes, spoiler and red white Citroen livery.",
-      "reviewBatch": "details-10-2026-10-28",
+      "bodywork": "CHANGE BODY FLANKS and fenders to the REAL Xsara Maxi Kit Car: substantially BROADER front AND rear haunches, deep smoothly integrated bulging quarters visibly projecting outboard from narrow cabin, WIDER track and period wide race wheels tucked into these large arches, correct broad kitcar bumper. Previous sprite flanks are too stock/narrow. Follow the REAL photo, not a generic invented bolt-on flare. Keep approved red yellow #16 Citroen Total livery, existing corrected CAMERA, roof/glass, no pilot. Genuine Xsara Kit Car, NOT later Xsara WRC.",
+      "reviewBatch": "body-four-2026-10-28",
       "bodyworkDetails": [
-        "Carrozzeria e livrea della Xsara Kit Car, nella stessa prospettiva della stradale.",
-        "Abitacolo senza pilota o copilota."
+        "Fianchi e parafanghi anteriori e posteriori più larghi, come sulla vera Xsara Kit Car.",
+        "Livrea e angolo di ripresa conservati; abitacolo senza persone."
       ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
@@ -1597,14 +1606,19 @@
       ],
       "imageReferences": [
         {
-          "title": "Rally Catalunya 1999: Philippe Bugalski y la histórica victoria del Citroën Xsara Kit Car (https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html)",
-          "url": "https://fotografias.lasexta.com/clipping/cmsimages02/2019/10/23/8723C99C-4EFD-4E2C-9A2E-6089A9D2957C/69.jpg?crop=1959%2C1102%2Cx127%2Cy0&format=jpg&height=720&optimize=low&width=1280",
-          "page": "https://www.lasexta.com/motor/competicion/rally-catalunya-1999-philippe-bugalski-historica-victoria-citroen-xsara-kit-car_201910235db0b70b0cf2c289dbc2df97.html"
+          "title": "Citroen Xsara body kits, Citroen Xsara fibre and bodywork parts for competition (https://www.rallybodykits.com/citroen-xsara-body-kits.html)",
+          "url": "https://www.rallybodykits.com/images/citroen/citroen-xsara-kit-car-maxi-phase-1.jpg",
+          "page": "https://www.rallybodykits.com/citroen-xsara-body-kits.html"
+        },
+        {
+          "title": "Engine sound : Xsara Kit Car - Hé oui, une Citroën ! De l'essence dans mes veines (https://delessencedansmesveines.com/2016/08/engine-sound-xsara-kit-he-oui-citroen/)",
+          "url": "https://delessencedansmesveines.com/wp-content/uploads/2016/08/DLEDMV-Citroen-Xsara-kit-Car-04.jpg",
+          "page": "https://delessencedansmesveines.com/2016/08/engine-sound-xsara-kit-he-oui-citroen/"
         }
       ],
       "stockImage": "/images/pixel-cars/xsara/rosso.png",
-      "image": "/images/race-cars/xsara.png?rev=4",
-      "artRevision": 4,
+      "image": "/images/race-cars/xsara.png?rev=5",
+      "artRevision": 5,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -8024,11 +8038,11 @@
       "reference": "Mégane Maxi Kit Car",
       "referenceYear": 1996,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "Copy actual Megane Maxi pronounced wide arches, bumper and spoiler plus blue yellow Renault Sport livery.",
-      "reviewBatch": "details-10-2026-10-28",
+      "bodywork": "REBUILD ENTIRE REAR QUARTER from actual rear and rear-three-quarter Megane Maxi photos: correct wide flared rear fenders, rear window slope and short rounded coupe boot, rear bumper contour, distinctive ROUND tail-lamp clusters within the correct horizontal panel and real low-supported wide rear wing, correctly proportioned rear overhang. Prior sprite rear is inaccurate; do not merely change spoiler. Keep front bumper, bonnet, yellow/blue Renault Sport #5 livery, wheels and current front-left CAMERA unchanged. Only depict visible rear details from that camera; do not rotate to rear view.",
+      "reviewBatch": "body-four-2026-10-28",
       "bodyworkDetails": [
-        "Spoiler posteriore corretto usando fotografie frontali e posteriori della Mégane Maxi reale.",
-        "Restante carrozzeria e livrea Renault Sport conservate."
+        "Coda, raccordi dei parafanghi, fanali e spoiler ricostruiti da fotografie posteriori e a tre quarti della Mégane Maxi.",
+        "Frontale e livrea Renault Sport conservati."
       ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
@@ -8040,24 +8054,19 @@
       ],
       "imageReferences": [
         {
-          "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)",
-          "url": "https://www.confidential-renault.fr/doss_images/1577698062_Megane_Maxi_CR_redef_0002.jpg",
-          "page": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car"
+          "title": "Mégane Maxi · fotografia posteriore Ourense 1996",
+          "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/oriol-ou-96-3_orig.jpg",
+          "page": "https://rallyslotdecals.weebly.com/ref-rsd-132---renault-maxi-megane---oriol-goacutemez---rally-ourense96.html"
         },
         {
-          "title": "Ref. RSD43-049: Renault Megane Maxi - Luis Climent - Rally Vinho de Madeira'99 - Rally Slot Decals (https://rallyslotdecals.weebly.com/ref-rsd43-049-renault-megane-maxi---luis-climent---rally-vinho-de-madeira99.html)",
-          "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/15492602-648115798683583-9040025831084621197-n.jpg",
-          "page": "https://rallyslotdecals.weebly.com/ref-rsd43-049-renault-megane-maxi---luis-climent---rally-vinho-de-madeira99.html"
-        },
-        {
-          "title": "RALLYAZORES: TOUR DE CORSE 1995 e 1996 (https://rallyazores.blogspot.com/2011/04/tour-de-corse-1995-e-1996.html)",
-          "url": "https://3.bp.blogspot.com/-pyNcF8imHkI/TbtsDqTGGAI/AAAAAAAAPWk/UepZeQsXXJQ/s1600/11%2B1996-megane-gomez-16.jpg",
-          "page": "https://rallyazores.blogspot.com/2011/04/tour-de-corse-1995-e-1996.html"
+          "title": "Mégane Maxi · fotografia tre quarti posteriore Tour de Corse",
+          "url": "https://3.bp.blogspot.com/-WarDJ2uoo7E/Tb2_oL3YS8I/AAAAAAAAPYQ/s329Zo5UKFs/s1600/11%2Bmegane-9.jpg",
+          "page": "https://rallyazores.blogspot.com/2011/05/tour-de-corse-1997-e-1998.html"
         }
       ],
       "stockImage": "/images/pixel-cars/megane/rosso.png",
-      "image": "/images/race-cars/megane.png?rev=3",
-      "artRevision": 3,
+      "image": "/images/race-cars/megane.png?rev=4",
+      "artRevision": 4,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -8350,12 +8359,11 @@
       "reference": "Ibiza Kit Car Evo 2",
       "referenceYear": 2001,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "Copy actual Ibiza Maxi Kit Car body, enlarged arches, bumpers and rear wing, correct yellow Seat Sport livery.",
-      "reviewBatch": "details-10-2026-10-28",
+      "bodywork": "The racing body kit and yellow/blue livery are APPROVED; FIX ONLY BODY PROPORTIONS and CAMERA to match ROAD sprite exactly. Prior race drawing is visibly too SHORT, TALL and front-on. Match road silhouette length-to-height, roof/cabin proportions, bonnet length, axle/wheelbase spacing and three-quarter projection. Lengthen the body and wheelbase relative to its height, do not stretch by image resampling. Show same longer side and bonnet proportions as road. Correct race body must occupy about same width as road within320x128, not appear miniature or squashed. Short period antenna must not force the entire body to shrink. Retain wide Kit Car arches, asphalt stance, white race wheels, approved spoiler, dark OPEN front intake without mesh, EMPTY cockpit no drivers. Do not change kit style or invent a different model.",
+      "reviewBatch": "body-four-2026-10-28",
       "bodyworkDetails": [
-        "Kit Car Evo 2 in assetto da asfalto, nella stessa prospettiva della stradale.",
-        "Abitacolo senza pilota o copilota.",
-        "Presa d’aria del paraurti frontale aperta, senza griglia protettiva."
+        "Proporzioni della scocca e prospettiva allineate all’immagine stradale.",
+        "Kit Car da asfalto e livrea conservati; presa frontale senza griglia e abitacolo senza piloti."
       ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
@@ -8378,8 +8386,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/ibiza/rosso.png",
-      "image": "/images/race-cars/ibiza.png?rev=3",
-      "artRevision": 3,
+      "image": "/images/race-cars/ibiza.png?rev=4",
+      "artRevision": 4,
       "width": 320,
       "height": 128,
       "price": 42000,

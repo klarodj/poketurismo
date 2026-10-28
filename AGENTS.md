@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Revisione corsa quattro del 28 ottobre: `tools/race-conversions/review-4.json`, batch `body-four-2026-10-28`, filtro Aggiornate · 4 modelli. Saxo Super1600 rossa (rev3), Xsara con fianchi più larghi (rev5), coda Mégane e proporzioni Ibiza (rev4). Altre 196 PNG invariate, note preservate, acquisto ancora non attivo. Dettagli in `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
+
 - Revisione corsa 10 dettagli del 28 ottobre: `tools/race-conversions/review-10.json`, batch `details-10-2026-10-28` e filtro Aggiornate · 10 modelli. 190 altre PNG invariate; prospettiva delle stradali prioritaria, abitacoli senza piloti, Sierra con ala stradale. Saxo rev2, Xsara rev4, altre otto rev3. Note locali conservate, conversione ancora solo in anteprima; leggere `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
 
 - Revisione corsa 34 del 28 ottobre: `tools/race-conversions/review-34.json`, soli 34 sprite a revisione 2, batch `historical-34-2026-10-28` e filtro Aggiornate nell’album. Repliche da fotografie reali; 288/F50 con livrea immaginaria dichiarata, Celica ZZT231 JGTC del 2003 esplicitamente fuori riferimento. Non azzerare note locali, non cambiare le altre 166 immagini o attivare acquisti. Dettagli in `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
