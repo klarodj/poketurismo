@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Exige S1 · Motorsport",
+  "livery": "white green and yellow Lotus racing",
+  "bodywork": "retain FIRST-generation Exige, Motorsport low splitter, factory-derived arch extensions, fixed rear wing, roof scoop and silver race wheels; no V6 Exige",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/exige/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/exige-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://i.pinimg.com/originals/0c/ce/c2/0ccec2d56176efcabde1b3c110ffdf85.jpg",
+      "page": "https://www.artofit.org/image-gallery/140806227924192/lotus-exige-s1-motorsport-conversion/",
+      "title": "Lotus exige s1 motorsport conversion – Artofit",
+      "description": "A sleek black Lotus Exige S1, fully converted for track performance, is parked on a gravel surface beside a wooden fence. The car’s aerodynamic enhancements include a large rear wing, front splitter, and side vents, all finished in matching black. The wheels are lightweight black alloys, and the bodywork reflects the surrounding environment.\n\nBehind the car, a sign on the fence reads “Reserved Parking For ITS Only,” indicating a designated spot. Industrial elements such as storage containers and wooden pallets frame the scene, emphasizing the car’s motorsport context.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lotus Exige, racing preparation referencing Exige S1 · Motorsport (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Lotus exige s1 motorsport conversion – Artofit. Its description: A sleek black Lotus Exige S1, fully converted for track performance, is parked on a gravel surface beside a wooden fence. The car’s aerodynamic enhancements include a large rear wing, front splitter, and side vents, all finished in matching black. The wheels are lightweight black alloys, and the bodywork reflects the surrounding environment.\n\nBehind the car, a sign on the fence reads “Reserved Parking For ITS Only,” indicating a designated spot. Industrial elements such as storage containers and wooden pallets frame the scene, emphasizing the car’s motorsport context.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Lotus Exige S1 hardtop coupe, roof air scoop, fixed rear wing, four round/oval headlights and wide intakes.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain FIRST-generation Exige, Motorsport low splitter, factory-derived arch extensions, fixed rear wing, roof scoop and silver race wheels; no V6 Exige. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white green and yellow Lotus racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "exige",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8aa7b46e-05c1-42ad-8051-d4f96b9a8429.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/exige.png",
+  "sourceSha256": "a47f1cfbec71ef9eabee74294f096f7a8c94fcba361bf062f20b200af930b998",
+  "input": "tools/race-conversions/inputs/exige.png",
+  "output": "public/images/race-cars/exige.png",
+  "sha256": "343ff6bddc8f613c15cc3dc3336a110cf4aeb3f33c58734328f7519884999608",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/exige/rosso.png",
+      "sha256": "a32c52d01dbf7e60d14003f044ebef60d3e156b49afd2d00ad83e416c8740ece"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/exige-web-0.img",
+      "sha256": "086c92de4153acc26810b8123ec8655777673f5449a4ab51d100d3e28b52a531"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

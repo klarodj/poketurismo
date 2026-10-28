@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "33 1.7 16V Gruppo N",
+  "livery": "white with red Alfa racing bands",
+  "bodywork": "light rally front apron, subtle arches, low hatch spoiler, white multi-spoke rally wheels, cage",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/33/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/33-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://goauctionmpc.bidpath.cloud/stock/268-3-medium.jpg?v=63759024495440",
+      "page": "https://www.manorparkclassics.com/auction/lot/lot-78---1992-alfa-romeo-33-16v-permanent-4-wheel-drive/?lot=281&sd=1",
+      "title": "Lot 78 - 1992 Alfa Romeo 33 16v Permanent 4 wheel",
+      "description": "A striking red 1992 Alfa Romeo 33 16v Permanent 4 wheel drive hatchback, registration K451 POY, stands on a mix of grass and interlocking paving. Fitted with O.Z. Racing alloy wheels and Recaro racing seats, this rare Italian model also features a factory sunroof, electric front windows, heated rear screen, and headlight washers. The car has covered 60,033 miles, carries a manual transmission, and held a valid MOT until May 2022.\n\nOffered as Lot 78 by Manor Park Classics in July 2021, this example sold for £7,015 inclusive of buyer’s premium and VAT. It is the only Alfa Romeo 33 16v 4x4 currently registered with the DVLA. Recent maintenance includes cambelt and auxiliary belt replacement, new water pump, radiator, starter motor, brake pads, discs, clutch, and slave cylinder. The sale included the original alloy wheels, a spare wheel, and a collection of spares in the boot.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Alfa Romeo 33 Quadrifoglio, racing preparation referencing 33 1.7 16V Gruppo N (1991). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Lot 78 - 1992 Alfa Romeo 33 16v Permanent 4 wheel. Its description: A striking red 1992 Alfa Romeo 33 16v Permanent 4 wheel drive hatchback, registration K451 POY, stands on a mix of grass and interlocking paving. Fitted with O.Z. Racing alloy wheels and Recaro racing seats, this rare Italian model also features a factory sunroof, electric front windows, heated rear screen, and headlight washers. The car has covered 60,033 miles, carries a manual transmission, and held a valid MOT until May 2022.\n\nOffered as Lot 78 by Manor Park Classics in July 2021, this example sold for £7,015 inclusive of buyer’s premium and VAT. It is the only Alfa Romeo 33 16v 4x4 currently registered with the DVLA. Recent maintenance includes cambelt and auxiliary belt replacement, new water pump, radiator, starter motor, brake pads, discs, clutch, and slave cylinder. The sale included the original alloy wheels, a spare wheel, and a collection of spares in the boot.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Alfa Romeo 33 series 907 facelift five-door hatchback, original white photo is exact variant. Make rear tail visibly SHORTER and more abruptly TRUNCATED; compact Kamm hatch tail behind steeply raked rear glass, not a long three-box sedan boot. Preserve four side doors, angular front, small rear lip from identity photo (do not add oversized wing from rear reference). Rear reference is for body and horizontal corner lamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: light rally front apron, subtle arches, low hatch spoiler, white multi-spoke rally wheels, cage. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red Alfa racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "33",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7be9ca29-4fcc-474f-a2bf-e2c9d72ae6da.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/33.png",
+  "sourceSha256": "27407a580a02fe0dd58f9c27a53d34215ce0822d6a9791726a8ad300cf24192c",
+  "input": "tools/race-conversions/inputs/33.png",
+  "output": "public/images/race-cars/33.png",
+  "sha256": "e15b6b1f4716a53b24ee11d8c61777cc10b2d8fa2f3d147d6db9996215881d82",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/33/rosso.png",
+      "sha256": "b4fee74e193bdfe7865b90396d5541cdd6a2048e08576894bc08191c1b6c17c2"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/33-web-1.img",
+      "sha256": "fc43d2d5aa8f20617c5a9ec2e4b01b94cee61d5d28d997a78effbe1cebc25af0"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

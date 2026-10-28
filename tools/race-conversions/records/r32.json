@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Skyline GT-R R32 Gruppo A",
+  "livery": "Calsonic blue with white racing panels",
+  "bodywork": "actual R32 Group A front ducting and splitter, side skirts, broad arch lips, low racing boot spoiler and white racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/r32/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/r32-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.autoc-one.jp/images/article/202004/19164329051_a9d6_o.jpg",
+      "page": "https://autoc-one.jp/nissan/skyline/special-5006864/",
+      "title": "GT-Rの復活！スカイラインの名を再燃させたR32型 8代目 日産 スカイラインciteMOTA写真館 |フォトギャラリーciteMOTA",
+      "description": "A gray two-door Nissan Skyline R32 coupe is presented against a plain backdrop, showcasing its classic late-1980s design. The car’s smooth body panels, integrated rear spoiler, and five-spoke alloy wheels emphasize its sporty yet refined character. The clear headlight lenses and subtle side mirrors contribute to the clean, aerodynamic profile.\n\nIntroduced in 1989 under Nissan’s \"901 Movement,\" the R32 Skyline offered both sedan and coupe variants with engines from 1.8L to 2.6L. The lineup included turbocharged and naturally aspirated inline-six engines, with the GTS-4 featuring ATTESA E-TS all-wheel drive. In the same year, the GT-R returned with the twin-turbo RB26DETT engine, spawning numerous limited editions like the GT-R NISMO and N1. The R32’s engineering and motorsport achievements have made it a landmark in automotive history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Nissan Skyline GTR R32, racing preparation referencing Skyline GT-R R32 Gruppo A (1990). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: GT-Rの復活！スカイラインの名を再燃させたR32型 8代目 日産 スカイラインciteMOTA写真館 |フォトギャラリーciteMOTA. Its description: A gray two-door Nissan Skyline R32 coupe is presented against a plain backdrop, showcasing its classic late-1980s design. The car’s smooth body panels, integrated rear spoiler, and five-spoke alloy wheels emphasize its sporty yet refined character. The clear headlight lenses and subtle side mirrors contribute to the clean, aerodynamic profile.\n\nIntroduced in 1989 under Nissan’s \"901 Movement,\" the R32 Skyline offered both sedan and coupe variants with engines from 1.8L to 2.6L. The lineup included turbocharged and naturally aspirated inline-six engines, with the GTS-4 featuring ATTESA E-TS all-wheel drive. In the same year, the GT-R returned with the twin-turbo RB26DETT engine, spawning numerous limited editions like the GT-R NISMO and N1. The R32’s engineering and motorsport achievements have made it a landmark in automotive history.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Nissan Skyline GT-R R32 two-door coupe, understated boxy arches, slim rectangular lamps and fixed rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual R32 Group A front ducting and splitter, side skirts, broad arch lips, low racing boot spoiler and white racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is Calsonic blue with white racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "r32",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d5f18cc5-6c35-4ab6-90cb-f9e9ddece469.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/r32.png",
+  "sourceSha256": "ff6fe3df994baa2e950dc0b2fbf480a40df569e07fef23316d9376909f344fb3",
+  "input": "tools/race-conversions/inputs/r32.png",
+  "output": "public/images/race-cars/r32.png",
+  "sha256": "b890c1ca60680b88476276ab9aec7b64ae8664dd9b1a4959e98358cacb432718",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/r32/rosso.png",
+      "sha256": "318d658c65b51393a496e2c112e4b3d9fa32825513bd4da246ad1da50075c633"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/r32-web-2.img",
+      "sha256": "6862544535f599c200550a7d6a49ff0f0aca81a34a10760c239b9835606618c8"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Corvette Challenge C4",
+  "livery": "white and blue Chevrolet racing",
+  "bodywork": "C4 ZR1 shape retained, period low front splitter, modest side skirts, flared rear lips, low rear wing, silver mesh wheels; no C5 body",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/c4/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/c4-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.corvetteblogger.com/images/content/2025/10/103025_13.jpg",
+      "page": "https://www.corvetteblogger.com/2025/10/30/corvettes-for-sale-1989-corvette-challenge-car-on-bring-a-trailer/",
+      "title": "Corvettes for Sale: 1989 Corvette Challenge Car on Bring a Trailer - Corvette: Sales, News & Lifestyle",
+      "description": "A yellow and white 1989 Corvette Challenge C4 is captured driving on a highway under a bright blue sky. The front bumper displays Goodyear branding and AC Rochester badges, while the side panels feature Techline Bilstein and Mid America decals. The car’s low stance, Dymag wheels, and side-exit exhaust highlight its race-prepped setup.\n\nOriginally built in Bowling Green and race-trimmed at Protofab in Wixom, Michigan, this #9-liveried Corvette retains its sealed L98 engine, roll cage, and other period modifications. It has logged just over 9,000 miles and comes with its original window sticker, build sheet, SCCA logbook, and removed factory engine.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Chevrolet Corvette C4 ZR1, racing preparation referencing Corvette Challenge C4 (1989). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Corvettes for Sale: 1989 Corvette Challenge Car on Bring a Trailer - Corvette: Sales, News & Lifestyle. Its description: A yellow and white 1989 Corvette Challenge C4 is captured driving on a highway under a bright blue sky. The front bumper displays Goodyear branding and AC Rochester badges, while the side panels feature Techline Bilstein and Mid America decals. The car’s low stance, Dymag wheels, and side-exit exhaust highlight its race-prepped setup.\n\nOriginally built in Bowling Green and race-trimmed at Protofab in Wixom, Michigan, this #9-liveried Corvette retains its sealed L98 engine, roll cage, and other period modifications. It has logged just over 9,000 miles and comes with its original window sticker, build sheet, SCCA logbook, and removed factory engine.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Chevrolet Corvette C4 ZR-1, angular wedge coupe, pop-up headlights in reference position, wraparound glass.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: C4 ZR1 shape retained, period low front splitter, modest side skirts, flared rear lips, low rear wing, silver mesh wheels; no C5 body. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white and blue Chevrolet racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "c4",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3ca68af6-791e-45ef-b1b2-235343eada1e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/c4.png",
+  "sourceSha256": "7951b8eca24d78a302035f9fe2bd6caa03234ff8ef5bfe933d95959eb87d0123",
+  "input": "tools/race-conversions/inputs/c4.png",
+  "output": "public/images/race-cars/c4.png",
+  "sha256": "06c34cd271127a7ca22749da63c146c0f60e79420690c639e310e7a6c08e9519",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/c4/rosso.png",
+      "sha256": "7b41f9f7d07bc640e8a884659afef862502bd553772f9bfe73e6149aa378f58d"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/c4-web-0.img",
+      "sha256": "cce1379455f2f79b769c8524c5afc48d29a1a8e9cac1021fc09b4e8956f0c2a6"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

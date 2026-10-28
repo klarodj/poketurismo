@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "205 GTi Gruppo A",
+  "livery": "white with blue yellow and red Talbot Sport bands",
+  "bodywork": "retain FRONT-engine GTi hatch, period rally arch lips and front apron, small roof spoiler, white rally wheels; not mid-engine 205 T16",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/205/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/205.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Peugeot 205 Gti 1.9",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 205 Gti 1.9, racing preparation referencing 205 GTi Gruppo A (1988). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Peugeot 205 Gti 1.9. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 205 GTi three-door hatch, black plastic arch trims and red decorative waist strip, keep red trim independent of body paint.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain FRONT-engine GTi hatch, period rally arch lips and front apron, small roof spoiler, white rally wheels; not mid-engine 205 T16. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue yellow and red Talbot Sport bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "205",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6e3cab18-e655-498d-ad86-13ce7ff0b26b.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/205-r1.png",
+  "sourceSha256": "cc134a068d0a6d8a21827dca348bc81eab82199b618dc5f3da80eaa0193d4f4c",
+  "input": "tools/race-conversions/inputs/205.png",
+  "output": "public/images/race-cars/205.png",
+  "sha256": "e6a46118d1d68266de54289393b7ae7478a90d714c2c348d26859b122cff8697",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/205/rosso.png",
+      "sha256": "0c421903af1f4ace601c06080f7d3c75bb08ff33a7138dd453f7f3ec54ea33c5"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/205.png",
+      "sha256": "36be776ef9450c77cf8352a6ed9cbc017a7c6973e7c46a8ee41d1cbf5af66f8c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

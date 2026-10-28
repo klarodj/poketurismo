@@ -1,0 +1,17 @@
+{
+  "key": "gt1",
+  "selected": [
+    {
+      "url": "https://www.lemans.org/media/cache/api_news_large/assets/fileuploads/57/4e/574ede3336cbd.jpeg",
+      "page": "https://www.24h-lemans.com/fr/actualites/les-porsche-victorieuses-aux-24-heures-du-mans-8-la-911-gt1-13343",
+      "title": "Les Porsche victorieuses aux 24 Heures du Mans (8) : la 911 GT1 | 24h-lemans.com",
+      "score": 8,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/gt1-web-4.img",
+      "width": 1500,
+      "height": 978
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "EB110 LM",
+  "livery": "French racing blue with white racing panels",
+  "bodywork": "real Le Mans EB110 body ducts, widened arches, fixed rear wing, vented engine cover, silver competition wheels; EB110 horseshoe and roof preserved",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/eb110/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/eb110-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.topgear.com/sites/default/files/news-listicle/image/rh_eb110s_quickeditlr-276.jpg",
+      "page": "https://www.topgear.com/car-news/motorsport/whats-bugatti-eb110-le-mans-car-drive",
+      "title": "What's the Bugatti EB110 Le Mans car like to drive? | Top Gear",
+      "description": "A striking blue Bugatti EB110 LM, bearing the number 34 and Monte Carlo TMC branding, roars along a winding road. Gold BBS wheels spin beneath wide arches, while sponsor logos from Michelin, Esso, Ultron, and NRJ line the bodywork. The car’s aerodynamic vents and rear wing emphasize its Le Mans racing pedigree.\n\nThis photograph captures the EB110 LM’s dynamic presence outside the Circuit de la Sarthe setting. Its quad‑turbo 3.5‑litre V12 engine, producing 600 bhp, is paired with a six‑speed manual gearbox, delivering a visceral driving experience. Commissioned by Michel Hommell and driven from Bugatti’s Campogalliano factory to Le Mans, the car retains a well‑worn patina that speaks to its authentic racing history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Bugatti EB110, racing preparation referencing EB110 LM (1994). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: What's the Bugatti EB110 Le Mans car like to drive? | Top Gear. Its description: A striking blue Bugatti EB110 LM, bearing the number 34 and Monte Carlo TMC branding, roars along a winding road. Gold BBS wheels spin beneath wide arches, while sponsor logos from Michelin, Esso, Ultron, and NRJ line the bodywork. The car’s aerodynamic vents and rear wing emphasize its Le Mans racing pedigree.\n\nThis photograph captures the EB110 LM’s dynamic presence outside the Circuit de la Sarthe setting. Its quad‑turbo 3.5‑litre V12 engine, producing 600 bhp, is paired with a six‑speed manual gearbox, delivering a visceral driving experience. Commissioned by Michel Hommell and driven from Bugatti’s Campogalliano factory to Le Mans, the car retains a well‑worn patina that speaks to its authentic racing history.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Bugatti EB110 low angular coupe, small horseshoe grille, five-hole wheels, rear wing as shown.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Le Mans EB110 body ducts, widened arches, fixed rear wing, vented engine cover, silver competition wheels; EB110 horseshoe and roof preserved. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is French racing blue with white racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "eb110",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7d2cbe5d-33a1-4f83-826e-2c00086347a8.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/eb110.png",
+  "sourceSha256": "cde19eecef4ae3addc7b80f88b384819acb5325aedc8935af7352ef885b08a0c",
+  "input": "tools/race-conversions/inputs/eb110.png",
+  "output": "public/images/race-cars/eb110.png",
+  "sha256": "5feec349cc25a5f9a076f3add26059244ba7188a9b2e97e66450a69abad70e4f",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/eb110/rosso.png",
+      "sha256": "13890cdb69edbbd9c9146da4c765631dd6350e86083808b07aca558420240598"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/eb110-web-0.img",
+      "sha256": "682af2d5fae2e555286af396e27d98210abccbe51700d9a0ea95bc042dfd66e3"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

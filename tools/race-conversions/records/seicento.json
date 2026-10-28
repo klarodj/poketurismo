@@ -1,0 +1,41 @@
+{
+  "prompt": "Use case: stylized-concept. Asset type: one native pixel-art racing conversion sprite for Poketurismo, a Northern Italian automotive game set in 2002. SUBJECT: Fiat Seicento Sporting rally Gruppo A / Trofeo, 1998-1999, matching the REAL Fiat Auto Corse yellow demonstration car number 600 in photo reference 2. Reference 1 is the APPROVED ROAD MODEL: lock its precise Fiat Seicento anatomy, low horizontal rear lights, roof and hatch shape, three doors and front-left camera. Reference 2 is the REAL COMPETITION PHOTO: copy the yellow paint, curved blue stripes on front wings, red curved stripes on rear quarters, black Abarth scorpion on bonnet, white Fiat Auto Corse windscreen banner, 600 door number, FOUR auxiliary rally lamps, deeper period front bumper with broad lower opening, subtle flared arches, racing multi-spoke silver wheels, lowered purposeful tarmac stance, red mud flaps and visible roll cage. No giant GT wing: this real little rally car uses an almost stock rear silhouette. Do not keep the road bumper or factory wheels where the actual race photo differs. Reference 3 is ONLY approved pixel-art stroke/shading and front-left camera, never its Punto body shape. One entire car isolated on GENUINE TRANSPARENT background, nose towards lower left, roughly 40% front and 60% side. Wide 3:1 canvas with generous clear margin around whole car, wheels not cropped, realistic proportions. STRICT hand-drawn 1990s PC game PIXEL ART on a logical 320x128 grid: crisp square clusters, one-pixel dark panel seams, hard stepped silhouette, compact 5-6-tone shading, no antialiasing, no photography/filter, no vector artwork, no smooth gradients, no noisy texture. No ground plane or shadow outside car, no people or background, no UI or captions. Historical racing appearance only; don't portray a later Seicento facelift, modern equipment, oversized wheels, or invented aero. Rear quarter and rear lamp geometry must remain the approved Seicento model from reference 1.",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/seicento/giallo.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/.preview/references/seicento-rally.jpg",
+    "/home/klaro/poketurismo-work/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.motor1.com/images/mgl/NG1Arl/s3/fiat-seicento-sporting-rally-gr-a.jpg",
+      "page": "https://it.motor1.com/news/630986/fiat-seicento-storia-evoluzione/",
+      "role": "Real Fiat Auto Corse Seicento rally demonstration car, number600"
+    }
+  ],
+  "key": "seicento",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f7d0fc71-e424-4399-8b41-b2e925c1fe0e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/seicento.png",
+  "sourceSha256": "3056f2f72edec524bf2679ac252edda0ecffe82b2114a6dc98c81f2256654ad8",
+  "input": "tools/race-conversions/inputs/seicento.png",
+  "output": "public/images/race-cars/seicento.png",
+  "sha256": "2f7586be547bd925e45add501301eb4b3297ba49efd2555ab654ed17e0d076b9",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/public/images/pixel-cars/seicento/giallo.png",
+      "sha256": "7a60a5b895fb96a283737dc2a025ba0592efc6259d0e9a3b0d778c182f48d260"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/.preview/references/seicento-rally.jpg",
+      "sha256": "6df0bcc3a34397f71e94d93e68a3e5e38f0ca260d51ff831035ed9c01cb51d2d"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

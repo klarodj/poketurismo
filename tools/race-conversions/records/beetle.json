@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "New Beetle Cup",
+  "livery": "yellow blue and white Volkswagen racing",
+  "bodywork": "real rounded NEW Beetle Cup body, flared arches, deep front bumper, small rear wing and silver race wheels; never classic Beetle Fun Cup shell",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/beetle/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/beetle-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://racemarket.net/oc-content/uploads/69/102669.jpg",
+      "page": "https://es.racemarket.net/coches-de-carrera/coches-de-carreras-en-venta/monoplaza/vw-motorsport-new-beetle-cup-i6978",
+      "title": "Single seater race cars for sale - Racemarket.net | Europe's biggest racing marketplace network",
+      "description": "A striking blue Volkswagen New Beetle Cup race car is parked on a paved outdoor lot, its wide rear wing and white OZ Racing wheels drawing attention. The vehicle sports prominent ADAC and Pirelli decals, and a rear license plate marked “H AR 1916.” Light exhaust vapor drifts from the dual tailpipes, hinting at a recently warmed engine.\n\nNearby, a man in a long coat and baseball cap stands beside other parked cars, suggesting a sales or display environment. Trees and signage in the background reinforce the impression of a European racing marketplace setting.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Vw New Beetle RS, racing preparation referencing New Beetle Cup (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Single seater race cars for sale - Racemarket.net | Europe's biggest racing marketplace network. Its description: A striking blue Volkswagen New Beetle Cup race car is parked on a paved outdoor lot, its wide rear wing and white OZ Racing wheels drawing attention. The vehicle sports prominent ADAC and Pirelli decals, and a rear license plate marked “H AR 1916.” Light exhaust vapor drifts from the dual tailpipes, hinting at a recently warmed engine.\n\nNearby, a man in a long coat and baseball cap stands beside other parked cars, suggesting a sales or display environment. Trees and signage in the background reinforce the impression of a European racing marketplace setting.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Volkswagen New Beetle first-generation 1990s closed coupe, circular roof and round fender lamps; retain reference rear wing, not original classic Beetle.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real rounded NEW Beetle Cup body, flared arches, deep front bumper, small rear wing and silver race wheels; never classic Beetle Fun Cup shell. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow blue and white Volkswagen racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "beetle",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1e634a8d-9626-456b-b764-543e8f7abb80.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/beetle-r1.png",
+  "sourceSha256": "932ce632ac62d8b689d09320f7a4512c5deb24634304fa42bfd81970202965f1",
+  "input": "tools/race-conversions/inputs/beetle.png",
+  "output": "public/images/race-cars/beetle.png",
+  "sha256": "92eac9b6724c632a4c8a7eefa10ef85f3fb75347d20adc24c39198dbdc032cc4",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/beetle/rosso.png",
+      "sha256": "10462acc400b49b90e614e860002b3b4b727c931cf3673800e05d5281f99d347"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/beetle-web-1.img",
+      "sha256": "5a39382983b32106672cab314ad424f4e9a1d72b5eb1e983609968e873c6638b"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

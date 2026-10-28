@@ -1,0 +1,45 @@
+{
+  "key": "e34",
+  "prompt": "Use case: stylized-concept. Asset type: one automotive RPG racing conversion sprite, Northern Italy circa 2002. Draw BMW M5 E34 (1994), transformed into a credible PERIOD club racing car. This is explicitly a fictional but historically plausible 2002 preparation, NOT a claim of a factory race version. Reference 1 is the APPROVED ROAD PIXEL MODEL: preserve its exact vehicle identity, roof, door count, glass shape, headlights and rear-lamp anatomy, and front-left camera. Reference 2 is the REAL ORIGINAL STOCK PHOTOGRAPH: use it to confirm the precise model generation and proportions. Reference 3 is STYLE/CAMERA ONLY; NEVER copy the Fiat Punto shape. CRITICAL MODEL IDENTITY: BMW M5 E34 four-door saloon, four round headlights, boxy long boot. Those road-car instructions that prohibit wings/arches are superseded ONLY for the requested racing conversion; body identity and correct tail remain locked. PHYSICAL BODYWORK, MUST BE VISIBLY DIFFERENT FROM STOCK, not just paint: E34 four-door shell retained, touring front air dam, mild squared flares, skirts, medium boot wing and silver mesh wheels. Purposeful motorsport stance, period race tyres, visible dark roll-cage through glass where suitable. Dedicated livery: white and BMW Motorsport tricolour. Add coherent restrained 1990s racing number panels and tiny period-style sponsor marks; do NOT invent an official team or victory story. Use period wheel sizes and correct plausible aero; never modern giant wheels, 2020s canards, LED lights or GT3 body replacements. Keep the original engine bay arrangement and drivetrain implied by stock body; do not turn a front-engined car into a rear-engined prototype. COMPOSITION: one entire car, nose towards lower left, front-left three-quarter approximately 40% front/60% side, wheels straight, true proportions, all aero within a wide 3:1 canvas with generous transparent margins. GENUINE TRANSPARENT background, no people, scenery, ground plane, cast shadow, multiple views, UI, captions or watermark. STYLE: hand-drawn 1990s PC racing game pixel art, logical 320x128 grid, crisp square pixel clusters, dark one-pixel panel seams and stepped outline, compact 5-6-tone shading. No photo filter, vector, 3D render, antialiasing, gradients, blur or noisy textures. The finished car should clearly read as this same exact road model rebuilt for racing, with the listed bumpers, arches, aero and wheels.",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/e34/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/e34.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "classification": "club",
+  "candidate": "M5 E34 · Turismo del club",
+  "livery": "white and BMW Motorsport tricolour",
+  "bodywork": "E34 four-door shell retained, touring front air dam, mild squared flares, skirts, medium boot wing and silver mesh wheels",
+  "referenceSources": [
+    {
+      "role": "Real original road-car photograph supplied for the game",
+      "file": "tools/paint-prototype/archive/images/car/e34.png"
+    }
+  ],
+  "generationDate": "2026-10-28",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c69a8819-6ce0-478a-b976-7a85d7973068.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/e34.png",
+  "sourceSha256": "4a47d0611d171e809e9a712c1e54a3744966dd5c4a48b948f412e0c01c31ee19",
+  "input": "tools/race-conversions/inputs/e34.png",
+  "output": "public/images/race-cars/e34.png",
+  "sha256": "fbdad39799c4d3f86d708a279cccda3dd47f2bf6cab549b37c2635cc8027074f",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/e34/rosso.png",
+      "sha256": "8d44beffc2c9379534f6d45854b3a75ed132232c290605fb571e89a8a6f34e36"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/e34.png",
+      "sha256": "ebe64eb1af90f89a1e64e26b3517d2b946b5ce132f9635c986b693eaea7ec653"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "M1 Procar",
+  "livery": "white with BMW Motorsport blue purple red bands",
+  "bodywork": "real Procar wide arches, deep front air dam, side skirts, tall rear racing wing and gold mesh centre-lock wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/m1/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/m1-commons-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/1979_BMW_M1_Procar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:1979_BMW_M1_Procar.jpg",
+      "title": "File:1979 BMW M1 Procar.jpg",
+      "description": "1979 BMW M1 Procar",
+      "artist": "Calreyn88",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "photoReview": "Real competition car visually checked against approved road model; keep road identity where variants differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: BMW M1, racing preparation referencing M1 Procar (1979). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL RACING PHOTOGRAPH: File:1979 BMW M1 Procar.jpg. Its description: 1979 BMW M1 Procar. Use the actual period racing hardware and bodywork rather than inventing generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: BMW M1 low wedge mid-engine coupe, pop-up lamps and small kidney grille, black waist trim.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Procar wide arches, deep front air dam, side skirts, tall rear racing wing and gold mesh centre-lock wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with BMW Motorsport blue purple red bands. Keep small sponsor/number panels coherent with the historical racing reference; simplify tiny lettering into clean pixel marks without UI text. Where the real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "m1",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-26b2f4c6-3509-4cc2-b76d-1ff99e5a1222.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/m1.png",
+  "sourceSha256": "ea3dc4d0106dda67995b50b5b53986b042d5c9555a2efb89c919f216a852e750",
+  "input": "tools/race-conversions/inputs/m1.png",
+  "output": "public/images/race-cars/m1.png",
+  "sha256": "bcb5ea2a202e82f0031c19cdfa8ad930eeacd23ca2e3bc00032e5376bbfe4998",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/m1/rosso.png",
+      "sha256": "8de7d957e581ab762b245f3b988ef6cbce74a51f0b8d20205bb11920903d7fd5"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/m1-commons-0.img",
+      "sha256": "afeb1deee546fa5cda88df9559b0d4c0d739cd26e5f20a585ddf56534bacc3c0"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

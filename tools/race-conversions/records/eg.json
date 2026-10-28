@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Civic EG · Gruppo A",
+  "livery": "white with green and red Japanese racing bands",
+  "bodywork": "EG THREE-door hatch retained, front splitter, modest arch lips, small roof wing and white 15-inch racing wheels; no EG sedan",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/eg/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/eg-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.jpusaco.com/cdn/shop/products/EG_Type_A_1_grande.JPG?v=1571438596",
+      "page": "https://www.jpusaco.com/products/honda-civic-92-95-hb-type-a",
+      "title": "Honda Civic hatchback 1992-95 Type A (EG) – JP USA",
+      "description": "A 1992–95 Honda Civic hatchback (EG Type A) outfitted with a JP Type-A FRP body kit is captured in action on a racetrack. The complete kit includes a front bumper, left and right side skirts, and a rear bumper, all finished in white gel-coat. Bold red and blue 5ZIGEN USA graphics dominate the side profile, while additional sponsor decals—HONDATA, PIAA, Endless, Toyo Tires, HKS, NGK, AEM, NASA, and ASR—accent the car’s racing livery.\n\nThe race-prepped Civic features white multi-spoke wheels, a rear spoiler, and an interior roll cage visible through the windows. Number 5 is prominently displayed on the door, underscoring its competitive purpose. The dry, open track and clear weather conditions highlight the car’s dynamic stance and aerodynamic enhancements.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Honda Civic EG, racing preparation referencing Civic EG · Gruppo A (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Honda Civic hatchback 1992-95 Type A (EG) – JP USA. Its description: A 1992–95 Honda Civic hatchback (EG Type A) outfitted with a JP Type-A FRP body kit is captured in action on a racetrack. The complete kit includes a front bumper, left and right side skirts, and a rear bumper, all finished in white gel-coat. Bold red and blue 5ZIGEN USA graphics dominate the side profile, while additional sponsor decals—HONDATA, PIAA, Endless, Toyo Tires, HKS, NGK, AEM, NASA, and ASR—accent the car’s racing livery.\n\nThe race-prepped Civic features white multi-spoke wheels, a rear spoiler, and an interior roll cage visible through the windows. Number 5 is prominently displayed on the door, underscoring its competitive purpose. The dry, open track and clear weather conditions highlight the car’s dynamic stance and aerodynamic enhancements.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Honda Civic EG three-door hatchback (1991-1995). Tail lamps must be LOW and HORIZONTAL with rounded rectangular red/amber sections straddling the lower tailgate corners; NO vertical lights along the rear pillars. Body-colour uninterrupted C-pillar above the small low lamp. Preserve rounded EG roof, wide doors and split rear hatch architecture; original front bumper and silver wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: EG THREE-door hatch retained, front splitter, modest arch lips, small roof wing and white 15-inch racing wheels; no EG sedan. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with green and red Japanese racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "eg",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e5ccc081-8793-46e1-9ac3-12a81d053648.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/eg.png",
+  "sourceSha256": "81d6a3fe665a3bea7344b0b4da330d4f364d6dcb130b1d7c3b6efad9b98408ad",
+  "input": "tools/race-conversions/inputs/eg.png",
+  "output": "public/images/race-cars/eg.png",
+  "sha256": "1b854822e5e66acf59128919feea1d86e00c7b3db24782f487e771d4b58e7100",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/eg/rosso.png",
+      "sha256": "2455790fbbbc6751148fb9cf59205a20be9845d673a58a18dc941b77943a64b3"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/eg-web-0.img",
+      "sha256": "54273b127e6a7b51876fd214e6ce0fdf8a3d57789b75f27747fc6bab8522d92a"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

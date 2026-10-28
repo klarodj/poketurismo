@@ -1,0 +1,45 @@
+{
+  "key": "rs4",
+  "prompt": "Use case: stylized-concept. Asset type: one automotive RPG racing conversion sprite, Northern Italy circa 2002. Draw Audi RS4 (2000), transformed into a credible PERIOD club racing car. This is explicitly a fictional but historically plausible 2002 preparation, NOT a claim of a factory race version. Reference 1 is the APPROVED ROAD PIXEL MODEL: preserve its exact vehicle identity, roof, door count, glass shape, headlights and rear-lamp anatomy, and front-left camera. Reference 2 is the REAL ORIGINAL STOCK PHOTOGRAPH: use it to confirm the precise model generation and proportions. Reference 3 is STYLE/CAMERA ONLY; NEVER copy the Fiat Punto shape. CRITICAL MODEL IDENTITY: Audi RS4 B5 AVANT station wagon with flared arches and roof rails, never a sedan or modern RS4. Those road-car instructions that prohibit wings/arches are superseded ONLY for the requested racing conversion; body identity and correct tail remain locked. PHYSICAL BODYWORK, MUST BE VISIBLY DIFFERENT FROM STOCK, not just paint: B5 AVANT wagon retained, deep cooling bumper, side skirts and wider arch lips, small roof spoiler, silver 18-inch racing wheels. Purposeful motorsport stance, period race tyres, visible dark roll-cage through glass where suitable. Dedicated livery: silver with red Audi Sport panels. Add coherent restrained 1990s racing number panels and tiny period-style sponsor marks; do NOT invent an official team or victory story. Use period wheel sizes and correct plausible aero; never modern giant wheels, 2020s canards, LED lights or GT3 body replacements. Keep the original engine bay arrangement and drivetrain implied by stock body; do not turn a front-engined car into a rear-engined prototype. COMPOSITION: one entire car, nose towards lower left, front-left three-quarter approximately 40% front/60% side, wheels straight, true proportions, all aero within a wide 3:1 canvas with generous transparent margins. GENUINE TRANSPARENT background, no people, scenery, ground plane, cast shadow, multiple views, UI, captions or watermark. STYLE: hand-drawn 1990s PC racing game pixel art, logical 320x128 grid, crisp square pixel clusters, dark one-pixel panel seams and stepped outline, compact 5-6-tone shading. No photo filter, vector, 3D render, antialiasing, gradients, blur or noisy textures. The finished car should clearly read as this same exact road model rebuilt for racing, with the listed bumpers, arches, aero and wheels.",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/rs4/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/rs4.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "classification": "club",
+  "candidate": "RS4 Avant · Turismo del club",
+  "livery": "silver with red Audi Sport panels",
+  "bodywork": "B5 AVANT wagon retained, deep cooling bumper, side skirts and wider arch lips, small roof spoiler, silver 18-inch racing wheels",
+  "referenceSources": [
+    {
+      "role": "Real original road-car photograph supplied for the game",
+      "file": "tools/paint-prototype/archive/images/car/rs4.png"
+    }
+  ],
+  "generationDate": "2026-10-28",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8698e1e5-ea6d-4b3c-9e1a-1d9130cce9a6.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/rs4.png",
+  "sourceSha256": "1377f448047e48a04b9a07ebb21950b1823932e5878f67ea3ac479b21a2e4ed1",
+  "input": "tools/race-conversions/inputs/rs4.png",
+  "output": "public/images/race-cars/rs4.png",
+  "sha256": "fc7ed21fa0eff9c9109037d138601b72bcea1ece1f148be21caba332d0e4a1ed",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/rs4/rosso.png",
+      "sha256": "fd89414a79988eab63fda935a27b3a9cd84ffd44901aa498f65c881adf778dde"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/rs4.png",
+      "sha256": "f366dcce3371c4981b41e99662b7390dfeb975cbe8140e49725f00fcd83240ea"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

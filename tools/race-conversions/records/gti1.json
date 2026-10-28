@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Golf GTI Gruppo 2",
+  "livery": "white blue red and yellow VW Motorsport bands",
+  "bodywork": "retain Golf I shell, period bolt-on arch flares, deep front air dam, compact silver/gold mesh rally wheels, mud flaps and small roof lip",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/gti1/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/gti1.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Vw Golf GTI mk1",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Vw Golf GTI mk1, racing preparation referencing Golf GTI Gruppo 2 (1976). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Vw Golf GTI mk1. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Volkswagen Golf Mk1 GTI three-door small angular hatch, round front lamps and black bumper/arch trims.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain Golf I shell, period bolt-on arch flares, deep front air dam, compact silver/gold mesh rally wheels, mud flaps and small roof lip. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue red and yellow VW Motorsport bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "gti1",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0a078315-ece3-4a6d-a339-2f48dc6c1072.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/gti1-r1.png",
+  "sourceSha256": "71a7dc73813ac4fe695d9b5af4a8f72c62f38be5272eae0911ecec0b6226b0dd",
+  "input": "tools/race-conversions/inputs/gti1.png",
+  "output": "public/images/race-cars/gti1.png",
+  "sha256": "435c6ed14eea9b7c539ccfbe24531aab95610e949a0a3a7b03f82c8ae9a59e10",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/gti1/rosso.png",
+      "sha256": "40f369cc729d3b7004818b71f3a774cbb7072a5910b98999579306e3ea8524e3"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/gti1.png",
+      "sha256": "1fcb4c20d06b73807f741fe610331c3edab88a373f7c03c027239c4b303f4336"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

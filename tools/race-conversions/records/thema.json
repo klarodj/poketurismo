@@ -1,0 +1,45 @@
+{
+  "key": "thema",
+  "prompt": "Use case: stylized-concept. Asset type: one automotive RPG racing conversion sprite, Northern Italy circa 2002. Draw Lancia Thema 8.32 (1987), transformed into a credible PERIOD club racing car. This is explicitly a fictional but historically plausible 2002 preparation, NOT a claim of a factory race version. Reference 1 is the APPROVED ROAD PIXEL MODEL: preserve its exact vehicle identity, roof, door count, glass shape, headlights and rear-lamp anatomy, and front-left camera. Reference 2 is the REAL ORIGINAL STOCK PHOTOGRAPH: use it to confirm the precise model generation and proportions. Reference 3 is STYLE/CAMERA ONLY; NEVER copy the Fiat Punto shape. CRITICAL MODEL IDENTITY: Lancia Thema 8.32 four-door boxy saloon, rectangular headlamps and narrow upright grille, subtle boot spoiler if visible. Those road-car instructions that prohibit wings/arches are superseded ONLY for the requested racing conversion; body identity and correct tail remain locked. PHYSICAL BODYWORK, MUST BE VISIBLY DIFFERENT FROM STOCK, not just paint: retain Thema FOUR-door saloon, touring front air dam, subtle wide arches, side skirts, raised boot wing and silver mesh racing wheels. Purposeful motorsport stance, period race tyres, visible dark roll-cage through glass where suitable. Dedicated livery: white with dark blue and red period Italian bands. Add coherent restrained 1990s racing number panels and tiny period-style sponsor marks; do NOT invent an official team or victory story. Use period wheel sizes and correct plausible aero; never modern giant wheels, 2020s canards, LED lights or GT3 body replacements. Keep the original engine bay arrangement and drivetrain implied by stock body; do not turn a front-engined car into a rear-engined prototype. COMPOSITION: one entire car, nose towards lower left, front-left three-quarter approximately 40% front/60% side, wheels straight, true proportions, all aero within a wide 3:1 canvas with generous transparent margins. GENUINE TRANSPARENT background, no people, scenery, ground plane, cast shadow, multiple views, UI, captions or watermark. STYLE: hand-drawn 1990s PC racing game pixel art, logical 320x128 grid, crisp square pixel clusters, dark one-pixel panel seams and stepped outline, compact 5-6-tone shading. No photo filter, vector, 3D render, antialiasing, gradients, blur or noisy textures. The finished car should clearly read as this same exact road model rebuilt for racing, with the listed bumpers, arches, aero and wheels.",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/thema/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/thema.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "classification": "club",
+  "candidate": "Thema 8.32 · Turismo del club",
+  "livery": "white with dark blue and red period Italian bands",
+  "bodywork": "retain Thema FOUR-door saloon, touring front air dam, subtle wide arches, side skirts, raised boot wing and silver mesh racing wheels",
+  "referenceSources": [
+    {
+      "role": "Real original road-car photograph supplied for the game",
+      "file": "tools/paint-prototype/archive/images/car/thema.png"
+    }
+  ],
+  "generationDate": "2026-10-28",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-7fb23486-93f9-47db-a600-3609df788b3d.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/thema.png",
+  "sourceSha256": "d1d36940d4c8f8b3ad1a038791815fb83b32cdb3573a685d131e8cf5f630f57d",
+  "input": "tools/race-conversions/inputs/thema.png",
+  "output": "public/images/race-cars/thema.png",
+  "sha256": "30206e7b7e565f6b5474b94f42111e4249e446f0922bf50319f8dae5bfa46fcf",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/thema/rosso.png",
+      "sha256": "dc309fd5e1a2abf47a18498d35b2c464a577f0fc08d0b286e816fa2af7e7b2de"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/thema.png",
+      "sha256": "3aaffed87bd9749fecda1b3bb9598599296f5720442869548b0b7a37bf1f122d"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "F1 GTR Le Mans",
+  "livery": "dark grey black and silver Ueno Clinic scheme",
+  "bodywork": "real short-tail 1995 GTR front air dam, additional cooling ducts, roof intake, rear racing wing and silver five-spoke centre-lock wheels; no later longtail body",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/f1/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/f1-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn-3.motorsport.com/images/amp/0LvDVqgY/s1000/lemans-24-hours-of-le-mans-1995-59-mclaren-f1-gtr-j-j-lehto-yannick-dalmas-masanori-sekiya-5386285.jpg",
+      "page": "https://id.motorsport.com/lemans/news/mclaren-ingin-kembali-ke-le-mans/3082440/",
+      "title": "McLaren ingin kembali ke Le Mans | Berita Le Mans",
+      "description": "A black McLaren F1 GTR, car number 59, sits in its pit box during the 1995 24 Hours of Le Mans. Mechanics in white suits work on the vehicle as photographers and team staff look on from behind the pit wall. Above the garage door, the signs “Mc LAREN 59” and “CALLAWAY 76” mark the team’s bay.\n\nThis photograph, sourced from Motorsport.com, illustrates the high-pressure environment of an endurance racing pit stop. The image accompanies an article about McLaren’s plans to return to Le Mans in the LMP1 class under more cost-effective regulations, featuring comments from Zak Brown on the need for rule changes and comparisons to LMP2 and IMSA DPi categories.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: McLaren F1, racing preparation referencing F1 GTR Le Mans (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: McLaren ingin kembali ke Le Mans | Berita Le Mans. Its description: A black McLaren F1 GTR, car number 59, sits in its pit box during the 1995 24 Hours of Le Mans. Mechanics in white suits work on the vehicle as photographers and team staff look on from behind the pit wall. Above the garage door, the signs “Mc LAREN 59” and “CALLAWAY 76” mark the team’s bay.\n\nThis photograph, sourced from Motorsport.com, illustrates the high-pressure environment of an endurance racing pit stop. The image accompanies an article about McLaren’s plans to return to Le Mans in the LMP1 class under more cost-effective regulations, featuring comments from Zak Brown on the need for rule changes and comparisons to LMP2 and IMSA DPi categories.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: McLaren F1-family closed coupe and aero treatment visible in reference, low central cabin and side air scoops; preserve reference variant rather than invent modern McLaren.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real short-tail 1995 GTR front air dam, additional cooling ducts, roof intake, rear racing wing and silver five-spoke centre-lock wheels; no later longtail body. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is dark grey black and silver Ueno Clinic scheme. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "f1",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2fdb2adf-cd22-4c66-89df-cf8c32ccc738.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/f1.png",
+  "sourceSha256": "bef202343f6ede3367bb0c4948d97a50919d5a82de004bb17718ab1b999b0784",
+  "input": "tools/race-conversions/inputs/f1.png",
+  "output": "public/images/race-cars/f1.png",
+  "sha256": "872d4cd0a92dda69753d23c6f2330e51b1fc6167e500b9f7a78884c87ab519e6",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/f1/rosso.png",
+      "sha256": "220798d2c6f8b1a3b33b8e7f7115f8c1f4d25f1e2f11cc82cbe21c4252d08319"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/f1-web-0.img",
+      "sha256": "dfce6ec835d7c72790b37651d5194f3469a3732ef556285686a8abe007f3b9f3"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

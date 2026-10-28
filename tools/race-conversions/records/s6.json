@@ -1,0 +1,45 @@
+{
+  "key": "s6",
+  "prompt": "Use case: stylized-concept. Asset type: one automotive RPG racing conversion sprite, Northern Italy circa 2002. Draw Audi S6 (2001), transformed into a credible PERIOD club racing car. This is explicitly a fictional but historically plausible 2002 preparation, NOT a claim of a factory race version. Reference 1 is the APPROVED ROAD PIXEL MODEL: preserve its exact vehicle identity, roof, door count, glass shape, headlights and rear-lamp anatomy, and front-left camera. Reference 2 is the REAL ORIGINAL STOCK PHOTOGRAPH: use it to confirm the precise model generation and proportions. Reference 3 is STYLE/CAMERA ONLY; NEVER copy the Fiat Punto shape. CRITICAL MODEL IDENTITY: Audi S6 C5 four-door saloon shown, rounded long body, rectangular lamp clusters. Those road-car instructions that prohibit wings/arches are superseded ONLY for the requested racing conversion; body identity and correct tail remain locked. PHYSICAL BODYWORK, MUST BE VISIBLY DIFFERENT FROM STOCK, not just paint: retain C5 four-door saloon, extended front apron, tidy wide arches, side skirts, boot wing and silver racing wheels. Purposeful motorsport stance, period race tyres, visible dark roll-cage through glass where suitable. Dedicated livery: silver and red geometric Audi Sport panels. Add coherent restrained 1990s racing number panels and tiny period-style sponsor marks; do NOT invent an official team or victory story. Use period wheel sizes and correct plausible aero; never modern giant wheels, 2020s canards, LED lights or GT3 body replacements. Keep the original engine bay arrangement and drivetrain implied by stock body; do not turn a front-engined car into a rear-engined prototype. COMPOSITION: one entire car, nose towards lower left, front-left three-quarter approximately 40% front/60% side, wheels straight, true proportions, all aero within a wide 3:1 canvas with generous transparent margins. GENUINE TRANSPARENT background, no people, scenery, ground plane, cast shadow, multiple views, UI, captions or watermark. STYLE: hand-drawn 1990s PC racing game pixel art, logical 320x128 grid, crisp square pixel clusters, dark one-pixel panel seams and stepped outline, compact 5-6-tone shading. No photo filter, vector, 3D render, antialiasing, gradients, blur or noisy textures. The finished car should clearly read as this same exact road model rebuilt for racing, with the listed bumpers, arches, aero and wheels.",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/s6/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/s6.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "classification": "club",
+  "candidate": "S6 C5 · Turismo del club",
+  "livery": "silver and red geometric Audi Sport panels",
+  "bodywork": "retain C5 four-door saloon, extended front apron, tidy wide arches, side skirts, boot wing and silver racing wheels",
+  "referenceSources": [
+    {
+      "role": "Real original road-car photograph supplied for the game",
+      "file": "tools/paint-prototype/archive/images/car/s6.png"
+    }
+  ],
+  "generationDate": "2026-10-28",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-37ccec59-7480-4090-9f06-32b6e466ac4c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/s6.png",
+  "sourceSha256": "2af889cfe62a12ad40de632cafe961fb94558a024a9344881f388d323b457794",
+  "input": "tools/race-conversions/inputs/s6.png",
+  "output": "public/images/race-cars/s6.png",
+  "sha256": "b647adc41f01539f8ebc50d8d48b78cc8896bf3fc890cfcd89ed69a29ab65aff",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/s6/rosso.png",
+      "sha256": "1b965859b75864855acdd6debadb9a98da5fd12a8f63fff52851d2058173faa2"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/s6.png",
+      "sha256": "3728ef62cdac6bc547d70f3f877540c96bd99d1d78238657412a20737b30271c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

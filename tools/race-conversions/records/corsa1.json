@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Corsa A GSi Gruppo A",
+  "livery": "white yellow and grey Opel racing bands",
+  "bodywork": "retain first Corsa A square shell, small rally arch extensions, period front bumper, short roof spoiler, white compact rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/corsa1/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/corsa1-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://mercadoracing.com/imagenes-anuncios/26/518566/opel-corsa-a-gsi.jpg",
+      "page": "https://mercadoracing.com/opel-corsa-a-gsi-ad-518566",
+      "title": "opel corsa a GSI",
+      "description": "A fully restored white 1989 Opel Corsa A GSI hatchback is parked on grass next to a metal fence, displaying the racing number 38 on its side and a Spanish license plate M 5926 KB. The front grille features the GSI badge, and a yellow “ATENCION 50” sign is visible in the background. The car’s lowered stance and gold Braid alloy wheels hint at its performance upgrades.\n\nThe seller’s ad details a complete engine rebuild with new pistons, bearings, seals, crankshaft, camshaft, valves, belts, water pump, thermostat, and heater radiator. Performance enhancements include a Spesso Racing head gasket, lightweight balanced flywheel, polished intake ports, and a planed block from a Corsa B 1.6 16V. Extras such as Bilstein suspension, front strut brace, IRESA exhaust manifolds, OMP steering wheel and pedals, and a VDO oil temperature gauge round out the modifications. The car has passed its ITV inspection with no faults and comes with all original parts and spares for €2,400.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Opel Corsa Gsi mk1, racing preparation referencing Corsa A GSi Gruppo A (1990). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: opel corsa a GSI. Its description: A fully restored white 1989 Opel Corsa A GSI hatchback is parked on grass next to a metal fence, displaying the racing number 38 on its side and a Spanish license plate M 5926 KB. The front grille features the GSI badge, and a yellow “ATENCION 50” sign is visible in the background. The car’s lowered stance and gold Braid alloy wheels hint at its performance upgrades.\n\nThe seller’s ad details a complete engine rebuild with new pistons, bearings, seals, crankshaft, camshaft, valves, belts, water pump, thermostat, and heater radiator. Performance enhancements include a Spesso Racing head gasket, lightweight balanced flywheel, polished intake ports, and a planed block from a Corsa B 1.6 16V. Extras such as Bilstein suspension, front strut brace, IRESA exhaust manifolds, OMP steering wheel and pedals, and a VDO oil temperature gauge round out the modifications. The car has passed its ITV insp. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Opel Corsa A GSi three-door hatch, square upright body and small rectangular headlights.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain first Corsa A square shell, small rally arch extensions, period front bumper, short roof spoiler, white compact rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white yellow and grey Opel racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "corsa1",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e7071aa7-9826-447c-8b8e-331c7df5024c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/corsa1.png",
+  "sourceSha256": "45ffe22b1d68e0348cccda0cbc69ce752763d413174da345f879824d4cc3204e",
+  "input": "tools/race-conversions/inputs/corsa1.png",
+  "output": "public/images/race-cars/corsa1.png",
+  "sha256": "53df49bbd68b0d1263aa1b473365b06d23465e4778aea308b3e4a6841200d229",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/corsa1/rosso.png",
+      "sha256": "cfbecc6a478c99f595bc27a8a96dcaf91635baf84d519081f6c4c0fc875d80b5"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/corsa1-web-0.img",
+      "sha256": "98aeca46bc190eaa31a21dac9ae736c70486be11b029fd5fae905184e890cbdd"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

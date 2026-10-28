@@ -1,0 +1,18 @@
+{
+  "key": "m1",
+  "brand": "BMW",
+  "name": "M1",
+  "candidate": "M1 Procar",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/1979_BMW_M1_Procar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:1979_BMW_M1_Procar.jpg",
+      "title": "File:1979 BMW M1 Procar.jpg",
+      "artist": "Calreyn88",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

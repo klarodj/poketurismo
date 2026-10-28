@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Swift GTi Gruppo A",
+  "livery": "white blue and red Suzuki Sport",
+  "bodywork": "retain correct Swift three-door shell and short rear lights, small rally bumper and flares, little roof spoiler, white compact wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/swift/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/swift-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://img.ricardostatic.ch/images/2307a814-718c-4a44-b1c3-607c436da04e/t_1000x750/rare-youngtimer-suzuki-swift-gti-mk3",
+      "page": "https://www.ricardo.ch/de/a/rare-youngtimer-suzuki-swift-gti-mk3-1214637278/",
+      "title": "RARE Youngtimer Suzuki Swift GTI MK3 (Gebraucht) in Penthalaz für CHF 5500 – nur Abholung auf Ricardo kaufen",
+      "description": "A rare black Suzuki Swift GTI MK3 is presented in profile, parked on a paved surface before a modern garage door with brick pillars. The three-door hatchback sports alloy wheels, tinted side windows, and a subtle racing stripe along its lower body, emphasizing its sporty heritage.\n\nThis listing originates from a Ricardo.ch marketplace page dedicated to Suzuki Swift models, offering both new and used options. The platform allows buyers to compare prices and features across various Swift trims, from performance-oriented GTI variants to practical family cars.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Suzuki Swift GTI, racing preparation referencing Swift GTi Gruppo A (1989). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: RARE Youngtimer Suzuki Swift GTI MK3 (Gebraucht) in Penthalaz für CHF 5500 – nur Abholung auf Ricardo kaufen. Its description: A rare black Suzuki Swift GTI MK3 is presented in profile, parked on a paved surface before a modern garage door with brick pillars. The three-door hatchback sports alloy wheels, tinted side windows, and a subtle racing stripe along its lower body, emphasizing its sporty heritage.\n\nThis listing originates from a Ricardo.ch marketplace page dedicated to Suzuki Swift models, offering both new and used options. The platform allows buyers to compare prices and features across various Swift trims, from performance-oriented GTI variants to practical family cars.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Suzuki Swift GTi SF413 / second generation 1991 THREE-DOOR. Correct rear lamps to LOW BROAD HORIZONTAL red/amber rectangular corner clusters below the rear glass, wrapping slightly onto side and aligned with hatch lower panel. NO tall vertical lights alongside roof pillars. Preserve sloping rear hatch, black glass surround, small stock rear lip, short pointed bonnet, slim lamps and factory silver multi-spoke wheels from orange original.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain correct Swift three-door shell and short rear lights, small rally bumper and flares, little roof spoiler, white compact wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Suzuki Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "swift",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-14000357-ab77-4266-8844-ac9240b0c794.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/swift-r1.png",
+  "sourceSha256": "4c0be29b7c4c6beb8be149543a405023b5850cd4feb43f416c46ff761fb607be",
+  "input": "tools/race-conversions/inputs/swift.png",
+  "output": "public/images/race-cars/swift.png",
+  "sha256": "cacd3a60cc8fa87f4f1c75dbcc3fe36e4237441f88bab369f3cf644b12f66b2f",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/swift/rosso.png",
+      "sha256": "6d895aba9d38b30125aecefee87c73c9e31cadb3ee296eef7ac1b54931d64608"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/swift-web-1.img",
+      "sha256": "ba0d0fc6937130bef1ee0c61e51373fc366d20cbb1246a82e26c86ad14d85a35"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

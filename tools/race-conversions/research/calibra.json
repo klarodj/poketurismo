@@ -1,0 +1,18 @@
+{
+  "key": "calibra",
+  "brand": "Opel",
+  "name": "Calibra Turbo",
+  "candidate": "Calibra V6 ITC",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://images.motorsport-magazin.com/images/960/540/q_80/1010263.jpg",
+      "page": "https://www.motorsport-magazin.com/dtm/news-277142-dtm-classic-lausitzring-rosberg-opel-bringt-v6-turbo-sound/",
+      "title": "DTM-Classic Lausitzring, Rosberg-Opel bringt V6-Sound",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

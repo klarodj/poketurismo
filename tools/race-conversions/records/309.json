@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "309 GTi Gruppo A",
+  "livery": "white with blue yellow and red Peugeot Talbot bands",
+  "bodywork": "retain 309 longer tail and hatch, rally front bumper, modest flares and rear spoiler, white compact rally wheels; no 205 body",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/309/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/309-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://angliacarauctions.co.uk/images/lots/2694/9606~1/0001_WKxmHp_lg.jpeg",
+      "page": "https://angliacarauctions.co.uk/auctions/2694-05-Apr-2025/9606~1-1992-peugeot-309-19-gti",
+      "title": "1992 PEUGEOT 309 1.9 GTI | Sat 5th & Sun 6th April  | Anglia Car Auctions",
+      "description": "A vibrant red 1992 Peugeot 309 1.9 GTI is displayed inside an auction hall, framed by blue steel supports and a brick wall bearing the ACA logo. The hatchback’s alloy wheels, black side trim, and sunroof are clearly visible, while overhead signs mark the office and auction notices. The car’s condition reflects its 121,500 miles, with minor wear on the trim and tires.\n\nAuction details from Anglia Car Auctions list this vehicle as Lot 339, sold for £5,724 including premium against an estimate of £2,750–£3,750. The listing notes a V5 document, chassis number VF33CDKZ210542072, and a 1905cc engine. Stored dry from 2010 until late 2024, the GTI requires MoT work on brakes, driveshaft gaiter, and other components. Upgrades include a stainless manifold, Magnex exhaust, Sparco strut brace, and K&N filter, with paperwork and spares included.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 309 Gti, racing preparation referencing 309 GTi Gruppo A (1990). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: 1992 PEUGEOT 309 1.9 GTI | Sat 5th & Sun 6th April  | Anglia Car Auctions. Its description: A vibrant red 1992 Peugeot 309 1.9 GTI is displayed inside an auction hall, framed by blue steel supports and a brick wall bearing the ACA logo. The hatchback’s alloy wheels, black side trim, and sunroof are clearly visible, while overhead signs mark the office and auction notices. The car’s condition reflects its 121,500 miles, with minor wear on the trim and tires.\n\nAuction details from Anglia Car Auctions list this vehicle as Lot 339, sold for £5,724 including premium against an estimate of £2,750–£3,750. The listing notes a V5 document, chassis number VF33CDKZ210542072, and a 1905cc engine. Stored dry from 2010 until late 2024, the GTI requires MoT work on brakes, driveshaft gaiter, and other components. Upgrades include a stainless manifold, Magnex exhaust, Sparco strut brace, and K&N filter, with paperwork and spares included.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 309 GTi three-door boxy hatch, long roof and stepped fastback rear, rectangular headlights and dark bumpers.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain 309 longer tail and hatch, rally front bumper, modest flares and rear spoiler, white compact rally wheels; no 205 body. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue yellow and red Peugeot Talbot bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "309",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-428d732a-63fa-45d3-81ce-f1fad394c24a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/309-r1.png",
+  "sourceSha256": "125418f93c110d7c409dca9e707234c0379761504058b4aaf824b9def3caace8",
+  "input": "tools/race-conversions/inputs/309.png",
+  "output": "public/images/race-cars/309.png",
+  "sha256": "dd9a2f85ead04a5a69df6f4483b3644a88f9f011e13245035cb3f2821dfc953c",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/309/rosso.png",
+      "sha256": "2717d2d0ff220e7e6827d65d2005e8ddbb6fa1bde4357e4e62f1e19d8d904c2f"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/309-web-1.img",
+      "sha256": "fe6aa7a70c3ce2051e7c3874e3380fedcb22d17092ee1d26a1ac3f89246dbd2c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

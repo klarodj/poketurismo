@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "106 Rallye 1.3 Gruppo A",
+  "livery": "white with blue red yellow Peugeot Sport bands",
+  "bodywork": "FIRST-series narrow rectangular front lamps retained, period rally bumper, mild arch lips, small roof spoiler and white compact wheels; not facelift Maxi nose",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/rallye/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/rallye-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://stellantis3.dam-broadcast.com/medias/domain12808/media105857/1757116-okuf4knvlr-whr.jpg",
+      "page": "https://www.media.stellantis.com/it-it/peugeot/press/ben-ritrovata-106-rallye",
+      "title": "BEN RITROVATA, 106 RALLYE! | Peugeot | Stellantis Media",
+      "description": "Peugeot Italia has meticulously restored a 106 Rallye 1.3 to its original 1993 specification and added it to its press fleet. The compact white hatchback features distinctive red and yellow rally stripes, white steel wheels, and red interior accents, reflecting its lightweight, no-frills design. Under the hood, a 1.3‑liter TU2J2 engine produces 98 CV at 7,200 rpm, enabling a top speed of 190 km/h and a 0–100 km/h time of 9.3 seconds.\n\nCelebrated as the sportiest version of the 106, the Rallye bridged the success of the iconic 205 and 206 models. Its economical mechanics, modern styling, and nimble handling made it a mass-market hit, with 2.8 million units sold worldwide. In motorsport, over 50,000 Peugeot 106s competed in Italian rallies across 22 seasons, dominating classes N and A, and filling grids in the Italian Touring Car Championship. Notable drivers such as Giorgio Faletti and Paolo Andreucci began their careers behind its wheel, cementing the Rallye’s legacy in both road and racing history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 106 Rallye 1.3, racing preparation referencing 106 Rallye 1.3 Gruppo A (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: BEN RITROVATA, 106 RALLYE! | Peugeot | Stellantis Media. Its description: Peugeot Italia has meticulously restored a 106 Rallye 1.3 to its original 1993 specification and added it to its press fleet. The compact white hatchback features distinctive red and yellow rally stripes, white steel wheels, and red interior accents, reflecting its lightweight, no-frills design. Under the hood, a 1.3‑liter TU2J2 engine produces 98 CV at 7,200 rpm, enabling a top speed of 190 km/h and a 0–100 km/h time of 9.3 seconds.\n\nCelebrated as the sportiest version of the 106, the Rallye bridged the success of the iconic 205 and 206 models. Its economical mechanics, modern styling, and nimble handling made it a mass-market hit, with 2.8 million units sold worldwide. In motorsport, over 50,000 Peugeot 106s competed in Italian rallies across 22 seasons, dominating classes N and A, and filling grids in the Italian Touring Car Championship. Notable drivers such as Giorgio Faletti and Pa. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 106 Rallye first-series three-door hatch, thin angular lamps, WHITE steel wheels and subtle factory stripe decals preserved as unpainted details.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: FIRST-series narrow rectangular front lamps retained, period rally bumper, mild arch lips, small roof spoiler and white compact wheels; not facelift Maxi nose. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue red yellow Peugeot Sport bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "rallye",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b339ee77-e605-4397-b817-8e77e1cadc1b.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/rallye-r1.png",
+  "sourceSha256": "4b948b5582c3a08965275fc62ac7fa4a1b29299f5b5d62efb387a35e104cce5b",
+  "input": "tools/race-conversions/inputs/rallye.png",
+  "output": "public/images/race-cars/rallye.png",
+  "sha256": "fbc1b48e4098107f78a1a906ce43fe8ab4486fce98254723e0236a829f839ceb",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/rallye/rosso.png",
+      "sha256": "9995ea0eb8d8f63b5b77abacd39e4bf61b35ba0fbc5c68eb78b775263a9fe322"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/rallye-web-0.img",
+      "sha256": "aba83a105244f56f9baeb0f0810a39b886d150d404ad86af7abf7942c25650fd"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

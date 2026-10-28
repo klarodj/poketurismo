@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "635 CSi Gruppo A",
+  "livery": "white BMW Motorsport tricolour",
+  "bodywork": "retain E24 sharknose, real Group A front air dam, restrained flares, black boot spoiler and gold mesh racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/m635/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/m635.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · BMW M635",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: BMW M635, racing preparation referencing 635 CSi Gruppo A (1985). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · BMW M635. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: BMW M635 CSi E24 sharknose two-door coupe, four round headlights, slim chrome trim and long bonnet.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain E24 sharknose, real Group A front air dam, restrained flares, black boot spoiler and gold mesh racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white BMW Motorsport tricolour. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "m635",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b66f2519-2bee-4be5-8d78-9b37da438071.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/m635.png",
+  "sourceSha256": "d4eb9c183000c31738ae4d3351cf64d773a93a3a56a6432671a0f212589dd744",
+  "input": "tools/race-conversions/inputs/m635.png",
+  "output": "public/images/race-cars/m635.png",
+  "sha256": "b9748ebd3b6f22001071dab025f2332d4331cc9fafb4a5cf937d00f57fa53b28",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/m635/rosso.png",
+      "sha256": "8c91d0343c3f9907a605974c2ec9ae861de78b108fed2963751062c29a615a58"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/m635.png",
+      "sha256": "bdb04948d85a971db75d53373417779d52e59b86a5f8379ba69a4974e83c2257"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

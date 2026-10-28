@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "934 Turbo Gruppo 4",
+  "livery": "orange with black and white racing panels",
+  "bodywork": "retain 930 round headlights and rear engine coupe, real 934 bolt-on flared arches, deep front air dam, whale-tail spoiler, gold mesh wheels; not longtail 935",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/930/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/930-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Porsche_934_Turbo_%289224976479%29.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File%3APorsche_934_Turbo_%289224976479%29.jpg",
+      "title": "File:Porsche 934 Turbo (9224976479).jpg - Wikimedia Commons",
+      "description": "A striking blue Porsche 934 Turbo, prepared by Kremer Racing, stands on display at an indoor automotive exhibition. The car’s wide fenders, gold mesh wheels wrapped in Goodyear Eagle tires, and large rear wing emphasize its racing pedigree. Spectators mill around in the background, with banners and booths suggesting a motorsport or classic car show setting.\n\nPhotographed on February 4, 2012, at 22:45 with a digital still camera (7.4 mm lens, f/2.8, 1/20 sec, ISO 800), the image captures the glossy finish and aerodynamic details under bright exhibition lighting. The file is 1600 × 1200 pixels and licensed on Wikimedia Commons under an attribution-required license.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 930 Turbo, racing preparation referencing 934 Turbo Gruppo 4 (1976). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: File:Porsche 934 Turbo (9224976479).jpg - Wikimedia Commons. Its description: A striking blue Porsche 934 Turbo, prepared by Kremer Racing, stands on display at an indoor automotive exhibition. The car’s wide fenders, gold mesh wheels wrapped in Goodyear Eagle tires, and large rear wing emphasize its racing pedigree. Spectators mill around in the background, with banners and booths suggesting a motorsport or classic car show setting.\n\nPhotographed on February 4, 2012, at 22:45 with a digital still camera (7.4 mm lens, f/2.8, 1/20 sec, ISO 800), the image captures the glossy finish and aerodynamic details under bright exhibition lighting. The file is 1600 × 1200 pixels and licensed on Wikimedia Commons under an attribution-required license.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Porsche 930 Turbo classic widebody coupe, upright round lamps, black bumper bellows and whale-tail spoiler.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain 930 round headlights and rear engine coupe, real 934 bolt-on flared arches, deep front air dam, whale-tail spoiler, gold mesh wheels; not longtail 935. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is orange with black and white racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "930",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3abdd36c-2e72-4524-a6b9-aa2d6a5cdf7b.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/930-r1.png",
+  "sourceSha256": "7115f894cd36d196848c0f072e9308bbf6c1153e3228db1cca8dcc4e1d28afd0",
+  "input": "tools/race-conversions/inputs/930.png",
+  "output": "public/images/race-cars/930.png",
+  "sha256": "2812af55806290912046b1f8e90c93a726fd69f3f968fa653288c0f9d2112366",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/930/rosso.png",
+      "sha256": "27a5242eb0082280413b01999ff4b2516b6ae4c6dbd0b6724d8f4f755f7f4c8b"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/930-web-0.img",
+      "sha256": "34237337ce4e295ca708b2ff08da96e7d921531146d07e23d3effabc4c85ab19"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

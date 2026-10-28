@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Civic EK9 · N1 Endurance",
+  "livery": "yellow and blue Spoon-style period racing",
+  "bodywork": "EK three-door hatch retained, low front splitter, small arch lips, enlarged but period roof spoiler, black lightweight five-spoke racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ek/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ek-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://1.bp.blogspot.com/-tCr_KOJjm-I/YHl6GhX7ErI/AAAAAAAADRc/0V44cNs5KIUyNshtZ3lubvJzHfHSE1d-gCLcBGAsYHQ/s1024/960.jpg",
+      "page": "https://westhillmotorsports.blogspot.com/2021/04/honda-civic-ek9-type-r.html",
+      "title": "WESTHILL MOTORSPORTS: ホンダシビックＥＫ９レシングカーの販売　HONDA CIVIC EK9 Type R",
+      "description": "A white Honda Civic EK9 Type R racing car is parked outside a garage, showcasing its Westhill Motorsports livery and the race number 96 prominently on the hood. Sponsor decals from Direzza, Pirelli, WAKO’S, and Racing Gear line the front bumper and side skirts, while a red tow hook adds a functional racing detail.\n\nBuilt to JAF N1 specifications, this track-prepared Civic features expired safety equipment including seat belts and a safety fuel tank. Its last sanctioned competition was the 2010 Tsukuba P1600 race. Offered for sale at 2,000,000 yen, the car represents a well-documented piece of grassroots Japanese motorsport history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Honda Civic EK, racing preparation referencing Civic EK9 · N1 Endurance (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: WESTHILL MOTORSPORTS: ホンダシビックＥＫ９レシングカーの販売　HONDA CIVIC EK9 Type R. Its description: A white Honda Civic EK9 Type R racing car is parked outside a garage, showcasing its Westhill Motorsports livery and the race number 96 prominently on the hood. Sponsor decals from Direzza, Pirelli, WAKO’S, and Racing Gear line the front bumper and side skirts, while a red tow hook adds a functional racing detail.\n\nBuilt to JAF N1 specifications, this track-prepared Civic features expired safety equipment including seat belts and a safety fuel tank. Its last sanctioned competition was the 2010 Tsukuba P1600 race. Offered for sale at 2,000,000 yen, the car represents a well-documented piece of grassroots Japanese motorsport history.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Honda Civic EK three-door hatch, 1990s square-rounded headlights and compact tail, no later Civic.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: EK three-door hatch retained, low front splitter, small arch lips, enlarged but period roof spoiler, black lightweight five-spoke racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow and blue Spoon-style period racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "ek",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9bdd269a-e341-4b4d-8a0e-7bcd35472854.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/ek.png",
+  "sourceSha256": "3972ebf44b1672bc17c5796a554e75845f10ad97a41486c75ad1f80b6b513b7c",
+  "input": "tools/race-conversions/inputs/ek.png",
+  "output": "public/images/race-cars/ek.png",
+  "sha256": "7f63817b796bcf656cf223424bfedf136c23f3f7f06865cb6b9c724d16fdde01",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ek/rosso.png",
+      "sha256": "da296f593d5ef99c895c358fb3d63e52e7ba29d7af8b840afdad2d5a65c9ceb9"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ek-web-0.img",
+      "sha256": "98f0763b0ef3137b288ae12ad183eeb42038721ed75694cb208680a4c5cd7582"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

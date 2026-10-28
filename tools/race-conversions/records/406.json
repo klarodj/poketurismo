@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "406 Coupé Silhouette",
+  "livery": "white blue and red Peugeot Esso-style racing",
+  "bodywork": "retain original 406 TWO-door COUPE roof, real period silhouette broad fenders and split bumper, skirts, tall rear wing and silver racing wheels; never BTCC four-door sedan",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/406/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/406-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://kitsdefibra.com/imagenes/peugeot/peugeot-406-silhouette-solution-f-09.jpg",
+      "page": "https://kitsdefibra.com/kits-de-fibra-peugeot-406-coupe.html",
+      "title": "Kits carroceria Peugeot 406 Coupe, piezas de fibra y carroceria Peugeot 406 Coupe de competicion",
+      "description": "A red-and-white Peugeot 406 Coupé Silhouette stands on a racetrack, its wide rear bumper and large spoiler accentuating the competition-focused design. Dual exhaust pipes peek beneath the Pirelli-branded rear valance, while the tubular chassis and fiberglass bodywork hint at its SuperTouring pedigree.\n\nThis image complements a detailed online catalog of fiberglass body kits for the Peugeot 406 Coupé, which includes basic, wide (+25 mm), \"Peugeot Nîmes,\" and \"Silhouette\" tubular chassis versions. The site lists reference codes, descriptions, and prices for each kit, along with polycarbonate window options. Technical data and racing history of the Silhouette model—chassis by ORECA, central V6 engine, and Eric Helary’s championship entries—provide context for the car’s specialized build.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 406 v6, racing preparation referencing 406 Coupé Silhouette (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Kits carroceria Peugeot 406 Coupe, piezas de fibra y carroceria Peugeot 406 Coupe de competicion. Its description: A red-and-white Peugeot 406 Coupé Silhouette stands on a racetrack, its wide rear bumper and large spoiler accentuating the competition-focused design. Dual exhaust pipes peek beneath the Pirelli-branded rear valance, while the tubular chassis and fiberglass bodywork hint at its SuperTouring pedigree.\n\nThis image complements a detailed online catalog of fiberglass body kits for the Peugeot 406 Coupé, which includes basic, wide (+25 mm), \"Peugeot Nîmes,\" and \"Silhouette\" tubular chassis versions. The site lists reference codes, descriptions, and prices for each kit, along with polycarbonate window options. Technical data and racing history of the Silhouette model—chassis by ORECA, central V6 engine, and Eric Helary’s championship entries—provide context for the car’s specialized build.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 406 COUPE two-door Pininfarina body shown, not the four-door saloon; long smooth roof, thin lamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain original 406 TWO-door COUPE roof, real period silhouette broad fenders and split bumper, skirts, tall rear wing and silver racing wheels; never BTCC four-door sedan. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Peugeot Esso-style racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "406",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-32b2383b-90d3-47e5-a7bc-1ccf887ce98e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/406-r1.png",
+  "sourceSha256": "dd340ccd7059ba140f58493cd41250282729d22e7ce0e798a643d2ad3499d57b",
+  "input": "tools/race-conversions/inputs/406.png",
+  "output": "public/images/race-cars/406.png",
+  "sha256": "88cec337522974e2bc7f5d03ac50cfdd7cdfa23844e1ec392fb013cffb05aaa2",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/406/rosso.png",
+      "sha256": "aeee04367e5f8cbf134e7164150e308f2a5e8348d06e37938ffcad467bda5c4e"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/406-web-0.img",
+      "sha256": "d7975207adcb1358ddbe57c23df12ffa9a4e27a3185fb3aa1940a7ed3def4be1"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

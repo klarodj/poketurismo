@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "550 GTS Prodrive",
+  "livery": "red with white GT racing panels",
+  "bodywork": "real 2001 GTS wide arches, deep ducted bumper, vented bonnet, large rear wing and white centre-lock wheels; no claim of later 2003 victories",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/550/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/550-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_4a0c836a11f5239b3aea1341ae1c7f36.jpg",
+      "page": "https://www.classic-trader.com/fr/voitures/annonce/ferrari/550/maranello-550-prodrive/2002/370958",
+      "title": "Ferrari 550 voitures classiques à acheter | Classic Trader",
+      "description": "A striking red Ferrari 550 GTS, prepared by Prodrive for GT competition, is parked on a brick courtyard in front of a residential-style building. The car’s livery features the number 88, sponsor logos such as Sunoco Race Fuels, Michelin, and Champagne French Bakery Café, and a large rear wing bearing the Care Racing Development branding. Its low stance, racing wheels, and aerodynamic modifications highlight its track-focused design.\n\nThis Prodrive variant of the Ferrari 550 Maranello was developed for endurance racing, including events like the 24 Hours of Le Mans. Based on the road-going 550 Maranello designed by Pininfarina, the GTS version incorporates competition brakes, tuned suspension, and lightweight body panels. The combination of Ferrari’s front-engine V12 and Prodrive’s racing expertise produced a formidable GT racer, exemplified by this #88 entry.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ferrari 550, racing preparation referencing 550 GTS Prodrive (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Ferrari 550 voitures classiques à acheter | Classic Trader. Its description: A striking red Ferrari 550 GTS, prepared by Prodrive for GT competition, is parked on a brick courtyard in front of a residential-style building. The car’s livery features the number 88, sponsor logos such as Sunoco Race Fuels, Michelin, and Champagne French Bakery Café, and a large rear wing bearing the Care Racing Development branding. Its low stance, racing wheels, and aerodynamic modifications highlight its track-focused design.\n\nThis Prodrive variant of the Ferrari 550 Maranello was developed for endurance racing, including events like the 24 Hours of Le Mans. Based on the road-going 550 Maranello designed by Pininfarina, the GTS version incorporates competition brakes, tuned suspension, and lightweight body panels. The combination of Ferrari’s front-engine V12 and Prodrive’s racing expertise produced a formidable GT racer, exemplified by this #88 entry.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ferrari 550 Maranello front-engine coupe, long bonnet with small scoop, recessed clear lamp units.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real 2001 GTS wide arches, deep ducted bumper, vented bonnet, large rear wing and white centre-lock wheels; no claim of later 2003 victories. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red with white GT racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "550",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9e699184-0da1-47a3-8f5e-cfd11b093f0a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/550.png",
+  "sourceSha256": "1f97fc4629afede92ae0ab0f634950f194278a80112a9d403c272b790831f97a",
+  "input": "tools/race-conversions/inputs/550.png",
+  "output": "public/images/race-cars/550.png",
+  "sha256": "28d98abc17de29aa2246a44ec4f0fbb1e0c8e61cd7f4de5e61f4bcd539456e04",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/550/rosso.png",
+      "sha256": "b28a89b757e37861ac1523ff8552e3ce072c083083dd90a24babf4001ae87e77"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/550-web-0.img",
+      "sha256": "fa5d3cc84e8441befa3cf076170cf5daad7a7c990438d7897e364c28f3d7bd4b"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

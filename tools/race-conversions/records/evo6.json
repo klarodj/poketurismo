@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Lancer Evolution VI Gruppo A",
+  "livery": "red white and black Ralliart factory scheme",
+  "bodywork": "actual Evo VI rally bumper and wide arches, bonnet vents, roof vent, Evo VI tall rear spoiler and white racing wheels; distinct from Evo V",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/evo6/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/evo6-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://assets.carandclassic.com/uploads/cars/mitsubishi/C1833199/2000-mitsubishi-lancer-evolution-679f510b6d3c7.jpg?fit=fillmax&h=1200&ixlib=php-4.1.0&q=85&s=a8ff35c1fd9068b48db5931a8228dd1b&w=1200",
+      "page": "https://www.carandclassic.com/l/C1833199",
+      "title": "2000 Mitsubishi Lancer Evolution Plata Manual, Velocidad 5 Volante a la derecha en NORTH FERRIBY, Reino Unido - En Venta | Car & Classic",
+      "description": "This silver Mitsubishi Lancer Evolution VI Tommi Makinen Edition is a right-hand drive, manual transmission rally car with just 26,300 kilometers on the clock. It features white multi-spoke wheels, red brake calipers, a large rear wing, and Ralliart branding on the front bumper and side skirts. The hood scoop and aggressive body kit highlight its performance heritage.\n\nLocated in North Ferriby, United Kingdom, this example is offered for £85,000. Its low mileage and special edition status make it a sought-after collector’s car for enthusiasts of the iconic Evolution series.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mitsubishi Lancer Evo 6, racing preparation referencing Lancer Evolution VI Gruppo A (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: 2000 Mitsubishi Lancer Evolution Plata Manual, Velocidad 5 Volante a la derecha en NORTH FERRIBY, Reino Unido - En Venta | Car & Classic. Its description: This silver Mitsubishi Lancer Evolution VI Tommi Makinen Edition is a right-hand drive, manual transmission rally car with just 26,300 kilometers on the clock. It features white multi-spoke wheels, red brake calipers, a large rear wing, and Ralliart branding on the front bumper and side skirts. The hood scoop and aggressive body kit highlight its performance heritage.\n\nLocated in North Ferriby, United Kingdom, this example is offered for £85,000. Its low mileage and special edition status make it a sought-after collector’s car for enthusiasts of the iconic Evolution series.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mitsubishi Lancer Evolution VI four-door saloon, distinguish its reference bumper and horizontal headlamps from Evo V and VII, large rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Evo VI rally bumper and wide arches, bonnet vents, roof vent, Evo VI tall rear spoiler and white racing wheels; distinct from Evo V. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red white and black Ralliart factory scheme. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "evo6",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-40e2e319-4a4f-49c2-b904-976b6242ffee.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/evo6.png",
+  "sourceSha256": "f80ff29410e6057ab65ae0b1094cbc7ced2f5eceeb9353a268e785c8ed368a24",
+  "input": "tools/race-conversions/inputs/evo6.png",
+  "output": "public/images/race-cars/evo6.png",
+  "sha256": "aca9f68ea0bbba8cf4cef55e71d5a1ef8b5c81ec2d82601d00e700300792af39",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/evo6/rosso.png",
+      "sha256": "7b7d9cd6ea00d89928cf739ecb2593c07816048a484b1a2d795b5d59751464e6"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/evo6-web-0.img",
+      "sha256": "13bda44792206fc59baf7efc259b942c3b24ea4670638b04f1d2ed934eacec84"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

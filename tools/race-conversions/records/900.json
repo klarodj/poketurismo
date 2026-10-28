@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "900 Turbo Gruppo A",
+  "livery": "white with blue red Saab racing bands",
+  "bodywork": "retain classic 900 three-door hatch and sloping bonnet, period rally bumper, restrained arch lips, roof spoiler, white small rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/900/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/900-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://goauctionmpc.bidpath.cloud/stock/3134-11-medium.jpg?v=63868306543117",
+      "page": "https://www.manorparkclassics.com/auction/lot/lot-80---1992-saab-900-s-aero-turbo/?lot=3169&sd=1",
+      "title": "Lot 80 - 1992 Saab 900 S Aero Turbo",
+      "description": "A resplendent Talladega Red 1992 Saab 900 S Aero Turbo stands in a white‑walled showroom, its grey lower body cladding and three‑spoke alloy wheels emphasizing its sporty hatchback silhouette. The UK registration plate J827 UPA and the “turbo” badge on the front grille highlight its performance pedigree. Inside, grey leather upholstery and a sunroof complete the Aero specification.\n\nThis Saab has been tuned by Abbott Racing, featuring a limited‑slip differential, chargecooler kit, stainless steel exhaust, and ITG Sports air filter. With 145,000 miles on the odometer, manual transmission, and an MOT valid until July 2025, it represents one of only 83 licensed examples in the UK. Sold for £12,075 (including buyer’s premium and VAT) at Manor Park Classics’ 7th December 2024 auction, it comes with a full service history, owner’s manual, and two sets of keys.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Saab 900 Turbo, racing preparation referencing 900 Turbo Gruppo A (1985). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Lot 80 - 1992 Saab 900 S Aero Turbo. Its description: A resplendent Talladega Red 1992 Saab 900 S Aero Turbo stands in a white‑walled showroom, its grey lower body cladding and three‑spoke alloy wheels emphasizing its sporty hatchback silhouette. The UK registration plate J827 UPA and the “turbo” badge on the front grille highlight its performance pedigree. Inside, grey leather upholstery and a sunroof complete the Aero specification.\n\nThis Saab has been tuned by Abbott Racing, featuring a limited‑slip differential, chargecooler kit, stainless steel exhaust, and ITG Sports air filter. With 145,000 miles on the odometer, manual transmission, and an MOT valid until July 2025, it represents one of only 83 licensed examples in the UK. Sold for £12,075 (including buyer’s premium and VAT) at Manor Park Classics’ 7th December 2024 auction, it comes with a full service history, owner’s manual, and two sets of keys.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Saab 900 NG three-door hatch body as reference, rounded long liftback and rectangular lamps, no modern Saab 9-5.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain classic 900 three-door hatch and sloping bonnet, period rally bumper, restrained arch lips, roof spoiler, white small rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue red Saab racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "900",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-41e2e387-d060-4b19-a1e5-f353050dec9b.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/900-r1.png",
+  "sourceSha256": "6d88192f79965f95447be16ec46bf5cb1fc269ddd177cabe7cc3fe69e38b6b7e",
+  "input": "tools/race-conversions/inputs/900.png",
+  "output": "public/images/race-cars/900.png",
+  "sha256": "9a1101eacbc86553ebaad979052986ba282726a18ac76458c68abe5b01a80eec",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/900/rosso.png",
+      "sha256": "ac5aa7fa69874ccb2e875e1676a9788d084ae42073ead9ccba9fc0473d860a51"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/900-web-1.img",
+      "sha256": "49e955e4a6b28c83573ee6762026b15c2d6b62ef31f4913913ddcdcf3efde4c3"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

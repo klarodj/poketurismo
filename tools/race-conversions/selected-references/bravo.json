@@ -1,0 +1,17 @@
+{
+  "key": "bravo",
+  "selected": [
+    {
+      "url": "https://historicdb.fia.com/sites/default/files/styles/750x500_cropped/public/gallery/homologation_form_number_5558_group_n_8.jpeg?itok=Uxfdcmwu",
+      "page": "https://historicdb.fia.com/car/fiat-bravo-hgt-20-20v",
+      "title": "FIA Historic Database",
+      "score": 9,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/bravo-web-0.img",
+      "width": 750,
+      "height": 500
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "identity",
+  "review": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica"
+}

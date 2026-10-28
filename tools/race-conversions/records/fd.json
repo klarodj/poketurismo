@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "RX-7 FD JGTC GT300",
+  "livery": "yellow and blue Japanese GT racing",
+  "bodywork": "real period FD racing bumper and ducts, broad arch extensions, high rear wing and white racing wheels; retain FD roof and twin round rear lamp layout",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/fd/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/fd-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://automobiles-japonaises.com/Mazda/RX7/1996Mazda_RX7_JGTC_REAmemiya.jpg",
+      "page": "https://automobiles-japonaises.com/Mazda/RX7/RX7_Racing5.php",
+      "title": "AJ - Mazda RX-7 en compétition",
+      "description": "A striking blue and red Mazda RX-7 FD, tuned by RE Amemiya, powers through a corner on a Japanese racetrack. The car’s livery features bold sponsor logos—Dunlop, Bomex, Endless—and the number 7 on its door. A large rear wing and wide racing slicks underscore its GT300 specification in the Super GT series.\n\nRE Amemiya, founded by Isami Amemiya in 1974, built its reputation on rotary engine tuning. The team entered the JGTC in 1995 with a 13B birotor engine and later upgraded to a 20B three-rotor unit producing 300 horsepower. After winning the GT300 championship in 2006, the RX-7 remained competitive until 2010, marking a significant chapter in Japan’s premier touring car series.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mazda Rx-7 FD, racing preparation referencing RX-7 FD JGTC GT300 (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: AJ - Mazda RX-7 en compétition. Its description: A striking blue and red Mazda RX-7 FD, tuned by RE Amemiya, powers through a corner on a Japanese racetrack. The car’s livery features bold sponsor logos—Dunlop, Bomex, Endless—and the number 7 on its door. A large rear wing and wide racing slicks underscore its GT300 specification in the Super GT series.\n\nRE Amemiya, founded by Isami Amemiya in 1974, built its reputation on rotary engine tuning. The team entered the JGTC in 1995 with a 13B birotor engine and later upgraded to a 20B three-rotor unit producing 300 horsepower. After winning the GT300 championship in 2006, the RX-7 remained competitive until 2010, marking a significant chapter in Japan’s premier touring car series.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mazda RX-7 FD flowing rounded closed coupe, pop-up lids closed, large rounded nose and low roof.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real period FD racing bumper and ducts, broad arch extensions, high rear wing and white racing wheels; retain FD roof and twin round rear lamp layout. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow and blue Japanese GT racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "fd",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6e746a8c-8504-4b7c-9699-027d7e38c657.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/fd.png",
+  "sourceSha256": "a89d414e8e27af3ccf52546f05c7ab04bfa542f2d5dcb6b3f2f70477400f8e93",
+  "input": "tools/race-conversions/inputs/fd.png",
+  "output": "public/images/race-cars/fd.png",
+  "sha256": "3e00ddcdb28ab2417d6e0f9bc5005a7fa17ec61768d1af28f301f0409da5f81c",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/fd/rosso.png",
+      "sha256": "5ab52d6a44a72194ddc4e747c3a68d48670794328e1572d9d791d66eaaa78ddc"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/fd-web-1.img",
+      "sha256": "f92bb9831ff5ed3ad080e5ad1532811461c586cf93c71a7822b949e9f174a5e5"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

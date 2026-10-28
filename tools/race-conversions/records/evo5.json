@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Lancer Evolution V Gruppo A",
+  "livery": "red white and black Ralliart factory scheme",
+  "bodywork": "actual Evo V wide arches and rally bumper, bonnet vents, roof vent, real double-level rear spoiler, white rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/evo5/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/evo5.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Mitsubishi Lancer Evo 5",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mitsubishi Lancer Evo 5, racing preparation referencing Lancer Evolution V Gruppo A (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Mitsubishi Lancer Evo 5. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mitsubishi Lancer Evolution V four-door saloon, bonnet vents, boxed arches, huge ROUND fog lights in deep bumper and rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Evo V wide arches and rally bumper, bonnet vents, roof vent, real double-level rear spoiler, white rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red white and black Ralliart factory scheme. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "evo5",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ac51a2c8-ab1e-4cbe-b6d0-84ece04b9945.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/evo5.png",
+  "sourceSha256": "aa328662fafd55f671efe262b7206a65a4e0f1b83f99433acf335cfbc599c4c0",
+  "input": "tools/race-conversions/inputs/evo5.png",
+  "output": "public/images/race-cars/evo5.png",
+  "sha256": "a25cf49d0a565af882bb9026d9a0399ab02310369a72aa4906af3bbaff2bdfd4",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/evo5/rosso.png",
+      "sha256": "736dcac3fa2bd7979776d7760249ab539e8be05c56f8f656b3d099c087131fe7"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/evo5.png",
+      "sha256": "00438a7bb6559514eeec0b5c1aa07bcaa5d9b55cd7aff8c370976f54d66eabfb"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Fiesta RS Turbo Gruppo N",
+  "livery": "white blue and red Ford racing bands",
+  "bodywork": "correct early Fiesta three-door retained, deeper rally front apron, subtle arches, small hatch spoiler, white rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/fiesta/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/fiesta.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Ford Fiesta Turbo",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ford Fiesta Turbo, racing preparation referencing Fiesta RS Turbo Gruppo N (1991). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Ford Fiesta Turbo. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ford Fiesta Mk3 RS Turbo three-door. Correct rear lights: compact vertical trapezoidal clusters BELOW rear window corners only, red upper and bottom, thin amber and white middle bands. No long pillar strips running up beside rear glass. Preserve RS Turbo four square bumper driving lamps, stock 3-spoke silver wheels, black bumper moulding and thin green/turquoise trim independently from painted green panels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: correct early Fiesta three-door retained, deeper rally front apron, subtle arches, small hatch spoiler, white rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Ford racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "fiesta",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-376c32b1-f158-4af0-9ece-5c3ae9082fb4.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/fiesta.png",
+  "sourceSha256": "15d9cd57e5ee4c90da6df99414c3d4d8414c7ce90028709432ad7290ec800084",
+  "input": "tools/race-conversions/inputs/fiesta.png",
+  "output": "public/images/race-cars/fiesta.png",
+  "sha256": "514864dea52938cbf675d52538bfe3c68a6790ed16fcdd2b5bf048db2a1a6a97",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/fiesta/rosso.png",
+      "sha256": "9336ad2584183f20c16c5997229a3e666a5229af94086fa2eee7ee51fb29bbd1"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/fiesta.png",
+      "sha256": "df837892a010cf0906db030006d5fd064a482da8c64749c4fffd0379055856cd"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

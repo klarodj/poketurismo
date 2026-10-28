@@ -1,0 +1,17 @@
+{
+  "key": "lupo",
+  "selected": [
+    {
+      "url": "https://www.motorsportmarkt.de/media/image/31/a6/da/php9PoKn4.jpg",
+      "page": "https://www.motorsportmarkt.de/inserat/60264/vw-lupo-klasse-pf5a-oder-pf5b",
+      "title": "VW Lupo, Klasse PF5a oder PF5b 63643 | MotorsportMarkt.de",
+      "score": 10,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/lupo-web-0.img",
+      "width": 810,
+      "height": 540
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

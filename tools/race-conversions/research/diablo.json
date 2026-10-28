@@ -1,0 +1,18 @@
+{
+  "key": "diablo",
+  "brand": "Lamborghini",
+  "name": "Diablo",
+  "candidate": "Diablo GTR Supertrofeo",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://s3.us-east-2.amazonaws.com/prod.mm.com/uploads/2024/12/27/03_thumb.jpg",
+      "page": "https://classicmotorsports.com/cars-for-sale/diablo-gtr-one-of-only-30-made-for-lamborghinis-one-make-series-2000-diablo-gtr/",
+      "title": "   | Lamborghini Diablo GTR | Cars for Sale | Classic Motorsports",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

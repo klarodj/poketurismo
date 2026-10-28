@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Ibiza Cupra R · Kit Car",
+  "livery": "yellow blue and red Seat period racing",
+  "bodywork": "retain approved Cupra R nose and THREE-door shell, period Ibiza Kit Car-style wide arches and bumper, roof vent and rear spoiler, white racing wheels; do not swap to older nose",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ibiza/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ibiza-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://racecarsdirect.com/content/UserImages/91295/501152.jpg?v=2",
+      "page": "https://racecarsdirect.com/Advert/Details/91295/inftrees",
+      "title": "Racecarsdirect.com  - Seat Ibiza Cupra R 2002",
+      "description": "This grey, red, and white Seat Ibiza Cupra R carries the racing number 363 and features decals for clubgti.com, BARC, and the Classic Touring Car Racing Club. It is parked on a gravel driveway in front of a wooden gate and brick wall, emphasizing its track-ready stance and aerodynamic modifications.\n\nOriginally listed for £7,500 on Racecarsdirect.com, this 2002 model was equipped with a welded-in safety cage, fully adjustable Leda suspension, limited-slip differential, electric extinguisher system, carbon racing seat, new clutch, and a new turbo. It comes with two sets of wheels for dry and wet conditions and has a proven record of class wins in tarmac rallies, MSVR, and VW Challenge events.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Seat Ibiza Cupra R, racing preparation referencing Ibiza Cupra R · Kit Car (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Racecarsdirect.com  - Seat Ibiza Cupra R 2002. Its description: This grey, red, and white Seat Ibiza Cupra R carries the racing number 363 and features decals for clubgti.com, BARC, and the Classic Touring Car Racing Club. It is parked on a gravel driveway in front of a wooden gate and brick wall, emphasizing its track-ready stance and aerodynamic modifications.\n\nOriginally listed for £7,500 on Racecarsdirect.com, this 2002 model was equipped with a welded-in safety cage, fully adjustable Leda suspension, limited-slip differential, electric extinguisher system, carbon racing seat, new clutch, and a new turbo. It comes with two sets of wheels for dry and wet conditions and has a proven record of class wins in tarmac rallies, MSVR, and VW Challenge events.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Seat Ibiza Cupra R 6K facelift three-door hatch, narrow lamps, deep bumper and period small wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved Cupra R nose and THREE-door shell, period Ibiza Kit Car-style wide arches and bumper, roof vent and rear spoiler, white racing wheels; do not swap to older nose. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow blue and red Seat period racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "ibiza",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0bb981a9-c467-4255-b979-a47107eb1a8f.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/ibiza-r1.png",
+  "sourceSha256": "36ea915fd7d473b84a10194c8e5696eac4cf7c3d455783e96d515f06a8ad84c0",
+  "input": "tools/race-conversions/inputs/ibiza.png",
+  "output": "public/images/race-cars/ibiza.png",
+  "sha256": "2edea37bb46c0163b85f352195596d350cc6dcdd7e387faeaf3a9c198219612a",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ibiza/rosso.png",
+      "sha256": "3ad918f19132f8bb415ef00ef9a7844e3ee470bfacbbdeef10d2e0d5e40cceec"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ibiza-web-0.img",
+      "sha256": "3ebafbebeb29ea613087bd9aef96144dfcbf55c286f3d4f52e355a322b98bab3"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

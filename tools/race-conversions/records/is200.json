@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "IS200 BTCC",
+  "livery": "yellow black and silver Lexus racing",
+  "bodywork": "actual early IS200 four-door saloon, touring bumper ducts, squared arch lips, skirts, tall boot wing and white racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/is200/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/is200-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://p4.wallpaperbetter.com/wallpaper/743/486/348/2001-btcc-is200-lexus-wallpaper-preview.jpg",
+      "page": "https://www.wallpaperbetter.com/id/hd-wallpaper-tyrxh",
+      "title": "2001, btcc, is200, lexus, race, racing, rally, xe10, Wallpaper HD | Wallpaperbetter",
+      "description": "A black 2001 Lexus IS200, bearing the number 42 and sponsor decals like TotalMotorSport.com, BFGoodrich, and Autocar, drifts through a corner on a racetrack. Tire smoke billows from the rear wheels as the sedan’s aerodynamic wing and racing setup tackle the turn.\n\nThis wallpaper preview from Wallpaperbetter showcases the BTCC touring car in action. The site offers various resolutions for download and tags the image with keywords such as \"2001, btcc, is200, lexus, race, racing, rally, xe10.\" Related wallpapers feature other racing vehicles and events across multiple formats.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lexus IS200 RS, racing preparation referencing IS200 BTCC (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 2001, btcc, is200, lexus, race, racing, rally, xe10, Wallpaper HD | Wallpaperbetter. Its description: A black 2001 Lexus IS200, bearing the number 42 and sponsor decals like TotalMotorSport.com, BFGoodrich, and Autocar, drifts through a corner on a racetrack. Tire smoke billows from the rear wheels as the sedan’s aerodynamic wing and racing setup tackle the turn.\n\nThis wallpaper preview from Wallpaperbetter showcases the BTCC touring car in action. The site offers various resolutions for download and tags the image with keywords such as \"2001, btcc, is200, lexus, race, racing, rally, xe10.\" Related wallpapers feature other racing vehicles and events across multiple formats.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: First-generation Lexus IS200 XE10 four-door saloon, slim rectangular headlamps and six-spoke wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual early IS200 four-door saloon, touring bumper ducts, squared arch lips, skirts, tall boot wing and white racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow black and silver Lexus racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "is200",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-44328c36-f09c-4475-af73-c011c9f3d277.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/is200.png",
+  "sourceSha256": "2bbe04ec355d929d18ad160d102de19d9fda9c86055472cba6034936a1cccf74",
+  "input": "tools/race-conversions/inputs/is200.png",
+  "output": "public/images/race-cars/is200.png",
+  "sha256": "35d8df3d0f7f399dd62277dc5ad76f10b712b0e78561b656da072201d7bd37f3",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/is200/rosso.png",
+      "sha256": "5c49aa593385b693361d4f8e26e6f1b842359dd8c82a03924d2e966f4c34fb12"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/is200-web-0.img",
+      "sha256": "ca3f4f99339cc2b444279ed275a60c2abaa1a6ccc287a94ecf194a5156e9f900"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

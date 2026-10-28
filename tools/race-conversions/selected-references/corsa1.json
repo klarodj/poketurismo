@@ -1,0 +1,17 @@
+{
+  "key": "corsa1",
+  "selected": [
+    {
+      "url": "https://mercadoracing.com/imagenes-anuncios/26/518566/opel-corsa-a-gsi.jpg",
+      "page": "https://mercadoracing.com/opel-corsa-a-gsi-ad-518566",
+      "title": "opel corsa a GSI",
+      "score": 6,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/corsa1-web-0.img",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

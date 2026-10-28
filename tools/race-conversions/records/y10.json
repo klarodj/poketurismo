@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Y10 Turbo · Rally del club",
+  "livery": "white, red lower bands and original black tailgate",
+  "bodywork": "modest front valance, small arch lips, silver compact rally wheels, mud flaps; retain Y10 black rear hatch",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/y10/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/y10-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://media-eu.invisioncic.com/m304542/monthly_2021_02/14.jpg.b33f073a7e9377fa872a98bd6cabebe6.jpg",
+      "page": "https://forum-auto.caradisiac.com/topic/473569-souvenirs-du-rallye-cedico-aire-sur-la-lys/",
+      "title": "Souvenirs du rallye Cedico / Aire sur la Lys - Histoires du sport automobile - Forum Auto",
+      "description": "A white hatchback rally car emblazoned with the number 130 and vibrant rainbow stripes powers through a dusty gravel turn in a rural, wooded setting. Prominent sponsor logos—Crédit Mutuel on the door and Ferinel toward the rear—stand out against the car’s white paint, while additional decals like FIAT Garage Demol and driver blood types (A+ O. Berth, A+ A. Namke) appear near the front wheel arch.\n\nThe driver, secured by a visible roll cage, navigates the loose surface at speed, kicking up a cloud of dust behind the vehicle. This snapshot, shared on a French automotive forum, captures the raw energy and branding typical of regional rally competitions in the late 20th century.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Autobianchi Y10 Turbo, racing preparation referencing Y10 Turbo · Rally del club (1986). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Souvenirs du rallye Cedico / Aire sur la Lys - Histoires du sport automobile - Forum Auto. Its description: A white hatchback rally car emblazoned with the number 130 and vibrant rainbow stripes powers through a dusty gravel turn in a rural, wooded setting. Prominent sponsor logos—Crédit Mutuel on the door and Ferinel toward the rear—stand out against the car’s white paint, while additional decals like FIAT Garage Demol and driver blood types (A+ O. Berth, A+ A. Namke) appear near the front wheel arch.\n\nThe driver, secured by a visible roll cage, navigates the loose surface at speed, kicking up a cloud of dust behind the vehicle. This snapshot, shared on a French automotive forum, captures the raw energy and branding typical of regional rally competitions in the late 20th century.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Autobianchi Y10 Turbo, tiny three-door wedge hatch, square lights, high black rear hatch panel where visible.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: modest front valance, small arch lips, silver compact rally wheels, mud flaps; retain Y10 black rear hatch. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white, red lower bands and original black tailgate. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "y10",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-26680594-32fa-47eb-969b-64561f3e9a15.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/y10.png",
+  "sourceSha256": "146251be66c4cb858fd76cf15590e25d665b5168f65f0148544e88ee2a24b48f",
+  "input": "tools/race-conversions/inputs/y10.png",
+  "output": "public/images/race-cars/y10.png",
+  "sha256": "ce4be67a8103305cb83b7dc250802ddaebbdc3a6c7049546768e848da4aa2aaa",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/y10/rosso.png",
+      "sha256": "9dce33ca39c17c64e441ed7457e30e33f77742c05b0983479b63ffe1850908ae"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/y10-web-0.img",
+      "sha256": "b4cad352ec635964e0dcdb6fe96e70e4ca25df44657cbb015491daa3102c3781"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

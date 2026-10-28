@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Camaro Z28 Trans-Am",
+  "livery": "blue and yellow American racing graphics",
+  "bodywork": "retain fourth-generation Camaro silhouette, Trans-Am broad arches and low splitter, wide rear wing, deep-dish silver racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/camaro/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/camaro-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.classic.com/vehicles/961cc2744448371ccc195cbee92d400d8c68d91e.jpg?fit=crop&h=676&w=1200",
+      "page": "https://www.classic.com/veh/1995-chevrolet-camaro-scca-trans-am-race-car-WRRMorW/",
+      "title": "1995 Chevrolet Camaro SCCA Trans AM Race Car  - CLASSIC.COM",
+      "description": "This 1995 Chevrolet Camaro SCCA Trans Am race car features a striking red, white, and blue paint scheme with checkered side panels and the racing number 64 prominently displayed on the hood and doors. The Z28 model is equipped with gold mesh wheels, Goodyear tires, and a large rear wing, emphasizing its track-focused design.\n\nListed on Classic.com, the vehicle’s Barrett-Jackson Scottsdale appearance is documented alongside detailed specifications such as left-hand drive configuration, two-door body style, and TMU mileage status. Comparable listings highlight recent asking prices ranging from $15,995 to $30,000, providing market context for collectors and racers alike.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Chevrolet Camaro Z28, racing preparation referencing Camaro Z28 Trans-Am (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1995 Chevrolet Camaro SCCA Trans AM Race Car  - CLASSIC.COM. Its description: This 1995 Chevrolet Camaro SCCA Trans Am race car features a striking red, white, and blue paint scheme with checkered side panels and the racing number 64 prominently displayed on the hood and doors. The Z28 model is equipped with gold mesh wheels, Goodyear tires, and a large rear wing, emphasizing its track-focused design.\n\nListed on Classic.com, the vehicle’s Barrett-Jackson Scottsdale appearance is documented alongside detailed specifications such as left-hand drive configuration, two-door body style, and TMU mileage status. Comparable listings highlight recent asking prices ranging from $15,995 to $30,000, providing market context for collectors and racers alike.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: 1998 fourth-generation Chevrolet Camaro Z28 coupe, long low rounded nose and oval composite headlights.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain fourth-generation Camaro silhouette, Trans-Am broad arches and low splitter, wide rear wing, deep-dish silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue and yellow American racing graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "camaro",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-a40611b6-6a4e-4f32-be77-3e37dcf6a094.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/camaro.png",
+  "sourceSha256": "dccd420d2173890e7921a781a349d5d7cd796bd5883295401bc0676ec84d9f9d",
+  "input": "tools/race-conversions/inputs/camaro.png",
+  "output": "public/images/race-cars/camaro.png",
+  "sha256": "52244556a17cad1a88a99c6a2e42f877b93c8142d7ff41a854c41364c9ea22c7",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/camaro/rosso.png",
+      "sha256": "2150b99b8bb5f211b5a6464f9be1a7e3ee07101a85e49427ac613fbe38f9c2b4"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/camaro-web-0.img",
+      "sha256": "85d8169ad599dfe79cfa99eb86e81d67c58cc562a87e59b6068685cf5b9bebe9"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

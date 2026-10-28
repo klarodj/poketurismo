@@ -1,0 +1,18 @@
+{
+  "key": "e30",
+  "brand": "BMW",
+  "name": "M3 E30",
+  "candidate": "M3 E30 Gruppo A DTM",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/BMW_M3_DTM_%28E30%2C_1991%29_%2852568801086%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:BMW_M3_DTM_(E30,_1991)_(52568801086).jpg",
+      "title": "File:BMW M3 DTM (E30, 1991) (52568801086).jpg",
+      "artist": "Charles  from Port Chester, New York",
+      "license": "CC BY 2.0"
+    }
+  ]
+}

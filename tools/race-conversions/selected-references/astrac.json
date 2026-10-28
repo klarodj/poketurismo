@@ -1,0 +1,17 @@
+{
+  "key": "astrac",
+  "selected": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Opel_Astra_V8_Coupe_%28OPC_Team_Phoenix%2C_DTM_2003%29_rear.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File%3AOpel_Astra_V8_Coupe_%28OPC_Team_Phoenix%2C_DTM_2003%29_rear.jpg",
+      "title": "File:Opel Astra V8 Coupe (OPC Team Phoenix, DTM 2003) rear.jpg - Wikimedia Commons",
+      "score": 11,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/astrac-web-0.img",
+      "width": 1600,
+      "height": 1200
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

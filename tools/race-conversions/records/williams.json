@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Clio Maxi",
+  "livery": "blue and yellow Renault Diac-style racing",
+  "bodywork": "retain first Clio Williams shell, real Maxi wide arches and multi-duct front bumper, roof vent, proper Maxi hatch wing and white/gold racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/williams/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/williams.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Renault Clio Williams",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault Clio Williams, racing preparation referencing Clio Maxi (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Renault Clio Williams. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Precise localized PAINT MATERIAL edit of Renault Clio I Williams THREE-DOOR. Main FRONT BUMPER IS BODY COLOUR, NOT a broad black plastic fascia. Repaint the substantial front bumper main panel surrounding the numberplate, fog lights and intake, its upper fascia and lower apron in the SAME GREEN BODY PAINT shades as the fenders. Leave only genuinely unpainted narrow black rubber rubbing strip, thin lower lip, grille/intake holes, lamp recess interiors and numberplate trim black. Most visible bumper must read painted GREEN, including areas around BOTH square fog lamps and below licence plate. Keep gold Speedline wheels, current three-door shape, headlights, black SIDE rubbing strip and every other detail. Maintain NO REAR SPOILER as explicitly approved correction; DO NOT add a spoiler or large wing from any supporting photo.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain first Clio Williams shell, real Maxi wide arches and multi-duct front bumper, roof vent, proper Maxi hatch wing and white/gold racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue and yellow Renault Diac-style racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "williams",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-272cb299-8bd4-40b5-bc79-149468adb281.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/williams-r1.png",
+  "sourceSha256": "b0c2f4d9cc7434102524ac2ee7072ef4b8ea2de699b62c7fb01e601d91f89d59",
+  "input": "tools/race-conversions/inputs/williams.png",
+  "output": "public/images/race-cars/williams.png",
+  "sha256": "6bb199de9caf4d6186ce32f43dc0c40afa9148b81c29f9eb2d47ceacd2195221",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/williams/rosso.png",
+      "sha256": "1c00e93c21ba03398491d903818f2f18302f6b153c3c9bcefdbc3bb30fe2e8a9"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/williams.png",
+      "sha256": "40b2ede53f32b9bcacd1c4fbdff54d0c05f3a717cc7ae38aa4f8535f75cbb496"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

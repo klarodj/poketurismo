@@ -1,0 +1,17 @@
+{
+  "key": "eg",
+  "selected": [
+    {
+      "url": "https://www.jpusaco.com/cdn/shop/products/EG_Type_A_1_grande.JPG?v=1571438596",
+      "page": "https://www.jpusaco.com/products/honda-civic-92-95-hb-type-a",
+      "title": "Honda Civic hatchback 1992-95 Type A (EG) – JP USA",
+      "score": 6,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/eg-web-0.img",
+      "width": 600,
+      "height": 400
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

@@ -1,0 +1,18 @@
+{
+  "key": "mrs",
+  "brand": "Toyota",
+  "name": "MRs",
+  "candidate": "MR-S JGTC GT300",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://toyotagazooracing.com/archive/ms/jp/gt/image/team/2003/thumb-0334-mr-s.jpg",
+      "page": "https://toyotagazooracing.com/archive/ms/jp/gt/2003-team-driver.html",
+      "title": "JGTC 2003年 チーム＆ドライバー | JGTC | TOYOTA MOTOR SPORTS",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

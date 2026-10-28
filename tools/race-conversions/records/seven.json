@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Super Seven · Academy",
+  "livery": "dark green with yellow nose and stripe",
+  "bodywork": "authentic full roll cage, small cycle front guards, wider rear wings, small silver racing wheels, racing windscreen; open Seven body retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/seven/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/seven-web-3.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.diariomotor.com/imagenes/2025/04/caterham-seven-Academy-01-67f782946bde4.jpeg?class=XL",
+      "page": "https://www.diariomotor.com/noticia/motor-made-in-spain-caterham-seven-academy/",
+      "title": "El coche es más inglés que el té a las 5, pero su motor es Made in Spain, tiene 130 CV y son suficientes porque pesa poco más que una moto",
+      "description": "A lightweight Caterham Seven Academy race car, finished in grey with neon green roll cage and accents, powers through a corner on a paved circuit. The open‑wheel design reveals its suspension and side‑exit exhaust, while Avon tires grip the asphalt. The front grille bears a bold \"7\" and \"QUALCAST\" branding, and the number \"42\" is displayed on the hood.\n\nThis model is part of the Caterham Academy series, an entry‑level UK championship for novice drivers. The 2026 cars are equipped with a 1.3‑liter turbocharged HR13 engine built in Valladolid by Horse, delivering 130 CV to the rear wheels through a six‑speed gearbox. Road‑legal yet track‑ready, each car includes safety features like a roll cage, racing seats with six‑point harnesses, and low‑grip tires to teach car control.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Caterham Super 7, racing preparation referencing Super Seven · Academy (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: El coche es más inglés que el té a las 5, pero su motor es Made in Spain, tiene 130 CV y son suficientes porque pesa poco más que una moto. Its description: A lightweight Caterham Seven Academy race car, finished in grey with neon green roll cage and accents, powers through a corner on a paved circuit. The open‑wheel design reveals its suspension and side‑exit exhaust, while Avon tires grip the asphalt. The front grille bears a bold \"7\" and \"QUALCAST\" branding, and the number \"42\" is displayed on the hood.\n\nThis model is part of the Caterham Academy series, an entry‑level UK championship for novice drivers. The 2026 cars are equipped with a 1.3‑liter turbocharged HR13 engine built in Valladolid by Horse, delivering 130 CV to the rear wheels through a six‑speed gearbox. Road‑legal yet track‑ready, each car includes safety features like a roll cage, racing seats with six‑point harnesses, and low‑grip tires to teach car control.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Caterham Seven open two-seat roadster, exposed front wheels, separate cycle fenders, narrow grille, round lamps, roll bar and side exhaust. No enclosed modern sports-car body.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: authentic full roll cage, small cycle front guards, wider rear wings, small silver racing wheels, racing windscreen; open Seven body retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is dark green with yellow nose and stripe. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "seven",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c9ca2c2f-3d0b-47ac-b2de-a375abe48fbf.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/seven.png",
+  "sourceSha256": "e30aa2b8c69b5ad21163c16a0f4bc9d019f780333a438815c15d2705a90a2a7d",
+  "input": "tools/race-conversions/inputs/seven.png",
+  "output": "public/images/race-cars/seven.png",
+  "sha256": "446f8b405ffe23d850bbe43ccd9736d3e7765315a940a0a9a8b08fa768c8abd0",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/seven/rosso.png",
+      "sha256": "b61abe7e487530d3b7ae7ed01333e7571ca36c2c359952d8142669b58dccc678"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/seven-web-3.img",
+      "sha256": "21dc59aebd924e207faffd3d4299ebc55bd91794557fb33b837ad7784cb33a2c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "key": "fd",
+  "selected": [
+    {
+      "url": "https://automobiles-japonaises.com/Mazda/RX7/1996Mazda_RX7_JGTC_REAmemiya.jpg",
+      "page": "https://automobiles-japonaises.com/Mazda/RX7/RX7_Racing5.php",
+      "title": "AJ - Mazda RX-7 en compétition",
+      "score": 7,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/fd-web-1.img",
+      "width": 800,
+      "height": 599
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "155 GTA Martini Superturismo",
+  "livery": "red with blue and white Martini bands",
+  "bodywork": "actual GTA bumpers and ducts, square arch extensions, side skirts, period large boot wing, white multi-spoke racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/155/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/155-commons-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Alfa_Romeo_155_GTA_S1_%2853257971933%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_155_GTA_S1_(53257971933).jpg",
+      "title": "File:Alfa Romeo 155 GTA S1 (53257971933).jpg",
+      "description": "Alfa Romeo 155 GTA driven as entry #103 by entrant Kuno Schär at Goodwood Festival of Speed 2023. According to his homepage, this is a 1992 155 GTA SE051 chassis ZAR167000-00002485 «Martini-Racing», exAlfa Corse (Telaio No. 006), T-Car Monza 10.92, ex Larini/Nannini.\nOmologazione N: 0007, Gruppe: A-S1 Typähnliches Siegerfahrzeug der iltal. Supertourenwagenmeisterschaft 1992.\nErste vier Plätze im Gesamtklassement.\n17 Siege in 20 Rennen.\n \n1995ccm, 4-Zyl., 16V, Garret-Turbolader T2 mit Intercooler max. 2,5bar, 440 PS bei 6800 U/min, max. Drehmoment 51mkg bei 4500/min, 6-Gang Schaltgetriebe, 4×4 (33/67%), Bremsen Brembo F1, 1050kg, +300km/h, 0-100 km/h: 3,58sek., offiz. Piloten AlfaCorse: Alessandro Nannini, Nicola Larini, Giorgio Francia, Antonio Tamburini, im Besitz der TouringCarCollection kunoschaer. seit 2001.   [1]",
+      "artist": "Neil",
+      "license": "CC BY 2.0"
+    }
+  ],
+  "photoReview": "Real competition car visually checked against approved road model; keep road identity where variants differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Alfa Romeo 155 Q4, racing preparation referencing 155 GTA Martini Superturismo (1992). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL RACING PHOTOGRAPH: File:Alfa Romeo 155 GTA S1 (53257971933).jpg. Its description: Alfa Romeo 155 GTA driven as entry #103 by entrant Kuno Schär at Goodwood Festival of Speed 2023. According to his homepage, this is a 1992 155 GTA SE051 chassis ZAR167000-00002485 «Martini-Racing», exAlfa Corse (Telaio No. 006), T-Car Monza 10.92, ex Larini/Nannini.\nOmologazione N: 0007, Gruppe: A-S1 Typähnliches Siegerfahrzeug der iltal. Supertourenwagenmeisterschaft 1992.\nErste vier Plätze im Gesamtklassement.\n17 Siege in 20 Rennen.\n \n1995ccm, 4-Zyl., 16V, Garret-Turbolader T2 mit Intercooler max. 2,5bar, 440 PS bei 6800 U/min, max. Drehmoment 51mkg bei 4500/min, 6-Gang Schaltgetriebe, 4×4 (33/67%), Bremsen Brembo F1, 1050kg, +300km/h, 0-100 km/h: 3,58sek., offiz. Piloten AlfaCorse: Alessandro Nannini, Nicola Larini, Giorgio Francia, Antonio Tamburini, im Besitz der TouringCarCollection kunoschaer. seit 2001.   [1]. Use the actual period racing hardware and bodywork rather than inventing generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Alfa Romeo 155 Q4 1992 narrow body: redraw from verified stock side and rear photos. Proper sloping C-pillar, short boot deck, substantial rear overhang and tucked lower bumper; smoked RED horizontal rear lamps with no tall orange corner bar. Stock silver round-hole wheels, no spoiler wing. Avoid generic box rear.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual GTA bumpers and ducts, square arch extensions, side skirts, period large boot wing, white multi-spoke racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red with blue and white Martini bands. Keep small sponsor/number panels coherent with the historical racing reference; simplify tiny lettering into clean pixel marks without UI text. Where the real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "155",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8de8c694-b85b-4b25-8909-057c0b6d9998.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/155.png",
+  "sourceSha256": "d234b5700081471bfcf50489dd9d36353dab6a42187326f0cd13efbe8c144296",
+  "input": "tools/race-conversions/inputs/155.png",
+  "output": "public/images/race-cars/155.png",
+  "sha256": "c354dad21593c2a9d769962484e18901cb82e1f7314d8859d7ba31537cc6a304",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/155/rosso.png",
+      "sha256": "d10066aaca3c78f17858be58649d470b865d13829aa7eabb4c2655274d2efd47"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/155-commons-0.img",
+      "sha256": "c184901e343c988d192dc4baece96372930f283371e24b0d3cd5a8fbfc0be60c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

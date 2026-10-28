@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "911 GT1-98 Le Mans",
+  "livery": "white blue and red Mobil-style Porsche racing",
+  "bodywork": "retain the APPROVED 1998 GT1-98 very low mid-engine body and oval front lights, real 1998 Le Mans nose ducts and long rear, high GT1 wing and silver centre-lock racing wheels; NEVER the 1996/1997 993-based version",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/gt1/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/gt1-web-4.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.lemans.org/media/cache/api_news_large/assets/fileuploads/57/4e/574ede3336cbd.jpeg",
+      "page": "https://www.24h-lemans.com/fr/actualites/les-porsche-victorieuses-aux-24-heures-du-mans-8-la-911-gt1-13343",
+      "title": "Les Porsche victorieuses aux 24 Heures du Mans (8) : la 911 GT1 | 24h-lemans.com",
+      "description": "A white Porsche 911 GT1, adorned with Mobil and IBM logos and sporting the number 26, navigates a sweeping corner at the Circuit des 24 Heures du Mans. Its sleek aerodynamic body, large rear wing, and gold wheels highlight the factory GT1 design that achieved a 1–2 finish in the 1998 race.\n\nBlue and yellow kerbs line the edge of the asphalt under a cloudy sky, while the LE MANS.org and ACO emblems reinforce the setting. Photo credit ACO/Nikon captures the car’s dynamic motion and historic livery during one of Porsche’s most celebrated endurance victories.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 911 GT1, racing preparation referencing 911 GT1-98 Le Mans (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Les Porsche victorieuses aux 24 Heures du Mans (8) : la 911 GT1 | 24h-lemans.com. Its description: A white Porsche 911 GT1, adorned with Mobil and IBM logos and sporting the number 26, navigates a sweeping corner at the Circuit des 24 Heures du Mans. Its sleek aerodynamic body, large rear wing, and gold wheels highlight the factory GT1 design that achieved a 1–2 finish in the 1998 race.\n\nBlue and yellow kerbs line the edge of the asphalt under a cloudy sky, while the LE MANS.org and ACO emblems reinforce the setting. Photo credit ACO/Nikon captures the car’s dynamic motion and historic livery during one of Porsche’s most celebrated endurance victories.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: 1998 Porsche 911 GT1 Straßenversion-style very low mid-engine supercar as source, elongated tail, high wing and oval 996-like front lamps; not an ordinary 911.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain the APPROVED 1998 GT1-98 very low mid-engine body and oval front lights, real 1998 Le Mans nose ducts and long rear, high GT1 wing and silver centre-lock racing wheels; NEVER the 1996/1997 993-based version. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Mobil-style Porsche racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "gt1",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-131defbe-e994-496d-a3c2-3dc82a9fef78.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/gt1-r1.png",
+  "sourceSha256": "c9c5fec0671a0d88d734021bf9894604d1c6764da9e33c165431cc293e40d7c2",
+  "input": "tools/race-conversions/inputs/gt1.png",
+  "output": "public/images/race-cars/gt1.png",
+  "sha256": "10600776258144489246f316da06f822dbfc8ed3068dc621d5d91013ddc746c9",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/gt1/rosso.png",
+      "sha256": "d9e3fe6cf0b082485875dc238ffb93a8e4bccebd526ba3a8e6d3e4e5abbaf000"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/gt1-web-4.img",
+      "sha256": "f8a2db0f89cb263b6b7dcd08ef1caa727bf6715928c3c87aaff5c2bd99b0133c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

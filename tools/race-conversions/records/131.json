@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "131 Abarth Rally Gruppo 4",
+  "livery": "white with green and red Alitalia blocks",
+  "bodywork": "real Group 4 box arch extensions, rally front bumper, roof/boot spoiler treatment, silver compact rally wheels, mud flaps and auxiliary lamps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/131/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/131-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn-inveltcollection.arsy.cz/UserFiles/Product/Image/1651134844DSC03696.jpg",
+      "page": "https://www.inveltcollection.com/fiat-131-abarth-gr-4/p-50/",
+      "title": "Fiat 131 Abarth Gr.4 | invelt Rallied & Raced",
+      "description": "This Fiat 131 Abarth Group 4 rally car was prepared by Abarth for the Jolly Club and campaigned by Maurizio Verini in the Italian and European Rally Championships. Its yellow and gray livery features sponsor logos such as Olio Fiat, Pirelli, Ferodo, and Magneti Marelli, while the wide fender flares, rear spoiler, and racing wheels underscore its competition modifications.\n\nInside, the stripped cabin reveals a full roll cage and racing seats, emphasizing its purpose-built nature. The name “M. Verini” on the door pays homage to the driver who piloted this iconic Group 4 machine on gravel and tarmac stages across Europe.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Fiat 131 Abarth, racing preparation referencing 131 Abarth Rally Gruppo 4 (1977). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Fiat 131 Abarth Gr.4 | invelt Rallied & Raced. Its description: This Fiat 131 Abarth Group 4 rally car was prepared by Abarth for the Jolly Club and campaigned by Maurizio Verini in the Italian and European Rally Championships. Its yellow and gray livery features sponsor logos such as Olio Fiat, Pirelli, Ferodo, and Magneti Marelli, while the wide fender flares, rear spoiler, and racing wheels underscore its competition modifications.\n\nInside, the stripped cabin reveals a full roll cage and racing seats, emphasizing its purpose-built nature. The name “M. Verini” on the door pays homage to the driver who piloted this iconic Group 4 machine on gravel and tarmac stages across Europe.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Fiat 131 Abarth two-door boxy saloon, wide squared fender flares, four circular headlights, preserve road reference not rally livery.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Group 4 box arch extensions, rally front bumper, roof/boot spoiler treatment, silver compact rally wheels, mud flaps and auxiliary lamps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with green and red Alitalia blocks. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "131",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-71f249ca-5f82-4b0c-a31b-4be9cfc17de1.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/131.png",
+  "sourceSha256": "5d287cb763f40994de0f3a72ff96686a73b6299496d867f3fe6ba9a4df96297d",
+  "input": "tools/race-conversions/inputs/131.png",
+  "output": "public/images/race-cars/131.png",
+  "sha256": "feb80b8d748c0bfe714b3862aaf4baaea30f129538892cfd16fead35fd41efb7",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/131/rosso.png",
+      "sha256": "3b76f5dbcbafae173d3559c19c15aac34fa8ebc71d3adb2c73d0a965a99eef38"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/131-web-0.img",
+      "sha256": "a54f818f70c02e18f8e959e5ee5b20f62596c08c6a0b74bd8167c061974ff8a7"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

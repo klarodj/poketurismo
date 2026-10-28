@@ -1,0 +1,18 @@
+{
+  "key": "mondeo",
+  "brand": "Ford",
+  "name": "Mondeo ST200",
+  "candidate": "Mondeo Superturismo BTCC",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/1994_Ford_Mondeo_BTCC_Touring_Car_%2824479510609%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:1994_Ford_Mondeo_BTCC_Touring_Car_(24479510609).jpg",
+      "title": "File:1994 Ford Mondeo BTCC Touring Car (24479510609).jpg",
+      "artist": "Riley  from Christchurch, New Zealand",
+      "license": "CC BY 2.0"
+    }
+  ]
+}

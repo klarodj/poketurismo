@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "323 Lantis · Turismo",
+  "livery": "white with green and red Mazda racing bands",
+  "bodywork": "retain approved LANTIS body and doors exactly, low touring bumper, modest wide arches, roof/boot spoiler suited to actual shell, white race wheels; no invented body conversion",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/lantis/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/lantis-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.nosweb.jp/articles/1000/1895/OG/8c15dfab9c5d53d1e9aa3866cfe2ff2a.jpg",
+      "page": "https://nosweb.jp/nostalgichero/articles/detail/1895",
+      "title": "JTCCではランティスからファミリアへ、BTCCでは323Fからクセドス6へ｜1994年式 マツダ ランティス クーペ タイプX　Vol.4｜ハチマルレースモデルの超絶技巧 | Nostalgic Hero | 芸文総合WEB｜日本の旧車Webマガジン[ノスウェブドットジェイピー]",
+      "description": "A white Mazda Lantis Coupe Type X, decked out in Castrol and Sapio sponsorship colors, races around a damp circuit. The green and red stripes run along the hood and sides, while the number 6 and driver name “Y. Terada” are prominently displayed on the door and window. The car’s aerodynamic front splitter and rear wing hint at its touring car setup.\n\nThis photograph captures the Lantis in action during the 1994 Japanese Touring Car Championship (JTCC). The wet track surface and blurred background emphasize the car’s speed and handling. The Castrol‑branded livery and Michelin tires reflect the era’s motorsport partnerships, showcasing Mazda’s effort to compete with its V6‑powered Lantis against four‑cylinder rivals.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mazda 323 Lantis, racing preparation referencing 323 Lantis · Turismo (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: JTCCではランティスからファミリアへ、BTCCでは323Fからクセドス6へ｜1994年式 マツダ ランティス クーペ タイプX　Vol.4｜ハチマルレースモデルの超絶技巧 | Nostalgic Hero | 芸文総合WEB｜日本の旧車Webマガジン[ノスウェブドットジェイピー]. Its description: A white Mazda Lantis Coupe Type X, decked out in Castrol and Sapio sponsorship colors, races around a damp circuit. The green and red stripes run along the hood and sides, while the number 6 and driver name “Y. Terada” are prominently displayed on the door and window. The car’s aerodynamic front splitter and rear wing hint at its touring car setup.\n\nThis photograph captures the Lantis in action during the 1994 Japanese Touring Car Championship (JTCC). The wet track surface and blurred background emphasize the car’s speed and handling. The Castrol‑branded livery and Michelin tires reflect the era’s motorsport partnerships, showcasing Mazda’s effort to compete with its V6‑powered Lantis against four‑cylinder rivals.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mazda 323 Lantis five-door fastback coupe body as reference, sweeping tall roof and small oval headlamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved LANTIS body and doors exactly, low touring bumper, modest wide arches, roof/boot spoiler suited to actual shell, white race wheels; no invented body conversion. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with green and red Mazda racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "lantis",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-04283c62-6fc5-4474-a4e7-fd12ab97de5f.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/lantis.png",
+  "sourceSha256": "30feb209308d213b7dcbc66663b2becdf9ec2f20564208f7505b68d808ee9cf3",
+  "input": "tools/race-conversions/inputs/lantis.png",
+  "output": "public/images/race-cars/lantis.png",
+  "sha256": "453f720fb5bb71f0b24e54ca45ab001e0f42209919a09bcd3f02e589b760b7af",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/lantis/rosso.png",
+      "sha256": "7acfca83f311c841f517b5e809424bcfd00b5a7531fb15f7c7a16208c8ae8d4c"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/lantis-web-0.img",
+      "sha256": "16f63c6988eb69ae8a575eafc4fbc967aeacd7deea456cd44ca784fa55daabe0"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

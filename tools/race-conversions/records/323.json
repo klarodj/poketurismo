@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "323 GT-R Gruppo A",
+  "livery": "white with green and red Mazda racing bands",
+  "bodywork": "retain BG 323 GT-R hatch, real rally cooling bumper and bonnet vents, mild arch flares, low roof spoiler, white wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/323/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/323-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.automobile-sportive.com/guide/mazda/323gtr/mazda-323-gtr-arriere.jpg",
+      "page": "https://www.automobile-sportive.com/guide/mazda/323gtr.php",
+      "title": "MAZDA 323 GT-R (1992-1994) - GUIDE OCCASION",
+      "description": "A white three-door Mazda 323 GT-R is positioned on a quiet, leaf-strewn country road, showcasing its rear hatch, integrated spoiler, and distinctive continuous red taillight bar. The ten-spoke alloy wheels and subtle body decals hint at its rally-bred all-wheel-drive system and turbocharged engine. Bare trees and fallen leaves frame the scene, indicating a late autumn setting.\n\nThis model, produced between 1992 and 1994, was homologated for Group A rallying with just 2,200 units built worldwide. Under the hood sits a 1.8‑liter turbocharged four-cylinder engine driving all four wheels via a viscous-coupled permanent AWD system. Known for its 185 horsepower (210 PS in Japan) and balanced 57/43 rear-biased torque split, the 323 GT-R delivers spirited performance and handling. Today, it remains a sought-after youngtimer, valued for its motorsport pedigree, mechanical simplicity, and relative affordability compared to other homologation specials.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mazda 323 GT-r, racing preparation referencing 323 GT-R Gruppo A (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: MAZDA 323 GT-R (1992-1994) - GUIDE OCCASION. Its description: A white three-door Mazda 323 GT-R is positioned on a quiet, leaf-strewn country road, showcasing its rear hatch, integrated spoiler, and distinctive continuous red taillight bar. The ten-spoke alloy wheels and subtle body decals hint at its rally-bred all-wheel-drive system and turbocharged engine. Bare trees and fallen leaves frame the scene, indicating a late autumn setting.\n\nThis model, produced between 1992 and 1994, was homologated for Group A rallying with just 2,200 units built worldwide. Under the hood sits a 1.8‑liter turbocharged four-cylinder engine driving all four wheels via a viscous-coupled permanent AWD system. Known for its 185 horsepower (210 PS in Japan) and balanced 57/43 rear-biased torque split, the 323 GT-R delivers spirited performance and handling. Today, it remains a sought-after youngtimer, valued for its motorsport pedigree, mechanical simplicity, and relative. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mazda 323 GT-R BG three-door hatch, square lamps, bonnet vents and deep bumper with round fog lamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain BG 323 GT-R hatch, real rally cooling bumper and bonnet vents, mild arch flares, low roof spoiler, white wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with green and red Mazda racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "323",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8b1c4432-4969-4208-8013-560f176e4b65.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/323.png",
+  "sourceSha256": "cd9b15c3d8c00bb7c1f25fe31ff7d3e8664f1db14ba5a3551fc1f7172f703f10",
+  "input": "tools/race-conversions/inputs/323.png",
+  "output": "public/images/race-cars/323.png",
+  "sha256": "1414ca63c5438f7e761266d3b6eff5cbcff4eb259263c17c5a723e6c10360cf4",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/323/rosso.png",
+      "sha256": "d751c467b1c2e5e3cfea5e1664b717cbee718b4655e03b9fe93313f77bb2692d"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/323-web-0.img",
+      "sha256": "7189bc29c41f6defba351942366d83c209fcfa5bd0b80a83d3a866050ccd2d54"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

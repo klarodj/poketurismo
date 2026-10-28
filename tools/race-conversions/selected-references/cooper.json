@@ -1,0 +1,17 @@
+{
+  "key": "cooper",
+  "selected": [
+    {
+      "url": "https://racecarsdirect.com/content/UserImages/94603/517380.jpg?v=0",
+      "page": "https://racecarsdirect.com/Advert/Details/94603/1966-morris-mini-cooper-s-fia",
+      "title": "Racecarsdirect.com  - 1966 Morris Mini Cooper S FIA",
+      "score": 9,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/cooper-web-0.img",
+      "width": 1140,
+      "height": 855
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

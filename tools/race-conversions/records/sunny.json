@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Sunny GTi-R Gruppo A",
+  "livery": "white blue and red Nissan Motorsport Europe",
+  "bodywork": "real N14 GTi-R rally front bumper and bonnet vents, modest arch extensions, roof wing, white rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/sunny/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/sunny-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.goodwood.com/globalassets/.road--racing/road/news/2020/8-august/list-best-homolgation-hot-hatches/best-homologation-hot-hatches-4-nissan-sunny-gti-r-goodwood-25082020.jpg?rxy=0.5%2C0.5",
+      "page": "https://www.goodwood.com/grr/road/news/the-seven-best-homologation-hot-hatches/",
+      "title": "The seven best homologation hot hatches (List) | GRR",
+      "description": "A striking red Nissan Sunny GTi‑R, complete with a prominent rear wing and bonnet scoop, cruises along a highway. The front license plate reads “NE ZZ 220,” and two occupants are visible through the windshield, emphasizing its road‑legal rally pedigree. The Sunny GTi‑R’s turbocharged 2.0‑liter engine and all‑wheel‑drive system were developed to meet Group A rally regulations, making it a rare and powerful homologation special.\n\nFeatured in Goodwood’s August 2020 roundup of the seven best homologation hot hatches, this model exemplifies the era when manufacturers built road cars to satisfy motorsport rules. Alongside icons like the Lancia Delta HF 4WD and Ford Escort RS Cosworth, the Sunny GTi‑R combined everyday usability with competition‑ready performance, earning its place in rally history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Nissan Sunny GTi-R, racing preparation referencing Sunny GTi-R Gruppo A (1992). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: The seven best homologation hot hatches (List) | GRR. Its description: A striking red Nissan Sunny GTi‑R, complete with a prominent rear wing and bonnet scoop, cruises along a highway. The front license plate reads “NE ZZ 220,” and two occupants are visible through the windshield, emphasizing its road‑legal rally pedigree. The Sunny GTi‑R’s turbocharged 2.0‑liter engine and all‑wheel‑drive system were developed to meet Group A rally regulations, making it a rare and powerful homologation special.\n\nFeatured in Goodwood’s August 2020 roundup of the seven best homologation hot hatches, this model exemplifies the era when manufacturers built road cars to satisfy motorsport rules. Alongside icons like the Lancia Delta HF 4WD and Ford Escort RS Cosworth, the Sunny GTi‑R combined everyday usability with competition‑ready performance, earning its place in rally history.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Nissan Sunny/Pulsar GTI-R N14 three-door hatch, large bonnet scoop and roof spoiler, NOT sedan.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real N14 GTi-R rally front bumper and bonnet vents, modest arch extensions, roof wing, white rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Nissan Motorsport Europe. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "sunny",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-66d65efa-96b2-4e22-90f2-ac23ae859c77.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/sunny.png",
+  "sourceSha256": "991cbceb7a4030006aaa7709e825662e418863d3a9cc12b6b0d8a42420693fd2",
+  "input": "tools/race-conversions/inputs/sunny.png",
+  "output": "public/images/race-cars/sunny.png",
+  "sha256": "ac42fd4a84716166c48dbd28288c61f8e01988b1b616fb1de049091bc931f89c",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/sunny/rosso.png",
+      "sha256": "01a851909c700a43dce09b3cd261223846fbd8bb286ffc3e6054ddc6d696e051"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/sunny-web-1.img",
+      "sha256": "09a3288ed77a5acb967c60e775669e7d33b267ad40b6c0b40e05745d4e0b455f"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -46,14 +46,20 @@
           "logo": "Alfa_Romeo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "145 Quadrifoglio Gruppo N",
+      "referenceYear": 1997,
+      "liveryDirection": "white, Alfa red lower stripe",
+      "bodywork": "period deep front valance, small roof spoiler, modest arch lips, white 15-inch rally wheels, red tow loops",
+      "identityNotes": "Correct the REAR QUARTER of Alfa Romeo 145 Quadrifoglio THREE-DOOR, not a 146. Match the authentic blunt tall upright truncated tail, distinctive sharp rear side-window/C-pillar geometry and real low corner lamps in rear references. Remove the generic sloped hatch tail of the edit target. Keep the approved front, long single door, wheels, wheelbase, body kit and overall stock proportions. Rear lights are SLIM HORIZONTAL red rectangles below rear glass, not vertical pillar lights. Rear glass and black surround sit above a broad painted waist; tall chopped tail with no boot extension or diagonal pointed overhang. Modest factory roof lip only."
     },
     {
       "key": "155",
@@ -99,7 +105,7 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "verified",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": "155 GTA Martini · Superturismo",
       "historicalYear": 1992,
       "historicalSources": [
@@ -115,7 +121,13 @@
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "notes": "Riferimento GTA 1992 derivato dalla Q4, non confondere con la successiva V6 TI DTM. La conversione del gioco mantiene motore e trazione della propria vettura."
+      "notes": "Riferimento GTA 1992 derivato dalla Q4, non confondere con la successiva V6 TI DTM. La conversione del gioco mantiene motore e trazione della propria vettura.",
+      "classification": "historic",
+      "candidate": "155 GTA Martini Superturismo",
+      "referenceYear": 1992,
+      "liveryDirection": "red with blue and white Martini bands",
+      "bodywork": "actual GTA bumpers and ducts, square arch extensions, side skirts, period large boot wing, white multi-spoke racing wheels",
+      "identityNotes": "Alfa Romeo 155 Q4 1992 narrow body: redraw from verified stock side and rear photos. Proper sloping C-pillar, short boot deck, substantial rear overhang and tucked lower bumper; smoked RED horizontal rear lamps with no tall orange corner bar. Stock silver round-hole wheels, no spoiler wing. Avoid generic box rear."
     },
     {
       "key": "33",
@@ -160,14 +172,20 @@
           "logo": "Alfa_Romeo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "33 1.7 16V Gruppo N",
+      "referenceYear": 1991,
+      "liveryDirection": "white with red Alfa racing bands",
+      "bodywork": "light rally front apron, subtle arches, low hatch spoiler, white multi-spoke rally wheels, cage",
+      "identityNotes": "Alfa Romeo 33 series 907 facelift five-door hatchback, original white photo is exact variant. Make rear tail visibly SHORTER and more abruptly TRUNCATED; compact Kamm hatch tail behind steeply raked rear glass, not a long three-box sedan boot. Preserve four side doors, angular front, small rear lip from identity photo (do not add oversized wing from rear reference). Rear reference is for body and horizontal corner lamps."
     },
     {
       "key": "75",
@@ -212,14 +230,20 @@
           "logo": "Alfa_Romeo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "75 Turbo Evoluzione Gruppo A",
+      "referenceYear": 1987,
+      "liveryDirection": "red and white Alfa Corse",
+      "bodywork": "boxy flared arch kit, deep front bumper, broad side skirts, restrained boot spoiler, silver centre-lock style mesh wheels; black beltline retained",
+      "identityNotes": "Correct Alfa Romeo 75 Quadrifoglio FOUR-DOOR. Restore its distinctive thick DARK CHARCOAL/BLACK BELT-LINE STRIP running the FULL SIDE just below side-window sill from front wing through both doors to rear quarter, rising in a sharp dogleg on the C-pillar/rear quarter and wrapping across the boot trailing edge, as real photo. The strip is unpainted trim, NEVER green and NEVER recoloured. It is separate from black bumper rub strips. Redesign rear silhouette from authentic photo: angular wedge saloon with sharply slanted rear glass, short high horizontal boot deck, clipped vertical tail, integrated black trailing trim and low broad red/amber rear corner lamp band, not generic 155 tail. Keep original front, four doors, period silver wheels and no racing wing."
     },
     {
       "key": "gtv",
@@ -264,14 +288,20 @@
           "logo": "Alfa_Romeo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "GTV Cup",
+      "referenceYear": 1996,
+      "liveryDirection": "red with white Alfa Corse graphics",
+      "bodywork": "real GTV Cup front splitter and skirts, low rear wing, modest flares, silver racing wheels",
+      "identityNotes": "Alfa GTV type 916 coupe, paired small round lamps under bonnet cutouts, wedge body, diagonal side crease."
     },
     {
       "key": "vantage",
@@ -316,14 +346,20 @@
           "logo": "Aston_Martin.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Vantage V8 · GT del club",
+      "referenceYear": 1995,
+      "liveryDirection": "British dark green with cream racing stripe",
+      "bodywork": "1990s GT front splitter, subtle wide arches, side skirts, period rear racing wing, silver multi-spoke wheels; Virage-era shape",
+      "identityNotes": "1990s Virage-based V8 Vantage coupe in the photo, long bonnet and square lamps; NOT modern Vantage."
     },
     {
       "key": "80",
@@ -368,14 +404,20 @@
           "logo": "Audi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "RS2 Avant · Turismo del club",
+      "referenceYear": 1994,
+      "liveryDirection": "silver with red and grey Audi Sport blocks",
+      "bodywork": "keep full B4 AVANT wagon and rear compartment, touring bumper intakes, mild box flares, low tailgate wing, white racing wheels",
+      "identityNotes": "Audi RS2 B4 AVANT station wagon, five doors, roof rails and long square luggage compartment; never a saloon."
     },
     {
       "key": "s2",
@@ -420,14 +462,20 @@
           "logo": "Audi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Coupé S2 · Gruppo N",
+      "referenceYear": 1992,
+      "liveryDirection": "white with red and grey Audi Sport",
+      "bodywork": "period rally front bumper, restrained arch extensions, factory-derived hatch wing, white rally wheels; real two-door coupe retained",
+      "identityNotes": "Audi S2 B3/B4 two-door coupe, rectangular lamps and raised rear spoiler."
     },
     {
       "key": "rs4",
@@ -472,14 +520,20 @@
           "logo": "Audi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "RS4 Avant · Turismo del club",
+      "referenceYear": 2001,
+      "liveryDirection": "silver with red Audi Sport panels",
+      "bodywork": "B5 AVANT wagon retained, deep cooling bumper, side skirts and wider arch lips, small roof spoiler, silver 18-inch racing wheels",
+      "identityNotes": "Audi RS4 B5 AVANT station wagon with flared arches and roof rails, never a sedan or modern RS4."
     },
     {
       "key": "s3",
@@ -524,14 +578,20 @@
           "logo": "Audi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "S3 8L · Coppa del club",
+      "referenceYear": 2000,
+      "liveryDirection": "white with red and grey diagonal Audi Sport bands",
+      "bodywork": "8L three-door hatch, wider arch lips, front splitter, modest roof wing, period white multi-spoke wheels",
+      "identityNotes": "Audi S3 8L first generation, three-door rounded hatchback, not the later generations."
     },
     {
       "key": "s6",
@@ -576,14 +636,20 @@
           "logo": "Audi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "S6 C5 · Turismo del club",
+      "referenceYear": 1999,
+      "liveryDirection": "silver and red geometric Audi Sport panels",
+      "bodywork": "retain C5 four-door saloon, extended front apron, tidy wide arches, side skirts, boot wing and silver racing wheels",
+      "identityNotes": "Audi S6 C5 four-door saloon shown, rounded long body, rectangular lamp clusters."
     },
     {
       "key": "tt",
@@ -628,14 +694,20 @@
           "logo": "Audi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "TT-R DTM Abt",
+      "referenceYear": 2002,
+      "liveryDirection": "yellow, white and black Abt racing scheme",
+      "bodywork": "actual 8N TT-R wide fenders, low multi-duct bumper, skirts, tall flat rear wing, white racing wheels; no modern TT",
+      "identityNotes": "First-generation Audi TT 8N closed coupe, circular roof arch and compact rounded body."
     },
     {
       "key": "a112",
@@ -680,14 +752,20 @@
           "logo": "Autobianchi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "A112 Abarth Trofeo",
+      "referenceYear": 1977,
+      "liveryDirection": "red and black with white racing roundel",
+      "bodywork": "small square arch extensions, period rally apron, black bonnet, silver 13-inch rally wheels, mud flaps; no GT wing",
+      "identityNotes": "Autobianchi A112 Abarth, tiny three-door upright hatch, two round headlights, period black trims/bonnet if visible."
     },
     {
       "key": "y10",
@@ -732,14 +810,20 @@
           "logo": "Autobianchi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Y10 Turbo · Rally del club",
+      "referenceYear": 1986,
+      "liveryDirection": "white, red lower bands and original black tailgate",
+      "bodywork": "modest front valance, small arch lips, silver compact rally wheels, mud flaps; retain Y10 black rear hatch",
+      "identityNotes": "Autobianchi Y10 Turbo, tiny three-door wedge hatch, square lights, high black rear hatch panel where visible."
     },
     {
       "key": "850",
@@ -784,14 +868,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "850 CSi · GT del club",
+      "referenceYear": 1994,
+      "liveryDirection": "white with BMW Motorsport tricolour",
+      "bodywork": "E31 wedge retained, deeper front bumper, tasteful wide arches, skirts, flat period rear wing, silver mesh racing wheels",
+      "identityNotes": "BMW 850 CSi E31 coupe, long wedge bonnet with pop-up headlamps in the position of the reference, pillarless side."
     },
     {
       "key": "m1",
@@ -836,14 +926,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "M1 Procar",
+      "referenceYear": 1979,
+      "liveryDirection": "white with BMW Motorsport blue purple red bands",
+      "bodywork": "real Procar wide arches, deep front air dam, side skirts, tall rear racing wing and gold mesh centre-lock wheels",
+      "identityNotes": "BMW M1 low wedge mid-engine coupe, pop-up lamps and small kidney grille, black waist trim."
     },
     {
       "key": "e30",
@@ -889,7 +985,7 @@
         }
       },
       "profile": "touring",
-      "researchStatus": "verified",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": "M3 E30 Gruppo A / DTM",
       "historicalYear": 1987,
       "historicalSources": [
@@ -906,7 +1002,13 @@
       "artwork": null,
       "artRevision": 0,
       "historicalPeriod": "1987–1992",
-      "notes": "Livrea e dettagli da turismo storico; non vengono importati motore, potenza o tempi della vera DTM."
+      "notes": "Livrea e dettagli da turismo storico; non vengono importati motore, potenza o tempi della vera DTM.",
+      "classification": "historic",
+      "candidate": "M3 E30 Gruppo A DTM",
+      "referenceYear": 1990,
+      "liveryDirection": "white BMW Motorsport, Original BMW Teile style",
+      "bodywork": "real E30 DTM square wide fenders, deep front splitter, side skirts, braced boot wing, gold mesh racing wheels",
+      "identityNotes": ""
     },
     {
       "key": "e36",
@@ -951,14 +1053,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "M3 E36 GTR ADAC GT",
+      "referenceYear": 1993,
+      "liveryDirection": "white with BMW Motorsport geometric tricolour",
+      "bodywork": "real E36 COUPE GTR broad arch extensions, multi-duct front bumper, skirts, large rear wing, gold mesh wheels; never STW four-door saloon",
+      "identityNotes": "BMW M3 E36 two-door coupe, rectangular twin lamps, compact kidneys, period M front apron."
     },
     {
       "key": "e46",
@@ -1003,14 +1111,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "M3 E46 GTR ALMS",
+      "referenceYear": 2001,
+      "liveryDirection": "white and blue BMW Motorsport",
+      "bodywork": "real 2001 GTR vented bonnet, wide arches and cooling ducts, deep bumper splitter, fixed tall rear wing and silver racing wheels",
+      "identityNotes": "BMW M3 E46 coupe, hood bulge and widened arches; not modern M3."
     },
     {
       "key": "e34",
@@ -1055,14 +1169,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "M5 E34 · Turismo del club",
+      "referenceYear": 1992,
+      "liveryDirection": "white and BMW Motorsport tricolour",
+      "bodywork": "E34 four-door shell retained, touring front air dam, mild squared flares, skirts, medium boot wing and silver mesh wheels",
+      "identityNotes": "BMW M5 E34 four-door saloon, four round headlights, boxy long boot."
     },
     {
       "key": "e39",
@@ -1107,14 +1227,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "M5 E39 · Turismo del club",
+      "referenceYear": 2000,
+      "liveryDirection": "white with blue red BMW Motorsport bands",
+      "bodywork": "E39 four-door saloon retained, period touring wide arches, low splitter, skirts, boot wing, silver 18-inch racing wheels",
+      "identityNotes": "BMW M5 E39 four-door saloon, paired headlights under clear rectangular covers, period mesh wheels."
     },
     {
       "key": "m635",
@@ -1159,14 +1285,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "635 CSi Gruppo A",
+      "referenceYear": 1985,
+      "liveryDirection": "white BMW Motorsport tricolour",
+      "bodywork": "retain E24 sharknose, real Group A front air dam, restrained flares, black boot spoiler and gold mesh racing wheels",
+      "identityNotes": "BMW M635 CSi E24 sharknose two-door coupe, four round headlights, slim chrome trim and long bonnet."
     },
     {
       "key": "z3m",
@@ -1211,14 +1343,20 @@
           "logo": "BMW.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "M Coupé · Endurance",
+      "referenceYear": 2000,
+      "liveryDirection": "silver with BMW Motorsport stripes",
+      "bodywork": "M COUPE shooting-brake hard roof retained, GT front splitter, wider rear arches, side skirts, substantial hatch wing, silver racing wheels",
+      "identityNotes": "IMPORTANT: BMW Z3 M COUPE shooting-brake hard-roof body as reference, NOT the roadster."
     },
     {
       "key": "continental",
@@ -1263,14 +1401,20 @@
           "logo": "Bentley.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Continental R · GT del club",
+      "referenceYear": 1997,
+      "liveryDirection": "British racing green with cream roundel",
+      "bodywork": "retain long 1990s two-door coupe, GT front air dam, proportionate wide arch lips, side skirts, period boot wing, silver multi-spoke racing wheels",
+      "identityNotes": "Bentley Continental R 1990s large two-door coupe, four circular headlights and tall rectangular mesh grille."
     },
     {
       "key": "eb110",
@@ -1315,14 +1459,20 @@
           "logo": "Bugatti.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "EB110 LM",
+      "referenceYear": 1994,
+      "liveryDirection": "French racing blue with white racing panels",
+      "bodywork": "real Le Mans EB110 body ducts, widened arches, fixed rear wing, vented engine cover, silver competition wheels; EB110 horseshoe and roof preserved",
+      "identityNotes": "Bugatti EB110 low angular coupe, small horseshoe grille, five-hole wheels, rear wing as shown."
     },
     {
       "key": "seven",
@@ -1367,14 +1517,20 @@
           "logo": "Caterham.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Super Seven · Academy",
+      "referenceYear": 1995,
+      "liveryDirection": "dark green with yellow nose and stripe",
+      "bodywork": "authentic full roll cage, small cycle front guards, wider rear wings, small silver racing wheels, racing windscreen; open Seven body retained",
+      "identityNotes": "Caterham Seven open two-seat roadster, exposed front wheels, separate cycle fenders, narrow grille, round lamps, roll bar and side exhaust. No enclosed modern sports-car body."
     },
     {
       "key": "camaro",
@@ -1419,14 +1575,20 @@
           "logo": "Chevrolet.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Camaro Z28 Trans-Am",
+      "referenceYear": 1996,
+      "liveryDirection": "blue and yellow American racing graphics",
+      "bodywork": "retain fourth-generation Camaro silhouette, Trans-Am broad arches and low splitter, wide rear wing, deep-dish silver racing wheels",
+      "identityNotes": "1998 fourth-generation Chevrolet Camaro Z28 coupe, long low rounded nose and oval composite headlights."
     },
     {
       "key": "c4",
@@ -1471,14 +1633,20 @@
           "logo": "Chevrolet.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Corvette Challenge C4",
+      "referenceYear": 1989,
+      "liveryDirection": "white and blue Chevrolet racing",
+      "bodywork": "C4 ZR1 shape retained, period low front splitter, modest side skirts, flared rear lips, low rear wing, silver mesh wheels; no C5 body",
+      "identityNotes": "Chevrolet Corvette C4 ZR-1, angular wedge coupe, pop-up headlights in reference position, wraparound glass."
     },
     {
       "key": "c5",
@@ -1523,14 +1691,20 @@
           "logo": "Chevrolet.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Corvette C5-R",
+      "referenceYear": 2001,
+      "liveryDirection": "yellow and black Corvette Racing",
+      "bodywork": "actual C5-R broad fenders, ducted front bumper and splitter, vented bonnet, tall rear wing, silver centre-lock racing wheels",
+      "identityNotes": "Chevrolet Corvette C5 Z06 fixed-roof coupe, low smooth nose with pop-up lids, broad arches; bumper nose is painted, not a plate."
     },
     {
       "key": "ax",
@@ -1575,14 +1749,20 @@
           "logo": "Citroen.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "AX GTi Gruppo A",
+      "referenceYear": 1992,
+      "liveryDirection": "white with red and blue Citroën Sport",
+      "bodywork": "preserve approved AX glass and lights, period rally bumper, modest squared arch lips, white 14-inch rally wheels, mud flaps",
+      "identityNotes": "Citroen AX GTi three-door. Correct rear lamps: short vertical trapezoid clusters strictly BELOW the rear glass at outer tailgate corners, top red, thin amber mid-band, red lower section. They do NOT climb the roof pillar and must not become a tall amber stripe alongside glass. Black bumpers and black wheel arch trim as original photo, small roof lip only."
     },
     {
       "key": "saxo",
@@ -1627,14 +1807,20 @@
           "logo": "Citroen.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Saxo VTS Kit Car",
+      "referenceYear": 1997,
+      "liveryDirection": "white with blue and red Citroën Sport",
+      "bodywork": "actual Kit Car wide arch kit, deeper vented bumper, roof vent, restrained hatch spoiler, white rally wheels",
+      "identityNotes": "Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips."
     },
     {
       "key": "visa",
@@ -1679,14 +1865,20 @@
           "logo": "Citroen.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Visa 1000 Pistes",
+      "referenceYear": 1984,
+      "liveryDirection": "white with red and blue Citroën bands",
+      "bodywork": "authentic square rally arch extensions and front apron, auxiliary rally lamps, white compact wheels and red mud flaps; no modern GT body",
+      "identityNotes": "Citroen Visa GTi five-door hatch, four yellowish round lamps in black grille, dark plastic lower bumpers."
     },
     {
       "key": "xsara",
@@ -1731,14 +1923,20 @@
           "logo": "Citroen.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Xsara Kit Car",
+      "referenceYear": 1999,
+      "liveryDirection": "white red and blue Citroën Sport",
+      "bodywork": "real F2 Kit Car wide arches, deep front intakes, roof vent and roof spoiler, white racing wheels; not later C4",
+      "identityNotes": "First-generation Citroen Xsara VTS three-door coupe hatch, pre-facelift lamps as reference."
     },
     {
       "key": "zx",
@@ -1783,14 +1981,20 @@
           "logo": "Citroen.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "ZX 2.0 · Gruppo A",
+      "referenceYear": 1993,
+      "liveryDirection": "white with red and blue Citroën racing bands",
+      "bodywork": "retain approved ZX hatch and rear lights, touring bumper and splitter, restrained wide arches, modest roof spoiler, silver multi-spoke wheels; not rally-raid prototype",
+      "identityNotes": "Correct ONLY REAR LAMP ANATOMY of Citroen ZX 2.0 THREE-DOOR. Actual ZX clusters are SHORT BROAD almost-square rectangular red/amber smoked units placed LOW at tailgate outer corners BELOW THE BASE OF THE REAR GLASS, directly above bumper. They do not climb the C-pillar at all. Remove long vertical amber/red strip from the rear glass pillar; upper C-pillar is solid body paint with black glass surround. Low outer cluster red lower area with slim amber/grey upper band. Keep existing three-door shape, rounded rear hatch, front bumper, rectangular headlights, five-spoke silver wheels and black side trim. Real supporting image may show five-door ZX: borrow ONLY rear-lamp layout, NEVER its rear doors."
     },
     {
       "key": "charade",
@@ -1835,14 +2039,20 @@
           "logo": "Daihatsu.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Charade GTti Gruppo A",
+      "referenceYear": 1988,
+      "liveryDirection": "white red and black Daihatsu racing",
+      "bodywork": "compact rally front valance, subtle squared upper rear arch rather than round, white 14-inch rally wheels and mud flaps; no oversized wing",
+      "identityNotes": "Precise localized geometry edit of Daihatsu Charade G100 GTti rear WHEEL-ARCH OPENING. It is STILL TOO ROUND. Use the clean SIDE-ON photograph to draw the G100 distinctive FLAT-TOPPED SQUARED arch: a straight nearly HORIZONTAL upper edge spans most of tyre width, short angular shoulders transition into close-to-VERTICAL sides. The body panel overlaps/covers the upper tyre substantially. Front arch stays normally round; rear arch must be obviously visibly LESS ROUND and more squared than front. Keep the tyre and silver wheel CIRCULAR and unchanged in size, centre, stance; flatten the BODY OPENING only, not the tyre. Do not merely add an angular highlight above a circular opening. Keep already corrected low horizontal rear lights (no pillar lamps), all front details, three-door hatch proportions and black side trim."
     },
     {
       "key": "minit",
@@ -1887,14 +2097,20 @@
           "logo": "De_Tomaso.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Innocenti Mini Turbo · Rally del club",
+      "referenceYear": 1988,
+      "liveryDirection": "white red and black Italian racing bands",
+      "bodywork": "retain the angular Bertone INNOCENTI/De Tomaso Mini Turbo hatch and rectangular lights, modest squared flares and rally apron, small rear spoiler and white compact wheels; NEVER an Austin Mini or BMW MINI",
+      "identityNotes": "Innocenti/De Tomaso Mini Turbo angular Bertone three-door hatch shown, NOT an Austin Mini. Rectangular lamps, black bumper."
     },
     {
       "key": "pantera",
@@ -1939,14 +2155,20 @@
           "logo": "De_Tomaso.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Pantera Gruppo 4",
+      "referenceYear": 1972,
+      "liveryDirection": "yellow with black competition panels",
+      "bodywork": "real Pantera Group 4 deep front air dam, very broad arch extensions, deep-dish racing wheels and period rear spoiler",
+      "identityNotes": "De Tomaso Pantera GTS wedge coupe, angular nose, closed pop-up lids and wide rear wing as reference."
     },
     {
       "key": "viper",
@@ -1991,14 +2213,20 @@
           "logo": "Dodge.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Viper GTS-R Oreca",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue and red Oreca racing",
+      "bodywork": "real broad GTS-R fenders, deep multi-duct bumper and splitter, vented bonnet, tall braced rear wing, silver multi-spoke racing wheels",
+      "identityNotes": "Dodge Viper GTS closed double-bubble coupe. Preserve the two broad WHITE lengthwise stripes visible in reference as unpainted livery, and side exhaust silhouette."
     },
     {
       "key": "288",
@@ -2043,14 +2271,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "prototype",
+      "candidate": "288 GTO Evoluzione",
+      "referenceYear": 1986,
+      "liveryDirection": "Rosso Corsa with black aero",
+      "bodywork": "real Evoluzione prototype body, very wide arch extensions, vented front and rear body, deep air dam and broad fixed rear wing; documented prototype, not a race winner",
+      "identityNotes": "Ferrari 288 GTO closed coupe, pop-up headlamps closed, paired low round fog lights, sculpted rear quarter intakes."
     },
     {
       "key": "348",
@@ -2095,14 +2329,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "348 Challenge",
+      "referenceYear": 1993,
+      "liveryDirection": "red with white Ferrari Challenge racing panels",
+      "bodywork": "real Challenge low front splitter, subtle side sills, silver or white five-spoke racing wheels, tow hooks and visible cage; no invented giant GT wing",
+      "identityNotes": "Ferrari 348 closed coupe, long horizontal side intake strakes and pop-up lids, flat 1980s wedge shape."
     },
     {
       "key": "360",
@@ -2147,14 +2387,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "360 Challenge",
+      "referenceYear": 2000,
+      "liveryDirection": "red with white Ferrari Challenge graphics",
+      "bodywork": "authentic Challenge front splitter, low racing stance, vented bumper, silver mesh racing wheels, roll cage and modest rear aero; no post-2002 GT kit",
+      "identityNotes": "Ferrari 360 Modena closed coupe, oval clear headlamp housings, two broad front air intakes and side scoop."
     },
     {
       "key": "550",
@@ -2199,14 +2445,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "550 GTS Prodrive",
+      "referenceYear": 2001,
+      "liveryDirection": "red with white GT racing panels",
+      "bodywork": "real 2001 GTS wide arches, deep ducted bumper, vented bonnet, large rear wing and white centre-lock wheels; no claim of later 2003 victories",
+      "identityNotes": "Ferrari 550 Maranello front-engine coupe, long bonnet with small scoop, recessed clear lamp units."
     },
     {
       "key": "355",
@@ -2251,14 +2503,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "F355 Challenge",
+      "referenceYear": 1998,
+      "liveryDirection": "red with white Challenge racing panels",
+      "bodywork": "actual later Challenge rear wing, front splitter, deeper side sills, white racing wheels, tow hooks and roll cage",
+      "identityNotes": "Ferrari F355 closed coupe, low pop-up lids, flowing side scoop, five-spoke wheels."
     },
     {
       "key": "f40",
@@ -2303,14 +2561,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "F40 LM",
+      "referenceYear": 1989,
+      "liveryDirection": "Rosso Corsa and white racing panels",
+      "bodywork": "actual LM broad vented front bumper, racing lamp treatment, wider arches, enlarged adjustable rear wing, white centre-lock racing wheels",
+      "identityNotes": "Ferrari F40, large integral rectangular high rear wing, NACA ducts, black rocker trim and angular wedge body."
     },
     {
       "key": "f50",
@@ -2355,14 +2619,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "prototype",
+      "candidate": "F50 GT",
+      "referenceYear": 1996,
+      "liveryDirection": "Rosso Corsa with black race aero",
+      "bodywork": "real F50 GT closed roof, roof air intake, deep front splitter, broad fenders and large braced rear wing; documented prototype that did not race",
+      "identityNotes": "Ferrari F50 body as reference, integrated curved rear wing, long oval clear headlamp units and front nostrils."
     },
     {
       "key": "testarossa",
@@ -2407,14 +2677,20 @@
           "logo": "Ferrari.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Testarossa · GT del club",
+      "referenceYear": 1990,
+      "liveryDirection": "Rosso Corsa with white period racing roundels",
+      "bodywork": "Testarossa strakes and angular roof retained, period front air dam, wider arch lips, side skirts, flat rear wing and silver deep-dish race wheels; no F512M identity swap",
+      "identityNotes": "Ferrari Testarossa broad rear quarters, full horizontal side strakes, closed pop-up lids and black lower strip."
     },
     {
       "key": "131",
@@ -2459,14 +2735,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "131 Abarth Rally Gruppo 4",
+      "referenceYear": 1977,
+      "liveryDirection": "white with green and red Alitalia blocks",
+      "bodywork": "real Group 4 box arch extensions, rally front bumper, roof/boot spoiler treatment, silver compact rally wheels, mud flaps and auxiliary lamps",
+      "identityNotes": "Fiat 131 Abarth two-door boxy saloon, wide squared fender flares, four circular headlights, preserve road reference not rally livery."
     },
     {
       "key": "barchetta",
@@ -2511,14 +2793,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Barchetta · Coppa del club",
+      "referenceYear": 1996,
+      "liveryDirection": "red with white and blue period Italian racing bands",
+      "bodywork": "retain open Barchetta roof and round nose, visible cage, low front splitter, modest arch lips, low rear wing and silver 15-inch race wheels",
+      "identityNotes": "Fiat Barchetta open two-seat roadster, roof down, small diagonal headlamps and rounded side."
     },
     {
       "key": "bravo",
@@ -2563,14 +2851,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Bravo HGT · Gruppo N",
+      "referenceYear": 1997,
+      "liveryDirection": "white with red blue Fiat racing bands",
+      "bodywork": "three-door Bravo hatch retained, rally front apron, mild arch lips, small roof spoiler, silver multi-spoke rally wheels and mud flaps",
+      "identityNotes": "First-generation Fiat Bravo HGT three-door hatch, NOT Brava five-door, slim grille and round-edged horizontal lamps."
     },
     {
       "key": "cinquecento",
@@ -2615,14 +2909,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Cinquecento Trofeo",
+      "referenceYear": 1993,
+      "liveryDirection": "yellow with blue and red Fiat Auto Corse bands",
+      "bodywork": "real Trofeo apron and modest flares, auxiliary lamps, small white rally wheels, red mud flaps, cage; boxy Cinquecento body retained",
+      "identityNotes": "Fiat Cinquecento Sporting three-door upright tiny hatch, square headlights and factory low bumpers."
     },
     {
       "key": "coupe",
@@ -2667,14 +2967,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Coupé 20v · GT del club",
+      "referenceYear": 1997,
+      "liveryDirection": "red white and dark blue Fiat period racing bands",
+      "bodywork": "retain Fiat Coupé diagonal wheel-arch cuts and round rear lamps, deeper front intakes, modest widebody, side skirts, period rear wing and silver racing wheels",
+      "identityNotes": "Fiat Coupe 20v two-door coupe, distinctive double diagonal slashes over wheel arches and faired bonnet lamps."
     },
     {
       "key": "punto",
@@ -2719,14 +3025,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Punto GT Gruppo N",
+      "referenceYear": 1995,
+      "liveryDirection": "yellow blue and red Fiat Auto Corse",
+      "bodywork": "FIRST-generation Punto GT retained, period rally bumper, restrained arches, small roof spoiler, white rally wheels, cage and red mud flaps; never second-generation Super1600 nose",
+      "identityNotes": ""
     },
     {
       "key": "ritmo",
@@ -2771,14 +3083,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Ritmo 130 TC Gruppo A",
+      "referenceYear": 1984,
+      "liveryDirection": "white and red Abarth racing",
+      "bodywork": "retain real Ritmo lights, period rally front valance, modest flares, silver small racing wheels and mud flaps",
+      "identityNotes": "Fiat Ritmo 130 TC Abarth three-door hatch, four circular headlights and black plastic bumpers."
     },
     {
       "key": "seicento",
@@ -2824,7 +3142,7 @@
         }
       },
       "profile": "rally",
-      "researchStatus": "verified",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": "Seicento Sporting Gruppo A / Trofeo",
       "historicalYear": 1998,
       "historicalSources": [
@@ -2844,7 +3162,13 @@
       "imageReferences": [],
       "artwork": null,
       "artRevision": 0,
-      "notes": "Replica di carrozzeria e preparazione del telaio. Il motore della propria auto resta invariato: non vengono attribuiti i CV della vera Kit."
+      "notes": "Replica di carrozzeria e preparazione del telaio. Il motore della propria auto resta invariato: non vengono attribuiti i CV della vera Kit.",
+      "classification": "historic",
+      "candidate": "Seicento Sporting Gruppo A Trofeo",
+      "referenceYear": 1998,
+      "liveryDirection": "yellow with blue front and red rear stripes, black Abarth bonnet scorpion",
+      "bodywork": "real Fiat Auto Corse number 600 demonstration car, four auxiliary lamps, deep front bumper, small arches, silver multi-spoke rally wheels, red mud flaps; low horizontal tail lamps, no GT wing",
+      "identityNotes": "Fiat Seicento Sporting first series 1998 as yellow original. Correct tail lights: LOW, WIDE HORIZONTAL rounded red clusters at lower outer corners of tailgate just above rear bumper. Completely remove any vertical lamp from rear roof pillar: C pillar is body colour uninterrupted green, rear glass black. Preserve tiny rounded tall three-door body, front Sporting bumper, period silver wheels. Rear reference defines lamp height and orientation."
     },
     {
       "key": "tipo",
@@ -2889,14 +3213,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Tipo 16v Gruppo A",
+      "referenceYear": 1992,
+      "liveryDirection": "white red and blue Fiat racing bands",
+      "bodywork": "boxy Tipo hatch retained, deeper rally bumper, restrained squared arch kit, small roof spoiler, white rally wheels and red mud flaps",
+      "identityNotes": "Fiat Tipo 16v five-door tall angular hatch, rectangular lamps and black rubbing strips."
     },
     {
       "key": "uno",
@@ -2941,14 +3271,20 @@
           "logo": "Fiat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Uno Turbo Gruppo A",
+      "referenceYear": 1986,
+      "liveryDirection": "white with red blue Fiat Auto Corse",
+      "bodywork": "real Uno Turbo proportions and lamp generation retained, period bumper and small arch flares, low roof spoiler, silver rally wheels and mud flaps",
+      "identityNotes": "Fiat Uno Turbo first-series shape in reference, three doors, rectangular headlights and upright tail."
     },
     {
       "key": "escortc",
@@ -2993,14 +3329,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Escort RS Cosworth Gruppo A",
+      "referenceYear": 1994,
+      "liveryDirection": "blue white and yellow Ford Motorsport",
+      "bodywork": "real Cosworth widened fenders, rally front vents, whale-tail rear spoiler, white multi-spoke rally wheels, roof vent and mud flaps",
+      "identityNotes": "Ford Escort RS Cosworth three-door hatch, very large whale-tail double rear wing, bonnet vents and widened arches."
     },
     {
       "key": "escortt",
@@ -3045,14 +3387,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Escort RS Turbo Gruppo N",
+      "referenceYear": 1986,
+      "liveryDirection": "white with blue and red Ford Motorsport bands",
+      "bodywork": "retain correct earlier Escort shell, modest rally bumper and arch lips, stock-derived rear spoiler, white compact rally wheels; not RS Cosworth body",
+      "identityNotes": "Ford Escort RS Turbo 1980s three-door hatch, rectangular lamps, black side trim and small rear spoiler."
     },
     {
       "key": "fiesta",
@@ -3097,14 +3445,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Fiesta RS Turbo Gruppo N",
+      "referenceYear": 1991,
+      "liveryDirection": "white blue and red Ford racing bands",
+      "bodywork": "correct early Fiesta three-door retained, deeper rally front apron, subtle arches, small hatch spoiler, white rally wheels and mud flaps",
+      "identityNotes": "Ford Fiesta Mk3 RS Turbo three-door. Correct rear lights: compact vertical trapezoidal clusters BELOW rear window corners only, red upper and bottom, thin amber and white middle bands. No long pillar strips running up beside rear glass. Preserve RS Turbo four square bumper driving lamps, stock 3-spoke silver wheels, black bumper moulding and thin green/turquoise trim independently from painted green panels."
     },
     {
       "key": "mondeo",
@@ -3149,14 +3503,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Mondeo Superturismo BTCC",
+      "referenceYear": 1999,
+      "liveryDirection": "blue and yellow Ford Rapid Fit style",
+      "bodywork": "real period Mondeo touring low splitter, flared arch lips, skirts, large boot wing and white racing wheels; keep original body generation",
+      "identityNotes": "Ford Mondeo ST200 first-generation facelift four-door saloon, oval horizontal headlights, front grille and mesh wheels."
     },
     {
       "key": "mustang",
@@ -3201,14 +3561,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Mustang Cobra Trans-Am",
+      "referenceYear": 1997,
+      "liveryDirection": "white blue and red American touring graphics",
+      "bodywork": "retain SN95 Mustang body, broad Trans-Am fenders, low splitter, wide braced rear wing, silver racing wheels; no later Mustang",
+      "identityNotes": "Ford Mustang Cobra R New Edge coupe as reference, tall fixed rear wing, deep front splitter and angular 1999-2000 lamps."
     },
     {
       "key": "puma",
@@ -3253,14 +3619,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Puma Super1600",
+      "referenceYear": 2001,
+      "liveryDirection": "white and blue Ford Motorsport",
+      "bodywork": "real small COUPE Puma Kit Car wide arches and deep bumper, roof vent, large hatch wing, white rally wheels; never modern Puma crossover",
+      "identityNotes": "Original 1990s Ford Puma coupe, NOT modern crossover, rounded roof and swept triangular oval headlamps."
     },
     {
       "key": "sierra4",
@@ -3305,14 +3677,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Sierra Sapphire Cosworth Gruppo A",
+      "referenceYear": 1990,
+      "liveryDirection": "white blue red Ford rally bands",
+      "bodywork": "retain FOUR-door Sapphire saloon, real rally apron, modest arch lips, boot spoiler, white multi-spoke rally wheels and mud flaps",
+      "identityNotes": "Ford Sierra Sapphire RS Cosworth four-door saloon, long stepped boot, modest boot wing; NOT the three-door hatch."
     },
     {
       "key": "sierrac",
@@ -3357,14 +3735,20 @@
           "logo": "Ford.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Sierra RS500 Cosworth Gruppo A",
+      "referenceYear": 1987,
+      "liveryDirection": "black red and white Texaco style",
+      "bodywork": "real THREE-door Sierra hatch, deep RS500 bumper and cooling ducts, box arch flares, double-level whale-tail wing, gold mesh race wheels",
+      "identityNotes": "Ford Sierra RS Cosworth three-door hatch with large whale-tail wing, as reference; NOT Sapphire saloon."
     },
     {
       "key": "crx",
@@ -3409,14 +3793,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "CRX · Gruppo A",
+      "referenceYear": 1990,
+      "liveryDirection": "white red and black Mugen-style racing",
+      "bodywork": "retain approved CRX low fastback and rear glass, short front air dam, mild flares, modest rear spoiler and white small rally wheels",
+      "identityNotes": "Honda CR-X second generation EF, three-door coupe hatch with short chopped vertical tail and black waist strip."
     },
     {
       "key": "ef",
@@ -3461,14 +3851,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Civic EF Gruppo A",
+      "referenceYear": 1989,
+      "liveryDirection": "white with red black Mugen Motul bands",
+      "bodywork": "EF hatch body retained, period touring bumper and splitter, small fender flares, small roof spoiler, white compact race wheels",
+      "identityNotes": "Honda Civic EF three-door hatch, low flat bonnet and thin rectangular headlamp strip."
     },
     {
       "key": "eg",
@@ -3513,14 +3909,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Civic EG · Gruppo A",
+      "referenceYear": 1993,
+      "liveryDirection": "white with green and red Japanese racing bands",
+      "bodywork": "EG THREE-door hatch retained, front splitter, modest arch lips, small roof wing and white 15-inch racing wheels; no EG sedan",
+      "identityNotes": "Honda Civic EG three-door hatchback (1991-1995). Tail lamps must be LOW and HORIZONTAL with rounded rectangular red/amber sections straddling the lower tailgate corners; NO vertical lights along the rear pillars. Body-colour uninterrupted C-pillar above the small low lamp. Preserve rounded EG roof, wide doors and split rear hatch architecture; original front bumper and silver wheels."
     },
     {
       "key": "ek",
@@ -3565,14 +3967,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Civic EK9 · N1 Endurance",
+      "referenceYear": 1998,
+      "liveryDirection": "yellow and blue Spoon-style period racing",
+      "bodywork": "EK three-door hatch retained, low front splitter, small arch lips, enlarged but period roof spoiler, black lightweight five-spoke racing wheels",
+      "identityNotes": "Honda Civic EK three-door hatch, 1990s square-rounded headlights and compact tail, no later Civic."
     },
     {
       "key": "integra",
@@ -3617,14 +4025,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Integra Type R DC2 N1",
+      "referenceYear": 1996,
+      "liveryDirection": "white with red black Mugen period bands",
+      "bodywork": "retain exact approved DC2 headlights, touring front apron, subtle wide arches, high factory-derived rear wing, white or black lightweight race wheels",
+      "identityNotes": "Honda Integra DC2 coupe with FOUR separate ROUND front headlights like the reference, NOT the Japanese straight-lamp front."
     },
     {
       "key": "nsx",
@@ -3669,14 +4083,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "NSX GT500 JGTC",
+      "referenceYear": 1997,
+      "liveryDirection": "white green and red Castrol Mugen",
+      "bodywork": "real 1990s NSX GT wide fenders, bumper ducts, low splitter, roof intake and high flat rear wing, white racing wheels; no modern NSX",
+      "identityNotes": "Honda NSX original pre-facelift coupe, pop-up lamps closed as reference, black roof and original rear spoiler."
     },
     {
       "key": "prelude",
@@ -3721,14 +4141,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Prelude · Turismo del club",
+      "referenceYear": 1995,
+      "liveryDirection": "white with red black Honda Motorsport bands",
+      "bodywork": "retain Prelude COUPE roof and correct nose, wide arch lips, low front bumper splitter, skirts, period boot wing and white racing wheels; never Accord saloon",
+      "identityNotes": "Fifth-generation Honda Prelude coupe, tall rectangular-oval headlamps and long low bonnet."
     },
     {
       "key": "s2000",
@@ -3773,14 +4199,20 @@
           "logo": "Honda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "S2000 · Super Taikyu",
+      "referenceYear": 2001,
+      "liveryDirection": "white with blue yellow period racing bands",
+      "bodywork": "AP1 roadster identity, period removable hardtop, deep front splitter, mild wide arches, flat rear wing, silver or white racing wheels",
+      "identityNotes": "Honda S2000 AP1 open roadster, roof down, long bonnet, short rear and clear swept headlamps."
     },
     {
       "key": "hyundai",
@@ -3825,14 +4257,20 @@
           "logo": "Hyundai.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Coupé Kit Car F2",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue and yellow Hyundai rally colours",
+      "bodywork": "real first-generation COUPE F2 broad arches, bumper ducts, roof vent, rally rear wing and white racing wheels; no later Tiburon",
+      "identityNotes": "First-generation Hyundai Coupe RD as photo, rounded nose, almond headlamps, NOT later Tiburon/Coupe generations."
     },
     {
       "key": "xj",
@@ -3877,14 +4315,20 @@
           "logo": "Jaguar.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "XJ R · Turismo del club",
+      "referenceYear": 1999,
+      "liveryDirection": "British green with cream and red racing roundels",
+      "bodywork": "retain four-door XJ saloon and four round headlights, touring front air dam, modest flares, skirts, boot wing, silver mesh racing wheels; no Le Mans prototype",
+      "identityNotes": "Jaguar XJR X308 four-door saloon, four circular headlights, long low body and traditional grille."
     },
     {
       "key": "xj220",
@@ -3929,14 +4373,20 @@
           "logo": "Jaguar.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "XJ220 C",
+      "referenceYear": 1993,
+      "liveryDirection": "British green with yellow racing details",
+      "bodywork": "real XJ220 C widened arches, racing front lamp treatment, deep splitter, fixed rear wing and silver racing wheels",
+      "identityNotes": "Jaguar XJ220 very low elongated mid-engine coupe, long rounded nose and large lower side air inlet."
     },
     {
       "key": "xkr",
@@ -3981,14 +4431,20 @@
           "logo": "Jaguar.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "XKR Trans-Am",
+      "referenceYear": 2001,
+      "liveryDirection": "green white and black British-American racing",
+      "bodywork": "real period XKR racing COUPE outline, broad arches, deep front splitter, high boot wing and silver racing wheels",
+      "identityNotes": "Jaguar XKR X100 coupe, oval grille and oval headlamp units, flowing rounded roof."
     },
     {
       "key": "countach",
@@ -4033,14 +4489,20 @@
           "logo": "Lamborghini.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Countach JLOC JGTC",
+      "referenceYear": 1994,
+      "liveryDirection": "white with period blue yellow racing bands",
+      "bodywork": "retain angular Countach wedge, period GT arch extensions, deep front splitter and rear racing wing, silver multi-piece wheels; no Diablo body",
+      "identityNotes": "Lamborghini Countach 1980s wedge, pop-up lids closed, large wing and arch extensions as reference."
     },
     {
       "key": "diablo",
@@ -4085,14 +4547,20 @@
           "logo": "Lamborghini.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Diablo GTR Supertrofeo",
+      "referenceYear": 1999,
+      "liveryDirection": "yellow and black Lamborghini racing",
+      "bodywork": "real GTR deeper front bumper, roof intake, wider fenders, large rear wing, black or gold centre-lock racing wheels",
+      "identityNotes": "Lamborghini Diablo circa 2000 as reference, low wedge and broad rear haunches; match reference headlamp treatment, no Aventador."
     },
     {
       "key": "dedra",
@@ -4137,14 +4605,20 @@
           "logo": "Lancia.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Dedra Turbo · Turismo del club",
+      "referenceYear": 1992,
+      "liveryDirection": "white with blue and red Italian racing bands",
+      "bodywork": "retain boxy Dedra FOUR-door saloon, touring bumper, square arch lips, side skirts, medium boot wing, white multi-spoke wheels; no invented factory DTM story",
+      "identityNotes": "Lancia Dedra Turbo four-door compact saloon, slim rectangular headlamps and chrome-edged trapezoid grille."
     },
     {
       "key": "evoluzione",
@@ -4189,14 +4663,20 @@
           "logo": "Lancia.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Delta HF Integrale Evoluzione Gruppo A",
+      "referenceYear": 1992,
+      "liveryDirection": "white Martini blue and red bands",
+      "bodywork": "real Evo box arch extensions, deeper rally bumper, roof vent, raised hatch spoiler, white compact rally wheels and mud flaps",
+      "identityNotes": "Lancia Delta HF Integrale Evoluzione five-door. Correct rear spoiler to the real adjustable rectangular SINGLE airfoil panel perched directly at the TOP of the rear hatch, with its broad flat panel tilted upward and two compact side mounting brackets. No huge sedan boot wing, double wing, downward tail spike, or shapeless solid block. Preserve squared extended arches, four circular headlamps, real Delta proportions."
     },
     {
       "key": "delta16",
@@ -4241,14 +4721,20 @@
           "logo": "Lancia.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Delta HF Integrale 16V Gruppo A",
+      "referenceYear": 1989,
+      "liveryDirection": "white Martini blue and red bands",
+      "bodywork": "retain earlier Integrale body and correct squared rear, rally bumper and arches, modest hatch wing, white compact wheels and mud flaps",
+      "identityNotes": "Lancia Delta HF Integrale 16v five-door hatch, four circular lights and moderate box arches, distinct from later Evoluzione."
     },
     {
       "key": "hpe",
@@ -4293,14 +4779,20 @@
           "logo": "Lancia.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Delta HPE · Gruppo A",
+      "referenceYear": 1996,
+      "liveryDirection": "white with red and blue Italian racing bands",
+      "bodywork": "retain SECOND-generation HPE THREE-door wedge, deeper rally front bumper, mild arch extensions, roof vent and roof spoiler, white rally wheels; never first Delta",
+      "identityNotes": "Redraw accurately as SECOND-GENERATION Lancia Delta HPE HF type 836 THREE-DOOR 1998. ONE LONG door each side, broad thick sloping rear C pillar, small upward-tapering triangular rear side window, high blunt hatch and very short tail, pronounced rear shoulders. HPE is NOT a five-door first-generation Delta, NOT Peugeot 306, NOT Fiat Tipo. Exact slim horizontal front lamps either side of narrow upright Lancia shield grille with chrome perimeter, horizontal black bumper intakes, HF side skirts and mesh silver wheels from original dark blue reference. Rear lamp shape from real HPE photos, compact low wide corner clusters below glass; proper body-colour horizontal spoiler at the hatch mid-height just BELOW the rear glass, not at the roof edge. No rear side door/seam/handle."
     },
     {
       "key": "thema",
@@ -4345,14 +4837,20 @@
           "logo": "Lancia.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Thema 8.32 · Turismo del club",
+      "referenceYear": 1990,
+      "liveryDirection": "white with dark blue and red period Italian bands",
+      "bodywork": "retain Thema FOUR-door saloon, touring front air dam, subtle wide arches, side skirts, raised boot wing and silver mesh racing wheels",
+      "identityNotes": "Lancia Thema 8.32 four-door boxy saloon, rectangular headlamps and narrow upright grille, subtle boot spoiler if visible."
     },
     {
       "key": "is200",
@@ -4397,14 +4895,20 @@
           "logo": "Lexus.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "IS200 BTCC",
+      "referenceYear": 2001,
+      "liveryDirection": "yellow black and silver Lexus racing",
+      "bodywork": "actual early IS200 four-door saloon, touring bumper ducts, squared arch lips, skirts, tall boot wing and white racing wheels",
+      "identityNotes": "First-generation Lexus IS200 XE10 four-door saloon, slim rectangular headlamps and six-spoke wheels."
     },
     {
       "key": "elise",
@@ -4449,14 +4953,20 @@
           "logo": "Lotus.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Elise Motorsport",
+      "referenceYear": 2000,
+      "liveryDirection": "British green with yellow centre stripe",
+      "bodywork": "real S1 Motorsport deeper splitter, modest widened arches, fixed hard roof, rear racing wing, silver competition wheels; no GT1 prototype identity swap",
+      "identityNotes": "Lotus Elise first-generation S1 small open roadster, two prominent round front lamps and rounded simple body, not S2."
     },
     {
       "key": "esprit",
@@ -4501,14 +5011,20 @@
           "logo": "Lotus.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Esprit Sport 300 GT",
+      "referenceYear": 1993,
+      "liveryDirection": "yellow with blue period Lotus racing details",
+      "bodywork": "real 1990s Esprit GT front air dam, wide fenders, vented rear body, large flat wing and silver mesh racing wheels",
+      "identityNotes": "Lotus Esprit V8 late 1990s wedge coupe, closed pop-up lamps and high rear wing."
     },
     {
       "key": "exige",
@@ -4553,14 +5069,20 @@
           "logo": "Lotus.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Exige S1 · Motorsport",
+      "referenceYear": 2001,
+      "liveryDirection": "white green and yellow Lotus racing",
+      "bodywork": "retain FIRST-generation Exige, Motorsport low splitter, factory-derived arch extensions, fixed rear wing, roof scoop and silver race wheels; no V6 Exige",
+      "identityNotes": "Lotus Exige S1 hardtop coupe, roof air scoop, fixed rear wing, four round/oval headlights and wide intakes."
     },
     {
       "key": "mgf",
@@ -4605,14 +5127,20 @@
           "logo": "MG.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "MGF Cup",
+      "referenceYear": 1998,
+      "liveryDirection": "British green with white racing panels",
+      "bodywork": "real MGF Cup period hardtop, roll cage, racing front splitter, modest fender flares, rear wing and silver race wheels",
+      "identityNotes": "MG F open small mid-engine roadster as reference, two large rounded lamps, narrow upper grille and side vents."
     },
     {
       "key": "zr",
@@ -4657,14 +5185,20 @@
           "logo": "MG.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "ZR Super1600",
+      "referenceYear": 2002,
+      "liveryDirection": "grey with fluorescent green MG XPower bands",
+      "bodywork": "actual ZR S1600 wide arches, rally front bumper, roof vent and enlarged hatch spoiler, white rally wheels",
+      "identityNotes": "MG ZR first-generation three-door hatch, four oval front light elements, mesh grille and roof spoiler."
     },
     {
       "key": "zs",
@@ -4709,14 +5243,20 @@
           "logo": "MG.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "ZS BTCC",
+      "referenceYear": 2001,
+      "liveryDirection": "grey green and black MG XPower",
+      "bodywork": "real ZS touring low splitter, widened arches, side skirts, large boot wing, white racing wheels; retain original saloon body",
+      "identityNotes": "MG ZS four-door compact saloon shown, NOT modern SUV; oval lamp clusters, mesh grille and boot spoiler."
     },
     {
       "key": "3200",
@@ -4761,14 +5301,20 @@
           "logo": "Maserati.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "3200 GT · GT del club",
+      "referenceYear": 2001,
+      "liveryDirection": "dark blue white and Italian tricolour accents",
+      "bodywork": "retain 3200 GT COUPE and distinctive boomerang rear lights, deep front splitter, mild GT wide arches, boot wing and silver racing wheels; not 2003 Trofeo 4200",
+      "identityNotes": "Maserati 3200 GT rounded coupe, long bonnet, narrow slanted headlamps and oval grille."
     },
     {
       "key": "biturbo",
@@ -4813,14 +5359,20 @@
           "logo": "Maserati.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Biturbo · Gruppo A",
+      "referenceYear": 1987,
+      "liveryDirection": "white with blue and red Italian racing bands",
+      "bodywork": "retain correct Biturbo shell, period front air dam and squared arch flares, boot spoiler, gold mesh race wheels; no modern Maserati",
+      "identityNotes": "Maserati Biturbo two-door notchback coupe, squared body, rectangular headlamp units and small trident grille."
     },
     {
       "key": "shamal",
@@ -4865,14 +5417,20 @@
           "logo": "Maserati.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Shamal · GT del club",
+      "referenceYear": 1992,
+      "liveryDirection": "red with white and dark blue racing panels",
+      "bodywork": "retain Shamal roof, black B-pillars and aggressive rear arches, deeper front bumper, side skirts, flat rear wing, silver racing wheels; not Ghibli Cup",
+      "identityNotes": "Maserati Shamal two-door coupe, wide flared arches, black C-pillar band and distinctive asymmetrical rear arch cut."
     },
     {
       "key": "323",
@@ -4917,14 +5475,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "323 GT-R Gruppo A",
+      "referenceYear": 1993,
+      "liveryDirection": "white with green and red Mazda racing bands",
+      "bodywork": "retain BG 323 GT-R hatch, real rally cooling bumper and bonnet vents, mild arch flares, low roof spoiler, white wheels and mud flaps",
+      "identityNotes": "Mazda 323 GT-R BG three-door hatch, square lamps, bonnet vents and deep bumper with round fog lamps."
     },
     {
       "key": "lantis",
@@ -4969,14 +5533,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "323 Lantis · Turismo",
+      "referenceYear": 1995,
+      "liveryDirection": "white with green and red Mazda racing bands",
+      "bodywork": "retain approved LANTIS body and doors exactly, low touring bumper, modest wide arches, roof/boot spoiler suited to actual shell, white race wheels; no invented body conversion",
+      "identityNotes": "Mazda 323 Lantis five-door fastback coupe body as reference, sweeping tall roof and small oval headlamps."
     },
     {
       "key": "mx3",
@@ -5021,14 +5591,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "MX-3 · Coppa del club",
+      "referenceYear": 1993,
+      "liveryDirection": "white with blue and red Mazda period bands",
+      "bodywork": "retain small MX-3 COUPE bubble rear window, low splitter, mild arch lips, small rear wing, silver 15-inch racing wheels",
+      "identityNotes": "Mazda MX-3 EC small three-door coupe, long curved hatch and almond lamps."
     },
     {
       "key": "na",
@@ -5073,14 +5649,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "MX-5 NA · Spec Miata",
+      "referenceYear": 2000,
+      "liveryDirection": "red with white racing roundels",
+      "bodywork": "retain NA pop-up lamp roadster, real roll cage, small splitter and arch lips, silver racing wheels; no oversized GT aero",
+      "identityNotes": "Mazda MX-5 NA open roadster with closed pop-up lids as reference, tiny slim fixed marker lights, no fixed NB headlights."
     },
     {
       "key": "nb",
@@ -5125,14 +5707,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "MX-5 NB · Roadster NR-A",
+      "referenceYear": 2002,
+      "liveryDirection": "white with blue and red Mazda bands",
+      "bodywork": "retain NB fixed headlamp roadster, factory-style low bumper, small boot lip, full roll cage and silver compact racing wheels",
+      "identityNotes": "Mazda MX-5 NB open roadster with fixed oval headlamps, no pop-up lights."
     },
     {
       "key": "fc",
@@ -5177,14 +5765,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "RX-7 FC IMSA GTO",
+      "referenceYear": 1986,
+      "liveryDirection": "white with blue and red Mazda factory graphics",
+      "bodywork": "real FC wide GT arch extensions, deep front bumper, large fixed rear wing, gold mesh centre-lock racing wheels; retain FC pop-up lamp identity",
+      "identityNotes": "Mazda RX-7 FC angular closed coupe, pop-up lids closed and broad wraparound hatch glass."
     },
     {
       "key": "fd",
@@ -5229,14 +5823,20 @@
           "logo": "Mazda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "RX-7 FD JGTC GT300",
+      "referenceYear": 1996,
+      "liveryDirection": "yellow and blue Japanese GT racing",
+      "bodywork": "real period FD racing bumper and ducts, broad arch extensions, high rear wing and white racing wheels; retain FD roof and twin round rear lamp layout",
+      "identityNotes": "Mazda RX-7 FD flowing rounded closed coupe, pop-up lids closed, large rounded nose and low roof."
     },
     {
       "key": "f1",
@@ -5281,14 +5881,20 @@
           "logo": "McLaren.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "F1 GTR Le Mans",
+      "referenceYear": 1995,
+      "liveryDirection": "dark grey black and silver Ueno Clinic scheme",
+      "bodywork": "real short-tail 1995 GTR front air dam, additional cooling ducts, roof intake, rear racing wing and silver five-spoke centre-lock wheels; no later longtail body",
+      "identityNotes": "McLaren F1-family closed coupe and aero treatment visible in reference, low central cabin and side air scoops; preserve reference variant rather than invent modern McLaren."
     },
     {
       "key": "190",
@@ -5333,14 +5939,20 @@
           "logo": "Mercedes.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "190 E 2.5-16 Evo II DTM",
+      "referenceYear": 1992,
+      "liveryDirection": "black with silver and red Sonax-style racing graphics",
+      "bodywork": "actual Evo II DTM deep bumper, box flares and side skirts, tall boot wing, silver racing wheels; W201 shape retained",
+      "identityNotes": "Mercedes 190E Evolution II W201 four-door boxy saloon, large high wing and aggressively boxed arches as source."
     },
     {
       "key": "c43",
@@ -5385,14 +5997,20 @@
           "logo": "Mercedes.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Classe C W202 DTM",
+      "referenceYear": 1994,
+      "liveryDirection": "silver white and black AMG racing scheme",
+      "bodywork": "retain W202 four-door shell, real period C-Class touring wide arches, deep front apron, side skirts, high boot wing and silver racing wheels; engine stays C43",
+      "identityNotes": "Mercedes C43 AMG W202 four-door saloon, rectangular headlamps and understated 1990s AMG bumpers."
     },
     {
       "key": "clk",
@@ -5437,14 +6055,20 @@
           "logo": "Mercedes.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "CLK DTM",
+      "referenceYear": 2000,
+      "liveryDirection": "silver and black D2 AMG racing scheme",
+      "bodywork": "real W208 CLK DTM broad arches, deep vented front bumper, side skirts, tall rear wing and silver racing wheels; no GT1 prototype or modern CLK",
+      "identityNotes": "Mercedes CLK C208 coupe, four oval headlamp eyes, round-edged roof, not CLK GTR or modern CLK."
     },
     {
       "key": "slk",
@@ -5489,14 +6113,20 @@
           "logo": "Mercedes.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "SLK R170 · Coppa del club",
+      "referenceYear": 2001,
+      "liveryDirection": "silver black and red AMG-style bands",
+      "bodywork": "retain R170 roadster with period closed hardtop, low splitter, mild arch lips, small flat rear wing and silver racing wheels",
+      "identityNotes": "Mercedes SLK R170 open roof-down roadster, original oval headlamps and short boot; not later generation."
     },
     {
       "key": "cooper",
@@ -5541,14 +6171,20 @@
           "logo": "Mini.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Mini Cooper classica · Miglia",
+      "referenceYear": 1995,
+      "liveryDirection": "British red white roof and white racing roundel",
+      "bodywork": "retain original CLASSIC Rover Mini shell with round lamps and chrome grille, small wide arch extensions, racing front valance, cage and silver compact 13-inch race wheels; NEVER a BMW R50/R53 MINI",
+      "identityNotes": "CLASSIC original Mini Cooper (1990s Rover Mini), tiny upright two-door body, chrome grille, external round lights and additional grille spotlights as reference; NOT the later BMW Mini."
     },
     {
       "key": "3000gt",
@@ -5593,14 +6229,20 @@
           "logo": "Mitsubishi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "GTO 3000 GT · GT giapponese",
+      "referenceYear": 1994,
+      "liveryDirection": "white blue and red Mitsubishi racing graphics",
+      "bodywork": "retain real 3000GT coupe roof and nose, deep GT bumper and cooling ducts, broad arches, large rear wing and silver racing wheels",
+      "identityNotes": "Mitsubishi 3000GT/GTO Z16A closed coupe as photo, wide low body, side gills and raised rear spoiler, match reference headlamp version."
     },
     {
       "key": "colt",
@@ -5645,14 +6287,20 @@
           "logo": "Mitsubishi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Colt GTi / Mirage Cyborg Gruppo N",
+      "referenceYear": 1993,
+      "liveryDirection": "white with blue red Mitsubishi racing bands",
+      "bodywork": "retain approved CA0 Colt/Mirage hatch, modest rally bumper and arches, roof spoiler, white rally wheels; never earlier C50 body",
+      "identityNotes": "Completely redraw as MITSUBISHI COLT fourth-generation CA0/CA4A GTi 1.8 (1992-1996), also fourth-generation MIRAGE THREE-DOOR hatch. The original black photograph defines this rounded CA0 shell; DO NOT draw older boxy C50 Colt, Suzuki Swift, Civic, or later CJ0. Very rounded low bubble roof, broad swept-back oval/triangular headlights with pointed inner tips, smooth narrow grille, short bonnet, long single side door, tiny curved triangular rear side window tapering into very thick sloping C-pillar. Rear is a distinctive curved descending fastback hatch with horizontal/rounded rear lamp corners, NOT a square vertical box tail. Use true CA0 rear reference; no transplanted C50 rear wing. Preserve original factory small silver multi-spoke wheels and stock black bumpers/trim."
     },
     {
       "key": "eclipse",
@@ -5697,14 +6345,20 @@
           "logo": "Mitsubishi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Eclipse · Turismo del club",
+      "referenceYear": 1997,
+      "liveryDirection": "white red and black Mitsubishi period graphics",
+      "bodywork": "retain approved Eclipse generation and coupe roof, front splitter, modest wide arches, skirts, rear racing wing and silver wheels; no later time-attack aero",
+      "identityNotes": "Second-generation Mitsubishi Eclipse coupe as reference, narrow headlamp units and large curved rear spoiler; not first generation."
     },
     {
       "key": "evo5",
@@ -5749,14 +6403,20 @@
           "logo": "Mitsubishi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Lancer Evolution V Gruppo A",
+      "referenceYear": 1998,
+      "liveryDirection": "red white and black Ralliart factory scheme",
+      "bodywork": "actual Evo V wide arches and rally bumper, bonnet vents, roof vent, real double-level rear spoiler, white rally wheels and mud flaps",
+      "identityNotes": "Mitsubishi Lancer Evolution V four-door saloon, bonnet vents, boxed arches, huge ROUND fog lights in deep bumper and rear wing."
     },
     {
       "key": "evo6",
@@ -5801,14 +6461,20 @@
           "logo": "Mitsubishi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Lancer Evolution VI Gruppo A",
+      "referenceYear": 1999,
+      "liveryDirection": "red white and black Ralliart factory scheme",
+      "bodywork": "actual Evo VI rally bumper and wide arches, bonnet vents, roof vent, Evo VI tall rear spoiler and white racing wheels; distinct from Evo V",
+      "identityNotes": "Mitsubishi Lancer Evolution VI four-door saloon, distinguish its reference bumper and horizontal headlamps from Evo V and VII, large rear wing."
     },
     {
       "key": "evo7",
@@ -5853,14 +6519,20 @@
           "logo": "Mitsubishi.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Lancer WRC",
+      "referenceYear": 2001,
+      "liveryDirection": "red white and black Mitsubishi Ralliart",
+      "bodywork": "real 2001 Evo VII WRC full widebody and cooling bumper, bonnet/roof vents, WRC rear wing, white racing wheels and mud flaps",
+      "identityNotes": "Mitsubishi Lancer Evolution VII CT9A four-door saloon, larger square cabin, slim angular headlights, raised wing, no later Evo X."
     },
     {
       "key": "180sx",
@@ -5905,14 +6577,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "180SX · N1 Endurance",
+      "referenceYear": 1996,
+      "liveryDirection": "white with red blue Nismo period graphics",
+      "bodywork": "retain RPS13 fastback and pop-up lamps, period touring front bumper, mild wide fenders, hatch wing, white multi-spoke racing wheels",
+      "identityNotes": "Nissan 180SX S13 fastback with pop-up headlights CLOSED as photo; sloped rear glass, not fixed-lamp Silvia notchback."
     },
     {
       "key": "s13",
@@ -5957,14 +6635,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "200SX S13 · Turismo",
+      "referenceYear": 1991,
+      "liveryDirection": "white red and blue Nissan Motorsport bands",
+      "bodywork": "retain exact approved S13 roof and front lamp layout, low splitter, modest arch kit, side skirts, period rear wing and white wheels",
+      "identityNotes": "Nissan S13 Silvia fixed rectangular-headlamp NOTCHBACK two-door coupe as photo, NOT 180SX fastback."
     },
     {
       "key": "s14",
@@ -6009,14 +6693,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "200SX S14 · N1 Endurance",
+      "referenceYear": 1996,
+      "liveryDirection": "blue white and red Nissan racing bands",
+      "bodywork": "retain S14 coupe shell and approved nose generation, deeper cooling bumper, wide arch lips, skirts, flat rear wing, silver racing wheels",
+      "identityNotes": "Nissan S14 Silvia facelift angular fixed headlamps shown, notchback two-door coupe, subtle original rear wing."
     },
     {
       "key": "300zx",
@@ -6061,14 +6751,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "300ZX IMSA GTS",
+      "referenceYear": 1994,
+      "liveryDirection": "white blue and red Nissan factory scheme",
+      "bodywork": "real Z32 GTS broad fenders and deep front splitter, ducted body, large rear wing and silver centre-lock race wheels; Z32 sloping front lamps retained",
+      "identityNotes": "Nissan 300ZX Z32 wide low coupe, narrow slanted fixed headlamps and dark glass roof panels."
     },
     {
       "key": "almera",
@@ -6113,14 +6809,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Almera GTi · Gruppo N",
+      "referenceYear": 1997,
+      "liveryDirection": "white red and blue Nissan Motorsport",
+      "bodywork": "retain N15 hatch, modest touring front apron, arch lips, roof wing and white racing wheels; never Primera saloon",
+      "identityNotes": "Nissan Almera N15 GTi three-door hatchback, compact rounded body and rectangular horizontal lamps."
     },
     {
       "key": "micra",
@@ -6165,14 +6867,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Micra Super S Challenge",
+      "referenceYear": 1993,
+      "liveryDirection": "yellow with blue Nissan racing bands",
+      "bodywork": "retain K11 round hatch and short rear lamps, modest rally bumper, little arch flares, low roof spoiler, white small rally wheels and mud flaps",
+      "identityNotes": "Nissan Micra K11 pre-facelift Super S three-door. Correct tail lamps: SHORT compact vertically stacked rounded corner clusters entirely BELOW rear window lower edge, at bumper/tailgate level. NO long rear lamps climbing beside the rear window or roof pillar. High rounded roof, short tall bonnet, small square-rounded front headlights, not sport-coupe profile. Preserve Super S bumper and original small silver wheels."
     },
     {
       "key": "primera",
@@ -6217,14 +6925,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Primera Superturismo",
+      "referenceYear": 1999,
+      "liveryDirection": "red white and black Nissan touring graphics",
+      "bodywork": "retain approved Primera generation exactly, real touring bumper and skirts, widened arch lips, large boot wing and white racing wheels",
+      "identityNotes": "Nissan Primera P11 GT four-door saloon, long boot, small rear wing and narrow rectangular lamps."
     },
     {
       "key": "r32",
@@ -6269,14 +6983,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Skyline GT-R R32 Gruppo A",
+      "referenceYear": 1990,
+      "liveryDirection": "Calsonic blue with white racing panels",
+      "bodywork": "actual R32 Group A front ducting and splitter, side skirts, broad arch lips, low racing boot spoiler and white racing wheels",
+      "identityNotes": "Nissan Skyline GT-R R32 two-door coupe, understated boxy arches, slim rectangular lamps and fixed rear wing."
     },
     {
       "key": "r33",
@@ -6321,14 +7041,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Skyline GT-R LM",
+      "referenceYear": 1995,
+      "liveryDirection": "white blue and red Nismo Le Mans scheme",
+      "bodywork": "real R33 LM front bumper and wide arch kit, bonnet vents, tall rear wing and silver racing wheels; R33 identity retained",
+      "identityNotes": "Nissan Skyline GT-R R33 two-door coupe, rounded larger body, oval-ish rectangular lights, raised rear wing."
     },
     {
       "key": "sunny",
@@ -6373,14 +7099,20 @@
           "logo": "Nissan.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Sunny GTi-R Gruppo A",
+      "referenceYear": 1992,
+      "liveryDirection": "white blue and red Nissan Motorsport Europe",
+      "bodywork": "real N14 GTi-R rally front bumper and bonnet vents, modest arch extensions, roof wing, white rally wheels and mud flaps",
+      "identityNotes": "Nissan Sunny/Pulsar GTI-R N14 three-door hatch, large bonnet scoop and roof spoiler, NOT sedan."
     },
     {
       "key": "astrac",
@@ -6425,14 +7157,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Astra Coupé V8 DTM",
+      "referenceYear": 2000,
+      "liveryDirection": "yellow white and black Opel Motorsport",
+      "bodywork": "real Astra G COUPE DTM widebody, large front splitter and side skirts, tall flat rear wing and white racing wheels; no hatchback substitution",
+      "identityNotes": "Opel Astra G Bertone two-door coupe, swept roof and short stepped boot, slim headlamps."
     },
     {
       "key": "astrag",
@@ -6477,14 +7215,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Astra GSi Kit Car",
+      "referenceYear": 1996,
+      "liveryDirection": "white yellow and grey Opel Motorsport",
+      "bodywork": "real Astra F hatch wide arches, deeper rally front bumper, roof vent and hatch wing, white rally wheels",
+      "identityNotes": "Opel Astra F GSi three-door hatch, original angular rectangular headlights, bonnet vents, not Astra G."
     },
     {
       "key": "opc",
@@ -6529,14 +7273,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Astra OPC G · Turismo del club",
+      "referenceYear": 2000,
+      "liveryDirection": "yellow white and black Opel racing bands",
+      "bodywork": "keep Astra G THREE-door HATCH roof, wide arch lips, touring front splitter, side skirts, roof wing and white wheels; never DTM coupe body",
+      "identityNotes": "Opel Astra G OPC three-door hatch, pronounced rounded rectangular headlights, deep sporty front bumper."
     },
     {
       "key": "calibra",
@@ -6581,14 +7331,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Calibra V6 ITC",
+      "referenceYear": 1996,
+      "liveryDirection": "black yellow and white Opel Cliff-style scheme",
+      "bodywork": "actual Calibra ITC wide arches and ducts, low multi-vent bumper, side skirts, tall boot wing and silver racing wheels",
+      "identityNotes": "Opel Calibra long low two-door coupe, very thin horizontal headlights and smooth roof arch."
     },
     {
       "key": "corsa1",
@@ -6633,14 +7389,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Corsa A GSi Gruppo A",
+      "referenceYear": 1990,
+      "liveryDirection": "white yellow and grey Opel racing bands",
+      "bodywork": "retain first Corsa A square shell, small rally arch extensions, period front bumper, short roof spoiler, white compact rally wheels",
+      "identityNotes": "Opel Corsa A GSi three-door hatch, square upright body and small rectangular headlights."
     },
     {
       "key": "corsa2",
@@ -6685,14 +7447,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Corsa B Kit Car",
+      "referenceYear": 1997,
+      "liveryDirection": "white yellow and grey Opel Motorsport",
+      "bodywork": "retain Corsa B rounded three-door hatch, real Kit Car bumper, arch extensions, roof vent and roof spoiler, white rally wheels; never later Corsa C",
+      "identityNotes": "Completely redraw as OPEL CORSA B GSi 16V MK2 THREE-DOOR 1993. Rounded egg-shaped three-door body, steep HIGH rear hatch, large oval almost circular front headlight housings with small outer amber area, narrow split grille around central Opel badge, early GSi smooth bumper with small round fog lights, black arch trim and side mouldings, silver wheels. Rear lamps are the proper broad oval/tapered upright Corsa B clusters flanking the hatch from rear-glass base to bumper, NEVER skinny roof-pillar strips. Not a Corsa A, not a Peugeot 106. Preserve body generation shown in original white photo."
     },
     {
       "key": "kadett",
@@ -6737,14 +7505,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Kadett GSi Gruppo A",
+      "referenceYear": 1988,
+      "liveryDirection": "white yellow and grey Opel racing bands",
+      "bodywork": "retain Kadett E steep sloping rear hatch, period rally bumper and flares, hatch spoiler, white compact rally wheels and mud flaps",
+      "identityNotes": "Opel Kadett E GSi THREE-DOOR. Rear hatch window is MUCH MORE RAKED: strong diagonal descending roof/glass from the rear roof to short tail, with a thick triangular C-pillar; not a vertical station wagon or upright generic hatch. Very broad single front side door and triangular rear side glass, NO rear door. GSi horizontal rear lip spoiler on hatch lower trailing edge, low horizontal rectangular tail lights. Preserve original white car nose, aero wheel covers and body skirts."
     },
     {
       "key": "manta",
@@ -6789,14 +7563,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Manta 400 Gruppo B",
+      "referenceYear": 1983,
+      "liveryDirection": "white yellow and grey Opel Rothmans-era racing",
+      "bodywork": "real Manta B wide box arches, deep rally front apron with auxiliary lamps, broad boot spoiler, white/silver small rally wheels and mud flaps",
+      "identityNotes": "Opel Manta B GSi coupe, four round headlamps, angular long bonnet and two-slot upper grille."
     },
     {
       "key": "omega",
@@ -6841,14 +7621,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Omega 3000 Evo 500 DTM",
+      "referenceYear": 1991,
+      "liveryDirection": "white yellow and grey Opel Motorsport",
+      "bodywork": "retain Omega A FOUR-door saloon, Evo 500-style touring bumper and square arch extensions, tall boot wing, white racing wheels; no engine swap",
+      "identityNotes": "Lotus Omega/Carlton four-door large saloon, deep front bumper, boxed arches and prominent boot wing, not standard Omega."
     },
     {
       "key": "speedster",
@@ -6893,14 +7679,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Speedster · Coppa del club",
+      "referenceYear": 2001,
+      "liveryDirection": "silver yellow and black Opel period racing",
+      "bodywork": "retain open Speedster roadster, low front splitter, small arch extensions, roll-over/cage treatment, flat rear wing and silver lightweight wheels",
+      "identityNotes": "Opel Speedster open two-seat low mid-engine roadster, sharp angular panels, upright cabin and large black side inlet."
     },
     {
       "key": "tigra",
@@ -6945,14 +7737,20 @@
           "logo": "Opel.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Tigra A · Rally del club",
+      "referenceYear": 1997,
+      "liveryDirection": "white yellow and grey Opel racing bands",
+      "bodywork": "retain small Tigra A COUPE and bubble roof, modest rally wide arches, deeper bumper, roof vent and wing, white rally wheels; no ice-racing prototype claim",
+      "identityNotes": "First-generation Opel Tigra small rounded coupe, very distinctive sweeping rear quarter glass."
     },
     {
       "key": "zonda",
@@ -6997,14 +7795,20 @@
           "logo": "Pagani.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Zonda C12 S · GT del club",
+      "referenceYear": 2002,
+      "liveryDirection": "silver exposed carbon and Italian tricolour panels",
+      "bodywork": "retain C12 S cabin and original round lamp nose, plausible period GT splitter, mild wider fenders, rear racing wing and silver wheels; never 2003 GR or later Zonda R",
+      "identityNotes": "Early Pagani Zonda C12-family coupe, pointed low nose, grouped oval/round front lamps, long rear body and modest period wing; no later radical Zonda R body."
     },
     {
       "key": "106",
@@ -7049,14 +7853,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "106 S16 Maxi",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue red and yellow Peugeot Sport",
+      "bodywork": "retain second-series 106 lamps, real Maxi wide arches, deep rally bumper, roof vent, rear spoiler, white rally wheels",
+      "identityNotes": "Peugeot 106 S16/GTi facelift three-door hatch, narrow rounded rectangular lamps, sporty colour bumpers."
     },
     {
       "key": "rallye",
@@ -7101,14 +7911,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "106 Rallye 1.3 Gruppo A",
+      "referenceYear": 1993,
+      "liveryDirection": "white with blue red yellow Peugeot Sport bands",
+      "bodywork": "FIRST-series narrow rectangular front lamps retained, period rally bumper, mild arch lips, small roof spoiler and white compact wheels; not facelift Maxi nose",
+      "identityNotes": "Peugeot 106 Rallye first-series three-door hatch, thin angular lamps, WHITE steel wheels and subtle factory stripe decals preserved as unpainted details."
     },
     {
       "key": "205",
@@ -7153,14 +7969,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "205 GTi Gruppo A",
+      "referenceYear": 1988,
+      "liveryDirection": "white with blue yellow and red Talbot Sport bands",
+      "bodywork": "retain FRONT-engine GTi hatch, period rally arch lips and front apron, small roof spoiler, white rally wheels; not mid-engine 205 T16",
+      "identityNotes": "Peugeot 205 GTi three-door hatch, black plastic arch trims and red decorative waist strip, keep red trim independent of body paint."
     },
     {
       "key": "206",
@@ -7205,14 +8027,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "206 WRC",
+      "referenceYear": 1999,
+      "liveryDirection": "silver white and red Peugeot Total",
+      "bodywork": "real WRC widened arches, extended racing bumpers, roof vent, large roof wing and white rally wheels",
+      "identityNotes": "Peugeot 206 GTi three-door hatch, large swept triangular headlights and rounded roof."
     },
     {
       "key": "306",
@@ -7257,14 +8085,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "306 Maxi",
+      "referenceYear": 1997,
+      "liveryDirection": "white blue red and yellow Peugeot Sport",
+      "bodywork": "actual Maxi broad arches, front cooling bumper, roof vent, hatch wing, white multi-spoke rally wheels",
+      "identityNotes": "Peugeot 306 GTi three-door hatch, narrow swept front lamps and long single side door."
     },
     {
       "key": "309",
@@ -7309,14 +8143,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "309 GTi Gruppo A",
+      "referenceYear": 1990,
+      "liveryDirection": "white with blue yellow and red Peugeot Talbot bands",
+      "bodywork": "retain 309 longer tail and hatch, rally front bumper, modest flares and rear spoiler, white compact rally wheels; no 205 body",
+      "identityNotes": "Peugeot 309 GTi three-door boxy hatch, long roof and stepped fastback rear, rectangular headlights and dark bumpers."
     },
     {
       "key": "405",
@@ -7361,14 +8201,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "405 Mi16 Superturismo",
+      "referenceYear": 1994,
+      "liveryDirection": "white blue and red Peugeot racing bands",
+      "bodywork": "retain 405 FOUR-door road saloon, touring front bumper, mild flares, skirts and boot wing, white racing wheels; not two-door Pikes Peak prototype",
+      "identityNotes": "Peugeot 405 T16 four-door saloon, squared Pininfarina body, rectangular lamps and modest boot spoiler."
     },
     {
       "key": "406",
@@ -7413,14 +8259,20 @@
           "logo": "Peugeot.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "406 Coupé Silhouette",
+      "referenceYear": 2001,
+      "liveryDirection": "white blue and red Peugeot Esso-style racing",
+      "bodywork": "retain original 406 TWO-door COUPE roof, real period silhouette broad fenders and split bumper, skirts, tall rear wing and silver racing wheels; never BTCC four-door sedan",
+      "identityNotes": "Peugeot 406 COUPE two-door Pininfarina body shown, not the four-door saloon; long smooth roof, thin lamps."
     },
     {
       "key": "911",
@@ -7465,14 +8317,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "911 Carrera RSR Gruppo 4",
+      "referenceYear": 1974,
+      "liveryDirection": "white with red blue period Porsche racing stripes",
+      "bodywork": "retain approved 911 generation and round lamps, period RSR wide arches, front air dam, ducktail/period wing appropriate to road shape, gold mesh racing wheels",
+      "identityNotes": "Porsche 911 Carrera classic G-series 1980s coupe, upright round headlights, narrow fenders and black accordion bumper treatment, no modern body."
     },
     {
       "key": "gt1",
@@ -7517,14 +8375,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "911 GT1-98 Le Mans",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue and red Mobil-style Porsche racing",
+      "bodywork": "retain the APPROVED 1998 GT1-98 very low mid-engine body and oval front lights, real 1998 Le Mans nose ducts and long rear, high GT1 wing and silver centre-lock racing wheels; NEVER the 1996/1997 993-based version",
+      "identityNotes": "1998 Porsche 911 GT1 Straßenversion-style very low mid-engine supercar as source, elongated tail, high wing and oval 996-like front lamps; not an ordinary 911."
     },
     {
       "key": "930",
@@ -7569,14 +8433,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "934 Turbo Gruppo 4",
+      "referenceYear": 1976,
+      "liveryDirection": "orange with black and white racing panels",
+      "bodywork": "retain 930 round headlights and rear engine coupe, real 934 bolt-on flared arches, deep front air dam, whale-tail spoiler, gold mesh wheels; not longtail 935",
+      "identityNotes": "Porsche 930 Turbo classic widebody coupe, upright round lamps, black bumper bellows and whale-tail spoiler."
     },
     {
       "key": "944",
@@ -7621,14 +8491,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "944 Turbo Cup",
+      "referenceYear": 1986,
+      "liveryDirection": "white blue and red Porsche period racing bands",
+      "bodywork": "retain 944 popup lamps and hatch shape, actual Cup front bumper, subtle flares and rear hatch spoiler, silver mesh race wheels",
+      "identityNotes": "Porsche 944 Turbo S angular front-engine hatch coupe, closed pop-up lids and widened rear arches."
     },
     {
       "key": "959",
@@ -7673,14 +8549,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "959 Parigi-Dakar",
+      "referenceYear": 1986,
+      "liveryDirection": "white blue red and gold period Rothmans-style bands",
+      "bodywork": "real 959 rally-raid front bumper and auxiliary lamps, modest raised rally stance, mud flaps, white rally wheels, original 959 integrated rear wing retained",
+      "identityNotes": "Porsche 959 smooth wide 1980s body, faired round front headlights and integrated raised rear spoiler."
     },
     {
       "key": "964",
@@ -7725,14 +8607,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "964 Carrera Cup",
+      "referenceYear": 1992,
+      "liveryDirection": "white with red blue period Porsche racing bands",
+      "bodywork": "actual Cup front splitter and bumper, restrained wide arch lips, correct 964 rear spoiler and silver racing wheels",
+      "identityNotes": "Porsche 964 RS narrowbody coupe, upright round headlights and smooth early-1990s bumpers; no large Turbo whale tail."
     },
     {
       "key": "964t",
@@ -7777,14 +8665,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "964 RSR 3.8",
+      "referenceYear": 1993,
+      "liveryDirection": "white with blue red and yellow Porsche racing panels",
+      "bodywork": "retain 964 front and cabin, RSR wide fenders and front air dam, large fixed rear wing, silver centre-lock racing wheels; own Turbo engine unchanged",
+      "identityNotes": "Porsche 964 Turbo widebody, upright round headlights, large whale tail and smooth bumpers."
     },
     {
       "key": "968",
@@ -7829,14 +8723,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "968 Turbo RS",
+      "referenceYear": 1993,
+      "liveryDirection": "white red and blue Porsche racing bands",
+      "bodywork": "real Turbo RS racing front apron, vented bonnet, wide arch lips, large rear wing, silver multi-piece wheels",
+      "identityNotes": "Porsche 968 Turbo S front-engine coupe, exposed oval pop-up lamp lenses in reference position and raised rear wing."
     },
     {
       "key": "gt2",
@@ -7881,14 +8781,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "993 GT2 R",
+      "referenceYear": 1995,
+      "liveryDirection": "white blue and red Porsche GT racing bands",
+      "bodywork": "actual GT2 R bolt-on wide arch extensions and front ducts, tall rear wing, silver racing centre-lock wheels; 993 nose retained",
+      "identityNotes": "Porsche 993 GT2 wide riveted fender extensions, large raised rear wing and low sloping round headlamps."
     },
     {
       "key": "993",
@@ -7933,14 +8839,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "993 Carrera RSR 3.8",
+      "referenceYear": 1997,
+      "liveryDirection": "white with blue red and yellow Porsche racing panels",
+      "bodywork": "actual 993 RSR front bumper and ducted broad fenders, large rear wing, silver centre-lock wheels",
+      "identityNotes": "Porsche 993 Carrera RS rounded coupe, low sloping round headlights, period lower front apron and small RS rear wing as reference."
     },
     {
       "key": "996",
@@ -7985,14 +8897,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "996 GT3 R",
+      "referenceYear": 1999,
+      "liveryDirection": "white blue and red Porsche GT racing bands",
+      "bodywork": "actual early GT3 R broad front bumper and fenders, deeper splitter, large flat rear wing, silver racing wheels; retain early 996 headlight shape",
+      "identityNotes": "Porsche 996 GT3 first generation, fried-egg integrated headlamps and fixed rear wing, no later 997/991."
     },
     {
       "key": "boxster",
@@ -8037,14 +8955,20 @@
           "logo": "Porsche.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Boxster 986 · Coppa del club",
+      "referenceYear": 2001,
+      "liveryDirection": "silver with red and blue period Porsche bands",
+      "bodywork": "retain 986 roadster, period factory hardtop and cage, low splitter, mild wide arch lips, flat boot wing and silver wheels; no post-2002 Spec Boxster claim",
+      "identityNotes": "First-generation Porsche Boxster 986 open roadster, roof down, oval combined front lamps and side air intake."
     },
     {
       "key": "19",
@@ -8089,14 +9013,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "19 16V Gruppo N",
+      "referenceYear": 1991,
+      "liveryDirection": "white blue and yellow Renault Sport bands",
+      "bodywork": "retain correct THREE-door Renault 19 and sloping rear, period rally bumper, subtle arch lips, small rear spoiler, white rally wheels",
+      "identityNotes": "Renault 19 16V PHASE 2 THREE-DOOR hatch as red original. Correct entire rear quarter: ONE long side door, no rear door/handle; very broad sloping C-pillar and triangular rear side glass; sharply raked hatch with short clipped tail, low slim factory lip spoiler and broad horizontal rear lamps. Not a five-door, not Chamade sedan, not an upright boxy Clio. Keep phase-2 elongated headlamps and original 5-spoke silver wheels."
     },
     {
       "key": "5",
@@ -8141,14 +9071,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "5 GT Turbo Gruppo N",
+      "referenceYear": 1989,
+      "liveryDirection": "white blue and yellow Renault Sport bands",
+      "bodywork": "retain front-engine Supercinque GT Turbo hatch, period bumper and modest flares, small roof spoiler, white small rally wheels; not mid-engine Turbo 2",
+      "identityNotes": "Renault Supercinq 5 GT Turbo three-door hatch, broad grey lower body kit and rectangular lamps; not mid-engine Turbo 2."
     },
     {
       "key": "5maxi",
@@ -8193,14 +9129,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "5 Maxi Turbo Gruppo B",
+      "referenceYear": 1985,
+      "liveryDirection": "blue white and red Philips Renault racing",
+      "bodywork": "real Maxi Turbo broad rear arches and side cooling scoops, deep front bumper with auxiliary lamps, roof vent, large rear wing and white small race wheels",
+      "identityNotes": "Mid-engine Renault 5 Turbo/Turbo 2 silhouette visible in photo, extreme wide rear haunches, side air intakes and rectangular headlamps. Keep reference road-style appearance; no unreferenced rally livery."
     },
     {
       "key": "alpine",
@@ -8245,14 +9187,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Alpine A610 Le Mans",
+      "referenceYear": 1994,
+      "liveryDirection": "blue with orange period racing panels",
+      "bodywork": "retain A610 coupe profile, actual endurance front aero and extra cooling ducts, modest wide arches, fixed rear wing, silver multi-spoke race wheels",
+      "identityNotes": "Renault Alpine A610 wedge coupe, hidden pop-up lamps closed, low front-engine-looking bonnet and long rear glass; NOT modern Alpine A110."
     },
     {
       "key": "clio",
@@ -8297,14 +9245,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Clio Renault Sport Cup",
+      "referenceYear": 2001,
+      "liveryDirection": "white yellow and blue Renault Sport",
+      "bodywork": "retain approved Clio RS172 nose and rear lights, actual Cup front splitter, arch lips, small hatch spoiler and white racing wheels; not later R3 body",
+      "identityNotes": "Renault Clio II Renault Sport 172 PHASE 1 (1999-2001), THREE-DOOR. Correct front headlights to LARGE ROUNDED double-element/teardrop housings, bulging oval outline, not tiny narrow rectangular Clio I lamps and not facelift sharp triangular lamps. Short slim split grille with centre Renault diamond, original RS bumper round fog lamps. Rear lights: correct short broad triangular/oval wedge clusters flanking the hatch BELOW rear glass, red outer area with pale small inset, not tall thin pillar lights. Preserve Clio II bulbous rear glass/rounded tall roof, original silver OZ wheels."
     },
     {
       "key": "williams",
@@ -8349,14 +9303,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Clio Maxi",
+      "referenceYear": 1995,
+      "liveryDirection": "blue and yellow Renault Diac-style racing",
+      "bodywork": "retain first Clio Williams shell, real Maxi wide arches and multi-duct front bumper, roof vent, proper Maxi hatch wing and white/gold racing wheels",
+      "identityNotes": "Precise localized PAINT MATERIAL edit of Renault Clio I Williams THREE-DOOR. Main FRONT BUMPER IS BODY COLOUR, NOT a broad black plastic fascia. Repaint the substantial front bumper main panel surrounding the numberplate, fog lights and intake, its upper fascia and lower apron in the SAME GREEN BODY PAINT shades as the fenders. Leave only genuinely unpainted narrow black rubber rubbing strip, thin lower lip, grille/intake holes, lamp recess interiors and numberplate trim black. Most visible bumper must read painted GREEN, including areas around BOTH square fog lamps and below licence plate. Keep gold Speedline wheels, current three-door shape, headlights, black SIDE rubbing strip and every other detail. Maintain NO REAR SPOILER as explicitly approved correction; DO NOT add a spoiler or large wing from any supporting photo."
     },
     {
       "key": "v6",
@@ -8401,14 +9361,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Clio V6 Trophy",
+      "referenceYear": 1999,
+      "liveryDirection": "yellow blue and white Renault Sport",
+      "bodywork": "real V6 Trophy deep front bumper and side intakes, wide arches, roll cage, racing roof treatment, rear spoiler and white wheels",
+      "identityNotes": "Renault Clio V6 phase 1 wide mid-engine three-door body, huge black rear-side air intake and boxed haunches, not ordinary Clio."
     },
     {
       "key": "laguna",
@@ -8453,14 +9419,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Laguna Superturismo BTCC",
+      "referenceYear": 1997,
+      "liveryDirection": "green yellow and white Williams Renault racing",
+      "bodywork": "real Laguna I touring front splitter and bumper, arch lips, side skirts, large rear wing and white wheels; original Laguna lamp generation preserved",
+      "identityNotes": "Renault Laguna I PHASE 1 five-door liftback, exact dark 1997 original. Correct nose/grille: extremely slim body-colour smooth bridge between elongated rounded headlights, small Renault diamond centred above the slit; narrow paired horizontal black vents either side/under the emblem, NOT a wide black honeycomb mouth between headlights and NOT Clio grille. Broad horizontal lower bumper intake and separate fog-light recesses per front photo. Preserve long flowing Laguna I liftback silhouette and full-size car proportions."
     },
     {
       "key": "megane",
@@ -8505,14 +9477,20 @@
           "logo": "Renault.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Mégane Maxi",
+      "referenceYear": 1996,
+      "liveryDirection": "yellow blue and white Renault Sport",
+      "bodywork": "actual first COUPE Megane Maxi broad arch extensions, deep rally bumper, roof vent, large boot wing and white rally wheels",
+      "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps."
     },
     {
       "key": "114",
@@ -8557,14 +9535,20 @@
           "logo": "Rover.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Metro GTi / Rover 114 Gruppo N",
+      "referenceYear": 1992,
+      "liveryDirection": "white blue and orange Rover Sport-style bands",
+      "bodywork": "retain approved later Metro/Rover 114 body and nose, modest rally apron, small flares, low roof spoiler, white rally wheels; never Group B 6R4 body",
+      "identityNotes": "Rover Metro/114 GTi small angular three-door hatch, rectangular lamps and upright tail."
     },
     {
       "key": "220",
@@ -8609,14 +9593,20 @@
           "logo": "Rover.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "220 Turbo Tomcat Cup",
+      "referenceYear": 1993,
+      "liveryDirection": "blue yellow and white Rover Sport",
+      "bodywork": "real Tomcat COUPE Cup front splitter, mild arch lips, skirts, low boot wing and silver mesh racing wheels",
+      "identityNotes": "Rover 220 Turbo Tomcat two-door coupe, long rounded roof, slim rectangular lamps and small rear wing."
     },
     {
       "key": "93",
@@ -8661,14 +9651,20 @@
           "logo": "Saab.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "9-3 Viggen Pikes Peak",
+      "referenceYear": 2000,
+      "liveryDirection": "black yellow and white Saab racing",
+      "bodywork": "retain 9-3 hatch identity, period Eklund extreme wide fenders and deep splitter, large braced rear wing, silver racing wheels; original engine/drivetrain not changed in game",
+      "identityNotes": "Saab 9-3 Viggen FIRST-generation three-door hatch as reference, wraparound windshield, long sloped tail and sporty body kit, NOT modern sedan."
     },
     {
       "key": "900",
@@ -8713,14 +9709,20 @@
           "logo": "Saab.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "900 Turbo Gruppo A",
+      "referenceYear": 1985,
+      "liveryDirection": "white with blue red Saab racing bands",
+      "bodywork": "retain classic 900 three-door hatch and sloping bonnet, period rally bumper, restrained arch lips, roof spoiler, white small rally wheels",
+      "identityNotes": "Saab 900 NG three-door hatch body as reference, rounded long liftback and rectangular lamps, no modern Saab 9-5."
     },
     {
       "key": "cordoba",
@@ -8765,14 +9767,20 @@
           "logo": "Seat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Córdoba WRC",
+      "referenceYear": 1998,
+      "liveryDirection": "yellow green and white Seat racing",
+      "bodywork": "real Cordoba WRC broad arches, rally front bumper, roof vent, large boot wing, white multi-spoke rally wheels",
+      "identityNotes": "Seat Cordoba first-generation facelift TWO-door notchback saloon as reference, not five-door Ibiza."
     },
     {
       "key": "ibiza",
@@ -8817,14 +9825,20 @@
           "logo": "Seat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Ibiza Cupra R · Kit Car",
+      "referenceYear": 2001,
+      "liveryDirection": "yellow blue and red Seat period racing",
+      "bodywork": "retain approved Cupra R nose and THREE-door shell, period Ibiza Kit Car-style wide arches and bumper, roof vent and rear spoiler, white racing wheels; do not swap to older nose",
+      "identityNotes": "Seat Ibiza Cupra R 6K facelift three-door hatch, narrow lamps, deep bumper and period small wheels."
     },
     {
       "key": "leon",
@@ -8869,14 +9883,20 @@
           "logo": "Seat.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "León Supercopa",
+      "referenceYear": 2002,
+      "liveryDirection": "yellow white and black Seat Sport",
+      "bodywork": "real first-generation 1M Supercopa front bumper and wide arches, side skirts, tall boot wing, white racing wheels; five-door shell retained",
+      "identityNotes": "Seat Leon 1M first-generation five-door hatch, narrow lights and raised rounded roof, NOT later Leon."
     },
     {
       "key": "octavia",
@@ -8921,14 +9941,20 @@
           "logo": "Skoda.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Octavia WRC",
+      "referenceYear": 1999,
+      "liveryDirection": "white green and red Škoda Motorsport",
+      "bodywork": "actual Octavia I WRC bumpers and broad arches, roof vent, large boot wing, white rally wheels and mud flaps",
+      "identityNotes": "Skoda Octavia RS first-generation five-door liftback with saloon silhouette, rectangular lamps, subtle boot wing."
     },
     {
       "key": "22b",
@@ -8973,14 +9999,20 @@
           "logo": "Subaru.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Impreza WRC due porte",
+      "referenceYear": 1997,
+      "liveryDirection": "blue with yellow Subaru rally graphics",
+      "bodywork": "retain 22B TWO-door shell and flattened upper rear wheel arches, real WRC bumper, roof vent, tall rear wing and gold rally wheels; never four-door body",
+      "identityNotes": "Subaru Impreza 22B STi TWO-DOOR widebody coupe. Correct rear arch flare to distinctive rally-derived BROAD FACETED BLISTER with a STRAIGHT FLATTENED upper shoulder/crease and angular taper into quarter panel, not a smooth circular swollen bubble. Wheel opening upper arc is subtly flattened and flare sides broad angular; do not square off the tyre. Preserve long single doors, broad body, bonnet scoop, tall proper 22B rear wing, gold BBS wheels."
     },
     {
       "key": "impreza",
@@ -9025,14 +10057,20 @@
           "logo": "Subaru.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Impreza 555 Gruppo A",
+      "referenceYear": 1995,
+      "liveryDirection": "blue with yellow Subaru 555-style graphics",
+      "bodywork": "retain FOUR-door GC8 Impreza GT body, real Group A rally bumper, bonnet and roof vents, boot wing and gold compact rally wheels",
+      "identityNotes": "Subaru Impreza GT GC8 FOUR-door saloon, bonnet scoop and modest wing, narrower than 22B."
     },
     {
       "key": "legacy",
@@ -9077,14 +10115,20 @@
           "logo": "Subaru.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Legacy RS Gruppo A",
+      "referenceYear": 1993,
+      "liveryDirection": "blue with yellow Subaru rally bands",
+      "bodywork": "retain approved first Legacy body, period rally bumper and modest arch kit, boot spoiler, roof vent, gold small rally wheels; no Impreza roof swap",
+      "identityNotes": "Subaru Legacy BC first-generation four-door boxy saloon, thin rectangular lamps and long boot."
     },
     {
       "key": "svx",
@@ -9129,14 +10173,20 @@
           "logo": "Subaru.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "SVX · GT del club",
+      "referenceYear": 1993,
+      "liveryDirection": "silver blue and red Subaru period racing bands",
+      "bodywork": "retain SVX low coupe and distinctive window-within-window glazing, GT front air dam, broad arch lips, flat rear wing, silver racing wheels",
+      "identityNotes": "Subaru SVX low two-door coupe with distinctive window-within-window side glazing and dark roof canopy."
     },
     {
       "key": "swift",
@@ -9181,14 +10231,20 @@
           "logo": "Suzuki.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Swift GTi Gruppo A",
+      "referenceYear": 1989,
+      "liveryDirection": "white blue and red Suzuki Sport",
+      "bodywork": "retain correct Swift three-door shell and short rear lights, small rally bumper and flares, little roof spoiler, white compact wheels and mud flaps",
+      "identityNotes": "Suzuki Swift GTi SF413 / second generation 1991 THREE-DOOR. Correct rear lamps to LOW BROAD HORIZONTAL red/amber rectangular corner clusters below the rear glass, wrapping slightly onto side and aligned with hatch lower panel. NO tall vertical lights alongside roof pillars. Preserve sloping rear hatch, black glass surround, small stock rear lip, short pointed bonnet, slim lamps and factory silver multi-spoke wheels from orange original."
     },
     {
       "key": "sainz",
@@ -9233,14 +10289,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Celica ST185 Gruppo A",
+      "referenceYear": 1992,
+      "liveryDirection": "white red and green Castrol Toyota",
+      "bodywork": "retain ST185 rounded nose and pop-up lamp identity, real rally bumper, bonnet vent, period rear spoiler, white rally wheels and mud flaps",
+      "identityNotes": "Toyota Celica ST185 Carlos Sainz GT-Four liftback, pop-up lamps closed, bonnet vents and modest rear spoiler."
     },
     {
       "key": "gtfour",
@@ -9285,14 +10347,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Celica ST205 Gruppo A",
+      "referenceYear": 1995,
+      "liveryDirection": "white red and green Castrol Toyota",
+      "bodywork": "real ST205 four round front lights, rally bumper and bonnet vents, roof vent, tall rear wing and white rally wheels",
+      "identityNotes": "Toyota Celica ST205 GT-Four, FOUR round front lights, bonnet scoop, aggressive front bumper and large wing."
     },
     {
       "key": "celica",
@@ -9337,14 +10405,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Celica TS · Turismo del club",
+      "referenceYear": 2001,
+      "liveryDirection": "white red and green Toyota period racing bands",
+      "bodywork": "retain T230 triangular headlights and angular coupe roof, plausible period touring wide arches and splitter, skirts, rear wing and white racing wheels; no unverified post-2002 GT300 claim",
+      "identityNotes": "Toyota Celica seventh-generation T23 TS coupe liftback, sharp wedge nose and tall triangular headlights, not GT86."
     },
     {
       "key": "corolla",
@@ -9389,14 +10463,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Corolla GT-i Gruppo A",
+      "referenceYear": 1989,
+      "liveryDirection": "white red and black Toyota Team Europe",
+      "bodywork": "retain approved AE92 hatch and rectangular nose, period rally bumper and modest flares, roof spoiler, white compact rally wheels",
+      "identityNotes": "Toyota Corolla AE92 GT-i THREE-door hatch as reference, angular roof, rectangular lights and black waist trim."
     },
     {
       "key": "mr2",
@@ -9441,14 +10521,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "MR2 SW20 JGTC GT300",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue and pink Japanese GT racing bands",
+      "bodywork": "retain SW20 MR2 coupe and pop-up lamp identity, actual period GT broad arch kit, deep front ducts, high rear wing and white race wheels",
+      "identityNotes": "Toyota MR2 SW20 mid-engine closed coupe, pop-up lamps closed and side air scoop behind door."
     },
     {
       "key": "mrs",
@@ -9493,14 +10579,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "MR-S JGTC GT300",
+      "referenceYear": 2000,
+      "liveryDirection": "white orange and black Autobacs-style racing",
+      "bodywork": "real ZZW30 MR-S racing hard roof, wide fenders, deep front bumper, side ducts, tall rear wing and white racing wheels; roadster identity retained",
+      "identityNotes": "Toyota MR-S/MR2 ZZW30 open roadster, roof down, large upright rounded headlamps and side air inlet."
     },
     {
       "key": "supra3",
@@ -9545,14 +10637,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Supra A70 Gruppo A",
+      "referenceYear": 1988,
+      "liveryDirection": "white and blue Minolta Toyota racing",
+      "bodywork": "actual A70 low front bumper and splitter, modest arch lips, skirts, period rear hatch spoiler and silver/gold mesh wheels; pop-up lamp shell retained",
+      "identityNotes": "Toyota Supra A70/Mk3 long wedge liftback coupe, pop-up lamps closed and long wraparound rear glass."
     },
     {
       "key": "supra4",
@@ -9597,14 +10695,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Supra A80 GT500",
+      "referenceYear": 1997,
+      "liveryDirection": "white green and red Castrol TOM'S",
+      "bodywork": "actual JGTC Supra broad fenders, large front cooling intakes, bonnet ducts, tall rear wing and white centre-lock racing wheels; A80 roof and round rear lamps retained",
+      "identityNotes": "Toyota Supra A80/Mk4 coupe, long rounded nose, multi-element oval lamps and large curved rear wing."
     },
     {
       "key": "trueno",
@@ -9649,14 +10753,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Sprinter Trueno AE86 Gruppo A",
+      "referenceYear": 1985,
+      "liveryDirection": "white red and black Toyota racing graphics",
+      "bodywork": "retain AE86 pop-up lamp hatch/coupe exactly as approved, period air dam and small flares, modest rear spoiler, silver compact race wheels",
+      "identityNotes": "Toyota Sprinter Trueno AE86 THREE-door liftback, pop-up lamps closed, 1980s wedge and black lower panda trim. Not Levin fixed-headlamp or notchback."
     },
     {
       "key": "yaris",
@@ -9701,14 +10811,20 @@
           "logo": "Toyota.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Yaris Super1600",
+      "referenceYear": 2001,
+      "liveryDirection": "white red and black Toyota Motorsport",
+      "bodywork": "actual first Yaris rally wide arch kit, deeper bumper, roof vent and hatch wing, white rally wheels; no later Yaris generation",
+      "identityNotes": "Toyota Yaris T Sport first-generation XP10 THREE-door hatch, tall round roof, large vertical-ish headlamp units."
     },
     {
       "key": "cerbera",
@@ -9753,14 +10869,20 @@
           "logo": "Tvr.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Cerbera · GT del club",
+      "referenceYear": 1999,
+      "liveryDirection": "British green with yellow and white racing panels",
+      "bodywork": "retain standard Cerbera coupe cabin and nose, period GT wide arches, deep splitter, broad rear wing and silver mesh race wheels; no Tuscan body swap",
+      "identityNotes": "TVR Cerbera low flowing two-door coupe, small circular/oval headlights and long bonnet, not Griffith convertible."
     },
     {
       "key": "speed12",
@@ -9805,14 +10927,20 @@
           "logo": "Tvr.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "gt",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Cerbera Speed 12 GTS",
+      "referenceYear": 2000,
+      "liveryDirection": "purple with white and silver TVR racing panels",
+      "bodywork": "actual period Speed 12 racing extreme arch kit, deep front and rear ducts, large braced rear wing, silver racing wheels; no engine power imported",
+      "identityNotes": "TVR Cerbera Speed 12 wide supercar as source, deep huge front grille and grouped circular lamps, large rear aero. Keep visible source aero; do not invent modern TVR."
     },
     {
       "key": "850t",
@@ -9857,14 +10985,20 @@
           "logo": "Volvo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "850 Estate Superturismo BTCC",
+      "referenceYear": 1994,
+      "liveryDirection": "white blue and yellow Volvo racing",
+      "bodywork": "retain approved 850 ESTATE STATION WAGON with long cargo section, actual 1994 BTCC estate front splitter and bumper, subtle arch lips, skirts, small roof spoiler and white racing wheels; NEVER a saloon",
+      "identityNotes": "Volvo 850 Turbo ESTATE station wagon as source, rectangular body, roof rails, long square cargo section; not saloon."
     },
     {
       "key": "s40",
@@ -9909,14 +11043,20 @@
           "logo": "Volvo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "S40 Superturismo BTCC",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue and yellow Volvo racing",
+      "bodywork": "actual first S40 touring bumper and low splitter, widened arch lips, side skirts, large boot wing and white racing wheels",
+      "identityNotes": "Volvo S40 T4 first-generation four-door saloon, small rectangular lamps and boxy boot."
     },
     {
       "key": "s60",
@@ -9961,14 +11101,20 @@
           "logo": "Volvo.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "touring",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "S60 Superturismo ETCC",
+      "referenceYear": 2002,
+      "liveryDirection": "blue white and yellow Volvo racing",
+      "bodywork": "actual first S60 touring front splitter and ducts, widened arch lips, side skirts, boot wing and white wheels; no later S60 racing body",
+      "identityNotes": "Volvo S60 first-generation four-door saloon, pronounced rounded shoulders and curved roof, not later S60."
     },
     {
       "key": "corrado",
@@ -10013,14 +11159,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "club",
+      "candidate": "Corrado VR6 · Coppa del club",
+      "referenceYear": 1993,
+      "liveryDirection": "white blue and red VW Motorsport period bands",
+      "bodywork": "retain Corrado coupe and wedge hatch, deep front apron, modest arch lips, skirts, raised rear wing, silver mesh wheels; no invented official DTM identity",
+      "identityNotes": "Volkswagen Corrado VR6 two-door low hatch coupe, rectangular headlamps and short blunt nose."
     },
     {
       "key": "g60",
@@ -10065,14 +11217,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Golf G60 · Gruppo A",
+      "referenceYear": 1990,
+      "liveryDirection": "white blue and red VW Motorsport",
+      "bodywork": "retain exact approved Golf II nose and lamp count, period rally apron, squared arch extensions, low roof spoiler and white rally wheels; no drivetrain swap",
+      "identityNotes": "Volkswagen Golf Mk2 G60 three-door hatch, FOUR circular front lights and black arch trims as reference."
     },
     {
       "key": "gti1",
@@ -10117,14 +11275,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Golf GTI Gruppo 2",
+      "referenceYear": 1976,
+      "liveryDirection": "white blue red and yellow VW Motorsport bands",
+      "bodywork": "retain Golf I shell, period bolt-on arch flares, deep front air dam, compact silver/gold mesh rally wheels, mud flaps and small roof lip",
+      "identityNotes": "Volkswagen Golf Mk1 GTI three-door small angular hatch, round front lamps and black bumper/arch trims."
     },
     {
       "key": "gti4",
@@ -10169,14 +11333,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Golf IV GTI Kit Car",
+      "referenceYear": 1999,
+      "liveryDirection": "white blue and red Volkswagen Motorsport",
+      "bodywork": "actual Golf IV Kit Car wide arch kit, deep rally bumper, roof vent, large hatch spoiler and white racing wheels",
+      "identityNotes": "Volkswagen Golf Mk4 GTI three-door rounded hatch, clear multi-element rectangular lamps."
     },
     {
       "key": "vr6",
@@ -10221,14 +11391,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Golf III GTI Kit Car",
+      "referenceYear": 1996,
+      "liveryDirection": "white blue and green VW Motorsport",
+      "bodywork": "retain Golf III VR6 body and real nose, period Kit Car wide arches, deep bumper, roof vent and wing, white rally wheels; VR6 engine stays untouched",
+      "identityNotes": "Volkswagen Golf Mk3 VR6 three-door hatch, original broad rectangular headlamps, not Mk4."
     },
     {
       "key": "lupo",
@@ -10273,14 +11449,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "Lupo Cup",
+      "referenceYear": 1998,
+      "liveryDirection": "white blue and red VW Motorsport",
+      "bodywork": "actual Lupo Cup low bumper and front splitter, restrained wide arch lips, modest roof spoiler, roll cage and white small racing wheels",
+      "identityNotes": "Volkswagen Lupo GTI tiny three-door hatch, round lamps and short rounded nose, not modern up!."
     },
     {
       "key": "beetle",
@@ -10325,14 +11507,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "cup",
+      "researchStatus": "reference-reviewed",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "historic",
+      "candidate": "New Beetle Cup",
+      "referenceYear": 1999,
+      "liveryDirection": "yellow blue and white Volkswagen racing",
+      "bodywork": "real rounded NEW Beetle Cup body, flared arches, deep front bumper, small rear wing and silver race wheels; never classic Beetle Fun Cup shell",
+      "identityNotes": "Volkswagen New Beetle first-generation 1990s closed coupe, circular roof and round fender lamps; retain reference rear wing, not original classic Beetle."
     },
     {
       "key": "polo",
@@ -10377,14 +11565,20 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Polo Super1600",
+      "referenceYear": 2001,
+      "liveryDirection": "white blue and red Volkswagen Motorsport",
+      "bodywork": "retain approved Polo 6N2 nose, actual period wide arch kit, deep rally bumper, roof vent and hatch wing, white rally wheels",
+      "identityNotes": "Volkswagen Polo GTI 6N2 three-door hatch, rectangular lamps and small classic grille, not current Polo."
     },
     {
       "key": "scirocco",
@@ -10429,14 +11623,31 @@
           "logo": "Vw.png"
         }
       },
-      "profile": "club",
-      "researchStatus": "pending",
+      "profile": "rally",
+      "researchStatus": "interpretation",
       "historicalVariant": null,
       "historicalYear": null,
       "historicalSources": [],
       "imageReferences": [],
       "artwork": null,
-      "artRevision": 0
+      "artRevision": 0,
+      "classification": "inspired",
+      "candidate": "Scirocco 16V Gruppo A",
+      "referenceYear": 1985,
+      "liveryDirection": "white blue and red Volkswagen racing bands",
+      "bodywork": "retain Scirocco II wedge coupe and original lamp arrangement, period rally air dam, mild arch extensions, low rear spoiler and silver compact racing wheels; no 2008 car",
+      "identityNotes": "Volkswagen Scirocco Mk2 angular two-door hatch coupe, FOUR rectangular front lamps and long sharp wedge profile, not later Mk3."
     }
-  ]
+  ],
+  "decisions": {
+    "accepted": true,
+    "periodCutoff": 2002,
+    "historicalWhenDocumented": true,
+    "allowDeclaredPeriodInterpretations": true,
+    "dedicatedLiveries": true,
+    "physicalBodyworkChanges": true,
+    "eventualConversionPermanent": true,
+    "eventualAllRaceModes": true,
+    "previewOnly": true
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "key": "corolla",
+  "brand": "Toyota",
+  "name": "Corolla GT-i",
+  "candidate": "Corolla GT-i Gruppo A",
+  "classification": "inspired",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://www.toyota.fr/content/dam/toyota/nmsc/france/discover-toyota/heritage-sportif/corolla/CorollaAE92-Profile-FULL_tcm-18-795703.jpg.thumb.1280.1280.png",
+      "page": "https://www.toyota.fr/decouvrez-toyota/heritage-sportif/corolla",
+      "title": "Toyota | Les sportives Toyota à travers l'histoire | COROLLA",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

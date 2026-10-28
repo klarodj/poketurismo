@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "A112 Abarth Trofeo",
+  "livery": "red and black with white racing roundel",
+  "bodywork": "small square arch extensions, period rally apron, black bonnet, silver 13-inch rally wheels, mud flaps; no GT wing",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/a112/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/a112-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://public.carjager.com/images/production/CJVCL2608251427IEA-exteriors-IcR7J7X9Kq8WeVvrfvSNN-a112",
+      "page": "https://www.carjager.com/en/buy/collection-car/autobianchi-a112-series-6-abarth-CJVCL2608251427IEA.html",
+      "title": "AUTOBIANCHI A112 Series 6 Abarth 1984 used St Vincent de Tyrosse (40230) | Carjager",
+      "description": "A striking red 1984 Autobianchi A112 Series 6 Abarth is showcased with authentic rally decals from Motul, Total, Michelin, and Chardonnet. The compact hatchback sits on black alloy wheels and features additional front spotlights, a black leather interior with bucket seats, and USB connectivity. Visible branding includes Sabelt, Akrapovic, Brembo, and Bilstein, highlighting its performance pedigree.\n\nThis classic A112 has been fully restored and driven only 1,500 km. Under the hood, a 70 hp engine with a Weber 30 carburetor and reinforced running gear ensures spirited driving. Located in St Vincent de Tyrosse, France, the car comes with optional concierge services, transport logistics, and a comprehensive independent inspection for prospective buyers.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Autobianchi A112 Abarth, racing preparation referencing A112 Abarth Trofeo (1977). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: AUTOBIANCHI A112 Series 6 Abarth 1984 used St Vincent de Tyrosse (40230) | Carjager. Its description: A striking red 1984 Autobianchi A112 Series 6 Abarth is showcased with authentic rally decals from Motul, Total, Michelin, and Chardonnet. The compact hatchback sits on black alloy wheels and features additional front spotlights, a black leather interior with bucket seats, and USB connectivity. Visible branding includes Sabelt, Akrapovic, Brembo, and Bilstein, highlighting its performance pedigree.\n\nThis classic A112 has been fully restored and driven only 1,500 km. Under the hood, a 70 hp engine with a Weber 30 carburetor and reinforced running gear ensures spirited driving. Located in St Vincent de Tyrosse, France, the car comes with optional concierge services, transport logistics, and a comprehensive independent inspection for prospective buyers.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Autobianchi A112 Abarth, tiny three-door upright hatch, two round headlights, period black trims/bonnet if visible.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: small square arch extensions, period rally apron, black bonnet, silver 13-inch rally wheels, mud flaps; no GT wing. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red and black with white racing roundel. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "a112",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b7d7ff92-0727-49e9-84bd-3469d1329605.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/a112.png",
+  "sourceSha256": "a4fe1495ffdc7760ed29ffc40928f7573fef80c9a879e7b7114c281c66cb102b",
+  "input": "tools/race-conversions/inputs/a112.png",
+  "output": "public/images/race-cars/a112.png",
+  "sha256": "8cbb8de0ad16b913bdee4760c119561c44f480e5a35538e0753c05846f7ceae5",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/a112/rosso.png",
+      "sha256": "d3307aa1cfb63ed233a012c26146926a495303b8a34b3f77abf07dcbd532331d"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/a112-web-1.img",
+      "sha256": "620c531a26aa3800cadc6d046899cce0873d1e73a61075d6373d5c2ae2e9e725"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "key": "dedra",
+  "prompt": "Use case: stylized-concept. Asset type: one automotive RPG racing conversion sprite, Northern Italy circa 2002. Draw Lancia Dedra Turbo (1991), transformed into a credible PERIOD club racing car. This is explicitly a fictional but historically plausible 2002 preparation, NOT a claim of a factory race version. Reference 1 is the APPROVED ROAD PIXEL MODEL: preserve its exact vehicle identity, roof, door count, glass shape, headlights and rear-lamp anatomy, and front-left camera. Reference 2 is the REAL ORIGINAL STOCK PHOTOGRAPH: use it to confirm the precise model generation and proportions. Reference 3 is STYLE/CAMERA ONLY; NEVER copy the Fiat Punto shape. CRITICAL MODEL IDENTITY: Lancia Dedra Turbo four-door compact saloon, slim rectangular headlamps and chrome-edged trapezoid grille. Those road-car instructions that prohibit wings/arches are superseded ONLY for the requested racing conversion; body identity and correct tail remain locked. PHYSICAL BODYWORK, MUST BE VISIBLY DIFFERENT FROM STOCK, not just paint: retain boxy Dedra FOUR-door saloon, touring bumper, square arch lips, side skirts, medium boot wing, white multi-spoke wheels; no invented factory DTM story. Purposeful motorsport stance, period race tyres, visible dark roll-cage through glass where suitable. Dedicated livery: white with blue and red Italian racing bands. Add coherent restrained 1990s racing number panels and tiny period-style sponsor marks; do NOT invent an official team or victory story. Use period wheel sizes and correct plausible aero; never modern giant wheels, 2020s canards, LED lights or GT3 body replacements. Keep the original engine bay arrangement and drivetrain implied by stock body; do not turn a front-engined car into a rear-engined prototype. COMPOSITION: one entire car, nose towards lower left, front-left three-quarter approximately 40% front/60% side, wheels straight, true proportions, all aero within a wide 3:1 canvas with generous transparent margins. GENUINE TRANSPARENT background, no people, scenery, ground plane, cast shadow, multiple views, UI, captions or watermark. STYLE: hand-drawn 1990s PC racing game pixel art, logical 320x128 grid, crisp square pixel clusters, dark one-pixel panel seams and stepped outline, compact 5-6-tone shading. No photo filter, vector, 3D render, antialiasing, gradients, blur or noisy textures. The finished car should clearly read as this same exact road model rebuilt for racing, with the listed bumpers, arches, aero and wheels.",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/dedra/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/dedra.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "classification": "club",
+  "candidate": "Dedra Turbo · Turismo del club",
+  "livery": "white with blue and red Italian racing bands",
+  "bodywork": "retain boxy Dedra FOUR-door saloon, touring bumper, square arch lips, side skirts, medium boot wing, white multi-spoke wheels; no invented factory DTM story",
+  "referenceSources": [
+    {
+      "role": "Real original road-car photograph supplied for the game",
+      "file": "tools/paint-prototype/archive/images/car/dedra.png"
+    }
+  ],
+  "generationDate": "2026-10-28",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d93f0f99-4302-48b7-8d77-05475a7b906e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/dedra.png",
+  "sourceSha256": "8424a3dceac2acd60a6230dc8119cb807b46aadb5aac1efcaf1c32f1e577c092",
+  "input": "tools/race-conversions/inputs/dedra.png",
+  "output": "public/images/race-cars/dedra.png",
+  "sha256": "6f863a75104db00e73563c41eb7edd2da6b245da29ee4c02e0a8c0df2574b39c",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/dedra/rosso.png",
+      "sha256": "f31a633f1207be2312c1af0e04376692ecfe7cb2e0e6148aa61ae6509e4e3312"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/dedra.png",
+      "sha256": "5b7bc2e5cee0f98f15b8d06b5057fd1bae1c49378185c625b9c34f279e6ff5e2"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

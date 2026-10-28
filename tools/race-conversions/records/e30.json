@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "M3 E30 Gruppo A DTM",
+  "livery": "white BMW Motorsport, Original BMW Teile style",
+  "bodywork": "real E30 DTM square wide fenders, deep front splitter, side skirts, braced boot wing, gold mesh racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/e30/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/e30-commons-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/BMW_M3_DTM_%28E30%2C_1991%29_%2852568801086%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:BMW_M3_DTM_(E30,_1991)_(52568801086).jpg",
+      "title": "File:BMW M3 DTM (E30, 1991) (52568801086).jpg",
+      "description": "Launch: 1986\nGeneration: First (1986 - 1991)\nEngine: 2,5 litre R4 (petrol)\nPower: 379 PS\nGearbox: 5 speed manual\nLayout: front engine, rear drive\n \nLocation: Essen, Deutschland",
+      "artist": "Charles  from Port Chester, New York",
+      "license": "CC BY 2.0"
+    }
+  ],
+  "photoReview": "Real competition car visually checked against approved road model; keep road identity where variants differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: BMW M3 E30, racing preparation referencing M3 E30 Gruppo A DTM (1990). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL RACING PHOTOGRAPH: File:BMW M3 DTM (E30, 1991) (52568801086).jpg. Its description: Launch: 1986\nGeneration: First (1986 - 1991)\nEngine: 2,5 litre R4 (petrol)\nPower: 379 PS\nGearbox: 5 speed manual\nLayout: front engine, rear drive\n \nLocation: Essen, Deutschland. Use the actual period racing hardware and bodywork rather than inventing generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: . Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real E30 DTM square wide fenders, deep front splitter, side skirts, braced boot wing, gold mesh racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white BMW Motorsport, Original BMW Teile style. Keep small sponsor/number panels coherent with the historical racing reference; simplify tiny lettering into clean pixel marks without UI text. Where the real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "e30",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8dd5a9ec-0241-43fb-a9fa-bf15a878e76a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/e30.png",
+  "sourceSha256": "914f58e22df62eea196c1ba96e3aba0e30902867ff09368efa613a502f4821ac",
+  "input": "tools/race-conversions/inputs/e30.png",
+  "output": "public/images/race-cars/e30.png",
+  "sha256": "7f61d4e2621433d0b0b7a2cdb59d6dbb7bcecda50b8072cf3eeb10a5abaccb98",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/e30/rosso.png",
+      "sha256": "ca654809eec81cbfc201c6fd7f6fa57035b4098c98c88f7d8a9c98d8e5a4aafc"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/e30-commons-0.img",
+      "sha256": "771fda515e2b867fb0e4fb16ac26b3d5bea6e4ac807bda33a1c2da2fcf98bf8f"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

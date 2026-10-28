@@ -1,0 +1,17 @@
+{
+  "key": "beetle",
+  "selected": [
+    {
+      "url": "https://racemarket.net/oc-content/uploads/69/102669.jpg",
+      "page": "https://es.racemarket.net/coches-de-carrera/coches-de-carreras-en-venta/monoplaza/vw-motorsport-new-beetle-cup-i6978",
+      "title": "Single seater race cars for sale - Racemarket.net | Europe's biggest racing marketplace network",
+      "score": 11,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/beetle-web-1.img",
+      "width": 2048,
+      "height": 1380
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Corolla GT-i Gruppo A",
+  "livery": "white red and black Toyota Team Europe",
+  "bodywork": "retain approved AE92 hatch and rectangular nose, period rally bumper and modest flares, roof spoiler, white compact rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/corolla/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/corolla-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.toyota.fr/content/dam/toyota/nmsc/france/discover-toyota/heritage-sportif/corolla/CorollaAE92-Profile-FULL_tcm-18-795703.jpg.thumb.1280.1280.png",
+      "page": "https://www.toyota.fr/decouvrez-toyota/heritage-sportif/corolla",
+      "title": "Toyota | Les sportives Toyota à travers l'histoire | COROLLA",
+      "description": "A white Toyota Corolla GTi hatchback stands prominently in a museum-like setting, flanked by earlier Corolla models and rally references. The GT-i 16 badge on its side, sporty front bumper, side skirts, and alloy wheels underscore its performance pedigree. In the background, a Corolla AE86 Levin and signage reading “Oudtshoorn” and “Aarlanderveen” evoke the model’s rally and drift history.\n\nThe exhibit is part of Toyota France’s heritage showcase, which traces the Corolla’s transformation from a best-selling compact to a bona fide sports car. Detailed metadata describes the AE86’s rear-wheel-drive layout and twin-cam engine, as well as the GTi’s 1.6L 130 hp powerplant, enhanced suspension, ventilated brakes, and aerodynamic enhancements that defined 1980s hot hatches.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Toyota Corolla GT-i, racing preparation referencing Corolla GT-i Gruppo A (1989). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Toyota | Les sportives Toyota à travers l'histoire | COROLLA. Its description: A white Toyota Corolla GTi hatchback stands prominently in a museum-like setting, flanked by earlier Corolla models and rally references. The GT-i 16 badge on its side, sporty front bumper, side skirts, and alloy wheels underscore its performance pedigree. In the background, a Corolla AE86 Levin and signage reading “Oudtshoorn” and “Aarlanderveen” evoke the model’s rally and drift history.\n\nThe exhibit is part of Toyota France’s heritage showcase, which traces the Corolla’s transformation from a best-selling compact to a bona fide sports car. Detailed metadata describes the AE86’s rear-wheel-drive layout and twin-cam engine, as well as the GTi’s 1.6L 130 hp powerplant, enhanced suspension, ventilated brakes, and aerodynamic enhancements that defined 1980s hot hatches.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Toyota Corolla AE92 GT-i THREE-door hatch as reference, angular roof, rectangular lights and black waist trim.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved AE92 hatch and rectangular nose, period rally bumper and modest flares, roof spoiler, white compact rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white red and black Toyota Team Europe. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "corolla",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0b060aa2-8229-4f35-8061-76ebe5aab55a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/corolla-r1.png",
+  "sourceSha256": "3f78fdeaeee741919194f40cf756a3bdbc7045ebb0a95cfefd32c6f5de837b3e",
+  "input": "tools/race-conversions/inputs/corolla.png",
+  "output": "public/images/race-cars/corolla.png",
+  "sha256": "5bfc9d7138752cdb803087d1c8d1f202d89ff832a131641473ac495e46616ab6",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/corolla/rosso.png",
+      "sha256": "d70ca0e2bf98a97ac7b333f1bfffa1f1ad5ff204d1f79bb457693fe141e0c054"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/corolla-web-0.img",
+      "sha256": "bf3eeaa7929c0faca954a38b689585a2d831b2ec7b412cb7f4448fc4dd452eed"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

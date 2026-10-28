@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Micra Super S Challenge",
+  "livery": "yellow with blue Nissan racing bands",
+  "bodywork": "retain K11 round hatch and short rear lamps, modest rally bumper, little arch flares, low roof spoiler, white small rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/micra/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/micra-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://blackwatergraphics.com/cdn/shop/collections/micra_1200x1200.jpg?v=1707903368",
+      "page": "https://blackwatergraphics.com/collections/nissan-micra-challenge",
+      "title": "Nissan Micra Challenge – Blackwater Graphics",
+      "description": "A blue and white Nissan Micra, branded with PIAA and Yokohama logos and bearing the plate P15 NME, powers through a gravel section of a rally stage. The car’s tires throw up a spray of stones as it drifts around a bend, highlighting the skill required to maintain control on loose surfaces.\n\nIn the background, out-of-focus spectators and support vehicles line the course, emphasizing the event’s competitive atmosphere. The combination of sponsor decals, dynamic motion, and rugged terrain encapsulates the excitement of rally racing.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Nissan Micra Super S, racing preparation referencing Micra Super S Challenge (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Nissan Micra Challenge – Blackwater Graphics. Its description: A blue and white Nissan Micra, branded with PIAA and Yokohama logos and bearing the plate P15 NME, powers through a gravel section of a rally stage. The car’s tires throw up a spray of stones as it drifts around a bend, highlighting the skill required to maintain control on loose surfaces.\n\nIn the background, out-of-focus spectators and support vehicles line the course, emphasizing the event’s competitive atmosphere. The combination of sponsor decals, dynamic motion, and rugged terrain encapsulates the excitement of rally racing.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Nissan Micra K11 pre-facelift Super S three-door. Correct tail lamps: SHORT compact vertically stacked rounded corner clusters entirely BELOW rear window lower edge, at bumper/tailgate level. NO long rear lamps climbing beside the rear window or roof pillar. High rounded roof, short tall bonnet, small square-rounded front headlights, not sport-coupe profile. Preserve Super S bumper and original small silver wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain K11 round hatch and short rear lamps, modest rally bumper, little arch flares, low roof spoiler, white small rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow with blue Nissan racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "micra",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2109bd55-06b1-4b9f-8c5b-76065d74912a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/micra.png",
+  "sourceSha256": "b3d0172477c1033d71b3449cf16a8d208596b16542894cedcf8548c8e1d053ea",
+  "input": "tools/race-conversions/inputs/micra.png",
+  "output": "public/images/race-cars/micra.png",
+  "sha256": "d6c17c2d8adc5510375f2492f1e2cb00822faf7d8df0915d2f1dc6158bf1c79e",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/micra/rosso.png",
+      "sha256": "abfe1bcbf4a8af773a727d4dfff59fb3ca3c95121d6c5af939183bdc69242bcd"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/micra-web-1.img",
+      "sha256": "3caf63c83b4341db2d9e38f9b7fcacb9bc8861d93d8074904900d66c2e761019"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

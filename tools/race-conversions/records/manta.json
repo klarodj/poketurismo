@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Manta 400 Gruppo B",
+  "livery": "white yellow and grey Opel Rothmans-era racing",
+  "bodywork": "real Manta B wide box arches, deep rally front apron with auxiliary lamps, broad boot spoiler, white/silver small rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/manta/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/manta-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://am-s3-bucket-assets.s3.eu-west-2.amazonaws.com/silverstone/prod/lot_images/large/REC15520-1/REC15520-1_4.jpg.webp?dummy=1772216719",
+      "page": "https://www.iconicauctioneers.com/1984-opel-manta-400-rec15520-1-silverston-0825",
+      "title": "Iconic Auctioneers | 1984 Opel Manta 400-Sold",
+      "description": "This right-hand drive 1984 Opel Manta 400, finished in Astral Silver, showcases the iconic rally-inspired design that earned the model its cult status. With flared Irmscher wheel arches, a three-piece rear spoiler, and bold '400' decals, the coupe’s aggressive stance and five-spoke alloy wheels reflect its Group B heritage. The UK registration A809 BKU sits below the '400' badge on the rear, while the Opel Blitz logo adorns the interior.\n\nOne of only 12 examples finished in this rare color and trim, this Manta 400 features a Cosworth-head 2.4-litre engine, manual transmission, and just under 30,000 miles on the odometer. It sold for £112,500 at Silverstone Circuit in August 2025, accompanied by a comprehensive ten-page history file documenting its import, ownership, and high-quality restoration.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Opel Manta Gsi, racing preparation referencing Manta 400 Gruppo B (1983). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Iconic Auctioneers | 1984 Opel Manta 400-Sold. Its description: This right-hand drive 1984 Opel Manta 400, finished in Astral Silver, showcases the iconic rally-inspired design that earned the model its cult status. With flared Irmscher wheel arches, a three-piece rear spoiler, and bold '400' decals, the coupe’s aggressive stance and five-spoke alloy wheels reflect its Group B heritage. The UK registration A809 BKU sits below the '400' badge on the rear, while the Opel Blitz logo adorns the interior.\n\nOne of only 12 examples finished in this rare color and trim, this Manta 400 features a Cosworth-head 2.4-litre engine, manual transmission, and just under 30,000 miles on the odometer. It sold for £112,500 at Silverstone Circuit in August 2025, accompanied by a comprehensive ten-page history file documenting its import, ownership, and high-quality restoration.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Opel Manta B GSi coupe, four round headlamps, angular long bonnet and two-slot upper grille.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Manta B wide box arches, deep rally front apron with auxiliary lamps, broad boot spoiler, white/silver small rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white yellow and grey Opel Rothmans-era racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "manta",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9d28ecd1-ad5c-4001-8161-134af4011d15.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/manta-r1.png",
+  "sourceSha256": "08da0d8a8ef3ad1539f9cc3d1949b5794119c7be5a228b3a399987352106226d",
+  "input": "tools/race-conversions/inputs/manta.png",
+  "output": "public/images/race-cars/manta.png",
+  "sha256": "7855ca496f3da2df16a91f4bb1e941cae3939daa13439310b6d2b1c147be2d57",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/manta/rosso.png",
+      "sha256": "cd5f7490cc3f9e9a86ab49bbd1f2cdb2c177752efb568b014724d6a6e77c9c8c"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/manta-web-1.img",
+      "sha256": "5540f9862c958f6350bd5b9ff7eaf2fe60b19d8ee1acccccbc210ee161339ada"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

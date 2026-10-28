@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Bravo HGT · Gruppo N",
+  "livery": "white with red blue Fiat racing bands",
+  "bodywork": "three-door Bravo hatch retained, rally front apron, mild arch lips, small roof spoiler, silver multi-spoke rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/bravo/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/bravo-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://historicdb.fia.com/sites/default/files/styles/750x500_cropped/public/gallery/homologation_form_number_5558_group_n_8.jpeg?itok=Uxfdcmwu",
+      "page": "https://historicdb.fia.com/car/fiat-bravo-hgt-20-20v",
+      "title": "FIA Historic Database",
+      "description": "A black three-door Fiat Bravo HGT 2.0 20V hatchback is presented on a white backdrop, highlighting its sporty alloy wheels, integrated side skirts, and aerodynamic body-colored bumpers. The compact, performance-focused design is evident in its sloping roofline and aggressive front fascia.\n\nThis model was officially homologated under FIA Appendix K regulations on January 2, 1997, with homologation number 5558 for Group N competition. The form lists a 1197 cc engine and remained valid until January 1, 2007, with two transmission-related extensions recorded on March 2, 2002.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Fiat Bravo HGT, racing preparation referencing Bravo HGT · Gruppo N (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: FIA Historic Database. Its description: A black three-door Fiat Bravo HGT 2.0 20V hatchback is presented on a white backdrop, highlighting its sporty alloy wheels, integrated side skirts, and aerodynamic body-colored bumpers. The compact, performance-focused design is evident in its sloping roofline and aggressive front fascia.\n\nThis model was officially homologated under FIA Appendix K regulations on January 2, 1997, with homologation number 5558 for Group N competition. The form lists a 1197 cc engine and remained valid until January 1, 2007, with two transmission-related extensions recorded on March 2, 2002.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: First-generation Fiat Bravo HGT three-door hatch, NOT Brava five-door, slim grille and round-edged horizontal lamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: three-door Bravo hatch retained, rally front apron, mild arch lips, small roof spoiler, silver multi-spoke rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red blue Fiat racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "bravo",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-83cb12b1-951c-4ac3-81f8-fc602dcbe1e1.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/bravo.png",
+  "sourceSha256": "15ca03e8e043bb5b7e86bc491eb30099c229ff53b5af2aaf2e3042dbf1458483",
+  "input": "tools/race-conversions/inputs/bravo.png",
+  "output": "public/images/race-cars/bravo.png",
+  "sha256": "df70651d01b603e6660f4201453054412b1076c72c372bda22acd8ac351eae0e",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/bravo/rosso.png",
+      "sha256": "aadf2b004291d5fb59d402d0ca3e376639422f3133ee4b86360ed9cf46f329ef"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/bravo-web-0.img",
+      "sha256": "30280937cccff607ea92a07db4aa0f6f5930dabb698d8a3a750d1b57eff21b0f"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

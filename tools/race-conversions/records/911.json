@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "911 Carrera RSR Gruppo 4",
+  "livery": "white with red blue period Porsche racing stripes",
+  "bodywork": "retain approved 911 generation and round lamps, period RSR wide arches, front air dam, ducktail/period wing appropriate to road shape, gold mesh racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/911/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/911-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/1732037577217-ZZGGMFSFI9K2D1UQPPFJ/04.jpg",
+      "page": "https://supercarnostalgia.com/blog/one-to-buy-ex-harry-blumer-edwin-kofel-edy-brandenberger-1974-porsche-911-30-carrera-rsr",
+      "title": "One to Buy: ex-Harry Blumer / Edwin Kofel / Edy Brandenberger 1974 Porsche 911 3.0 Carrera RSR — Supercar Nostalgia",
+      "description": "This 1974 Porsche 911 3.0 Carrera RSR, chassis 9114609053, is finished in a striking Kelly Green and carries the number 52 on its doors. Period sponsor decals from Goodyear, Cibié, and Sachs accentuate its wide fenders, deep-dish wheels, and prominent rear wing, hallmarks of the Group 4 Renn Sport specification.\n\nOriginally campaigned by Swiss privateer Harry Blumer to win the 1974 Schweizer Meisterschaft, the car then passed to Edwin Kofel for the 1975–76 seasons before Edy Brandenberger secured a second Swiss championship in 1977. After a final 1978 season, it was stored for nearly two decades and has since undergone a meticulous restoration. Now offered race-ready at Canepa’s Scotts Valley showroom, this RSR remains a testament to Porsche’s 1970s GT racing dominance.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 911 Carrera, racing preparation referencing 911 Carrera RSR Gruppo 4 (1974). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: One to Buy: ex-Harry Blumer / Edwin Kofel / Edy Brandenberger 1974 Porsche 911 3.0 Carrera RSR — Supercar Nostalgia. Its description: This 1974 Porsche 911 3.0 Carrera RSR, chassis 9114609053, is finished in a striking Kelly Green and carries the number 52 on its doors. Period sponsor decals from Goodyear, Cibié, and Sachs accentuate its wide fenders, deep-dish wheels, and prominent rear wing, hallmarks of the Group 4 Renn Sport specification.\n\nOriginally campaigned by Swiss privateer Harry Blumer to win the 1974 Schweizer Meisterschaft, the car then passed to Edwin Kofel for the 1975–76 seasons before Edy Brandenberger secured a second Swiss championship in 1977. After a final 1978 season, it was stored for nearly two decades and has since undergone a meticulous restoration. Now offered race-ready at Canepa’s Scotts Valley showroom, this RSR remains a testament to Porsche’s 1970s GT racing dominance.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Porsche 911 Carrera classic G-series 1980s coupe, upright round headlights, narrow fenders and black accordion bumper treatment, no modern body.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved 911 generation and round lamps, period RSR wide arches, front air dam, ducktail/period wing appropriate to road shape, gold mesh racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red blue period Porsche racing stripes. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "911",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-a7113a07-a35d-44d1-a667-1ad12b2eb5ab.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/911-r1.png",
+  "sourceSha256": "505b29cda71a0fc836b0d9ad2393604abb5913edbed85ee39553812ce2192ce6",
+  "input": "tools/race-conversions/inputs/911.png",
+  "output": "public/images/race-cars/911.png",
+  "sha256": "1824d89ba125520c991c873abc1ed48a3d8f0e781accfcb397f9acbaaba2d63a",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/911/rosso.png",
+      "sha256": "75e20c400356ed51cd4186277f8421671ab71c3fdba205ffc3e4d36fd266549c"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/911-web-0.img",
+      "sha256": "77dea6cd88bdf2e5654ae89e06b87828816f498e3e1d798cf6f98a98c7c18f04"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

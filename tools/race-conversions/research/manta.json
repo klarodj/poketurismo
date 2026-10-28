@@ -1,0 +1,18 @@
+{
+  "key": "manta",
+  "brand": "Opel",
+  "name": "Manta Gsi",
+  "candidate": "Manta 400 Gruppo B",
+  "classification": "inspired",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://am-s3-bucket-assets.s3.eu-west-2.amazonaws.com/silverstone/prod/lot_images/large/REC15520-1/REC15520-1_4.jpg.webp?dummy=1772216719",
+      "page": "https://www.iconicauctioneers.com/1984-opel-manta-400-rec15520-1-silverston-0825",
+      "title": "Iconic Auctioneers | 1984 Opel Manta 400-Sold",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "key": "octavia",
+  "selected": [
+    {
+      "url": "https://cdn.skoda-storyboard.com/2021/02/01_SKODA_OCTAVIA_WRC-2560x1709.jpg",
+      "page": "https://www.skoda-storyboard.com/en/press-kits/skoda-fabia-covered-drive-press-kit/120-years-of-skoda-motorsport-120-years-of-passion/attachment/01_skoda_octavia_wrc/",
+      "title": "ŠKODA OCTAVIA WRC - Škoda Storyboard",
+      "score": 9,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/octavia-web-0.img",
+      "width": 2560,
+      "height": 1709
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

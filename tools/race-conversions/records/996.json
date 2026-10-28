@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "996 GT3 R",
+  "livery": "white blue and red Porsche GT racing bands",
+  "bodywork": "actual early GT3 R broad front bumper and fenders, deeper splitter, large flat rear wing, silver racing wheels; retain early 996 headlight shape",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/996/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/996-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://racecarsdirect.com/content/UserImages/85277/475765.jpg?v=0",
+      "page": "https://racecarsdirect.com/Advert/Details/85277/porsche-996-gt3-r-2000",
+      "title": "Racecarsdirect.com  - PORSCHE 996 GT3 R - 2000",
+      "description": "A striking yellow Porsche 996 GT3 R, chassis number WP0ZZZ99ZYS692090, stands in a spacious garage. The car’s livery features bold sponsor logos—Castrol, Penders Porsche Centre Liège, Derbigum, LUK, Air Liquide—and the race number 80 from the 24 Heures du Mans 2000. Its aerodynamic bodywork includes a large rear wing, front splitter, and racing slicks.\n\nOriginally built for Le Mans competition, this GT3 R first ran Belcar events before contesting the 2000 24 Hours of Le Mans with drivers P. Verellen, R. Penders, and K. Dujardin. Subsequent upgrades included a 3.9L RSR engine and sequential gearbox, and a full restoration in 2016 returned it to its original specification. The sale package includes extensive documentation, homologation papers, and technical passports.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 996 GT3, racing preparation referencing 996 GT3 R (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Racecarsdirect.com  - PORSCHE 996 GT3 R - 2000. Its description: A striking yellow Porsche 996 GT3 R, chassis number WP0ZZZ99ZYS692090, stands in a spacious garage. The car’s livery features bold sponsor logos—Castrol, Penders Porsche Centre Liège, Derbigum, LUK, Air Liquide—and the race number 80 from the 24 Heures du Mans 2000. Its aerodynamic bodywork includes a large rear wing, front splitter, and racing slicks.\n\nOriginally built for Le Mans competition, this GT3 R first ran Belcar events before contesting the 2000 24 Hours of Le Mans with drivers P. Verellen, R. Penders, and K. Dujardin. Subsequent upgrades included a 3.9L RSR engine and sequential gearbox, and a full restoration in 2016 returned it to its original specification. The sale package includes extensive documentation, homologation papers, and technical passports.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Porsche 996 GT3 first generation, fried-egg integrated headlamps and fixed rear wing, no later 997/991.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual early GT3 R broad front bumper and fenders, deeper splitter, large flat rear wing, silver racing wheels; retain early 996 headlight shape. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Porsche GT racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "996",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-691beaa2-a6ee-4228-81cf-495b976c6ea7.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/996-r1.png",
+  "sourceSha256": "549f7e7eb76e8a875665a398eb3d19b9d18551aa4c884b9a5b9069a962830221",
+  "input": "tools/race-conversions/inputs/996.png",
+  "output": "public/images/race-cars/996.png",
+  "sha256": "ccb15514198f337dd08a3cbea76d8aabcf9d6f510bad406c6e4be50434b1980b",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/996/rosso.png",
+      "sha256": "ba6864c57b89f32ca3268bc05f73c9ff08c1f8776faa18fb81c9709baf72de5d"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/996-web-0.img",
+      "sha256": "ff80316b0621233525ff25c533cfe7a431633472418822538ec9c38b849e20f2"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

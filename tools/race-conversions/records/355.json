@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "F355 Challenge",
+  "livery": "red with white Challenge racing panels",
+  "bodywork": "actual later Challenge rear wing, front splitter, deeper side sills, white racing wheels, tow hooks and roll cage",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/355/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/355-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://d3sm3e0zl6r9d1.cloudfront.net/sothebysmotor/vehicles/7BF67492-F087-40CF-A861-AF024B53CC79/images/974B6A72-6831-4604-B583-7608DE9755EC.webp",
+      "page": "https://sothebysmotorsport.com/auction/1995-ferrari-f355challenge-6665",
+      "title": "1995 Ferrari F355 Challenge for sale on Sotheby’s Motorsport - (Lot # 6665) | Sotheby’s Motorsport",
+      "description": "A vibrant Rosso Corsa Ferrari F355 Challenge is photographed from behind, highlighting its aerodynamic rear wing, quad exhaust outlets, and distinctive circular taillights. The black mesh panel features the iconic prancing horse badge and “F355 challenge” lettering, emphasizing its racing pedigree. A Montana license plate (ENG409) is affixed below, with a red tow hook visible on the right.\n\nParked on a smooth tarmac surface against a corrugated metal backdrop, the car’s wide stance and low-profile tires underscore its track-oriented design. The combination of race-specific elements—such as the rear wing, tow hooks, and Speedline Corsa wheels—with the classic Ferrari styling creates a striking visual of a road-legal race car.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ferrari F355, racing preparation referencing F355 Challenge (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1995 Ferrari F355 Challenge for sale on Sotheby’s Motorsport - (Lot # 6665) | Sotheby’s Motorsport. Its description: A vibrant Rosso Corsa Ferrari F355 Challenge is photographed from behind, highlighting its aerodynamic rear wing, quad exhaust outlets, and distinctive circular taillights. The black mesh panel features the iconic prancing horse badge and “F355 challenge” lettering, emphasizing its racing pedigree. A Montana license plate (ENG409) is affixed below, with a red tow hook visible on the right.\n\nParked on a smooth tarmac surface against a corrugated metal backdrop, the car’s wide stance and low-profile tires underscore its track-oriented design. The combination of race-specific elements—such as the rear wing, tow hooks, and Speedline Corsa wheels—with the classic Ferrari styling creates a striking visual of a road-legal race car.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ferrari F355 closed coupe, low pop-up lids, flowing side scoop, five-spoke wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual later Challenge rear wing, front splitter, deeper side sills, white racing wheels, tow hooks and roll cage. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red with white Challenge racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "355",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c0f47e4f-3abf-4d64-8f4d-cdfee6156525.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/355.png",
+  "sourceSha256": "fbcc009f1bdce98d0908ee8fe91ede81ced362b9eb94027881c00577e1231ca9",
+  "input": "tools/race-conversions/inputs/355.png",
+  "output": "public/images/race-cars/355.png",
+  "sha256": "b3630949b3d77c99451eb00a50fa9999a390a44c4634aa6b71bfa1335c0d679c",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/355/rosso.png",
+      "sha256": "755e7a60aab239b6197b0e7a3015f26f17f3e56d963f1b4783d44b4007579f97"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/355-web-0.img",
+      "sha256": "2214af542af4db06a814592ed733b589f96399044b663ca74a2bba38bdf0546e"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

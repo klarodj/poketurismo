@@ -1,0 +1,18 @@
+{
+  "key": "camaro",
+  "brand": "Chevrolet",
+  "name": "Camaro Z28",
+  "candidate": "Camaro Z28 Trans-Am",
+  "classification": "inspired",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://images.classic.com/vehicles/961cc2744448371ccc195cbee92d400d8c68d91e.jpg?fit=crop&h=676&w=1200",
+      "page": "https://www.classic.com/veh/1995-chevrolet-camaro-scca-trans-am-race-car-WRRMorW/",
+      "title": "1995 Chevrolet Camaro SCCA Trans AM Race Car  - CLASSIC.COM",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

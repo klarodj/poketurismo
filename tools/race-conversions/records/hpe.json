@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Delta HPE · Gruppo A",
+  "livery": "white with red and blue Italian racing bands",
+  "bodywork": "retain SECOND-generation HPE THREE-door wedge, deeper rally front bumper, mild arch extensions, roof vent and roof spoiler, white rally wheels; never first Delta",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/hpe/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/hpe-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://espirituracer.com/archivos/2021/03/lancia-delta-hpe-20-hf-1997.jpg",
+      "page": "https://espirituracer.com/cochedeldia/coche-del-dia-lancia-delta-hpe-2-0-hf-836/",
+      "title": "Coche del día: Lancia Delta HPE 2.0 HF (836) - espíritu RACER",
+      "description": "A vibrant yellow Lancia Delta HPE 2.0 HF from the second generation (836) glides down a road, its sporty three‑door silhouette accentuated by a large front spoiler, widened wheel arches, and a rear wing. The HF badge on the grille and the bold “LANCIA HPE” plate emphasize its high‑performance pedigree.\n\nUnder the hood lies a 1,995 cm³ four‑cylinder turbocharged engine producing 186 CV (upgraded to 193 CV in 1997), paired with a five‑speed manual gearbox and a viscous limited‑slip differential. Inside, Recaro seats, a comprehensive instrument cluster, and features like climate control and fog lights underscore its blend of comfort and competition. With a top speed of 218 km/h and 0–100 km/h in 7.6 seconds, this compact executive hatchback delivers both Italian style and racing‑inspired performance.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lancia Delta HPE, racing preparation referencing Delta HPE · Gruppo A (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Coche del día: Lancia Delta HPE 2.0 HF (836) - espíritu RACER. Its description: A vibrant yellow Lancia Delta HPE 2.0 HF from the second generation (836) glides down a road, its sporty three‑door silhouette accentuated by a large front spoiler, widened wheel arches, and a rear wing. The HF badge on the grille and the bold “LANCIA HPE” plate emphasize its high‑performance pedigree.\n\nUnder the hood lies a 1,995 cm³ four‑cylinder turbocharged engine producing 186 CV (upgraded to 193 CV in 1997), paired with a five‑speed manual gearbox and a viscous limited‑slip differential. Inside, Recaro seats, a comprehensive instrument cluster, and features like climate control and fog lights underscore its blend of comfort and competition. With a top speed of 218 km/h and 0–100 km/h in 7.6 seconds, this compact executive hatchback delivers both Italian style and racing‑inspired performance.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Redraw accurately as SECOND-GENERATION Lancia Delta HPE HF type 836 THREE-DOOR 1998. ONE LONG door each side, broad thick sloping rear C pillar, small upward-tapering triangular rear side window, high blunt hatch and very short tail, pronounced rear shoulders. HPE is NOT a five-door first-generation Delta, NOT Peugeot 306, NOT Fiat Tipo. Exact slim horizontal front lamps either side of narrow upright Lancia shield grille with chrome perimeter, horizontal black bumper intakes, HF side skirts and mesh silver wheels from original dark blue reference. Rear lamp shape from real HPE photos, compact low wide corner clusters below glass; proper body-colour horizontal spoiler at the hatch mid-height just BELOW the rear glass, not at the roof edge. No rear side door/seam/handle.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain SECOND-generation HPE THREE-door wedge, deeper rally front bumper, mild arch extensions, roof vent and roof spoiler, white rally wheels; never first Delta. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red and blue Italian racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "hpe",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-32c3c0f2-71d8-48ad-8bad-1450ccf4382b.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/hpe.png",
+  "sourceSha256": "e288048442def2f879a580d05c0b0f6791052dac178182ebe4d195e700f030c0",
+  "input": "tools/race-conversions/inputs/hpe.png",
+  "output": "public/images/race-cars/hpe.png",
+  "sha256": "e49f1c18a3a412402eee1e828cd0d01f3d9e1f6d2f5d8b15979e68dfd7285cca",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/hpe/rosso.png",
+      "sha256": "7838f9d3ec05cbf6290c37f72dd97f07e5d9f8edb93465bf681c4ec74f2b0be7"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/hpe-web-0.img",
+      "sha256": "fd68e0978dec5bd115bf27a7a1b7e4802d6f89c2a736dc737095de27c67b01e8"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

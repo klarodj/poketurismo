@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "850 Estate Superturismo BTCC",
+  "livery": "white blue and yellow Volvo racing",
+  "bodywork": "retain approved 850 ESTATE STATION WAGON with long cargo section, actual 1994 BTCC estate front splitter and bumper, subtle arch lips, skirts, small roof spoiler and white racing wheels; NEVER a saloon",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/850t/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/850t-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/143337-the-volvo-850-estate-in-the-1994-btcc-1533651043.jpg?crop=1xw%3A1xh%3Bcenter%2Ctop&resize=1200%3A%2A",
+      "page": "https://www.roadandtrack.com/motorsports/a22662454/volvo-850-wagon-btcc-history/",
+      "title": "When Volvo Went Crazy With Its Wagons",
+      "description": "Two Volvo 850 Estate touring cars, bearing numbers 15 and 14, thunder down a paved circuit in matching blue-and-white Securicor and Omega Express liveries. The wagons, equipped with Dunlop tires and Volvo-branded windshields, race closely as a crowd of spectators looks on from behind blue-and-white safety barriers.\n\nIn 1994, Tom Walkinshaw Racing entered the Volvo 850 Estate in the British Touring Car Championship, leveraging its low center of gravity and five-cylinder engine despite the longer wheelbase. The PR-driven decision to campaign an estate body paid off with a best qualifying result of third and a fifth-place race finish, helping Volvo secure eighth overall in the championship.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Volvo 850 Turbo, racing preparation referencing 850 Estate Superturismo BTCC (1994). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: When Volvo Went Crazy With Its Wagons. Its description: Two Volvo 850 Estate touring cars, bearing numbers 15 and 14, thunder down a paved circuit in matching blue-and-white Securicor and Omega Express liveries. The wagons, equipped with Dunlop tires and Volvo-branded windshields, race closely as a crowd of spectators looks on from behind blue-and-white safety barriers.\n\nIn 1994, Tom Walkinshaw Racing entered the Volvo 850 Estate in the British Touring Car Championship, leveraging its low center of gravity and five-cylinder engine despite the longer wheelbase. The PR-driven decision to campaign an estate body paid off with a best qualifying result of third and a fifth-place race finish, helping Volvo secure eighth overall in the championship.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Volvo 850 Turbo ESTATE station wagon as source, rectangular body, roof rails, long square cargo section; not saloon.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved 850 ESTATE STATION WAGON with long cargo section, actual 1994 BTCC estate front splitter and bumper, subtle arch lips, skirts, small roof spoiler and white racing wheels; NEVER a saloon. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and yellow Volvo racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "850t",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-af982622-7dbb-4691-8026-bb5e8f5caf15.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/850t-r1.png",
+  "sourceSha256": "75d9a92e2a148bd0d21742365b6b67b8754857e567e0128d3505c51ad2e01dbb",
+  "input": "tools/race-conversions/inputs/850t.png",
+  "output": "public/images/race-cars/850t.png",
+  "sha256": "716d566163cd9590ef68b73c34e836841aa1fd85bc46a7dc8635b76ab71c545f",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/850t/rosso.png",
+      "sha256": "46595f3fa69fb28909ad8f85e17d39f8f1b6dd73f8d42c05357e1e1d91babb62"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/850t-web-0.img",
+      "sha256": "908924249d6fa0bac5e7d26a91c117e16c4910b34247da985e94a75e9fd6b288"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

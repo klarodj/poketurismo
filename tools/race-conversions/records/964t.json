@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "964 RSR 3.8",
+  "livery": "white with blue red and yellow Porsche racing panels",
+  "bodywork": "retain 964 front and cabin, RSR wide fenders and front air dam, large fixed rear wing, silver centre-lock racing wheels; own Turbo engine unchanged",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/964t/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/964t-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.elferspot.com/wp-content/uploads/2023/01/02/Porsche-964-3.8-RSR-0001.jpg",
+      "page": "https://www.elferspot.com/en/car/porsche-964-carrera-rsr-38-1993-1067073/",
+      "title": "Porsche 964 Carrera RSR 3,8 1993 - elferspot.com - Marketplace for Porsche Sports Cars",
+      "description": "This pristine Grandprix White Porsche 964 Carrera RSR 3.8 is one of only 51 factory-built racing examples produced between April 1993 and December 1994. Chassis no. WPO ZZZ 96 ZPS 496096 was first campaigned by Nova Engineering in Japan, including the 1,000 KM of Suzuka, and achieved class victories at the 24 Hours of Le Mans, Nürburgring, and Spa in 1993.\n\nRestored by Freisinger Motorsport in Germany in 2007, the car features a 3.8 L naturally aspirated flat-six engine with 350 hp, a 5-speed racing gearbox, roll cage, Recaro seat, 120 L safety tank, and fire suppression system. Its wide body, large rear wing, and center-lock BBS-style wheels highlight its competition pedigree, while the black fabric interior and matching numbers confirm its authenticity.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 964 Turbo, racing preparation referencing 964 RSR 3.8 (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Porsche 964 Carrera RSR 3,8 1993 - elferspot.com - Marketplace for Porsche Sports Cars. Its description: This pristine Grandprix White Porsche 964 Carrera RSR 3.8 is one of only 51 factory-built racing examples produced between April 1993 and December 1994. Chassis no. WPO ZZZ 96 ZPS 496096 was first campaigned by Nova Engineering in Japan, including the 1,000 KM of Suzuka, and achieved class victories at the 24 Hours of Le Mans, Nürburgring, and Spa in 1993.\n\nRestored by Freisinger Motorsport in Germany in 2007, the car features a 3.8 L naturally aspirated flat-six engine with 350 hp, a 5-speed racing gearbox, roll cage, Recaro seat, 120 L safety tank, and fire suppression system. Its wide body, large rear wing, and center-lock BBS-style wheels highlight its competition pedigree, while the black fabric interior and matching numbers confirm its authenticity.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Porsche 964 Turbo widebody, upright round headlights, large whale tail and smooth bumpers.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain 964 front and cabin, RSR wide fenders and front air dam, large fixed rear wing, silver centre-lock racing wheels; own Turbo engine unchanged. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue red and yellow Porsche racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "964t",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-225962a6-0b22-4dd4-b79a-d8b97b56bbd0.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/964t-r1.png",
+  "sourceSha256": "677583e5db0c90b14146cfcff328e416c33dc3115f57c84190dcb8037580baaf",
+  "input": "tools/race-conversions/inputs/964t.png",
+  "output": "public/images/race-cars/964t.png",
+  "sha256": "1bf75f6cefe921329f75b1c9423dd0a66396446f9b9e573c94f7b5b108a7f739",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/964t/rosso.png",
+      "sha256": "b4fad735bd805b3175c829a59099761e0b9ddffafe3ed06988bfe62e1e755709"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/964t-web-0.img",
+      "sha256": "8976a95720b56d9b5f95fb1e393bc4d890d57d898500244c69c0ea67c75d5bfc"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

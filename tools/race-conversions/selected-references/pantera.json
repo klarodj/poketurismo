@@ -1,0 +1,17 @@
+{
+  "key": "pantera",
+  "selected": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5e7918a4b1051f6e49dcfdb1/1586053492964-I8YLQ62340KHB2UWE8NL/Audrian_Museum-08914-840x600.jpg?format=1000w",
+      "page": "https://www.audrainautomuseum.org/muscle-car-madness/1972-detomaso-pantera",
+      "title": "1972 Detomaso \"Pantera\" — Audrain Auto Museum",
+      "score": 5,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/pantera-web-0.img",
+      "width": 840,
+      "height": 600
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "identity",
+  "review": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica"
+}

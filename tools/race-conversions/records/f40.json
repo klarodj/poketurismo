@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "F40 LM",
+  "livery": "Rosso Corsa and white racing panels",
+  "bodywork": "actual LM broad vented front bumper, racing lamp treatment, wider arches, enlarged adjustable rear wing, white centre-lock racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/f40/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/f40-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.automotivpress.fr/wp-content/uploads/2013/12/1989_Ferrari_F40_LM_016_6408.jpg",
+      "page": "https://www.automotivpress.fr/ferrari-f40-lm-nom-de-code-f40-corsa-partie-1-1988/",
+      "title": "Ferrari F40 LM : nom de code F40 Corsa, partie 1 (1988)",
+      "description": "The 1989 Ferrari F40 LM, codenamed F40 Corsa, represents a track-focused evolution of the iconic F40 supercar. Finished on June 20, 1988, its 2936 cm³ engine block was reworked for improved cooling and paired with Marelli‑Weber electronics, IHI turbochargers, and larger Secan intercoolers. Composite chassis elements increased rigidity by 65%, while 355 mm Brembo ventilated discs and 4‑piston calipers provided race‑grade braking performance. Aerodynamic upgrades include a concave venturi front undertray and an adjustable dual‑element rear wing.\n\nTesting began on October 25, 1988, at Ferrari’s Fiorano circuit, where Dario Benuzzi recorded a 1’23”01 lap time. Over 23 sessions at Fiorano, Monza, Paul Ricard, Jarama, Lédenon, and Vallelunga, the F40 LM reached 367 km/h at Nardò. Drivers such as Jean‑Pierre Jabouille, Michel Ferté, and Jean Alesi contributed to its development. Initially intended for the European GTC championship, the car was adapted for IMSA competition with intake restrictors and added ballast to comply with regulations.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ferrari F40, racing preparation referencing F40 LM (1989). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Ferrari F40 LM : nom de code F40 Corsa, partie 1 (1988). Its description: The 1989 Ferrari F40 LM, codenamed F40 Corsa, represents a track-focused evolution of the iconic F40 supercar. Finished on June 20, 1988, its 2936 cm³ engine block was reworked for improved cooling and paired with Marelli‑Weber electronics, IHI turbochargers, and larger Secan intercoolers. Composite chassis elements increased rigidity by 65%, while 355 mm Brembo ventilated discs and 4‑piston calipers provided race‑grade braking performance. Aerodynamic upgrades include a concave venturi front undertray and an adjustable dual‑element rear wing.\n\nTesting began on October 25, 1988, at Ferrari’s Fiorano circuit, where Dario Benuzzi recorded a 1’23”01 lap time. Over 23 sessions at Fiorano, Monza, Paul Ricard, Jarama, Lédenon, and Vallelunga, the F40 LM reached 367 km/h at Nardò. Drivers such as Jean‑Pierre Jabouille, Michel Ferté, and Jean Alesi contributed to its development. Initially inten. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ferrari F40, large integral rectangular high rear wing, NACA ducts, black rocker trim and angular wedge body.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual LM broad vented front bumper, racing lamp treatment, wider arches, enlarged adjustable rear wing, white centre-lock racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is Rosso Corsa and white racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "f40",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6fe64134-5a61-4e3e-aa59-d1a3a12fb3da.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/f40.png",
+  "sourceSha256": "696ebf7c2c913741f1890cd8cad1b7903c81bc9b4bb0bf96c8ba438c0bc5971d",
+  "input": "tools/race-conversions/inputs/f40.png",
+  "output": "public/images/race-cars/f40.png",
+  "sha256": "2787e47fa163c2255d5e168c08ac819ea1b65afc029970934672acec557cc055",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/f40/rosso.png",
+      "sha256": "534a3addc1d4adbce4ace3ded363edda266a561838771d613cc7307a6f996172"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/f40-web-0.img",
+      "sha256": "9b7c3c998c32b96f7a4f4ced17788c1ae098908330f3704aa5a0a7f20e4b9252"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Supra A80 GT500",
+  "livery": "white green and red Castrol TOM'S",
+  "bodywork": "actual JGTC Supra broad fenders, large front cooling intakes, bonnet ducts, tall rear wing and white centre-lock racing wheels; A80 roof and round rear lamps retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/supra4/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/supra4-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn-image.as-web.jp/2020/07/30091025/asimg_sp_2001MINE_TOYOTA_9e5f220ff0bcfc8.jpg",
+      "page": "https://hrokt14.blogspot.com/2020/07/gt500supraa90gr.html",
+      "title": "cite今、振り返るGT500マシンの歴史／トヨタ編 SUPRA──今年、A90型GRスープラがレースに復活",
+      "description": "An orange and silver Toyota Supra GT500 car, adorned with Bridgestone, TRD, au by KDDI Racing Team, and field/dream logos, powers through a racetrack corner. Its illuminated headlights and aerodynamic bodywork, including a prominent rear wing, emphasize its high-performance racing setup.\n\nThis image ties into the legacy of the JZA80 Supra in Japan’s top-tier GT500 class. From its debut in the 1993 JGTC to its dramatic 2005 title victory at Suzuka Circuit in heavy rain, the Supra has been a championship contender. The blog post recounts its multiple wins, endurance race successes, and the model’s final GT500 season, while looking forward to the modern GR Supra’s return to Super GT competition.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Toyota Supra mk4, racing preparation referencing Supra A80 GT500 (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: cite今、振り返るGT500マシンの歴史／トヨタ編 SUPRA──今年、A90型GRスープラがレースに復活. Its description: An orange and silver Toyota Supra GT500 car, adorned with Bridgestone, TRD, au by KDDI Racing Team, and field/dream logos, powers through a racetrack corner. Its illuminated headlights and aerodynamic bodywork, including a prominent rear wing, emphasize its high-performance racing setup.\n\nThis image ties into the legacy of the JZA80 Supra in Japan’s top-tier GT500 class. From its debut in the 1993 JGTC to its dramatic 2005 title victory at Suzuka Circuit in heavy rain, the Supra has been a championship contender. The blog post recounts its multiple wins, endurance race successes, and the model’s final GT500 season, while looking forward to the modern GR Supra’s return to Super GT competition.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Toyota Supra A80/Mk4 coupe, long rounded nose, multi-element oval lamps and large curved rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual JGTC Supra broad fenders, large front cooling intakes, bonnet ducts, tall rear wing and white centre-lock racing wheels; A80 roof and round rear lamps retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white green and red Castrol TOM'S. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "supra4",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3e904d55-0839-4583-9f7c-0c62510d0c21.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/supra4-r1.png",
+  "sourceSha256": "6371fea79749210950b2a91b7d6a17d2f1f5b2671dfd53a6df5b6397d1c0b9d4",
+  "input": "tools/race-conversions/inputs/supra4.png",
+  "output": "public/images/race-cars/supra4.png",
+  "sha256": "211ae08662e3d57b7fadfd9269535138c0579c50c995867a0a67242b98705c3c",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/supra4/rosso.png",
+      "sha256": "96ee238c042f2b492bf51b591541f660a7f8216c40d21b91f26dd1b42eb5af2f"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/supra4-web-0.img",
+      "sha256": "0cc481521e58401fc0092f56b0408c4841da4bced02db1334cf01eb965aa5975"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

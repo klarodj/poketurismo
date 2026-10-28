@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Calibra V6 ITC",
+  "livery": "black yellow and white Opel Cliff-style scheme",
+  "bodywork": "actual Calibra ITC wide arches and ducts, low multi-vent bumper, side skirts, tall boot wing and silver racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/calibra/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/calibra-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.motorsport-magazin.com/images/960/540/q_80/1010263.jpg",
+      "page": "https://www.motorsport-magazin.com/dtm/news-277142-dtm-classic-lausitzring-rosberg-opel-bringt-v6-turbo-sound/",
+      "title": "DTM-Classic Lausitzring, Rosberg-Opel bringt V6-Sound",
+      "description": "A meticulously restored Opel Calibra V6 stands ready in a garage, its yellow-and-white paint scheme and period sponsor logos—Mannesmann, Mobil 1, Minichamps, Baumler, Bosch, Dekra—faithfully recreated. This car, last raced in the 1995 DTM season by 1982 F1 World Champion Keke Rosberg, boasts a 2.5‑liter V6 engine developed with Williams and Cosworth, delivering over 500 PS and a signature high‑revving roar.\n\nMücke Motorsport’s Classic division has returned the Calibra to its original condition for the DTM Classic Cup at the Lausitzring (May 20–22). Stefan Mücke will pilot this car, while Ronny Scheer takes the wheel of a second Calibra. Fans can admire both the visual authenticity and the legendary V6 sound during the weekend’s races.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Opel Calibra Turbo, racing preparation referencing Calibra V6 ITC (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: DTM-Classic Lausitzring, Rosberg-Opel bringt V6-Sound. Its description: A meticulously restored Opel Calibra V6 stands ready in a garage, its yellow-and-white paint scheme and period sponsor logos—Mannesmann, Mobil 1, Minichamps, Baumler, Bosch, Dekra—faithfully recreated. This car, last raced in the 1995 DTM season by 1982 F1 World Champion Keke Rosberg, boasts a 2.5‑liter V6 engine developed with Williams and Cosworth, delivering over 500 PS and a signature high‑revving roar.\n\nMücke Motorsport’s Classic division has returned the Calibra to its original condition for the DTM Classic Cup at the Lausitzring (May 20–22). Stefan Mücke will pilot this car, while Ronny Scheer takes the wheel of a second Calibra. Fans can admire both the visual authenticity and the legendary V6 sound during the weekend’s races.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Opel Calibra long low two-door coupe, very thin horizontal headlights and smooth roof arch.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Calibra ITC wide arches and ducts, low multi-vent bumper, side skirts, tall boot wing and silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is black yellow and white Opel Cliff-style scheme. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "calibra",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-eb31ad79-335d-451f-a0ab-cbd177a81e1e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/calibra.png",
+  "sourceSha256": "14b6051d9129c79f9f5da0fbdef6232e55b109ce94d16c50d8af4ef386c582f4",
+  "input": "tools/race-conversions/inputs/calibra.png",
+  "output": "public/images/race-cars/calibra.png",
+  "sha256": "771c430629e2c5dfe75a7223ee7329f1f9b98aba156ccfb5f9023bf21d318f5f",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/calibra/rosso.png",
+      "sha256": "b6a20a1910b00968ca4f6edea3ce7bd2a2ceb092d2a6ccec9e1c522238b2f791"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/calibra-web-2.img",
+      "sha256": "8bd72fb24fc4c2988ee30f81f28653019eefeaca8e41e1f9050fbc5e76f1ff99"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

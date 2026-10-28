@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "AX GTi Gruppo A",
+  "livery": "white with red and blue Citroën Sport",
+  "bodywork": "preserve approved AX glass and lights, period rally bumper, modest squared arch lips, white 14-inch rally wheels, mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ax/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ax-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.collectingcars.com/081209/AX-CW116.jpg?w=1000",
+      "page": "https://www.theclassicvaluer.com/vehicle-details/collecting-cars-2025-10-27-citroen-ax-2986b6",
+      "title": "Sold | 1992 Citroen AX GTi",
+      "description": "A 1992 Citroën AX GTi in Onyx Black is presented in a head‑on shot, parked on a quiet road with dense foliage in the background. The compact hot hatch displays its characteristic double‑chevron grille, rectangular headlights—one illuminated—and matching black plastic bumpers and wheel arches. A red placeholder covers the front license plate area, emphasizing the car’s clean lines and sporty stance.\n\nThis model, offered on 27 October 2025 by Collecting Cars, is powered by a 1.4‑litre naturally aspirated inline‑four engine mated to a five‑speed manual gearbox. Although the odometer was reset after an instrument cluster failure in 2017, the total mileage is estimated at around 108,500 km. The exterior shows moderate wear, including clear coat cracks and a repaint, and the car is rated 6/10 for condition but remains in good running order.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Citroen AX Gti, racing preparation referencing AX GTi Gruppo A (1992). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Sold | 1992 Citroen AX GTi. Its description: A 1992 Citroën AX GTi in Onyx Black is presented in a head‑on shot, parked on a quiet road with dense foliage in the background. The compact hot hatch displays its characteristic double‑chevron grille, rectangular headlights—one illuminated—and matching black plastic bumpers and wheel arches. A red placeholder covers the front license plate area, emphasizing the car’s clean lines and sporty stance.\n\nThis model, offered on 27 October 2025 by Collecting Cars, is powered by a 1.4‑litre naturally aspirated inline‑four engine mated to a five‑speed manual gearbox. Although the odometer was reset after an instrument cluster failure in 2017, the total mileage is estimated at around 108,500 km. The exterior shows moderate wear, including clear coat cracks and a repaint, and the car is rated 6/10 for condition but remains in good running order.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Citroen AX GTi three-door. Correct rear lamps: short vertical trapezoid clusters strictly BELOW the rear glass at outer tailgate corners, top red, thin amber mid-band, red lower section. They do NOT climb the roof pillar and must not become a tall amber stripe alongside glass. Black bumpers and black wheel arch trim as original photo, small roof lip only.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: preserve approved AX glass and lights, period rally bumper, modest squared arch lips, white 14-inch rally wheels, mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with red and blue Citroën Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "ax",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-deb2ee5c-5184-4857-b8e4-4f8270270a82.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/ax.png",
+  "sourceSha256": "dae3c03a1eda24ed503643dcbd92a733c10f6c2f50a84431eac313c2cf8db72b",
+  "input": "tools/race-conversions/inputs/ax.png",
+  "output": "public/images/race-cars/ax.png",
+  "sha256": "053cc70e481faf3e04d97e62cdb4b0c05ebf443ef295ab4f67610c91ecd5e1c4",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ax/rosso.png",
+      "sha256": "1ff868b4782d76313c0c6a1a43897b744aa414edf585262f6924ad8337b1a42e"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ax-web-0.img",
+      "sha256": "9d3f6d1db9462012334da85a422b2d7bee546b65d6a6a18fa4405286bf19a688"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

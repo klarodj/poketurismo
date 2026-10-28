@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "XKR Trans-Am",
+  "livery": "green white and black British-American racing",
+  "bodywork": "real period XKR racing COUPE outline, broad arches, deep front splitter, high boot wing and silver racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/xkr/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/xkr-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cimg2.ibsrv.net/gimg/racingjunkgallery.internetbrands.com-gallery_site/600x493_85-1/phpmnxmay_60b18193c6e3130e8a0b73ac138f1f47686e6853.jpeg",
+      "page": "https://www.racingjunk.com/trans-am-ta-ta2-ta3-ta4/184352852/trans-am-championship-winning-rocketsports-jaguar-xkr.html",
+      "title": "Trans Am Championship Winning Rocketsports Jaguar XKR for Sale in SEBRING, FL | RacingJunk",
+      "description": "A championship-winning Rocketsports Jaguar XKR, painted dark green with red accents and numbered 77, is staged under a paddock tent at a racing venue. The car features Goodyear Eagle tires on BBS wheels, a large rear wing, and Trans Am series decals. It is equipped with a fresh Promotor D3 358 ci engine rated at 850 HP, a new Hewland wide 5-speed gearbox, and a G Force 9\" transmission, all with minimal hours.\n\nThe sale listing highlights an extensive spares package including a C3 spare engine, spare transmission, and two extra sets of rims. Located in Sebring, Florida, the private seller accepts cash trades and offers shipping through Thrifty Auto Shipping, with storage options via SpareFoot Storage.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Jaguar XKR, racing preparation referencing XKR Trans-Am (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Trans Am Championship Winning Rocketsports Jaguar XKR for Sale in SEBRING, FL | RacingJunk. Its description: A championship-winning Rocketsports Jaguar XKR, painted dark green with red accents and numbered 77, is staged under a paddock tent at a racing venue. The car features Goodyear Eagle tires on BBS wheels, a large rear wing, and Trans Am series decals. It is equipped with a fresh Promotor D3 358 ci engine rated at 850 HP, a new Hewland wide 5-speed gearbox, and a G Force 9\" transmission, all with minimal hours.\n\nThe sale listing highlights an extensive spares package including a C3 spare engine, spare transmission, and two extra sets of rims. Located in Sebring, Florida, the private seller accepts cash trades and offers shipping through Thrifty Auto Shipping, with storage options via SpareFoot Storage.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Jaguar XKR X100 coupe, oval grille and oval headlamp units, flowing rounded roof.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real period XKR racing COUPE outline, broad arches, deep front splitter, high boot wing and silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is green white and black British-American racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "xkr",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-98a91329-bba1-4ca9-bf89-e741ff8efd27.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/xkr.png",
+  "sourceSha256": "6a2c5b08387adec1fcc60b11831654ba0b4206f203c49a12642675a40923218b",
+  "input": "tools/race-conversions/inputs/xkr.png",
+  "output": "public/images/race-cars/xkr.png",
+  "sha256": "96f6bc44eb4feae6f47d5e82eea08f063ca59db530b2b3e7b61c120b7fb1f06b",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/xkr/rosso.png",
+      "sha256": "66a6e074957a3ee62fefefeadb9e835ba4189deaaee5b5cef2f5587b8dbbd865"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/xkr-web-0.img",
+      "sha256": "c48e835ab7e86ed26483181cfa1e71b066c4fddd6091e48a1b2eca964e8755ab"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

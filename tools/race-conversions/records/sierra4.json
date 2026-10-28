@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Sierra Sapphire Cosworth Gruppo A",
+  "livery": "white blue red Ford rally bands",
+  "bodywork": "retain FOUR-door Sapphire saloon, real rally apron, modest arch lips, boot spoiler, white multi-spoke rally wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/sierra4/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/sierra4-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/1728924621519-YXL236CWBLX22FK5K5LQ/Ford%2BSierra%2BSapphire%2BRS%2BCosworth%2Bfront%2Bquarter.jpg",
+      "page": "https://supercarnostalgia.com/blog/ford-gt40-mk2-67",
+      "title": "Ford GT40 Mk2 & Mk2B '67 Guide — Supercar Nostalgia",
+      "description": "A dark gray Ford Sierra Sapphire RS Cosworth stands alone on a flat asphalt surface beneath a clear, pale blue sky. The four-door sedan is captured in a front three-quarter view, showcasing its aerodynamic bodywork, alloy wheels, and subtle rear spoiler. Amber turn signals and integrated fog lights accentuate the sporty front fascia.\n\nThe isolated setting emphasizes the car’s clean lines and performance heritage. With its distinctive Sapphire RS Cosworth badging and period-correct styling, this late-1980s model exemplifies Ford’s focus on combining everyday practicality with motorsport-inspired design.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ford Sierra RS 4wd, racing preparation referencing Sierra Sapphire Cosworth Gruppo A (1990). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Ford GT40 Mk2 & Mk2B '67 Guide — Supercar Nostalgia. Its description: A dark gray Ford Sierra Sapphire RS Cosworth stands alone on a flat asphalt surface beneath a clear, pale blue sky. The four-door sedan is captured in a front three-quarter view, showcasing its aerodynamic bodywork, alloy wheels, and subtle rear spoiler. Amber turn signals and integrated fog lights accentuate the sporty front fascia.\n\nThe isolated setting emphasizes the car’s clean lines and performance heritage. With its distinctive Sapphire RS Cosworth badging and period-correct styling, this late-1980s model exemplifies Ford’s focus on combining everyday practicality with motorsport-inspired design.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ford Sierra Sapphire RS Cosworth four-door saloon, long stepped boot, modest boot wing; NOT the three-door hatch.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain FOUR-door Sapphire saloon, real rally apron, modest arch lips, boot spoiler, white multi-spoke rally wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue red Ford rally bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "sierra4",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c1e0b90b-8d59-40bc-9706-c2822eb6cd98.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/sierra4.png",
+  "sourceSha256": "62c46a097edb9658aca46e7e206b91d266e967f58f0afdad45d1fc2795d58a2e",
+  "input": "tools/race-conversions/inputs/sierra4.png",
+  "output": "public/images/race-cars/sierra4.png",
+  "sha256": "ac45c434d90d4993fbb8f85ca6901dc3b1c1db57221b190e389bf64bdd09fca6",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/sierra4/rosso.png",
+      "sha256": "999d84f87a4a08fab7c1be4695bd2a11b6d7a9dc4e81872cb8f0b00f6bebd1a0"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/sierra4-web-1.img",
+      "sha256": "b4012ba0415436d5ce59801da0235b5db61c9181f5778c09bc1720aa485ea768"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

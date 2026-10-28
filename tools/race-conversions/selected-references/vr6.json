@@ -1,0 +1,17 @@
+{
+  "key": "vr6",
+  "selected": [
+    {
+      "url": "https://www.fahrzeugbilder.de/1200/vw-golf-3-kit-car-100770.jpg",
+      "page": "https://www.fahrzeugbilder.de/bild/motorsport~rennwagen~vw/100770/vw-golf-3-kit-car-beim.html",
+      "title": "VW Golf 3 Kit Car beim Konzer Old- und Youngtimertreffen, 15.07.2012 - Fahrzeugbilder.de",
+      "score": 12,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/vr6-web-0.img",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

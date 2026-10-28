@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "206 WRC",
+  "livery": "silver white and red Peugeot Total",
+  "bodywork": "real WRC widened arches, extended racing bumpers, roof vent, large roof wing and white rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/206/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/206-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://stellantis3.dam-broadcast.com/medias/domain12808/media101925/577717-0o08qf451k-whr.jpg",
+      "page": "https://www.media.stellantis.com/uk-en/peugeot/press/peugeot-celebrates-125-years-of-motorsport-success",
+      "title": "PEUGEOT CELEBRATES 125 YEARS OF MOTORSPORT SUCCESS  | Peugeot | Stellantis Media",
+      "description": "A silver Peugeot 206 WRC tears through a dusty gravel rally stage, its front wheels momentarily lifted as it powers through a sharp turn. Bold Total and Michelin branding adorn the hood and bumper, while the EURODATACAR decal runs along the lower front fascia. The car’s aerodynamic scoops and rally-spec wheels underscore its high-performance design.\n\nThe rugged dirt track winds past rocky outcrops and sparse vegetation, emphasizing the demanding off-road conditions. A plume of dust trails behind the car, capturing the speed and intensity of professional rally competition.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Peugeot 206 Gti, racing preparation referencing 206 WRC (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: PEUGEOT CELEBRATES 125 YEARS OF MOTORSPORT SUCCESS  | Peugeot | Stellantis Media. Its description: A silver Peugeot 206 WRC tears through a dusty gravel rally stage, its front wheels momentarily lifted as it powers through a sharp turn. Bold Total and Michelin branding adorn the hood and bumper, while the EURODATACAR decal runs along the lower front fascia. The car’s aerodynamic scoops and rally-spec wheels underscore its high-performance design.\n\nThe rugged dirt track winds past rocky outcrops and sparse vegetation, emphasizing the demanding off-road conditions. A plume of dust trails behind the car, capturing the speed and intensity of professional rally competition.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Peugeot 206 GTi three-door hatch, large swept triangular headlights and rounded roof.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real WRC widened arches, extended racing bumpers, roof vent, large roof wing and white rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is silver white and red Peugeot Total. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "206",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0fcbbcb0-0783-4ff9-a232-3070d1a41f89.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/206-r1.png",
+  "sourceSha256": "394471d00461baa4929c3f6889ba138eae815cfa537cf5deba48ca2a1cd25c5a",
+  "input": "tools/race-conversions/inputs/206.png",
+  "output": "public/images/race-cars/206.png",
+  "sha256": "5301fac73e31a0d3a82803754e6288a12905311510a139d8441a7b9361f9f855",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/206/rosso.png",
+      "sha256": "e0b399dabd6e9d2089bcaeb310421cac6409c1c0d8aa89f06227f54fec86ae1e"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/206-web-0.img",
+      "sha256": "963f8152436f2303f976c92538f303c655f0a8dc0aded94dcbff5451893576f0"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

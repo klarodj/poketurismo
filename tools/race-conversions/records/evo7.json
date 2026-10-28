@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Lancer WRC",
+  "livery": "red white and black Mitsubishi Ralliart",
+  "bodywork": "real 2001 Evo VII WRC full widebody and cooling bumper, bonnet/roof vents, WRC rear wing, white racing wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/evo7/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/evo7-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.mitsubishi-motors.com/jp/brand/motorsports/wrc/images/img-contents_2002.jpg",
+      "page": "https://www.mitsubishi-motors.com/jp/brand/motorsports/wrc/",
+      "title": "World Rally Chanmpionship | モータースポーツ | 三菱自動車のクルマづくり | MITSUBISHI MOTORS",
+      "description": "A striking red Mitsubishi Lancer Evolution WRC car, bearing Marlboro branding and white alloy wheels, navigates a narrow mountain tarmac stage. The aerodynamic body kit, roof scoop, and large rear wing underscore its rally-spec design. Two helmeted crew members are visible inside, emphasizing its competitive use.\n\nThis image appears on Mitsubishi Motors’ Japanese motorsports webpage, which chronicles the brand’s World Rally Championship history. The site notes Mitsubishi’s WRC debut in 1973 and celebrates the Lancer Evolution’s championship successes from 1996 to 1999. The 2002 model shown here represents the marque’s continued rally heritage.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mitsubishi Lancer Evo 7, racing preparation referencing Lancer WRC (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: World Rally Chanmpionship | モータースポーツ | 三菱自動車のクルマづくり | MITSUBISHI MOTORS. Its description: A striking red Mitsubishi Lancer Evolution WRC car, bearing Marlboro branding and white alloy wheels, navigates a narrow mountain tarmac stage. The aerodynamic body kit, roof scoop, and large rear wing underscore its rally-spec design. Two helmeted crew members are visible inside, emphasizing its competitive use.\n\nThis image appears on Mitsubishi Motors’ Japanese motorsports webpage, which chronicles the brand’s World Rally Championship history. The site notes Mitsubishi’s WRC debut in 1973 and celebrates the Lancer Evolution’s championship successes from 1996 to 1999. The 2002 model shown here represents the marque’s continued rally heritage.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mitsubishi Lancer Evolution VII CT9A four-door saloon, larger square cabin, slim angular headlights, raised wing, no later Evo X.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real 2001 Evo VII WRC full widebody and cooling bumper, bonnet/roof vents, WRC rear wing, white racing wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red white and black Mitsubishi Ralliart. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "evo7",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1450472a-d230-4e9e-9c88-a598f291c9e5.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/evo7.png",
+  "sourceSha256": "067555516aa0958d36885a35e1c9a8027935a5e11d1f4fcefcf03e8385a57b93",
+  "input": "tools/race-conversions/inputs/evo7.png",
+  "output": "public/images/race-cars/evo7.png",
+  "sha256": "88b90e3025edaf0fac17c9544ff7e3c4f2b1f1a9a28fa0d75e8d813a18276c1e",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/evo7/rosso.png",
+      "sha256": "c243e4b2f0434b89cac0230f8aaad845ff44e5ce212547db89442fc5ad53a575"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/evo7-web-0.img",
+      "sha256": "477333f42292a6d64e86ec599587f642485d605a9f4b6a5023c4197d60ab032e"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

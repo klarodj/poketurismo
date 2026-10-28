@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "300ZX IMSA GTS",
+  "livery": "white blue and red Nissan factory scheme",
+  "bodywork": "real Z32 GTS broad fenders and deep front splitter, ducted body, large rear wing and silver centre-lock race wheels; Z32 sloping front lamps retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/300zx/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/300zx-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.classic.com/vehicles/aacbc3982707503646d91ff65ea8d16bf6b4918c.jpg?auto=format&fit=crop&h=384&w=600",
+      "page": "https://www.classic.com/veh/1994-nissan-300zx-v8-imsa-gts-race-car-008-pEddJzW/",
+      "title": "1994 Nissan 300ZX V8 IMSA GTS Race Car VIN: 008 - CLASSIC.COM",
+      "description": "This 1994 Nissan 300ZX V8 IMSA GTS race car, VIN 008, is finished in a striking red, white, and blue livery with prominent Exxon branding and the racing number 75. It features BBS wheels, Bosch and Yokohama decals, and a large rear wing, all hallmarks of its IMSA GTS competition heritage.\n\nEquipped with a manual transmission, rear-wheel drive, and left-hand drive configuration, the coupe maintains its race-ready setup. Located in Los Angeles County, California, this classic Z-car combines period-correct sponsorship graphics with authentic racecar specifications.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Nissan 300ZX, racing preparation referencing 300ZX IMSA GTS (1994). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1994 Nissan 300ZX V8 IMSA GTS Race Car VIN: 008 - CLASSIC.COM. Its description: This 1994 Nissan 300ZX V8 IMSA GTS race car, VIN 008, is finished in a striking red, white, and blue livery with prominent Exxon branding and the racing number 75. It features BBS wheels, Bosch and Yokohama decals, and a large rear wing, all hallmarks of its IMSA GTS competition heritage.\n\nEquipped with a manual transmission, rear-wheel drive, and left-hand drive configuration, the coupe maintains its race-ready setup. Located in Los Angeles County, California, this classic Z-car combines period-correct sponsorship graphics with authentic racecar specifications.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Nissan 300ZX Z32 wide low coupe, narrow slanted fixed headlamps and dark glass roof panels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Z32 GTS broad fenders and deep front splitter, ducted body, large rear wing and silver centre-lock race wheels; Z32 sloping front lamps retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Nissan factory scheme. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "300zx",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d3439c6b-9480-41d3-b00a-21ff481572cf.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/300zx.png",
+  "sourceSha256": "5b1b7b08de85da130d434b8a5f056141cb7c71a822900b8e1a4c6f5c167216af",
+  "input": "tools/race-conversions/inputs/300zx.png",
+  "output": "public/images/race-cars/300zx.png",
+  "sha256": "bb883156b387e6240546f3633d60ce35beb16cec00b1ca04da6f8301e1fa6a74",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/300zx/rosso.png",
+      "sha256": "e487e7bc93ee6b71a2f9072406dcdc84e85ea40ea37e1ef95b0a6f093b983aba"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/300zx-web-0.img",
+      "sha256": "158776235bb3f093cde6f04524658332dc28063e8b5f1189fbd24054ddd56a04"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

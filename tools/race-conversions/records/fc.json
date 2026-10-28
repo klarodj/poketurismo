@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "RX-7 FC IMSA GTO",
+  "livery": "white with blue and red Mazda factory graphics",
+  "bodywork": "real FC wide GT arch extensions, deep front bumper, large fixed rear wing, gold mesh centre-lock racing wheels; retain FC pop-up lamp identity",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/fc/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/fc-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://img.carswp.com/mazda/rx-7/images_mazda_rx-7_1990_2_b.jpg",
+      "page": "https://www.carswp.com/images-mazda-rx-7-imsa-gto-fc-1990-310559",
+      "title": "Images of Mazda RX-7 IMSA GTO (FC) 1990",
+      "description": "A white and blue Mazda RX-7 IMSA GTO (FC) from 1990, marked with the number 1 and sponsor decals, powers down a racetrack. Its aerodynamic silhouette, prominent rear wing, and gold racing wheels underscore its IMSA GTO racing heritage. Goodyear tire branding and PIAA logos further highlight its competition-ready setup.\n\nHosted on a car enthusiast site, this image is available as an 800×600 desktop wallpaper (0.4 MB) with a 5/5 rating and over 2,000 views. Higher-resolution downloads up to 2900×2000 pixels are offered for fans and tuners seeking detailed concept car imagery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mazda Rx-7 FC, racing preparation referencing RX-7 FC IMSA GTO (1986). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Images of Mazda RX-7 IMSA GTO (FC) 1990. Its description: A white and blue Mazda RX-7 IMSA GTO (FC) from 1990, marked with the number 1 and sponsor decals, powers down a racetrack. Its aerodynamic silhouette, prominent rear wing, and gold racing wheels underscore its IMSA GTO racing heritage. Goodyear tire branding and PIAA logos further highlight its competition-ready setup.\n\nHosted on a car enthusiast site, this image is available as an 800×600 desktop wallpaper (0.4 MB) with a 5/5 rating and over 2,000 views. Higher-resolution downloads up to 2900×2000 pixels are offered for fans and tuners seeking detailed concept car imagery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mazda RX-7 FC angular closed coupe, pop-up lids closed and broad wraparound hatch glass.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real FC wide GT arch extensions, deep front bumper, large fixed rear wing, gold mesh centre-lock racing wheels; retain FC pop-up lamp identity. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue and red Mazda factory graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "fc",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ba7584cb-5b6d-43f1-b6c4-1b7e96e10f4d.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/fc.png",
+  "sourceSha256": "4f1c97e29c657601771e870f41812d441d8cc5adca9c7339c604e4b8fcb0de8e",
+  "input": "tools/race-conversions/inputs/fc.png",
+  "output": "public/images/race-cars/fc.png",
+  "sha256": "09a48ff98a46b66a380d12ab1a6b734beaf456cb91ddd3aa5ae54be8b4cc8f83",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/fc/rosso.png",
+      "sha256": "0db8c5375db99f58487cdd14bb3ef84dbcf1cacda60386f074e3d60138e01ae3"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/fc-web-1.img",
+      "sha256": "1f4e3e50e10b234362022fcaa37eac864bf77eca963891341a59c1cabd83a834"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "key": "550",
+  "selected": [
+    {
+      "url": "https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_4a0c836a11f5239b3aea1341ae1c7f36.jpg",
+      "page": "https://www.classic-trader.com/fr/voitures/annonce/ferrari/550/maranello-550-prodrive/2002/370958",
+      "title": "Ferrari 550 voitures classiques à acheter | Classic Trader",
+      "score": 8,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/550-web-0.img",
+      "width": 1919,
+      "height": 1280
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

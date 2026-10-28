@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "348 Challenge",
+  "livery": "red with white Ferrari Challenge racing panels",
+  "bodywork": "real Challenge low front splitter, subtle side sills, silver or white five-spoke racing wheels, tow hooks and visible cage; no invented giant GT wing",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/348/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/348-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/628af2e6-d40d-4cd6-b270-a9fabb30cad6/art-mg-ferrari348challenge05.jpg",
+      "page": "https://supercarnostalgia.com/blog/ferrari-348-challenge",
+      "title": "Ferrari 348 Challenge Guide — Supercar Nostalgia",
+      "description": "A striking red Ferrari 348 Challenge is captured from behind on a racetrack, its wide rear tires planted firmly on the asphalt. The car’s distinctive slatted tail grille conceals rectangular taillights, while quad exhaust tips peek out from beneath the bumper. Sponsor decals for Pirelli, Agip, Speedline, and ANSA navimatic accent the lower bodywork, and the license plate MO 954041 sits centrally above a bold Pirelli logo.\n\nThis image highlights the 348 Challenge’s track-ready modifications: a bolt-in roll cage, racing seats, and a Challenge-spec exhaust box, all part of the factory upgrade kit introduced in 1992. The pressed steel monocoque chassis, transverse gearbox, and 3.4‑litre V8 engine combine to deliver 300 bhp at 7200 rpm. The setting—a closed circuit with grassy embankments—underscores the car’s purpose-built nature for one-make racing series held across Europe in the early 1990s.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ferrari 348, racing preparation referencing 348 Challenge (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Ferrari 348 Challenge Guide — Supercar Nostalgia. Its description: A striking red Ferrari 348 Challenge is captured from behind on a racetrack, its wide rear tires planted firmly on the asphalt. The car’s distinctive slatted tail grille conceals rectangular taillights, while quad exhaust tips peek out from beneath the bumper. Sponsor decals for Pirelli, Agip, Speedline, and ANSA navimatic accent the lower bodywork, and the license plate MO 954041 sits centrally above a bold Pirelli logo.\n\nThis image highlights the 348 Challenge’s track-ready modifications: a bolt-in roll cage, racing seats, and a Challenge-spec exhaust box, all part of the factory upgrade kit introduced in 1992. The pressed steel monocoque chassis, transverse gearbox, and 3.4‑litre V8 engine combine to deliver 300 bhp at 7200 rpm. The setting—a closed circuit with grassy embankments—underscores the car’s purpose-built nature for one-make racing series held across Europe in the early 199. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ferrari 348 closed coupe, long horizontal side intake strakes and pop-up lids, flat 1980s wedge shape.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Challenge low front splitter, subtle side sills, silver or white five-spoke racing wheels, tow hooks and visible cage; no invented giant GT wing. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red with white Ferrari Challenge racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "348",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-73075ea6-5646-4383-a333-71c68f947502.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/348.png",
+  "sourceSha256": "f359aaffa4e34dd8c0404520a0b00097d3a81f6dc5ddaf6d5a8a465aab717976",
+  "input": "tools/race-conversions/inputs/348.png",
+  "output": "public/images/race-cars/348.png",
+  "sha256": "258b6b1fd9376780fcc212cfff091b9516489c8fcdecd8103f864b768a7590c5",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/348/rosso.png",
+      "sha256": "7d8b4827411b93b5277d6c3b010533158eba45ab32800903e3847d8ea81d2637"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/348-web-2.img",
+      "sha256": "a04d1b04d644d9251277c648cbc6ec8ad547e0f12f95fc13f52cd3b661f2373f"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "993 GT2 R",
+  "livery": "white blue and red Porsche GT racing bands",
+  "bodywork": "actual GT2 R bolt-on wide arch extensions and front ducts, tall rear wing, silver racing centre-lock wheels; 993 nose retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/gt2/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/gt2-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.prod.website-files.com/5c10e3a8d43b9249503ee9d0/66b4e5e71d73a8cbd31b5afe_mini-for-sale-1996-Porsche-993-GT2-R-maxted-page.jpg",
+      "page": "https://www.maxted-page.com/car-for-sale/1996-porsche-993-gt2-r",
+      "title": "1996 Porsche 993 GT2 R | Cars for Sale | Maxted-Page Porsche Specialists",
+      "description": "A meticulously prepared 1996 Porsche 993 GT2 R, chassis #108, is presented in a studio setting. Finished in silver with bold #80 graphics, the car displays sponsor logos including Magnat, Cable & Wireless, Pirelli, Bilstein, and MOMO. Its wide fenders, large rear wing, and racing wheels underscore its track-oriented design.\n\nOriginally delivered to Money Auto Limited in 1996, this GT2 R competed in the BPR Series and the 1997 FIA GT Championship, achieving a 4th in GT2 at Le Mans and class podiums at Spa and Zeltweg under Roock Racing. Restored in 2007 to its 1997 Le Mans livery and fitted with a rebuilt engine in 2014, the car remains in pristine, race-ready condition, eligible for historic endurance events.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 993 GT2, racing preparation referencing 993 GT2 R (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1996 Porsche 993 GT2 R | Cars for Sale | Maxted-Page Porsche Specialists. Its description: A meticulously prepared 1996 Porsche 993 GT2 R, chassis #108, is presented in a studio setting. Finished in silver with bold #80 graphics, the car displays sponsor logos including Magnat, Cable & Wireless, Pirelli, Bilstein, and MOMO. Its wide fenders, large rear wing, and racing wheels underscore its track-oriented design.\n\nOriginally delivered to Money Auto Limited in 1996, this GT2 R competed in the BPR Series and the 1997 FIA GT Championship, achieving a 4th in GT2 at Le Mans and class podiums at Spa and Zeltweg under Roock Racing. Restored in 2007 to its 1997 Le Mans livery and fitted with a rebuilt engine in 2014, the car remains in pristine, race-ready condition, eligible for historic endurance events.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Porsche 993 GT2 wide riveted fender extensions, large raised rear wing and low sloping round headlamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual GT2 R bolt-on wide arch extensions and front ducts, tall rear wing, silver racing centre-lock wheels; 993 nose retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Porsche GT racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "gt2",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3d38ffd2-af36-4387-8047-97a86d52b3b2.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/gt2-r1.png",
+  "sourceSha256": "73f52bd588bf23db71a1c74ce3bda4049fcd8b8da0ee63b44bb282966066f8ab",
+  "input": "tools/race-conversions/inputs/gt2.png",
+  "output": "public/images/race-cars/gt2.png",
+  "sha256": "a06f90fec8bab67ca35c17b2e9e3c9b4dfa9b6d4d2ded98f71c93b67c029e984",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/gt2/rosso.png",
+      "sha256": "e9772bd1a55e1de5bfceea0e59572a6642650ea4351361fdbf827ecba162ab45"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/gt2-web-1.img",
+      "sha256": "616840e85088c44f64c73d795415744ba0160c02068c0666db890a842345d694"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

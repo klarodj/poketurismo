@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "9-3 Viggen Pikes Peak",
+  "livery": "black yellow and white Saab racing",
+  "bodywork": "retain 9-3 hatch identity, period Eklund extreme wide fenders and deep splitter, large braced rear wing, silver racing wheels; original engine/drivetrain not changed in game",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/93/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/93-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.vibilagare.se/public/styles/media_image/public/images/2018/06/saab_pikes_peak.jpg?itok=MQTZ7nto",
+      "page": "https://www.vibilagare.se/blogg/biltestarbloggen/nar-saab-vann-pikes-peak",
+      "title": "När Saab vann Pikes Peak | Vi Bilägare",
+      "description": "A striking red Saab 9-3 Viggen, bearing the number 93 and adorned with SAAB, Clarion, and ecopower logos, powers up a dusty mountain road. Its gold wheels spin through loose dirt, while the aerodynamic rear wing and rally-spec bodywork emphasize its hill climb pedigree. \n\nThis photograph evokes the 2000 Pikes Peak International Hill Climb, where Per Eklund piloted a specially tuned Saab 9-3 Viggen to victory at over 4,000 meters altitude. Engineered by Trollspeed in Trollhättan, the car delivered more than 750 horsepower in thin air, marking a triumphant moment in Saab’s motorsport history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Saab 9-3 Viggen, racing preparation referencing 9-3 Viggen Pikes Peak (2000). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: När Saab vann Pikes Peak | Vi Bilägare. Its description: A striking red Saab 9-3 Viggen, bearing the number 93 and adorned with SAAB, Clarion, and ecopower logos, powers up a dusty mountain road. Its gold wheels spin through loose dirt, while the aerodynamic rear wing and rally-spec bodywork emphasize its hill climb pedigree. \n\nThis photograph evokes the 2000 Pikes Peak International Hill Climb, where Per Eklund piloted a specially tuned Saab 9-3 Viggen to victory at over 4,000 meters altitude. Engineered by Trollspeed in Trollhättan, the car delivered more than 750 horsepower in thin air, marking a triumphant moment in Saab’s motorsport history.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Saab 9-3 Viggen FIRST-generation three-door hatch as reference, wraparound windshield, long sloped tail and sporty body kit, NOT modern sedan.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain 9-3 hatch identity, period Eklund extreme wide fenders and deep splitter, large braced rear wing, silver racing wheels; original engine/drivetrain not changed in game. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is black yellow and white Saab racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "93",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2d24cea4-2992-499a-b4d5-f9545e03ec3e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/93-r1.png",
+  "sourceSha256": "55270602635e42f4fcc4d84bb1de435d6fe0dac3ebd539c4c13bb3468950c37a",
+  "input": "tools/race-conversions/inputs/93.png",
+  "output": "public/images/race-cars/93.png",
+  "sha256": "ef7b12b94f3e54d5a8d84b63084c0daefc0064200a0f330dadca61d4ee4f7d20",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/93/rosso.png",
+      "sha256": "ac52b2207b3502c6370cfddc5b7f5f5fef3bd8ae973fd46c8325a41cf8110391"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/93-web-2.img",
+      "sha256": "ee1358204be24833ab4db84567c4e720c18957973183d922702e786aaf7e5525"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Esprit Sport 300 GT",
+  "livery": "yellow with blue period Lotus racing details",
+  "bodywork": "real 1990s Esprit GT front air dam, wide fenders, vented rear body, large flat wing and silver mesh racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/esprit/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/esprit-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://s1.cdn.autoevolution.com/images/news/gallery/5-of-the-rarest-most-impressive-lotus-esprit-editions_13.jpg",
+      "page": "https://www.autoevolution.com/news/5-of-the-rarest-most-impressive-lotus-esprit-editions-270076.html",
+      "title": "5 of the Rarest, Most Impressive Lotus Esprit Editions - autoevolution",
+      "description": "A striking yellow Lotus Esprit Sport 300 stands on a gravel clearing, framed by dry grass and dense trees. The rear three-quarter view highlights its aerodynamic rear wing, dual exhaust pipes, and wide five-spoke alloy wheels. A French license plate, EJ-397-YS, is mounted between the rectangular taillights, and a green “300 Sport” decal marks its limited-edition status.\n\nThis photograph accompanies an autoevolution feature on the rarest Lotus Esprit editions. The Sport 300 was introduced in 1992 as a homologation special for European GT racing, boasting a reinforced chassis, motorsport-derived suspension, and a turbocharged 2.2-liter engine producing 302 hp. Only 64 units were built, making it one of the most sought-after Esprit variants among collectors.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lotus Esprit, racing preparation referencing Esprit Sport 300 GT (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: 5 of the Rarest, Most Impressive Lotus Esprit Editions - autoevolution. Its description: A striking yellow Lotus Esprit Sport 300 stands on a gravel clearing, framed by dry grass and dense trees. The rear three-quarter view highlights its aerodynamic rear wing, dual exhaust pipes, and wide five-spoke alloy wheels. A French license plate, EJ-397-YS, is mounted between the rectangular taillights, and a green “300 Sport” decal marks its limited-edition status.\n\nThis photograph accompanies an autoevolution feature on the rarest Lotus Esprit editions. The Sport 300 was introduced in 1992 as a homologation special for European GT racing, boasting a reinforced chassis, motorsport-derived suspension, and a turbocharged 2.2-liter engine producing 302 hp. Only 64 units were built, making it one of the most sought-after Esprit variants among collectors.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Lotus Esprit V8 late 1990s wedge coupe, closed pop-up lamps and high rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real 1990s Esprit GT front air dam, wide fenders, vented rear body, large flat wing and silver mesh racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow with blue period Lotus racing details. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "esprit",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-219d17b9-6b98-46b6-8230-d41abcb63225.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/esprit.png",
+  "sourceSha256": "fdda8459a493b7c311db34eec7c48cd98c1cbeb220ad07700cf87ceef321b2ed",
+  "input": "tools/race-conversions/inputs/esprit.png",
+  "output": "public/images/race-cars/esprit.png",
+  "sha256": "06f7873bb24cb54a5b8ec2bbbc0450283d4f3a97a276daf5bdd7bfc05017bf57",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/esprit/rosso.png",
+      "sha256": "36223771d38167d155946f93922b552028bcd7b93723940692a373bc49f44116"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/esprit-web-0.img",
+      "sha256": "045b005e1a041f8ff3099d6b049ae1f5fd8a2c0126d30116ff55547dc43efe4e"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

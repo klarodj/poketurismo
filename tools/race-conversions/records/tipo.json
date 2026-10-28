@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Tipo 16v Gruppo A",
+  "livery": "white red and blue Fiat racing bands",
+  "bodywork": "boxy Tipo hatch retained, deeper rally bumper, restrained squared arch kit, small roof spoiler, white rally wheels and red mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/tipo/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/tipo-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://carwow-es-wp-3.imgix.net/Fiat-Tipo-1990-1600-05.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1366",
+      "page": "https://www.carwow.es/blog/coches-expo-92-inauguracion-30-aniversario",
+      "title": "30 aniversario Expo '92: los coches de los pabellones | Carwow",
+      "description": "A silver Fiat Tipo 2.0 16v five-door hatchback is displayed in a studio setting, highlighting its clean lines and period‑correct styling. The black plastic bumpers and side moldings contrast with the light body color, while the five‑spoke alloy wheels add a sporty touch. Badges on the rear identify it as a 16‑valve model, reflecting the performance focus of early 1990s compact cars.\n\nThis image appears in a Carwow feature marking the 30th anniversary of Expo ’92 in Seville, where automakers exhibited prototypes and production vehicles in architecturally notable pavilions. The article revisits those displays and imagines their modern counterparts, celebrating the role of cars like the Fiat Tipo in that historic event.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Fiat Tipo 16v, racing preparation referencing Tipo 16v Gruppo A (1992). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: 30 aniversario Expo '92: los coches de los pabellones | Carwow. Its description: A silver Fiat Tipo 2.0 16v five-door hatchback is displayed in a studio setting, highlighting its clean lines and period‑correct styling. The black plastic bumpers and side moldings contrast with the light body color, while the five‑spoke alloy wheels add a sporty touch. Badges on the rear identify it as a 16‑valve model, reflecting the performance focus of early 1990s compact cars.\n\nThis image appears in a Carwow feature marking the 30th anniversary of Expo ’92 in Seville, where automakers exhibited prototypes and production vehicles in architecturally notable pavilions. The article revisits those displays and imagines their modern counterparts, celebrating the role of cars like the Fiat Tipo in that historic event.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Fiat Tipo 16v five-door tall angular hatch, rectangular lamps and black rubbing strips.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: boxy Tipo hatch retained, deeper rally bumper, restrained squared arch kit, small roof spoiler, white rally wheels and red mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white red and blue Fiat racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "tipo",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-28273bfa-fa9a-46a8-895f-287933a471be.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/tipo.png",
+  "sourceSha256": "3f8e756f0746e3f5ca24ed597a796d42ac070a50830644b7ef3ab6b4309a4de3",
+  "input": "tools/race-conversions/inputs/tipo.png",
+  "output": "public/images/race-cars/tipo.png",
+  "sha256": "57059ead6865ec7121409fa1d5eb1886850664d8d6ca167632710c5e78a2b5c2",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/tipo/rosso.png",
+      "sha256": "6866063b5ea1a280f07fdde40c673079f95fe592cf2289165d3c76087661de2f"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/tipo-web-0.img",
+      "sha256": "4ed9b08f8cc6476dfa3819edb5b70d9afbc0b53b990534f492a2289a11521061"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "19 16V Gruppo N",
+  "livery": "white blue and yellow Renault Sport bands",
+  "bodywork": "retain correct THREE-door Renault 19 and sloping rear, period rally bumper, subtle arch lips, small rear spoiler, white rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/19/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/19-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://assets.autoweek.nl/m/os4pi6oiczudd9_800.jpg",
+      "page": "https://www.autoweek.nl/autotests/artikel/renault-19-16v-met-deze-hot-hatch-werd-einde-turbotijdperk-ingeluid/",
+      "title": "Renault 19 16V: eerste zestienklepper van Renault Proefrit - AutoWeek",
+      "description": "A bright red Renault 19 16V navigates a slalom course marked by traffic cones on a flat asphalt test track. The driver, seated in the five‑door hatchback, demonstrates the car’s direct steering and firm suspension as it leans slightly through the turn. The clear daylight and open surroundings emphasize the car’s sporty character and 1990s design cues.\n\nUnder the hood, the 1.764‑liter F7P engine delivers 140 hp without a catalytic converter (135 hp with one), revving smoothly up to 7,000 rpm. This naturally aspirated 16‑valve powerplant replaced Renault’s earlier turbocharged hot models, offering a distinctive power delivery. The test car’s solid build quality, precise gearbox, and front‑wheel‑drive layout combine to create a confident driving experience, despite a somewhat firm ride on uneven surfaces.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault 19 16v, racing preparation referencing 19 16V Gruppo N (1991). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Renault 19 16V: eerste zestienklepper van Renault Proefrit - AutoWeek. Its description: A bright red Renault 19 16V navigates a slalom course marked by traffic cones on a flat asphalt test track. The driver, seated in the five‑door hatchback, demonstrates the car’s direct steering and firm suspension as it leans slightly through the turn. The clear daylight and open surroundings emphasize the car’s sporty character and 1990s design cues.\n\nUnder the hood, the 1.764‑liter F7P engine delivers 140 hp without a catalytic converter (135 hp with one), revving smoothly up to 7,000 rpm. This naturally aspirated 16‑valve powerplant replaced Renault’s earlier turbocharged hot models, offering a distinctive power delivery. The test car’s solid build quality, precise gearbox, and front‑wheel‑drive layout combine to create a confident driving experience, despite a somewhat firm ride on uneven surfaces.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Renault 19 16V PHASE 2 THREE-DOOR hatch as red original. Correct entire rear quarter: ONE long side door, no rear door/handle; very broad sloping C-pillar and triangular rear side glass; sharply raked hatch with short clipped tail, low slim factory lip spoiler and broad horizontal rear lamps. Not a five-door, not Chamade sedan, not an upright boxy Clio. Keep phase-2 elongated headlamps and original 5-spoke silver wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain correct THREE-door Renault 19 and sloping rear, period rally bumper, subtle arch lips, small rear spoiler, white rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and yellow Renault Sport bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "19",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f3dd39c7-3a08-4ddd-8062-5dd386a894f3.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/19-r1.png",
+  "sourceSha256": "48d2ffd60c06eb5c316be61d325cd88f8049c4ec9eae6434f0b2a94e229d42ad",
+  "input": "tools/race-conversions/inputs/19.png",
+  "output": "public/images/race-cars/19.png",
+  "sha256": "e22071f70c089871ce8d3b55e958dfd22e75f886ac45b1e0c97dd93d98c8b498",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/19/rosso.png",
+      "sha256": "3d6cfb5da57ef0d04389966eea89d90f90847b28df3d402024261dc1f229d7e1"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/19-web-2.img",
+      "sha256": "be3ab05445f42550327dff1dc9c3d98eb641659625da27d6e5539d81c83d2bb8"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

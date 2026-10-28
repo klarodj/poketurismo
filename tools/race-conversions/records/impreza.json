@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Impreza 555 Gruppo A",
+  "livery": "blue with yellow Subaru 555-style graphics",
+  "bodywork": "retain FOUR-door GC8 Impreza GT body, real Group A rally bumper, bonnet and roof vents, boot wing and gold compact rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/impreza/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/impreza-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://rallypassion.weebly.com/uploads/8/6/7/6/8676672/maxresdefault_orig.jpg",
+      "page": "https://rallypassion.weebly.com/subaru-impreza-555-gra.html",
+      "title": "Subaru Impreza 555 Gr.A",
+      "description": "A blue Subaru Impreza 555 Gr.A rally car, number 32, races along a dusty gravel stage, its gold wheels and bright yellow 555 logos standing out against the pale road surface. The Repsol-sponsored machine, fitted with Pirelli tires and a turbocharged boxer engine, kicks up a cloud of dust as it drifts through a tight corner. Spectators peer from behind trees, capturing the excitement of Group A rally competition.\n\nThis iconic rally car debuted in the World Rally Championship in 1993, replacing the Legacy RS and quickly proving its competitiveness. With its aluminum engine, improved suspension, and lighter chassis, the Impreza 555 secured its first victory at the 1994 Acropolis Rally with Carlos Sainz. In 1995, Colin McRae clinched the drivers’ title and Subaru won its first manufacturers’ championship, cementing the 555’s legacy in rally history.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Subaru Impreza Gt, racing preparation referencing Impreza 555 Gruppo A (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Subaru Impreza 555 Gr.A. Its description: A blue Subaru Impreza 555 Gr.A rally car, number 32, races along a dusty gravel stage, its gold wheels and bright yellow 555 logos standing out against the pale road surface. The Repsol-sponsored machine, fitted with Pirelli tires and a turbocharged boxer engine, kicks up a cloud of dust as it drifts through a tight corner. Spectators peer from behind trees, capturing the excitement of Group A rally competition.\n\nThis iconic rally car debuted in the World Rally Championship in 1993, replacing the Legacy RS and quickly proving its competitiveness. With its aluminum engine, improved suspension, and lighter chassis, the Impreza 555 secured its first victory at the 1994 Acropolis Rally with Carlos Sainz. In 1995, Colin McRae clinched the drivers’ title and Subaru won its first manufacturers’ championship, cementing the 555’s legacy in rally history.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Subaru Impreza GT GC8 FOUR-door saloon, bonnet scoop and modest wing, narrower than 22B.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain FOUR-door GC8 Impreza GT body, real Group A rally bumper, bonnet and roof vents, boot wing and gold compact rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue with yellow Subaru 555-style graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "impreza",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-518b46a6-344b-4473-857e-56d49ab32f78.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/impreza-r1.png",
+  "sourceSha256": "13e0fb1e00b5ae38fbee3d77157b0455d77333c6eefe3c13c99ca11b7fbdd0cd",
+  "input": "tools/race-conversions/inputs/impreza.png",
+  "output": "public/images/race-cars/impreza.png",
+  "sha256": "d5f92e4a9ef713e26a0019bb755cb28d095c35bf0df83797de4018a550b8ee8d",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/impreza/rosso.png",
+      "sha256": "cfba4325af7055644cb2ea79195ecea48951f26bb8be5a50f1e2f9c1ef48be93"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/impreza-web-0.img",
+      "sha256": "b929d3ccfe33686188c557f214738de61230184c3d8a2f1a4ddc2efbb42419c7"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

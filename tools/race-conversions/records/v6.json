@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Clio V6 Trophy",
+  "livery": "yellow blue and white Renault Sport",
+  "bodywork": "real V6 Trophy deep front bumper and side intakes, wide arches, roll cage, racing roof treatment, rear spoiler and white wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/v6/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/v6-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://racecarsdirect.com/content/UserImages/130246/729778.jpg?v=0",
+      "page": "https://racecarsdirect.com/Advert/Details/130246/orginal-renault-clio-v6-trophy-phase-2",
+      "title": "Racecarsdirect.com  -  Orginal Renault Clio V6 Trophy Phase 2",
+      "description": "A striking yellow Renault Clio V6 Trophy Phase 2 is parked inside a garage, its wide rear wing and dual exhaust pipes immediately drawing attention. The rear bumper features the bold \"BERU TOP·10\" plate and \"elf\" branding, while the \"Clio v6\" badge and Renault Sport logo highlight its pedigree. White racing wheels and sponsor decals such as \"FACOM,\" \"4R,\" and the driver name \"H.HARTL\" complete the authentic race car appearance.\n\nThis rare Cup car, chassis number 65, was one of only 156 built in Dieppe, France, for the Beru Top 10, Renault Clio Speed Trophy Germany, and Europa Cup series from 2000 to 2003. Fully restored to its original factory livery, it features a rebuilt 3.0‑liter V6 engine producing 286 PS and a newly revised gearbox. The car has been preserved with documentation, race results, and images, having only seen occasional track days since 2003.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault Clio v6, racing preparation referencing Clio V6 Trophy (1999). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Racecarsdirect.com  -  Orginal Renault Clio V6 Trophy Phase 2. Its description: A striking yellow Renault Clio V6 Trophy Phase 2 is parked inside a garage, its wide rear wing and dual exhaust pipes immediately drawing attention. The rear bumper features the bold \"BERU TOP·10\" plate and \"elf\" branding, while the \"Clio v6\" badge and Renault Sport logo highlight its pedigree. White racing wheels and sponsor decals such as \"FACOM,\" \"4R,\" and the driver name \"H.HARTL\" complete the authentic race car appearance.\n\nThis rare Cup car, chassis number 65, was one of only 156 built in Dieppe, France, for the Beru Top 10, Renault Clio Speed Trophy Germany, and Europa Cup series from 2000 to 2003. Fully restored to its original factory livery, it features a rebuilt 3.0‑liter V6 engine producing 286 PS and a newly revised gearbox. The car has been preserved with documentation, race results, and images, having only seen occasional track days since 2003.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Renault Clio V6 phase 1 wide mid-engine three-door body, huge black rear-side air intake and boxed haunches, not ordinary Clio.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real V6 Trophy deep front bumper and side intakes, wide arches, roll cage, racing roof treatment, rear spoiler and white wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow blue and white Renault Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "v6",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-146b661c-2885-47a5-b76d-2beabe3249ef.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/v6-r1.png",
+  "sourceSha256": "ba79810460a90bb68980080ce5936601a7051862351c0edfe5af8398a1538596",
+  "input": "tools/race-conversions/inputs/v6.png",
+  "output": "public/images/race-cars/v6.png",
+  "sha256": "df97dbb7ca5d9887a78f3eee09d792bc9bc37a82bc2bfbb9eedebf86ffe99035",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/v6/rosso.png",
+      "sha256": "d632864bb4c5301ac6b2f32bb465b64356fd6aa0dc87bdd87c2c1776e28f9883"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/v6-web-0.img",
+      "sha256": "33e11d73b68144d0f93cc483dff53bcb1f5ed075cc1b99ea093c7d31dda52849"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

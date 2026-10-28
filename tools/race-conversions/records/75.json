@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "75 Turbo Evoluzione Gruppo A",
+  "livery": "red and white Alfa Corse",
+  "bodywork": "boxy flared arch kit, deep front bumper, broad side skirts, restrained boot spoiler, silver centre-lock style mesh wheels; black beltline retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/75/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/75-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5caed8960cf57d49530e8c60/0575485f-681e-4e56-840a-d08e4585f82a/art-mg-alfaromeo75turboevoluzione3.jpg",
+      "page": "https://supercarnostalgia.com/blog/alfa-romeo-75-turbo-evoluzione",
+      "title": "Alfa Romeo 75 Turbo Evoluzione Guide — Supercar Nostalgia",
+      "description": "The Alfa Romeo 75 Turbo Evoluzione, produced in 1987 as a Group A homologation special, is presented here in its signature Rosso Alfa finish. Built to meet the FIA’s requirement of 500 evolution models, it features widened wheel arches, deep side skirts, and a prominent rear spoiler imported from the V6 variant. The matching Rosso Alfa wheels and enlarged cooling intakes underscore its racing intent.\n\nUnder the hood, the Evoluzione’s 1.75‑litre turbocharged inline-four engine was de‑bored to 1752 cc to qualify for Class 2, delivering around 175 bhp. A transaxle layout with a five-speed gearbox and limited-slip differential provided balanced handling, while stiffer springs, thicker anti-roll bars, and vented disc brakes improved track performance. This homologation special formed the basis of Alfa Romeo’s 1987 World Touring Car Championship campaign.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Alfa Romeo 75 Quadrifoglio, racing preparation referencing 75 Turbo Evoluzione Gruppo A (1987). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Alfa Romeo 75 Turbo Evoluzione Guide — Supercar Nostalgia. Its description: The Alfa Romeo 75 Turbo Evoluzione, produced in 1987 as a Group A homologation special, is presented here in its signature Rosso Alfa finish. Built to meet the FIA’s requirement of 500 evolution models, it features widened wheel arches, deep side skirts, and a prominent rear spoiler imported from the V6 variant. The matching Rosso Alfa wheels and enlarged cooling intakes underscore its racing intent.\n\nUnder the hood, the Evoluzione’s 1.75‑litre turbocharged inline-four engine was de‑bored to 1752 cc to qualify for Class 2, delivering around 175 bhp. A transaxle layout with a five-speed gearbox and limited-slip differential provided balanced handling, while stiffer springs, thicker anti-roll bars, and vented disc brakes improved track performance. This homologation special formed the basis of Alfa Romeo’s 1987 World Touring Car Championship campaign.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Correct Alfa Romeo 75 Quadrifoglio FOUR-DOOR. Restore its distinctive thick DARK CHARCOAL/BLACK BELT-LINE STRIP running the FULL SIDE just below side-window sill from front wing through both doors to rear quarter, rising in a sharp dogleg on the C-pillar/rear quarter and wrapping across the boot trailing edge, as real photo. The strip is unpainted trim, NEVER green and NEVER recoloured. It is separate from black bumper rub strips. Redesign rear silhouette from authentic photo: angular wedge saloon with sharply slanted rear glass, short high horizontal boot deck, clipped vertical tail, integrated black trailing trim and low broad red/amber rear corner lamp band, not generic 155 tail. Keep original front, four doors, period silver wheels and no racing wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: boxy flared arch kit, deep front bumper, broad side skirts, restrained boot spoiler, silver centre-lock style mesh wheels; black beltline retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red and white Alfa Corse. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "75",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-322341f3-f08b-4b07-a7e1-3ed65d2f17ee.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/75.png",
+  "sourceSha256": "56211439ce29f83960f7889cf92c8654949aa3a401063b954c4a551d556efc0a",
+  "input": "tools/race-conversions/inputs/75.png",
+  "output": "public/images/race-cars/75.png",
+  "sha256": "f9324f92cdfc19cc33972e5abe7f5e0ba89a089315eb7c47054cb6cc45df9441",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/75/rosso.png",
+      "sha256": "cb4e57de05b4ed97ac3b296aceb309b4fc67359fb40ecd0530174b8ac2ae7ca0"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/75-web-0.img",
+      "sha256": "29f3836fd3e8566dd220c9904d9ed12fc849517343b152c9526ba9c794348c25"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

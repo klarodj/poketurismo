@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Sierra RS500 Cosworth Gruppo A",
+  "livery": "black red and white Texaco style",
+  "bodywork": "real THREE-door Sierra hatch, deep RS500 bumper and cooling ducts, box arch flares, double-level whale-tail wing, gold mesh race wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/sierrac/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/sierrac-commons-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ford_Sierra_RS500_Cosworth_cropped.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Ford_Sierra_RS500_Cosworth_cropped.JPG",
+      "title": "File:Ford Sierra RS500 Cosworth cropped.JPG",
+      "description": "Ford Sierra RS500 Cosworth with British registration plate starting E500... at the paddock car park, Donington Park race circuit in Leicestershire, England in 1988",
+      "artist": "Rocknrollmancer",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ford Sierra RS Corworth, racing preparation referencing Sierra RS500 Cosworth Gruppo A (1987). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: File:Ford Sierra RS500 Cosworth cropped.JPG. Its description: Ford Sierra RS500 Cosworth with British registration plate starting E500... at the paddock car park, Donington Park race circuit in Leicestershire, England in 1988. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Ford Sierra RS Cosworth three-door hatch with large whale-tail wing, as reference; NOT Sapphire saloon.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real THREE-door Sierra hatch, deep RS500 bumper and cooling ducts, box arch flares, double-level whale-tail wing, gold mesh race wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is black red and white Texaco style. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "sierrac",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ad94655e-8288-4131-96de-c0e729c80429.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/sierrac.png",
+  "sourceSha256": "9eb5206b3baf54bb5cc0d03fded5149f3c677e71a70cea478493e6bc13dc22e2",
+  "input": "tools/race-conversions/inputs/sierrac.png",
+  "output": "public/images/race-cars/sierrac.png",
+  "sha256": "a01ff08f0ab5f87b6b1ca9196c52748c4c7e3de20c767cd30486f64ee2f10730",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/sierrac/rosso.png",
+      "sha256": "009fbf62a50b11195200bcdbc7b74f7b4b5c371dbd8213a9116a92e87da13f20"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/sierrac-commons-0.img",
+      "sha256": "9f613b53f563179912a237b5cf3b4adfbe1387b6a2d154b19e3b1426e5d9da43"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

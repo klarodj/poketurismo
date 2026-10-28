@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Skyline GT-R LM",
+  "livery": "white blue and red Nismo Le Mans scheme",
+  "bodywork": "real R33 LM front bumper and wide arch kit, bonnet vents, tall rear wing and silver racing wheels; R33 identity retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/r33/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/r33-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/nismo-1529064077.jpg?crop=0.6666666666666666xw%3A1xh%3Bcenter%2Ctop&resize=1200%3A%2A",
+      "page": "https://www.roadandtrack.com/motorsports/a21550618/1995-nissan-skyline-gtr-lm-what-gearbox-whine/",
+      "title": "1995 Nissan Skyline GTR LM: What Gearbox Whine?",
+      "description": "The 1995 Nissan Skyline GT-R LM, developed by Nismo, is displayed against a white backdrop, highlighting its white and blue livery and sponsor decals such as “Keep The Dream Alive,” Clarion, JOMO, and Bridgestone. Its aerodynamic front end features quad headlights, a pronounced splitter, and multi-spoke racing wheels shod in Bridgestone tires.\n\nThis R33-based Group A race car was converted to rear-wheel drive and fitted with a Group N–spec 400-horsepower engine and an Xtrac 6-speed sequential transmission. It competed at the 1995 24 Hours of Le Mans, finishing 10th overall and 5th in class, and is now preserved in Nismo’s Zama Museum, occasionally driven at Fuji Speedway.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Nissan Skyline GTR R33, racing preparation referencing Skyline GT-R LM (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1995 Nissan Skyline GTR LM: What Gearbox Whine?. Its description: The 1995 Nissan Skyline GT-R LM, developed by Nismo, is displayed against a white backdrop, highlighting its white and blue livery and sponsor decals such as “Keep The Dream Alive,” Clarion, JOMO, and Bridgestone. Its aerodynamic front end features quad headlights, a pronounced splitter, and multi-spoke racing wheels shod in Bridgestone tires.\n\nThis R33-based Group A race car was converted to rear-wheel drive and fitted with a Group N–spec 400-horsepower engine and an Xtrac 6-speed sequential transmission. It competed at the 1995 24 Hours of Le Mans, finishing 10th overall and 5th in class, and is now preserved in Nismo’s Zama Museum, occasionally driven at Fuji Speedway.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Nissan Skyline GT-R R33 two-door coupe, rounded larger body, oval-ish rectangular lights, raised rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real R33 LM front bumper and wide arch kit, bonnet vents, tall rear wing and silver racing wheels; R33 identity retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red Nismo Le Mans scheme. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "r33",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-0d55ecef-93c9-4308-886a-35916948f8b8.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/r33.png",
+  "sourceSha256": "c9faa414a429c48c5b0ba8d5b15b5c1ce08414607881c79d9f03f3bd5fddd861",
+  "input": "tools/race-conversions/inputs/r33.png",
+  "output": "public/images/race-cars/r33.png",
+  "sha256": "9e57a5b9268cd31617b976f8124f8461669217246d1a0fd42cfb456e14d7dafb",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/r33/rosso.png",
+      "sha256": "9b3f2f421e9d9b8d212d349f76491c36547fbcd1aa1745513896f008c96a46bd"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/r33-web-0.img",
+      "sha256": "eff9ec57e31b3f2e8e876e1c56d517922108f961757cd22a84cbd7d410420f4e"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

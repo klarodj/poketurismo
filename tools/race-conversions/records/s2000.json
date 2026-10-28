@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "S2000 · Super Taikyu",
+  "livery": "white with blue yellow period racing bands",
+  "bodywork": "AP1 roadster identity, period removable hardtop, deep front splitter, mild wide arches, flat rear wing, silver or white racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/s2000/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/s2000-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn-image.as-web.jp/2018/01/30152157/archive_13006_01.jpg",
+      "page": "https://www.as-web.jp/past/%E3%80%8C%E7%89%B9%E8%A8%B1%E3%83%AA%E3%82%B8%E3%83%83%E3%83%88%E3%82%AB%E3%83%A9%E3%83%BCs2000%E3%80%8D%E3%80%81%E9%9B%A8%E3%81%AEs%E8%80%90%E5%AF%8C%E5%A3%AB%E3%81%A74%E4%BD%8D%E7%8D%B2%E5%BE%97",
+      "title": "「特許リジットカラーS2000」、雨のS耐富士で4位獲得 | autosport web",
+      "description": "A blue and yellow Honda S2000, car number 95, powers through a wet turn at Fuji Speedway during the Super Taikyu Series. The vehicle’s livery displays sponsors such as Patent Rigid Color, TPJ, and Spoon, while its slick tires struggle for grip on the rain-slicked asphalt. Spray from the rear tires highlights the challenging conditions faced by the drivers.\n\nDespite heavy rain and an exhaust failure mid-race, the #95 team of Naoki Hattori, Takayuki Kinoshita, and Takeshi Matsui secured a fourth-place finish in the four-hour endurance event. Their strategic pit stops and consistent lap times allowed them to maintain second place in the championship standings heading into the next round at Okayama International Circuit.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Honda S2000, racing preparation referencing S2000 · Super Taikyu (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 「特許リジットカラーS2000」、雨のS耐富士で4位獲得 | autosport web. Its description: A blue and yellow Honda S2000, car number 95, powers through a wet turn at Fuji Speedway during the Super Taikyu Series. The vehicle’s livery displays sponsors such as Patent Rigid Color, TPJ, and Spoon, while its slick tires struggle for grip on the rain-slicked asphalt. Spray from the rear tires highlights the challenging conditions faced by the drivers.\n\nDespite heavy rain and an exhaust failure mid-race, the #95 team of Naoki Hattori, Takayuki Kinoshita, and Takeshi Matsui secured a fourth-place finish in the four-hour endurance event. Their strategic pit stops and consistent lap times allowed them to maintain second place in the championship standings heading into the next round at Okayama International Circuit.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Honda S2000 AP1 open roadster, roof down, long bonnet, short rear and clear swept headlamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: AP1 roadster identity, period removable hardtop, deep front splitter, mild wide arches, flat rear wing, silver or white racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue yellow period racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "s2000",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1be76e8c-3c5d-4500-a03c-84e3a2276d10.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/s2000.png",
+  "sourceSha256": "e736ded7db65652ce8dc5c84ccbf2db0bf4136f5489a27422d1573af729230a9",
+  "input": "tools/race-conversions/inputs/s2000.png",
+  "output": "public/images/race-cars/s2000.png",
+  "sha256": "9fbb1abb1bd5c75a79176cd699a21218f30588476d56c9f9ebbce1f953ccea9d",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/s2000/rosso.png",
+      "sha256": "962b3930ca70531dc446c65f1a7927bffc7709813ba1f73f4ff17a43ad754829"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/s2000-web-2.img",
+      "sha256": "e7eaa6140ed62723df13cfcc77e7f1a311c698482532a9328bbfda34aaf97dc6"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

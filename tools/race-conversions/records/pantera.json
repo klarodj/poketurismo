@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Pantera Gruppo 4",
+  "livery": "yellow with black competition panels",
+  "bodywork": "real Pantera Group 4 deep front air dam, very broad arch extensions, deep-dish racing wheels and period rear spoiler",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/pantera/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/pantera-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5e7918a4b1051f6e49dcfdb1/1586053492964-I8YLQ62340KHB2UWE8NL/Audrian_Museum-08914-840x600.jpg?format=1000w",
+      "page": "https://www.audrainautomuseum.org/muscle-car-madness/1972-detomaso-pantera",
+      "title": "1972 Detomaso \"Pantera\" — Audrain Auto Museum",
+      "description": "A vibrant yellow 1972 De Tomaso Pantera is showcased indoors under professional lighting, emphasizing its low-slung Italian design and muscular rear end. The Pennsylvania antique historic vehicle plate and “Pantera” script badge underscore its classic status. Below the rear deck, the quad exhaust outlets flank the visible ZF transaxle, hinting at the car’s mid-engine layout and 5-speed transaxle configuration.\n\nOriginally powered by a Ford 351 Cleveland V8 bored to 408 cid with over 500 horsepower, this Pantera blends Italian styling by Ghia and Tom Tjaarda with American muscle. The museum’s exhibit notes its 0–60 mph time of 5 seconds, 165 mph top speed, and multiple Concours Italiano awards. A 2016 engine rebuild by specialist Patrick Mical further enhances its performance pedigree.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: De Tomaso Pantera GTS, racing preparation referencing Pantera Gruppo 4 (1972). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: 1972 Detomaso \"Pantera\" — Audrain Auto Museum. Its description: A vibrant yellow 1972 De Tomaso Pantera is showcased indoors under professional lighting, emphasizing its low-slung Italian design and muscular rear end. The Pennsylvania antique historic vehicle plate and “Pantera” script badge underscore its classic status. Below the rear deck, the quad exhaust outlets flank the visible ZF transaxle, hinting at the car’s mid-engine layout and 5-speed transaxle configuration.\n\nOriginally powered by a Ford 351 Cleveland V8 bored to 408 cid with over 500 horsepower, this Pantera blends Italian styling by Ghia and Tom Tjaarda with American muscle. The museum’s exhibit notes its 0–60 mph time of 5 seconds, 165 mph top speed, and multiple Concours Italiano awards. A 2016 engine rebuild by specialist Patrick Mical further enhances its performance pedigree.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: De Tomaso Pantera GTS wedge coupe, angular nose, closed pop-up lids and wide rear wing as reference.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Pantera Group 4 deep front air dam, very broad arch extensions, deep-dish racing wheels and period rear spoiler. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow with black competition panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "pantera",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-26746a1a-91a3-42f4-be69-d0594e082838.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/pantera.png",
+  "sourceSha256": "fcb05efc3cb8cca0c86a8a98394c3db54fd3b99a570851d3760347d13aedb10c",
+  "input": "tools/race-conversions/inputs/pantera.png",
+  "output": "public/images/race-cars/pantera.png",
+  "sha256": "e271525dc45b9e5ce550ea98c9e50b6572538b4a81c8f72e6e360e6ac536542d",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/pantera/rosso.png",
+      "sha256": "370d8d554bde07b7a3e9afa70ef6b5809de4d9a9adbe9d5f674cb26d9a07add6"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/pantera-web-0.img",
+      "sha256": "6515a2abd669b0c1e1cc8c563567059ea07e15fa5bcdd9172e36100a52bc0c0b"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

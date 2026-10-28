@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "220 Turbo Tomcat Cup",
+  "livery": "blue yellow and white Rover Sport",
+  "bodywork": "real Tomcat COUPE Cup front splitter, mild arch lips, skirts, low boot wing and silver mesh racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/220/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/220-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://d2046fb22nsf40.cloudfront.net/2026/05/1992-Rover-220-Coupe-Turbo-HR-3.jpg",
+      "page": "https://cars4starters.com.au/record-breaking-rover-goes-under-the-hammer/",
+      "title": "Record-breaking Rover goes under the hammer | cars4starters",
+      "description": "This yellow and white Rover 220 Coupe Turbo, known as the ‘Tomcat’, is presented in its original land speed record–breaking specification. The side profile showcases sponsor decals from Texaco, Harman/Kardon, Michelin Pilot, MEB TRW Steering & Suspension Systems, and Garrett Turbo, along with alloy wheels and a rear spoiler. Stripped to a bare shell and rebuilt with engine performance enhancements, a roll cage, racing seat, and large-capacity fuel tank, the coupe achieved 37 UK land speed records in 1992, including a 24-hour endurance record of 138 mph and a flying 5 km run at 156 mph.\n\nOne of two specially modified pre-production prototypes, this sole survivor remains in its record-setting form. Auctioned at Millbrook Proving Ground in Bedfordshire, it still holds 36 of its records and was recommissioned in 2002 for a commemorative event. The car’s bold livery and motorsport upgrades reflect its historic achievement as the fastest production-based 2.0-litre front-wheel-drive vehicle of its era.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Rover 220 Turbo, racing preparation referencing 220 Turbo Tomcat Cup (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Record-breaking Rover goes under the hammer | cars4starters. Its description: This yellow and white Rover 220 Coupe Turbo, known as the ‘Tomcat’, is presented in its original land speed record–breaking specification. The side profile showcases sponsor decals from Texaco, Harman/Kardon, Michelin Pilot, MEB TRW Steering & Suspension Systems, and Garrett Turbo, along with alloy wheels and a rear spoiler. Stripped to a bare shell and rebuilt with engine performance enhancements, a roll cage, racing seat, and large-capacity fuel tank, the coupe achieved 37 UK land speed records in 1992, including a 24-hour endurance record of 138 mph and a flying 5 km run at 156 mph.\n\nOne of two specially modified pre-production prototypes, this sole survivor remains in its record-setting form. Auctioned at Millbrook Proving Ground in Bedfordshire, it still holds 36 of its records and was recommissioned in 2002 for a commemorative event. The car’s bold livery and motorsport upgrades re. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Rover 220 Turbo Tomcat two-door coupe, long rounded roof, slim rectangular lamps and small rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Tomcat COUPE Cup front splitter, mild arch lips, skirts, low boot wing and silver mesh racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue yellow and white Rover Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "220",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-622747d9-1253-497e-ba3e-858850ae2840.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/220-r1.png",
+  "sourceSha256": "d36157c49803b6b185061f01b0663393de755cc4fa25ab17370406be82be86d5",
+  "input": "tools/race-conversions/inputs/220.png",
+  "output": "public/images/race-cars/220.png",
+  "sha256": "9033471e1d038919d5c1fc8839662eadbb117f019fbeac85d05e73caffe91281",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/220/rosso.png",
+      "sha256": "af07e0dcf1dd62d5f22e0db839893a2646e83e857176bdd9812a3de846092860"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/220-web-0.img",
+      "sha256": "7282ec5080a93e1de934dea74053eaf96a382c6e89bd6516e7681d1e4afda029"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

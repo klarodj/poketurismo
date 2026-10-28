@@ -1,0 +1,17 @@
+{
+  "key": "ibiza",
+  "selected": [
+    {
+      "url": "https://racecarsdirect.com/content/UserImages/91295/501152.jpg?v=2",
+      "page": "https://racecarsdirect.com/Advert/Details/91295/inftrees",
+      "title": "Racecarsdirect.com  - Seat Ibiza Cupra R 2002",
+      "score": 10,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ibiza-web-0.img",
+      "width": 1140,
+      "height": 760
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

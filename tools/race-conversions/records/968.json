@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "968 Turbo RS",
+  "livery": "white red and blue Porsche racing bands",
+  "bodywork": "real Turbo RS racing front apron, vented bonnet, wide arch lips, large rear wing, silver multi-piece wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/968/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/968-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/2523/1474/files/TX9A3099_1024x1024.jpg?v=1628146529",
+      "page": "https://www.sentimetal.shop/blogs/news/classic-drive-porsche-968-turbo-rs",
+      "title": "      – SentiMETAL Shop",
+      "description": "A Speed Yellow Porsche 968 Turbo RS is captured from behind, highlighting its signature rear wing, \"turbo RS\" script, and embossed Porsche logo. The wide taillights flank the smooth, aerodynamic bumper, while the single exhaust and roll cage bars peek through the rear hatch, emphasizing its track‑ready build.\n\nParked on a gravel turnout beside a winding mountain road, the car’s vibrant color contrasts with the muted landscape. The low stance, racing modifications, and visible fuel cell components underscore its rare status as one of only a handful of front‑engined RS models ever produced.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Porsche 968 Turbo S, racing preparation referencing 968 Turbo RS (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car:       – SentiMETAL Shop. Its description: A Speed Yellow Porsche 968 Turbo RS is captured from behind, highlighting its signature rear wing, \"turbo RS\" script, and embossed Porsche logo. The wide taillights flank the smooth, aerodynamic bumper, while the single exhaust and roll cage bars peek through the rear hatch, emphasizing its track‑ready build.\n\nParked on a gravel turnout beside a winding mountain road, the car’s vibrant color contrasts with the muted landscape. The low stance, racing modifications, and visible fuel cell components underscore its rare status as one of only a handful of front‑engined RS models ever produced.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Porsche 968 Turbo S front-engine coupe, exposed oval pop-up lamp lenses in reference position and raised rear wing.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Turbo RS racing front apron, vented bonnet, wide arch lips, large rear wing, silver multi-piece wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white red and blue Porsche racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "968",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-70db792c-6dcf-4cd6-8b37-bceeceeec66a.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/968-r1.png",
+  "sourceSha256": "d9cdff7f1684e7df62c273521b0d4948949981f4fb5e2d1c7743f9bfe0785839",
+  "input": "tools/race-conversions/inputs/968.png",
+  "output": "public/images/race-cars/968.png",
+  "sha256": "abe7f927cfbfbe7ea343763edc2a15a8bc8d2cac3ec71e97dc9dd6d06e42b335",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/968/rosso.png",
+      "sha256": "3ab136e31b02b62701c9034a7b6626b22b9cebb84aacd8299d3c64f17800566a"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/968-web-0.img",
+      "sha256": "3d636dd22ceba0853324da1ca8440774231f2d9faa22e92b60d83f71f1d1a21c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

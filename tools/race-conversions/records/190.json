@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "190 E 2.5-16 Evo II DTM",
+  "livery": "black with silver and red Sonax-style racing graphics",
+  "bodywork": "actual Evo II DTM deep bumper, box flares and side skirts, tall boot wing, silver racing wheels; W201 shape retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/190/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/190-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://4.bp.blogspot.com/-DCs_-Ss-Upc/Vh_jQ5STYJI/AAAAAAAABuE/cRZv1mVSIMo/s1600/Mercedes%2B190E%2BEvo2%2BDTM%2B-%2B5.jpg",
+      "page": "https://www.motorsportcars.es/2015/12/amg-mercedes-190e-25-16-evolution-ii.html",
+      "title": "AMG-Mercedes 190E 2.5-16 Evolution II DTM - 1992",
+      "description": "This photograph captures the rear of a black-and-silver AMG Mercedes 190E 2.5-16 Evolution II DTM race car as it navigates a racetrack corner. The car’s widened fenders, large rear wing, and low stance emphasize its competition-ready setup. Prominent sponsor decals—Hugo Boss, Sonax, Bridgestone, and Shell—adorn the bodywork, while the Bäumler men’s fashion logo appears on the license panel.\n\nIntroduced in 1990 as a homologation special, the Evo II road car enabled Mercedes to field the competition version in the DTM series. By 1992, the racing Evo II had secured its first victory with Klaus Ludwig and saw strong championship finishes from Kurt Thiim and Bernd Schneider. Powered by a 2.5‑liter inline-four engine producing 370 hp, the lightweight, aerodynamic Evo II reached nearly 300 km/h, making it one of the era’s most iconic touring cars.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mercedes 190 Evo, racing preparation referencing 190 E 2.5-16 Evo II DTM (1992). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: AMG-Mercedes 190E 2.5-16 Evolution II DTM - 1992. Its description: This photograph captures the rear of a black-and-silver AMG Mercedes 190E 2.5-16 Evolution II DTM race car as it navigates a racetrack corner. The car’s widened fenders, large rear wing, and low stance emphasize its competition-ready setup. Prominent sponsor decals—Hugo Boss, Sonax, Bridgestone, and Shell—adorn the bodywork, while the Bäumler men’s fashion logo appears on the license panel.\n\nIntroduced in 1990 as a homologation special, the Evo II road car enabled Mercedes to field the competition version in the DTM series. By 1992, the racing Evo II had secured its first victory with Klaus Ludwig and saw strong championship finishes from Kurt Thiim and Bernd Schneider. Powered by a 2.5‑liter inline-four engine producing 370 hp, the lightweight, aerodynamic Evo II reached nearly 300 km/h, making it one of the era’s most iconic touring cars.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mercedes 190E Evolution II W201 four-door boxy saloon, large high wing and aggressively boxed arches as source.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Evo II DTM deep bumper, box flares and side skirts, tall boot wing, silver racing wheels; W201 shape retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is black with silver and red Sonax-style racing graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "190",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b5d821cf-f4c0-4c3d-a765-cf3f0898cd87.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/190.png",
+  "sourceSha256": "1a9efab05cb33700b22dec115bd6a33929eb3aab4d3668e3283edd37a75d04fb",
+  "input": "tools/race-conversions/inputs/190.png",
+  "output": "public/images/race-cars/190.png",
+  "sha256": "992f22ebb9a8279677602e123a4b6efe60fbe7853b843b648d05dd7bea0754d0",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/190/rosso.png",
+      "sha256": "863a547a4edd04aa3522db415bdc230f158bc14c93928a0ddde23b50e94d8623"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/190-web-0.img",
+      "sha256": "70fdc5808dd582438879e9cb42abc1c201a7726638d7f82f8389aadf314467b9"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

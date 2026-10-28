@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Golf G60 · Gruppo A",
+  "livery": "white blue and red VW Motorsport",
+  "bodywork": "retain exact approved Golf II nose and lamp count, period rally apron, squared arch extensions, low roof spoiler and white rally wheels; no drivetrain swap",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/g60/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/g60-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.planetcarsz.com/img/carros/galeria/2022/07/volkswagen-golf-g60-limited-1989-05-20220710200332-1600x960.jpg",
+      "page": "https://www.planetcarsz.com/carros/volkswagen-golf-g60-limited-1989",
+      "title": "1989 - VOLKSWAGEN GOLF G60 LIMITED | Fabricante VOLKSWAGEN | PlanetCarsZ",
+      "description": "This photograph captures the rear of a dark gray 1989 Volkswagen Golf G60 Limited, showcasing its distinctive dual exhaust outlets, BBS RM wheels, and Volkswagen Motorsport badge. The hatchback’s clean lines and subtle blue grille trim hint at the powerful supercharged 16-valve engine hidden beneath the hood.\n\nOne of only 71 units produced, this number 16 example has traveled 108,900 kilometers and remains in excellent condition, with original paint and interior. The Syncro all-wheel-drive system and 207 hp output made it a standout performer in its era, accelerating from 0 to 100 km/h in just over six seconds.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Vw Golf G60 mk2, racing preparation referencing Golf G60 · Gruppo A (1990). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: 1989 - VOLKSWAGEN GOLF G60 LIMITED | Fabricante VOLKSWAGEN | PlanetCarsZ. Its description: This photograph captures the rear of a dark gray 1989 Volkswagen Golf G60 Limited, showcasing its distinctive dual exhaust outlets, BBS RM wheels, and Volkswagen Motorsport badge. The hatchback’s clean lines and subtle blue grille trim hint at the powerful supercharged 16-valve engine hidden beneath the hood.\n\nOne of only 71 units produced, this number 16 example has traveled 108,900 kilometers and remains in excellent condition, with original paint and interior. The Syncro all-wheel-drive system and 207 hp output made it a standout performer in its era, accelerating from 0 to 100 km/h in just over six seconds.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Volkswagen Golf Mk2 G60 three-door hatch, FOUR circular front lights and black arch trims as reference.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain exact approved Golf II nose and lamp count, period rally apron, squared arch extensions, low roof spoiler and white rally wheels; no drivetrain swap. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red VW Motorsport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "g60",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-a37e9afa-b68f-4770-a8b5-5587cc1c159c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/g60-r1.png",
+  "sourceSha256": "70c7edd21bacb9a6b9b2df9069e86431f031b3ba055c64a2495b766693db498f",
+  "input": "tools/race-conversions/inputs/g60.png",
+  "output": "public/images/race-cars/g60.png",
+  "sha256": "b753060592789b9ff7e9ebdb2a02a238a8c39ff6cde8f4a9fb134da615686760",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/g60/rosso.png",
+      "sha256": "44dad8d3c4163942327908dd38513cbbfb15f70891b22859dc550df7facb7085"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/g60-web-1.img",
+      "sha256": "908fb9266306254c21e0559e99248539f43735d0ee2dea3b7501284e85781908"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

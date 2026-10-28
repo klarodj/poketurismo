@@ -1,0 +1,17 @@
+{
+  "key": "33",
+  "selected": [
+    {
+      "url": "https://goauctionmpc.bidpath.cloud/stock/268-3-medium.jpg?v=63759024495440",
+      "page": "https://www.manorparkclassics.com/auction/lot/lot-78---1992-alfa-romeo-33-16v-permanent-4-wheel-drive/?lot=281&sd=1",
+      "title": "Lot 78 - 1992 Alfa Romeo 33 16v Permanent 4 wheel",
+      "score": 6,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/33-web-1.img",
+      "width": 1500,
+      "height": 1000
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "identity",
+  "review": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica"
+}

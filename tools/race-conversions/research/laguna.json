@@ -1,0 +1,18 @@
+{
+  "key": "laguna",
+  "brand": "Renault",
+  "name": "Laguna",
+  "candidate": "Laguna Superturismo BTCC",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/1999_BTCC_Renault_Laguna_Jean-Christophe_Boullion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:1999_BTCC_Renault_Laguna_Jean-Christophe_Boullion.jpg",
+      "title": "File:1999 BTCC Renault Laguna Jean-Christophe Boullion.jpg",
+      "artist": "HP111999",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

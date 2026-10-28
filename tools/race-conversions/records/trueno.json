@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Sprinter Trueno AE86 Gruppo A",
+  "livery": "white red and black Toyota racing graphics",
+  "bodywork": "retain AE86 pop-up lamp hatch/coupe exactly as approved, period air dam and small flares, modest rear spoiler, silver compact race wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/trueno/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/trueno-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://picture1.goo-net.com/056/0561041/J/0561041A30260424W00104.jpg",
+      "page": "https://www.goo-net.com/usedcar/spread/goo/13/700056104130260424001.html",
+      "title": "トヨタ スプリンタートレノ ＧＴ　ＡＰＥＸ　前期型　純正白黒ツートン 神奈川県の中古車｜グーネット中古車",
+      "description": "A white and black two-tone AE86 Trueno is showcased outside Ace Station in Kanagawa Prefecture. The front view reveals its iconic pop-up headlights—one raised, one lowered—flanking a black grille with the \"TRUENO\" emblem. A bright yellow \"A-STATION\" plate hangs below, indicating the specialist AE86 dealer.\n\nThis classic coupe is equipped with a Fujitsubo Legalis exhaust, Recaro racing seats, a Nardi steering wheel, and 14-inch Tomei wheels on aftermarket suspension with adjustable lateral links. The listing notes a fully cleaned engine bay and interior, 129,000 km of use, and a documented repair history. Ace Station offers detailed inspection, financing options, and a meticulous pre-delivery preparation process, backed by a perfect customer satisfaction rating.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Toyota Trueno Gt-Apex, racing preparation referencing Sprinter Trueno AE86 Gruppo A (1985). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: トヨタ スプリンタートレノ ＧＴ　ＡＰＥＸ　前期型　純正白黒ツートン 神奈川県の中古車｜グーネット中古車. Its description: A white and black two-tone AE86 Trueno is showcased outside Ace Station in Kanagawa Prefecture. The front view reveals its iconic pop-up headlights—one raised, one lowered—flanking a black grille with the \"TRUENO\" emblem. A bright yellow \"A-STATION\" plate hangs below, indicating the specialist AE86 dealer.\n\nThis classic coupe is equipped with a Fujitsubo Legalis exhaust, Recaro racing seats, a Nardi steering wheel, and 14-inch Tomei wheels on aftermarket suspension with adjustable lateral links. The listing notes a fully cleaned engine bay and interior, 129,000 km of use, and a documented repair history. Ace Station offers detailed inspection, financing options, and a meticulous pre-delivery preparation process, backed by a perfect customer satisfaction rating.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Toyota Sprinter Trueno AE86 THREE-door liftback, pop-up lamps closed, 1980s wedge and black lower panda trim. Not Levin fixed-headlamp or notchback.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain AE86 pop-up lamp hatch/coupe exactly as approved, period air dam and small flares, modest rear spoiler, silver compact race wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white red and black Toyota racing graphics. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "trueno",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c6b8fefd-df01-4b60-8e11-b01f2325b83c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/trueno-r1.png",
+  "sourceSha256": "2b47f0e83697f8b0a2dcb385b0fc3e968e0c1fa63bacc780e4ecfc8137cbfe34",
+  "input": "tools/race-conversions/inputs/trueno.png",
+  "output": "public/images/race-cars/trueno.png",
+  "sha256": "e03e01fcbd88a0ea7b9d08429044de6a9c32ba9f284a2241f5269bc6d57a8525",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/trueno/rosso.png",
+      "sha256": "0820f0f78426ee18476e9975199dbba96bc947256ea25a775d8dbd2f3d0ded3e"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/trueno-web-0.img",
+      "sha256": "c65d0dabfb3b997d33c4f37b4a5b74b8916ad90c75c7a37fc5b86928b2a418bc"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "M Coupé · Endurance",
+  "livery": "silver with BMW Motorsport stripes",
+  "bodywork": "M COUPE shooting-brake hard roof retained, GT front splitter, wider rear arches, side skirts, substantial hatch wing, silver racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/z3m/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/z3m-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.cjm-photography.co.uk/p/575/cm26-8451-john-marcar-bmw-z3-m-coupe-18815672.jpg.webp",
+      "page": "https://www.cjm-photography.co.uk/motorsport-collections/motorsport-archive-2019-mission-motorsport-7th-anniversary/cm26-8451-john-marcar-bmw-z3-m-coupe-18815672.html?srsltid=AfmBOooRd6NT0-CmdwCLDnKlsL9r0BnyMdzf7qGiCu9hys6Ma7TcHYlJ",
+      "title": "CM26 8451 John Marcar, BMW Z3 M Coupe Our beautiful Wall Art and Photo Gifts include Framed Prints, Photo Prints, Poster Prints, Canvas Prints, Jigsaw Puzzles, Metal Prints and so much more",
+      "description": "John Marcar’s white BMW Z3 M Coupe tears around the Goodwood race circuit during the Mission Motorsport 7th Anniversary event on 2nd March 2017. The car’s distinctive wide fenders, tow hook, and “BMW Japan” windshield banner stand out against the lush green grass bordering the tarmac. Captured by Chris McEvoy (Media ID 18815672), this image highlights the blend of classic sports car styling and high-speed track action.\n\nAvailable through CJM Photography, this shot can be purchased as framed prints, canvas prints, poster prints, jigsaw puzzles, and metal prints. The photograph supports The Forces Motorsport Charity’s Race, Retrain, Recover program and is part of a broader motorsport archive showcasing fast cars and racing circuits in West Sussex, England.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: BMW Z3 M, racing preparation referencing M Coupé · Endurance (2000). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: CM26 8451 John Marcar, BMW Z3 M Coupe Our beautiful Wall Art and Photo Gifts include Framed Prints, Photo Prints, Poster Prints, Canvas Prints, Jigsaw Puzzles, Metal Prints and so much more. Its description: John Marcar’s white BMW Z3 M Coupe tears around the Goodwood race circuit during the Mission Motorsport 7th Anniversary event on 2nd March 2017. The car’s distinctive wide fenders, tow hook, and “BMW Japan” windshield banner stand out against the lush green grass bordering the tarmac. Captured by Chris McEvoy (Media ID 18815672), this image highlights the blend of classic sports car styling and high-speed track action.\n\nAvailable through CJM Photography, this shot can be purchased as framed prints, canvas prints, poster prints, jigsaw puzzles, and metal prints. The photograph supports The Forces Motorsport Charity’s Race, Retrain, Recover program and is part of a broader motorsport archive showcasing fast cars and racing circuits in West Sussex, England.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: IMPORTANT: BMW Z3 M COUPE shooting-brake hard-roof body as reference, NOT the roadster.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: M COUPE shooting-brake hard roof retained, GT front splitter, wider rear arches, side skirts, substantial hatch wing, silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is silver with BMW Motorsport stripes. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "z3m",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e7bb5499-6390-4e3e-94b8-8288049414d6.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/z3m.png",
+  "sourceSha256": "58b625914a162fdb954a2f786c699731a2041b0efe78d1d858394333ad66fdcf",
+  "input": "tools/race-conversions/inputs/z3m.png",
+  "output": "public/images/race-cars/z3m.png",
+  "sha256": "d14b1ad32687a44628babce1ce5d79ab58bb429743abaec85b7869ba510e9446",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/z3m/rosso.png",
+      "sha256": "66488a6c4706bb363d03a4d17370e34ee9e5286d9e2a08836a9bde7b2d7243bd"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/z3m-web-0.img",
+      "sha256": "475016df810c369135f976df431b64b43ee7156d42497eeac4ad89b7da867702"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

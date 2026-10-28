@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Elise Motorsport",
+  "livery": "British green with yellow centre stripe",
+  "bodywork": "real S1 Motorsport deeper splitter, modest widened arches, fixed hard roof, rear racing wing, silver competition wheels; no GT1 prototype identity swap",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/elise/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/elise-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://forums-images.pistonheads.com/509307/202405142950538?resize=720",
+      "page": "https://www.pistonheads.com/news/ph-spottedykywt/sublime-lotus-motorsport-elise-for-sale/48520",
+      "title": "Sublime Lotus Motorsport Elise for sale - PistonHeads UK",
+      "description": "A striking blue Lotus Motorsport Elise, chassis number 66, is displayed in a professional garage setting. The car’s racing livery features prominent sponsor decals such as Autobytel, Recaro, and Mintex, while its aerodynamic enhancements include a large rear wing and lightweight racing wheels. The well-lit workshop environment, complete with tool cabinets and equipment, underscores the car’s track-ready pedigree.\n\nThis image accompanies a PistonHeads UK auction listing titled \"Sublime Lotus Motorsport Elise for sale,\" which celebrates this rare pre-Exige model. The article emphasizes the Elise’s unique status and invites enthusiasts to explore the auction through PistonHeads Auctions, with options to sign up for updates and download the app for the latest news and promotions.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Lotus Elise, racing preparation referencing Elise Motorsport (2000). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Sublime Lotus Motorsport Elise for sale - PistonHeads UK. Its description: A striking blue Lotus Motorsport Elise, chassis number 66, is displayed in a professional garage setting. The car’s racing livery features prominent sponsor decals such as Autobytel, Recaro, and Mintex, while its aerodynamic enhancements include a large rear wing and lightweight racing wheels. The well-lit workshop environment, complete with tool cabinets and equipment, underscores the car’s track-ready pedigree.\n\nThis image accompanies a PistonHeads UK auction listing titled \"Sublime Lotus Motorsport Elise for sale,\" which celebrates this rare pre-Exige model. The article emphasizes the Elise’s unique status and invites enthusiasts to explore the auction through PistonHeads Auctions, with options to sign up for updates and download the app for the latest news and promotions.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Lotus Elise first-generation S1 small open roadster, two prominent round front lamps and rounded simple body, not S2.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real S1 Motorsport deeper splitter, modest widened arches, fixed hard roof, rear racing wing, silver competition wheels; no GT1 prototype identity swap. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is British green with yellow centre stripe. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "elise",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-12d58ff2-10dc-4e1d-b57a-12b4a0e2cd5c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/elise.png",
+  "sourceSha256": "d8bae78ec53c5e4ed3b3f87f672dd75b0d33c842dddc5fa79c3be6dd2a19afc4",
+  "input": "tools/race-conversions/inputs/elise.png",
+  "output": "public/images/race-cars/elise.png",
+  "sha256": "d73394dc13d7ea55568109bbf1d314dfb4479bed181c370cb21bcbe6582480cb",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/elise/rosso.png",
+      "sha256": "c1a58fa56cb4a14fd455dce9ea061e154c70c6880496de175a4de783c2d06fda"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/elise-web-1.img",
+      "sha256": "3e2531765c64a38bd53a941a16f498129e3cc31b51ffd05679aa426b8e01365e"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

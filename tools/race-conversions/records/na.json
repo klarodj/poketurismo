@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "MX-5 NA · Spec Miata",
+  "livery": "red with white racing roundels",
+  "bodywork": "retain NA pop-up lamp roadster, real roll cage, small splitter and arch lips, silver racing wheels; no oversized GT aero",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/na/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/na-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://s3.us-east-2.amazonaws.com/prod.mm.com/img/featurenews/SVRA_Spec_Miata_kkLEd9J.jpeg",
+      "page": "https://classicmotorsports.com/news/new-from-svra-place-for-old-miatas/",
+      "title": "New From SVRA: A Place to Race Old Miatas | News | Classic Motorsports",
+      "description": "Three classic Mazda Miatas battle wheel to wheel on a racetrack, each fitted with roll cages, sponsor decals, and racing numbers. The lead white Miata bears a bright green KKRPRODUCTS.COM windshield banner, while the green Miata alongside displays miatacage.com. A dark gray Miata trails closely behind, all three demonstrating the close-quarters excitement of spec Miata competition.\n\nIntroduced by SVRA in 2017, the Mazda Miata Heritage Cup features 1.6‑liter Miatas from 1990–1993, offering an affordable entry point for vintage racing enthusiasts. Rounds at venues like Auto Club Speedway, Road America, and Virginia International Raceway highlight the series’ appeal to both seasoned and younger drivers seeking reliable, race-ready classics.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mazda Mx-5 NA, racing preparation referencing MX-5 NA · Spec Miata (2000). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: New From SVRA: A Place to Race Old Miatas | News | Classic Motorsports. Its description: Three classic Mazda Miatas battle wheel to wheel on a racetrack, each fitted with roll cages, sponsor decals, and racing numbers. The lead white Miata bears a bright green KKRPRODUCTS.COM windshield banner, while the green Miata alongside displays miatacage.com. A dark gray Miata trails closely behind, all three demonstrating the close-quarters excitement of spec Miata competition.\n\nIntroduced by SVRA in 2017, the Mazda Miata Heritage Cup features 1.6‑liter Miatas from 1990–1993, offering an affordable entry point for vintage racing enthusiasts. Rounds at venues like Auto Club Speedway, Road America, and Virginia International Raceway highlight the series’ appeal to both seasoned and younger drivers seeking reliable, race-ready classics.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mazda MX-5 NA open roadster with closed pop-up lids as reference, tiny slim fixed marker lights, no fixed NB headlights.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain NA pop-up lamp roadster, real roll cage, small splitter and arch lips, silver racing wheels; no oversized GT aero. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is red with white racing roundels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "na",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-150c3fce-133a-4cac-b34b-1a168faec8b2.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/na.png",
+  "sourceSha256": "57d202e92d9d1c6448feba344c51b450fc0feb5a182784d150d9a2f6488eb751",
+  "input": "tools/race-conversions/inputs/na.png",
+  "output": "public/images/race-cars/na.png",
+  "sha256": "298de0c686d3f07eef986b6d08c4e342a270413414bb6ff3092ac5ffa15f24c7",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/na/rosso.png",
+      "sha256": "6ffff638161364cbef4caa7819dcb548d984333bede5488b5db6dc140f6db6bc"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/na-web-0.img",
+      "sha256": "a9d66bc1329f0879b04c888b8db7ddf96e8579dc84dce1fd4ba8837863960ba3"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

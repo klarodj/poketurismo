@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Ritmo 130 TC Gruppo A",
+  "livery": "white and red Abarth racing",
+  "bodywork": "retain real Ritmo lights, period rally front valance, modest flares, silver small racing wheels and mud flaps",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ritmo/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ritmo-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://assets.carandclassic.com/uploads/new/26574005/16a87703-78a6-4695-b9b8-662c4f66a8d6.jpg?fit=fillmax&h=1200&ixlib=php-4.1.0&q=85&s=933a4f8e70300169a029209d58d8746e&w=1200",
+      "page": "https://www.carandclassic.com/es/haz-una-oferta/1983-fiat-ritmo-130-tc-abarth-gyeXYg",
+      "title": "Subastas de coches clásicos  | Car and Classic",
+      "description": "A vibrant red 1983 Fiat Ritmo 130 TC Abarth stands on a damp country road next to a freshly plowed field. The compact hatchback’s black plastic bumpers, rear spoiler, and flared arches highlight its performance-oriented styling. Alloy wheels and Abarth badges on the rear tailgate and side panels underscore its racing heritage.\n\nThis photograph is sourced from Car and Classic’s Spanish auction page, where the car is listed for a seven-day bidding event. The overcast sky and wet pavement convey a cool, rural setting, while the car’s well-preserved exterior suggests careful ownership and classic appeal.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Fiat Ritmo 130 TC, racing preparation referencing Ritmo 130 TC Gruppo A (1984). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Subastas de coches clásicos  | Car and Classic. Its description: A vibrant red 1983 Fiat Ritmo 130 TC Abarth stands on a damp country road next to a freshly plowed field. The compact hatchback’s black plastic bumpers, rear spoiler, and flared arches highlight its performance-oriented styling. Alloy wheels and Abarth badges on the rear tailgate and side panels underscore its racing heritage.\n\nThis photograph is sourced from Car and Classic’s Spanish auction page, where the car is listed for a seven-day bidding event. The overcast sky and wet pavement convey a cool, rural setting, while the car’s well-preserved exterior suggests careful ownership and classic appeal.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Fiat Ritmo 130 TC Abarth three-door hatch, four circular headlights and black plastic bumpers.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain real Ritmo lights, period rally front valance, modest flares, silver small racing wheels and mud flaps. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white and red Abarth racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "ritmo",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-5dc129b0-fd35-4c8b-860f-6d1b3009b491.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/ritmo.png",
+  "sourceSha256": "4d815c96ef94bf4f5b148452d25abcf6c14c6316f2a5d0fd745af61691fa0731",
+  "input": "tools/race-conversions/inputs/ritmo.png",
+  "output": "public/images/race-cars/ritmo.png",
+  "sha256": "10e2400e292a23ed9b39e0d1aa71bc388d4274b1576951ed537e72e38b04e3ab",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/ritmo/rosso.png",
+      "sha256": "ca797da96966383bd7a9305fe91c12efee6526d9d1d373e4c6d2847480c19a11"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/ritmo-web-0.img",
+      "sha256": "34acb93c1e5378d5cc157bed76bf19b222960ce74f4acdda9b14a0391539b275"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

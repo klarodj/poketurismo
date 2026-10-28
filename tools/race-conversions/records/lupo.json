@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Lupo Cup",
+  "livery": "white blue and red VW Motorsport",
+  "bodywork": "actual Lupo Cup low bumper and front splitter, restrained wide arch lips, modest roof spoiler, roll cage and white small racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/lupo/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/lupo-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.motorsportmarkt.de/media/image/31/a6/da/php9PoKn4.jpg",
+      "page": "https://www.motorsportmarkt.de/inserat/60264/vw-lupo-klasse-pf5a-oder-pf5b",
+      "title": "VW Lupo, Klasse PF5a oder PF5b 63643 | MotorsportMarkt.de",
+      "description": "A lightweight Volkswagen Lupo, built by ABT for the ADAC Junior Cup, is staged on a winding hillclimb course. The car’s white body is accented by a black-and-white checkered roof, red mirrors, and gold racing wheels. Number 497 is prominently displayed on the doors alongside sponsor decals from ProMetal and Bitburger 0,0. Inside, a red safety net and full roll cage hint at its FIA-compliant safety equipment.\n\nUnder the hood lies a 4-cylinder, 16-valve VW AFH engine managed by DTA Fast electronics, paired with a dogbox 5-speed gearbox and lamellar differential lock. The chassis weighs just 800 kg and rides on adjustable Bilstein/H&R suspension. Braking duties are handled by AP Racing calipers up front and ATE discs at the rear. Additional features include an Innovate LC-2 lambda controller, FIA-approved safety tank, and a MOMO racing seat with Takata harness.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Vw Lupo GTI, racing preparation referencing Lupo Cup (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: VW Lupo, Klasse PF5a oder PF5b 63643 | MotorsportMarkt.de. Its description: A lightweight Volkswagen Lupo, built by ABT for the ADAC Junior Cup, is staged on a winding hillclimb course. The car’s white body is accented by a black-and-white checkered roof, red mirrors, and gold racing wheels. Number 497 is prominently displayed on the doors alongside sponsor decals from ProMetal and Bitburger 0,0. Inside, a red safety net and full roll cage hint at its FIA-compliant safety equipment.\n\nUnder the hood lies a 4-cylinder, 16-valve VW AFH engine managed by DTA Fast electronics, paired with a dogbox 5-speed gearbox and lamellar differential lock. The chassis weighs just 800 kg and rides on adjustable Bilstein/H&R suspension. Braking duties are handled by AP Racing calipers up front and ATE discs at the rear. Additional features include an Innovate LC-2 lambda controller, FIA-approved safety tank, and a MOMO racing seat with Takata harness.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Volkswagen Lupo GTI tiny three-door hatch, round lamps and short rounded nose, not modern up!.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual Lupo Cup low bumper and front splitter, restrained wide arch lips, modest roof spoiler, roll cage and white small racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and red VW Motorsport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "lupo",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8a896397-117e-42e0-bd9f-4d2595244e17.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/lupo-r1.png",
+  "sourceSha256": "ac1b65a0517ce86a5f1b16e711fcd7104599469f521749e25a07737dfb4838c4",
+  "input": "tools/race-conversions/inputs/lupo.png",
+  "output": "public/images/race-cars/lupo.png",
+  "sha256": "2a3b5ffe4cf818a2986aebe8673912c4922d4463035b513d220567681d915e11",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/lupo/rosso.png",
+      "sha256": "b33dc35b99e0756232bb7ec191ba1c1c5d8deee9174e5b6c374c87e7ad1a368e"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/lupo-web-0.img",
+      "sha256": "af09b08ca2bb02e3e7a1f55b7a36cce1a44f242ca8daa770ca9084c3e5a2cdbc"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

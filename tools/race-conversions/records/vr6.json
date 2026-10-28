@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Golf III GTI Kit Car",
+  "livery": "white blue and green VW Motorsport",
+  "bodywork": "retain Golf III VR6 body and real nose, period Kit Car wide arches, deep bumper, roof vent and wing, white rally wheels; VR6 engine stays untouched",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/vr6/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/vr6-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.fahrzeugbilder.de/1200/vw-golf-3-kit-car-100770.jpg",
+      "page": "https://www.fahrzeugbilder.de/bild/motorsport~rennwagen~vw/100770/vw-golf-3-kit-car-beim.html",
+      "title": "VW Golf 3 Kit Car beim Konzer Old- und Youngtimertreffen, 15.07.2012 - Fahrzeugbilder.de",
+      "description": "A yellow VW Golf 3 Kit Car stands prominently on a paved plaza in front of a bistro, its body covered in blue and green camouflage-style graphics and bold Liqui Moly branding. White racing wheels, a rear spoiler, and various sponsor decals—including AST Suspension, ADAC, and scala—highlight its competitive motorsport configuration. The license plate reads \"TR DA3,\" and the names \"H. Dingert\" and \"A. Dingert\" appear on the side window.\n\nPhotographed on December 18, 2014, this vehicle was part of the Konzer Old- und Youngtimertreffen held on July 15, 2012. The event attracts enthusiasts of classic and youngtimer cars, showcasing meticulously prepared vehicles in a relaxed outdoor setting. Other vintage cars and attendees can be seen in the background, enjoying a sunny summer gathering dedicated to automotive history and performance.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Vw Golf VR6 mk3, racing preparation referencing Golf III GTI Kit Car (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: VW Golf 3 Kit Car beim Konzer Old- und Youngtimertreffen, 15.07.2012 - Fahrzeugbilder.de. Its description: A yellow VW Golf 3 Kit Car stands prominently on a paved plaza in front of a bistro, its body covered in blue and green camouflage-style graphics and bold Liqui Moly branding. White racing wheels, a rear spoiler, and various sponsor decals—including AST Suspension, ADAC, and scala—highlight its competitive motorsport configuration. The license plate reads \"TR DA3,\" and the names \"H. Dingert\" and \"A. Dingert\" appear on the side window.\n\nPhotographed on December 18, 2014, this vehicle was part of the Konzer Old- und Youngtimertreffen held on July 15, 2012. The event attracts enthusiasts of classic and youngtimer cars, showcasing meticulously prepared vehicles in a relaxed outdoor setting. Other vintage cars and attendees can be seen in the background, enjoying a sunny summer gathering dedicated to automotive history and performance.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Volkswagen Golf Mk3 VR6 three-door hatch, original broad rectangular headlamps, not Mk4.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain Golf III VR6 body and real nose, period Kit Car wide arches, deep bumper, roof vent and wing, white rally wheels; VR6 engine stays untouched. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and green VW Motorsport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "vr6",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3059d3e7-3f31-4ba2-b5e7-964ecc465f23.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/vr6-r1.png",
+  "sourceSha256": "cbc64fbb8caa9a972cb088febba3c3fa1b61ba8f723d5b3c5fadfae6d98489c4",
+  "input": "tools/race-conversions/inputs/vr6.png",
+  "output": "public/images/race-cars/vr6.png",
+  "sha256": "cea5aac6a4247ec8bf4ff4ea8bb2fd15c73006b525d2f0135eee83319a969d3f",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/vr6/rosso.png",
+      "sha256": "0d9bb03bd9fa0cf1fca1aa960a8485876598ced2c4f9ce453def1e47f5d65cbd"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/vr6-web-0.img",
+      "sha256": "2f6ed58e28d350eb6c7b9d6e91caaf9465b9b4662415770b0ac2cdecc550a19c"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

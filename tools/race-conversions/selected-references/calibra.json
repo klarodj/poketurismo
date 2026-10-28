@@ -1,0 +1,17 @@
+{
+  "key": "calibra",
+  "selected": [
+    {
+      "url": "https://images.motorsport-magazin.com/images/960/540/q_80/1010263.jpg",
+      "page": "https://www.motorsport-magazin.com/dtm/news-277142-dtm-classic-lausitzring-rosberg-opel-bringt-v6-turbo-sound/",
+      "title": "DTM-Classic Lausitzring, Rosberg-Opel bringt V6-Sound",
+      "score": 8,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/calibra-web-2.img",
+      "width": 960,
+      "height": 540
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

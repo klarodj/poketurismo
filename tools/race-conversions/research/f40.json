@@ -1,0 +1,18 @@
+{
+  "key": "f40",
+  "brand": "Ferrari",
+  "name": "F40",
+  "candidate": "F40 LM",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://www.automotivpress.fr/wp-content/uploads/2013/12/1989_Ferrari_F40_LM_016_6408.jpg",
+      "page": "https://www.automotivpress.fr/ferrari-f40-lm-nom-de-code-f40-corsa-partie-1-1988/",
+      "title": "Ferrari F40 LM : nom de code F40 Corsa, partie 1 (1988)",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

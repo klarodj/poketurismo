@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "MGF Cup",
+  "livery": "British green with white racing panels",
+  "bodywork": "real MGF Cup period hardtop, roll cage, racing front splitter, modest fender flares, rear wing and silver race wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/mgf/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/mgf-web-1.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://espirituracer.com/archivos/2022/09/mg-f-cup-2.webp",
+      "page": "https://espirituracer.com/tag/mg-f-cup/",
+      "title": "MG F Cup - espíritu RACER",
+      "description": "An orange MG F Cup convertible is showcased on a paved surface with lush greenery behind it. The car features black alloy wheels, a white hardtop, and distinctive racing decals such as \"MGF / TF Specialists,\" \"MG Car Club,\" and \"Trophy Series D.\" The front bumper displays the license plate P846 SVW, and contact details like \"01932 241843\" and \"churchsgarageautos.com\" are visible on the side.\n\nThis image appears on Espíritu RACER’s \"MG F Cup\" page, part of a Spanish automotive magazine dedicated to car news and tests. The site includes contributions from automotive enthusiasts and professionals—Pablo Mayo, Javi Martín, Jesús Alonso, Javier Gutiérrez, and Jose Manuel Miana—who bring engineering insights, historical context, and personal passion to their coverage of the MG F Cup racing series.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: MG MGF, racing preparation referencing MGF Cup (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: MG F Cup - espíritu RACER. Its description: An orange MG F Cup convertible is showcased on a paved surface with lush greenery behind it. The car features black alloy wheels, a white hardtop, and distinctive racing decals such as \"MGF / TF Specialists,\" \"MG Car Club,\" and \"Trophy Series D.\" The front bumper displays the license plate P846 SVW, and contact details like \"01932 241843\" and \"churchsgarageautos.com\" are visible on the side.\n\nThis image appears on Espíritu RACER’s \"MG F Cup\" page, part of a Spanish automotive magazine dedicated to car news and tests. The site includes contributions from automotive enthusiasts and professionals—Pablo Mayo, Javi Martín, Jesús Alonso, Javier Gutiérrez, and Jose Manuel Miana—who bring engineering insights, historical context, and personal passion to their coverage of the MG F Cup racing series.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: MG F open small mid-engine roadster as reference, two large rounded lamps, narrow upper grille and side vents.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real MGF Cup period hardtop, roll cage, racing front splitter, modest fender flares, rear wing and silver race wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is British green with white racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "mgf",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-66f30c37-29c3-4853-b6e1-42c2a4dd121c.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/mgf.png",
+  "sourceSha256": "3e5bfa470eff2a231861dc4e4e8bab42ffa7e2cc989eabb4873a8c3c768d5c1f",
+  "input": "tools/race-conversions/inputs/mgf.png",
+  "output": "public/images/race-cars/mgf.png",
+  "sha256": "3e3da783fa87a48a1f731afd579a22d3db5dd8e378aebecb6a2d3bdd8f2acf87",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/mgf/rosso.png",
+      "sha256": "88319797d3a74e435e6cd70c9139a5f1ba0832d38f6f7958f31a74d6956b1125"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/mgf-web-1.img",
+      "sha256": "e8c852444c0d0daa35fd11d48e740d09f7eb01f8b320d5236bdad4e58e02bdf1"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

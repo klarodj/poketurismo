@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "ZS BTCC",
+  "livery": "grey green and black MG XPower",
+  "bodywork": "real ZS touring low splitter, widened arches, side skirts, large boot wing, white racing wheels; retain original saloon body",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/zs/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/zs-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Anthony_Reid_-_MG_ZS_at_Brands_Hatch_at_the_BTCC_on_25-04-2004_%2850886744473%29.jpg/960px-Anthony_Reid_-_MG_ZS_at_Brands_Hatch_at_the_BTCC_on_25-04-2004_%2850886744473%29.jpg?_=20210203180733",
+      "page": "https://commons.wikimedia.org/wiki/File%3AAnthony_Reid_-_MG_ZS_at_Brands_Hatch_at_the_BTCC_on_25-04-2004_%2850886744473%29.jpg",
+      "title": "File:Anthony Reid - MG ZS at Brands Hatch at the BTCC on 25-04-2004 (50886744473).jpg - Wikimedia Commons",
+      "description": "Anthony Reid’s black MG ZS, sporting the number 6 and Dubai Autodrome branding, powers through a corner at Brands Hatch during the British Touring Car Championship on April 25, 2004. Sponsor decals for Mobil 1, Dunlop, Auto Express, Sparco, and others adorn the sleek bodywork, while a large rear wing and racing slicks emphasize its track-focused setup.\n\nCaptured with a 100 mm lens at 1/500 sec and f/7.1, the photograph highlights the car’s motion against the green grass and safety barriers lining the circuit. Exif data confirms ISO 200 and manual exposure settings, and the image is shared under a Creative Commons share-alike license requiring attribution.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: MG ZS, racing preparation referencing ZS BTCC (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: File:Anthony Reid - MG ZS at Brands Hatch at the BTCC on 25-04-2004 (50886744473).jpg - Wikimedia Commons. Its description: Anthony Reid’s black MG ZS, sporting the number 6 and Dubai Autodrome branding, powers through a corner at Brands Hatch during the British Touring Car Championship on April 25, 2004. Sponsor decals for Mobil 1, Dunlop, Auto Express, Sparco, and others adorn the sleek bodywork, while a large rear wing and racing slicks emphasize its track-focused setup.\n\nCaptured with a 100 mm lens at 1/500 sec and f/7.1, the photograph highlights the car’s motion against the green grass and safety barriers lining the circuit. Exif data confirms ISO 200 and manual exposure settings, and the image is shared under a Creative Commons share-alike license requiring attribution.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: MG ZS four-door compact saloon shown, NOT modern SUV; oval lamp clusters, mesh grille and boot spoiler.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real ZS touring low splitter, widened arches, side skirts, large boot wing, white racing wheels; retain original saloon body. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is grey green and black MG XPower. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "zs",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d520ad1f-f507-44a9-aa2c-bc4835fb1c4d.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/zs.png",
+  "sourceSha256": "2c93225163056de6cd4bcc4ce1438202a7ac53adc3132f8df679edbc031d9169",
+  "input": "tools/race-conversions/inputs/zs.png",
+  "output": "public/images/race-cars/zs.png",
+  "sha256": "ac62872f7da8f77f6511cd261f4ecd38cc5e927115ad4faf9d9a3945bde219d7",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/zs/rosso.png",
+      "sha256": "388498c0f6ea735c66726288f8140442d98987ca65bd833feab1632832ad0c27"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/zs-web-0.img",
+      "sha256": "235eab8a498a7a3cf3554f288a131d0210fc4184d6cdce698c66a6db495e2060"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

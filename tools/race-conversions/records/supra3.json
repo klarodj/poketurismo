@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Supra A70 Gruppo A",
+  "livery": "white and blue Minolta Toyota racing",
+  "bodywork": "actual A70 low front bumper and splitter, modest arch lips, skirts, period rear hatch spoiler and silver/gold mesh wheels; pop-up lamp shell retained",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/supra3/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/supra3-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://global.toyota/pages/news/images/2021/06/29/1330_supra/rendition/20210629_01_05_W610_H407.jpg",
+      "page": "https://global.toyota/jp/album/images/35550375/",
+      "title": "GRヘリテージパーツ | トヨタ自動車株式会社 公式企業サイト",
+      "description": "A striking red Toyota Supra A70 coupe is presented in a studio setting, showcasing its sleek 1980s sports car design. The vehicle’s pop-up headlights, smooth body lines, and integrated rear spoiler emphasize its aerodynamic profile and classic appeal. \n\nAs part of the GR Heritage Parts Project by TOYOTA GAZOO Racing, reproduction components for the A70 Supra are now available for purchase. This initiative supports owners worldwide—both in Japan and overseas markets such as North America and Europe—by providing authentic replacement parts to maintain and restore these iconic vehicles.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Toyota Supra mk3, racing preparation referencing Supra A70 Gruppo A (1988). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: GRヘリテージパーツ | トヨタ自動車株式会社 公式企業サイト. Its description: A striking red Toyota Supra A70 coupe is presented in a studio setting, showcasing its sleek 1980s sports car design. The vehicle’s pop-up headlights, smooth body lines, and integrated rear spoiler emphasize its aerodynamic profile and classic appeal. \n\nAs part of the GR Heritage Parts Project by TOYOTA GAZOO Racing, reproduction components for the A70 Supra are now available for purchase. This initiative supports owners worldwide—both in Japan and overseas markets such as North America and Europe—by providing authentic replacement parts to maintain and restore these iconic vehicles.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Toyota Supra A70/Mk3 long wedge liftback coupe, pop-up lamps closed and long wraparound rear glass.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual A70 low front bumper and splitter, modest arch lips, skirts, period rear hatch spoiler and silver/gold mesh wheels; pop-up lamp shell retained. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white and blue Minolta Toyota racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "supra3",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ac81f9b5-3fec-40e0-a9b3-6ce2010f0fb6.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/supra3-r1.png",
+  "sourceSha256": "3686b23cb7857e288a7271ad6e241aa15771e769d5032bbd9c7e98bd25687df3",
+  "input": "tools/race-conversions/inputs/supra3.png",
+  "output": "public/images/race-cars/supra3.png",
+  "sha256": "b7f440867a7442789cea283d675804ea9af4ddef47ae9520900ede3d6235b570",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/supra3/rosso.png",
+      "sha256": "f038bf1f9228da437e7184408bc49426258b6ec166af19c9c1b74790e574cdbf"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/supra3-web-0.img",
+      "sha256": "360670776be19c238eb6604dd01ebc23cf0f192a1735c69883ced8b3f901c471"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

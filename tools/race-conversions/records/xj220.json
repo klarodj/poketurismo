@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "XJ220 C",
+  "livery": "British green with yellow racing details",
+  "bodywork": "real XJ220 C widened arches, racing front lamp treatment, deep splitter, fixed rear wing and silver racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/xj220/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/xj220-web-2.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://cdn.rmsothebys.com/0/a/7/1/d/0/0a71d087e7689ae219d1747767de0d73cfbce0ed.webp",
+      "page": "https://rmsothebys.com/auctions/lm23/lots/r0012-1993-jaguar-xj220-c-lm/",
+      "title": "1993 Jaguar XJ220 C LM | Le Mans | RM  Sotheby's",
+      "description": "This rare Jaguar XJ220 C LM, chassis 002, is finished in dark green with Unipart and TWR Racing livery, bearing the number 50 and a British flag on its door. The car’s aerodynamic composite bodywork, large rear wing, and Dunlop-branded front splitter reflect its 1993 24 Hours of Le Mans specification. Sponsor logos from speedline, StenaSealink, XK Engineering, and Snap-on Motorsport adorn the flanks, while lightweight racing wheels complete the track-focused appearance.\n\nOne of only four bespoke XJ220 C race chassis built, this example retains its original features from its Le Mans debut, where it was driven by David Brabham, John Nielsen, and David Coulthard to a class victory before disqualification. Formerly owned by the Sultan of Brunei and later part of a UK private collection, the car has since appeared at historic events like the Goodwood Festival of Speed and remains eligible for GT1 and endurance racing series.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Jaguar XJ220, racing preparation referencing XJ220 C (1993). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1993 Jaguar XJ220 C LM | Le Mans | RM  Sotheby's. Its description: This rare Jaguar XJ220 C LM, chassis 002, is finished in dark green with Unipart and TWR Racing livery, bearing the number 50 and a British flag on its door. The car’s aerodynamic composite bodywork, large rear wing, and Dunlop-branded front splitter reflect its 1993 24 Hours of Le Mans specification. Sponsor logos from speedline, StenaSealink, XK Engineering, and Snap-on Motorsport adorn the flanks, while lightweight racing wheels complete the track-focused appearance.\n\nOne of only four bespoke XJ220 C race chassis built, this example retains its original features from its Le Mans debut, where it was driven by David Brabham, John Nielsen, and David Coulthard to a class victory before disqualification. Formerly owned by the Sultan of Brunei and later part of a UK private collection, the car has since appeared at historic events like the Goodwood Festival of Speed and remains eligible for. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Jaguar XJ220 very low elongated mid-engine coupe, long rounded nose and large lower side air inlet.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real XJ220 C widened arches, racing front lamp treatment, deep splitter, fixed rear wing and silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is British green with yellow racing details. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "xj220",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-07f45f62-755f-44b5-9bcb-7cfd71dbf81e.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/xj220.png",
+  "sourceSha256": "5cbc15b9e9e32cfa8a6c3fff001a62716049f6ebb0592a51d971556e60d37b5c",
+  "input": "tools/race-conversions/inputs/xj220.png",
+  "output": "public/images/race-cars/xj220.png",
+  "sha256": "808d16a12962bff03b2c29f3e30a2b0a752346e377493fb59a5cbd0c948f0276",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/xj220/rosso.png",
+      "sha256": "e7b5f6c39f7cb67d6a2698f7a7f9fa3f4b492af72b5328297b7efc85e97e7377"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/xj220-web-2.img",
+      "sha256": "3fd999d35258b1f5a3b0f12d11097d8dcec62363419f1d76003357a4ff03b438"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

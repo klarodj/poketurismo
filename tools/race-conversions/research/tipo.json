@@ -1,0 +1,18 @@
+{
+  "key": "tipo",
+  "brand": "Fiat",
+  "name": "Tipo 16v",
+  "candidate": "Tipo 16v Gruppo A",
+  "classification": "inspired",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://carwow-es-wp-3.imgix.net/Fiat-Tipo-1990-1600-05.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1366",
+      "page": "https://www.carwow.es/blog/coches-expo-92-inauguracion-30-aniversario",
+      "title": "30 aniversario Expo '92: los coches de los pabellones | Carwow",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

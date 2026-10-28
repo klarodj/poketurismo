@@ -1,0 +1,17 @@
+{
+  "key": "s60",
+  "selected": [
+    {
+      "url": "https://www.touringcarregister.com/image/111.jpg",
+      "page": "https://www.touringcarregister.com/register/46/",
+      "title": "Touring Car Register : S2000 : Volvo S60 002",
+      "score": 7,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/s60-web-0.img",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

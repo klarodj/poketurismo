@@ -4,9 +4,19 @@ Richiesta: un allestimento costoso per trasformare ciascuna auto in una versione
 
 ## Stato
 
-Il catalogo comprende i 200 modelli attuali; tre riferimenti sono documentati (Seicento Gruppo A/Trofeo, Alfa Romeo 155 GTA del 1992, BMW M3 E30 Gruppo A/DTM). Gli altri modelli sono esplicitamente **da ricercare**, senza varianti o fonti inventate. L'indice completo con fonti e stato è `tools/race-conversions/catalogue.json`. Non sono state modificate immagini attive, database, acquisti o gare.
+Il catalogo comprende i 200 modelli attuali. Le preparazioni sono distinte fra riferimenti storici, prototipi documentati che non necessariamente corsero, allestimenti ispirati alle competizioni e progetti del club dichiarati come interpretazioni. L'indice completo con fonti e stato è `tools/race-conversions/catalogue.json`. Le immagini stradali attive, il database, gli acquisti e le gare rimangono invariati.
 
-Prima di avviare l'intero catalogo sono state chieste tre preferenze: trattamento dei modelli senza versione storica entro il 2002; livrea dedicata o colore personale; conversione definitiva/reversibile e uso nelle clandestine. La prima decisione determina quali immagini si possano produrre senza attribuire una storia inventata alle vetture.
+L'utente ha confermato: repliche storiche quando documentabili, preparazioni plausibili del 2002 negli altri casi, livrea dedicata, futura conversione definitiva e utilizzabile anche nelle clandestine. Ha richiesto espressamente anche modifiche a spoiler, paraurti, allargamenti e cerchi: non una sola riverniciatura. Nessuna nuova richiesta di conferma è necessaria per queste scelte. La funzione acquistabile resta una fase successiva alla revisione dell'album.
+
+## Immagini e riferimenti
+
+Album separato `/previews/race-cars/`: confronto stradale/corsa, tavola completa, ricerca, marche e filtri; valutazioni locali con chiave separata `poketurismo-race-cars-review-v1`, note ed esportazione delle correzioni. Non sostituisce l'album stradale o le sue note. Ogni aggiornamento dello sprite incrementa la revisione: le note restano e le precedenti approvazioni tornano da verificare.
+
+Generazione con **image_gen integrato**, una chiamata distinta per ogni modello. Ogni prompt specifica il kit estetico, la livrea, l'identità del modello e i vincoli di prospettiva/stile. Input approvati e output nativi trasparenti 320×128 in `tools/race-conversions/inputs` e `public/images/race-cars`; prompt, riferimenti e hash in `tools/race-conversions/records`. Il campionamento usa un solo fattore di scala per preservare le proporzioni; il builder ricopia le PNG native senza alterarle.
+
+Le foto di riferimento sono controllate contro generazione, numero di porte, scocca e dettagli dei modelli approvati. Modellini, videogiochi, render e fotografie di altri modelli/generazioni sono esclusi dalla generazione. Quando è disponibile solo un riferimento stradale o una diversa derivazione, la scheda dichiara la preparazione come ispirata; non la spaccia per una replica esatta. Le scocche restano quelle del gioco: RS2/RS4 e Volvo 850 station wagon, Mini classica e Innocenti Mini Turbo distinte, Z3 M coupé, 406 coupé, Colt CA0, Delta HPE tre porte, ecc. Non vengono importati motori, trazioni o prestazioni della vettura storica.
+
+Le ricerche e le fotografie grezze sono conservate privatamente sotto `/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/`. Il repository conserva i link, i dati curati, i prompt e le PNG native, evitando di caricare nuovamente centinaia di immagini ad alta risoluzione. I file originali di image_gen rimangono anche nella destinazione del generatore.
 
 ## Proposta di bilanciamento, non ancora attiva
 
@@ -21,3 +31,9 @@ Due test verificano i 200 modelli su tutti i cinque profili: motore e stato inva
 ## Integrazione successiva alla revisione
 
 Prima di rendere il servizio acquistabile occorreranno un flag di allestimento per esemplare, proiezione coerente delle statistiche, preventivo server verificato e addebito atomico/idempotente. Vanno aggiornati montaggio/sostituzione dei ricambi, valutazione dell'usato, immagini di garage/raduno/NPC e checkpoint di gara. Le vecchie gare e gli inviti già congelati conserveranno la vecchia configurazione; un vero cambiamento del telaio dovrà entrare nelle impronte di preparazione, a differenza della sola verniciatura. Niente pubblicazione di acquisti o migrazioni prima della revisione dell'anteprima richiesta.
+
+La livrea dedicata sostituisce visivamente la tinta stradale dell'esemplare: il carrozziere non dovrà addebitare una verniciatura normale che non produce alcun cambiamento sulla versione da corsa. L'allestimento permanente deve sopravvivere a vendita e acquisto dell'usato; nessuna rivendita potrà creare un guadagno superiore al costo sostenuto. Le componenti strutturali già migliori richiedono un confronto prima/dopo esplicito nel futuro preventivo. Queste sono condizioni da implementare nella fase acquistabile, non modifiche già attive.
+
+## Verifiche del 28 ottobre 2026
+
+Completate e confrontate visivamente tutte le 200 immagini: 72 riferimenti storici, 2 prototipi, 95 preparazioni ispirate e 31 allestimenti del club. Hash e archivi originali verificati; nessun duplicato. Album provato a 320, 390 e 1280 px, zoom, ricerca, marche, 200 miniature, note persistenti, revisione delle approvazioni, esportazione e fallback appunti. Nessun errore JavaScript, asset mancante o richiesta di scrittura. Test meccanici, lint e build superati. Nessuna modifica ai percorsi di gioco, agli asset precedenti o al database.

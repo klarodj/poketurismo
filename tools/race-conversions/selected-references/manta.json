@@ -1,0 +1,17 @@
+{
+  "key": "manta",
+  "selected": [
+    {
+      "url": "https://am-s3-bucket-assets.s3.eu-west-2.amazonaws.com/silverstone/prod/lot_images/large/REC15520-1/REC15520-1_4.jpg.webp?dummy=1772216719",
+      "page": "https://www.iconicauctioneers.com/1984-opel-manta-400-rec15520-1-silverston-0825",
+      "title": "Iconic Auctioneers | 1984 Opel Manta 400-Sold",
+      "score": 7,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/manta-web-1.img",
+      "width": 800,
+      "height": 533
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "identity",
+  "review": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica"
+}

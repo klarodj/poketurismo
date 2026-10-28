@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "145 Quadrifoglio Gruppo N",
+  "livery": "white, Alfa red lower stripe",
+  "bodywork": "period deep front valance, small roof spoiler, modest arch lips, white 15-inch rally wheels, red tow loops",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/145/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/145.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Alfa Romeo 145 Quadrifoglio",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Alfa Romeo 145 Quadrifoglio, racing preparation referencing 145 Quadrifoglio Gruppo N (1997). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Alfa Romeo 145 Quadrifoglio. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Correct the REAR QUARTER of Alfa Romeo 145 Quadrifoglio THREE-DOOR, not a 146. Match the authentic blunt tall upright truncated tail, distinctive sharp rear side-window/C-pillar geometry and real low corner lamps in rear references. Remove the generic sloped hatch tail of the edit target. Keep the approved front, long single door, wheels, wheelbase, body kit and overall stock proportions. Rear lights are SLIM HORIZONTAL red rectangles below rear glass, not vertical pillar lights. Rear glass and black surround sit above a broad painted waist; tall chopped tail with no boot extension or diagonal pointed overhang. Modest factory roof lip only.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: period deep front valance, small roof spoiler, modest arch lips, white 15-inch rally wheels, red tow loops. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white, Alfa red lower stripe. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "145",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ed1b47b6-eb03-4810-9ec5-7c31cac13bbe.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/145.png",
+  "sourceSha256": "0b389fe834aae793c05a2365eb93f061c2e23c059e68f41c61575d6c248fb996",
+  "input": "tools/race-conversions/inputs/145.png",
+  "output": "public/images/race-cars/145.png",
+  "sha256": "def51b2f3f62ba2c272ef663a6e7c98ca62629ea0ae63b19225bfa93906bf1d2",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/145/rosso.png",
+      "sha256": "e9fbd9b417174a5d7dcc02a2eef9a27e9f7d088c8f36f322fedc742b9bb1e0e9"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/145.png",
+      "sha256": "c3707214e9832b4eb8d8e0ea5e43c322c044a0f0a024bc499d22954d405b49b4"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

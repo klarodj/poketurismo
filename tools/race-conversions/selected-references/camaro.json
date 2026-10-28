@@ -1,0 +1,17 @@
+{
+  "key": "camaro",
+  "selected": [
+    {
+      "url": "https://images.classic.com/vehicles/961cc2744448371ccc195cbee92d400d8c68d91e.jpg?fit=crop&h=676&w=1200",
+      "page": "https://www.classic.com/veh/1995-chevrolet-camaro-scca-trans-am-race-car-WRRMorW/",
+      "title": "1995 Chevrolet Camaro SCCA Trans AM Race Car  - CLASSIC.COM",
+      "score": 8,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/camaro-web-0.img",
+      "width": 1200,
+      "height": 676
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

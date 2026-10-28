@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Clio Renault Sport Cup",
+  "livery": "white yellow and blue Renault Sport",
+  "bodywork": "retain approved Clio RS172 nose and rear lights, actual Cup front splitter, arch lips, small hatch spoiler and white racing wheels; not later R3 body",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/clio/rosso.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/clio.png",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "",
+      "page": "",
+      "title": "Fotografia originale del modello stradale · Renault Clio Rs",
+      "description": "Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault Clio Rs, racing preparation referencing Clio Renault Sport Cup (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Fotografia originale del modello stradale · Renault Clio Rs. Its description: Actual original road-car photograph supplied with the game. Use for exact model identity and generation, not as evidence of a historical racing livery.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Renault Clio II Renault Sport 172 PHASE 1 (1999-2001), THREE-DOOR. Correct front headlights to LARGE ROUNDED double-element/teardrop housings, bulging oval outline, not tiny narrow rectangular Clio I lamps and not facelift sharp triangular lamps. Short slim split grille with centre Renault diamond, original RS bumper round fog lamps. Rear lights: correct short broad triangular/oval wedge clusters flanking the hatch BELOW rear glass, red outer area with pale small inset, not tall thin pillar lights. Preserve Clio II bulbous rear glass/rounded tall roof, original silver OZ wheels.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain approved Clio RS172 nose and rear lights, actual Cup front splitter, arch lips, small hatch spoiler and white racing wheels; not later R3 body. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white yellow and blue Renault Sport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "clio",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d84687af-a0dd-46f0-af1a-a47fe484cb22.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/clio-r1.png",
+  "sourceSha256": "4453f9ac605e900c92df1e446edbbf76b79cc1b281689d9700e05a3be9a067f9",
+  "input": "tools/race-conversions/inputs/clio.png",
+  "output": "public/images/race-cars/clio.png",
+  "sha256": "758cda7330fc5511291e1a8ac223b919778e2b3de9364fa8e5b042cf0bc22585",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/clio/rosso.png",
+      "sha256": "55965c8f6e71dcd53181223df8f62d426d9ae979715fb141344900e5489397fd"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/tools/paint-prototype/archive/images/car/clio.png",
+      "sha256": "37101d8399f5aa9509be23c015239b3d6c1ee1667de0173dc5f6330a2b0029bf"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

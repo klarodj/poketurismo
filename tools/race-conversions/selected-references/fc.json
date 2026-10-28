@@ -1,0 +1,17 @@
+{
+  "key": "fc",
+  "selected": [
+    {
+      "url": "https://img.carswp.com/mazda/rx-7/images_mazda_rx-7_1990_2_b.jpg",
+      "page": "https://www.carswp.com/images-mazda-rx-7-imsa-gto-fc-1990-310559",
+      "title": "Images of Mazda RX-7 IMSA GTO (FC) 1990",
+      "score": 7,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/fc-web-1.img",
+      "width": 575,
+      "height": 400
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

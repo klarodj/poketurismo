@@ -1,0 +1,17 @@
+{
+  "key": "puma",
+  "selected": [
+    {
+      "url": "https://assets.carandclassic.com/uploads/new/28811686/1998-ford-racing-puma-69ba017f4e18d.jpg?ar=16%3A9&auto=&fit=crop&h=1200&ixlib=php-4.1.0&q=80&s=f20433690aadaeca75a9e87534256b03&w=1200",
+      "page": "https://www.carandclassic.com/car/C2032103",
+      "title": "1998 Ford Puma Multicolorido Manual, 6 velocidades Volante à esquerda em Reino Unido - À venda | Car & Classic",
+      "score": 6,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/puma-web-0.img",
+      "width": 1200,
+      "height": 675
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

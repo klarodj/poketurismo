@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Biturbo · Gruppo A",
+  "livery": "white with blue and red Italian racing bands",
+  "bodywork": "retain correct Biturbo shell, period front air dam and squared arch flares, boot spoiler, gold mesh race wheels; no modern Maserati",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/biturbo/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/biturbo-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.collectingcars.com/064157/Maserati-Biturbo-106.jpg?q=75&w=1200",
+      "page": "https://collectingcars.com/for-sale/1988-maserati-biturbo-si",
+      "title": "1988 Maserati Biturbo Si - Group A For Sale by Auction in Göteborg, Europe, Sweden | Collecting Cars",
+      "description": "This race‑prepared Maserati Biturbo Si was campaigned in the 1988 Group A touring car championship by the Marlboro Conquista team and driven by Thomas Lindström. Finished in white and red Marlboro livery with the number 12 on its hood and doors, it carries Bilstein and BBS decals and rides on 16‑inch gold BBS wheels with Dunlop tires. Under the hood sits a 2.5‑litre V6 engine driving the rear wheels through a five‑speed dogleg manual gearbox.\n\nInside, the car is equipped with FIA‑approved safety gear including a white roll cage, Mirco RS2 bucket seat, Apex harness, two‑spoke Momo steering wheel, battery cut‑offs, and a Premier Fuel Systems safety fuel cell. The sale includes its FIA Historic Technical Passport valid until December 2032, Automobile Club d’Italia documents, a detailed competition history, a collection of spare parts, and original correspondence between Maserati and Marlboro Conquista. Recently serviced by Euro Racing in 2023, this Biturbo Si remains a turnkey example of late‑1980s touring car competition machinery.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Maserati Biturbo, racing preparation referencing Biturbo · Gruppo A (1987). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1988 Maserati Biturbo Si - Group A For Sale by Auction in Göteborg, Europe, Sweden | Collecting Cars. Its description: This race‑prepared Maserati Biturbo Si was campaigned in the 1988 Group A touring car championship by the Marlboro Conquista team and driven by Thomas Lindström. Finished in white and red Marlboro livery with the number 12 on its hood and doors, it carries Bilstein and BBS decals and rides on 16‑inch gold BBS wheels with Dunlop tires. Under the hood sits a 2.5‑litre V6 engine driving the rear wheels through a five‑speed dogleg manual gearbox.\n\nInside, the car is equipped with FIA‑approved safety gear including a white roll cage, Mirco RS2 bucket seat, Apex harness, two‑spoke Momo steering wheel, battery cut‑offs, and a Premier Fuel Systems safety fuel cell. The sale includes its FIA Historic Technical Passport valid until December 2032, Automobile Club d’Italia documents, a detailed competition history, a collection of spare parts, and original correspondence between Maserati and Marlbor. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Maserati Biturbo two-door notchback coupe, squared body, rectangular headlamp units and small trident grille.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain correct Biturbo shell, period front air dam and squared arch flares, boot spoiler, gold mesh race wheels; no modern Maserati. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white with blue and red Italian racing bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "biturbo",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-55ed8132-4080-4327-af36-f475b7ae6ccb.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/biturbo.png",
+  "sourceSha256": "3f595cc1e0661249ed956fd0124942b34b88ae1d6751522da535126b2e5681a0",
+  "input": "tools/race-conversions/inputs/biturbo.png",
+  "output": "public/images/race-cars/biturbo.png",
+  "sha256": "3509c5ea63f488823a1ba040a2288032c675b0f310d50fa510abc888b64b7fef",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/biturbo/rosso.png",
+      "sha256": "a9d7fa8e1427b83ff2edea720f02d9a6af3cef3a13f484fb156e94cd498b69ca"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/biturbo-web-0.img",
+      "sha256": "5a8ed9eb155f7476588fc7377461a951503a861deaef572e921e71d5d3b84aa4"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

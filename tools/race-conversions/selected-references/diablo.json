@@ -1,0 +1,17 @@
+{
+  "key": "diablo",
+  "selected": [
+    {
+      "url": "https://s3.us-east-2.amazonaws.com/prod.mm.com/uploads/2024/12/27/03_thumb.jpg",
+      "page": "https://classicmotorsports.com/cars-for-sale/diablo-gtr-one-of-only-30-made-for-lamborghinis-one-make-series-2000-diablo-gtr/",
+      "title": "   | Lamborghini Diablo GTR | Cars for Sale | Classic Motorsports",
+      "score": 10,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/diablo-web-0.img",
+      "width": 1170,
+      "height": 780
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

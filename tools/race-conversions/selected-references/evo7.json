@@ -1,0 +1,17 @@
+{
+  "key": "evo7",
+  "selected": [
+    {
+      "url": "https://www.mitsubishi-motors.com/jp/brand/motorsports/wrc/images/img-contents_2002.jpg",
+      "page": "https://www.mitsubishi-motors.com/jp/brand/motorsports/wrc/",
+      "title": "World Rally Chanmpionship | モータースポーツ | 三菱自動車のクルマづくり | MITSUBISHI MOTORS",
+      "score": 10,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/evo7-web-0.img",
+      "width": 668,
+      "height": 456
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

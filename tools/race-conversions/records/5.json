@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "5 GT Turbo Gruppo N",
+  "livery": "white blue and yellow Renault Sport bands",
+  "bodywork": "retain front-engine Supercinque GT Turbo hatch, period bumper and modest flares, small roof spoiler, white small rally wheels; not mid-engine Turbo 2",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/5/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/5-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.artcurial.com/item-images/729ffd48-b418-11f0-b237-c3fd1f3678bc/PICTURE_CATALOG/036%20-%201990%20Renault%20Supercinq%20GT%20turbo%20-%20Inv%20503%20-007.jpg?force_webp=true&w=700",
+      "page": "https://www.artcurial.com/ventes/6445/lots/65-a",
+      "title": "1988 Renault 5 GT Turbo Gr. N   Sans réserve",
+      "description": "This 1988 Renault 5 GT Turbo Group N rally car, chassis VF1C4050500958619, is presented exactly as it finished the 22nd Ivory Coast-Bandama Rally on November 1, 1990. Piloted by Alain Oreille and Michel Roissard, it won its Group N class and secured second place overall in the World Rally Championship event. The car’s blue Simon Racing livery, complete with “6875 SS 84” race plate and “Vive le sport” slogan, remains intact along with all original stickers and period sand in the cabin.\n\nEquipped to FIA specifications, it features a Matter roll cage, bucket seats with harnesses, a spare wheel in the rear compartment, a tubular bumper, a ramp of four long-range driving lights, and dual searchlights beside the windshield. Recommissioned for a historic event with only essential fuel line replacements, this unmodified example retains its authentic rally setup. As a rare second-series R5 GT Turbo, it exemplifies Renault’s turbocharged 1397 cc performance heritage and the unique achievement of Oreille’s Group N success in WRC competition.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault 5 Gt, racing preparation referencing 5 GT Turbo Gruppo N (1989). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1988 Renault 5 GT Turbo Gr. N   Sans réserve. Its description: This 1988 Renault 5 GT Turbo Group N rally car, chassis VF1C4050500958619, is presented exactly as it finished the 22nd Ivory Coast-Bandama Rally on November 1, 1990. Piloted by Alain Oreille and Michel Roissard, it won its Group N class and secured second place overall in the World Rally Championship event. The car’s blue Simon Racing livery, complete with “6875 SS 84” race plate and “Vive le sport” slogan, remains intact along with all original stickers and period sand in the cabin.\n\nEquipped to FIA specifications, it features a Matter roll cage, bucket seats with harnesses, a spare wheel in the rear compartment, a tubular bumper, a ramp of four long-range driving lights, and dual searchlights beside the windshield. Recommissioned for a historic event with only essential fuel line replacements, this unmodified example retains its authentic rally setup. As a rare second-series R5 GT Tur. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Renault Supercinq 5 GT Turbo three-door hatch, broad grey lower body kit and rectangular lamps; not mid-engine Turbo 2.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain front-engine Supercinque GT Turbo hatch, period bumper and modest flares, small roof spoiler, white small rally wheels; not mid-engine Turbo 2. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and yellow Renault Sport bands. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "5",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e201ff65-fe27-49b3-b229-ca012f648841.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/5-r1.png",
+  "sourceSha256": "6d4dac6a5cfcf126555aec953a7595c2bd35933b5deacd911b2cb9892cc2bd39",
+  "input": "tools/race-conversions/inputs/5.png",
+  "output": "public/images/race-cars/5.png",
+  "sha256": "b59d07c25bc355575f1531dfb0c0bdbaed1d3d81a4803640f8c7e9ff016c93cd",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/5/rosso.png",
+      "sha256": "e41adb44a3cca04e9a141ead823af78a6ee0ab5a1ddc22c4d8d61f406d62b0c5"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/5-web-0.img",
+      "sha256": "7d2f9f92ad0326d9cc0b758dd83a8eac37e63f8560d2213557f2ef8748e8b2b7"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

@@ -1,0 +1,17 @@
+{
+  "key": "corsa2",
+  "selected": [
+    {
+      "url": "https://www.motorsportmarkt.de/media/image/4a/b8/26/phpLX051s_780x780.jpg",
+      "page": "https://www.motorsportmarkt.de/inserat/82310/opel-corsa-b-gr.a-kit-car-spec",
+      "title": "Opel Corsa B Gr.A Kit Car Spec 87211 | MotorsportMarkt.de",
+      "score": 11,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/corsa2-web-0.img",
+      "width": 780,
+      "height": 520
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

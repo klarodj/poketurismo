@@ -1,0 +1,17 @@
+{
+  "key": "na",
+  "selected": [
+    {
+      "url": "https://s3.us-east-2.amazonaws.com/prod.mm.com/img/featurenews/SVRA_Spec_Miata_kkLEd9J.jpeg",
+      "page": "https://classicmotorsports.com/news/new-from-svra-place-for-old-miatas/",
+      "title": "New From SVRA: A Place to Race Old Miatas | News | Classic Motorsports",
+      "score": 9,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/na-web-0.img",
+      "width": 1170,
+      "height": 645
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

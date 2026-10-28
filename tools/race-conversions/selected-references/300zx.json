@@ -1,0 +1,17 @@
+{
+  "key": "300zx",
+  "selected": [
+    {
+      "url": "https://images.classic.com/vehicles/aacbc3982707503646d91ff65ea8d16bf6b4918c.jpg?auto=format&fit=crop&h=384&w=600",
+      "page": "https://www.classic.com/veh/1994-nissan-300zx-v8-imsa-gts-race-car-008-pEddJzW/",
+      "title": "1994 Nissan 300ZX V8 IMSA GTS Race Car VIN: 008 - CLASSIC.COM",
+      "score": 8,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/300zx-web-0.img",
+      "width": 600,
+      "height": 384
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

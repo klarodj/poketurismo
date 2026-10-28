@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Cerbera Speed 12 GTS",
+  "livery": "purple with white and silver TVR racing panels",
+  "bodywork": "actual period Speed 12 racing extreme arch kit, deep front and rear ducts, large braced rear wing, silver racing wheels; no engine power imported",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/speed12/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/speed12-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://www.diariomotor.com/imagenes/2023/05/tvr-cerbera-speed-12-2005-04-645cd837a96a7.jpg?class=XL",
+      "page": "https://www.diariomotor.com/noticia/tvr-speed-12-subasta-historia-curiosidades/",
+      "title": "Revive tu mejor infancia con este icono del Gran Turismo, porque el indomable TVR Speed 12 ahora puede ser tuyo",
+      "description": "A striking red TVR Cerbera Speed 12, chassis W112 BHG, dominates the frame with its muscular front end, quad circular headlights, and large central grille emblazoned with the TVR badge. The car’s wide fenders, low ground clearance, and carbon‑fiber splitter underscore its racing DNA, while the prominent rear wing hints at its Le Mans GT1 origins.\n\nBorn from a 1990 project to rival the McLaren F1 GTR, the Speed 12’s 7.7‑liter V12—rumored to exceed 1,000 CV—was officially rated at 960 CV before being detuned to 880 CV for the lone 2005 street‑legal example. Now up for auction, this unique TVR Cerbera Speed 12 remains in excellent condition, complete with its original ECU and exhausts, ready to pass UK road certification.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Tvr Speed Twelve, racing preparation referencing Cerbera Speed 12 GTS (2000). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Revive tu mejor infancia con este icono del Gran Turismo, porque el indomable TVR Speed 12 ahora puede ser tuyo. Its description: A striking red TVR Cerbera Speed 12, chassis W112 BHG, dominates the frame with its muscular front end, quad circular headlights, and large central grille emblazoned with the TVR badge. The car’s wide fenders, low ground clearance, and carbon‑fiber splitter underscore its racing DNA, while the prominent rear wing hints at its Le Mans GT1 origins.\n\nBorn from a 1990 project to rival the McLaren F1 GTR, the Speed 12’s 7.7‑liter V12—rumored to exceed 1,000 CV—was officially rated at 960 CV before being detuned to 880 CV for the lone 2005 street‑legal example. Now up for auction, this unique TVR Cerbera Speed 12 remains in excellent condition, complete with its original ECU and exhausts, ready to pass UK road certification.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: TVR Cerbera Speed 12 wide supercar as source, deep huge front grille and grouped circular lamps, large rear aero. Keep visible source aero; do not invent modern TVR.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual period Speed 12 racing extreme arch kit, deep front and rear ducts, large braced rear wing, silver racing wheels; no engine power imported. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is purple with white and silver TVR racing panels. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "speed12",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e3e6e4f2-ec6f-4a5e-98a1-95b2c3c55394.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/speed12-r1.png",
+  "sourceSha256": "03f39e810fcc4564bfc473ff7abd017e1343028c1bc2ffcb3280b66cb2ce0cab",
+  "input": "tools/race-conversions/inputs/speed12.png",
+  "output": "public/images/race-cars/speed12.png",
+  "sha256": "dcb093b4f8416d7fdc57d8964df2669af7dc7a0408ee61702142dc4418596f65",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/speed12/rosso.png",
+      "sha256": "4a67f9b3c31acd882f304e96308be59095f413ea588a58dcfaf81cf88aa68f91"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/speed12-web-0.img",
+      "sha256": "8f867e4926de4a407d7ca197cacfeeffb3eb6796ffe7e372b83c111900004094"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

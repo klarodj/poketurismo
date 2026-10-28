@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Mégane Maxi",
+  "livery": "yellow blue and white Renault Sport",
+  "bodywork": "actual first COUPE Megane Maxi broad arch extensions, deep rally bumper, roof vent, large boot wing and white rally wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/megane/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/megane-commons-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Luis_Climent_Renault_Maxi_Megane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Luis_Climent_Renault_Maxi_Megane.jpg",
+      "title": "File:Luis Climent Renault Maxi Megane.jpg",
+      "description": "Renault Maxi Megane of Luis Climent, spanish rallye driver.",
+      "artist": "Jorjum",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "photoReview": "Real competition car visually checked against approved road model; keep road identity where variants differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault Megane Coupè, racing preparation referencing Mégane Maxi (1996). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL RACING PHOTOGRAPH: File:Luis Climent Renault Maxi Megane.jpg. Its description: Renault Maxi Megane of Luis Climent, spanish rallye driver.. Use the actual period racing hardware and bodywork rather than inventing generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: actual first COUPE Megane Maxi broad arch extensions, deep rally bumper, roof vent, large boot wing and white rally wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is yellow blue and white Renault Sport. Keep small sponsor/number panels coherent with the historical racing reference; simplify tiny lettering into clean pixel marks without UI text. Where the real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "megane",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6e2fc276-c841-4737-a2f7-23e063a004c4.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane.png",
+  "sourceSha256": "313ce847fcd1c3e380a7b2139daa8fd886d47c73582ce6807a14c6face61e5ba",
+  "input": "tools/race-conversions/inputs/megane.png",
+  "output": "public/images/race-cars/megane.png",
+  "sha256": "8177689c2e6990588baaf52713373ab08ccfea2330731c94997b95cba83e92f7",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/megane/rosso.png",
+      "sha256": "f1b391f4141118145dbf656dfc5a5dbccc1fde09d25828f23440510bfb5b13f0"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/megane-commons-0.img",
+      "sha256": "e333cf07e9d5e70231ca75bf4f6302f33e8a35ad41ad9640693deaf9ae545685"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "M3 E46 GTR ALMS",
+  "livery": "white and blue BMW Motorsport",
+  "bodywork": "real 2001 GTR vented bonnet, wide arches and cooling ducts, deep bumper splitter, fixed tall rear wing and silver racing wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/e46/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/e46-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://mediapool.bmwgroup.com/cache/P9/202507/P90610919/P90610919-bmw-na-50th-anniversary-50-stories-for-50-years-chapter-28-sibling-rivalry-bmw-na-battles-bmw-motors-600px.jpg",
+      "page": "https://www.press.bmwgroup.com/usa/article/detail/T0451396EN_US/bmw-na-50th-anniversary-%7C-50-stories-for-50-years-chapter-28%3A-%E2%80%9Csibling-rivalry%3A-bmw-na-battles-bmw-motorsport-for-the-2001-alms-title%E2%80%9D?language=en_US",
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years  Chapter 28: “Sibling Rivalry: BMW NA Battles BMW Motorsport for the 2001 ALMS Title”.",
+      "description": "Two black BMW E46 M3 GTRs, adorned with ADVAN, Castrol, and BMWCCA logos, lean into a tight corner on a sunlit racetrack. The lead car, numbered 21, displays “AUF WIEDERSEHN” on its windshield, while its pursuer bears “GOOD BYE,” underscoring the sibling rivalry theme. Their headlights pierce the track’s shadows as they battle for position.\n\nThis photograph illustrates the fierce on-track duel between BMW of North America’s Prototype Technology Group and BMW Motorsport’s Team Schnitzer during the 2001 American Le Mans Series. Both teams campaigned the E46 M3 GTR, with PTG’s P60 V8–powered cars eventually securing a dramatic victory at Petit Le Mans. The image captures the technical precision, sponsor partnerships, and competitive spirit that defined BMW’s ALMS campaign.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: BMW M3 E46, racing preparation referencing M3 E46 GTR ALMS (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: BMW NA 50th Anniversary | 50 Stories for 50 Years  Chapter 28: “Sibling Rivalry: BMW NA Battles BMW Motorsport for the 2001 ALMS Title”.. Its description: Two black BMW E46 M3 GTRs, adorned with ADVAN, Castrol, and BMWCCA logos, lean into a tight corner on a sunlit racetrack. The lead car, numbered 21, displays “AUF WIEDERSEHN” on its windshield, while its pursuer bears “GOOD BYE,” underscoring the sibling rivalry theme. Their headlights pierce the track’s shadows as they battle for position.\n\nThis photograph illustrates the fierce on-track duel between BMW of North America’s Prototype Technology Group and BMW Motorsport’s Team Schnitzer during the 2001 American Le Mans Series. Both teams campaigned the E46 M3 GTR, with PTG’s P60 V8–powered cars eventually securing a dramatic victory at Petit Le Mans. The image captures the technical precision, sponsor partnerships, and competitive spirit that defined BMW’s ALMS campaign.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: BMW M3 E46 coupe, hood bulge and widened arches; not modern M3.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real 2001 GTR vented bonnet, wide arches and cooling ducts, deep bumper splitter, fixed tall rear wing and silver racing wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white and blue BMW Motorsport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "e46",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-59eb3145-cdaf-438a-b4e5-91450e59b5f0.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/e46.png",
+  "sourceSha256": "1da7e10af0599022073f587e613f3de533714bbca61afd9338e9ecb0a5010ace",
+  "input": "tools/race-conversions/inputs/e46.png",
+  "output": "public/images/race-cars/e46.png",
+  "sha256": "412406a1c8a1b756ab6ad78bac4f00087dd1ef03a7e5000ba30f7f6cad123e68",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/e46/rosso.png",
+      "sha256": "740cd5bc97c818a8d889a1b2f1efdd931c69d33e0d4510153d12c6eea340f45c"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/e46-web-0.img",
+      "sha256": "292877735274b5470a9adfca8709261da51b2bc08bee68e2c9e0a3588384958e"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

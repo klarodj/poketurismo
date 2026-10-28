@@ -1,0 +1,50 @@
+{
+  "classification": "historic",
+  "candidate": "Puma Super1600",
+  "livery": "white and blue Ford Motorsport",
+  "bodywork": "real small COUPE Puma Kit Car wide arches and deep bumper, roof vent, large hatch wing, white rally wheels; never modern Puma crossover",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/puma/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/puma-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://assets.carandclassic.com/uploads/new/28811686/1998-ford-racing-puma-69ba017f4e18d.jpg?ar=16%3A9&auto=&fit=crop&h=1200&ixlib=php-4.1.0&q=80&s=f20433690aadaeca75a9e87534256b03&w=1200",
+      "page": "https://www.carandclassic.com/car/C2032103",
+      "title": "1998 Ford Puma Multicolorido Manual, 6 velocidades Volante à esquerda em Reino Unido - À venda | Car & Classic",
+      "description": "This rare left-hand drive 1998 Ford Puma Super 1600 rally car, one of only two built by Ford, is displayed under the OppositeStock Modern Classics Specialist sign. It features the original red, white, and blue Ford Rallye Sport livery, Pirelli branding, and a prominent rear spoiler. The carbon bonnet with roof intake, carbon front bumper, and widened Super 1600 body arches underline its competition pedigree.\n\nOriginally used for development and promotional duties, the car was later acquired by Alan Farmer of Pumabuild and transformed into a dedicated track machine. Highlights include a 6-speed manual gearbox, Quaife ATB differential, magnesium wheels, FIA-spec Sparco carbon seats with harness, Alcon brakes, full roll cage, and a Zafco fire suppression system. With just 4,000 miles recorded and a comprehensive spare parts package, this Puma is offered for sale in Berwick-upon-Tweed, Northumberland, UK.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Ford Puma, racing preparation referencing Puma Super1600 (2001). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: 1998 Ford Puma Multicolorido Manual, 6 velocidades Volante à esquerda em Reino Unido - À venda | Car & Classic. Its description: This rare left-hand drive 1998 Ford Puma Super 1600 rally car, one of only two built by Ford, is displayed under the OppositeStock Modern Classics Specialist sign. It features the original red, white, and blue Ford Rallye Sport livery, Pirelli branding, and a prominent rear spoiler. The carbon bonnet with roof intake, carbon front bumper, and widened Super 1600 body arches underline its competition pedigree.\n\nOriginally used for development and promotional duties, the car was later acquired by Alan Farmer of Pumabuild and transformed into a dedicated track machine. Highlights include a 6-speed manual gearbox, Quaife ATB differential, magnesium wheels, FIA-spec Sparco carbon seats with harness, Alcon brakes, full roll cage, and a Zafco fire suppression system. With just 4,000 miles recorded and a comprehensive spare parts package, this Puma is offered for sale in Berwick-upon-Tweed, North. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Original 1990s Ford Puma coupe, NOT modern crossover, rounded roof and swept triangular oval headlamps.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real small COUPE Puma Kit Car wide arches and deep bumper, roof vent, large hatch wing, white rally wheels; never modern Puma crossover. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white and blue Ford Motorsport. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "puma",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b5465e11-803f-41b2-a880-2c81c69709e3.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/puma.png",
+  "sourceSha256": "2c673e789d657642894fde87b29941b5190f2916bcde22b373898532d33fce3b",
+  "input": "tools/race-conversions/inputs/puma.png",
+  "output": "public/images/race-cars/puma.png",
+  "sha256": "9023b3c66306967d79918136063707bd2a67bc7bda0cd81e490a400aa54a0622",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/puma/rosso.png",
+      "sha256": "236a22732472c078345a7fd3a86b6fef9681f0347274b83b6c81742891671903"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/puma-web-0.img",
+      "sha256": "c701e925618b7199236853d82501370cf987e6fb19b433fa34c9fdf33e9051cb"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

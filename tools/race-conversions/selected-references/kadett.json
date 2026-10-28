@@ -1,0 +1,17 @@
+{
+  "key": "kadett",
+  "selected": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/1990_Opel_Kadett_E_2.0_GSi_%2810559495226%29.jpg/1280px-1990_Opel_Kadett_E_2.0_GSi_%2810559495226%29.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File%3A1990_Opel_Kadett_E_2.0_GSi_%2810559495226%29.jpg",
+      "title": "File:1990 Opel Kadett E 2.0 GSi (10559495226).jpg - Wikimedia Commons",
+      "score": 6,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/kadett-web-1.img",
+      "width": 1280,
+      "height": 842
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "identity",
+  "review": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica"
+}

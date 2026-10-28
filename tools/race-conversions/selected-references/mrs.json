@@ -1,0 +1,17 @@
+{
+  "key": "mrs",
+  "selected": [
+    {
+      "url": "https://toyotagazooracing.com/archive/ms/jp/gt/image/team/2003/thumb-0334-mr-s.jpg",
+      "page": "https://toyotagazooracing.com/archive/ms/jp/gt/2003-team-driver.html",
+      "title": "JGTC 2003年 チーム＆ドライバー | JGTC | TOYOTA MOTOR SPORTS",
+      "score": 7,
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/mrs-web-0.img",
+      "width": 750,
+      "height": 420
+    }
+  ],
+  "reviewed": true,
+  "referenceRole": "race",
+  "review": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ"
+}

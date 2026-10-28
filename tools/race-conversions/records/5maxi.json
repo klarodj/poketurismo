@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "5 Maxi Turbo Gruppo B",
+  "livery": "blue white and red Philips Renault racing",
+  "bodywork": "real Maxi Turbo broad rear arches and side cooling scoops, deep front bumper with auxiliary lamps, roof vent, large rear wing and white small race wheels",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/5maxi/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/5maxi-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/567812df7086d7c6a3ddcd61/1611526113935-DY4IY9WDKY5PYMZIYDX6/4058_10690480_50.jpg?format=1000w",
+      "page": "https://www.ecurie.co.uk/blog/2021/1/22/1985-renault-5-maxi-turbo",
+      "title": "Maximum Attack — Ecurie",
+      "description": "A striking white and yellow Renault 5 Maxi Turbo blasts through a nighttime rally stage, its four powerful spotlights cutting through the darkness. The compact hatchback’s widened arches, rear wing, and sponsor logos—Michelin, Jaeger, Valeo—underscore its Group B rally heritage. Inside, driver and co-driver wear full helmets as they tackle a winding tarmac road bordered by rocky terrain.\n\nPart of Ecurie’s “Maximum Attack” collection, this 1985 example was campaigned by double World Rally Champion Carlos Sainz in the Spanish Rally Championship. The R5 Maxi Turbo represents the final evolution of Renault’s mid-engined, turbocharged rally car, boasting 345 hp. It joins six other legendary Group B machines—Audi Sport Quattro S1, Peugeot 205 T16 Evo 2, Lancia 037 and S4, Ford RS200, MG Metro 6R4—set for auction by Artcurial Motorcars on 5 February 2021.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Renault 5 Maxi Turbo, racing preparation referencing 5 Maxi Turbo Gruppo B (1985). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: Maximum Attack — Ecurie. Its description: A striking white and yellow Renault 5 Maxi Turbo blasts through a nighttime rally stage, its four powerful spotlights cutting through the darkness. The compact hatchback’s widened arches, rear wing, and sponsor logos—Michelin, Jaeger, Valeo—underscore its Group B rally heritage. Inside, driver and co-driver wear full helmets as they tackle a winding tarmac road bordered by rocky terrain.\n\nPart of Ecurie’s “Maximum Attack” collection, this 1985 example was campaigned by double World Rally Champion Carlos Sainz in the Spanish Rally Championship. The R5 Maxi Turbo represents the final evolution of Renault’s mid-engined, turbocharged rally car, boasting 345 hp. It joins six other legendary Group B machines—Audi Sport Quattro S1, Peugeot 205 T16 Evo 2, Lancia 037 and S4, Ford RS200, MG Metro 6R4—set for auction by Artcurial Motorcars on 5 February 2021.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: Mid-engine Renault 5 Turbo/Turbo 2 silhouette visible in photo, extreme wide rear haunches, side air intakes and rectangular headlamps. Keep reference road-style appearance; no unreferenced rally livery.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real Maxi Turbo broad rear arches and side cooling scoops, deep front bumper with auxiliary lamps, roof vent, large rear wing and white small race wheels. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is blue white and red Philips Renault racing. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "5maxi",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8be6dea9-789e-4b35-b5df-502784cdaffa.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/5maxi-r1.png",
+  "sourceSha256": "8fc7c3c48003e2d682f1659453cfaee2fdad4afb2e17c11d9c1071cfd505fc01",
+  "input": "tools/race-conversions/inputs/5maxi.png",
+  "output": "public/images/race-cars/5maxi.png",
+  "sha256": "32988aa5ec02dcce00dceab8a5fd6f2cee928e6f3d565564a2e57dcd4473a051",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/5maxi/rosso.png",
+      "sha256": "11b00e0f8c2cc6521ce5640fd9fb3ae8f2482c608284af25fe526eeaa027b8d1"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/5maxi-web-0.img",
+      "sha256": "fa2cf9801dc9dfd097927af7985d8a4fdf41a9e0c0cfed540ab0ac02f57cda69"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ],
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin"
+}

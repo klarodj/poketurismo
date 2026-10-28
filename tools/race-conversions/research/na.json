@@ -1,0 +1,18 @@
+{
+  "key": "na",
+  "brand": "Mazda",
+  "name": "Mx-5 NA",
+  "candidate": "MX-5 NA · Spec Miata",
+  "classification": "historic",
+  "queryDate": "2026-10-27",
+  "review": "Riferimenti effettivamente utilizzati; i risultati grezzi della ricerca sono archiviati privatamente.",
+  "sources": [
+    {
+      "url": "https://s3.us-east-2.amazonaws.com/prod.mm.com/img/featurenews/SVRA_Spec_Miata_kkLEd9J.jpeg",
+      "page": "https://classicmotorsports.com/news/new-from-svra-place-for-old-miatas/",
+      "title": "New From SVRA: A Place to Race Old Miatas | News | Classic Motorsports",
+      "artist": "",
+      "license": ""
+    }
+  ]
+}

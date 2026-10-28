@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Coupé Kit Car F2",
+  "livery": "white blue and yellow Hyundai rally colours",
+  "bodywork": "real first-generation COUPE F2 broad arches, bumper ducts, roof vent, rally rear wing and white racing wheels; no later Tiburon",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/hyundai/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/hyundai-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Hyundai_Coupe_F2_1998.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File%3AHyundai_Coupe_F2_1998.jpg",
+      "title": "File:Hyundai Coupe F2 1998.jpg - Wikimedia Commons",
+      "description": "A black 1998 Hyundai Coupe F2 is parked on an asphalt lot beside a brick wall and wooden fence. The coupe’s smooth, aerodynamic bodywork and tinted windows emphasize its sporty design. It rides on factory DTM-style alloy wheels, each bearing an \"F2\" center cap, underscoring its original factory condition.\n\nPhotographed in October 2004 by Johnny Moda and shared by Mel Spencer, this image is freely licensed for sharing and adaptation under attribution and share-alike terms. The car’s glossy paint reflects the surrounding environment, showcasing its well-maintained exterior.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real same-generation road-car photograph inspected as identity reference; the racing bodywork is explicitly an interpretation of period preparation, not an exact historical replica",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Hyundai Coupè, racing preparation referencing Coupé Kit Car F2 (1998). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL ORIGINAL ROAD PHOTOGRAPH, for exact model identity only. The racing kit is an explicitly declared interpretation of period motorsport preparation, not a claim that the stock photo shows a race car: File:Hyundai Coupe F2 1998.jpg - Wikimedia Commons. Its description: A black 1998 Hyundai Coupe F2 is parked on an asphalt lot beside a brick wall and wooden fence. The coupe’s smooth, aerodynamic bodywork and tinted windows emphasize its sporty design. It rides on factory DTM-style alloy wheels, each bearing an \"F2\" center cap, underscoring its original factory condition.\n\nPhotographed in October 2004 by Johnny Moda and shared by Mel Spencer, this image is freely licensed for sharing and adaptation under attribution and share-alike terms. The car’s glossy paint reflects the surrounding environment, showcasing its well-maintained exterior.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: First-generation Hyundai Coupe RD as photo, rounded nose, almond headlamps, NOT later Tiburon/Coupe generations.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: real first-generation COUPE F2 broad arches, bumper ducts, roof vent, rally rear wing and white racing wheels; no later Tiburon. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is white blue and yellow Hyundai rally colours. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "hyundai",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4a68c5d3-9338-42b6-9506-59028351f8f1.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/hyundai.png",
+  "sourceSha256": "b344339ec2b2228123ddfa44c7803a0859533d0f4744a088366815f4b044df18",
+  "input": "tools/race-conversions/inputs/hyundai.png",
+  "output": "public/images/race-cars/hyundai.png",
+  "sha256": "c1b17bfb1561722b609fd40a45199e5a1dfd71dda6257fcf60056b0ff3cbcd76",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/hyundai/rosso.png",
+      "sha256": "4f4ee30a3bc332d82a7e8fe93e2393add7d7650cf84b5eb98718d09e5f4bf53c"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/hyundai-web-0.img",
+      "sha256": "26a62794ea242066166adfe0303ed7368be7461e110130b6311da35e275e808d"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}

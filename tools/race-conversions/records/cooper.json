@@ -1,0 +1,50 @@
+{
+  "classification": "inspired",
+  "candidate": "Mini Cooper classica · Miglia",
+  "livery": "British red white roof and white racing roundel",
+  "bodywork": "retain original CLASSIC Rover Mini shell with round lamps and chrome grille, small wide arch extensions, racing front valance, cage and silver compact 13-inch race wheels; NEVER a BMW R50/R53 MINI",
+  "referencedImagePaths": [
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/cooper/rosso.png",
+    "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/cooper-web-0.img",
+    "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png"
+  ],
+  "referenceSources": [
+    {
+      "url": "https://racecarsdirect.com/content/UserImages/94603/517380.jpg?v=0",
+      "page": "https://racecarsdirect.com/Advert/Details/94603/1966-morris-mini-cooper-s-fia",
+      "title": "Racecarsdirect.com  - 1966 Morris Mini Cooper S FIA",
+      "description": "A blue 1966 Morris Mini Cooper S MK1, fitted with a white roof and sporting the racing number 70, stands ready on a grassy paddock. Period sponsor decals—Castrol, Ferodo, Champion, Burmah, and Dunlop—adorn its flanks, while driver names Conor O'Brien, John Rhodes, and Barrie Williams appear above the door. The car’s front grille, round headlights, and leather bonnet strap evoke its classic 1960s rally heritage.\n\nThis genuine FIA-spec Mini has undergone a comprehensive Swiftune works-spec upgrade, including a fresh 1275cc engine, Koni dampers, oil cooler, racing seats with harnesses, and a full plumbing and electrical overhaul. With HTP papers, a heritage certificate, and a competition history in HGTCC, Masters, and HRCA events, it represents a rare opportunity to own an authentic 1966 Cooper S ready for historic racing.",
+      "artist": "",
+      "license": ""
+    }
+  ],
+  "photoReview": "Real competition/homologation photo inspected in contact sheet; retain approved stock generation when derivatives differ",
+  "generationDate": "2026-10-28",
+  "prompt": "Use case: stylized-concept. Asset type: one pixel-art racing-conversion sprite for Poketurismo, Northern Italy circa 2002. SUBJECT: Mini Cooper S, racing preparation referencing Mini Cooper classica · Miglia (1995). Input1 is the APPROVED ROAD SPRITE: exact model, generation, roof, glass, door count, front/rear lamp identity and camera. Input2 is a REAL COMPETITION/HOMOLOGATION PHOTOGRAPH, for period racing bodywork: Racecarsdirect.com  - 1966 Morris Mini Cooper S FIA. Its description: A blue 1966 Morris Mini Cooper S MK1, fitted with a white roof and sporting the racing number 70, stands ready on a grassy paddock. Period sponsor decals—Castrol, Ferodo, Champion, Burmah, and Dunlop—adorn its flanks, while driver names Conor O'Brien, John Rhodes, and Barrie Williams appear above the door. The car’s front grille, round headlights, and leather bonnet strap evoke its classic 1960s rally heritage.\n\nThis genuine FIA-spec Mini has undergone a comprehensive Swiftune works-spec upgrade, including a fresh 1275cc engine, Koni dampers, oil cooler, racing seats with harnesses, and a full plumbing and electrical overhaul. With HTP papers, a heritage certificate, and a competition history in HGTCC, Masters, and HRCA events, it represents a rare opportunity to own an authentic 1966 Cooper S ready for historic racing.. Use period racing hardware and bodywork rather than generic modern aero. Input3 is PIXEL STYLE/CAMERA ONLY, never borrow the Fiat Punto body. CRITICAL MODEL ANATOMY: CLASSIC original Mini Cooper (1990s Rover Mini), tiny upright two-door body, chrome grille, external round lights and additional grille spotlights as reference; NOT the later BMW Mini.. Road-car prohibitions on spoilers, arches or stock wheels are superseded ONLY by the requested racing preparation; retain the actual model identity. REQUIRED VISIBLE PHYSICAL MODIFICATIONS: retain original CLASSIC Rover Mini shell with round lamps and chrome grille, small wide arch extensions, racing front valance, cage and silver compact 13-inch race wheels; NEVER a BMW R50/R53 MINI. Do NOT merely recolour the stock sprite: rebuild the listed bumpers, splitter, flares, skirts, wing and competition wheels with believable proportions. The chosen period livery is British red white roof and white racing roundel. Keep small sponsor/number panels coherent with period racing; simplify tiny lettering into clean pixel marks without UI text. Where a real race reference is another derivative, preserve the approved road generation, door count and headlight identity; translate the race kit onto the SAME road model, never swap the vehicle. No drivetrain or engine-location change implied by the body. One entire isolated car, front-left three-quarter camera, nose pointing down-left, approximately40%front60%side, straight wheels, realistic body proportions and generous clear margins on a wide3:1 canvas. Transparent background, no cast shadow or ground plane, no scenery, people, multiple views, captions or watermark. STRICT hand-drawn 1990s PC racing game pixel art on a logical320x128 grid: sharp stepped outline, dark one-pixel panel gaps, clean square clusters and compact5-6shade material ramps. No photorealism or photo filter, no3D/vector rendering, antialiasing, smooth gradients, blur, noisy textures, modern giant wheels, modern LED lighting, post-2002 GT3 equipment or mismatched body generations. The rear silhouette and tail lamps must remain recognizable and accurate, with only documented/plausible race-kit extensions.",
+  "key": "cooper",
+  "tool": "image_gen built-in",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-83313426-df42-432e-a4f4-6ada23d812db.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/cooper.png",
+  "sourceSha256": "c76d704615e012e4b6a3bb19cc512cc9a5f25dfd3d197f534152fb14dc7ca75e",
+  "input": "tools/race-conversions/inputs/cooper.png",
+  "output": "public/images/race-cars/cooper.png",
+  "sha256": "f867374eb835e27def62d48f3e59e7261ec7933199a1901622dc0161c829fc6e",
+  "width": 320,
+  "height": 128,
+  "revision": 1,
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "referenceHashes": [
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/cooper/rosso.png",
+      "sha256": "d0203b0d689e9c4ca49fed9e57db39b51a7acd2f7fd4755a389213cb5309fc7c"
+    },
+    {
+      "file": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/references/cooper-web-0.img",
+      "sha256": "36d767f703ec32a992b613046964af34f1b6ba08bf38a867088c926c76d477ef"
+    },
+    {
+      "file": "/home/klaro/poketurismo-work/.preview/race-conversion-preview/public/images/pixel-cars/punto/rosso.png",
+      "sha256": "d94f7d30570d313f83aecab1e768e5f7ccaee5d348788f4a3c361a0a2483db1a"
+    }
+  ]
+}
