@@ -1383,3 +1383,25 @@ test('opening lot retirement recognizes historical player sales and keeps untrac
 test('unrecognized historical sales conservatively retain opening stock',async()=>{
  const {applyStock}=require('../server/marketStock'),{ensureDailyMarket}=require('../server/dailyMarket');const first=await applyStock(prisma);await prisma.gameOperation.create({data:{userId:1,key:'legacy-unknown-sale',kind:'sell-car',fingerprint:'unknown-old-format',response:'{}'}});await prisma.$transaction(tx=>ensureDailyMarket(tx,new Date('2090-10-29T10:00:00Z')));assert.equal(await prisma.garage.count({where:{id:{in:first.listings.map(r=>r.id)}}}),first.listings.length);
 });
+
+test('ACI entry and every start require persisted race preparation, with frozen prepared rivals and a single fee',async()=>{
+ const {CHAMPIONSHIP_CATALOG}=await import('../shared/championshipCatalog.mjs');const spec=CHAMPIONSHIP_CATALOG.find(c=>c.series==='aci-csai');
+ await prisma.championship.update({where:{id:championship.id},data:{name:spec.name,minCv:spec.minCv,maxCv:spec.maxCv,minLevel:spec.minLevel,entryFee:spec.entryFee}});
+ await prisma.user.update({where:{id:1},data:{level:10}});
+ await prisma.car.update({where:{id:car.id},data:{image:'seicento.png'}});
+ for(const name of new Set(spec.rivals.map(r=>r.carName))){const{id:_,...data}=car;await prisma.car.create({data:{...data,name,image:'seicento.png'}});}
+ const {RACE_PART_FAMILIES}=await import('../shared/raceEquipment.mjs');
+ for(const name of RACE_PART_FAMILIES){const{id:_,...data}=part;await prisma.part.create({data:{...data,name,level:3,cvBonus:0,nmBonus:0,kgBonus:0}});}
+ const balance=await wallet(),path=`/championships/${championship.id}/enter`;
+ const denied=await post(path,{racePrepared:true});assert.equal(denied.status,400);assert.match(denied.data.error,/preparazione/);assert.equal(await wallet(),balance);assert.equal(await prisma.championshipEntry.count(),0);
+ await prisma.garage.update({where:{id:garage.id},data:{racePrepared:true,currentFuel:45}});
+ const key=randomUUID(),joined=await post(path,{},key);assert.equal(joined.status,200,JSON.stringify(joined.data));assert.deepEqual(await post(path,{},key),joined);assert.equal(await wallet(),balance-spec.entryFee*100);
+ assert.equal(joined.data.entry.championship.rules.racePrepared,true);const stored=await prisma.championshipEntry.findUnique({where:{id:joined.data.entry.id}}),contract=JSON.parse(stored.contract);assert(contract.drivers.every(d=>d.car.racePrepared&&d.car.currentFuel===45));
+ const listed=(await get('/championships')).data.find(c=>c.id===championship.id);assert.equal(listed.series,'aci-csai');assert.deepEqual(listed.drivers.map(d=>d.performanceIndex),contract.drivers.map(d=>(require('../shared/vehiclePerformance.mjs').performanceIndex)(d.car)));
+ await prisma.garage.update({where:{id:garage.id},data:{racePrepared:false}});
+ const oldRule=spec.racePrepared;spec.racePrepared=false;
+ try{const rejected=await post('/races',{mode:'championship',entryId:stored.id,racePrepared:true});assert.equal(rejected.status,400);assert.match(rejected.data.error,/preparazione/);}finally{spec.racePrepared=oldRule;}
+ assert.equal(await prisma.raceSession.count(),0);assert.equal(await wallet(),balance-spec.entryFee*100);
+ await prisma.garage.update({where:{id:garage.id},data:{racePrepared:true}});
+ const started=await post('/races',{mode:'championship',entryId:stored.id});assert.equal(started.status,200,JSON.stringify(started.data));assert.equal(started.data.race.car.racePrepared,true);assert.equal(started.data.race.opponent.car.racePrepared,true);
+});

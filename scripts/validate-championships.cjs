@@ -14,18 +14,18 @@ async function main(){
  // An active legacy entry protects every track in its unchanged calendar from cleanup.
  let protection;
  if(legacyTrack&&old.length){const real=users.find(u=>u.id>0);if(real&&!entries.some(e=>e.userId===real.id&&e.status==='active'))protection=await prisma.championshipEntry.create({data:{userId:real.id,championshipId:old[0].id}});}
- const first=await prisma.$transaction(seedChampionships,{timeout:30000});assert.equal(first.created.length,6);
+ const first=await prisma.$transaction(tx=>seedChampionships(tx,{series:'northern'}),{timeout:30000});assert.equal(first.created.length,6);
  if(protection){assert.ok(first.deferred.includes(legacyTrack.id));await prisma.championshipEntry.delete({where:{id:protection.id}});}
- const second=await prisma.$transaction(seedChampionships,{timeout:30000});assert.equal(second.created.length,0);
- assert.equal((await prisma.$transaction(seedChampionships,{timeout:30000})).removed.length,0);
+ const second=await prisma.$transaction(tx=>seedChampionships(tx,{series:'northern'}),{timeout:30000});assert.equal(second.created.length,0);
+ assert.equal((await prisma.$transaction(tx=>seedChampionships(tx,{series:'northern'}),{timeout:30000})).removed.length,0);
  assert.deepEqual(await prisma.user.findMany({orderBy:{id:'asc'}}),users);assert.deepEqual(await prisma.garage.findMany({orderBy:{id:'asc'}}),garages);assert.deepEqual(await prisma.championshipEntry.findMany({orderBy:{id:'asc'}}),entries);
  for(const cup of old)assert.deepEqual(await prisma.championship.findUnique({where:{id:cup.id},include:{rounds:true}}),cup);
  const cars=await prisma.car.findMany({include:{brand:true}});
- for(const spec of CHAMPIONSHIP_CATALOG)for(const rival of spec.rivals){const car=cars.find(c=>c.name===rival.carName);assert.ok(car);assert.deepEqual(championshipCarErrors({...car,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,currentFuel:35},spec),[],`${spec.name}: ${rival.carName}`);}
+ for(const spec of CHAMPIONSHIP_CATALOG.filter(c=>!c.racePrepared))for(const rival of spec.rivals){const car=cars.find(c=>c.name===rival.carName);assert.ok(car);assert.deepEqual(championshipCarErrors({...car,engineHealth:rival.engineHealth,tireGrip:rival.tireGrip,currentFuel:35},spec),[],`${spec.name}: ${rival.carName}`);}
  server=app.listen(0,'127.0.0.1');await new Promise(resolve=>server.once('listening',resolve));base='http://127.0.0.1:'+server.address().port;
- const listed=(await request('/championships')).data;assert.equal(listed.length,6);assert.equal(new Set(listed.flatMap(c=>c.rounds.map(r=>r.trackId))).size,10);
+ const listed=(await request('/championships')).data.filter(c=>c.series!=='aci-csai');assert.equal(listed.length,6);assert.equal(new Set(listed.flatMap(c=>c.rounds.map(r=>r.trackId))).size,10);
  const fields=['cv','nm','kg','speed','acceleration','revving','transmission','turnSlow','turnFast','brake','traction'];
- for(const spec of CHAMPIONSHIP_CATALOG){const cup=listed.find(c=>c.name===spec.name);const user=await prisma.user.create({data:{username:'Grid validation '+crypto.randomUUID(),usernameKey:crypto.randomUUID(),password:'',mail:'',moneyCents:5000000,carDrive:0,level:10,exp:9000,...Object.fromEntries(PILOT_STATS.map(key=>[key,30]))}});const car=cars.find(c=>c.name===spec.rivals[3].carName);const garage=await prisma.garage.create({data:{userId:user.id,carId:car.id,...Object.fromEntries(fields.map(k=>[k,car[k]])),engineHealth:100,tireGrip:100,currentFuel:35}});await prisma.user.update({where:{id:user.id},data:{carDrive:garage.id}});
+ for(const spec of CHAMPIONSHIP_CATALOG.filter(c=>!c.racePrepared)){const cup=listed.find(c=>c.name===spec.name);const user=await prisma.user.create({data:{username:'Grid validation '+crypto.randomUUID(),usernameKey:crypto.randomUUID(),password:'',mail:'',moneyCents:5000000,carDrive:0,level:10,exp:9000,...Object.fromEntries(PILOT_STATS.map(key=>[key,30]))}});const car=cars.find(c=>c.name===spec.rivals[3].carName);const garage=await prisma.garage.create({data:{userId:user.id,carId:car.id,...Object.fromEntries(fields.map(k=>[k,car[k]])),engineHealth:100,tireGrip:100,currentFuel:35}});await prisma.user.update({where:{id:user.id},data:{carDrive:garage.id}});
   const key=crypto.randomUUID();const joined=await request(`/championships/${cup.id}/enter`,user.id,{},key);assert.equal(joined.status,200,JSON.stringify(joined.data));assert.equal((await request(`/championships/${cup.id}/enter`,user.id,{},key)).status,200);const entry=joined.data.entry;assert.equal(entry.standings.length,8);
   let totalMoney=0;
   for(let round=1;round<=cup.rounds.length;round++){

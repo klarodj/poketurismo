@@ -97,5 +97,16 @@
     "output": "public/images/world/tracks/mugello-real.png",
     "width": 320,
     "height": 180
+  },
+  {
+    "id": "autodrome-aci",
+    "kind": "icon",
+    "prompt": "Use case: historical-scene. Asset type: square menu illustration for the Italian racing game Poketurismo, matching chunky low-resolution 1990s PC pixel-art icons. Primary request: a winners' podium with THREE racing drivers celebrating after a provincial Italian touring-car race around 2002. Driver on central highest step raises a gold trophy, two others on left and right lower steps wave, racing suits in red, blue and white with simple period sponsor patches, period laurel wreath on winner. Helmets beside their feet. Only the three drivers and a simple concrete three-step podium; a small chequered flag behind. Modest provincial motorsport atmosphere, realistic adult human proportions. Composition square, centered, entire podium and people visible with margin, frontal three-quarter perspective, strong readable silhouette at 128x128 pixels. Medium: authentic hand-pixelled adventure-game sprite with coarse square pixels, sharp stair-step edges, limited 32-colour palette and clustered pixel shadows. Background flat light grey #c0c0c0 like Windows98, not transparent. Avoid photorealism, smooth digital painting, modern racing suits, modern logos, LED screens, modern GT3 cars, spectators, illegible text, watermark. No written title or logos.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c35d4a6c-4b57-4d03-a2dc-a58fa30ce786.png",
+    "input": "tools/section-art/inputs/autodrome-aci.png",
+    "output": "public/images/world/sections/autodrome-aci.png",
+    "width": 128,
+    "height": 128
   }
 ]

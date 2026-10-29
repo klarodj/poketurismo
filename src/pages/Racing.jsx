@@ -2,9 +2,9 @@ import PerformanceBadge from '../components/PerformanceBadge';
 import {trackVisual} from '../../shared/trackVisuals.mjs';
 import TrackIllustration from '../components/TrackIllustration';
 import ChampionshipTable from '../components/ChampionshipTable';
-import {championshipCarErrors} from '../../shared/championshipCatalog.mjs';
+import {championshipCarErrors,championshipSeries} from '../../shared/championshipCatalog.mjs';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Win98Window from '../components/Win98Window';
 import useGarageStore from '../store/garageStore';
 import useGameStore from '../store/gameStore';
@@ -41,15 +41,18 @@ function ChampionshipCard({champ,equippedCar,playerStats,playerLevel,playerMoney
  return <article className="championship-listing"><h2>{champ.name}</h2><p>Preparazione media avversari: <PerformanceBadge value={mean(knownIP)}/><PerformanceBadge kind="IG" value={mean(knownIG)}/></p><div className="championship-listing-overview">{visual&&<img src={visual.image} alt={visual.name} loading="lazy" width="144" height="96"/>}<div><p><strong>{champ.rounds?.length||0} gare</strong> · livello {champ.minLevel}+</p><p>{champ.minCv}–{champ.maxCv} CV · {champ.category}</p><p>Iscrizione <strong>€{champ.entryFee.toLocaleString('it-IT')}</strong></p></div></div><p className="championship-prize">Titolo: €{champ.rewardMoney.toLocaleString('it-IT')} · {champ.rewardXp} XP</p>
  {!canEnter&&<p className="period-notice">{activeEntry?'Concludi prima il campionato in corso.':errors[0]||`Mancano €${(champ.entryFee-playerMoney).toLocaleString('it-IT')} per l’iscrizione.`}</p>}
  <button type="button" className="win98-btn" disabled={!canEnter||joining} onClick={()=>onEnter(champ)}>{joining?'Iscrizione…':isActive?`Continua · round ${activeEntry.currentRound}`:canEnter?'Iscriviti · €'+champ.entryFee.toLocaleString('it-IT'):'Iscrizione non disponibile'}</button>
- <details className="period-details"><summary>Calendario, rivali e regolamento</summary><p>{champ.description}</p><p>{champ.format==='grid'?'Otto piloti · punti 10–8–6–5–4–3–2–1. Premi finali: 100% / 60% / 35% sul podio, 15% agli altri classificati.':'Campionato storico a duelli.'}</p><p>Trazione: {champ.allowedDrive==='any'?'libera':champ.allowedDrive}{champ.rules?.engineTypes?' · solo aspirati':''}{champ.rules?.brands?' · marchi italiani':''}{champ.rules?.drives?` · ${champ.rules.drives.join(', ')}`:''}</p>{errors.length>0&&<ul>{errors.map(e=><li key={e}>{e}</li>)}</ul>}
+ <details className="period-details"><summary>Calendario, rivali e regolamento</summary><p>{champ.description}</p><p>{champ.format==='grid'?'Otto piloti · punti 10–8–6–5–4–3–2–1. Premi finali: 100% / 60% / 35% sul podio, 15% agli altri classificati.':'Campionato storico a duelli.'}</p>{champ.rules?.racePrepared&&<p><strong>Vetture da gara obbligatorie</strong>{champ.rules.maxCc?` · massimo ${champ.rules.maxCc} cm³`:''}</p>}<p>Trazione: {champ.allowedDrive==='any'?'libera':champ.allowedDrive}{champ.rules?.engineTypes?' · solo aspirati':''}{champ.rules?.brands?' · marchi italiani':''}{champ.rules?.drives?` · ${champ.rules.drives.join(', ')}`:''}</p>{errors.length>0&&<ul>{errors.map(e=><li key={e}>{e}</li>)}</ul>}
  {(isActive?activeEntry.participants:champ.drivers)&&<details><summary>I sette rivali · auto e piloti</summary><p>IG riassume le abilità; IP descrive l’auto. Il percorso può cambiare i rapporti di forza.</p><ul>{(isActive?activeEntry.participants:champ.drivers).map(d=><li key={d.id}>{d.name} · {d.carName} <PerformanceBadge value={d.performanceIndex}/><PerformanceBadge kind="IG" value={d.driverIndex}/></li>)}</ul></details>}
- <ol>{champ.rounds?.map(r=><li key={r.id}><strong>Gara {r.ord} · {r.track?.name||'—'}</strong><p>Rivale tattico: {r.opponentName} · {r.opponentCarName}</p><details className="track-art-details"><summary>Mappa e ambientazione</summary><TrackIllustration name={r.track?.name} compact/></details></li>)}</ol></details></article>;
+ <ol>{champ.rounds?.map(r=><li key={r.id}><strong>Gara {r.ord} · {r.track?.name||'—'}</strong><p>Rivale iniziale: {r.opponentName} · {r.opponentCarName}</p><details className="track-art-details"><summary>Mappa e ambientazione</summary><TrackIllustration name={r.track?.name} compact/></details></li>)}</ol></details></article>;
 }
 
 // ─── MAIN PAGE ──────────────────────────────────────────────────────────────
 
 export default function Racing() {
   const navigate = useNavigate();
+  const [searchParams]=useSearchParams();
+  const series=searchParams.get('series')==='aci-csai'?'aci-csai':'northern';
+  const title=series==='aci-csai'?'Campionati ACI CSAI':'Campionati Settentrionali';
   const { cars } = useGarageStore();
   const { equippedCarId, triggerEvent } = useGameStore();
   const { id: userId, money, level, stats } = usePlayerStore();
@@ -119,13 +122,14 @@ export default function Racing() {
     }
   };
 
-  const categories = ['all', ...new Set(championships.map(c => c.category))];
-  const filteredChamps = filterCategory === 'all'
-    ? championships
-    : championships.filter(c => c.category === filterCategory);
+  const seriesCups=championships.filter(c=>championshipSeries(c)===series);
+  const seriesHistory=history.filter(e=>championshipSeries(e.championship)===series);
+  const categories = ['all', ...new Set(seriesCups.map(c => c.category))];
+  const effectiveCategory=categories.includes(filterCategory)?filterCategory:'all';
+  const filteredChamps = effectiveCategory === 'all' ? seriesCups : seriesCups.filter(c => c.category === effectiveCategory);
 
   return (
-    <Win98Window title="Autodromo — Centro Corse" imageUrl="/images/world/track.png">
+    <Win98Window guideId="autodrome" title={`Autodromo — ${title}`} imageUrl="/images/world/track.png">
       <div className="racing-page flex flex-col bg-win98-gray text-black">
 
         <button className="win98-btn m-2" onClick={()=>navigate('/autodrome')}>Torna all’Autodromo</button>
@@ -137,6 +141,8 @@ export default function Racing() {
         ) : (
           <div className="p-4">
 
+            <h1>{title}</h1>
+            {series==='aci-csai'&&<p className="period-notice">Solo vetture con preparazione da gara definitiva del meccanico. Controlla anche potenza, cilindrata e trazione del singolo trofeo. <button type="button" className="win98-btn" onClick={()=>navigate('/workshop')}>Vai in officina</button></p>}
             {/* ── COMPETITIONS TAB ── */}
             {(
               <div>
@@ -162,14 +168,14 @@ export default function Racing() {
                   </div>
                 )}
                 {activeEntry?.format === 'grid' && <details className="period-details mb-3"><summary>Classifica generale · {activeEntry.playerPoints} punti</summary><ChampionshipTable rows={activeEntry.standings}/></details>}
-                {history.length > 0 && <details className="border border-gray-500 bg-white p-3 my-3"><summary className="cursor-pointer font-bold">Campionati conclusi ({history.length})</summary>{history.map(entry=><details key={entry.id} className="border-t border-gray-300 mt-3 pt-2"><summary className="cursor-pointer">{entry.championship.name} · {entry.playerPoints} punti</summary>{entry.format==='grid'?<ChampionshipTable rows={entry.standings}/>:<p className="text-sm">Classifica storica: {entry.playerPoints} — {entry.opponentPoints}</p>}</details>)}</details>}
+                {seriesHistory.length > 0 && <details className="border border-gray-500 bg-white p-3 my-3"><summary className="cursor-pointer font-bold">Campionati conclusi ({seriesHistory.length})</summary>{seriesHistory.map(entry=><details key={entry.id} className="border-t border-gray-300 mt-3 pt-2"><summary className="cursor-pointer">{entry.championship.name} · {entry.playerPoints} punti</summary>{entry.format==='grid'?<ChampionshipTable rows={entry.standings}/>:<p className="text-sm">Classifica storica: {entry.playerPoints} — {entry.opponentPoints}</p>}</details>)}</details>}
                 {/* Category Filter */}
                 <div className="flex gap-1 mb-4 flex-wrap">
                   {categories.map(cat => (
                     <button
                       key={cat}
                       onClick={() => setFilterCategory(cat)}
-                      className={`px-4 py-1.5 font-bold text-sm border-2 ${filterCategory === cat ? 'bg-win98-blue text-white border-win98-darkerGray shadow-win98-inset' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray hover:bg-gray-200'}`}
+                      className={`px-4 py-1.5 font-bold text-sm border-2 ${effectiveCategory === cat ? 'bg-win98-blue text-white border-win98-darkerGray shadow-win98-inset' : 'bg-win98-gray border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray hover:bg-gray-200'}`}
                     >
                       {cat === 'all' ? '🏁 Tutti' : cat}
                     </button>

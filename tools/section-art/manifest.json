@@ -73,6 +73,14 @@
       "output": "public/images/world/tracks/mugello-real.png",
       "sourceSha256": "8dea0383c72fa32454a71fa6666b90e9a01e581fdc29a61dbcc7562ce8987230",
       "sha256": "49388e957de3270c8dd152cdb64e0baf4c8aa53b0ff25b7f81457f414455e902"
+    },
+    {
+      "id": "autodrome-aci",
+      "width": 128,
+      "height": 128,
+      "output": "public/images/world/sections/autodrome-aci.png",
+      "sourceSha256": "6905e0816edc6970a68a810b55493a16b5a7d51a5dc0271857226003a1afa344",
+      "sha256": "02513d4984c759d754e5027b09f30484206a6a0799e02b8de0d09b520f829896"
     }
   ]
 }
