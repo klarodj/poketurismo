@@ -21,3 +21,5 @@ Nove generazioni con strumento integrato `image_gen`: quattro banner320×180, du
 ## Verifica
 
 295 test gioco e12 account/gateway passati; lint e build. Su clone PostgreSQL:24 corsi completati, otto specialità, gare complete sui tre nuovi circuiti, primo round campionato. Seed ripetuto senza duplicati, confronto dei precedenti Track/TrackBuild/User invariato. Prove browser320/390/1280px e partenza diretta del round successivo; rapporti e schermate nella cartella privata ignorata `.preview/interface-zones-qa` dopo il rilascio. Nessuna migrazione di schema, reset o acquisto sui salvataggi pubblici.
+
+Rilascio: backup completo Auth+gioco verificato prima della pubblicazione; copia della build precedente e audit in `/home/klaro/.backups/poketurismo/interface-zones-20261029T150721Z`. Sul database effettivo il confronto di tutte le righe esistenti è identico: aggiunti soltanto3 Track,39 TrackBuild e39 TrackSection. Seconda esecuzione seed senza creazioni. Servizi5174 e gateway5184 riavviati, health locale positivo; vecchie porte5173/3001 spente. Nessuna modifica ai saldi, piloti, auto o risultati esistenti.
