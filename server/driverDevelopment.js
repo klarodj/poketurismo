@@ -4,7 +4,7 @@ const { PRACTICE_FIELDS, PRACTICE_CAP, TECHNIQUE_CAP, TECHNIQUE_ID, LESSON_ID, p
 async function development(tx, userId) {
   const row = await tx.driverDevelopment.findUnique({ where: { userId } });
   const user = await tx.user.findUnique({ where: { id: userId } });
-  return { ...publicDevelopment(row), targetedTraining: require('../shared/targetedTraining.mjs').trainingList(row,user.level), statPractice: require('../shared/targetedTraining.mjs').trainingRecord(row).practice, curriculum: publicCurriculum(row, user.level) };
+  return { ...publicDevelopment(row), pilotPoints: require('../shared/pilotPoints.mjs').pilotPoints(user,row), targetedTraining: require('../shared/targetedTraining.mjs').trainingList(row,user.level), statPractice: require('../shared/targetedTraining.mjs').trainingRecord(row).practice, curriculum: publicCurriculum(row, user.level) };
 }
 async function readLesson(tx, userId, body) {
   if (Object.keys(body).length) fail(400, 'La lezione non accetta statistiche o progressi dal browser');

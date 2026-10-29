@@ -181,6 +181,7 @@ mutate('/api/player/:id/moves', 'equip-moves', async (tx, userId, body, params) 
   await tx.playerProgress.upsert({ where: { userId }, create: { userId, equippedMoves: JSON.stringify(body.moveIds) }, update: { equippedMoves: JSON.stringify(body.moveIds) } });
   return snapshot(tx, userId);
 }, 'put');
+mutate('/api/driver/points','allocate-pilot-points',require('./pilotProgression').allocate);
 mutate('/api/driver/lesson', 'read-driving-lesson', async (tx, userId, body) => { await readLesson(tx, userId, body); return snapshot(tx, userId); });
 mutate('/api/driver/techniques/read', 'read-technique', async (tx, userId, body) => { await readTechnique(tx, userId, body); return snapshot(tx, userId); });
 app.get('/api/training-sessions', endpoint(() => prisma.trainingSession.findMany({ where: { category: 'stat' }, include: { track: { include: { type: true, meteo: true } } }, orderBy: { minLevel: 'asc' } })));
@@ -196,7 +197,7 @@ mutate('/api/training-sessions/:id/complete', 'training', async (tx, userId, bod
   const data = require('./pilotProgression').experienceReward(user,xpReward);
   if (session.category === 'stat') {
     if (!PILOT_STATS.includes(session.targetStat)) fail(400, 'Abilità non valida');
-    data[session.targetStat] = Math.min(100,data[session.targetStat]+statGain);
+    data[session.targetStat] = Math.min(100,user[session.targetStat]+statGain);
   } else fail(400, 'Tipo allenamento non valido');
   await charge(tx, userId, session.cost);
   await tx.user.update({ where: { id: userId }, data });

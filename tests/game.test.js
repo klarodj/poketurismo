@@ -131,7 +131,7 @@ test('maintenance uses server cost and oil change cannot repair a broken engine'
 });
 test('stat training updates once while techniques require a driving-school trial', async () => {
   const key = randomUUID(); await post(`/training-sessions/${training.id}/complete`, {}, key); await post(`/training-sessions/${training.id}/complete`, {}, key);
-  const user = await prisma.user.findUnique({ where: { id: 1 } }); assert.equal(user.brake, 35); assert.equal(user.turn,33); assert.equal(user.level, 2); assert.equal(user.moneyCents, 9950000);
+  const user = await prisma.user.findUnique({ where: { id: 1 } }); assert.equal(user.brake, 32); assert.equal(user.turn,30); assert.equal(user.level, 2); assert.equal(user.moneyCents, 9950000);
   assert.equal((await post(`/training-sessions/${moveTraining.id}/complete`, {})).status,410);
   const inv = (await get('/inventory/1')).data;
   assert.deepEqual(inv.moves,[]);assert.deepEqual(inv.equippedMoves,[]);
@@ -438,7 +438,7 @@ test('legacy stat courses have limited repetitions with diminishing gains, inclu
   const money = await wallet();
   assert.equal((await post(`/training-sessions/${training.id}/complete`, {})).status, 409);
   assert.equal(await wallet(), money);
-  assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).brake, 37);
+  assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).brake, 34);
 });
 test('custom sandbox races and straight-only sessions never manufacture braking practice', async () => {
   const rival = await prisma.customOpponent.create({ data: { name: 'Sandbox', carId: car.id, level: 1, ...pilot } });
@@ -1252,13 +1252,8 @@ test('failed race conversion has no debit or partial transformation, including a
  assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,409);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).racePrepared,false);
 });
 
-test('level rewards cover multiple levels, cap abilities and never duplicate the same XP threshold',()=>{
- const {experienceReward}=require('../server/pilotProgression');
- const u={...pilot,level:1,exp:950};
- const first=experienceReward(u,2100);assert.equal(first.level,4);
- for(const key of PILOT_STATS)assert.equal(first[key],u[key]+9);
- const again=experienceReward({...u,...first,exp:3050},20);assert.equal(again.turn,first.turn);
- assert.equal(experienceReward({...u,turn:99},100).turn,100);
+test('level XP unlocks multiple budgets without automatically changing abilities',()=>{
+ const {experienceReward}=require('../server/pilotProgression');const {pilotPoints}=require('../shared/pilotPoints.mjs');const u={...pilot,level:1,exp:950};const first=experienceReward(u,2100);assert.equal(first.level,4);assert.equal(first.turn,undefined);assert.equal(pilotPoints({...u,...first}).available,18);assert.equal(pilotPoints({...u,...first}).limitPerStat,6);
 });
 
 test('targeted school courses charge once, award specific practice, and preserve the real car and XP',async()=>{
@@ -1291,4 +1286,26 @@ test('targeted course repetitions diminish and stop; an abandoned session gives 
  }
  assert.deepEqual(gains,[80,80,80,40,40,40,20,20,20]);assert.equal((await post('/races',{mode:'track',lesson:'practice-turn-1'})).status,409);
  let r=await post('/races',{mode:'track',lesson:'practice-brake-1'});r=await post(`/races/${r.data.race.id}/abandon`,{version:r.data.race.version});assert.equal(r.status,200);assert.deepEqual(r.data.development.statPractice.brake||0,0);
+});
+
+test('pilot point allocations enforce budget, per-stat limits, ownership and idempotence',async()=>{
+ await prisma.user.update({where:{id:1},data:{level:2,exp:1000}});
+ const before=await wallet();
+ for(const allocations of [{turn:3},{turn:-1},{turn:1.5},{moneyCents:1},{turn:2,brake:2,shift:2,reflex:1},{}])assert.equal((await post('/driver/points',{allocations})).status,400);
+ const key=randomUUID();for(let i=0;i<2;i++)assert.equal((await post('/driver/points',{allocations:{turn:2,brake:2,shift:2}},key)).status,200);
+ const state=(await get('/state/1')).data;assert.equal(state.player.turn,32);assert.equal(state.development.pilotPoints.available,0);assert.equal(await wallet(),before);
+ await prisma.user.update({where:{id:1},data:{level:3,exp:2000}});
+ assert.equal((await post('/driver/points',{allocations:{turn:3}})).status,400);
+ assert.equal((await post('/driver/points',{allocations:{turn:2,clean:1}})).status,200);
+ assert.equal((await get('/state/1')).data.development.pilotPoints.available,3);
+ assert.equal((await prisma.user.findUnique({where:{id:2}})).turn,30);
+});
+test('pilot points preserve practice records, reject cap overflow and cannot be assigned in a race',async()=>{
+ await prisma.user.update({where:{id:1},data:{level:2,exp:1000,turn:99}});
+ await prisma.driverDevelopment.create({data:{userId:1,trainingCourses:JSON.stringify({targetedV1:{practice:{turn:60},attempts:{},routes:{}}})}});
+ assert.equal((await post('/driver/points',{allocations:{turn:2}})).status,400);
+ assert.equal((await post('/driver/points',{allocations:{turn:1}})).status,200);
+ assert.equal((await get('/state/1')).data.development.statPractice.turn,60);
+ await post('/races',{mode:'track'});
+ assert.equal((await post('/driver/points',{allocations:{clean:1}})).status,409);
 });

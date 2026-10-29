@@ -1,5 +1,4 @@
-const {PILOT_STATS}=require('./gameRules');
-const GAIN=3;
-function levelStats(user,levels){return Object.fromEntries(PILOT_STATS.map(k=>[k,Math.min(100,user[k]+Math.max(0,levels)*GAIN)]));}
-function experienceReward(user,xp){const level=Math.max(user.level,Math.floor((user.exp+xp)/1000)+1);return {exp:{increment:xp},level,...levelStats(user,level-user.level)};}
-module.exports={experienceReward,levelStats};
+// Level XP unlocks the point budget; spending is explicit and validated server-side.
+function experienceReward(user,xp){return {exp:{increment:xp},level:Math.max(user.level,Math.floor((user.exp+xp)/1000)+1)};}
+async function allocate(tx,userId,body){const {fail}=require('./gameRules');if(Object.keys(body).some(k=>k!=='allocations'))fail(400,'Invia soltanto i punti da assegnare');const user=await tx.user.findUnique({where:{id:userId}}),row=await tx.driverDevelopment.findUnique({where:{userId}});let result;try{result=require('../shared/pilotPoints.mjs').allocatePilotPoints(user,row,body.allocations);}catch(e){fail(400,e.message);}await tx.user.update({where:{id:userId},data:result.stats});await tx.driverDevelopment.upsert({where:{userId},create:{userId,trainingCourses:result.trainingCourses},update:{trainingCourses:result.trainingCourses}});return require('./races').snapshot(tx,userId);}
+module.exports={experienceReward,allocate};

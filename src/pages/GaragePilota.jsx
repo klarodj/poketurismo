@@ -1,3 +1,5 @@
+import PilotPointAllocation from '../components/PilotPointAllocation';
+import useDevelopmentStore from '../store/developmentStore';
 import PilotStats from '../components/PilotStats';
 import ExperienceProgress from '../components/ExperienceProgress';
 import PilotAvatar from '../components/PilotAvatar';
@@ -16,6 +18,7 @@ import { PILOT_STAT_LABELS } from '../logic/raceEngine';
 
 export default function GaragePilota() {
   const { id: userId, username, avatar, xp, stats } = usePlayerStore();
+  const points=useDevelopmentStore(s=>s.development?.pilotPoints);
   const { moves, equippedMoves } = useInventoryStore();
 
   const playerMoves = moves;
@@ -51,7 +54,8 @@ export default function GaragePilota() {
             </div>
 
               <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
-                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2><p>A ogni nuovo livello: +3 a tutte le abilità, fino a 100. Allenamenti e tecniche affinano la guida.</p>
+                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2><p>Ogni nuovo livello sblocca 6 punti da distribuire. Le abilità arrivano fino a 100; allenamenti e tecniche affinano la guida.</p>
+                <PilotPointAllocation key={`${userId}:${points?.earned}:${points?.available}`} userId={userId} stats={stats} points={points} disabled={pending>0||!!activeRace}/>
                 <PilotStats stats={stats}/>
               </div>
           </div>
