@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Selezione esplicita utente 29 ottobre: Saxo `exec-8660843c-bd4f-4c83-89b0-104282363e0a.png` ripristinata esatta (pubblicazione rev6); Mégane `exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png` con SOLO spoiler Maxi rivisto (rev8). Questi file superano le prove successive: non riapplicare automaticamente larghezza stradale, rimozione antenna o altri kit. Registro `tools/race-conversions/user-selected-two.json`, batch `selected-two-2026-10-29`. Altre198immagini e note conservate. Leggere `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
+
 - Scala corsa Saxo/Mégane del 28 ottobre: `review-2.json`, batch `size-two-2026-10-28`, filtro Aggiornate · 2 modelli. Saxo senza antenna, rev4, larghezza291px; Mégane da scocca stradale con coda corta, rev6, larghezza287px. `matchRoadWidth` solo su richiesta, scala uniforme; non rigenerare gli altri198asset. Xsara e Ibiza approvate esplicitamente. Dettagli in `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.
 
 - Revisione corsa quattro del 28 ottobre: `tools/race-conversions/review-4.json`, batch `body-four-2026-10-28`, filtro Aggiornate · 4 modelli. Saxo Super1600 rossa (rev3), Xsara con fianchi più larghi (rev5), coda Mégane e proporzioni Ibiza (rev4). Altre 196 PNG invariate, note preservate, acquisto ancora non attivo. Dettagli in `docs/CONVERSIONI_DA_CORSA_ANTEPRIMA.md`.

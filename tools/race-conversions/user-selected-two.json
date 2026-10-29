@@ -1,0 +1,19 @@
+{
+  "batch": "selected-two-2026-10-29",
+  "selections": [
+    {
+      "key": "saxo",
+      "selectedByUser": "exec-8660843c-bd4f-4c83-89b0-104282363e0a.png",
+      "revision": 6,
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8660843c-bd4f-4c83-89b0-104282363e0a.png",
+      "prompt": "Use case: precise-object-edit. Asset ONE transparent native pixel-art car sprite. Image1 is MANDATORY APPROVED ROAD CAMERA and PROPORTIONS TEMPLATE. Image2 is the previous racing sprite, rejected in proportions/body where specified. Other images are REAL competition bodywork reference. USER REQUEST: REBUILD from the REAL Saxo Super1600 photographs, not the old fictional white/blue body. Copy real smooth integrated wide fenders with NO RIVETS, Super1600 bumpers, correct side skirts, small hatch spoiler, white tarmac wheels and actual RED Total PlayStation number53 Citroen livery. Use the historic Super1600 body and lamps. CAMERA MUST EXACTLY MATCH road sprite: front-left three-quarter, same elevation and heading, same bonnet/front plane to side plane ratio. Do not copy side/rear camera from photo. Empty cockpit, no people. Preserve every other unrequested feature. STRICT1990s game hand pixel art logical320x128, crisp square clusters, hard stepped dark outlines, compact shading, dark panel seams. No photo/pixelated-photo, vector, gradients or antialiasing. Correct front-left three-quarter game view, car nose down-left, ONE WHOLE CAR only, straight wheels and correct generation/door count. Transparent background, ample clear margins, wide3:1 composition, no ground/shadow/scenery/UI/captions/watermark. NO DRIVER/COPILOT/HELMET/FACE anywhere. No fantasy modern aero. Body and wheel geometry must be plausible, not deformed. Photographs control physical kit, road sprite controls camera where requested."
+    },
+    {
+      "key": "megane",
+      "selectedByUser": "exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png",
+      "revision": 8,
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-96a05380-6ef1-471f-ac15-0d16b333e752.png",
+      "prompt": "Use case: precise-object-edit. Image1 is the USER-APPROVED Megane Maxi pixel-art car EDIT TARGET. CHANGE ONLY THE REAR SPOILER. Image2 is a REAL Megane Maxi rear photo showing the exact spoiler type: narrow nearly straight horizontal yellow transverse plane, small slender vertical endplates and two short slim upright brackets fixed to the boot, open clear gap below plane; no tall massive curved GT-style side towers. Replace image1's oversized thick swept triangular endplate/support assembly with this correct lightweight period Maxi wing, in the SAME front-left viewing perspective. Keep its yellow paint and plausible small blue accents. CRITICAL INVARIANTS: EVERY OTHER PART of image1 remains EXACTLY AS IS: approved main body silhouette, short rear, wide arches, front bumper, roof vent, antenna, glass, wheel positions, wheels, tires, yellow-blue Renault Sport5 livery, sponsor logos, shading, camera, image scale and pixel style. Do not fix or redesign anything else, do not stretch tail, do not change rear lamps/body shape, no new people or driver. Preserve original framing/transparent margins. ONE isolated car, genuinely TRANSPARENT background, no shadow/ground/UI/text captions/watermark. Pixel-art editing: preserve all existing square clusters, hard stepped outline and limited shade ramps outside the wing. The ONLY visible change is the more authentic Megane Maxi rear spoiler."
+    }
+  ]
+}

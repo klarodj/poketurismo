@@ -1825,13 +1825,12 @@
       "candidate": "Saxo Super1600",
       "referenceYear": 2001,
       "liveryDirection": "Rossa Citroën Sport · Total / PlayStation, vettura n.53",
-      "bodywork": "REMOVE antenna COMPLETELY, including stalk and base. Enlarge/reframe car to occupy the same image width and scale as the ROAD car; matching relative body, glass and wheel proportions. Keep existing red Citroen Super1600 Total PlayStation53 livery, kit, wheels, lights and camera unchanged. No replacement antenna or tall object above roof. Whole car must remain uncropped.",
+      "bodywork": "User selected exact original sprite exec-8660843c-bd4f-4c83-89b0-104282363e0a.png; no regeneration or additional body changes.",
       "identityNotes": "Citroen Saxo VTS three-door hatch, period rectangular rounded lamps, black side rubbing strips.",
-      "reviewBatch": "size-two-2026-10-28",
+      "reviewBatch": "selected-two-2026-10-29",
       "bodyworkDetails": [
-        "Antenna rimossa completamente.",
-        "Larghezza del disegno allineata alla Saxo stradale, senza deformare le proporzioni.",
-        "Kit e livrea Super1600 conservati."
+        "Versione selezionata espressamente dall’utente, ripristinata senza nuove modifiche.",
+        "Kit e livrea Super1600 della versione approvata."
       ],
       "notes": "Aspetto della vera Saxo Super1600 ripreso dalle fotografie Citroën Origins. La preparazione estetica non trasferisce il motore o le prestazioni della vettura storica."
     },
@@ -9736,13 +9735,13 @@
       "candidate": "Mégane Maxi Kit Car",
       "referenceYear": 1996,
       "liveryDirection": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "RECONSTRUCT from ROAD CAR GEOMETRY in image1, not the malformed racing image2. The previous racing car rear is DEFORMED and TOO LONG. Copy EXACT road roof, rear quarter glass, C-pillar, rear axle location, wheelbase and VERY SHORT rear body overhang. Same coupe silhouette and overall body length/height ratio. Road rear wheel sits very near rear extremity; do not move it forwards or stretch the tail/boot. NO long tail, no extended hatch, no elongated rear deck, no oversized rear arch. Apply ONLY period Maxi wide fenders around the unchanged road body geometry and race bumper. Transfer yellow/blue Renault Sport5 livery and wheels from image2, and the small period Maxi rear spoiler, without stretching the rear body to accommodate wing. Keep front-left camera EXACTLY road image1. Image2 is ONLY paint/kit style reference: its distorted rear geometry must NOT survive. Rear lamps only where visible in the unchanged road camera. Empty cockpit.",
+      "bodywork": "Use selected exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png; replace only rear spoiler with period Megane Maxi horizontal plane and thin supports; preserve selected body and livery.",
       "identityNotes": "Renault Megane first-generation three-door COUPE, short stepped rear, triangular rear side window and swept lamps.",
-      "reviewBatch": "size-two-2026-10-28",
+      "reviewBatch": "selected-two-2026-10-29",
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "bodyworkDetails": [
-        "Retrotreno ricostruito sulla sagoma della Mégane stradale: coda corta, posizione della ruota e proporzioni della scocca corrette.",
-        "Kit Maxi, cerchi e livrea Renault Sport conservati."
+        "Versione selezionata dall’utente: forma, kit, cerchi e livrea conservati.",
+        "Solo spoiler posteriore rivisto: piano orizzontale e supporti sottili, come sulla Mégane Maxi."
       ]
     },
     {

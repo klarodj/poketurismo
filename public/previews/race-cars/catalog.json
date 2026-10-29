@@ -1475,12 +1475,11 @@
       "reference": "Saxo Super1600",
       "referenceYear": 2001,
       "livery": "Rossa Citroën Sport · Total / PlayStation, vettura n.53",
-      "bodywork": "REMOVE antenna COMPLETELY, including stalk and base. Enlarge/reframe car to occupy the same image width and scale as the ROAD car; matching relative body, glass and wheel proportions. Keep existing red Citroen Super1600 Total PlayStation53 livery, kit, wheels, lights and camera unchanged. No replacement antenna or tall object above roof. Whole car must remain uncropped.",
-      "reviewBatch": "size-two-2026-10-28",
+      "bodywork": "User selected exact original sprite exec-8660843c-bd4f-4c83-89b0-104282363e0a.png; no regeneration or additional body changes.",
+      "reviewBatch": "selected-two-2026-10-29",
       "bodyworkDetails": [
-        "Antenna rimossa completamente.",
-        "Larghezza del disegno allineata alla Saxo stradale, senza deformare le proporzioni.",
-        "Kit e livrea Super1600 conservati."
+        "Versione selezionata espressamente dall’utente, ripristinata senza nuove modifiche.",
+        "Kit e livrea Super1600 della versione approvata."
       ],
       "notes": "Aspetto della vera Saxo Super1600 ripreso dalle fotografie Citroën Origins. La preparazione estetica non trasferisce il motore o le prestazioni della vettura storica.",
       "researchStatus": "reference-reviewed",
@@ -1507,8 +1506,8 @@
         }
       ],
       "stockImage": "/images/pixel-cars/saxo/rosso.png",
-      "image": "/images/race-cars/saxo.png?rev=4",
-      "artRevision": 4,
+      "image": "/images/race-cars/saxo.png?rev=6",
+      "artRevision": 6,
       "width": 320,
       "height": 128,
       "price": 31500,
@@ -8039,11 +8038,11 @@
       "reference": "Mégane Maxi Kit Car",
       "referenceYear": 1996,
       "livery": "Livrea della vettura reale fotografata, come nei riferimenti della revisione",
-      "bodywork": "RECONSTRUCT from ROAD CAR GEOMETRY in image1, not the malformed racing image2. The previous racing car rear is DEFORMED and TOO LONG. Copy EXACT road roof, rear quarter glass, C-pillar, rear axle location, wheelbase and VERY SHORT rear body overhang. Same coupe silhouette and overall body length/height ratio. Road rear wheel sits very near rear extremity; do not move it forwards or stretch the tail/boot. NO long tail, no extended hatch, no elongated rear deck, no oversized rear arch. Apply ONLY period Maxi wide fenders around the unchanged road body geometry and race bumper. Transfer yellow/blue Renault Sport5 livery and wheels from image2, and the small period Maxi rear spoiler, without stretching the rear body to accommodate wing. Keep front-left camera EXACTLY road image1. Image2 is ONLY paint/kit style reference: its distorted rear geometry must NOT survive. Rear lamps only where visible in the unchanged road camera. Empty cockpit.",
-      "reviewBatch": "size-two-2026-10-28",
+      "bodywork": "Use selected exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png; replace only rear spoiler with period Megane Maxi horizontal plane and thin supports; preserve selected body and livery.",
+      "reviewBatch": "selected-two-2026-10-29",
       "bodyworkDetails": [
-        "Retrotreno ricostruito sulla sagoma della Mégane stradale: coda corta, posizione della ruota e proporzioni della scocca corrette.",
-        "Kit Maxi, cerchi e livrea Renault Sport conservati."
+        "Versione selezionata dall’utente: forma, kit, cerchi e livrea conservati.",
+        "Solo spoiler posteriore rivisto: piano orizzontale e supporti sottili, come sulla Mégane Maxi."
       ],
       "notes": "Disegno rivisto sulle fotografie della preparazione indicata, senza trasferirne il motore o le prestazioni reali nel gioco.",
       "researchStatus": "reference-reviewed",
@@ -8055,19 +8054,14 @@
       ],
       "imageReferences": [
         {
-          "title": "Mégane Maxi · fotografia posteriore Ourense 1996",
-          "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/oriol-ou-96-3_orig.jpg",
-          "page": "https://rallyslotdecals.weebly.com/ref-rsd-132---renault-maxi-megane---oriol-goacutemez---rally-ourense96.html"
-        },
-        {
-          "title": "Mégane Maxi · fotografia tre quarti posteriore Tour de Corse",
-          "url": "https://3.bp.blogspot.com/-WarDJ2uoo7E/Tb2_oL3YS8I/AAAAAAAAPYQ/s329Zo5UKFs/s1600/11%2Bmegane-9.jpg",
-          "page": "https://rallyazores.blogspot.com/2011/05/tour-de-corse-1997-e-1998.html"
+          "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)",
+          "url": "https://www.confidential-renault.fr/doss_images/1577698062_Megane_Maxi_CR_redef_0002.jpg",
+          "page": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car"
         }
       ],
       "stockImage": "/images/pixel-cars/megane/rosso.png",
-      "image": "/images/race-cars/megane.png?rev=6",
-      "artRevision": 6,
+      "image": "/images/race-cars/megane.png?rev=8",
+      "artRevision": 8,
       "width": 320,
       "height": 128,
       "price": 31500,

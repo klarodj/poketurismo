@@ -1,42 +1,38 @@
 {
   "key": "megane",
-  "prompt": "Use case: precise-object-edit. EDIT IMAGE1 (RED ROAD RENAULT MEGANE COUPE), NOT image2. Keep image1's EXACT BODY SHAPE, PROPORTIONS and CAMERA. Preserve its short coupe rear, C-pillar, rear quarter window size/shape, rear roofline, position of rear wheel and compact rear overhang exactly. Do NOT lengthen, lower, widen vertically or reshape the rear quarter. The rear fender must NOT turn into an elongated bulbous long teardrop. The rear wheel must remain close to the rear bumper as in image1. APPLY RACING APPEARANCE ONTO IMAGE1: bright yellow body with blue Renault Sport swooshes and white number5 door panel, white period racing wheels, front Maxi bumper, modest wheel arch lips and small yellow rear spoiler. Image2 is ONLY the yellow/blue LIVERY and accessory reference; IGNORE its ENTIRE BODY GEOMETRY because its rear is rejected as deformed. Do not reproduce image2's overly elongated rear glass or long swollen rear haunches. Road model image1 must remain recognizably identical in roof, glass, side door, rear wheel location and short tail silhouette. No extra rear body for wing supports. Native1990s PC pixel art 320x128, crisp dark stepped outlines, clean colour clusters, compact shading. SAME road car front-left three-quarter view, nose down-left. Empty cockpit, transparent background, whole car with margins, no ground/shadow/scenery/UI/captions/watermark, no antialiasing or gradient. Make an actual repaint/race-preparation of image1 rather than another copy of image2.",
-  "userCorrection": "RECONSTRUCT from ROAD CAR GEOMETRY in image1, not the malformed racing image2. The previous racing car rear is DEFORMED and TOO LONG. Copy EXACT road roof, rear quarter glass, C-pillar, rear axle location, wheelbase and VERY SHORT rear body overhang. Same coupe silhouette and overall body length/height ratio. Road rear wheel sits very near rear extremity; do not move it forwards or stretch the tail/boot. NO long tail, no extended hatch, no elongated rear deck, no oversized rear arch. Apply ONLY period Maxi wide fenders around the unchanged road body geometry and race bumper. Transfer yellow/blue Renault Sport5 livery and wheels from image2, and the small period Maxi rear spoiler, without stretching the rear body to accommodate wing. Keep front-left camera EXACTLY road image1. Image2 is ONLY paint/kit style reference: its distorted rear geometry must NOT survive. Rear lamps only where visible in the unchanged road camera. Empty cockpit.",
+  "candidate": "Renault Megane Maxi Kit Car 1997",
+  "prompt": "Use case: precise-object-edit. Image1 is the USER-APPROVED Megane Maxi pixel-art car EDIT TARGET. CHANGE ONLY THE REAR SPOILER. Image2 is a REAL Megane Maxi rear photo showing the exact spoiler type: narrow nearly straight horizontal yellow transverse plane, small slender vertical endplates and two short slim upright brackets fixed to the boot, open clear gap below plane; no tall massive curved GT-style side towers. Replace image1's oversized thick swept triangular endplate/support assembly with this correct lightweight period Maxi wing, in the SAME front-left viewing perspective. Keep its yellow paint and plausible small blue accents. CRITICAL INVARIANTS: EVERY OTHER PART of image1 remains EXACTLY AS IS: approved main body silhouette, short rear, wide arches, front bumper, roof vent, antenna, glass, wheel positions, wheels, tires, yellow-blue Renault Sport5 livery, sponsor logos, shading, camera, image scale and pixel style. Do not fix or redesign anything else, do not stretch tail, do not change rear lamps/body shape, no new people or driver. Preserve original framing/transparent margins. ONE isolated car, genuinely TRANSPARENT background, no shadow/ground/UI/text captions/watermark. Pixel-art editing: preserve all existing square clusters, hard stepped outline and limited shade ramps outside the wing. The ONLY visible change is the more authentic Megane Maxi rear spoiler.",
   "referencedImagePaths": [
-    "/home/klaro/poketurismo-work/public/images/pixel-cars/megane/rosso.png",
-    "/home/klaro/.backups/poketurismo/race-review5-2026-10-28/before/public/images/race-cars/megane.png"
+    "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png",
+    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/megane-rear.img"
   ],
   "referenceSources": [
     {
-      "key": "megane-rear",
-      "url": "https://rallyslotdecals.weebly.com/uploads/2/1/0/7/21079506/oriol-ou-96-3_orig.jpg",
-      "page": "https://rallyslotdecals.weebly.com/ref-rsd-132---renault-maxi-megane---oriol-goacutemez---rally-ourense96.html",
-      "title": "Mégane Maxi · fotografia posteriore Ourense 1996"
-    },
-    {
-      "key": "megane-quarter",
-      "url": "https://3.bp.blogspot.com/-WarDJ2uoo7E/Tb2_oL3YS8I/AAAAAAAAPYQ/s329Zo5UKFs/s1600/11%2Bmegane-9.jpg",
-      "page": "https://rallyazores.blogspot.com/2011/05/tour-de-corse-1997-e-1998.html",
-      "title": "Mégane Maxi · fotografia tre quarti posteriore Tour de Corse"
+      "url": "https://www.confidential-renault.fr/doss_images/1577698062_Megane_Maxi_CR_redef_0002.jpg",
+      "page": "https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car",
+      "title": "Mégane Kit-Car - Rallye - Catégories | Confidential-Renault.fr (https://www.confidential-renault.fr/Categories/Rallye/Megane-Kit-Car)"
     }
   ],
-  "previousRevision": 4,
+  "userCorrection": "Use selected exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png; replace only rear spoiler with period Megane Maxi horizontal plane and thin supports; preserve selected body and livery.",
+  "photoReview": "References visually inspected; real car photographs, no models or game renders",
   "generationDate": "2026-10-28",
-  "photoReview": "Approved road and current racing sprites compared directly",
-  "matchRoadWidth": true,
   "tool": "image_gen built-in",
-  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6521a267-f38c-47be-8db7-5f323f7930b4.png",
-  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane-r6.png",
-  "sourceSha256": "43f42e8f53e50da163501a56311c38e9472aff73941e3753448dac729d436a67",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-96a05380-6ef1-471f-ac15-0d16b333e752.png",
+  "rawArchive": "/home/klaro/.backups/poketurismo/race-conversions-2026-10-27/generated/megane-r8.png",
+  "sourceSha256": "fd74b6f9dde754694ec7b9ac99b6e206dd386417b4ccb8078e5073b3cf8f5f60",
   "input": "tools/race-conversions/inputs/megane.png",
   "output": "public/images/race-cars/megane.png",
-  "sha256": "d511b2f48a0944f116cecc24f414be8f32f6267fb7f9f5a5658b89df72a32d6c",
+  "sha256": "886f42092ede3d00d991eb4201926808dc307966f63cf31cb3dc6c7186f75e35",
   "width": 320,
   "height": 128,
-  "revision": 6,
+  "revision": 8,
   "referenceHashes": {
-    "/home/klaro/poketurismo-work/public/images/pixel-cars/megane/rosso.png": "f1b391f4141118145dbf656dfc5a5dbccc1fde09d25828f23440510bfb5b13f0",
-    "/home/klaro/.backups/poketurismo/race-review5-2026-10-28/before/public/images/race-cars/megane.png": "6fe28d442a67c8e5f08666f782578c60fa1e00b15898e327418dcdefedca4967"
+    "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png": "29888db1eb92080f92569719aa4d8fe67ebc3914aa32b77a4a28186793bbe668",
+    "/home/klaro/.backups/poketurismo/race-review4-2026-10-28/working/megane-rear.img": "fad2b7d0be0c4a93f0a10f1fd41613a5dea96691fde43e34f88d13cc7d6e5e79"
   },
-  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin; width matched to approved road sprite"
+  "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
+  "selectedByUser": "exec-4615ff09-58eb-4efc-81bc-fbbd32269281.png",
+  "selectionDate": "2026-10-29",
+  "matchRoadWidth": false,
+  "previousRevision": 7
 }
