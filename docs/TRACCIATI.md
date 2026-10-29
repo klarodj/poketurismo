@@ -1,3 +1,5 @@
+Aggiornamento: vedere [Sezioni e circuiti](REVISIONE_SEZIONI_E_PISTE.md), che estende il catalogo senza modificare lezioni o gare congelate.
+
 # Catalogo tracciati
 
 20 nuovi percorsi: 10 circuiti e 10 strade punto a punto. Catalogo in `shared/trackCatalog.mjs`, importazione additiva in `scripts/seed-tracks.cjs` (anteprima senza argomenti, applicazione con `--apply`). Lo script non modifica i tracciati precedenti, i calendari dei campionati o i salvataggi e non duplica un percorso già presente con lo stesso nome. Transazione serializzabile per l'intero lotto.

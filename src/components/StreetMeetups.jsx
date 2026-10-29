@@ -1,6 +1,5 @@
 import OpponentComparison from './OpponentComparison';
 import {streetZoneImage} from '../../shared/streetVisuals.mjs';
-import {Link} from 'react-router-dom';
 import React, {useEffect,useState} from 'react';
 import {fetchStreetHub,findStreetOpponent,startRace} from '../services/api';
 import usePlayerStore from '../store/playerStore';
@@ -52,7 +51,6 @@ export default function StreetMeetups({onStarted,onLocationChange}){
     {!hub?<p>Caricamento dei ritrovi…</p>:stage==='locations'||!zone?<>
       <nav className="street-zones" aria-label="Scegli il ritrovo">{hub.zones.map(item=><button type="button" disabled={pending>0} key={item.id} className={`street-zone ${zone?.id===item.id?'street-zone-selected':''}`} aria-pressed={zone?.id===item.id} onClick={()=>choose(item)}><img className="street-zone-preview" src={streetZoneImage(item.id)} alt="" width="320" height="180" loading="lazy" decoding="async"/><span>{item.unlocked?'● Aperto':'Da sbloccare'}</span><strong>{item.name}</strong><small>Liv. {item.minLevel} · IP {item.minPerformance}+</small><small>{item.description}</small><small>Reputazione {item.reputation} · {item.wins} vittorie</small></button>)}</nav>
       {zone&&!zone.unlocked&&<section className="street-locked"><h2>{zone.name} · per accedere ti manca:</h2><ul>{zone.reasons.map(reason=><li key={reason}>{reason}</li>)}</ul></section>}
-      <Link className="street-button" to="/tracks">Atlante del club · piste e strade</Link>
     </>:<>
       <button type="button" className="street-button" disabled={pending>0} onClick={()=>{setStage('locations');setZoneId(null);setError('');}}>← Cambia luogo</button>
       <section className="street-zone-intro" aria-label="Scegli l’avversario"><p className="street-small">{zone.rivalCount} piloti abituali · reputazione locale {zone.reputation}</p>

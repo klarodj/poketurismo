@@ -7,7 +7,7 @@ import {STREET_TRACKS,STREET_ZONES} from '../shared/streetCatalog.mjs';
 const require=createRequire(import.meta.url);
 test('old track and championship labels resolve to the northern setting without losing catalogue rules',()=>{
  assert.equal(periodTrackName('Tsukuba · Ibaraki'),'Pistino di San Rocco · Pavese');assert.equal(periodCupName('GT 280 · Serie Internazionale'),'Trofeo GT 280 · Nord Italia');assert.deepEqual(trackCatalogInfo('Tsukuba · Ibaraki'),trackCatalogInfo('Pistino di San Rocco · Pavese'));
- for(const track of [...TRACK_CATALOG,...STREET_TRACKS]){assert.match(track.location,/Lombardia|Piemonte|Veneto|Alto Adige|Emilia-Romagna|Liguria/);assert.ok(!/Giappone|California|Brasile|Portogallo|Regno Unito/.test(track.name+' '+track.location));}
+ for(const track of [...TRACK_CATALOG,...STREET_TRACKS]){assert.match(track.location,/Lombardia|Piemonte|Veneto|Alto Adige|Emilia-Romagna|Liguria|Toscana/);assert.ok(!/Giappone|California|Brasile|Portogallo|Regno Unito/.test(track.name+' '+track.location));}
  for(const zone of STREET_ZONES)for(const name of zone.tracks)assert.ok([...TRACK_CATALOG,...STREET_TRACKS].some(track=>track.name===name),name);
 });
 test('frozen championship calendars and historical results are relabelled only in their public projection',()=>{

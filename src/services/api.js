@@ -94,7 +94,7 @@ export const completeTraining = (id, userId) => action(`/training-sessions/${id}
 export const fetchActiveRace = userId => request(`/races/active/${userId}`);
 export const fetchRace = (id, userId) => request(`/races/${id}?userId=${userId}`);
 export const startRace = (userId, setup) => action('/races', { userId, ...setup });
-export const playRaceTurn = (id, userId, version, moveId, decision) => action(`/races/${id}/turns`, { userId, version, moveId, ...(decision ? { decision } : {}) });
+export const playRaceTurn = (id, userId, version, moveId, decision, trainingAnswer) => action(`/races/${id}/turns`, { userId, version, moveId, ...(decision ? { decision } : {}),...(trainingAnswer!==undefined?{trainingAnswer}:{}) });
 export const abandonRace = (id, userId, version) => action(`/races/${id}/abandon`, { userId, version });
 export const fetchTrackSections = () => request('/track-sections');
 export const fetchCustomOpponents = () => request('/dev/opponents').catch(error => { if (error.status === 403) return []; throw error; });

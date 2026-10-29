@@ -1333,3 +1333,12 @@ test('pending version-two SMS challenges retain their preparation hash and fuel 
  const accepted=await post('/meet/challenge/respond',{userId:2,challengeId:row.id,action:'accept',garageId:otherGarage.id,quoteKey:sent.other.cars[0].quoteKey});assert.equal(accepted.status,200);
  const race=(await post('/meet/challenge/start',{challengeId:row.id})).data.race;assert.equal(race.fuelModelVersion,2);
 });
+
+test('all eight targeted specialties require their actual exercise answer and preserve old driving drills',async()=>{
+ const {TRAINING_COURSES}=require('../shared/targetedTraining.mjs');assert.equal(new Set(TRAINING_COURSES.map(c=>c.stat)).size,8);assert.equal(TRAINING_COURSES.length,24);
+ for(const stat of ['clean','reflex','shift','acro','brave']){
+  const before=await prisma.user.findUnique({where:{id:1}});let response=await post('/races',{mode:'track',lesson:`practice-${stat}-1`});assert.equal(response.status,200);
+  for(let i=0;i<4;i++){const race=response.data.race,raw=JSON.parse((await prisma.raceSession.findUnique({where:{id:race.id}})).state),section=raw.sections[raw.index];assert.equal(race.sections[i].trainingCorrect,undefined);const body={version:race.version,moveId:null,decision:section.goal,trainingAnswer:section.trainingCorrect};if(i===0){assert.equal((await post(`/races/${race.id}/turns`,{...body,trainingAnswer:'forged'})).status,400);body.trainingAnswer=section.trainingQuestion.options.find(o=>o.id!==section.trainingCorrect).id;}response=await post(`/races/${race.id}/turns`,body);assert.equal(response.status,200);}
+  assert.equal(response.data.race.developmentSummary.statPractice[stat],60);assert.equal(response.data.race.reward.xp,0);assert.equal(response.data.player[stat],before[stat]);
+ }
+});

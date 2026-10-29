@@ -1,3 +1,4 @@
+import './training-school.css';
 import {efficiencyLabel} from '../logic/displayUnits.mjs';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React, { useState } from 'react';
@@ -10,6 +11,7 @@ import RaceCarArtwork from './RaceCarArtwork';
 export default function TacticalControls({ race, pending, onTurn, showAlerts = true }) {
   const [selection, setDecision] = useState({ ...DEFAULT_DECISION });
   const [moveId, setMoveId] = useState(null);
+  const [trainingAnswer,setTrainingAnswer]=useState(null);
   const [inspect, setInspect] = useState(false);
   const decision = contextualDecision(race, selection);
   const context = tacticalContext(race);
@@ -29,6 +31,7 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
     <fieldset disabled={pending > 0} className="min-w-0">
       <legend className="sr-only">Imposta e conferma la strategia</legend>
       <fieldset className="race-pace"><legend>Ritmo</legend><div>{options('pace').map(option => <button type="button" aria-pressed={decision.pace === option.id} key={option.id} onClick={() => select('pace', option.id)} className={decision.pace === option.id ? 'is-selected' : ''}>{option.name}</button>)}</div></fieldset>
+      {section.trainingQuestion&&<fieldset className="training-answer"><legend>{section.trainingQuestion.prompt}</legend>{section.trainingQuestion.options.map(o=><label key={o.id}><input type="radio" name="training-answer" value={o.id} checked={trainingAnswer===o.id} onChange={()=>setTrainingAnswer(o.id)}/><span>{o.label}</span></label>)}</fieldset>}
       <div className="race-choices">
         {groups.filter(group => group.show && !(race.gridOpponentId && group.key === 'manoeuvre')).map(({ key, label }) => <label key={key}>{label}<select value={decision[key]} onChange={event => select(key, event.target.value)}>{options(key).map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>)}
         {moves.length > 0 && <label>Tecnica del pilota<select value={selectedMoveId || ''} onChange={event => setMoveId(event.target.value || null)}><option value="">Guida normale</option>{moves.map(move => <option value={move.id} key={move.id}>{move.name}</option>)}</select></label>}
@@ -38,7 +41,7 @@ export default function TacticalControls({ race, pending, onTurn, showAlerts = t
         <div className="championship-tactical-reference"><RaceCarArtwork car={race.opponent.car}/><p>Rivale tattico: <strong>{race.opponent.name}</strong>. {context.ahead?'Lo precedi':context.behind?'Lo insegui':'Siete affiancati'} · {Math.abs(race.gapSeconds||0).toFixed(3)} s. I vicini in classifica sono nel cruscotto.</p></div>
         <label>Confronto tattico<select value={decision.manoeuvre} onChange={event => select('manoeuvre', event.target.value)}>{options('manoeuvre').map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>
       </details>}
-      <div className="race-confirm"><div role="status"><span>Stima settore <strong>{preview.seconds.toFixed(1)} s</strong></span><span className={preview.errorPercent >= 8 ? 'race-risk-high' : ''}>Rischio errore <strong>{preview.errorPercent.toFixed(1)}%</strong></span></div><button type="button" onClick={() => onTurn(selectedMoveId, decision)} className="race-drive-button">{pending > 0 ? 'Salvataggio…' : 'Percorri il settore →'}</button></div>
+      <div className="race-confirm"><div role="status"><span>Stima settore <strong>{preview.seconds.toFixed(1)} s</strong></span><span className={preview.errorPercent >= 8 ? 'race-risk-high' : ''}>Rischio errore <strong>{preview.errorPercent.toFixed(1)}%</strong></span></div><button type="button" disabled={!!section.trainingQuestion&&trainingAnswer===null} onClick={() => onTurn(selectedMoveId, decision,trainingAnswer===null?undefined:trainingAnswer)} className="race-drive-button">{pending > 0 ? 'Salvataggio…' : 'Percorri il settore →'}</button></div>
     </fieldset>
     {inspect && <RaceDetailDialog title="Strategia · effetti e stime" onClose={() => setInspect(false)}>
       <div className="space-y-5">

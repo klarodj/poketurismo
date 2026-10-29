@@ -1,0 +1,101 @@
+[
+  {
+    "id": "school-training",
+    "kind": "banner",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 landscape postcard, readable at320x180. An Italian driving-school practice yard beside a small provincial racetrack. A modest blue Peugeot106-style 1990s hatchback doing a calm slalom between orange cones, skid marks on a small damp practice pad, instructor woman in blue windbreaker holding a paper clipboard safely beside the car. Trees, wire fence and low school office in background, clear morning. Different from a classroom: emphasize practical driver training.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-5b5de693-1dc4-47ee-a6d8-8f78e2fdced1.png",
+    "input": "tools/section-art/inputs/school-training.png",
+    "output": "public/images/world/sections/school-training.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "id": "workshop-body",
+    "kind": "banner",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 landscape postcard, readable at320x180. A modest Italian body and paint shop interior. A bright yellow 1990s small Fiat hatchback masked for repainting inside an old rectangular spray booth, steel mixing bench with paint tins and a mechanic wearing work overalls. Warm fluorescent light, grey concrete walls, modest workshop doors, professional tidy period atmosphere. No modern touchscreen tools.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9f3058de-9406-4014-adec-65fbd0a8405b.png",
+    "input": "tools/section-art/inputs/workshop-body.png",
+    "output": "public/images/world/sections/workshop-body.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "id": "workshop-race",
+    "kind": "banner",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 landscape postcard, readable at320x180. A small Italian racing preparation workshop in2002. White 1990s touring sedan with number panel, roll cage visible, wide arches, racing wheels and rear spoiler on floor stands. Nearby stripped interior panels and slick tyres, a technician in blue overalls, workbench and welding cart. believable provincial motorsport team, full car and workshop atmosphere.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-af4701f7-46ba-483b-879e-e6143d4de35f.png",
+    "input": "tools/section-art/inputs/workshop-race.png",
+    "output": "public/images/world/sections/workshop-race.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "id": "workshop-recovery",
+    "kind": "banner",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 landscape postcard, readable at320x180. Italian roadside assistance in the late1990s, a yellow Iveco Daily-style flatbed tow truck loading a red small Fiat hatchback on the forecourt of a modest village mechanic. Tow operator in blue overalls, old roadside phone, wire fence and Lombard countryside, late afternoon warm light. Vehicle proportions believable, no modern truck or uniforms.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c40b6310-ece7-4ac3-809e-3dab8bfbc4fe.png",
+    "input": "tools/section-art/inputs/workshop-recovery.png",
+    "output": "public/images/world/sections/workshop-recovery.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "id": "autodrome-cups",
+    "kind": "icon",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. Square game menu illustration to downsample to128x128. Three period gold and silver motorsport trophy cups of different sizes on a small grey wooden race-club secretary counter, a folded black-and-white checkered flag beneath. Simple calm pale grey background, clearly readable trophy silhouettes, pixelated highlights, centered composition filling square. No writing or people.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b27c1ff5-fa6d-4bfe-b932-f0a6d853ed7a.png",
+    "input": "tools/section-art/inputs/autodrome-cups.png",
+    "output": "public/images/world/sections/autodrome-cups.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "id": "autodrome-race",
+    "kind": "icon",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. Square game menu illustration to downsample to128x128. Two recognizable1990s racing cars, a white touring sedan with wide arches and a blue compact race hatchback, numbers and tiny unreadable sponsor marks, roll cages and racing wheels, rear spoilers. Three-quarter front view on a strip of racetrack with red/white kerb, simple pale grey background, centered tightly composed readable large car silhouettes. No modern models, no writing.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-670c2c29-c3fc-4000-bd41-b55cfda0526e.png",
+    "input": "tools/section-art/inputs/autodrome-race.png",
+    "output": "public/images/world/sections/autodrome-race.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "id": "franciacorta",
+    "kind": "track",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 racetrack location postcard, readable at320x180. Old Autodromo di Franciacorta in Castrezzato before the Porsche Experience Center redesign: modest low box buildings and paddock, short technical asphalt circuit with red/white kerbs, grassy runoff, distant low Franciacorta hills and vineyards under blue sky. A couple small1990s touring cars far on track. Deliberate game-era visual treatment. No futuristic Porsche center, no modern grandstands or modern cars.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-3231a408-d2f4-40dd-a127-184dcf31f195.png",
+    "input": "tools/section-art/inputs/franciacorta.png",
+    "output": "public/images/world/tracks/franciacorta.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "id": "imola-real",
+    "kind": "track",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 racetrack location postcard, readable at320x180. Autodromo Enzo e Dino Ferrari, Imola around2002: view from the grass of the Rivazza hillside overlooking descending asphalt and red-white kerbs, trees, old low grandstands and old pit complex in the distance, Emilia-Romagna houses and green hills. Two small1990s touring cars far on track. Distinct historic Italian circuit atmosphere, no post2007 glass pit tower, no modern cars or F1 logos.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-425bf8d6-e30c-46ac-9a9d-9c3aace85075.png",
+    "input": "tools/section-art/inputs/imola-real.png",
+    "output": "public/images/world/tracks/imola-real.png",
+    "width": 320,
+    "height": 180
+  },
+  {
+    "id": "mugello-real",
+    "kind": "track",
+    "prompt": "Use case: historical-scene. Game asset for Poketurismo: hand-pixelled 1990s adventure-game background, visible coarse square pixels, crisp stair-step edges, restrained limited palette, no antialiasing, no photorealism or painted gradients. Automotive provincial Northern Italy around 2002. Architecture, vehicles and clothing must fit the late 1990s/early 2000s, no modern cars, no LED lights, no smartphones. Full bleed, no UI or typography, no legible writing, no watermark. 16:9 racetrack location postcard, readable at320x180. Mugello circuit around2002 in Tuscany: sweeping Arrabbiata-style asphalt curves flowing over green hills, red/white kerbs, grassy spectator banks, cypress trees, distant Tuscan farmhouse and wooded ridge, modest circuit structures. Two small1990s race cars far on track, sunny afternoon. No modern architecture or large new grandstand roof, no modern cars or readable logos.",
+    "tool": "image_gen built-in",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-b19c6e67-b187-4b7b-8e93-400f3c23f2c6.png",
+    "input": "tools/section-art/inputs/mugello-real.png",
+    "output": "public/images/world/tracks/mugello-real.png",
+    "width": 320,
+    "height": 180
+  }
+]

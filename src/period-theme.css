@@ -61,3 +61,5 @@
 .city-map-locations button>div{flex:1;width:100%}
 
 .time-trials-page{grid-template-columns:minmax(0,1fr)}.time-trials-page>*{min-width:0}.time-trials-page select{max-width:100%;min-width:0}
+
+.period-activity img{image-rendering:pixelated}

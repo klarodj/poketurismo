@@ -73,14 +73,15 @@ export default function RacePage({ mode }) {
       setError('');
     } catch (error) { setError(error.message); }
   };
-  const turn = async (moveId, decision) => {
-    try { await playRaceTurn(race.id, userId, race.version, moveId, decision); setError(''); }
+  const turn = async (moveId, decision, trainingAnswer) => {
+    try { await playRaceTurn(race.id, userId, race.version, moveId, decision, trainingAnswer); setError(''); }
     catch (error) {
       setError(error.message);
       // Refresh checkpoints even when a response was lost after a successful save.
       try { applyGameState(await fetchRace(race.id, userId)); } catch { /* Keep retry available. */ }
     }
   };
+  const nextChampionshipRace=async()=>{try{const data=await startRace(userId,{mode:'championship',entryId:race.entryId});setError('');setParams({raceId:data.race.id},{replace:true});}catch(e){setError(e.message);}};
   const abandon = async () => {
     try { await abandonRace(race.id, userId, race.version); setError(''); }
     catch (error) { setError(error.message); }
@@ -100,7 +101,7 @@ export default function RacePage({ mode }) {
       {error && <div role="alert" className="bg-red-100 border border-red-500 p-3">{error} <button className="underline" onClick={() => window.location.reload()}>Ricarica salvataggio</button></div>}
       {!loaded || !userId ? <p>Caricamento gara e salvataggio…</p> : !race ? mode === 'street' && !entryId ? <>
         <StreetMeetups onLocationChange={setStreetLocation} onStarted={data => {setParams({raceId:data.race.id},{replace:true});setError('');}} />
-        {(customTracks.length > 0 || opponents.length > 0) && <details className="border border-gray-500 p-3"><summary className="cursor-pointer font-bold">Prove personalizzate · senza premi e scommesse</summary><div className="space-y-3 mt-3"><label className="block">Percorso<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event=>setTrackChoice(event.target.value)}><option value="">Percorso casuale per allenamento</option>{tracks.map(track=><option key={track.id} value={`db-${track.id}`}>{track.name}</option>)}{customTracks.map(track=><option key={track.id} value={`custom-${track.id}`}>{track.name}</option>)}</select></label><label className="block">Rivale<select className="block w-full p-2 bg-white border" value={opponentChoice} onChange={event=>setOpponentChoice(event.target.value)}><option value="similar">Auto simile per allenamento</option>{opponents.map(opponent=><option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name}</option>)}</select></label><button className={button} disabled={!car||pending>0||(!trackChoice.startsWith('custom-')&&!opponentChoice.startsWith('custom-'))} onClick={begin}>Avvia prova personalizzata</button></div></details>}
+        {(customTracks.length > 0 || opponents.length > 0) && <details className="border border-gray-500 p-3"><summary className="cursor-pointer font-bold">Prove personalizzate · senza premi e scommesse</summary><div className="space-y-3 mt-3"><label className="block">Percorso<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event=>setTrackChoice(event.target.value)}><option value="">Percorso casuale per allenamento</option>{tracks.map(track=><option key={track.id} value={`db-${track.id}`}>{track.catalog?.title||track.name}</option>)}{customTracks.map(track=><option key={track.id} value={`custom-${track.id}`}>{track.catalog?.title||track.name}</option>)}</select></label><label className="block">Rivale<select className="block w-full p-2 bg-white border" value={opponentChoice} onChange={event=>setOpponentChoice(event.target.value)}><option value="similar">Auto simile per allenamento</option>{opponents.map(opponent=><option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name}</option>)}</select></label><button className={button} disabled={!car||pending>0||(!trackChoice.startsWith('custom-')&&!opponentChoice.startsWith('custom-'))} onClick={begin}>Avvia prova personalizzata</button></div></details>}
       </> : <>
         <h1 className="font-bold text-2xl">{entryId ? 'Round del campionato' : timeTrial ? 'Prova a tempo' : mode === 'street' ? 'Prepara la sfida' : 'Gara singola'}</h1>
         {entryId && <p className="text-sm">Durante il round vedrai la classifica degli otto piloti, la tua posizione e i distacchi davanti e dietro, aggiornati al termine di ogni settore.</p>}
@@ -151,7 +152,7 @@ export default function RacePage({ mode }) {
           <DevelopmentSummary summary={race.developmentSummary} />
           {race.championship?.format === 'grid' && <><details className="championship-result-ledger"><summary>Ordine d’arrivo del round</summary><ChampionshipTable rows={race.championship.classification} round/></details><details className="championship-result-ledger"><summary>Classifica generale</summary><ChampionshipTable rows={race.championship.standings}/></details><p>{race.championship.completed ? `Campionato concluso: ${race.championship.championshipPosition}° posto.` : `Prossimo round: ${race.championship.nextRound}.`}</p></>}
           {race.championship && race.championship.format !== 'grid' && <p>Campionato: {race.championship.playerPoints}–{race.championship.opponentPoints}. {race.championship.completed ? race.championship.champion ? 'Sei il campione!' : 'Campionato concluso.' : `Prossimo round: ${race.championship.nextRound}.`}</p>}
-          <div className="flex flex-wrap gap-2"><button className={button} onClick={() => navigate(race.meetTrial ? '/meet?social=challenges' : race.lesson ? '/driving-school' : race.timeTrial ? '/time-trials' : race.mode === 'street' ? '/street-racing' : '/autodrome')}>{race.meetTrial ? 'Torna alle sfide del Meet' : race.lesson ? 'Torna alla scuola guida' : race.timeTrial ? 'I tuoi tempi' : race.mode === 'street' ? 'Torna al ritrovo' : 'Centro Corse'}</button>{!race.meetTrial&&<button className={button} onClick={newRace}>Nuova gara</button>}<button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
+          <div className="flex flex-wrap gap-2">{race.championship&&!race.championship.completed&&race.entryId&&<button className={button} disabled={pending>0} onClick={nextChampionshipRace}>Prossima gara del campionato →</button>}<button className={button} onClick={() => navigate(race.meetTrial ? '/meet?social=challenges' : race.lesson ? '/driving-school' : race.timeTrial ? '/time-trials' : race.mode === 'street' ? '/street-racing' : race.championship?'/racing':'/autodrome')}>{race.meetTrial ? 'Torna alle sfide del Meet' : race.lesson ? 'Torna alla scuola guida' : race.timeTrial ? 'I tuoi tempi' : race.mode === 'street' ? 'Torna al ritrovo' : race.championship?'Campionati e classifica':'Centro Corse'}</button>{!race.meetTrial&&!race.championship&&<button className={button} onClick={newRace}>Nuova gara</button>}<button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
         </div>}
       </RaceDashboard>}
 

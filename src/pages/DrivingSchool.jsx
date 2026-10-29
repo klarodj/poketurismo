@@ -1,3 +1,5 @@
+import SectionTabs from '../components/SectionTabs';
+import TrainingSchoolPanel from '../components/TrainingSchoolPanel';
 import React from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Win98Window from '../components/Win98Window';
@@ -13,6 +15,7 @@ export default function DrivingSchool() {
   const [search,setSearch]=useSearchParams();
   const tab=search.get('sezione')==='allenamenti'?'allenamenti':'tecniche';
   const userId = usePlayerStore(state => state.id);
+  const money=usePlayerStore(s=>s.money);
   const development = useDevelopmentStore(state => state.development);
   const pending = useRequestStore(state => state.pending);
   const activeRace = useRaceStore(state => state.activeRace);
@@ -23,12 +26,11 @@ export default function DrivingSchool() {
     } catch { /* The shared request banner reports errors. */ }
   };
 
-  return <Win98Window guideId="school" title="Scuola guida — Il piazzale dell’istruttore" imageUrl="/images/world/places/scuola-guida.png">
+  return <Win98Window guideId="school" title="Scuola guida — Il piazzale dell’istruttore" imageUrl={tab==='allenamenti'?'/images/world/sections/school-training.png':'/images/world/places/scuola-guida.png'}>
     <div className="flex flex-col bg-win98-gray text-black">
+      <SectionTabs label="Sezioni della scuola guida" value={tab} onChange={id=>setSearch(id==='tecniche'?{}:{sezione:id},{replace:true})} items={[{id:'tecniche',label:'Tecniche',icon:'book'},{id:'allenamenti',label:'Allenamenti',icon:'practice'}]}/>
       <div className="p-4">
-        <nav className="flex gap-2 mb-3" aria-label="Sezioni della scuola guida">{[['tecniche','Tecniche'],['allenamenti','Allenamenti']].map(([id,label])=><button key={id} className="win98-btn" aria-pressed={tab===id} onClick={()=>setSearch(id==='tecniche'?{}:{sezione:id},{replace:true})}>{tab===id?'▣ ':''}{label}</button>)}</nav>
-        {tab==='allenamenti'?<div aria-label="Allenamenti">
-        <section className="mb-4 border-2 border-gray-500 bg-win98-gray p-3"><h2 className="bg-win98-blue text-white font-bold px-2">Allenamenti mirati</h2><p>Auto della scuola, quattro esercizi: con almeno 3 corretti superi il corso. Ogni 100 punti pratica ottieni +1 all’abilità, fino a 100. Nessun consumo della tua auto e nessun premio in denaro o XP. Ripetere lo stesso corso riduce il rendimento; i corsi superiori richiedono una promozione e il livello indicato.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-3">{(development?.targetedTraining||[]).map(c=><article key={c.id} className="border-2 border-t-white border-l-white border-b-gray-600 border-r-gray-600 p-2"><h3 className="font-bold">{c.name} · {['Base','Intermedio','Avanzato'][c.tier-1]}</h3><p>Livello {c.minLevel} · €{c.price.toLocaleString('it-IT')}</p><p>{c.remaining?`${c.remaining} sessioni utili rimaste`:'Corso assimilato'}{!c.unlocked?' · Requisiti non soddisfatti':''}</p><button className="win98-btn" disabled={pending>0||!!activeRace||!c.unlocked||!c.remaining} onClick={()=>beginLesson({lessonId:c.id})}>Inizia · €{c.price.toLocaleString('it-IT')}</button></article>)}</div></section></div>:<div aria-label="Tecniche">
+        {tab==='allenamenti'?<TrainingSchoolPanel development={development} pending={pending} activeRace={activeRace} money={money} onStart={course=>beginLesson({lessonId:course.id})}/>:<div aria-label="Tecniche">
         <TechniqueSchoolPanel development={development} pending={pending} activeRace={activeRace} onRead={techniqueId => readTechniqueLesson(userId, techniqueId)} onStart={beginLesson} />
         <p className="mt-3 text-sm text-gray-700">Le tecniche apprese si equipaggiano nella scheda Pilota.</p>
         </div>}

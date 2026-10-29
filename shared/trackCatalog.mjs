@@ -1,3 +1,4 @@
+import {REAL_TRACKS} from './realTracks.mjs';
 // Provincial clubs and roads in northern Italy circa 2002: fictional gameplay layouts.
 import { periodTrackName } from './periodWorld.mjs';
 import { STREET_TRACKS } from './streetCatalog.mjs';
@@ -23,10 +24,11 @@ const rows = [
   ['Riviera di Levante · statale costiera', 'Levante ligure, Liguria', 'Highway', 16000, 180, 'sunny', 2, 'Aurelia di provincia: curve sul mare e bar al distributore.', [2,5,6,1,3,5,9,4,1,6,5,2]],
   ['Discesa dei Castagni · Valsesia', 'Valsesia, Piemonte', 'Touge', 7500, 700, 'rainy', 5, 'Discesa bagnata, tornanti e gestione della frenata.', [1,9,12,9,13,1,9,12,13,9,11,1]],
 ];
-export const TRACK_CATALOG = rows.map(([name, location, type, distanceM, elevation, weather, difficulty, description, sections]) => ({name,location,type,distanceM,elevation,weather,difficulty,description,sections,format:type === 'Track' ? 'circuit' : 'point-to-point'}));
+export const TRACK_CATALOG = [...rows.map(([name, location, type, distanceM, elevation, weather, difficulty, description, sections]) => ({name,location,type,distanceM,elevation,weather,difficulty,description,sections,format:type === 'Track' ? 'circuit' : 'point-to-point'})),...REAL_TRACKS];
 export function trackCatalogInfo(name) {
+  if(name==='Monza')return {title:'Monza · Autodromo Nazionale',location:'Monza, Lombardia',difficulty:4,description:'Prima Variante, Roggia, Lesmo, Ascari e Parabolica nel parco. Sessione club storica del gioco: la distanza non rappresenta un giro omologato.',format:'circuit',interpretation:true,real:true};
   const entry = [...TRACK_CATALOG, ...STREET_TRACKS].find(track => track.name === periodTrackName(name));
   if (!entry) return null;
-  const {location,difficulty,description,format}=entry;
-  return {location,difficulty,description,format,interpretation:!STREET_TRACKS.includes(entry)};
+  const {location,difficulty,description,format,real,referencePeriod,eraException}=entry;
+  return {location,difficulty,description,format,...(real?{real,referencePeriod,eraException}:{}),interpretation:!STREET_TRACKS.includes(entry)};
 }

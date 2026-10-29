@@ -8,7 +8,7 @@ import {WORLD_TRACKS} from '../shared/periodWorld.mjs';
 import {DEMO_TRACK} from '../shared/trackGeometry.mjs';
 test('every northern route has its own roadbook and environment, including original tracks and school',()=>{
  const names=[...TRACK_CATALOG,...STREET_TRACKS,{name:'Monza'},{name:'Strada delle officine · Bassa'},{name:'Salita della cava · Prealpi'},DEMO_TRACK].map(t=>t.name);
- assert.equal(TRACK_VISUALS.length,27);assert.equal(new Set(names).size,27);assert.equal(new Set(TRACK_VISUALS.map(t=>t.image)).size,27);
+ assert.equal(TRACK_VISUALS.length,30);assert.equal(new Set(names).size,30);assert.equal(new Set(TRACK_VISUALS.map(t=>t.image)).size,30);
  for(const name of names){const visual=trackVisual(name);assert.ok(visual,name);assert.ok(visual.caption.length>20);assert.ok(/^\/images\/world\/tracks\/[a-z-]+\.png$/.test(visual.image));}
  for(const[oldName,newName]of WORLD_TRACKS)assert.equal(trackVisual(oldName),trackVisual(newName));assert.equal(trackVisual('Percorso privato non in catalogo'),null);
  for(const track of [...TRACK_CATALOG,...STREET_TRACKS])assert.equal(trackVisual(track.name).format,track.format);

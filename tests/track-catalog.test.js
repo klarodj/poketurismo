@@ -9,7 +9,7 @@ import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
 const {applyTracks}=require('../server/trackStock');
 const names=['Short Straight','Long Straight','Slow Right Turn','Slow Left Turn','Fast Right Turn','Fast Left Turn','Hump','Depression','Descent','Climb','Chicane','Hairpin Right','Hairpin Left','Right Inversion','Left Inversion','Obstacle'];
-test('all twenty routes finish in the tactical engine with finite times and fuel',()=>{
+test('all club and real routes finish in the tactical engine with finite times and fuel',()=>{
   for(const track of TRACK_CATALOG){
     let state=makeRace({weather:track.weather,seed:1234});
     state.routeProfile=routeProfileFor(track.format==='circuit'?'track':'street');
@@ -21,11 +21,11 @@ test('all twenty routes finish in the tactical engine with finite times and fuel
     assert.ok(Number.isFinite(state.car.currentFuel)&&state.car.currentFuel>=0,track.name);
   }
 });
-test('twenty distinct routes cover both formats, five conditions and varied playable geometry',()=>{
-  assert.equal(TRACK_CATALOG.length,20);assert.equal(new Set(TRACK_CATALOG.map(t=>t.name)).size,20);
-  assert.equal(TRACK_CATALOG.filter(t=>t.format==='circuit').length,10);
+test('twenty-three distinct routes cover both formats, five conditions and varied playable geometry',()=>{
+  assert.equal(TRACK_CATALOG.length,23);assert.equal(new Set(TRACK_CATALOG.map(t=>t.name)).size,23);
+  assert.equal(TRACK_CATALOG.filter(t=>t.format==='circuit').length,13);
   assert.equal(new Set(TRACK_CATALOG.map(t=>t.weather)).size,5);
-  assert.equal(new Set(TRACK_CATALOG.map(t=>t.sections.join(','))).size,20);
+  assert.equal(new Set(TRACK_CATALOG.map(t=>t.sections.join(','))).size,23);
   for(const track of TRACK_CATALOG){
     const profile=routeProfileFor(track.format==='circuit'?'track':'street');
     const sectors=buildTacticalTrack(track.sections.map(id=>({name:names[id-1]})),track.distanceM/1000,profile);
@@ -39,11 +39,14 @@ test('twenty distinct routes cover both formats, five conditions and varied play
 });
 test('catalog seed preserves existing tracks and does not duplicate tracks or sectors on rerun',async()=>{
   const rows=[{id:1,name:'Legacy',builds:{create:[{ord:1,sectionId:1,level:1}]}}];
-  const tx={trackType:{findMany:async()=>['Track','Touge','City','Highway'].map((name,id)=>({id:id+1,name}))},trackSurface:{findMany:async()=>[{id:1,name:'tarmac'}]},trackMeteo:{findMany:async()=>['sunny','rainy','snowy','night','foggy'].map((name,id)=>({id:id+1,name}))},trackSection:{findMany:async()=>names.map((name,id)=>({id:id+1,name}))},track:{findFirst:async({where})=>rows.find(row=>where.name?.in?where.name.in.includes(row.name):row.name===where.name),create:async({data})=>{const row={id:rows.length+1,...data};rows.push(row);return row;}}};
+  const named=[];
+  const tx={trackType:{findMany:async()=>['Track','Touge','City','Highway'].map((name,id)=>({id:id+1,name}))},trackSurface:{findMany:async()=>[{id:1,name:'tarmac'}]},trackMeteo:{findMany:async()=>['sunny','rainy','snowy','night','foggy'].map((name,id)=>({id:id+1,name}))},trackSection:{findMany:async()=>names.map((name,id)=>({id:id+1,name})),findFirst:async({where})=>named.find(s=>s.name===where.name),create:async({data})=>{const row={id:names.length+named.length+1,...data};named.push(row);return row;}},track:{findFirst:async({where})=>rows.find(row=>where.name?.in?where.name.in.includes(row.name):row.name===where.name),create:async({data})=>{const row={id:rows.length+1,...data};rows.push(row);return row;}}};
   const db={$transaction:async callback=>callback(tx)};
-  assert.equal((await applyTracks(db)).created.length,20);
+  assert.equal((await applyTracks(db)).created.length,23);
   const before=JSON.stringify(rows);
   assert.equal((await applyTracks(db)).created.length,0);assert.equal(JSON.stringify(rows),before);
   assert.equal(rows[0].name,'Legacy');
   for(const row of rows.slice(1))assert.deepEqual(row.builds.create.map(s=>s.ord),row.builds.create.map((_,i)=>i+1));
 });
+
+test('real track names do not alias the pre-existing club layouts and Monza receives only metadata',()=>{const {name}=TRACK_CATALOG.find(t=>t.name.startsWith('Mugello ·'));assert.notEqual(name,'Mugello · Toscana');assert.equal(trackCatalogInfo('Monza').difficulty,4);assert(trackCatalogInfo('Monza').description.includes('Sessione club'));assert.equal(TRACK_CATALOG.find(t=>t.name.startsWith('Imola ·')).distanceM,4933);});

@@ -1,3 +1,5 @@
+Aggiornamento: vedere [Sezioni e circuiti](REVISIONE_SEZIONI_E_PISTE.md), che estende il catalogo senza modificare lezioni o gare congelate.
+
 # Allenamenti mirati e barre del pilota · 29 ottobre 2026
 
 Scuola guida: tre specialità (frenata, traiettorie/curva, acceleratore), ciascuna con corso base/intermedio/avanzato. Quattro esercizi per sessione, promozione con almeno tre consegne corrette. Il livello successivo richiede promozione al precedente e livello pilota 1/3/6. Costi fissi server 300/750/1.500 euro, addebitati all’avvio, senza rimborso in caso di abbandono. Auto in prestito: nessuna modifica alla propria auto, ai consumi o all’esposizione al raduno. Nessun premio XP o denaro; la lezione non assegna tecniche gratuitamente.

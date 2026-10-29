@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Sezioni e piste aggiornate: docs/REVISIONE_SEZIONI_E_PISTE.md. Allenamenti ora24 su tutte8 abilità, nuovi cinque con domande ragionate server; vecchie lezioni congelate invariate. SectionTabs condiviso e4 reparti meccanico. Campionati senza vecchio allenamento, media IP/IG rivali congelati e partenza round successivo. Seed3 nuovi circuiti solo additivo, nessun cambio ai vecchi ID/settori/record. Monza conserva16km club; Franciacorta2006 eccezione dichiarata, Mugello toscano richiesto. Nove immagini con prompt/input tools/section-art.
+
 - Carburante: docs/PERCORRENZA_CARBURANTE.md aggiorna i consumi alla versione3: litri×4 per nuove gare reali mediante percorrenza convenzionale, stime km/l invariate. Versioni1/2 e campionati già iscritti congelati; scuola e sfide virtuali rimangono alle proprie condizioni precedenti senza consumi reali. Tempi separati fra tutte e tre le versioni; non cancellare record o moltiplicare consumptionEstimate. Consumo stimato ora in fondo al dettaglio auto.
 
 - Garage leggibile e banco illustrativo: docs/GARAGE_LEGGIBILITA_E_BANCO.md. Pilota usa setting.png come Strumenti; Auto/dettagli conservano garage.png. Niente didascalia duplicata prima dei punti abilità. Telemetria e descrizioni ricambi18px, nomi20px senza troncamenti, pulsanti grandi. DynoChart è solo uno schema dai picchi CV/Nm, non RPM omologati o fisica di gara; non usarlo per ricalibrare il motore. Andrea aggiornato.

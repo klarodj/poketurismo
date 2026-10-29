@@ -18,7 +18,7 @@ export default function TechniqueSchoolPanel({ development, pending, activeRace,
     (status === 'all' || (status === 'learned' ? item.learned : item.unlocked && !item.learned)) &&
     `${item.name} ${item.pathName} ${item.description}`.toLocaleLowerCase('it-IT').includes(search.toLocaleLowerCase('it-IT')));
   return <section className="technique-school" aria-label="Scuola guida e tecniche">
-    <header className="school-heading"><h1>Scuola guida</h1><strong>{learned} / {curriculum.length} tecniche apprese</strong></header>
+    <header className="school-heading"><h1>Tecniche di guida</h1><strong>{learned} / {curriculum.length} tecniche apprese</strong></header>
     <p>Leggi una lezione, supera la prova e porta la tecnica in gara.</p>
     <details className="period-details"><summary>Come si impara una tecnica</summary><p className="school-help">Le azioni base sono sempre disponibili. Le prove sono gratuite e si svolgono con un’auto in prestito. Puoi equipaggiare fino a 4 tecniche e usarne una per settore.</p></details>
     {activeRace && <p className="school-warning" role="status">Hai una sessione in corso: riprendila dalla barra in alto prima di iniziare un’altra prova.</p>}

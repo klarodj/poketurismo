@@ -1,0 +1,78 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Nearest-neighbour only; native inputs preserved",
+  "assets": [
+    {
+      "id": "school-training",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/school-training.png",
+      "sourceSha256": "a202f5062cd55151e40c42215ec01f04dc72f0a1eb750de8ab4661f01fd1f665",
+      "sha256": "084984eb6c0360289dfab3d64f702a2fd5f17ff64a265d3cef4fc6fa15009cde"
+    },
+    {
+      "id": "workshop-body",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/workshop-body.png",
+      "sourceSha256": "d8387fa8f807b549c208c7ab58707de10ea79ef927a7695815d0a32f7a02938f",
+      "sha256": "2e5763bae2a51ddbe5b3110cb209daffd6bc442dbda38e3d233ef79fe269ed92"
+    },
+    {
+      "id": "workshop-race",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/workshop-race.png",
+      "sourceSha256": "7fe9d73192dca59ddc0bae65ed4652eb8f767876b4339e25677ee3ac24d9f48d",
+      "sha256": "27157ffccd5cf271e98ba975571fa1a8becdc17ee2702c6dc36151fbfd92c2a4"
+    },
+    {
+      "id": "workshop-recovery",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/workshop-recovery.png",
+      "sourceSha256": "f70c2d331ad8aa60c7d79009b40375fac6f6ce56c5e4c4b790e4463aebcbf439",
+      "sha256": "2ab141275c6acbcfcb3891e64327dbfdd6731a212700aa91845009dc301fcf57"
+    },
+    {
+      "id": "autodrome-cups",
+      "width": 128,
+      "height": 128,
+      "output": "public/images/world/sections/autodrome-cups.png",
+      "sourceSha256": "ea9aaf503c9c4d9e3efc8da0e655a054e3f8fedd700fc6c60069644cc27cab84",
+      "sha256": "ac70938411af47ad4b0c024d23b8a6795fce63e3ccfdad6ee6d643acbb33b0a5"
+    },
+    {
+      "id": "autodrome-race",
+      "width": 128,
+      "height": 128,
+      "output": "public/images/world/sections/autodrome-race.png",
+      "sourceSha256": "cffccf1ae265da777a76392ebdbe48f34badbbcc79c1c343b7bfb53ec5213d74",
+      "sha256": "ae3906b226e357a73985bdaf4a310fe28daf528bdb42f09102fc90beed0df768"
+    },
+    {
+      "id": "franciacorta",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/tracks/franciacorta.png",
+      "sourceSha256": "159ac475348468c4056ad9b37a11c8c1060f2db1a9a7ce561dd35d58f6c7280b",
+      "sha256": "8ff469a8ac5dd6e0231fd70b06aa5217fa4deee82ecbfd834b1777206a5ba19a"
+    },
+    {
+      "id": "imola-real",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/tracks/imola-real.png",
+      "sourceSha256": "f71ed696b03b0480c405a03b55997ab2d41903229c06456f093bb3abe796bf6c",
+      "sha256": "0755eb54f0a594987556fe82e47cb113c10956d6b76f7b5e9a886aafc4f74b93"
+    },
+    {
+      "id": "mugello-real",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/tracks/mugello-real.png",
+      "sourceSha256": "8dea0383c72fa32454a71fa6666b90e9a01e581fdc29a61dbcc7562ce8987230",
+      "sha256": "49388e957de3270c8dd152cdb64e0baf4c8aa53b0ff25b7f81457f414455e902"
+    }
+  ]
+}
