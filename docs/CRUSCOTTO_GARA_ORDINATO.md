@@ -13,3 +13,5 @@ Sono cambiati soltanto componenti e CSS: nessuna modifica a motore, bersaglio di
 ## Verifica
 
 Lint e build passati. Browser a320/390/1280px: ordine dei blocchi, foto affiancate, dettagli delle due auto e del settore, attacco e difesa visibili, invio manovra e reset al settore successivo, nessun rivale, risultato con Prossima gara, avvisi critici e nome lungo. Nessuno scorrimento orizzontale o errore JavaScript. Collaudo con rilevamenti sintetici catturati nel precedente test isolato, API intercettate; nessuna partita pubblica modificata. Rapporti e schermate in `.preview/race-layout-qa`.
+
+Pubblicato sull'istanza5174/gateway5184 dopo backup completo Auth/gioco e della build precedente in `/home/klaro/.backups/poketurismo/race-layout-20261029T192929Z`. Nessuna migrazione o scrittura al database. Servizi riavviati e health locale verificato.
