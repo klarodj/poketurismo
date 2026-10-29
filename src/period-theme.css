@@ -63,3 +63,5 @@
 .time-trials-page{grid-template-columns:minmax(0,1fr)}.time-trials-page>*{min-width:0}.time-trials-page select{max-width:100%;min-width:0}
 
 .period-activity img{image-rendering:pixelated}
+
+.hud-profile .hud-profile-identity{display:flex;align-items:center;gap:5px;min-width:0}.hud-profile-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.hud-profile .hud-profile-level{flex-shrink:0;color:#404040;font-size:inherit}.hud-profile>.performance-badge{overflow:visible;font-size:.8rem;flex-shrink:0}@media(max-width:620px){.hud-profile{max-width:160px}.hud-profile .hud-profile-identity{gap:3px}.hud-profile>.performance-badge{font-size:.75rem}}
