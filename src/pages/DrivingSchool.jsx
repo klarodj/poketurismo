@@ -26,7 +26,7 @@ export default function DrivingSchool() {
     } catch { /* The shared request banner reports errors. */ }
   };
 
-  return <Win98Window guideId="school" title="Scuola guida — Il piazzale dell’istruttore" imageUrl={tab==='allenamenti'?'/images/world/sections/school-training.png':'/images/world/places/scuola-guida.png'}>
+  return <Win98Window guideId="school" title="Scuola guida — Autoscuola del club" imageUrl={tab==='allenamenti'?'/images/world/sections/school-training.png':'/images/world/sections/school-classroom.png'}>
     <div className="flex flex-col bg-win98-gray text-black">
       <SectionTabs label="Sezioni della scuola guida" value={tab} onChange={id=>setSearch(id==='tecniche'?{}:{sezione:id},{replace:true})} items={[{id:'tecniche',label:'Tecniche',icon:'book'},{id:'allenamenti',label:'Allenamenti',icon:'practice'}]}/>
       <div className="p-4">

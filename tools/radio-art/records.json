@@ -1,0 +1,22 @@
+[
+  {
+    "id": "school-classroom",
+    "prompt": "Use case: historical-scene. Pixel art game banner, wide 16:9. Interior of an ordinary Italian autoscuola classroom in a provincial town of northern Italy in 1998-2002: wooden student desks, green chalkboard showing a simple road intersection, wall charts of Italian circular and triangular traffic signs, driving-school steering wheel teaching prop, old beige CRT computer on instructor desk. Sunlit windows, modest furnishings, no people necessary. Authentic hand-pixelled 1990s adventure game art, crisp hard pixels, low resolution 320x180 appearance, limited warm colours. Entire frame is classroom scene. No lettering, no watermark, no modern technology.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1ae845dd-4aba-48d1-8ef8-af827c085cd4.png",
+    "input": "tools/radio-art/inputs/school-classroom.png",
+    "output": "public/images/world/sections/school-classroom.png",
+    "width": 320,
+    "height": 180,
+    "tool": "image_gen built-in"
+  },
+  {
+    "id": "car-radio",
+    "prompt": "Use case: ui-mockup. Raster pixel art interface asset for an Italian automotive game set 2002. One single detachable DIN car CD stereo front panel, seen straight on without perspective or tilt, isolated tightly in a wide horizontal 3:1 composition, panel fills entire frame edge to edge. Black charcoal plastic, silver edging, amber backlighting, 1999-2002 aftermarket car radio styling, no brand. Large round ridged volume knob at left, a broad absolutely blank dark amber LCD rectangle in upper middle/right (will overlay live title and volume), narrow CD slot above, neat row of six blank rectangular mechanical buttons below LCD for interactive overlays. No labels, no letters, no numerals, no screen writing, no hands, no car dashboard, no watermark. Crisp lowres pixel art sprite with visible deliberate pixels, classic 1990s driving game aesthetic. Avoid photorealism. Output opaque background.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f637ecb7-1ca2-4e41-8f84-44affa7e4977.png",
+    "input": "tools/radio-art/inputs/car-radio.png",
+    "output": "public/images/world/sections/car-radio.png",
+    "width": 600,
+    "height": 200,
+    "tool": "image_gen built-in"
+  }
+]

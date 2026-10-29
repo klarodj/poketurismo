@@ -1,3 +1,4 @@
+import CarRadio from './CarRadio';
 import PhoneBridge from './PhoneBridge';
 import PhoneNotification from './PhoneNotification';
 import React, { useEffect } from 'react';
@@ -30,6 +31,7 @@ export default function Layout() {
     <div className={`period-desktop ${inChampionship ? 'championship-desktop' : ''} min-h-screen flex flex-col items-center justify-start p-4 bg-win98-bg`}>
       <PhoneBridge />
       <NokiaModal />
+      <CarRadio />
       <PhoneNotification />
       <Win98ErrorDialog />
 

@@ -1,0 +1,22 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Nearest-neighbour only; native inputs preserved",
+  "assets": [
+    {
+      "id": "school-classroom",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/school-classroom.png",
+      "sourceSha256": "d35195d8146aaa3265f40f773063fdcaafbdab96070073e53bf7245e7c4814bc",
+      "sha256": "f52ff29c377cd9ec4b8f5a478d0c5ac32b93530aaa8b699da23baa2c066334fc"
+    },
+    {
+      "id": "car-radio",
+      "width": 600,
+      "height": 200,
+      "output": "public/images/world/sections/car-radio.png",
+      "sourceSha256": "6a680ba8e826a5be7a71c656fd13eaef45672391d8fc12dace621ad3c1329056",
+      "sha256": "d7a94b77e24cdf41357d515a84827a32b4a0269c792b396bc7b2b4e3f8051656"
+    }
+  ]
+}
