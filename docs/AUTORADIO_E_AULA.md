@@ -24,3 +24,5 @@ Pubblicato sulla singola istanza5174 con gateway5184, dopo backup completo Auth/
 
 
 Verifica revisione2: cinque test lettore, lint e build passati. Riproduzione MP3 reale e comandi trasparenti verificati con browser a320/390/1280px; nessuna scrittura API. Tutti e tre i file decodificati integralmente, durata e stereo confermati, campioni finiti e picco sotto0dBFS anche dopo compressione. Misure tecniche, non una valutazione d'ascolto. Rapporti in `.preview/chiptune-radio-qa`.
+
+Revisione2 pubblicata sulla stessa istanza5174/gateway5184 dopo backup Auth/gioco e build precedente in `/home/klaro/.backups/poketurismo/chiptune-radio-20261029T165012Z`. Nessuna modifica al database del gioco.
