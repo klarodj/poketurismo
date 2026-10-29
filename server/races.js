@@ -226,7 +226,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     reward.xp += growth.xp;
     await withholdReward(tx,userId,state,reward);
     const user = await tx.user.findUnique({ where: { id: userId } });
-    await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(reward.money) }, exp: { increment: reward.xp }, level: Math.floor((user.exp + reward.xp) / 1000) + 1 } });
+    await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(reward.money) }, ...require('./pilotProgression').experienceReward(user,reward.xp) } });
     state.reward = reward;
   }
   if(state.gridOpponentId&&state.logs.length>previousLogCount){const timing=await require('./gridTiming').read(tx,userId,state);if(timing)state.logs.at(-1).gridTiming=require('../shared/gridTiming.mjs').gridCheckpoint(timing);}

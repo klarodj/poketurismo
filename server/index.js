@@ -193,10 +193,10 @@ mutate('/api/training-sessions/:id/complete', 'training', async (tx, userId, bod
   const factor = session.category === 'stat' ? await legacyTrainingUse(tx, userId, session) : 1;
   const xpReward = Math.floor(session.xpReward * factor);
   const statGain = session.category === 'stat' && session.statGain > 0 ? Math.max(1, Math.floor(session.statGain * factor)) : 0;
-  const data = { exp: { increment: xpReward }, level: Math.floor((user.exp + xpReward) / 1000) + 1 };
+  const data = require('./pilotProgression').experienceReward(user,xpReward);
   if (session.category === 'stat') {
     if (!PILOT_STATS.includes(session.targetStat)) fail(400, 'Abilità non valida');
-    data[session.targetStat] = { increment: statGain };
+    data[session.targetStat] = Math.min(100,data[session.targetStat]+statGain);
   } else fail(400, 'Tipo allenamento non valido');
   await charge(tx, userId, session.cost);
   await tx.user.update({ where: { id: userId }, data });

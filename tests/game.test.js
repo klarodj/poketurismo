@@ -131,7 +131,7 @@ test('maintenance uses server cost and oil change cannot repair a broken engine'
 });
 test('stat training updates once while techniques require a driving-school trial', async () => {
   const key = randomUUID(); await post(`/training-sessions/${training.id}/complete`, {}, key); await post(`/training-sessions/${training.id}/complete`, {}, key);
-  const user = await prisma.user.findUnique({ where: { id: 1 } }); assert.equal(user.brake, 32); assert.equal(user.level, 2); assert.equal(user.moneyCents, 9950000);
+  const user = await prisma.user.findUnique({ where: { id: 1 } }); assert.equal(user.brake, 35); assert.equal(user.turn,33); assert.equal(user.level, 2); assert.equal(user.moneyCents, 9950000);
   assert.equal((await post(`/training-sessions/${moveTraining.id}/complete`, {})).status,410);
   const inv = (await get('/inventory/1')).data;
   assert.deepEqual(inv.moves,[]);assert.deepEqual(inv.equippedMoves,[]);
@@ -438,7 +438,7 @@ test('legacy stat courses have limited repetitions with diminishing gains, inclu
   const money = await wallet();
   assert.equal((await post(`/training-sessions/${training.id}/complete`, {})).status, 409);
   assert.equal(await wallet(), money);
-  assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).brake, 34);
+  assert.equal((await prisma.user.findUnique({ where: { id: 1 } })).brake, 37);
 });
 test('custom sandbox races and straight-only sessions never manufacture braking practice', async () => {
   const rival = await prisma.customOpponent.create({ data: { name: 'Sandbox', carId: car.id, level: 1, ...pilot } });
@@ -1250,4 +1250,13 @@ test('failed race conversion has no debit or partial transformation, including a
  assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,400);assert.equal(await wallet(),42);
  await prisma.user.update({where:{id:1},data:{moneyCents:10000000}});const race=await post('/races',{mode:'track',trackId:track.id});assert.equal(race.status,200);
  assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,409);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).racePrepared,false);
+});
+
+test('level rewards cover multiple levels, cap abilities and never duplicate the same XP threshold',()=>{
+ const {experienceReward}=require('../server/pilotProgression');
+ const u={...pilot,level:1,exp:950};
+ const first=experienceReward(u,2100);assert.equal(first.level,4);
+ for(const key of PILOT_STATS)assert.equal(first[key],u[key]+9);
+ const again=experienceReward({...u,...first,exp:3050},20);assert.equal(again.turn,first.turn);
+ assert.equal(experienceReward({...u,turn:99},100).turn,100);
 });

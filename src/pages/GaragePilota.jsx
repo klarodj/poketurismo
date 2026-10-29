@@ -50,7 +50,7 @@ export default function GaragePilota() {
             </div>
 
               <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
-                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2>
+                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2><p>A ogni nuovo livello: +3 a tutte le abilità, fino a 100. Allenamenti e tecniche affinano la guida.</p>
                 <div className="bg-win98-gray p-2 border border-gray-400 font-bold text-base space-y-1.5 uppercase font-pixel">
                    <div className="flex justify-between border-b border-gray-300 pb-0.5">
                      <span>{PILOT_STAT_LABELS.brave}</span> <span>{stats.brave}</span>
