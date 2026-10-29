@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Garage leggibile e banco illustrativo: docs/GARAGE_LEGGIBILITA_E_BANCO.md. Pilota usa setting.png come Strumenti; Auto/dettagli conservano garage.png. Niente didascalia duplicata prima dei punti abilità. Telemetria e descrizioni ricambi18px, nomi20px senza troncamenti, pulsanti grandi. DynoChart è solo uno schema dai picchi CV/Nm, non RPM omologati o fisica di gara; non usarlo per ricalibrare il motore. Andrea aggiornato.
+
 - Indici di presentazione: docs/INDICI_AUTO_E_PILOTA.md. IP invariato e più visibile; IG0–100 derivato dalle otto abilità con rendimento decrescente in shared/driverIndex.mjs. Non sommare IP+IG né assegnare bonus fisici. Confronto clandestino con quattro valori e stima di percorso esistente, nuove soglie solo visive; non cambiare easy/premi/offerte. Rivali dei campionati attivi derivati dal contratto congelato, non dal catalogo corrente.
 
 - Progressione attuale: docs/PUNTI_ABILITA.md supera il vecchio +3 automatico. Sei punti per livello guadagnato, cap cumulativo per abilità2×(livello−1), massimo100. Spesa esplicita nel profilo tramite operazione server serializzabile. Persistenza trainingCourses.levelAllocationV1.spent, allenamenti separati. Recupero vecchi bonus già applicato una volta con scripts/migrate-pilot-points.cjs e ricevuta tecnica globale -1; repair-pilot-levels.cjs ritirato. Non riapplicare vecchi bonus.

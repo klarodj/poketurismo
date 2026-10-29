@@ -33,7 +33,7 @@ export default function GaragePilota() {
   };
 
   return (
-    <Win98Window guideId="garage" title="Profilo Pilota" imageUrl="/images/world/garage.png">
+    <Win98Window guideId="garage" title="Profilo Pilota" imageUrl="/images/world/setting.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
         <GarageTabs />
@@ -56,7 +56,7 @@ export default function GaragePilota() {
             </div>
 
               <div className="bg-white border-2 border-t-win98-darkerGray border-l-win98-darkerGray border-b-white border-r-white p-4 shadow-win98-inset">
-                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2><p>Ogni nuovo livello sblocca 6 punti da distribuire. Le abilità arrivano fino a 100; allenamenti e tecniche affinano la guida.</p>
+                <h2 className="text-xl font-bold bg-win98-darkerGray text-white px-2 mb-2">Abilità Pilota</h2>
                 <PilotPointAllocation key={`${userId}:${points?.earned}:${points?.available}`} userId={userId} stats={stats} points={points} disabled={pending>0||!!activeRace}/>
                 <PilotStats stats={stats}/>
               </div>
