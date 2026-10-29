@@ -1204,3 +1204,50 @@ test('street rival keeps the advertised paint when the encounter becomes a race'
  const setup=await streetSetup(0),hub=(await get('/street/1')).data,offer=hub.zones.find(z=>z.id===setup.zoneId).offer;
  const started=await post('/races',setup);assert.equal(started.status,200);assert.equal(started.data.race.opponent.car.paintColour,offer.rival.car.paintColour);
 });
+
+async function raceReady(){
+ car=await prisma.car.update({where:{id:car.id},data:{image:'seicento.png'}});
+ const {RACE_PART_FAMILIES}=await import('../shared/raceEquipment.mjs');
+ for(const name of RACE_PART_FAMILIES){
+  const p=await prisma.part.create({data:{name,description:'Gara',category:'Engine',level:3,price:1000,image:'',speedBonus:0,accelBonus:0,revvBonus:0,transBonus:0,turnSlowBonus:0,turnFastBonus:0,brakeBonus:0,tractBonus:0,cvBonus:0,nmBonus:0,kgBonus:0}});
+  await prisma.mod.create({data:{garageId:garage.id,partId:p.id,...Object.fromEntries(['speedValue','accelValue','revvValue','transValue','turnSlowValue','turnFastValue','brakeValue','tractValue','cvValue','nmValue','kgValue'].map(k=>[k,0]))}});
+ }
+ return (await get('/workshop/1')).data.cars.find(c=>c.id===garage.id).racePreparation;
+}
+const convertBody=q=>({quoteKey:q.key,confirmPermanent:true,confirmTrackOnly:true});
+test('race preparation requires installed level3 in every family, explicit acknowledgements, ownership and current quote',async()=>{
+ await prisma.car.update({where:{id:car.id},data:{image:'seicento.png'}});
+ let q=(await get('/workshop/1')).data.cars[0].racePreparation;assert.equal(q.requirements.length,16);assert.equal(q.enabled,false);const before=await wallet();
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,400);
+ q=await raceReady();assert.equal(q.enabled,true);assert(q.price>=35000);
+ assert.equal((await post(`/garage/${otherGarage.id}/race-preparation`,convertBody(q))).status,403);
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,{quoteKey:q.key})).status,400);
+ await prisma.garage.update({where:{id:garage.id},data:{tireGrip:83}});
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,409);
+ assert.equal(await wallet(),before);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).racePrepared,false);
+});
+test('race conversion is atomic, cannot stack, preserves engine/wear/parts, survives sale and blocks downgrades and street paths',async()=>{
+ const q=await raceReady(),before=await prisma.garage.findUnique({where:{id:garage.id},include:{mods:true}}),balance=await wallet(),key=randomUUID();
+ const first=await post(`/garage/${garage.id}/race-preparation`,convertBody(q),key);assert.equal(first.status,200,JSON.stringify(first.data));
+ const converted=first.data.garage.find(c=>c.id===garage.id);assert.equal(converted.racePrepared,true);assert.equal(converted.cv,before.cv);assert.equal(converted.nm,before.nm);assert(converted.kg<before.kg);assert.equal(await wallet(),balance-q.price*100);assert.equal(converted.mods.length,16);
+ for(const k of ['engineHealth','tireGrip','currentFuel','km','serviceKm'])assert.equal(converted[k],before[k]);
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q),key)).status,200);assert.equal(await wallet(),balance-q.price*100);
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,409);
+ assert.equal((await request(`/garage/${garage.id}/mods/${converted.mods[0].id}`,{userId:1},'DELETE')).status,400);
+ assert.equal((await post(`/garage/${garage.id}/mount`,{partId:part.id})).status,400);
+ assert.equal((await post(`/garage/${garage.id}/paint`,{paintColour:'blu',quoteKey:'x'})).status,400);
+ assert.equal((await post('/races',{mode:'street'})).status,400);
+ const type=await prisma.trackType.create({data:{name:'Touge',image:''}});await prisma.track.update({where:{id:track.id},data:{typeId:type.id}});
+ assert.equal((await post('/races',{mode:'track',trackId:track.id})).status,400);assert.equal((await post(`/championships/${championship.id}/enter`,{})).status,400);
+ await prisma.track.update({where:{id:track.id},data:{typeId:(await prisma.trackType.findFirst({where:{name:'Circuit'}})).id}});
+ const race=await post('/races',{mode:'track',trackId:track.id});assert.equal(race.status,200,JSON.stringify(race.data));assert.equal(race.data.race.car.racePrepared,true);
+ await post(`/races/${race.data.race.id}/abandon`,{version:race.data.race.version});
+ const sale=await post('/market/sell',{garageId:garage.id});assert.equal(sale.status,200);const listing=(await get('/market')).data.find(c=>c.id===garage.id);assert.equal(listing.racePrepared,true);
+ const buy=await post('/purchase',{marketGarageId:garage.id});assert.equal(buy.status,200);assert.equal(buy.data.garage.find(c=>c.id===garage.id).racePrepared,true);
+});
+test('failed race conversion has no debit or partial transformation, including active race and insufficient funds',async()=>{
+ const q=await raceReady();await prisma.user.update({where:{id:1},data:{moneyCents:42}});
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,400);assert.equal(await wallet(),42);
+ await prisma.user.update({where:{id:1},data:{moneyCents:10000000}});const race=await post('/races',{mode:'track',trackId:track.id});assert.equal(race.status,200);
+ assert.equal((await post(`/garage/${garage.id}/race-preparation`,convertBody(q))).status,409);assert.equal((await prisma.garage.findUnique({where:{id:garage.id}})).racePrepared,false);
+});

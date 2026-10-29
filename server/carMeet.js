@@ -10,7 +10,7 @@ const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex
 const pilot=user=>({id:user.id,name:user.username,level:user.level,avatar:user.avatar||null});
 function publicShowcase(user,item){
  const garage={...item,...restoredHandlingStats(item)};
- return {pilot:pilot(user),car:{id:garage.id,modelId:garage.carId,name:garage.car.name,brand:garage.car.brand?.name||'',image:garage.car.image,paintColour:paintFor(garage),year:garage.car.year,cv:garage.cv,nm:garage.nm,kg:garage.kg,driveType:garage.car.driveType,engineType:garage.car.engineType,km:garage.km,engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,performanceIndex:performanceIndex(garage),tier:marketTier(garage.car,garage).name,
+ return {pilot:pilot(user),car:{id:garage.id,modelId:garage.carId,name:garage.car.name,brand:garage.car.brand?.name||'',image:garage.car.image,...(garage.racePrepared?{racePrepared:true}:{}),paintColour:paintFor(garage),year:garage.car.year,cv:garage.cv,nm:garage.nm,kg:garage.kg,driveType:garage.car.driveType,engineType:garage.car.engineType,km:garage.km,engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,performanceIndex:performanceIndex(garage),tier:marketTier(garage.car,garage).name,
  parts:garage.mods.map(mod=>({id:mod.part.id,name:mod.part.name,description:mod.part.description,category:mod.part.category,level:mod.part.level}))}};
 }
 async function visibleParticipants(tx){
@@ -36,7 +36,7 @@ async function displayCar(tx,userId,body){
 function layoutKey(sections,environment){return hash([environment?.weather?.toLowerCase(),environment?.surface?.toLowerCase(),sections.map(section=>[section.layoutVersion||1,section.riskExposure??1,(section.segments||[]).map(segment=>[segment.lengthM,segment.radiusM,segment.widthM,segment.grade||0])])]);}
 function trialConfiguration(garage){
  const stats=Object.fromEntries(['cv','nm','kg','speed','acceleration','revving','transmission','turnSlow','turnFast','brake','traction'].map(key=>[key,garage[key]]));
- return {modelId:garage.carId,setupKey:hash(stats),engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,currentFuel:garage.currentFuel,fuelType:garage.fuelType,parts:garage.mods.map(mod=>({name:mod.part.name,level:mod.part.level}))};
+ return {...(garage.racePrepared?{racePrepared:true}:{}),modelId:garage.carId,setupKey:hash(garage.racePrepared?{...stats,racePrepared:true}:stats),engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,currentFuel:garage.currentFuel,fuelType:garage.fuelType,parts:garage.mods.map(mod=>({name:mod.part.name,level:mod.part.level}))};
 }
 function projectTime(row,user,cars,currentLayout,modelId,fuelModelVersion=2){
  let state;try{state=JSON.parse(row.state);}catch{return null;}
@@ -47,7 +47,7 @@ function projectTime(row,user,cars,currentLayout,modelId,fuelModelVersion=2){
  if(!model||model.id!==modelId)return null;
  const saved=state.trialSetup?.configuration;
  const configuration=saved?{setupKey:saved.setupKey,engineHealth:saved.engineHealth,tireGrip:saved.tireGrip,currentFuel:saved.currentFuel,fuelType:saved.fuelType,parts:(saved.parts||[]).map(part=>({name:part.name,level:part.level}))}:null;
- return {pilot:pilot(user),timeMs:Math.round(state.playerTime*1000),date:new Date(row.createdAt).toISOString(),car:{modelId:model.id,name:snapshot.name,brand:snapshot.brand,image:snapshot.image,paintColour:paintFor(snapshot),cv:snapshot.cv,kg:snapshot.kg,performanceIndex:state.trialSetup?.performanceIndex??null},configuration};
+ return {pilot:pilot(user),timeMs:Math.round(state.playerTime*1000),date:new Date(row.createdAt).toISOString(),car:{modelId:model.id,name:snapshot.name,brand:snapshot.brand,image:snapshot.image,...(snapshot.racePrepared?{racePrepared:true}:{}),paintColour:paintFor(snapshot),cv:snapshot.cv,kg:snapshot.kg,performanceIndex:state.trialSetup?.performanceIndex??null},configuration};
 }
 async function leaderboard(tx,query){
  if(Object.keys(query).some(key=>!['trackId','modelId','setupKey','fuelVersion'].includes(key)))fail(400,'Filtri classifica non validi');

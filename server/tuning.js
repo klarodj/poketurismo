@@ -9,7 +9,7 @@ function validateQuote(garage,part,key){if(key!==quoteKey(garage,part))fail(409,
 function preview(garage,part,ctx){
  const change=replacePart(garage,part),before=tuningMetrics(change.before),after=tuningMetrics(change.after);
  return {before,after,installed:change.installed?{id:change.installed.id,name:change.installed.name,level:change.installed.level,description:change.installed.description}:null,
- alreadyMounted:change.alreadyMounted,quoteKey:quoteKey(garage,part),advice:tuningAdvice(change.before,change.after),
+ locked:Boolean(change.locked),alreadyMounted:change.alreadyMounted,quoteKey:quoteKey(garage,part),advice:tuningAdvice(change.before,change.after),
  championships:ctx.championships.map(cup=>({id:cup.id,name:cup.name,active:ctx.entry?.championshipId===cup.id,
  beforeErrors:championshipCarErrors(change.before,cup),afterErrors:championshipCarErrors(change.after,cup),
  pilotErrors:[ctx.user.level<cup.minLevel?`Livello pilota ${cup.minLevel}`:null,...['brave','clean','reflex','shift'].map(stat=>ctx.user[stat]<cup[`min${stat[0].toUpperCase()}${stat.slice(1)}`]?'Abilità pilota insufficienti':null)].filter(Boolean)})),

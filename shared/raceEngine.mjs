@@ -1,3 +1,4 @@
+import {raceEquipment} from './raceEquipment.mjs';
 import { advanceRace as advanceLegacyRace } from './legacyRaceEngine.mjs';
 import { advanceTacticalRace } from './tacticalRace.mjs';
 // Pure, deterministic rules. Only the server creates seeds and advances a race.
@@ -45,7 +46,8 @@ function performance(car, environment = {}) {
     const engineFactor = ['speed', 'acceleration', 'revving', 'transmission'].includes(key) ? health * premium : 1;
     const tireFactor = ['acceleration', 'turnSlow', 'turnFast', 'brake', 'traction'].includes(key) ? grip * weatherGrip * surfaceGrip : 1;
     const massFactor = ['acceleration', 'revving', 'turnSlow', 'turnFast', 'brake'].includes(key) ? weightFactor : 1;
-    stats[key] = round(Math.max(0, car[key] || 0) * engineFactor * tireFactor * massFactor * kmFactor);
+    const equipment=raceEquipment(car,environment),raceFactor=key==='brake'?equipment.grip*equipment.braking:['turnSlow','turnFast','traction'].includes(key)?equipment.grip:1;
+    stats[key] = round(Math.max(0, car[key] || 0) * engineFactor * tireFactor * massFactor * kmFactor*raceFactor);
   }
   return { ...stats, dynamicKG };
 }

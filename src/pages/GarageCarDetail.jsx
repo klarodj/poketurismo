@@ -66,7 +66,7 @@ export default function GarageCarDetail() {
     <Win98Window guideId="garage" title={`Scheda Tecnica - ${car.brand} ${car.name}`} imageUrl="/images/world/garage.png">
       <div className="flex flex-col bg-win98-gray text-black">
         
-        <GarageTabs />
+        <GarageTabs />{car.racePrepared&&<p className="period-notice">Auto da gara · solo pista. Preparazione definitiva; i componenti montati non sono smontabili o sostituibili.</p>}
         {review&&<section className="tuning-garage-review" aria-label="Conferma preparazione"><button className="win98-btn" autoFocus onClick={()=>setReview(null)}>Chiudi confronto</button><TuningPreview part={review} carName={`${car.brand} ${car.name}`} money={money} disabled={pending>0||Boolean(activeRace)} onMount={confirmMount}/></section>}
 
         {/* Sub-header Navigation */}
@@ -179,10 +179,11 @@ export default function GarageCarDetail() {
                                     {(Number.isFinite(mod.bonuses?.kg) && mod.bonuses.kg !== 0) && <span className="text-[9px] font-bold bg-green-200 text-green-800 px-1 border border-green-600">{-mod.bonuses.kg} kg</span>}
                                  </div>
                                  <button 
+                                   disabled={car.racePrepared||pending>0||Boolean(activeRace)}
                                    onClick={() => handleAction('unmount', mod.id, mod.name)}
                                    className="px-2 py-1 bg-red-100 text-red-800 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-xs font-bold hover:bg-red-800 hover:text-white transition-colors h-fit shrink-0 ml-2"
                                  >
-                                   SMONTA
+                                   {car.racePrepared?'VINCOLATO':'SMONTA'}
                                  </button>
                               </div>
                            </div>
@@ -220,7 +221,7 @@ export default function GarageCarDetail() {
                                     {part.kgBonus > 0 && <span className="text-[9px] font-bold bg-blue-100 text-blue-800 px-1 border border-blue-600">-{part.kgBonus} KG</span>}
                                  </div>
                                  <button 
-                                   disabled={reviewLoading||pending>0||Boolean(activeRace)}
+                                   disabled={car.racePrepared||reviewLoading||pending>0||Boolean(activeRace)}
                                    onClick={() => handleAction('mount', part.id, part.name)}
                                    className="px-3 py-1 bg-green-100 text-green-800 border-2 border-t-white border-l-white border-b-win98-darkerGray border-r-win98-darkerGray text-xs font-bold hover:bg-green-800 hover:text-white transition-colors"
                                  >

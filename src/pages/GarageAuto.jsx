@@ -87,7 +87,7 @@ export default function GarageAuto() {
           {selectedCar ? (
             <div className="flex flex-col h-full">
                <h2 className="text-xl font-bold bg-win98-blue text-white px-2 py-1 mb-2 flex justify-between">
-                 <span>{selectedCar.brand} {selectedCar.name}</span>
+                 <span>{selectedCar.brand} {selectedCar.name}{selectedCar.racePrepared?' · DA GARA · SOLO PISTA':''}</span>
                  <span className="text-yellow-300">IP: {perfIndex}</span>
                </h2>
                
@@ -95,14 +95,14 @@ export default function GarageAuto() {
                <div className="flex flex-col xl:flex-row gap-4 mb-4">
                   <div className="w-full xl:w-1/2 h-40 bg-white border-2 border-gray-500 shadow-win98-inset flex items-center justify-center p-2">
                      {selectedCar.image ? (
-                        <img src={carArtwork(selectedCar)} alt={`${selectedCar.name} · ${paintName(paintFor(selectedCar))}`} className="max-w-full max-h-full object-contain pixel-car-image" onError={(e) => e.target.style.display='none'}/>
+                        <img src={carArtwork(selectedCar)} alt={`${selectedCar.name} · ${selectedCar.racePrepared?'Livrea da gara':paintName(paintFor(selectedCar))}`} className="max-w-full max-h-full object-contain pixel-car-image" onError={(e) => e.target.style.display='none'}/>
                      ) : (
                         <span className="text-gray-400 italic font-bold">Nessun file immagine</span>
                      )}
                   </div>
                   
                   <div className="w-full xl:w-1/2 flex flex-col justify-center">
-                     <div className="bg-win98-gray border border-gray-400 p-2 text-sm space-y-1"><div className="flex justify-between"><span>Colore:</span><strong>{paintName(paintFor(selectedCar))}</strong></div>
+                     <div className="bg-win98-gray border border-gray-400 p-2 text-sm space-y-1"><div className="flex justify-between"><span>Colore:</span><strong>{selectedCar.racePrepared?'Livrea da gara':paintName(paintFor(selectedCar))}</strong></div>
                         <div className="flex justify-between font-bold border-b border-gray-300">
                            <span>Motore:</span> <span className="text-blue-800">{selectedCar.cv} CV / {selectedCar.nm} Nm</span>
                         </div>

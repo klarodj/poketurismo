@@ -15,6 +15,7 @@ const { championshipInfo } = require('../shared/championshipCatalog.mjs');
 const carMeet = require('./carMeet');
 const workshop = require('./workshop');
 const carPaint=require('./carPaint');
+const racePreparation=require('./racePreparation');
 const tuning=require('./tuning');
 const meetSocial=require('./meetSocial');
 const app = express();
@@ -128,6 +129,7 @@ mutate('/api/parts/purchase', 'purchase-part', async (tx, userId, body) => {
 });
 mutate('/api/garage/:garageId/mount', 'mount-part', async (tx, userId, body, params) => {
   const garage = await ownGarage(tx, userId, params.garageId);
+  racePreparation.requireRoadTuning(garage);
   const part = await tx.part.findUnique({ where: { id: positiveId(body.partId) } });
   if (!part) fail(404, 'Ricambio inesistente');
   if(body.quoteKey!==undefined)tuning.validateQuote(garage,part,body.quoteKey);
@@ -146,6 +148,7 @@ mutate('/api/garage/:garageId/mount', 'mount-part', async (tx, userId, body, par
 });
 mutate('/api/garage/:garageId/mods/:modId', 'unmount-part', async (tx, userId, body, params) => {
   const garage = await ownGarage(tx, userId, params.garageId);
+  racePreparation.requireRoadTuning(garage);
   const mod = garage.mods.find(mod => mod.id === positiveId(params.modId));
   if (!mod) fail(404, 'Ricambio non montato su questa auto');
   await tx.garage.update({ where: { id: garage.id }, data: restoredHandlingStats(garage) });
@@ -157,6 +160,7 @@ mutate('/api/garage/:garageId/mods/:modId', 'unmount-part', async (tx, userId, b
 app.get('/api/workshop/:userId', endpoint(req => transaction(prisma,tx => workshop.workshop(tx,accounts.playerId(req,req.params.userId)))));
 mutate('/api/garage/:garageId/service','service',workshop.service);
 mutate('/api/garage/:garageId/paint','paint-car',carPaint.repaint);
+mutate('/api/garage/:garageId/race-preparation','race-preparation',racePreparation.convert);
 mutate('/api/workshop/recover','workshop-recover',workshop.recover);
 mutate('/api/workshop/repay','workshop-repay',workshop.repay);
 mutate('/api/garage/:garageId/refuel', 'refuel', async (tx, userId, body, params) => {
@@ -217,6 +221,7 @@ mutate('/api/championships/:championshipId/enter', 'enter-championship', async (
   const user = await tx.user.findUnique({ where: { id: userId } });
   const garage = await ownGarage(tx, userId, user.carDrive);
   checkChampionship(user, { ...garage, ...restoredHandlingStats(garage) }, championship);
+  if(garage.racePrepared){for(const round of championship.rounds){const track=await tx.track.findUnique({where:{id:round.trackId},include:{type:true}});const reason=require('../shared/raceEquipment.mjs').raceTrackError(garage,{...track,catalog:trackCatalogInfo(track?.name)},'championship');if(reason)fail(400,reason);}}
   await charge(tx, userId, championship.entryFee);
   const contract = await createContract(tx, user, championship);
   const entry = await tx.championshipEntry.create({ data: { userId, championshipId: championship.id, contract }, include: championshipInclude });

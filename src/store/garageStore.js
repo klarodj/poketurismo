@@ -37,6 +37,7 @@ const useGarageStore = create((set, get) => ({
         fuelType: item.fuelType,
         image: item.car.image,
         paintColour:item.paintColour,
+        racePrepared:item.racePrepared,
         mods: item.mods.map(m => ({
           id: m.id,
           partId: m.partId,

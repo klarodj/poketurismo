@@ -109,6 +109,7 @@ model User {
 }
 
 model Garage {
+  racePrepared Boolean @default(false)
   paintColour  String?
   id           Int    @id @default(autoincrement())
   userId       Int

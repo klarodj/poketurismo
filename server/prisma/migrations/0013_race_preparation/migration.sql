@@ -1,0 +1,1 @@
+ALTER TABLE "Garage" ADD COLUMN "racePrepared" BOOLEAN NOT NULL DEFAULT false;

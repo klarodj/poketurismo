@@ -42,7 +42,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 155,
         "nm": 187,
@@ -55,11 +55,11 @@
       "after": {
         "cv": 155,
         "nm": 187,
-        "kg": 1128,
-        "performanceIndex": 56,
-        "grip": 0.966,
-        "brakingMs2": 8.576,
-        "topSpeedKmh": 209.509
+        "kg": 1091,
+        "performanceIndex": 57,
+        "grip": 1.063,
+        "brakingMs2": 9.781,
+        "topSpeedKmh": 207.934
       }
     },
     {
@@ -112,7 +112,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 190,
         "nm": 297,
@@ -125,11 +125,11 @@
       "after": {
         "cv": 190,
         "nm": 297,
-        "kg": 1272,
+        "kg": 1243,
         "performanceIndex": 59,
-        "grip": 0.954,
-        "brakingMs2": 8.374,
-        "topSpeedKmh": 223.233
+        "grip": 1.046,
+        "brakingMs2": 9.49,
+        "topSpeedKmh": 221.926
       }
     },
     {
@@ -166,7 +166,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 132,
         "nm": 155,
@@ -179,11 +179,11 @@
       "after": {
         "cv": 132,
         "nm": 155,
-        "kg": 910,
-        "performanceIndex": 59,
-        "grip": 1.001,
-        "brakingMs2": 8.721,
-        "topSpeedKmh": 203.478
+        "kg": 880,
+        "performanceIndex": 60,
+        "grip": 1.102,
+        "brakingMs2": 9.946,
+        "topSpeedKmh": 201.918
       }
     },
     {
@@ -220,7 +220,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 192,
         "nm": 245,
@@ -233,11 +233,11 @@
       "after": {
         "cv": 192,
         "nm": 245,
-        "kg": 1047,
-        "performanceIndex": 66,
-        "grip": 0.983,
-        "brakingMs2": 8.764,
-        "topSpeedKmh": 220.053
+        "kg": 1023,
+        "performanceIndex": 67,
+        "grip": 1.078,
+        "brakingMs2": 9.938,
+        "topSpeedKmh": 218.699
       }
     },
     {
@@ -269,7 +269,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 220,
         "nm": 270,
@@ -282,11 +282,11 @@
       "after": {
         "cv": 220,
         "nm": 270,
-        "kg": 1273,
-        "performanceIndex": 63,
-        "grip": 0.945,
-        "brakingMs2": 8.32,
-        "topSpeedKmh": 239.542
+        "kg": 1245,
+        "performanceIndex": 64,
+        "grip": 1.039,
+        "brakingMs2": 9.476,
+        "topSpeedKmh": 236.422
       }
     },
     {
@@ -312,7 +312,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 227500,
+      "price": 260000,
       "before": {
         "cv": 558,
         "nm": 745,
@@ -325,11 +325,11 @@
       "after": {
         "cv": 558,
         "nm": 745,
-        "kg": 1880,
-        "performanceIndex": 88,
-        "grip": 0.916,
-        "brakingMs2": 7.932,
-        "topSpeedKmh": 295.828
+        "kg": 1791,
+        "performanceIndex": 91,
+        "grip": 1.008,
+        "brakingMs2": 9.071,
+        "topSpeedKmh": 294.993
       }
     },
     {
@@ -360,7 +360,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 315,
         "nm": 410,
@@ -373,11 +373,11 @@
       "after": {
         "cv": 315,
         "nm": 410,
-        "kg": 1415,
-        "performanceIndex": 74,
-        "grip": 0.966,
-        "brakingMs2": 8.502,
-        "topSpeedKmh": 259.639
+        "kg": 1375,
+        "performanceIndex": 75,
+        "grip": 1.059,
+        "brakingMs2": 9.645,
+        "topSpeedKmh": 258.067
       }
     },
     {
@@ -403,7 +403,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 230,
         "nm": 350,
@@ -416,11 +416,11 @@
       "after": {
         "cv": 230,
         "nm": 350,
-        "kg": 1331,
-        "performanceIndex": 63,
-        "grip": 0.945,
-        "brakingMs2": 8.262,
-        "topSpeedKmh": 246.212
+        "kg": 1287,
+        "performanceIndex": 65,
+        "grip": 1.04,
+        "brakingMs2": 9.418,
+        "topSpeedKmh": 244.332
       }
     },
     {
@@ -446,7 +446,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 65500,
+      "price": 82000,
       "before": {
         "cv": 380,
         "nm": 440,
@@ -459,11 +459,11 @@
       "after": {
         "cv": 380,
         "nm": 440,
-        "kg": 1440,
-        "performanceIndex": 81,
-        "grip": 0.96,
-        "brakingMs2": 8.526,
-        "topSpeedKmh": 247.585
+        "kg": 1400,
+        "performanceIndex": 83,
+        "grip": 1.053,
+        "brakingMs2": 9.673,
+        "topSpeedKmh": 246.018
       }
     },
     {
@@ -489,7 +489,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 225,
         "nm": 280,
@@ -502,11 +502,11 @@
       "after": {
         "cv": 225,
         "nm": 280,
-        "kg": 1278,
-        "performanceIndex": 65,
-        "grip": 0.962,
-        "brakingMs2": 8.493,
-        "topSpeedKmh": 242.529
+        "kg": 1250,
+        "performanceIndex": 66,
+        "grip": 1.058,
+        "brakingMs2": 9.677,
+        "topSpeedKmh": 239.366
       }
     },
     {
@@ -532,7 +532,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 340,
         "nm": 420,
@@ -545,11 +545,11 @@
       "after": {
         "cv": 340,
         "nm": 420,
-        "kg": 1580,
-        "performanceIndex": 71,
-        "grip": 0.947,
-        "brakingMs2": 8.25,
-        "topSpeedKmh": 247.66
+        "kg": 1540,
+        "performanceIndex": 72,
+        "grip": 1.038,
+        "brakingMs2": 9.351,
+        "topSpeedKmh": 246.136
       }
     },
     {
@@ -581,7 +581,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 48000,
+      "price": 63000,
       "before": {
         "cv": 225,
         "nm": 280,
@@ -594,11 +594,11 @@
       "after": {
         "cv": 225,
         "nm": 280,
-        "kg": 1289,
+        "kg": 1260,
         "performanceIndex": 65,
-        "grip": 0.956,
-        "brakingMs2": 8.439,
-        "topSpeedKmh": 241.015
+        "grip": 1.048,
+        "brakingMs2": 9.565,
+        "topSpeedKmh": 239.573
       }
     },
     {
@@ -630,7 +630,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 25000,
+      "price": 35000,
       "before": {
         "cv": 70,
         "nm": 87,
@@ -643,11 +643,11 @@
       "after": {
         "cv": 70,
         "nm": 87,
-        "kg": 637,
+        "kg": 616,
         "performanceIndex": 53,
-        "grip": 1.024,
-        "brakingMs2": 9.174,
-        "topSpeedKmh": 153.814
+        "grip": 1.127,
+        "brakingMs2": 10.467,
+        "topSpeedKmh": 152.635
       }
     },
     {
@@ -679,7 +679,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 86,
         "nm": 125,
@@ -692,11 +692,11 @@
       "after": {
         "cv": 86,
         "nm": 125,
-        "kg": 719,
-        "performanceIndex": 54,
-        "grip": 1.005,
-        "brakingMs2": 8.935,
-        "topSpeedKmh": 178.668
+        "kg": 695,
+        "performanceIndex": 55,
+        "grip": 1.106,
+        "brakingMs2": 10.192,
+        "topSpeedKmh": 177.322
       }
     },
     {
@@ -722,7 +722,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 80500,
+      "price": 99000,
       "before": {
         "cv": 380,
         "nm": 550,
@@ -735,11 +735,11 @@
       "after": {
         "cv": 380,
         "nm": 550,
-        "kg": 1755,
-        "performanceIndex": 71,
-        "grip": 0.929,
-        "brakingMs2": 8.113,
-        "topSpeedKmh": 246.587
+        "kg": 1678,
+        "performanceIndex": 73,
+        "grip": 1.023,
+        "brakingMs2": 9.278,
+        "topSpeedKmh": 245.925
       }
     },
     {
@@ -771,7 +771,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 104000,
+      "price": 125000,
       "before": {
         "cv": 277,
         "nm": 330,
@@ -784,11 +784,11 @@
       "after": {
         "cv": 277,
         "nm": 330,
-        "kg": 1209,
-        "performanceIndex": 75,
-        "grip": 0.955,
-        "brakingMs2": 8.524,
-        "topSpeedKmh": 258.476
+        "kg": 1170,
+        "performanceIndex": 77,
+        "grip": 1.051,
+        "brakingMs2": 9.743,
+        "topSpeedKmh": 257.705
       }
     },
     {
@@ -833,7 +833,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 48000,
+      "price": 63000,
       "before": {
         "cv": 220,
         "nm": 245,
@@ -846,11 +846,11 @@
       "after": {
         "cv": 220,
         "nm": 245,
-        "kg": 1056,
-        "performanceIndex": 73,
-        "grip": 1.006,
-        "brakingMs2": 9.051,
-        "topSpeedKmh": 240.838
+        "kg": 1032,
+        "performanceIndex": 74,
+        "grip": 1.104,
+        "brakingMs2": 10.273,
+        "topSpeedKmh": 239.344
       }
     },
     {
@@ -876,7 +876,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 321,
         "nm": 350,
@@ -889,11 +889,11 @@
       "after": {
         "cv": 321,
         "nm": 350,
-        "kg": 1428,
-        "performanceIndex": 74,
-        "grip": 0.97,
-        "brakingMs2": 8.565,
-        "topSpeedKmh": 246.636
+        "kg": 1381,
+        "performanceIndex": 75,
+        "grip": 1.068,
+        "brakingMs2": 9.793,
+        "topSpeedKmh": 245.894
       }
     },
     {
@@ -925,7 +925,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 86500,
+      "price": 106000,
       "before": {
         "cv": 343,
         "nm": 365,
@@ -938,11 +938,11 @@
       "after": {
         "cv": 343,
         "nm": 365,
-        "kg": 1367,
-        "performanceIndex": 79,
-        "grip": 0.979,
-        "brakingMs2": 8.712,
-        "topSpeedKmh": 246.593
+        "kg": 1323,
+        "performanceIndex": 81,
+        "grip": 1.078,
+        "brakingMs2": 9.964,
+        "topSpeedKmh": 245.814
       }
     },
     {
@@ -968,7 +968,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 68000,
+      "price": 85000,
       "before": {
         "cv": 340,
         "nm": 400,
@@ -981,11 +981,11 @@
       "after": {
         "cv": 340,
         "nm": 400,
-        "kg": 1538,
-        "performanceIndex": 72,
-        "grip": 0.953,
-        "brakingMs2": 8.42,
-        "topSpeedKmh": 247.659
+        "kg": 1498,
+        "performanceIndex": 74,
+        "grip": 1.045,
+        "brakingMs2": 9.549,
+        "topSpeedKmh": 246.131
       }
     },
     {
@@ -1011,7 +1011,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 90000,
+      "price": 109000,
       "before": {
         "cv": 400,
         "nm": 500,
@@ -1024,11 +1024,11 @@
       "after": {
         "cv": 400,
         "nm": 500,
-        "kg": 1515,
-        "performanceIndex": 81,
-        "grip": 0.971,
-        "brakingMs2": 8.611,
-        "topSpeedKmh": 247.555
+        "kg": 1475,
+        "performanceIndex": 82,
+        "grip": 1.066,
+        "brakingMs2": 9.771,
+        "topSpeedKmh": 245.981
       }
     },
     {
@@ -1054,7 +1054,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 286,
         "nm": 334,
@@ -1067,11 +1067,11 @@
       "after": {
         "cv": 286,
         "nm": 334,
-        "kg": 1320,
-        "performanceIndex": 72,
-        "grip": 0.96,
-        "brakingMs2": 8.474,
-        "topSpeedKmh": 252.758
+        "kg": 1290,
+        "performanceIndex": 73,
+        "grip": 1.052,
+        "brakingMs2": 9.606,
+        "topSpeedKmh": 251.192
       }
     },
     {
@@ -1108,7 +1108,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 325,
         "nm": 350,
@@ -1121,11 +1121,11 @@
       "after": {
         "cv": 325,
         "nm": 350,
-        "kg": 1293,
-        "performanceIndex": 79,
-        "grip": 0.976,
-        "brakingMs2": 8.694,
-        "topSpeedKmh": 246.588
+        "kg": 1251,
+        "performanceIndex": 81,
+        "grip": 1.074,
+        "brakingMs2": 9.942,
+        "topSpeedKmh": 245.809
       }
     },
     {
@@ -1151,7 +1151,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 237000,
+      "price": 270000,
       "before": {
         "cv": 385,
         "nm": 750,
@@ -1164,11 +1164,11 @@
       "after": {
         "cv": 385,
         "nm": 750,
-        "kg": 2340,
-        "performanceIndex": 60,
-        "grip": 0.881,
-        "brakingMs2": 7.508,
-        "topSpeedKmh": 245.6
+        "kg": 2250,
+        "performanceIndex": 61,
+        "grip": 0.969,
+        "brakingMs2": 8.573,
+        "topSpeedKmh": 245.026
       }
     },
     {
@@ -1200,7 +1200,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 277000,
+      "price": 314000,
       "before": {
         "cv": 560,
         "nm": 611,
@@ -1213,11 +1213,11 @@
       "after": {
         "cv": 560,
         "nm": 611,
-        "kg": 1686,
-        "performanceIndex": 96,
-        "grip": 0.912,
-        "brakingMs2": 7.979,
-        "topSpeedKmh": 331.37
+        "kg": 1616,
+        "performanceIndex": 99,
+        "grip": 1.003,
+        "brakingMs2": 9.119,
+        "topSpeedKmh": 330.395
       }
     },
     {
@@ -1249,7 +1249,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 85500,
+      "price": 102000,
       "before": {
         "cv": 250,
         "nm": 252,
@@ -1262,11 +1262,11 @@
       "after": {
         "cv": 250,
         "nm": 252,
-        "kg": 486,
-        "performanceIndex": 134,
-        "grip": 1.096,
-        "brakingMs2": 10.667,
-        "topSpeedKmh": 234.009
+        "kg": 470,
+        "performanceIndex": 138,
+        "grip": 1.213,
+        "brakingMs2": 12.348,
+        "topSpeedKmh": 230.78
       }
     },
     {
@@ -1298,7 +1298,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 288,
         "nm": 437,
@@ -1311,11 +1311,11 @@
       "after": {
         "cv": 288,
         "nm": 437,
-        "kg": 1464,
-        "performanceIndex": 68,
-        "grip": 0.943,
-        "brakingMs2": 8.276,
-        "topSpeedKmh": 251.762
+        "kg": 1424,
+        "performanceIndex": 69,
+        "grip": 1.033,
+        "brakingMs2": 9.382,
+        "topSpeedKmh": 250.262
       }
     },
     {
@@ -1347,7 +1347,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 85500,
+      "price": 102000,
       "before": {
         "cv": 411,
         "nm": 522,
@@ -1360,11 +1360,11 @@
       "after": {
         "cv": 411,
         "nm": 522,
-        "kg": 1439,
-        "performanceIndex": 87,
-        "grip": 0.976,
-        "brakingMs2": 8.614,
-        "topSpeedKmh": 290.154
+        "kg": 1419,
+        "performanceIndex": 88,
+        "grip": 1.072,
+        "brakingMs2": 9.814,
+        "topSpeedKmh": 286.219
       }
     },
     {
@@ -1390,7 +1390,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 390,
         "nm": 522,
@@ -1403,11 +1403,11 @@
       "after": {
         "cv": 390,
         "nm": 522,
-        "kg": 1302,
-        "performanceIndex": 90,
-        "grip": 0.999,
-        "brakingMs2": 8.911,
-        "topSpeedKmh": 271.218
+        "kg": 1260,
+        "performanceIndex": 92,
+        "grip": 1.1,
+        "brakingMs2": 10.196,
+        "topSpeedKmh": 270.336
       }
     },
     {
@@ -1444,7 +1444,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 95,
         "nm": 120,
@@ -1457,11 +1457,11 @@
       "after": {
         "cv": 95,
         "nm": 120,
-        "kg": 723,
-        "performanceIndex": 57,
-        "grip": 1.022,
-        "brakingMs2": 9.072,
-        "topSpeedKmh": 184.599
+        "kg": 700,
+        "performanceIndex": 58,
+        "grip": 1.125,
+        "brakingMs2": 10.349,
+        "topSpeedKmh": 183.178
       }
     },
     {
@@ -1510,7 +1510,7 @@
       "artRevision": 6,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 120,
         "nm": 145,
@@ -1523,11 +1523,11 @@
       "after": {
         "cv": 120,
         "nm": 145,
-        "kg": 803,
-        "performanceIndex": 62,
-        "grip": 1.017,
-        "brakingMs2": 9.301,
-        "topSpeedKmh": 203.444
+        "kg": 776,
+        "performanceIndex": 63,
+        "grip": 1.12,
+        "brakingMs2": 10.62,
+        "topSpeedKmh": 201.878
       }
     },
     {
@@ -1559,7 +1559,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 105,
         "nm": 132,
@@ -1572,11 +1572,11 @@
       "after": {
         "cv": 105,
         "nm": 132,
-        "kg": 773,
+        "kg": 748,
         "performanceIndex": 59,
-        "grip": 1.026,
-        "brakingMs2": 9.078,
-        "topSpeedKmh": 186.581
+        "grip": 1.13,
+        "brakingMs2": 10.358,
+        "topSpeedKmh": 185.14
       }
     },
     {
@@ -1621,7 +1621,7 @@
       "artRevision": 5,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 167,
         "nm": 193,
@@ -1634,11 +1634,11 @@
       "after": {
         "cv": 167,
         "nm": 193,
-        "kg": 1083,
-        "performanceIndex": 60,
-        "grip": 0.975,
-        "brakingMs2": 8.69,
-        "topSpeedKmh": 218.39
+        "kg": 1047,
+        "performanceIndex": 61,
+        "grip": 1.072,
+        "brakingMs2": 9.914,
+        "topSpeedKmh": 216.721
       }
     },
     {
@@ -1681,7 +1681,7 @@
       "artRevision": 3,
       "width": 320,
       "height": 128,
-      "price": 34000,
+      "price": 48000,
       "before": {
         "cv": 167,
         "nm": 193,
@@ -1694,11 +1694,11 @@
       "after": {
         "cv": 167,
         "nm": 193,
-        "kg": 1011,
-        "performanceIndex": 63,
-        "grip": 0.984,
-        "brakingMs2": 8.823,
-        "topSpeedKmh": 217.148
+        "kg": 988,
+        "performanceIndex": 64,
+        "grip": 1.079,
+        "brakingMs2": 10.007,
+        "topSpeedKmh": 215.836
       }
     },
     {
@@ -1739,7 +1739,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 101,
         "nm": 130,
@@ -1752,11 +1752,11 @@
       "after": {
         "cv": 101,
         "nm": 130,
-        "kg": 735,
-        "performanceIndex": 59,
-        "grip": 1.018,
-        "brakingMs2": 9.356,
-        "topSpeedKmh": 183.583
+        "kg": 711,
+        "performanceIndex": 60,
+        "grip": 1.121,
+        "brakingMs2": 10.682,
+        "topSpeedKmh": 182.159
       }
     },
     {
@@ -1782,7 +1782,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 25000,
+      "price": 35000,
       "before": {
         "cv": 68,
         "nm": 106,
@@ -1795,11 +1795,11 @@
       "after": {
         "cv": 68,
         "nm": 106,
-        "kg": 610,
-        "performanceIndex": 53,
-        "grip": 1.03,
-        "brakingMs2": 9.232,
-        "topSpeedKmh": 163.749
+        "kg": 590,
+        "performanceIndex": 54,
+        "grip": 1.134,
+        "brakingMs2": 10.535,
+        "topSpeedKmh": 162.507
       }
     },
     {
@@ -1831,7 +1831,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 81000,
+      "price": 101000,
       "before": {
         "cv": 355,
         "nm": 491,
@@ -1844,11 +1844,11 @@
       "after": {
         "cv": 355,
         "nm": 491,
-        "kg": 1285,
-        "performanceIndex": 83,
-        "grip": 0.943,
-        "brakingMs2": 8.213,
-        "topSpeedKmh": 250.508
+        "kg": 1244,
+        "performanceIndex": 85,
+        "grip": 1.037,
+        "brakingMs2": 9.381,
+        "topSpeedKmh": 249.692
       }
     },
     {
@@ -1880,7 +1880,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 109500,
+      "price": 131000,
       "before": {
         "cv": 456,
         "nm": 664,
@@ -1893,11 +1893,11 @@
       "after": {
         "cv": 456,
         "nm": 664,
-        "kg": 1424,
-        "performanceIndex": 93,
-        "grip": 0.985,
-        "brakingMs2": 8.734,
-        "topSpeedKmh": 281.074
+        "kg": 1378,
+        "performanceIndex": 96,
+        "grip": 1.084,
+        "brakingMs2": 9.991,
+        "topSpeedKmh": 280.15
       }
     },
     {
@@ -1934,7 +1934,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 120000,
+      "price": 143000,
       "before": {
         "cv": 400,
         "nm": 496,
@@ -1947,11 +1947,11 @@
       "after": {
         "cv": 400,
         "nm": 496,
-        "kg": 1079,
-        "performanceIndex": 105,
-        "grip": 1.005,
-        "brakingMs2": 9.113,
-        "topSpeedKmh": 300.751
+        "kg": 1044,
+        "performanceIndex": 108,
+        "grip": 1.107,
+        "brakingMs2": 10.428,
+        "topSpeedKmh": 299.739
       }
     },
     {
@@ -1983,7 +1983,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 65500,
+      "price": 81000,
       "before": {
         "cv": 300,
         "nm": 323,
@@ -1996,11 +1996,11 @@
       "after": {
         "cv": 300,
         "nm": 323,
-        "kg": 1254,
-        "performanceIndex": 78,
-        "grip": 0.942,
-        "brakingMs2": 8.38,
-        "topSpeedKmh": 274.314
+        "kg": 1223,
+        "performanceIndex": 79,
+        "grip": 1.035,
+        "brakingMs2": 9.548,
+        "topSpeedKmh": 270.696
       }
     },
     {
@@ -2046,7 +2046,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 98500,
+      "price": 117000,
       "before": {
         "cv": 300,
         "nm": 372,
@@ -2059,11 +2059,11 @@
       "after": {
         "cv": 300,
         "nm": 372,
-        "kg": 1260,
-        "performanceIndex": 79,
-        "grip": 0.986,
-        "brakingMs2": 8.839,
-        "topSpeedKmh": 294.328
+        "kg": 1230,
+        "performanceIndex": 81,
+        "grip": 1.084,
+        "brakingMs2": 10.081,
+        "topSpeedKmh": 290.465
       }
     },
     {
@@ -2100,7 +2100,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 160500,
+      "price": 187000,
       "before": {
         "cv": 486,
         "nm": 568,
@@ -2113,11 +2113,11 @@
       "after": {
         "cv": 486,
         "nm": 568,
-        "kg": 1580,
-        "performanceIndex": 91,
-        "grip": 0.95,
-        "brakingMs2": 8.327,
-        "topSpeedKmh": 315.629
+        "kg": 1521,
+        "performanceIndex": 94,
+        "grip": 1.045,
+        "brakingMs2": 9.521,
+        "topSpeedKmh": 314.684
       }
     },
     {
@@ -2149,7 +2149,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 86500,
+      "price": 103000,
       "before": {
         "cv": 380,
         "nm": 363,
@@ -2162,11 +2162,11 @@
       "after": {
         "cv": 380,
         "nm": 363,
-        "kg": 1215,
-        "performanceIndex": 93,
-        "grip": 0.976,
-        "brakingMs2": 8.717,
-        "topSpeedKmh": 294.125
+        "kg": 1180,
+        "performanceIndex": 95,
+        "grip": 1.074,
+        "brakingMs2": 9.943,
+        "topSpeedKmh": 290.207
       }
     },
     {
@@ -2198,7 +2198,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 163000,
+      "price": 190000,
       "before": {
         "cv": 478,
         "nm": 577,
@@ -2211,11 +2211,11 @@
       "after": {
         "cv": 478,
         "nm": 577,
-        "kg": 1149,
-        "performanceIndex": 115,
-        "grip": 1.022,
-        "brakingMs2": 9.268,
-        "topSpeedKmh": 319.47
+        "kg": 1111,
+        "performanceIndex": 118,
+        "grip": 1.125,
+        "brakingMs2": 10.611,
+        "topSpeedKmh": 318.383
       }
     },
     {
@@ -2252,7 +2252,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 347500,
+      "price": 391000,
       "before": {
         "cv": 520,
         "nm": 471,
@@ -2265,11 +2265,11 @@
       "after": {
         "cv": 520,
         "nm": 471,
-        "kg": 1144,
-        "performanceIndex": 123,
-        "grip": 1.028,
-        "brakingMs2": 9.383,
-        "topSpeedKmh": 320.43
+        "kg": 1107,
+        "performanceIndex": 126,
+        "grip": 1.133,
+        "brakingMs2": 10.745,
+        "topSpeedKmh": 319.311
       }
     },
     {
@@ -2295,7 +2295,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 123500,
+      "price": 147000,
       "before": {
         "cv": 390,
         "nm": 480,
@@ -2308,11 +2308,11 @@
       "after": {
         "cv": 390,
         "nm": 480,
-        "kg": 1401,
-        "performanceIndex": 85,
-        "grip": 0.951,
-        "brakingMs2": 8.4,
-        "topSpeedKmh": 286.066
+        "kg": 1355,
+        "performanceIndex": 87,
+        "grip": 1.046,
+        "brakingMs2": 9.601,
+        "topSpeedKmh": 285.182
       }
     },
     {
@@ -2344,7 +2344,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 35000,
+      "price": 48000,
       "before": {
         "cv": 140,
         "nm": 172,
@@ -2357,11 +2357,11 @@
       "after": {
         "cv": 140,
         "nm": 172,
-        "kg": 892,
-        "performanceIndex": 62,
-        "grip": 1.003,
-        "brakingMs2": 8.976,
-        "topSpeedKmh": 188.512
+        "kg": 862,
+        "performanceIndex": 63,
+        "grip": 1.104,
+        "brakingMs2": 10.244,
+        "topSpeedKmh": 187.022
       }
     },
     {
@@ -2387,7 +2387,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 30000,
+      "price": 42000,
       "before": {
         "cv": 131,
         "nm": 164,
@@ -2400,11 +2400,11 @@
       "after": {
         "cv": 131,
         "nm": 164,
-        "kg": 1021,
-        "performanceIndex": 55,
-        "grip": 0.98,
-        "brakingMs2": 8.718,
-        "topSpeedKmh": 199.681
+        "kg": 987,
+        "performanceIndex": 56,
+        "grip": 1.078,
+        "brakingMs2": 9.945,
+        "topSpeedKmh": 197.19
       }
     },
     {
@@ -2436,7 +2436,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 154,
         "nm": 186,
@@ -2449,11 +2449,11 @@
       "after": {
         "cv": 154,
         "nm": 186,
-        "kg": 1083,
-        "performanceIndex": 57,
-        "grip": 0.975,
-        "brakingMs2": 8.688,
-        "topSpeedKmh": 204.501
+        "kg": 1047,
+        "performanceIndex": 59,
+        "grip": 1.073,
+        "brakingMs2": 9.911,
+        "topSpeedKmh": 202.944
       }
     },
     {
@@ -2485,7 +2485,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 25000,
+      "price": 35000,
       "before": {
         "cv": 55,
         "nm": 86,
@@ -2498,11 +2498,11 @@
       "after": {
         "cv": 55,
         "nm": 86,
-        "kg": 662,
-        "performanceIndex": 48,
-        "grip": 1.036,
-        "brakingMs2": 9.286,
-        "topSpeedKmh": 151.95
+        "kg": 640,
+        "performanceIndex": 49,
+        "grip": 1.141,
+        "brakingMs2": 10.599,
+        "topSpeedKmh": 150.871
       }
     },
     {
@@ -2531,7 +2531,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 51500,
+      "price": 68000,
       "before": {
         "cv": 220,
         "nm": 310,
@@ -2544,11 +2544,11 @@
       "after": {
         "cv": 220,
         "nm": 310,
-        "kg": 1181,
-        "performanceIndex": 66,
-        "grip": 0.963,
-        "brakingMs2": 8.542,
-        "topSpeedKmh": 246.708
+        "kg": 1143,
+        "performanceIndex": 68,
+        "grip": 1.06,
+        "brakingMs2": 9.764,
+        "topSpeedKmh": 246.031
       }
     },
     {
@@ -2583,7 +2583,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 136,
         "nm": 208,
@@ -2596,11 +2596,11 @@
       "after": {
         "cv": 136,
         "nm": 208,
-        "kg": 893,
-        "performanceIndex": 61,
-        "grip": 1.001,
-        "brakingMs2": 9.051,
-        "topSpeedKmh": 198.472
+        "kg": 863,
+        "performanceIndex": 62,
+        "grip": 1.102,
+        "brakingMs2": 10.33,
+        "topSpeedKmh": 196.929
       }
     },
     {
@@ -2632,7 +2632,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 130,
         "nm": 176,
@@ -2645,11 +2645,11 @@
       "after": {
         "cv": 130,
         "nm": 176,
-        "kg": 864,
-        "performanceIndex": 60,
-        "grip": 0.999,
-        "brakingMs2": 8.759,
-        "topSpeedKmh": 188.533
+        "kg": 836,
+        "performanceIndex": 61,
+        "grip": 1.099,
+        "brakingMs2": 9.988,
+        "topSpeedKmh": 187.049
       }
     },
     {
@@ -2698,7 +2698,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 25000,
+      "price": 35000,
       "before": {
         "cv": 55,
         "nm": 86,
@@ -2711,11 +2711,11 @@
       "after": {
         "cv": 55,
         "nm": 86,
-        "kg": 669,
+        "kg": 647,
         "performanceIndex": 48,
-        "grip": 1.031,
-        "brakingMs2": 9.227,
-        "topSpeedKmh": 151.961
+        "grip": 1.134,
+        "brakingMs2": 10.53,
+        "topSpeedKmh": 150.883
       }
     },
     {
@@ -2747,7 +2747,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 146,
         "nm": 173,
@@ -2760,11 +2760,11 @@
       "after": {
         "cv": 146,
         "nm": 173,
-        "kg": 1074,
-        "performanceIndex": 56,
-        "grip": 0.976,
-        "brakingMs2": 8.702,
-        "topSpeedKmh": 206.519
+        "kg": 1038,
+        "performanceIndex": 58,
+        "grip": 1.074,
+        "brakingMs2": 9.927,
+        "topSpeedKmh": 204.97
       }
     },
     {
@@ -2801,7 +2801,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 105,
         "nm": 147,
@@ -2814,11 +2814,11 @@
       "after": {
         "cv": 105,
         "nm": 147,
-        "kg": 769,
-        "performanceIndex": 59,
-        "grip": 1.02,
-        "brakingMs2": 9.321,
-        "topSpeedKmh": 198.515
+        "kg": 744,
+        "performanceIndex": 60,
+        "grip": 1.122,
+        "brakingMs2": 10.643,
+        "topSpeedKmh": 197.003
       }
     },
     {
@@ -2864,7 +2864,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 227,
         "nm": 299,
@@ -2877,11 +2877,11 @@
       "after": {
         "cv": 227,
         "nm": 299,
-        "kg": 1201,
-        "performanceIndex": 68,
-        "grip": 0.979,
-        "brakingMs2": 8.673,
-        "topSpeedKmh": 230.22
+        "kg": 1162,
+        "performanceIndex": 69,
+        "grip": 1.077,
+        "brakingMs2": 9.894,
+        "topSpeedKmh": 228.399
       }
     },
     {
@@ -2913,7 +2913,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 132,
         "nm": 180,
@@ -2926,11 +2926,11 @@
       "after": {
         "cv": 132,
         "nm": 180,
-        "kg": 878,
-        "performanceIndex": 60,
-        "grip": 1.011,
-        "brakingMs2": 8.831,
-        "topSpeedKmh": 204.45
+        "kg": 849,
+        "performanceIndex": 62,
+        "grip": 1.113,
+        "brakingMs2": 10.073,
+        "topSpeedKmh": 202.873
       }
     },
     {
@@ -2961,7 +2961,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 133,
         "nm": 180,
@@ -2974,11 +2974,11 @@
       "after": {
         "cv": 133,
         "nm": 180,
-        "kg": 819,
-        "performanceIndex": 63,
-        "grip": 1.015,
-        "brakingMs2": 8.916,
-        "topSpeedKmh": 203.407
+        "kg": 792,
+        "performanceIndex": 64,
+        "grip": 1.117,
+        "brakingMs2": 10.171,
+        "topSpeedKmh": 201.81
       }
     },
     {
@@ -3010,7 +3010,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 205,
         "nm": 235,
@@ -3023,11 +3023,11 @@
       "after": {
         "cv": 205,
         "nm": 235,
-        "kg": 1177,
-        "performanceIndex": 64,
-        "grip": 0.978,
-        "brakingMs2": 8.647,
-        "topSpeedKmh": 226.071
+        "kg": 1150,
+        "performanceIndex": 65,
+        "grip": 1.072,
+        "brakingMs2": 9.806,
+        "topSpeedKmh": 224.702
       }
     },
     {
@@ -3053,7 +3053,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 390,
         "nm": 522,
@@ -3066,11 +3066,11 @@
       "after": {
         "cv": 390,
         "nm": 522,
-        "kg": 1448,
-        "performanceIndex": 81,
-        "grip": 0.946,
-        "brakingMs2": 8.345,
-        "topSpeedKmh": 238.636
+        "kg": 1408,
+        "performanceIndex": 82,
+        "grip": 1.038,
+        "brakingMs2": 9.463,
+        "topSpeedKmh": 237.112
       }
     },
     {
@@ -3124,7 +3124,7 @@
       "artRevision": 3,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 125,
         "nm": 157,
@@ -3137,11 +3137,11 @@
       "after": {
         "cv": 125,
         "nm": 157,
-        "kg": 917,
-        "performanceIndex": 57,
-        "grip": 1.002,
-        "brakingMs2": 8.726,
-        "topSpeedKmh": 201.526
+        "kg": 887,
+        "performanceIndex": 58,
+        "grip": 1.103,
+        "brakingMs2": 9.951,
+        "topSpeedKmh": 199.999
       }
     },
     {
@@ -3178,7 +3178,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 220,
         "nm": 290,
@@ -3191,11 +3191,11 @@
       "after": {
         "cv": 220,
         "nm": 290,
-        "kg": 1174,
-        "performanceIndex": 67,
-        "grip": 0.972,
-        "brakingMs2": 8.643,
-        "topSpeedKmh": 238.181
+        "kg": 1135,
+        "performanceIndex": 69,
+        "grip": 1.07,
+        "brakingMs2": 9.86,
+        "topSpeedKmh": 236.317
       }
     },
     {
@@ -3224,7 +3224,7 @@
       "artRevision": 3,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 204,
         "nm": 276,
@@ -3237,11 +3237,11 @@
       "after": {
         "cv": 204,
         "nm": 276,
-        "kg": 1060,
-        "performanceIndex": 69,
-        "grip": 0.986,
-        "brakingMs2": 8.847,
-        "topSpeedKmh": 237.923
+        "kg": 1036,
+        "performanceIndex": 70,
+        "grip": 1.082,
+        "brakingMs2": 10.035,
+        "topSpeedKmh": 236.466
       }
     },
     {
@@ -3267,7 +3267,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 150,
         "nm": 144,
@@ -3280,11 +3280,11 @@
       "after": {
         "cv": 150,
         "nm": 144,
-        "kg": 919,
-        "performanceIndex": 64,
-        "grip": 0.995,
-        "brakingMs2": 8.977,
-        "topSpeedKmh": 220.33
+        "kg": 889,
+        "performanceIndex": 65,
+        "grip": 1.096,
+        "brakingMs2": 10.244,
+        "topSpeedKmh": 218.625
       }
     },
     {
@@ -3310,7 +3310,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 150,
         "nm": 144,
@@ -3323,11 +3323,11 @@
       "after": {
         "cv": 150,
         "nm": 144,
-        "kg": 906,
-        "performanceIndex": 64,
-        "grip": 1.005,
-        "brakingMs2": 9.062,
-        "topSpeedKmh": 206.192
+        "kg": 886,
+        "performanceIndex": 65,
+        "grip": 1.102,
+        "brakingMs2": 10.282,
+        "topSpeedKmh": 204.928
       }
     },
     {
@@ -3364,7 +3364,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 160,
         "nm": 150,
@@ -3377,11 +3377,11 @@
       "after": {
         "cv": 160,
         "nm": 150,
-        "kg": 953,
-        "performanceIndex": 64,
-        "grip": 0.997,
-        "brakingMs2": 8.943,
-        "topSpeedKmh": 213.148
+        "kg": 931,
+        "performanceIndex": 65,
+        "grip": 1.093,
+        "brakingMs2": 10.145,
+        "topSpeedKmh": 211.852
       }
     },
     {
@@ -3413,7 +3413,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 34000,
+      "price": 48000,
       "before": {
         "cv": 160,
         "nm": 153,
@@ -3426,11 +3426,11 @@
       "after": {
         "cv": 160,
         "nm": 153,
-        "kg": 937,
+        "kg": 916,
         "performanceIndex": 65,
-        "grip": 1.001,
-        "brakingMs2": 8.997,
-        "topSpeedKmh": 205.177
+        "grip": 1.098,
+        "brakingMs2": 10.207,
+        "topSpeedKmh": 203.912
       }
     },
     {
@@ -3456,7 +3456,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 192,
         "nm": 178,
@@ -3469,11 +3469,11 @@
       "after": {
         "cv": 192,
         "nm": 178,
-        "kg": 986,
-        "performanceIndex": 69,
-        "grip": 0.991,
-        "brakingMs2": 8.935,
-        "topSpeedKmh": 230.938
+        "kg": 963,
+        "performanceIndex": 70,
+        "grip": 1.087,
+        "brakingMs2": 10.136,
+        "topSpeedKmh": 229.516
       }
     },
     {
@@ -3510,7 +3510,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 74500,
+      "price": 93000,
       "before": {
         "cv": 280,
         "nm": 298,
@@ -3523,11 +3523,11 @@
       "after": {
         "cv": 280,
         "nm": 298,
-        "kg": 1274,
-        "performanceIndex": 74,
-        "grip": 0.962,
-        "brakingMs2": 8.496,
-        "topSpeedKmh": 271.349
+        "kg": 1233,
+        "performanceIndex": 76,
+        "grip": 1.058,
+        "brakingMs2": 9.711,
+        "topSpeedKmh": 270.575
       }
     },
     {
@@ -3553,7 +3553,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 220,
         "nm": 221,
@@ -3566,11 +3566,11 @@
       "after": {
         "cv": 220,
         "nm": 221,
-        "kg": 1153,
-        "performanceIndex": 67,
-        "grip": 0.969,
-        "brakingMs2": 8.601,
-        "topSpeedKmh": 224.007
+        "kg": 1127,
+        "performanceIndex": 68,
+        "grip": 1.062,
+        "brakingMs2": 9.752,
+        "topSpeedKmh": 222.62
       }
     },
     {
@@ -3602,7 +3602,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 56500,
+      "price": 74000,
       "before": {
         "cv": 240,
         "nm": 208,
@@ -3615,11 +3615,11 @@
       "after": {
         "cv": 240,
         "nm": 208,
-        "kg": 1135,
-        "performanceIndex": 73,
-        "grip": 0.983,
-        "brakingMs2": 8.808,
-        "topSpeedKmh": 237.75
+        "kg": 1098,
+        "performanceIndex": 74,
+        "grip": 1.082,
+        "brakingMs2": 10.073,
+        "topSpeedKmh": 237.042
       }
     },
     {
@@ -3659,7 +3659,7 @@
       "artRevision": 3,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 137,
         "nm": 180,
@@ -3672,11 +3672,11 @@
       "after": {
         "cv": 137,
         "nm": 180,
-        "kg": 1046,
-        "performanceIndex": 55,
-        "grip": 0.975,
-        "brakingMs2": 8.698,
-        "topSpeedKmh": 198.578
+        "kg": 1012,
+        "performanceIndex": 56,
+        "grip": 1.073,
+        "brakingMs2": 9.921,
+        "topSpeedKmh": 197.081
       }
     },
     {
@@ -3702,7 +3702,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 370,
         "nm": 525,
@@ -3715,11 +3715,11 @@
       "after": {
         "cv": 370,
         "nm": 525,
-        "kg": 1595,
-        "performanceIndex": 74,
-        "grip": 0.953,
-        "brakingMs2": 8.328,
-        "topSpeedKmh": 247.604
+        "kg": 1555,
+        "performanceIndex": 75,
+        "grip": 1.045,
+        "brakingMs2": 9.442,
+        "topSpeedKmh": 246.057
       }
     },
     {
@@ -3751,7 +3751,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 132000,
+      "price": 156000,
       "before": {
         "cv": 550,
         "nm": 644,
@@ -3764,11 +3764,11 @@
       "after": {
         "cv": 550,
         "nm": 644,
-        "kg": 1367,
-        "performanceIndex": 112,
-        "grip": 1,
-        "brakingMs2": 8.863,
-        "topSpeedKmh": 338.255
+        "kg": 1323,
+        "performanceIndex": 115,
+        "grip": 1.101,
+        "brakingMs2": 10.141,
+        "topSpeedKmh": 337.128
       }
     },
     {
@@ -3800,7 +3800,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 76000,
+      "price": 94000,
       "before": {
         "cv": 363,
         "nm": 505,
@@ -3813,11 +3813,11 @@
       "after": {
         "cv": 363,
         "nm": 505,
-        "kg": 1460,
-        "performanceIndex": 78,
-        "grip": 0.954,
-        "brakingMs2": 8.415,
-        "topSpeedKmh": 247.614
+        "kg": 1420,
+        "performanceIndex": 79,
+        "grip": 1.047,
+        "brakingMs2": 9.544,
+        "topSpeedKmh": 246.061
       }
     },
     {
@@ -3849,7 +3849,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 125000,
+      "price": 148000,
       "before": {
         "cv": 455,
         "nm": 500,
@@ -3862,11 +3862,11 @@
       "after": {
         "cv": 455,
         "nm": 500,
-        "kg": 1386,
-        "performanceIndex": 96,
-        "grip": 0.989,
-        "brakingMs2": 8.696,
-        "topSpeedKmh": 293.9
+        "kg": 1341,
+        "performanceIndex": 98,
+        "grip": 1.089,
+        "brakingMs2": 9.946,
+        "topSpeedKmh": 292.942
       }
     },
     {
@@ -3903,7 +3903,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 106500,
+      "price": 126000,
       "before": {
         "cv": 550,
         "nm": 620,
@@ -3916,11 +3916,11 @@
       "after": {
         "cv": 550,
         "nm": 620,
-        "kg": 1475,
-        "performanceIndex": 105,
-        "grip": 0.977,
-        "brakingMs2": 8.676,
-        "topSpeedKmh": 328.932
+        "kg": 1455,
+        "performanceIndex": 106,
+        "grip": 1.074,
+        "brakingMs2": 9.886,
+        "topSpeedKmh": 324.435
       }
     },
     {
@@ -3946,7 +3946,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 36000,
+      "price": 50000,
       "before": {
         "cv": 171,
         "nm": 264,
@@ -3959,11 +3959,11 @@
       "after": {
         "cv": 171,
         "nm": 264,
-        "kg": 1188,
+        "kg": 1161,
         "performanceIndex": 58,
-        "grip": 0.958,
-        "brakingMs2": 8.452,
-        "topSpeedKmh": 213.3
+        "grip": 1.05,
+        "brakingMs2": 9.579,
+        "topSpeedKmh": 212.048
       }
     },
     {
@@ -4008,7 +4008,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 215,
         "nm": 304,
@@ -4021,11 +4021,11 @@
       "after": {
         "cv": 215,
         "nm": 304,
-        "kg": 1183,
-        "performanceIndex": 65,
-        "grip": 0.958,
-        "brakingMs2": 8.471,
-        "topSpeedKmh": 217.308
+        "kg": 1144,
+        "performanceIndex": 66,
+        "grip": 1.053,
+        "brakingMs2": 9.659,
+        "topSpeedKmh": 215.585
       }
     },
     {
@@ -4066,7 +4066,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 200,
         "nm": 310,
@@ -4079,11 +4079,11 @@
       "after": {
         "cv": 200,
         "nm": 310,
-        "kg": 1137,
-        "performanceIndex": 64,
-        "grip": 0.974,
-        "brakingMs2": 8.614,
-        "topSpeedKmh": 218.32
+        "kg": 1100,
+        "performanceIndex": 66,
+        "grip": 1.072,
+        "brakingMs2": 9.825,
+        "topSpeedKmh": 216.599
       }
     },
     {
@@ -4124,7 +4124,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 186,
         "nm": 290,
@@ -4137,11 +4137,11 @@
       "after": {
         "cv": 186,
         "nm": 290,
-        "kg": 1210,
-        "performanceIndex": 59,
-        "grip": 0.966,
-        "brakingMs2": 8.52,
-        "topSpeedKmh": 218.404
+        "kg": 1170,
+        "performanceIndex": 60,
+        "grip": 1.063,
+        "brakingMs2": 9.717,
+        "topSpeedKmh": 216.735
       }
     },
     {
@@ -4167,7 +4167,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 215,
         "nm": 285,
@@ -4180,11 +4180,11 @@
       "after": {
         "cv": 215,
         "nm": 285,
-        "kg": 1232,
+        "kg": 1204,
         "performanceIndex": 64,
-        "grip": 0.962,
-        "brakingMs2": 8.478,
-        "topSpeedKmh": 238.023
+        "grip": 1.054,
+        "brakingMs2": 9.609,
+        "topSpeedKmh": 236.596
       }
     },
     {
@@ -4216,7 +4216,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 210,
         "nm": 216,
@@ -4229,11 +4229,11 @@
       "after": {
         "cv": 210,
         "nm": 216,
-        "kg": 1179,
-        "performanceIndex": 65,
-        "grip": 0.979,
-        "brakingMs2": 8.764,
-        "topSpeedKmh": 213.122
+        "kg": 1152,
+        "performanceIndex": 66,
+        "grip": 1.074,
+        "brakingMs2": 9.941,
+        "topSpeedKmh": 211.809
       }
     },
     {
@@ -4265,7 +4265,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 56500,
+      "price": 71000,
       "before": {
         "cv": 160,
         "nm": 175,
@@ -4278,11 +4278,11 @@
       "after": {
         "cv": 160,
         "nm": 175,
-        "kg": 724,
-        "performanceIndex": 79,
-        "grip": 1.054,
-        "brakingMs2": 9.927,
-        "topSpeedKmh": 210.346
+        "kg": 700,
+        "performanceIndex": 81,
+        "grip": 1.161,
+        "brakingMs2": 11.349,
+        "topSpeedKmh": 207.566
       }
     },
     {
@@ -4314,7 +4314,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 85500,
+      "price": 105000,
       "before": {
         "cv": 354,
         "nm": 400,
@@ -4327,11 +4327,11 @@
       "after": {
         "cv": 354,
         "nm": 400,
-        "kg": 1283,
-        "performanceIndex": 86,
-        "grip": 0.987,
-        "brakingMs2": 8.761,
-        "topSpeedKmh": 278.165
+        "kg": 1242,
+        "performanceIndex": 88,
+        "grip": 1.087,
+        "brakingMs2": 10.02,
+        "topSpeedKmh": 277.293
       }
     },
     {
@@ -4363,7 +4363,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 77000,
+      "price": 93000,
       "before": {
         "cv": 179,
         "nm": 171,
@@ -4376,11 +4376,11 @@
       "after": {
         "cv": 179,
         "nm": 171,
-        "kg": 702,
-        "performanceIndex": 86,
-        "grip": 1.059,
-        "brakingMs2": 10.087,
-        "topSpeedKmh": 218.272
+        "kg": 679,
+        "performanceIndex": 88,
+        "grip": 1.166,
+        "brakingMs2": 11.535,
+        "topSpeedKmh": 215.361
       }
     },
     {
@@ -4412,7 +4412,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 160,
         "nm": 174,
@@ -4425,11 +4425,11 @@
       "after": {
         "cv": 160,
         "nm": 174,
-        "kg": 931,
-        "performanceIndex": 67,
-        "grip": 1.017,
-        "brakingMs2": 9.356,
-        "topSpeedKmh": 219.498
+        "kg": 900,
+        "performanceIndex": 69,
+        "grip": 1.12,
+        "brakingMs2": 10.687,
+        "topSpeedKmh": 216.684
       }
     },
     {
@@ -4455,7 +4455,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 160,
         "nm": 174,
@@ -4468,11 +4468,11 @@
       "after": {
         "cv": 160,
         "nm": 174,
-        "kg": 992,
-        "performanceIndex": 62,
-        "grip": 0.998,
-        "brakingMs2": 9.001,
-        "topSpeedKmh": 208.403
+        "kg": 959,
+        "performanceIndex": 64,
+        "grip": 1.099,
+        "brakingMs2": 10.274,
+        "topSpeedKmh": 206.778
       }
     },
     {
@@ -4504,7 +4504,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 34000,
+      "price": 48000,
       "before": {
         "cv": 177,
         "nm": 240,
@@ -4517,11 +4517,11 @@
       "after": {
         "cv": 177,
         "nm": 240,
-        "kg": 1087,
-        "performanceIndex": 62,
-        "grip": 0.986,
-        "brakingMs2": 8.797,
-        "topSpeedKmh": 222.142
+        "kg": 1062,
+        "performanceIndex": 63,
+        "grip": 1.081,
+        "brakingMs2": 9.978,
+        "topSpeedKmh": 220.813
       }
     },
     {
@@ -4547,7 +4547,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 107000,
+      "price": 129000,
       "before": {
         "cv": 370,
         "nm": 491,
@@ -4560,11 +4560,11 @@
       "after": {
         "cv": 370,
         "nm": 491,
-        "kg": 1480,
-        "performanceIndex": 79,
-        "grip": 0.964,
-        "brakingMs2": 8.497,
-        "topSpeedKmh": 276.233
+        "kg": 1431,
+        "performanceIndex": 81,
+        "grip": 1.061,
+        "brakingMs2": 9.715,
+        "topSpeedKmh": 275.407
       }
     },
     {
@@ -4596,7 +4596,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 245,
         "nm": 296,
@@ -4609,11 +4609,11 @@
       "after": {
         "cv": 245,
         "nm": 296,
-        "kg": 1091,
-        "performanceIndex": 75,
-        "grip": 0.991,
-        "brakingMs2": 8.885,
-        "topSpeedKmh": 227.866
+        "kg": 1066,
+        "performanceIndex": 76,
+        "grip": 1.087,
+        "brakingMs2": 10.08,
+        "topSpeedKmh": 226.42
       }
     },
     {
@@ -4639,7 +4639,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 326,
         "nm": 432,
@@ -4652,11 +4652,11 @@
       "after": {
         "cv": 326,
         "nm": 432,
-        "kg": 1318,
-        "performanceIndex": 79,
-        "grip": 0.963,
-        "brakingMs2": 8.484,
-        "topSpeedKmh": 266.354
+        "kg": 1275,
+        "performanceIndex": 80,
+        "grip": 1.059,
+        "brakingMs2": 9.697,
+        "topSpeedKmh": 265.545
       }
     },
     {
@@ -4688,7 +4688,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 185,
         "nm": 235,
@@ -4701,11 +4701,11 @@
       "after": {
         "cv": 185,
         "nm": 235,
-        "kg": 1101,
-        "performanceIndex": 63,
-        "grip": 0.969,
-        "brakingMs2": 8.669,
-        "topSpeedKmh": 219.336
+        "kg": 1065,
+        "performanceIndex": 65,
+        "grip": 1.067,
+        "brakingMs2": 9.889,
+        "topSpeedKmh": 217.626
       }
     },
     {
@@ -4737,7 +4737,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 34000,
+      "price": 48000,
       "before": {
         "cv": 147,
         "nm": 183,
@@ -4750,11 +4750,11 @@
       "after": {
         "cv": 147,
         "nm": 183,
-        "kg": 1065,
-        "performanceIndex": 57,
-        "grip": 0.989,
-        "brakingMs2": 8.815,
-        "topSpeedKmh": 206.352
+        "kg": 1041,
+        "performanceIndex": 58,
+        "grip": 1.084,
+        "brakingMs2": 9.998,
+        "topSpeedKmh": 205.143
       }
     },
     {
@@ -4780,7 +4780,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 30000,
+      "price": 42000,
       "before": {
         "cv": 136,
         "nm": 160,
@@ -4793,11 +4793,11 @@
       "after": {
         "cv": 136,
         "nm": 160,
-        "kg": 1003,
-        "performanceIndex": 57,
-        "grip": 0.993,
-        "brakingMs2": 8.874,
-        "topSpeedKmh": 201.643
+        "kg": 970,
+        "performanceIndex": 58,
+        "grip": 1.093,
+        "brakingMs2": 10.126,
+        "topSpeedKmh": 199.108
       }
     },
     {
@@ -4829,7 +4829,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 30000,
+      "price": 42000,
       "before": {
         "cv": 131,
         "nm": 152,
@@ -4842,11 +4842,11 @@
       "after": {
         "cv": 131,
         "nm": 152,
-        "kg": 891,
-        "performanceIndex": 60,
-        "grip": 0.988,
-        "brakingMs2": 8.942,
-        "topSpeedKmh": 196.569
+        "kg": 861,
+        "performanceIndex": 62,
+        "grip": 1.088,
+        "brakingMs2": 10.204,
+        "topSpeedKmh": 194.066
       }
     },
     {
@@ -4872,7 +4872,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 30000,
+      "price": 42000,
       "before": {
         "cv": 146,
         "nm": 168,
@@ -4885,11 +4885,11 @@
       "after": {
         "cv": 146,
         "nm": 168,
-        "kg": 936,
-        "performanceIndex": 62,
-        "grip": 0.99,
-        "brakingMs2": 8.986,
-        "topSpeedKmh": 205.545
+        "kg": 905,
+        "performanceIndex": 64,
+        "grip": 1.09,
+        "brakingMs2": 10.255,
+        "topSpeedKmh": 202.92
       }
     },
     {
@@ -4921,7 +4921,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 51500,
+      "price": 68000,
       "before": {
         "cv": 200,
         "nm": 265,
@@ -4934,11 +4934,11 @@
       "after": {
         "cv": 200,
         "nm": 265,
-        "kg": 1209,
-        "performanceIndex": 63,
-        "grip": 0.963,
-        "brakingMs2": 8.524,
-        "topSpeedKmh": 236.879
+        "kg": 1170,
+        "performanceIndex": 64,
+        "grip": 1.059,
+        "brakingMs2": 9.743,
+        "topSpeedKmh": 236.262
       }
     },
     {
@@ -4970,7 +4970,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 255,
         "nm": 296,
@@ -4983,11 +4983,11 @@
       "after": {
         "cv": 255,
         "nm": 296,
-        "kg": 1107,
-        "performanceIndex": 77,
-        "grip": 0.988,
-        "brakingMs2": 8.888,
-        "topSpeedKmh": 251.548
+        "kg": 1071,
+        "performanceIndex": 78,
+        "grip": 1.088,
+        "brakingMs2": 10.166,
+        "topSpeedKmh": 250.788
       }
     },
     {
@@ -5019,7 +5019,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 421500,
+      "price": 472000,
       "before": {
         "cv": 627,
         "nm": 617,
@@ -5032,11 +5032,11 @@
       "after": {
         "cv": 627,
         "nm": 617,
-        "kg": 1058,
-        "performanceIndex": 152,
-        "grip": 1.049,
-        "brakingMs2": 9.571,
-        "topSpeedKmh": 381.522
+        "kg": 1024,
+        "performanceIndex": 156,
+        "grip": 1.156,
+        "brakingMs2": 10.962,
+        "topSpeedKmh": 380.162
       }
     },
     {
@@ -5068,7 +5068,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 235,
         "nm": 245,
@@ -5081,11 +5081,11 @@
       "after": {
         "cv": 235,
         "nm": 245,
-        "kg": 1179,
-        "performanceIndex": 71,
-        "grip": 1,
-        "brakingMs2": 8.906,
-        "topSpeedKmh": 247.85
+        "kg": 1152,
+        "performanceIndex": 72,
+        "grip": 1.097,
+        "brakingMs2": 10.106,
+        "topSpeedKmh": 246.335
       }
     },
     {
@@ -5111,7 +5111,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 306,
         "nm": 410,
@@ -5124,11 +5124,11 @@
       "after": {
         "cv": 306,
         "nm": 410,
-        "kg": 1294,
-        "performanceIndex": 76,
-        "grip": 0.984,
-        "brakingMs2": 8.66,
-        "topSpeedKmh": 247.713
+        "kg": 1264,
+        "performanceIndex": 77,
+        "grip": 1.079,
+        "brakingMs2": 9.822,
+        "topSpeedKmh": 246.15
       }
     },
     {
@@ -5154,7 +5154,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72000,
+      "price": 89000,
       "before": {
         "cv": 347,
         "nm": 510,
@@ -5167,11 +5167,11 @@
       "after": {
         "cv": 347,
         "nm": 510,
-        "kg": 1340,
-        "performanceIndex": 80,
-        "grip": 0.977,
-        "brakingMs2": 8.682,
-        "topSpeedKmh": 247.641
+        "kg": 1307,
+        "performanceIndex": 81,
+        "grip": 1.072,
+        "brakingMs2": 9.849,
+        "topSpeedKmh": 246.064
       }
     },
     {
@@ -5197,7 +5197,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 56500,
+      "price": 71000,
       "before": {
         "cv": 354,
         "nm": 450,
@@ -5210,11 +5210,11 @@
       "after": {
         "cv": 354,
         "nm": 450,
-        "kg": 1255,
-        "performanceIndex": 85,
-        "grip": 0.978,
-        "brakingMs2": 8.658,
-        "topSpeedKmh": 249.231
+        "kg": 1225,
+        "performanceIndex": 86,
+        "grip": 1.075,
+        "brakingMs2": 9.87,
+        "topSpeedKmh": 245.872
       }
     },
     {
@@ -5246,7 +5246,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 25000,
+      "price": 35000,
       "before": {
         "cv": 63,
         "nm": 95,
@@ -5259,11 +5259,11 @@
       "after": {
         "cv": 63,
         "nm": 95,
-        "kg": 603,
-        "performanceIndex": 52,
-        "grip": 1.064,
-        "brakingMs2": 9.538,
-        "topSpeedKmh": 142.661
+        "kg": 583,
+        "performanceIndex": 53,
+        "grip": 1.172,
+        "brakingMs2": 10.89,
+        "topSpeedKmh": 140.848
       }
     },
     {
@@ -5299,7 +5299,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 286,
         "nm": 415,
@@ -5312,11 +5312,11 @@
       "after": {
         "cv": 286,
         "nm": 415,
-        "kg": 1630,
-        "performanceIndex": 63,
-        "grip": 0.909,
-        "brakingMs2": 7.92,
-        "topSpeedKmh": 250.659
+        "kg": 1566,
+        "performanceIndex": 64,
+        "grip": 1,
+        "brakingMs2": 9.049,
+        "topSpeedKmh": 250.059
       }
     },
     {
@@ -5347,7 +5347,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 140,
         "nm": 167,
@@ -5360,11 +5360,11 @@
       "after": {
         "cv": 140,
         "nm": 167,
-        "kg": 928,
-        "performanceIndex": 60,
-        "grip": 0.988,
-        "brakingMs2": 8.855,
-        "topSpeedKmh": 208.435
+        "kg": 898,
+        "performanceIndex": 61,
+        "grip": 1.087,
+        "brakingMs2": 10.102,
+        "topSpeedKmh": 206.828
       }
     },
     {
@@ -5390,7 +5390,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 213,
         "nm": 290,
@@ -5403,11 +5403,11 @@
       "after": {
         "cv": 213,
         "nm": 290,
-        "kg": 1148,
+        "kg": 1122,
         "performanceIndex": 67,
-        "grip": 0.976,
-        "brakingMs2": 8.644,
-        "topSpeedKmh": 245.925
+        "grip": 1.07,
+        "brakingMs2": 9.801,
+        "topSpeedKmh": 244.441
       }
     },
     {
@@ -5433,7 +5433,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 280,
         "nm": 373,
@@ -5446,11 +5446,11 @@
       "after": {
         "cv": 280,
         "nm": 373,
-        "kg": 1165,
-        "performanceIndex": 78,
-        "grip": 0.979,
-        "brakingMs2": 8.802,
-        "topSpeedKmh": 244.009
+        "kg": 1126,
+        "performanceIndex": 80,
+        "grip": 1.077,
+        "brakingMs2": 10.046,
+        "topSpeedKmh": 242.023
       }
     },
     {
@@ -5482,7 +5482,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 280,
         "nm": 380,
@@ -5495,11 +5495,11 @@
       "after": {
         "cv": 280,
         "nm": 380,
-        "kg": 1147,
-        "performanceIndex": 78,
-        "grip": 0.981,
-        "brakingMs2": 8.842,
-        "topSpeedKmh": 238.036
+        "kg": 1109,
+        "performanceIndex": 80,
+        "grip": 1.08,
+        "brakingMs2": 10.092,
+        "topSpeedKmh": 236.086
       }
     },
     {
@@ -5531,7 +5531,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 280,
         "nm": 390,
@@ -5544,11 +5544,11 @@
       "after": {
         "cv": 280,
         "nm": 390,
-        "kg": 1274,
-        "performanceIndex": 73,
-        "grip": 0.974,
-        "brakingMs2": 8.686,
-        "topSpeedKmh": 240.085
+        "kg": 1232,
+        "performanceIndex": 75,
+        "grip": 1.073,
+        "brakingMs2": 9.91,
+        "topSpeedKmh": 238.152
       }
     },
     {
@@ -5574,7 +5574,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 171,
         "nm": 224,
@@ -5587,11 +5587,11 @@
       "after": {
         "cv": 171,
         "nm": 224,
-        "kg": 1047,
-        "performanceIndex": 63,
-        "grip": 0.979,
-        "brakingMs2": 8.761,
-        "topSpeedKmh": 223.134
+        "kg": 1023,
+        "performanceIndex": 64,
+        "grip": 1.073,
+        "brakingMs2": 9.936,
+        "topSpeedKmh": 221.799
       }
     },
     {
@@ -5623,7 +5623,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 205,
         "nm": 275,
@@ -5636,11 +5636,11 @@
       "after": {
         "cv": 205,
         "nm": 275,
-        "kg": 1030,
-        "performanceIndex": 70,
-        "grip": 0.991,
-        "brakingMs2": 8.883,
-        "topSpeedKmh": 227.942
+        "kg": 1006,
+        "performanceIndex": 71,
+        "grip": 1.086,
+        "brakingMs2": 10.077,
+        "topSpeedKmh": 226.529
       }
     },
     {
@@ -5677,7 +5677,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 200,
         "nm": 265,
@@ -5690,11 +5690,11 @@
       "after": {
         "cv": 200,
         "nm": 265,
-        "kg": 1091,
+        "kg": 1066,
         "performanceIndex": 67,
-        "grip": 0.978,
-        "brakingMs2": 8.72,
-        "topSpeedKmh": 232.991
+        "grip": 1.072,
+        "brakingMs2": 9.888,
+        "topSpeedKmh": 231.574
       }
     },
     {
@@ -5726,7 +5726,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 283,
         "nm": 375,
@@ -5739,11 +5739,11 @@
       "after": {
         "cv": 283,
         "nm": 375,
-        "kg": 1510,
-        "performanceIndex": 66,
-        "grip": 0.946,
-        "brakingMs2": 8.235,
-        "topSpeedKmh": 246.706
+        "kg": 1458,
+        "performanceIndex": 67,
+        "grip": 1.041,
+        "brakingMs2": 9.411,
+        "topSpeedKmh": 246.043
       }
     },
     {
@@ -5769,7 +5769,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 34000,
+      "price": 48000,
       "before": {
         "cv": 143,
         "nm": 178,
@@ -5782,11 +5782,11 @@
       "after": {
         "cv": 143,
         "nm": 178,
-        "kg": 994,
+        "kg": 972,
         "performanceIndex": 59,
-        "grip": 0.99,
-        "brakingMs2": 8.868,
-        "topSpeedKmh": 208.305
+        "grip": 1.085,
+        "brakingMs2": 10.058,
+        "topSpeedKmh": 207.072
       }
     },
     {
@@ -5823,7 +5823,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 25000,
+      "price": 36000,
       "before": {
         "cv": 75,
         "nm": 103,
@@ -5836,11 +5836,11 @@
       "after": {
         "cv": 75,
         "nm": 103,
-        "kg": 728,
-        "performanceIndex": 52,
-        "grip": 1.025,
-        "brakingMs2": 9.1,
-        "topSpeedKmh": 168.791
+        "kg": 704,
+        "performanceIndex": 53,
+        "grip": 1.129,
+        "brakingMs2": 10.383,
+        "topSpeedKmh": 167.548
       }
     },
     {
@@ -5877,7 +5877,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 34000,
+      "price": 48000,
       "before": {
         "cv": 150,
         "nm": 181,
@@ -5890,11 +5890,11 @@
       "after": {
         "cv": 150,
         "nm": 181,
-        "kg": 1078,
-        "performanceIndex": 57,
-        "grip": 0.975,
-        "brakingMs2": 8.703,
-        "topSpeedKmh": 216.314
+        "kg": 1053,
+        "performanceIndex": 58,
+        "grip": 1.069,
+        "brakingMs2": 9.868,
+        "topSpeedKmh": 215.065
       }
     },
     {
@@ -5930,7 +5930,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 280,
         "nm": 353,
@@ -5943,11 +5943,11 @@
       "after": {
         "cv": 280,
         "nm": 353,
-        "kg": 1258,
-        "performanceIndex": 74,
-        "grip": 0.969,
-        "brakingMs2": 8.606,
-        "topSpeedKmh": 245.773
+        "kg": 1230,
+        "performanceIndex": 75,
+        "grip": 1.063,
+        "brakingMs2": 9.758,
+        "topSpeedKmh": 244.232
       }
     },
     {
@@ -5979,7 +5979,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 78500,
+      "price": 97000,
       "before": {
         "cv": 305,
         "nm": 375,
@@ -5992,11 +5992,11 @@
       "after": {
         "cv": 305,
         "nm": 375,
-        "kg": 1470,
-        "performanceIndex": 71,
-        "grip": 0.959,
-        "brakingMs2": 8.444,
-        "topSpeedKmh": 256.556
+        "kg": 1422,
+        "performanceIndex": 72,
+        "grip": 1.056,
+        "brakingMs2": 9.653,
+        "topSpeedKmh": 255.828
       }
     },
     {
@@ -6028,7 +6028,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 220,
         "nm": 267,
@@ -6041,11 +6041,11 @@
       "after": {
         "cv": 220,
         "nm": 267,
-        "kg": 1110,
-        "performanceIndex": 69,
-        "grip": 0.967,
-        "brakingMs2": 8.686,
-        "topSpeedKmh": 221.238
+        "kg": 1074,
+        "performanceIndex": 70,
+        "grip": 1.064,
+        "brakingMs2": 9.909,
+        "topSpeedKmh": 219.46
       }
     },
     {
@@ -6077,7 +6077,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 190,
         "nm": 250,
@@ -6090,11 +6090,11 @@
       "after": {
         "cv": 190,
         "nm": 250,
-        "kg": 1096,
-        "performanceIndex": 65,
-        "grip": 0.991,
-        "brakingMs2": 8.884,
-        "topSpeedKmh": 242.994
+        "kg": 1071,
+        "performanceIndex": 66,
+        "grip": 1.087,
+        "brakingMs2": 10.079,
+        "topSpeedKmh": 241.548
       }
     },
     {
@@ -6126,7 +6126,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 150,
         "nm": 196,
@@ -6139,11 +6139,11 @@
       "after": {
         "cv": 150,
         "nm": 196,
-        "kg": 996,
-        "performanceIndex": 61,
-        "grip": 0.998,
-        "brakingMs2": 8.95,
-        "topSpeedKmh": 218.4
+        "kg": 964,
+        "performanceIndex": 62,
+        "grip": 1.098,
+        "brakingMs2": 10.213,
+        "topSpeedKmh": 216.733
       }
     },
     {
@@ -6169,7 +6169,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 200,
         "nm": 250,
@@ -6182,11 +6182,11 @@
       "after": {
         "cv": 200,
         "nm": 250,
-        "kg": 1100,
-        "performanceIndex": 66,
-        "grip": 0.99,
-        "brakingMs2": 8.875,
-        "topSpeedKmh": 237.974
+        "kg": 1075,
+        "performanceIndex": 67,
+        "grip": 1.086,
+        "brakingMs2": 10.069,
+        "topSpeedKmh": 236.534
       }
     },
     {
@@ -6218,7 +6218,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 204,
         "nm": 280,
@@ -6231,11 +6231,11 @@
       "after": {
         "cv": 204,
         "nm": 280,
-        "kg": 1214,
+        "kg": 1187,
         "performanceIndex": 64,
-        "grip": 0.966,
-        "brakingMs2": 8.552,
-        "topSpeedKmh": 243.042
+        "grip": 1.059,
+        "brakingMs2": 9.695,
+        "topSpeedKmh": 241.603
       }
     },
     {
@@ -6267,7 +6267,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 101,
         "nm": 135,
@@ -6280,11 +6280,11 @@
       "after": {
         "cv": 101,
         "nm": 135,
-        "kg": 746,
-        "performanceIndex": 58,
-        "grip": 1.027,
-        "brakingMs2": 9.139,
-        "topSpeedKmh": 186.576
+        "kg": 722,
+        "performanceIndex": 59,
+        "grip": 1.131,
+        "brakingMs2": 10.429,
+        "topSpeedKmh": 185.135
       }
     },
     {
@@ -6325,7 +6325,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 109,
         "nm": 150,
@@ -6338,11 +6338,11 @@
       "after": {
         "cv": 109,
         "nm": 150,
-        "kg": 855,
-        "performanceIndex": 56,
-        "grip": 1.01,
-        "brakingMs2": 8.878,
-        "topSpeedKmh": 193.593
+        "kg": 827,
+        "performanceIndex": 57,
+        "grip": 1.112,
+        "brakingMs2": 10.128,
+        "topSpeedKmh": 192.136
       }
     },
     {
@@ -6379,7 +6379,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 150,
         "nm": 196,
@@ -6392,11 +6392,11 @@
       "after": {
         "cv": 150,
         "nm": 196,
-        "kg": 910,
-        "performanceIndex": 63,
-        "grip": 0.997,
-        "brakingMs2": 8.717,
-        "topSpeedKmh": 215.348
+        "kg": 880,
+        "performanceIndex": 64,
+        "grip": 1.097,
+        "brakingMs2": 9.942,
+        "topSpeedKmh": 213.671
       }
     },
     {
@@ -6428,7 +6428,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 110,
         "nm": 162,
@@ -6441,11 +6441,11 @@
       "after": {
         "cv": 110,
         "nm": 162,
-        "kg": 925,
-        "performanceIndex": 55,
-        "grip": 1.001,
-        "brakingMs2": 8.974,
-        "topSpeedKmh": 190.648
+        "kg": 894,
+        "performanceIndex": 56,
+        "grip": 1.102,
+        "brakingMs2": 10.242,
+        "topSpeedKmh": 189.239
       }
     },
     {
@@ -6471,7 +6471,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 64500,
+      "price": 81000,
       "before": {
         "cv": 382,
         "nm": 568,
@@ -6484,11 +6484,11 @@
       "after": {
         "cv": 382,
         "nm": 568,
-        "kg": 1483,
-        "performanceIndex": 80,
-        "grip": 0.956,
-        "brakingMs2": 8.417,
-        "topSpeedKmh": 280.355
+        "kg": 1443,
+        "performanceIndex": 82,
+        "grip": 1.048,
+        "brakingMs2": 9.546,
+        "topSpeedKmh": 278.622
       }
     },
     {
@@ -6514,7 +6514,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59500,
+      "price": 74000,
       "before": {
         "cv": 147,
         "nm": 203,
@@ -6527,11 +6527,11 @@
       "after": {
         "cv": 147,
         "nm": 203,
-        "kg": 850,
-        "performanceIndex": 68,
-        "grip": 1.03,
-        "brakingMs2": 9.522,
-        "topSpeedKmh": 216.483
+        "kg": 822,
+        "performanceIndex": 70,
+        "grip": 1.135,
+        "brakingMs2": 10.879,
+        "topSpeedKmh": 213.699
       }
     },
     {
@@ -6557,7 +6557,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 106,
         "nm": 148,
@@ -6570,11 +6570,11 @@
       "after": {
         "cv": 106,
         "nm": 148,
-        "kg": 978,
-        "performanceIndex": 51,
-        "grip": 0.989,
-        "brakingMs2": 8.6,
-        "topSpeedKmh": 201.691
+        "kg": 946,
+        "performanceIndex": 52,
+        "grip": 1.089,
+        "brakingMs2": 9.806,
+        "topSpeedKmh": 200.262
       }
     },
     {
@@ -6600,7 +6600,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 273500,
+      "price": 310000,
       "before": {
         "cv": 399,
         "nm": 570,
@@ -6613,11 +6613,11 @@
       "after": {
         "cv": 399,
         "nm": 570,
-        "kg": 1162,
-        "performanceIndex": 103,
-        "grip": 1.029,
-        "brakingMs2": 9.373,
-        "topSpeedKmh": 345.23
+        "kg": 1125,
+        "performanceIndex": 105,
+        "grip": 1.134,
+        "brakingMs2": 10.733,
+        "topSpeedKmh": 344.146
       }
     },
     {
@@ -6657,7 +6657,7 @@
       "artRevision": 3,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 120,
         "nm": 145,
@@ -6670,11 +6670,11 @@
       "after": {
         "cv": 120,
         "nm": 145,
-        "kg": 842,
-        "performanceIndex": 60,
-        "grip": 1.011,
-        "brakingMs2": 9.193,
-        "topSpeedKmh": 203.477
+        "kg": 814,
+        "performanceIndex": 61,
+        "grip": 1.113,
+        "brakingMs2": 10.495,
+        "topSpeedKmh": 201.925
       }
     },
     {
@@ -6706,7 +6706,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 101,
         "nm": 108,
@@ -6719,11 +6719,11 @@
       "after": {
         "cv": 101,
         "nm": 108,
-        "kg": 743,
-        "performanceIndex": 60,
-        "grip": 1.019,
-        "brakingMs2": 9.411,
-        "topSpeedKmh": 188.558
+        "kg": 718,
+        "performanceIndex": 61,
+        "grip": 1.122,
+        "brakingMs2": 10.747,
+        "topSpeedKmh": 187.113
       }
     },
     {
@@ -6749,7 +6749,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 130,
         "nm": 161,
@@ -6762,11 +6762,11 @@
       "after": {
         "cv": 130,
         "nm": 161,
-        "kg": 783,
-        "performanceIndex": 66,
-        "grip": 1.028,
-        "brakingMs2": 9.428,
-        "topSpeedKmh": 204.384
+        "kg": 757,
+        "performanceIndex": 67,
+        "grip": 1.132,
+        "brakingMs2": 10.767,
+        "topSpeedKmh": 202.774
       }
     },
     {
@@ -6798,7 +6798,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 138,
         "nm": 190,
@@ -6811,11 +6811,11 @@
       "after": {
         "cv": 138,
         "nm": 190,
-        "kg": 933,
-        "performanceIndex": 60,
-        "grip": 0.992,
-        "brakingMs2": 8.949,
-        "topSpeedKmh": 208.444
+        "kg": 902,
+        "performanceIndex": 61,
+        "grip": 1.091,
+        "brakingMs2": 10.213,
+        "topSpeedKmh": 206.849
       }
     },
     {
@@ -6855,7 +6855,7 @@
       "artRevision": 3,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 167,
         "nm": 193,
@@ -6868,11 +6868,11 @@
       "after": {
         "cv": 167,
         "nm": 193,
-        "kg": 1106,
-        "performanceIndex": 59,
-        "grip": 0.974,
-        "brakingMs2": 8.664,
-        "topSpeedKmh": 216.412
+        "kg": 1069,
+        "performanceIndex": 60,
+        "grip": 1.071,
+        "brakingMs2": 9.883,
+        "topSpeedKmh": 214.764
       }
     },
     {
@@ -6904,7 +6904,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 160,
         "nm": 177,
@@ -6917,11 +6917,11 @@
       "after": {
         "cv": 160,
         "nm": 177,
-        "kg": 863,
-        "performanceIndex": 69,
-        "grip": 1.017,
-        "brakingMs2": 9.223,
-        "topSpeedKmh": 218.263
+        "kg": 834,
+        "performanceIndex": 70,
+        "grip": 1.12,
+        "brakingMs2": 10.53,
+        "topSpeedKmh": 216.532
       }
     },
     {
@@ -6958,7 +6958,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 200,
         "nm": 288,
@@ -6971,11 +6971,11 @@
       "after": {
         "cv": 200,
         "nm": 288,
-        "kg": 1179,
+        "kg": 1152,
         "performanceIndex": 64,
-        "grip": 0.972,
-        "brakingMs2": 8.594,
-        "topSpeedKmh": 233.068
+        "grip": 1.066,
+        "brakingMs2": 9.744,
+        "topSpeedKmh": 231.675
       }
     },
     {
@@ -7007,7 +7007,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 194,
         "nm": 267,
@@ -7020,11 +7020,11 @@
       "after": {
         "cv": 194,
         "nm": 267,
-        "kg": 1261,
+        "kg": 1232,
         "performanceIndex": 60,
-        "grip": 0.963,
-        "brakingMs2": 8.546,
-        "topSpeedKmh": 233.172
+        "grip": 1.055,
+        "brakingMs2": 9.69,
+        "topSpeedKmh": 231.814
       }
     },
     {
@@ -7056,7 +7056,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 231,
         "nm": 284,
@@ -7069,11 +7069,11 @@
       "after": {
         "cv": 231,
         "nm": 284,
-        "kg": 1079,
-        "performanceIndex": 72,
-        "grip": 0.976,
-        "brakingMs2": 8.62,
-        "topSpeedKmh": 241.695
+        "kg": 1044,
+        "performanceIndex": 74,
+        "grip": 1.074,
+        "brakingMs2": 9.853,
+        "topSpeedKmh": 240.975
       }
     },
     {
@@ -7105,7 +7105,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 176500,
+      "price": 204000,
       "before": {
         "cv": 543,
         "nm": 600,
@@ -7118,11 +7118,11 @@
       "after": {
         "cv": 543,
         "nm": 600,
-        "kg": 1162,
-        "performanceIndex": 125,
-        "grip": 1.024,
-        "brakingMs2": 9.439,
-        "topSpeedKmh": 305.622
+        "kg": 1125,
+        "performanceIndex": 128,
+        "grip": 1.128,
+        "brakingMs2": 10.81,
+        "topSpeedKmh": 304.535
       }
     },
     {
@@ -7154,7 +7154,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 300,
         "nm": 430,
@@ -7167,11 +7167,11 @@
       "after": {
         "cv": 300,
         "nm": 430,
-        "kg": 1242,
-        "performanceIndex": 77,
-        "grip": 0.957,
-        "brakingMs2": 8.545,
-        "topSpeedKmh": 256.478
+        "kg": 1201,
+        "performanceIndex": 79,
+        "grip": 1.053,
+        "brakingMs2": 9.769,
+        "topSpeedKmh": 255.696
       }
     },
     {
@@ -7203,7 +7203,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 56500,
+      "price": 71000,
       "before": {
         "cv": 250,
         "nm": 350,
@@ -7216,11 +7216,11 @@
       "after": {
         "cv": 250,
         "nm": 350,
-        "kg": 1215,
-        "performanceIndex": 71,
-        "grip": 0.981,
-        "brakingMs2": 8.742,
-        "topSpeedKmh": 259.42
+        "kg": 1180,
+        "performanceIndex": 73,
+        "grip": 1.08,
+        "brakingMs2": 9.971,
+        "topSpeedKmh": 256.057
       }
     },
     {
@@ -7246,7 +7246,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 126000,
+      "price": 147000,
       "before": {
         "cv": 450,
         "nm": 500,
@@ -7259,11 +7259,11 @@
       "after": {
         "cv": 450,
         "nm": 500,
-        "kg": 1319,
-        "performanceIndex": 99,
-        "grip": 0.957,
-        "brakingMs2": 8.562,
-        "topSpeedKmh": 319.357
+        "kg": 1276,
+        "performanceIndex": 101,
+        "grip": 1.053,
+        "brakingMs2": 9.767,
+        "topSpeedKmh": 316.722
       }
     },
     {
@@ -7295,7 +7295,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59500,
+      "price": 74000,
       "before": {
         "cv": 260,
         "nm": 325,
@@ -7308,11 +7308,11 @@
       "after": {
         "cv": 260,
         "nm": 325,
-        "kg": 1107,
-        "performanceIndex": 78,
-        "grip": 0.988,
-        "brakingMs2": 8.923,
-        "topSpeedKmh": 259.318
+        "kg": 1070,
+        "performanceIndex": 79,
+        "grip": 1.087,
+        "brakingMs2": 10.185,
+        "topSpeedKmh": 255.939
       }
     },
     {
@@ -7344,7 +7344,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 95000,
+      "price": 116000,
       "before": {
         "cv": 360,
         "nm": 520,
@@ -7357,11 +7357,11 @@
       "after": {
         "cv": 360,
         "nm": 520,
-        "kg": 1367,
-        "performanceIndex": 82,
-        "grip": 0.958,
-        "brakingMs2": 8.48,
-        "topSpeedKmh": 276.212
+        "kg": 1323,
+        "performanceIndex": 84,
+        "grip": 1.054,
+        "brakingMs2": 9.693,
+        "topSpeedKmh": 275.36
       }
     },
     {
@@ -7393,7 +7393,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 305,
         "nm": 500,
@@ -7406,11 +7406,11 @@
       "after": {
         "cv": 305,
         "nm": 500,
-        "kg": 1274,
-        "performanceIndex": 78,
-        "grip": 0.987,
-        "brakingMs2": 8.792,
-        "topSpeedKmh": 278.226
+        "kg": 1233,
+        "performanceIndex": 80,
+        "grip": 1.087,
+        "brakingMs2": 10.056,
+        "topSpeedKmh": 277.407
       }
     },
     {
@@ -7442,7 +7442,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 143000,
+      "price": 168000,
       "before": {
         "cv": 430,
         "nm": 540,
@@ -7455,11 +7455,11 @@
       "after": {
         "cv": 430,
         "nm": 540,
-        "kg": 1130,
-        "performanceIndex": 107,
-        "grip": 1.004,
-        "brakingMs2": 9.104,
-        "topSpeedKmh": 290.875
+        "kg": 1093,
+        "performanceIndex": 109,
+        "grip": 1.106,
+        "brakingMs2": 10.419,
+        "topSpeedKmh": 289.882
       }
     },
     {
@@ -7485,7 +7485,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 92500,
+      "price": 113000,
       "before": {
         "cv": 301,
         "nm": 355,
@@ -7498,11 +7498,11 @@
       "after": {
         "cv": 301,
         "nm": 355,
-        "kg": 1151,
-        "performanceIndex": 83,
-        "grip": 1,
-        "brakingMs2": 9.045,
-        "topSpeedKmh": 273.239
+        "kg": 1114,
+        "performanceIndex": 85,
+        "grip": 1.101,
+        "brakingMs2": 10.35,
+        "topSpeedKmh": 272.396
       }
     },
     {
@@ -7534,7 +7534,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 109500,
+      "price": 131000,
       "before": {
         "cv": 360,
         "nm": 370,
@@ -7547,11 +7547,11 @@
       "after": {
         "cv": 360,
         "nm": 370,
-        "kg": 1255,
-        "performanceIndex": 89,
-        "grip": 0.995,
-        "brakingMs2": 8.939,
-        "topSpeedKmh": 297.905
+        "kg": 1215,
+        "performanceIndex": 91,
+        "grip": 1.095,
+        "brakingMs2": 10.227,
+        "topSpeedKmh": 296.981
       }
     },
     {
@@ -7577,7 +7577,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 56500,
+      "price": 71000,
       "before": {
         "cv": 252,
         "nm": 305,
@@ -7590,11 +7590,11 @@
       "after": {
         "cv": 252,
         "nm": 305,
-        "kg": 1233,
-        "performanceIndex": 72,
-        "grip": 0.982,
-        "brakingMs2": 8.765,
-        "topSpeedKmh": 259.426
+        "kg": 1200,
+        "performanceIndex": 73,
+        "grip": 1.08,
+        "brakingMs2": 9.997,
+        "topSpeedKmh": 256.051
       }
     },
     {
@@ -7631,7 +7631,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 137,
         "nm": 158,
@@ -7644,11 +7644,11 @@
       "after": {
         "cv": 137,
         "nm": 158,
-        "kg": 995,
-        "performanceIndex": 58,
-        "grip": 0.989,
-        "brakingMs2": 8.836,
-        "topSpeedKmh": 210.486
+        "kg": 962,
+        "performanceIndex": 59,
+        "grip": 1.088,
+        "brakingMs2": 10.082,
+        "topSpeedKmh": 208.907
       }
     },
     {
@@ -7680,7 +7680,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 120,
         "nm": 165,
@@ -7693,11 +7693,11 @@
       "after": {
         "cv": 120,
         "nm": 165,
-        "kg": 755,
-        "performanceIndex": 64,
-        "grip": 1.042,
-        "brakingMs2": 9.55,
-        "topSpeedKmh": 202.417
+        "kg": 730,
+        "performanceIndex": 66,
+        "grip": 1.147,
+        "brakingMs2": 10.91,
+        "topSpeedKmh": 200.833
       }
     },
     {
@@ -7734,7 +7734,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 47500,
+      "price": 62000,
       "before": {
         "cv": 160,
         "nm": 220,
@@ -7747,11 +7747,11 @@
       "after": {
         "cv": 160,
         "nm": 220,
-        "kg": 883,
-        "performanceIndex": 68,
-        "grip": 1.021,
-        "brakingMs2": 9.286,
-        "topSpeedKmh": 198.392
+        "kg": 854,
+        "performanceIndex": 69,
+        "grip": 1.124,
+        "brakingMs2": 10.604,
+        "topSpeedKmh": 196.794
       }
     },
     {
@@ -7777,7 +7777,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 73000,
+      "price": 91000,
       "before": {
         "cv": 250,
         "nm": 350,
@@ -7790,11 +7790,11 @@
       "after": {
         "cv": 250,
         "nm": 350,
-        "kg": 1321,
-        "performanceIndex": 68,
-        "grip": 0.964,
-        "brakingMs2": 8.538,
-        "topSpeedKmh": 261.54
+        "kg": 1278,
+        "performanceIndex": 69,
+        "grip": 1.061,
+        "brakingMs2": 9.76,
+        "topSpeedKmh": 260.845
       }
     },
     {
@@ -7829,7 +7829,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 169,
         "nm": 200,
@@ -7842,11 +7842,11 @@
       "after": {
         "cv": 169,
         "nm": 200,
-        "kg": 931,
-        "performanceIndex": 67,
-        "grip": 1,
-        "brakingMs2": 9.005,
-        "topSpeedKmh": 219.464
+        "kg": 900,
+        "performanceIndex": 68,
+        "grip": 1.1,
+        "brakingMs2": 10.278,
+        "topSpeedKmh": 216.632
       }
     },
     {
@@ -7900,7 +7900,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 150,
         "nm": 175,
@@ -7913,11 +7913,11 @@
       "after": {
         "cv": 150,
         "nm": 175,
-        "kg": 894,
-        "performanceIndex": 64,
-        "grip": 1.001,
-        "brakingMs2": 9.043,
-        "topSpeedKmh": 213.344
+        "kg": 864,
+        "performanceIndex": 66,
+        "grip": 1.101,
+        "brakingMs2": 10.321,
+        "topSpeedKmh": 211.677
       }
     },
     {
@@ -7949,7 +7949,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 230,
         "nm": 300,
@@ -7962,11 +7962,11 @@
       "after": {
         "cv": 230,
         "nm": 300,
-        "kg": 1201,
-        "performanceIndex": 68,
-        "grip": 0.975,
-        "brakingMs2": 8.749,
-        "topSpeedKmh": 234.458
+        "kg": 1165,
+        "performanceIndex": 69,
+        "grip": 1.073,
+        "brakingMs2": 9.982,
+        "topSpeedKmh": 231.416
       }
     },
     {
@@ -8007,7 +8007,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 194,
         "nm": 267,
@@ -8020,11 +8020,11 @@
       "after": {
         "cv": 194,
         "nm": 267,
-        "kg": 1228,
-        "performanceIndex": 60,
-        "grip": 0.961,
-        "brakingMs2": 8.486,
-        "topSpeedKmh": 233.138
+        "kg": 1200,
+        "performanceIndex": 61,
+        "grip": 1.053,
+        "brakingMs2": 9.619,
+        "topSpeedKmh": 231.769
       }
     },
     {
@@ -8064,7 +8064,7 @@
       "artRevision": 8,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 150,
         "nm": 185,
@@ -8077,11 +8077,11 @@
       "after": {
         "cv": 150,
         "nm": 185,
-        "kg": 996,
-        "performanceIndex": 60,
-        "grip": 0.986,
-        "brakingMs2": 8.816,
-        "topSpeedKmh": 213.423
+        "kg": 964,
+        "performanceIndex": 61,
+        "grip": 1.085,
+        "brakingMs2": 10.058,
+        "topSpeedKmh": 211.785
       }
     },
     {
@@ -8113,7 +8113,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 103,
         "nm": 127,
@@ -8126,11 +8126,11 @@
       "after": {
         "cv": 103,
         "nm": 127,
-        "kg": 787,
-        "performanceIndex": 58,
-        "grip": 1.024,
-        "brakingMs2": 9.024,
-        "topSpeedKmh": 188.589
+        "kg": 761,
+        "performanceIndex": 59,
+        "grip": 1.127,
+        "brakingMs2": 10.296,
+        "topSpeedKmh": 187.153
       }
     },
     {
@@ -8162,7 +8162,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 200,
         "nm": 237,
@@ -8175,11 +8175,11 @@
       "after": {
         "cv": 200,
         "nm": 237,
-        "kg": 1066,
-        "performanceIndex": 67,
-        "grip": 0.979,
-        "brakingMs2": 8.685,
-        "topSpeedKmh": 233.461
+        "kg": 1031,
+        "performanceIndex": 68,
+        "grip": 1.077,
+        "brakingMs2": 9.907,
+        "topSpeedKmh": 230.456
       }
     },
     {
@@ -8211,7 +8211,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 51500,
+      "price": 68000,
       "before": {
         "cv": 225,
         "nm": 350,
@@ -8224,11 +8224,11 @@
       "after": {
         "cv": 225,
         "nm": 350,
-        "kg": 1316,
-        "performanceIndex": 63,
-        "grip": 0.961,
-        "brakingMs2": 8.475,
-        "topSpeedKmh": 246.761
+        "kg": 1273,
+        "performanceIndex": 64,
+        "grip": 1.057,
+        "brakingMs2": 9.688,
+        "topSpeedKmh": 246.125
       }
     },
     {
@@ -8260,7 +8260,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 185,
         "nm": 263,
@@ -8273,11 +8273,11 @@
       "after": {
         "cv": 185,
         "nm": 263,
-        "kg": 1269,
-        "performanceIndex": 57,
-        "grip": 0.938,
-        "brakingMs2": 8.29,
-        "topSpeedKmh": 228.407
+        "kg": 1228,
+        "performanceIndex": 58,
+        "grip": 1.032,
+        "brakingMs2": 9.449,
+        "topSpeedKmh": 226.698
       }
     },
     {
@@ -8323,7 +8323,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 156,
         "nm": 210,
@@ -8336,11 +8336,11 @@
       "after": {
         "cv": 156,
         "nm": 210,
-        "kg": 1011,
-        "performanceIndex": 61,
-        "grip": 0.989,
-        "brakingMs2": 8.84,
-        "topSpeedKmh": 216.392
+        "kg": 978,
+        "performanceIndex": 62,
+        "grip": 1.089,
+        "brakingMs2": 10.086,
+        "topSpeedKmh": 214.731
       }
     },
     {
@@ -8385,7 +8385,7 @@
       "artRevision": 4,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 180,
         "nm": 235,
@@ -8398,11 +8398,11 @@
       "after": {
         "cv": 180,
         "nm": 235,
-        "kg": 996,
-        "performanceIndex": 66,
-        "grip": 0.992,
-        "brakingMs2": 8.888,
-        "topSpeedKmh": 223.262
+        "kg": 963,
+        "performanceIndex": 67,
+        "grip": 1.092,
+        "brakingMs2": 10.143,
+        "topSpeedKmh": 221.504
       }
     },
     {
@@ -8428,7 +8428,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 210,
         "nm": 276,
@@ -8441,11 +8441,11 @@
       "after": {
         "cv": 210,
         "nm": 276,
-        "kg": 1100,
-        "performanceIndex": 68,
-        "grip": 0.991,
-        "brakingMs2": 8.884,
-        "topSpeedKmh": 234.448
+        "kg": 1063,
+        "performanceIndex": 69,
+        "grip": 1.09,
+        "brakingMs2": 10.139,
+        "topSpeedKmh": 231.43
       }
     },
     {
@@ -8477,7 +8477,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 180,
         "nm": 235,
@@ -8490,11 +8490,11 @@
       "after": {
         "cv": 180,
         "nm": 235,
-        "kg": 1183,
-        "performanceIndex": 60,
-        "grip": 0.964,
-        "brakingMs2": 8.595,
-        "topSpeedKmh": 233.346
+        "kg": 1144,
+        "performanceIndex": 61,
+        "grip": 1.061,
+        "brakingMs2": 9.804,
+        "topSpeedKmh": 231.596
       }
     },
     {
@@ -8525,7 +8525,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 62500,
+      "price": 78000,
       "before": {
         "cv": 280,
         "nm": 363,
@@ -8538,11 +8538,11 @@
       "after": {
         "cv": 280,
         "nm": 363,
-        "kg": 1137,
-        "performanceIndex": 79,
-        "grip": 0.99,
-        "brakingMs2": 8.879,
-        "topSpeedKmh": 245.986
+        "kg": 1100,
+        "performanceIndex": 81,
+        "grip": 1.09,
+        "brakingMs2": 10.134,
+        "topSpeedKmh": 243.975
       }
     },
     {
@@ -8574,7 +8574,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 218,
         "nm": 290,
@@ -8587,11 +8587,11 @@
       "after": {
         "cv": 218,
         "nm": 290,
-        "kg": 1119,
-        "performanceIndex": 69,
-        "grip": 0.978,
-        "brakingMs2": 8.74,
-        "topSpeedKmh": 229.204
+        "kg": 1082,
+        "performanceIndex": 70,
+        "grip": 1.077,
+        "brakingMs2": 9.972,
+        "topSpeedKmh": 227.382
       }
     },
     {
@@ -8628,7 +8628,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 200,
         "nm": 260,
@@ -8641,11 +8641,11 @@
       "after": {
         "cv": 200,
         "nm": 260,
-        "kg": 1242,
-        "performanceIndex": 62,
-        "grip": 0.962,
-        "brakingMs2": 8.488,
-        "topSpeedKmh": 228.332
+        "kg": 1201,
+        "performanceIndex": 63,
+        "grip": 1.059,
+        "brakingMs2": 9.68,
+        "topSpeedKmh": 226.586
       }
     },
     {
@@ -8671,7 +8671,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 52000,
+      "price": 68000,
       "before": {
         "cv": 230,
         "nm": 309,
@@ -8684,11 +8684,11 @@
       "after": {
         "cv": 230,
         "nm": 309,
-        "kg": 1500,
-        "performanceIndex": 59,
-        "grip": 0.938,
-        "brakingMs2": 8.219,
-        "topSpeedKmh": 231.976
+        "kg": 1449,
+        "performanceIndex": 60,
+        "grip": 1.032,
+        "brakingMs2": 9.392,
+        "topSpeedKmh": 231.409
       }
     },
     {
@@ -8725,7 +8725,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26000,
+      "price": 38000,
       "before": {
         "cv": 101,
         "nm": 113,
@@ -8738,11 +8738,11 @@
       "after": {
         "cv": 101,
         "nm": 113,
-        "kg": 737,
-        "performanceIndex": 59,
-        "grip": 1.02,
-        "brakingMs2": 9.42,
-        "topSpeedKmh": 180.599
+        "kg": 713,
+        "performanceIndex": 60,
+        "grip": 1.123,
+        "brakingMs2": 10.756,
+        "topSpeedKmh": 179.193
       }
     },
     {
@@ -8779,7 +8779,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 208,
         "nm": 275,
@@ -8792,11 +8792,11 @@
       "after": {
         "cv": 208,
         "nm": 275,
-        "kg": 1336,
-        "performanceIndex": 60,
-        "grip": 0.949,
-        "brakingMs2": 8.347,
-        "topSpeedKmh": 228.36
+        "kg": 1292,
+        "performanceIndex": 61,
+        "grip": 1.044,
+        "brakingMs2": 9.517,
+        "topSpeedKmh": 226.627
       }
     },
     {
@@ -8828,7 +8828,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 59000,
+      "price": 74000,
       "before": {
         "cv": 242,
         "nm": 302,
@@ -8841,11 +8841,11 @@
       "after": {
         "cv": 242,
         "nm": 302,
-        "kg": 1292,
-        "performanceIndex": 67,
-        "grip": 0.955,
-        "brakingMs2": 8.518,
-        "topSpeedKmh": 238.191
+        "kg": 1250,
+        "performanceIndex": 68,
+        "grip": 1.051,
+        "brakingMs2": 9.715,
+        "topSpeedKmh": 236.322
       }
     },
     {
@@ -8882,7 +8882,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 192,
         "nm": 180,
@@ -8895,11 +8895,11 @@
       "after": {
         "cv": 192,
         "nm": 180,
-        "kg": 981,
-        "performanceIndex": 70,
-        "grip": 0.998,
-        "brakingMs2": 9.003,
-        "topSpeedKmh": 222.983
+        "kg": 959,
+        "performanceIndex": 71,
+        "grip": 1.094,
+        "brakingMs2": 10.215,
+        "topSpeedKmh": 221.594
       }
     },
     {
@@ -8931,7 +8931,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 125,
         "nm": 145,
@@ -8944,11 +8944,11 @@
       "after": {
         "cv": 125,
         "nm": 145,
-        "kg": 940,
-        "performanceIndex": 57,
-        "grip": 0.989,
-        "brakingMs2": 8.977,
-        "topSpeedKmh": 193.576
+        "kg": 909,
+        "performanceIndex": 58,
+        "grip": 1.088,
+        "brakingMs2": 10.246,
+        "topSpeedKmh": 192.105
       }
     },
     {
@@ -8984,7 +8984,7 @@
       "artRevision": 2,
       "width": 320,
       "height": 128,
-      "price": 51500,
+      "price": 68000,
       "before": {
         "cv": 204,
         "nm": 271,
@@ -8997,11 +8997,11 @@
       "after": {
         "cv": 204,
         "nm": 271,
-        "kg": 1181,
-        "performanceIndex": 64,
-        "grip": 0.965,
-        "brakingMs2": 8.523,
-        "topSpeedKmh": 225.979
+        "kg": 1143,
+        "performanceIndex": 65,
+        "grip": 1.062,
+        "brakingMs2": 9.741,
+        "topSpeedKmh": 225.355
       }
     },
     {
@@ -9033,7 +9033,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 38500,
+      "price": 54000,
       "before": {
         "cv": 140,
         "nm": 170,
@@ -9046,11 +9046,11 @@
       "after": {
         "cv": 140,
         "nm": 170,
-        "kg": 897,
-        "performanceIndex": 63,
-        "grip": 1.014,
-        "brakingMs2": 9.144,
-        "topSpeedKmh": 207.213
+        "kg": 868,
+        "performanceIndex": 65,
+        "grip": 1.116,
+        "brakingMs2": 10.461,
+        "topSpeedKmh": 206.647
       }
     },
     {
@@ -9082,7 +9082,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 235,
         "nm": 344,
@@ -9095,11 +9095,11 @@
       "after": {
         "cv": 235,
         "nm": 344,
-        "kg": 1431,
-        "performanceIndex": 61,
-        "grip": 0.947,
-        "brakingMs2": 8.306,
-        "topSpeedKmh": 242.993
+        "kg": 1391,
+        "performanceIndex": 62,
+        "grip": 1.038,
+        "brakingMs2": 9.417,
+        "topSpeedKmh": 241.607
       }
     },
     {
@@ -9131,7 +9131,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 72500,
+      "price": 91000,
       "before": {
         "cv": 330,
         "nm": 441,
@@ -9144,11 +9144,11 @@
       "after": {
         "cv": 330,
         "nm": 441,
-        "kg": 1475,
-        "performanceIndex": 73,
-        "grip": 0.955,
-        "brakingMs2": 8.426,
-        "topSpeedKmh": 246.637
+        "kg": 1426,
+        "performanceIndex": 75,
+        "grip": 1.051,
+        "brakingMs2": 9.632,
+        "topSpeedKmh": 245.9
       }
     },
     {
@@ -9180,7 +9180,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 35500,
+      "price": 50000,
       "before": {
         "cv": 130,
         "nm": 149,
@@ -9193,11 +9193,11 @@
       "after": {
         "cv": 130,
         "nm": 149,
-        "kg": 801,
-        "performanceIndex": 65,
-        "grip": 1.017,
-        "brakingMs2": 9.222,
-        "topSpeedKmh": 193.26
+        "kg": 783,
+        "performanceIndex": 66,
+        "grip": 1.116,
+        "brakingMs2": 10.466,
+        "topSpeedKmh": 192.067
       }
     },
     {
@@ -9223,7 +9223,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 26500,
+      "price": 39000,
       "before": {
         "cv": 106,
         "nm": 145,
@@ -9236,11 +9236,11 @@
       "after": {
         "cv": 106,
         "nm": 145,
-        "kg": 842,
-        "performanceIndex": 56,
-        "grip": 1.005,
-        "brakingMs2": 9.197,
-        "topSpeedKmh": 188.614
+        "kg": 814,
+        "performanceIndex": 58,
+        "grip": 1.106,
+        "brakingMs2": 10.5,
+        "topSpeedKmh": 187.193
       }
     },
     {
@@ -9266,7 +9266,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 109500,
+      "price": 131000,
       "before": {
         "cv": 426,
         "nm": 515,
@@ -9279,11 +9279,11 @@
       "after": {
         "cv": 426,
         "nm": 515,
-        "kg": 1023,
-        "performanceIndex": 114,
-        "grip": 1.017,
-        "brakingMs2": 9.297,
-        "topSpeedKmh": 293.803
+        "kg": 990,
+        "performanceIndex": 117,
+        "grip": 1.119,
+        "brakingMs2": 10.642,
+        "topSpeedKmh": 292.777
       }
     },
     {
@@ -9315,7 +9315,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 354500,
+      "price": 399000,
       "before": {
         "cv": 811,
         "nm": 881,
@@ -9328,11 +9328,11 @@
       "after": {
         "cv": 811,
         "nm": 881,
-        "kg": 995,
-        "performanceIndex": 189,
-        "grip": 1.055,
-        "brakingMs2": 9.725,
-        "topSpeedKmh": 236.488
+        "kg": 963,
+        "performanceIndex": 195,
+        "grip": 1.163,
+        "brakingMs2": 11.142,
+        "topSpeedKmh": 235.548
       }
     },
     {
@@ -9364,7 +9364,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 250,
         "nm": 300,
@@ -9377,11 +9377,11 @@
       "after": {
         "cv": 250,
         "nm": 300,
-        "kg": 1241,
-        "performanceIndex": 69,
-        "grip": 0.957,
-        "brakingMs2": 8.487,
-        "topSpeedKmh": 247.842
+        "kg": 1213,
+        "performanceIndex": 70,
+        "grip": 1.049,
+        "brakingMs2": 9.621,
+        "topSpeedKmh": 246.322
       }
     },
     {
@@ -9413,7 +9413,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 46000,
+      "price": 61000,
       "before": {
         "cv": 200,
         "nm": 300,
@@ -9426,11 +9426,11 @@
       "after": {
         "cv": 200,
         "nm": 300,
-        "kg": 1131,
-        "performanceIndex": 64,
-        "grip": 0.974,
-        "brakingMs2": 8.658,
-        "topSpeedKmh": 233.023
+        "kg": 1105,
+        "performanceIndex": 65,
+        "grip": 1.068,
+        "brakingMs2": 9.817,
+        "topSpeedKmh": 231.617
       }
     },
     {
@@ -9462,7 +9462,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 53000,
+      "price": 68000,
       "before": {
         "cv": 250,
         "nm": 330,
@@ -9475,11 +9475,11 @@
       "after": {
         "cv": 250,
         "nm": 330,
-        "kg": 1296,
-        "performanceIndex": 67,
-        "grip": 0.948,
-        "brakingMs2": 8.394,
-        "topSpeedKmh": 247.888
+        "kg": 1267,
+        "performanceIndex": 68,
+        "grip": 1.039,
+        "brakingMs2": 9.513,
+        "topSpeedKmh": 246.38
       }
     },
     {
@@ -9505,7 +9505,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 190,
         "nm": 245,
@@ -9518,11 +9518,11 @@
       "after": {
         "cv": 190,
         "nm": 245,
-        "kg": 1045,
-        "performanceIndex": 66,
-        "grip": 0.987,
-        "brakingMs2": 8.785,
-        "topSpeedKmh": 234.477
+        "kg": 1010,
+        "performanceIndex": 68,
+        "grip": 1.086,
+        "brakingMs2": 10.024,
+        "topSpeedKmh": 231.476
       }
     },
     {
@@ -9554,7 +9554,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 160,
         "nm": 225,
@@ -9567,11 +9567,11 @@
       "after": {
         "cv": 160,
         "nm": 225,
-        "kg": 939,
-        "performanceIndex": 64,
-        "grip": 0.986,
-        "brakingMs2": 8.881,
-        "topSpeedKmh": 214.339
+        "kg": 908,
+        "performanceIndex": 65,
+        "grip": 1.085,
+        "brakingMs2": 10.133,
+        "topSpeedKmh": 212.657
       }
     },
     {
@@ -9597,7 +9597,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 27000,
+      "price": 39000,
       "before": {
         "cv": 112,
         "nm": 153,
@@ -9610,11 +9610,11 @@
       "after": {
         "cv": 112,
         "nm": 153,
-        "kg": 764,
+        "kg": 739,
         "performanceIndex": 60,
-        "grip": 1.013,
-        "brakingMs2": 8.952,
-        "topSpeedKmh": 180.575
+        "grip": 1.115,
+        "brakingMs2": 10.212,
+        "topSpeedKmh": 179.151
       }
     },
     {
@@ -9646,7 +9646,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 210,
         "nm": 300,
@@ -9659,11 +9659,11 @@
       "after": {
         "cv": 210,
         "nm": 300,
-        "kg": 1141,
-        "performanceIndex": 65,
-        "grip": 0.969,
-        "brakingMs2": 8.621,
-        "topSpeedKmh": 226.252
+        "kg": 1104,
+        "performanceIndex": 67,
+        "grip": 1.066,
+        "brakingMs2": 9.833,
+        "topSpeedKmh": 224.464
       }
     },
     {
@@ -9695,7 +9695,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 42000,
+      "price": 56000,
       "before": {
         "cv": 190,
         "nm": 245,
@@ -9708,11 +9708,11 @@
       "after": {
         "cv": 190,
         "nm": 245,
-        "kg": 1182,
-        "performanceIndex": 62,
-        "grip": 0.966,
-        "brakingMs2": 8.515,
-        "topSpeedKmh": 222.355
+        "kg": 1143,
+        "performanceIndex": 63,
+        "grip": 1.063,
+        "brakingMs2": 9.71,
+        "topSpeedKmh": 220.645
       }
     },
     {
@@ -9744,7 +9744,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 30000,
+      "price": 42000,
       "before": {
         "cv": 125,
         "nm": 152,
@@ -9757,11 +9757,11 @@
       "after": {
         "cv": 125,
         "nm": 152,
-        "kg": 882,
-        "performanceIndex": 58,
-        "grip": 1.015,
-        "brakingMs2": 8.267,
-        "topSpeedKmh": 205.601
+        "kg": 853,
+        "performanceIndex": 59,
+        "grip": 1.118,
+        "brakingMs2": 9.415,
+        "topSpeedKmh": 203.007
       }
     },
     {
@@ -9793,7 +9793,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 40500,
+      "price": 53000,
       "before": {
         "cv": 224,
         "nm": 320,
@@ -9806,11 +9806,11 @@
       "after": {
         "cv": 224,
         "nm": 320,
-        "kg": 1380,
-        "performanceIndex": 61,
-        "grip": 0.949,
-        "brakingMs2": 8.357,
-        "topSpeedKmh": 224.556
+        "kg": 1360,
+        "performanceIndex": 62,
+        "grip": 1.043,
+        "brakingMs2": 9.515,
+        "topSpeedKmh": 221.579
       }
     },
     {
@@ -9836,7 +9836,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 125,
         "nm": 152,
@@ -9849,11 +9849,11 @@
       "after": {
         "cv": 125,
         "nm": 152,
-        "kg": 895,
-        "performanceIndex": 59,
-        "grip": 1.009,
-        "brakingMs2": 9.09,
-        "topSpeedKmh": 203.501
+        "kg": 866,
+        "performanceIndex": 60,
+        "grip": 1.111,
+        "brakingMs2": 10.375,
+        "topSpeedKmh": 201.952
       }
     },
     {
@@ -9885,7 +9885,7 @@
       "artRevision": 1,
       "width": 320,
       "height": 128,
-      "price": 31500,
+      "price": 44000,
       "before": {
         "cv": 139,
         "nm": 160,
@@ -9898,11 +9898,11 @@
       "after": {
         "cv": 139,
         "nm": 160,
-        "kg": 864,
-        "performanceIndex": 63,
-        "grip": 1.005,
-        "brakingMs2": 9.083,
-        "topSpeedKmh": 208.395
+        "kg": 836,
+        "performanceIndex": 65,
+        "grip": 1.106,
+        "brakingMs2": 10.367,
+        "topSpeedKmh": 206.766
       }
     }
   ],

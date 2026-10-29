@@ -11,9 +11,11 @@ export function partStatDeltas(part,direction=1){
  return Object.fromEntries(Object.entries(PART_STAT_BONUSES).map(([stat,[bonus,integer,sign=1]])=>[stat,(integer?Math.round(part[bonus]):part[bonus])*sign*direction]));
 }
 export function restoredTuningStats(garage){
+ if(garage.racePrepared)return Object.fromEntries(['revving','transmission','turnSlow','turnFast'].map(k=>[k,garage[k]]));
  return Object.fromEntries([['revving','revvBonus'],['transmission','transBonus'],['turnSlow','turnSlowBonus'],['turnFast','turnFastBonus']].map(([stat,bonus])=>[stat,garage.car[stat]+garage.mods.reduce((sum,mod)=>sum+mod.part[bonus],0)]));
 }
 export function replacePart(garage,part){
+ if(garage.racePrepared)return {before:{...garage},after:{...garage},installed:garage.mods?.find(m=>m.part?.name===part.name)?.part||null,alreadyMounted:true,locked:true};
  const before={...garage,...restoredTuningStats(garage)};
  const installed=garage.mods.find(mod=>mod.part.name===part.name);
  const next={...before};

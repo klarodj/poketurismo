@@ -30,7 +30,7 @@ async function recoveryPlan(tx,user,garages){
 async function workshop(tx,userId){
  const user=await tx.user.findUnique({where:{id:userId}});if(!user)fail(404,'Giocatore inesistente');
  const cars=(await tx.garage.findMany({where:{userId},include:garageInclude,orderBy:{id:'asc'}})).map(car=>({...car,...restoredHandlingStats(car)}));
- return {cars:cars.map(car=>({id:car.id,image:car.car.image,paintColour:paintFor(car),paint:paintQuote(car),name:`${car.car.brand?.name||''} ${car.car.name}`.trim(),engineHealth:car.engineHealth,tireGrip:car.tireGrip,km:car.km,serviceKm:car.serviceKm,currentFuel:car.currentFuel,performanceIndex:performanceIndex(car),services:maintenanceQuotes(car).map(service=>({...service,key:hash([car,service])}))})),recovery:await recoveryPlan(tx,user,cars)};
+ return {cars:cars.map(car=>({id:car.id,image:car.car.image,paintColour:paintFor(car),racePrepared:car.racePrepared,racePreparation:require('./racePreparation').quote(car),paint:paintQuote(car),name:`${car.car.brand?.name||''} ${car.car.name}`.trim(),engineHealth:car.engineHealth,tireGrip:car.tireGrip,km:car.km,serviceKm:car.serviceKm,currentFuel:car.currentFuel,performanceIndex:performanceIndex(car),services:maintenanceQuotes(car).map(service=>({...service,key:hash([car,service])}))})),recovery:await recoveryPlan(tx,user,cars)};
 }
 async function service(tx,userId,body,params){
  const item=await tx.garage.findFirst({where:{id:positiveId(params.garageId),userId},include:garageInclude});if(!item)fail(403,'Auto non posseduta');const car={...item,...restoredHandlingStats(item)};

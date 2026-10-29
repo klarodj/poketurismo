@@ -43,7 +43,7 @@ async function snapshot(tx, userId, race) {
 }
 function carSnapshot(garage) {
   return { ...Object.fromEntries([...CAR_STATS, 'cv', 'nm', 'kg', 'km', 'engineHealth', 'tireGrip', 'serviceKm', 'currentFuel', 'fuelType'].map(key => [key, garage[key]])),
-    cc:garage.car.cc,engineType:garage.car.engineType,baseCv: garage.car.cv, baseKg: garage.car.kg, velMax: garage.car.velMax, zeroToHundred: garage.car.zeroToHundred, driveType: garage.car.driveType,
+    ...(garage.racePrepared?{racePrepared:true}:{}),cc:garage.car.cc,engineType:garage.car.engineType,baseCv: garage.car.cv, baseKg: garage.car.kg, velMax: garage.car.velMax, zeroToHundred: garage.car.zeroToHundred, driveType: garage.car.driveType,
     id: garage.id, name: garage.car.name, brand: garage.car.brand?.name || '', image: garage.car.image,paintColour:paintFor(garage) };
 }
 async function startRace(tx, userId, body) {
@@ -64,6 +64,7 @@ async function startRace(tx, userId, body) {
   let garage = await tx.garage.findFirst({ where: { id: user.carDrive, userId }, include: garageInclude });
   if (!garage) fail(400, 'Equipaggia prima una tua auto');
   garage = { ...garage, ...restoredHandlingStats(garage) };
+  if(mode==='street'&&garage.racePrepared)fail(400,'Auto da gara: solo pista, non puoi partecipare alle clandestine');
   if (garage.engineHealth <= 0) fail(400, 'Ripara il motore prima di gareggiare');
   if (garage.currentFuel <= 0) fail(400, 'Fai rifornimento prima di gareggiare');
   const streetMatch = mode === 'street' && body.customTrackId === undefined && body.opponentId === undefined ? await acceptEncounter(tx, userId, body) : null;
@@ -91,7 +92,7 @@ async function startRace(tx, userId, body) {
     track = streetMatch.track;
     trackId = track.id;
   } else if (demo) {
-    track = { name: DEMO_TRACK.name, lenght: DEMO_TRACK.distanceKm * 1000, builds: DEMO_TRACK.sections.map(section => ({ section })) };
+    track = { type:{name:'Circuit'},name: DEMO_TRACK.name, lenght: DEMO_TRACK.distanceKm * 1000, builds: DEMO_TRACK.sections.map(section => ({ section })) };
     trackId = null;
   } else if (mode === 'street' && body.customTrackId !== undefined) {
     const custom = await tx.customTrack.findUnique({ where: { id: positiveId(body.customTrackId) }, include: { sections: { include: { section: true }, orderBy: { ord: 'asc' } } } });
@@ -110,6 +111,7 @@ async function startRace(tx, userId, body) {
     track = all[mode === 'street' ? randomInt(all.length) : 0];
     trackId = track.id;
   }
+  const trackError=require('../shared/raceEquipment.mjs').raceTrackError(garage,{...track,catalog:trackCatalogInfo(track.name)},mode);if(trackError)fail(400,trackError);
   const sections = track.builds.map(build => build.section);
   if(body.timeTrial&&trackCatalogInfo(track.name)?.format!=='circuit'&&!['Track','Circuit'].includes(track.type?.name))fail(400,'Le prove a tempo richiedono un circuito');
   if (!sections.length || sections.length > 200) fail(400, 'Il tracciato deve avere da 1 a 200 settori');

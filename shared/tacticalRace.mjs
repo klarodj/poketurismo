@@ -1,3 +1,4 @@
+import {raceEquipment} from './raceEquipment.mjs';
 import {sectorFuel} from './fuelConsumption.mjs';
 import { brakingFamiliarity } from './driverDevelopment.mjs';
 import { tacticalContext, contextualDecision, sectionFeatures, incidentCue, tacticalMovePlayable } from './raceContext.mjs';
@@ -32,7 +33,8 @@ function vehicleModel(car, environment = {}) {
   const stockPower = Math.max(1, car.baseCv || car.cv || 100) * 735.5 * 0.82;
   const stockTop = clamp(Number(car.velMax || 180), 80, 450) / 3.6;
   const rolling = mass * G * 0.014;
-  const drag = Math.max(0.12, (stockPower - baseMass * G * 0.014 * stockTop) / stockTop ** 3);
+  const equipment=raceEquipment(car,environment);
+  const drag = Math.max(0.12, (stockPower - baseMass * G * 0.014 * stockTop) / stockTop ** 3)*equipment.drag;
   let lo = 0, hi = 150;
   for (let i = 0; i < 35; i++) { const speed = (lo + hi) / 2; if (rolling * speed + drag * speed ** 3 > power) hi = speed; else lo = speed; }
   const weather = (environment.weather || '').toLowerCase(), surface = (environment.surface || '').toLowerCase();
@@ -40,8 +42,8 @@ function vehicleModel(car, environment = {}) {
   const gripSurface = /dirt|gravel|terra|sterr/.test(surface) ? 0.82 : 1;
   const tire = 0.65 + 0.35 * clamp((car.tireGrip ?? 100) / 100, 0, 1);
   const handling = clamp(((car.turnSlow || 50) + (car.turnFast || 50)) / 2, 0, 100);
-  const mu = (0.82 + 0.0028 * handling) * tire * gripWeather * gripSurface * clamp((1100 / mass) ** 0.08, 0.91, 1.06);
-  const brake = mu * G * (0.8 + clamp(car.brake ?? 50, 0, 100) * 0.002);
+  const mu = equipment.grip*(0.82 + 0.0028 * handling) * tire * gripWeather * gripSurface * clamp((1100 / mass) ** 0.08, 0.91, 1.06);
+  const brake = equipment.braking*mu * G * (0.8 + clamp(car.brake ?? 50, 0, 100) * 0.002);
   const driveGrip = /AWD|4WD|4X4/i.test(car.driveType || '') ? 0.82 : /FR|MR|RR|RWD/i.test(car.driveType || '') ? 0.66 : 0.58;
   const launch = 27.7778 / clamp(Number(car.zeroToHundred || 10), 2, 25) * 1.6 * Math.sqrt(Math.max(0.1, (car.cv || 100) / (car.baseCv || car.cv || 100)));
   return { mass, power, rolling, drag, topSpeed: lo, mu, brake, launch, driveGrip };

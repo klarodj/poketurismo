@@ -91,10 +91,10 @@ export default function UsedCars() {
             key={item.id}
             author="Mercatino Poketurismo"
             date="Annuncio attivo"
-            title={`${item.car.brand.name} ${item.car.name}`}
+            title={`${item.car.brand.name} ${item.car.name}${item.racePrepared?' · DA GARA · SOLO PISTA':''}`}
             listing={item}
             carDetails={{
-              ...item.car,paintColour:item.paintColour,
+              ...item.car,racePrepared:item.racePrepared,paintColour:item.paintColour,
               brand: item.car.brand.name,
               cv: item.cv, kg: item.kg, currentFuel: item.currentFuel,
               marketTier: item.marketTier?.name, starterFriendly: item.starterFriendly,

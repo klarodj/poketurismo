@@ -11,7 +11,7 @@ export default function UsedCarDetails({ listing }) {
   const mods = listing.mods ?? [];
   const stats = calculateRaceStats(listing);
   const specifications = [
-    ['Colore',paintName(paintFor(listing))], ['Anno', car.year], ['Cilindrata', `${format(car.cc)} cm³`],
+    ['Colore',listing.racePrepared?'Livrea da gara':paintName(paintFor(listing))], ['Anno', car.year], ['Cilindrata', `${format(car.cc)} cm³`],
     ['Motore', car.engineType], ['Trazione', car.driveType],
     ['Potenza attuale', `${format(listing.cv)} CV`], ['Coppia attuale', `${format(listing.nm)} Nm`],
     ['Peso attuale', `${format(listing.kg)} kg`], ['Chilometri', `${format(listing.km)} km`],
@@ -30,7 +30,7 @@ export default function UsedCarDetails({ listing }) {
       <div className="border-t border-[#7799CC] p-3 space-y-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-white border border-gray-300 p-3 flex items-center justify-center min-h-40">
-            <RaceCarArtwork car={{...car,paintColour:listing.paintColour}} large/>
+            {listing.racePrepared&&<p className="period-notice">Auto da gara · solo pista. Trasformazione definitiva, componenti di livello 3 vincolati.</p>}<RaceCarArtwork car={{...car,racePrepared:listing.racePrepared,paintColour:listing.paintColour}} large/>
           </div>
           <div>
             <h3 className="font-bold text-[#006699] mb-2">Scheda dell’auto in vendita</h3>

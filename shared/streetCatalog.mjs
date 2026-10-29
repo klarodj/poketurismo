@@ -36,6 +36,7 @@ for(const track of STREET_TRACKS){track.name=periodTrackName(track.name);track.l
 
 export function streetAccessReasons(zone,ctx){
  const reasons=[];
+ if(ctx.garage?.racePrepared)reasons.push('Auto da gara: solo pista, vietate le clandestine');
  if(ctx.user.level<zone.minLevel)reasons.push(`Livello pilota ${zone.minLevel}`);
  if(!ctx.garage)reasons.push('Equipaggia un’auto');
  else if(streetPerformance(ctx.garage)<zone.minPerformance)reasons.push(`Indice prestazioni attuale ${zone.minPerformance}`);

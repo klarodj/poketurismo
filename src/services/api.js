@@ -130,3 +130,5 @@ export const fetchPhoneInbox=userId=>request(`/phone/${userId}`);
 export const changeFriendship=(userId,peerId,choice,requestKey)=>action('/meet/friendship',{userId,peerId,action:choice,...(requestKey?{requestKey}:{})});
 
 export const repaintCar=(garageId,userId,paintColour,quoteKey)=>action(`/garage/${garageId}/paint`,{userId,paintColour,quoteKey});
+
+export const prepareCarForRace=(garageId,userId,quoteKey)=>action(`/garage/${garageId}/race-preparation`,{userId,quoteKey,confirmPermanent:true,confirmTrackOnly:true});
