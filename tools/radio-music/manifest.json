@@ -1,0 +1,53 @@
+[
+  {
+    "id": "tangenziale",
+    "title": "Tangenziale, ore 22",
+    "artist": "Club Motori del Nord",
+    "src": "/audio/radio/tangenziale-chip-dnb-v2.mp3",
+    "bpm": 172,
+    "duration": 78.14,
+    "style": "Chiptune / drum and bass",
+    "revision": 2,
+    "bars": 56,
+    "sampleRate": 32000,
+    "channels": 2,
+    "peakDbFS": -1.01,
+    "rmsDbFS": -16.81,
+    "sha256": "097b0f69f47744b5914165b3ac0e07b1a877d82b798dde6de1e709b8358c1e28",
+    "bytes": 1238147
+  },
+  {
+    "id": "ultimo-gettone",
+    "title": "Ultimo gettone",
+    "artist": "Club Motori del Nord",
+    "src": "/audio/radio/ultimo-gettone-chip-dnb-v2.mp3",
+    "bpm": 176,
+    "duration": 76.36,
+    "style": "Chiptune / drum and bass",
+    "revision": 2,
+    "bars": 56,
+    "sampleRate": 32000,
+    "channels": 2,
+    "peakDbFS": -1.01,
+    "rmsDbFS": -16.08,
+    "sha256": "bc5eea0fcda6a9ba3255554b3f27d58a4fdc012d1bc6ca1d2c1c9d464290e84b",
+    "bytes": 1259634
+  },
+  {
+    "id": "passo-notturno",
+    "title": "Passo notturno",
+    "artist": "Club Motori del Nord",
+    "src": "/audio/radio/passo-notturno-chip-dnb-v2.mp3",
+    "bpm": 168,
+    "duration": 80.0,
+    "style": "Chiptune / drum and bass",
+    "revision": 2,
+    "bars": 56,
+    "sampleRate": 32000,
+    "channels": 2,
+    "peakDbFS": -1.01,
+    "rmsDbFS": -16.73,
+    "sha256": "29fe90067f37e7231288fe806a1f53926aa506bdd5b469e351a5adf979affa15",
+    "bytes": 1248762
+  }
+]
