@@ -33,3 +33,9 @@ Il seed generale accetta opzioni esplicite per serie e pulizia. Il validatore pr
 Nuova icona podio con tre piloti, tute e caschi di fine anni Novanta/primi Duemila, pixel art 128×128: `public/images/world/sections/autodrome-aci.png`. Creata con **image_gen integrato**, originale conservato in `tools/section-art/inputs/autodrome-aci.png`; prompt completo e provenienza in `tools/section-art/aci-prompt.json` e `records.json`. Riduzione nearest-neighbour tramite `tools/section-art/build.cjs`, hash in manifest. Le nove immagini precedenti restano identiche. L’icona è contenuta senza tagliare testa o piedi dei piloti.
 
 324 test gioco e 12 account/gateway superati; lint e build riusciti. Collaudo PostgreSQL isolato di tutti e cinque gli eventi, 35 avversari e 20 gare, senza ritiri nella prova completa. Le posizioni cambiano fra vetture e circuiti; nessuna vittoria automatica garantita dall’iscrizione. Browser a 320, 390 e 1280 px: menu di quattro attività, elenchi separati 6/5, requisiti, pulsanti, rifiuto delle stradali, podio intero, nessuno scorrimento orizzontale o errore JavaScript/asset. Report e schermate privati in `.preview/aci-qa`.
+
+## Rilascio verificato · 30 ottobre
+
+Funzionalità pubblicata da `f083998` sull’istanza unica 5174, gateway 5184. Backup completo prima del rilascio e copia di build/dati in `/home/klaro/.backups/poketurismo/aci-csai-20261029T235503Z`. Audit delle 32 tabelle: aggiunti soltanto cinque campionati e venti round; tutte le righe precedenti identiche. Secondo seed senza modifiche. Nessuna stagione o partita azzerata.
+
+Browser sulla build pubblicata, con soli dati sintetici intercettati in lettura, a 390/1280 px: navigazione e nuove voci riuscite. Health, icona e primi 4 KiB JS/CSS confrontati su entrambi i Funnel 443/8443. API campionati anonima 401 come previsto. Servizi attivi; nessun listener 5173/3001/5197. Database temporaneo eliminato dopo il collaudo, report in `.preview/aci-qa`.
