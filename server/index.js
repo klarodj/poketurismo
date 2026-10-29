@@ -61,10 +61,11 @@ app.get('/api/brands', endpoint(() => prisma.brand.findMany({ orderBy: { name: '
 app.get('/api/tuning/:userId',endpoint(req=>transaction(prisma,tx=>tuning.tuning(tx,accounts.playerId(req,req.params.userId),req.query.garageId))));
 app.get('/api/parts', endpoint(() => prisma.part.findMany({ orderBy: { id: 'asc' } })));
 app.get('/api/tracks', endpoint(async () => (await prisma.track.findMany({ include: { type: true, surface: true, meteo: true, builds: { include: { section: true }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })).map(track => ({ ...track, catalog: trackCatalogInfo(track.name) }))));
-app.get('/api/market', endpoint(async () => {
-  const cars = await prisma.garage.findMany({ where: { userId: -1 }, include: garageInclude });
-  return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item) })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
-}));
+app.get('/api/market', endpoint(() => transaction(prisma,async tx => {
+  const stock=await require('./dailyMarket').ensureDailyMarket(tx),players=await require('./dailyMarket').playerListingIds(tx);
+  const cars = await tx.garage.findMany({ where: { userId: -1 }, include: garageInclude });
+  return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item),listingSource:players.has(item.id)?'player':stock.listingIds.includes(item.id)?'daily':'existing',marketDay:stock.day })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
+})));
 app.get('/api/phone/:userId/notifications',endpoint(req=>transaction(prisma,tx=>require('./phone').notifications(tx,accounts.playerId(req,req.params.userId)))));
 app.get('/api/phone/:userId',endpoint(req=>transaction(prisma,tx=>require('./phone').inbox(tx,accounts.playerId(req,req.params.userId)))));
 app.get('/api/meet', endpoint(req => transaction(prisma, tx => carMeet.meet(tx, accounts.playerId(req, req.query.userId)))));
@@ -91,6 +92,7 @@ mutate('/api/player/:id/equip', 'equip', async (tx, userId, body, params) => {
 }, 'put');
 mutate('/api/purchase', 'purchase-car', async (tx, userId, body) => {
   if (body.marketGarageId !== undefined) {
+    await require('./dailyMarket').ensureDailyMarket(tx);
     const id = positiveId(body.marketGarageId);
     const listing = await tx.garage.findFirst({ where: { id, userId: -1 }, include: garageInclude });
     if (!listing) fail(404, 'Annuncio non più disponibile');
@@ -116,6 +118,7 @@ mutate('/api/market/sell', 'sell-car', async (tx, userId, body) => {
   const askingPrice = usedRetailPrice(item.car, item);
   await tx.user.upsert({ where: { id: -1 }, update: {}, create: { id: -1, username: 'Mercato', password: '', mail: '', carDrive: 0, ...Object.fromEntries(PILOT_STATS.map(key => [key, 0])) } });
   await tx.garage.update({ where: { id: item.id }, data: { userId: -1, sellPrice: askingPrice } });
+  await require('./dailyMarket').markPlayerListing(tx,item.id);
   const user = await tx.user.findUnique({ where: { id: userId } });
   await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(sellValue) }, ...(user.carDrive === item.id ? { carDrive: 0 } : {}) } });
   return { ...await snapshot(tx, userId), sellValue };
@@ -167,9 +170,9 @@ mutate('/api/workshop/repay','workshop-repay',workshop.repay);
 mutate('/api/garage/:garageId/refuel', 'refuel', async (tx, userId, body, params) => {
   const garage = await ownGarage(tx, userId, params.garageId);
   if (!['Normale', 'Premium'].includes(body.fuelType) || typeof body.liters !== 'number' || !Number.isFinite(body.liters) || body.liters <= 0 || body.liters > 45) fail(400, 'Rifornimento non valido');
-  const liters = Math.min(Math.round(body.liters * 100) / 100, Math.round((45 - garage.currentFuel) * 100) / 100);
+  const quote=require('../shared/refuelling.mjs').refuelQuote(garage,body.liters,body.fuelType),liters=quote.liters;
   if (liters <= 0) fail(400, 'Serbatoio già pieno');
-  const price = cents(liters * (body.fuelType === 'Premium' ? 2.5 : 1.5)) / 100;
+  const price = quote.cost;
   await charge(tx, userId, price);
   const fuelType = body.fuelType;
   await tx.garage.update({ where: { id: garage.id }, data: { currentFuel: Math.round((garage.currentFuel + liters) * 100) / 100, fuelType } });
@@ -287,6 +290,8 @@ if (require.main === module) {
     if (error) { console.error(`Impossibile avviare il backend sulla porta ${port}: ${error.message}`); process.exitCode = 1; return; }
     try {
       await prisma.$queryRaw`SELECT 1`;
+      await transaction(prisma,tx=>require('./dailyMarket').ensureDailyMarket(tx));
+      require('./dailyMarket').startDailyMarketClock(prisma);
       const actualPort = server.address().port;
       if (process.env.POKETURISMO_READY_FILE) {
         const fs = require('node:fs');

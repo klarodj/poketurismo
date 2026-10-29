@@ -1,5 +1,5 @@
 import LocationGuide from '../components/LocationGuide';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import usePlayerStore from '../store/playerStore';
 import useGameStore from '../store/gameStore';
 import ForumPost from '../components/ForumPost';
@@ -9,6 +9,7 @@ import { fetchMarket, purchaseCar } from '../services/api';
 export default function UsedCars() {
   const { id: userId, money } = usePlayerStore();
   const { triggerEvent } = useGameStore();
+  const refreshEpoch=useRef(0);
   const [marketCars, setMarketCars] = useState([]);
   const [limit,setLimit]=useState(8);
   const [error,setError]=useState('');
@@ -20,13 +21,14 @@ export default function UsedCars() {
   const filtered = marketCars.filter(item => (tier === 'all' || item.marketTier?.id === tier) && (!affordableOnly || item.sellPrice <= money));
 
   useEffect(() => {
-    fetchMarket().then(data => {
-      setMarketCars(data);
+    let live=true;
+    const refresh=()=>{if(document.hidden)return;const epoch=++refreshEpoch.current;fetchMarket().then(data => {
+      if(!live||epoch!==refreshEpoch.current)return;setError('');setMarketCars(data);
       setLoading(false);
     }).catch(err => {
-      setError(err.message);
+      if(!live||epoch!==refreshEpoch.current)return;setError(err.message);
       setLoading(false);
-    });
+    });};refresh();const timer=setInterval(refresh,60000);document.addEventListener('visibilitychange',refresh);return()=>{live=false;clearInterval(timer);document.removeEventListener('visibilitychange',refresh);};
   }, []);
 
   const handleBuy = async (car) => {
@@ -41,6 +43,7 @@ export default function UsedCars() {
           message: `Hai comprato l'auto! Si trova nel tuo Garage.`
         });
         
+        refreshEpoch.current++;
         // Remove from local market list
         setMarketCars(prev => prev.filter(c => c.id !== car.id));
       } catch {
@@ -69,7 +72,7 @@ export default function UsedCars() {
       
       <div className="px-4 mb-4 space-y-3 text-sm">
         <p className="font-bold text-[#006699]">Saldo disponibile: €{money.toLocaleString('it-IT')} · Annunci: {filtered.length}</p>
-        <p>Le auto Primi passi sono adatte per cominciare. Conserva un margine per carburante, gomme e manutenzione.</p>
+        <p>Gli usati del gioco cambiano ogni giorno alle 00:00, ora italiana. Gli annunci dei giocatori restano disponibili fino alla vendita. Le auto Primi passi sono adatte per cominciare. Conserva un margine per carburante, gomme e manutenzione.</p>
         <div className="flex flex-wrap items-center gap-4">
           <label>Fascia <select className="bg-white border-2 border-gray-500 px-2 py-1 ml-2" value={tier} onChange={event => {setTier(event.target.value);setLimit(8);}}><option value="all">Tutte le fasce</option>{tiers.map(([id,name]) => <option key={id} value={id}>{name}</option>)}</select></label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={affordableOnly} onChange={event => {setAffordableOnly(event.target.checked);setLimit(8);}} />Solo auto nel mio budget</label>
@@ -89,8 +92,8 @@ export default function UsedCars() {
         ) : filtered.slice(0,limit).map(item => (
           <ForumPost 
             key={item.id}
-            author="Mercatino Poketurismo"
-            date="Annuncio attivo"
+            author={item.listingSource==='player'?'Auto ritirata da un giocatore':item.listingSource==='daily'?'Usati del giorno':'Mercatino Poketurismo'}
+            date={item.listingSource==='daily'?`Disponibilità ${item.marketDay.slice(5).split('-').reverse().join('/')}`:'Annuncio attivo'}
             title={`${item.car.brand.name} ${item.car.name}${item.racePrepared?' · DA GARA · SOLO PISTA':''}`}
             listing={item}
             carDetails={{

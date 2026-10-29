@@ -1,0 +1,14 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Nearest-neighbour only; native inputs preserved",
+  "assets": [
+    {
+      "id": "fuel-pump",
+      "width": 480,
+      "height": 640,
+      "output": "public/images/world/sections/fuel-pump.png",
+      "sourceSha256": "3f0aa2f9be59dd88ee34da14059304d9a9edbb400f706ec98a47f62f94089659",
+      "sha256": "e7417cab5e21fd1405a523661daf47ee8248247f2975a4c737df8f371449aa83"
+    }
+  ]
+}

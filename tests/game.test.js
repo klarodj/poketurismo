@@ -1364,3 +1364,22 @@ test('dynamic grid API persists all entrants, selects nearest each checkpoint an
  }
  assert.equal((await get(`/championship-entries/${entry.id}?userId=1`)).data.results.length,1);
 });
+
+test('daily used stock rotates once per Rome day and preserves bought cars and player listings with mods',async()=>{
+ const {ensureDailyMarket,STATE_KEY}=require('../server/dailyMarket');await prisma.car.update({where:{id:car.id},data:{cv:55,kg:735,zeroToHundred:13.5,velMax:153,price:8000}});
+ const first=await prisma.$transaction(tx=>ensureDailyMarket(tx,new Date('2090-10-29T10:00:00Z')));assert.equal(first.listingIds.length,8);const preserved=await prisma.garage.findMany({where:{userId:1}}),balance=await wallet();
+ const again=await prisma.$transaction(tx=>ensureDailyMarket(tx,new Date('2090-10-29T18:00:00Z')));assert.deepEqual(again,first);assert.equal(await prisma.garage.count({where:{userId:-1}}),8);
+ const bought=await post('/purchase',{marketGarageId:first.listingIds[0]});assert.equal(bought.status,200);const ownedId=first.listingIds[0];
+ await prisma.mod.create({data:{garageId:ownedId,partId:part.id,...Object.fromEntries(['speedValue','accelValue','revvValue','transValue','turnSlowValue','turnFastValue','brakeValue','tractValue','cvValue','nmValue','kgValue'].map(k=>[k,0]))}});const sold=await post('/market/sell',{garageId:ownedId});assert.equal(sold.status,200);const listing=await prisma.garage.findUnique({where:{id:ownedId},include:{mods:true}});
+ const second=await prisma.$transaction(tx=>ensureDailyMarket(tx,new Date('2090-10-30T10:00:00Z')));assert.equal(second.listingIds.length,8);assert(second.listingIds.every(id=>!first.listingIds.includes(id)));assert.deepEqual(await prisma.garage.findUnique({where:{id:ownedId},include:{mods:true}}),listing);assert.equal(await prisma.garage.count({where:{id:{in:first.listingIds.slice(1)}}}),0);assert.deepEqual(await prisma.garage.findMany({where:{id:{in:preserved.map(r=>r.id)}}}),preserved);
+ const publicListing=(await get('/market')).data.find(r=>r.id===ownedId);assert.equal(publicListing.listingSource,'player');assert.equal(publicListing.mods.length,1);assert(await wallet()<balance);assert.equal(JSON.parse((await prisma.gameOperation.findUnique({where:{userId_key:{userId:-1,key:STATE_KEY}}})).response).day,'2090-10-30');
+});
+test('opening lot retirement recognizes historical player sales and keeps untracked listings',async()=>{
+ const {applyStock}=require('../server/marketStock'),{ensureDailyMarket}=require('../server/dailyMarket');const first=await applyStock(prisma),stockId=first.listings[0].id;
+ const fingerprint=require('node:crypto').createHash('sha256').update(JSON.stringify(require('../server/persistence').canonical({garageId:stockId,params:{}}))).digest('hex');await prisma.gameOperation.create({data:{userId:1,key:'historical-sale',kind:'sell-car',fingerprint,response:'{}'}});const saved=await prisma.garage.findUnique({where:{id:stockId}});
+ const custom=await prisma.garage.create({data:{...saved,id:undefined,carId:car.id}});await prisma.$transaction(tx=>ensureDailyMarket(tx,new Date('2090-10-29T10:00:00Z')));
+ assert.deepEqual(await prisma.garage.findUnique({where:{id:stockId}}),saved);assert(await prisma.garage.findUnique({where:{id:custom.id}}));assert.equal(await prisma.garage.count({where:{id:{in:first.listings.slice(1).map(r=>r.id)}}}),0);
+});
+test('unrecognized historical sales conservatively retain opening stock',async()=>{
+ const {applyStock}=require('../server/marketStock'),{ensureDailyMarket}=require('../server/dailyMarket');const first=await applyStock(prisma);await prisma.gameOperation.create({data:{userId:1,key:'legacy-unknown-sale',kind:'sell-car',fingerprint:'unknown-old-format',response:'{}'}});await prisma.$transaction(tx=>ensureDailyMarket(tx,new Date('2090-10-29T10:00:00Z')));assert.equal(await prisma.garage.count({where:{id:{in:first.listings.map(r=>r.id)}}}),first.listings.length);
+});

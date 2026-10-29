@@ -1,0 +1,13 @@
+[
+  {
+    "id": "fuel-pump",
+    "prompt": "Use case: historical-scene / game interface asset. Create a single Italian AGIP-style petrol dispenser circa 1996-2002, front view, orthographic straight-on, whole pump visible, low resolution crisp pixel art like a 1990s racing computer game. Composition portrait 3:4, device fills 90 percent of width and height. Yellow enamel upper canopy with simple black six-legged dog emblem silhouette and small AGIP lettering, charcoal grey faceplate, yellow lower cabinet, black corrugated hoses looping down on BOTH sides with green and black nozzles hanging at either edge. Very important: leave a single LARGE blank flat charcoal rectangular control fascia centered occupying x=20 to 80 percent and y=22 to 72 percent of the whole image, no screen writing, no digits, no controls in this area; live LCDs and HTML controls will be placed here. Pump grounded on modest concrete base, no car or people, no scenic background, transparent background around the pump and hoses. Hard hand-placed pixels, limited colours, sprite artwork, authentic northern Italian provincial filling station. No modern touchscreen, no photographic rendering, no watermark.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9b65922f-43bd-4cc3-9b6a-2d676851ff4d.png",
+    "input": "tools/pump-art/inputs/fuel-pump.png",
+    "output": "public/images/world/sections/fuel-pump.png",
+    "width": 480,
+    "height": 640,
+    "tool": "image_gen built-in",
+    "transparent": true
+  }
+]
