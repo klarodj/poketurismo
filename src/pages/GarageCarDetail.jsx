@@ -97,7 +97,7 @@ export default function GarageCarDetail() {
                 />
              </div>
 
-             <FuelConsumption car={car}/><details className="period-details mt-2"><summary>Dati banco prova e telemetria</summary><div className="garage-bench-panels">
+             <details className="period-details mt-2"><summary>Dati banco prova e telemetria</summary><div className="garage-bench-panels">
                 <div className="bg-black text-green-400 p-5 font-pixel border-2 border-gray-600 shadow-win98-inset">
                    <h4 className="text-yellow-500 underline mb-3 text-lg uppercase">Dati Banco Prova</h4>
                    <p className="text-4xl">{car.cv} CV</p>
@@ -244,6 +244,7 @@ export default function GarageCarDetail() {
           </div>
 
         </div>
+        <div className="p-4 border-t-2 border-win98-darkerGray"><FuelConsumption car={car}/></div>
       </div>
 
     </Win98Window>

@@ -65,7 +65,7 @@ export const fetchBrands = () => request('/brands');
 export const fetchMarket = () => request('/market');
 export const fetchMeet = userId => request(`/meet?userId=${userId}`);
 export const displayMeetCar = (userId, garageId) => action('/meet/showcase', { userId, garageId });
-export const fetchMeetLeaderboard = (trackId, modelId, setupKey, fuelVersion=2) => request(`/meet/leaderboard?trackId=${trackId}&modelId=${modelId}&fuelVersion=${fuelVersion}${setupKey ? `&setupKey=${setupKey}` : ''}`);
+export const fetchMeetLeaderboard = (trackId, modelId, setupKey, fuelVersion=3) => request(`/meet/leaderboard?trackId=${trackId}&modelId=${modelId}&fuelVersion=${fuelVersion}${setupKey ? `&setupKey=${setupKey}` : ''}`);
 export const fetchParts = () => request('/parts');
 export const fetchTuning = (userId,garageId) => request(`/tuning/${userId}${garageId?`?garageId=${garageId}`:''}`);
 export const fetchTimeTrials = userId => request(`/time-trials/${userId}`);

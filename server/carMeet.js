@@ -38,7 +38,7 @@ function trialConfiguration(garage){
  const stats=Object.fromEntries(['cv','nm','kg','speed','acceleration','revving','transmission','turnSlow','turnFast','brake','traction'].map(key=>[key,garage[key]]));
  return {...(garage.racePrepared?{racePrepared:true}:{}),modelId:garage.carId,setupKey:hash(garage.racePrepared?{...stats,racePrepared:true}:stats),engineHealth:garage.engineHealth,tireGrip:garage.tireGrip,currentFuel:garage.currentFuel,fuelType:garage.fuelType,parts:garage.mods.map(mod=>({name:mod.part.name,level:mod.part.level}))};
 }
-function projectTime(row,user,cars,currentLayout,modelId,fuelModelVersion=2){
+function projectTime(row,user,cars,currentLayout,modelId,fuelModelVersion=3){
  let state;try{state=JSON.parse(row.state);}catch{return null;}
  if((state.fuelModelVersion||1)!==fuelModelVersion)return null;
  if(row.mode!=='track'||row.status!=='completed'||!state.timeTrial||state.rulesVersion!==3||state.failure||!Array.isArray(state.sections)||!state.sections.length||state.index!==state.sections.length||!Number.isFinite(state.playerTime)||state.playerTime<=0||layoutKey(state.sections,state.environment)!==currentLayout)return null;
@@ -51,7 +51,7 @@ function projectTime(row,user,cars,currentLayout,modelId,fuelModelVersion=2){
 }
 async function leaderboard(tx,query){
  if(Object.keys(query).some(key=>!['trackId','modelId','setupKey','fuelVersion'].includes(key)))fail(400,'Filtri classifica non validi');
- const trackId=positiveId(query.trackId),modelId=positiveId(query.modelId);const fuelModelVersion=query.fuelVersion===undefined?2:Number(query.fuelVersion);if(![1,2].includes(fuelModelVersion))fail(400,'Regolamento consumi non valido');
+ const trackId=positiveId(query.trackId),modelId=positiveId(query.modelId);const fuelModelVersion=query.fuelVersion===undefined?3:Number(query.fuelVersion);if(![1,2,3].includes(fuelModelVersion))fail(400,'Regolamento consumi non valido');
  if(query.setupKey!==undefined&&!/^[a-f0-9]{64}$/.test(query.setupKey))fail(400,'Configurazione non valida');
  const [track,model,participants]=await Promise.all([tx.track.findUnique({where:{id:trackId},include:{type:true,meteo:true,surface:true,builds:{include:{section:true},orderBy:{ord:'asc'}}}}),tx.car.findUnique({where:{id:modelId},include:{brand:true}}),visibleParticipants(tx)]);
  if(!track||!model)fail(404,'Circuito o modello inesistente');

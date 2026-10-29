@@ -21,7 +21,7 @@ test('cached checkpoints match full final simulations without changing their fro
  state.index=1;state.playerTime=12;state.opponentTime=99;const projected=server.project(contract,state);assert.equal(projected.rows.find(r=>r.featured).timeMs,99000);assert.equal(JSON.stringify(projected).includes('checkpoints'),false);assert.equal(JSON.stringify(projected).includes('seed'),false);assert.equal(projected.rows.find(r=>r.id==='npc-1').timeMs,reference[1].checkpoints[0].timeMs);
 });
 test('a future retirement is not disclosed before the corresponding sector checkpoint',()=>{
- const{state,contract}=sample(),car=contract.drivers[1].car;car.currentFuel=sectorFuel(car,state.sections[0],{pace:'balanced'})+0.001;const reference=server.references(contract,state);assert.equal(reference[1].failure,'fuel');assert.equal(reference[1].checkpoints[0].failure,null);state.index=1;state.playerTime=10;state.opponentTime=11;assert.equal(server.project(contract,state).rows.find(r=>r.id==='npc-1').failure,null);state.index=2;assert.equal(server.project(contract,state).rows.find(r=>r.id==='npc-1').failure,'fuel');
+ const{state,contract}=sample(),car=contract.drivers[1].car;car.currentFuel=sectorFuel(car,state.sections[0],{pace:'balanced'},null,state.fuelModelVersion||1)+0.001;const reference=server.references(contract,state);assert.equal(reference[1].failure,'fuel');assert.equal(reference[1].checkpoints[0].failure,null);state.index=1;state.playerTime=10;state.opponentTime=11;assert.equal(server.project(contract,state).rows.find(r=>r.id==='npc-1').failure,null);state.index=2;assert.equal(server.project(contract,state).rows.find(r=>r.id==='npc-1').failure,'fuel');
 });
 
 test('completed classifications use their frozen positions and never replay an old round',()=>{

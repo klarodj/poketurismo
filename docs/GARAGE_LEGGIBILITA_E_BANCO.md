@@ -15,3 +15,5 @@ Andrea aggiornato: distingue casa/profilo e garage/auto; spiega sei punti distri
 ## Verifica
 
 291 test gioco passati, lint/build. Due casi per il grafico: conservazione dei picchi, relazione coppia/potenza, ordine dei picchi e assenza di mutazioni; gestione di picchi mancanti o non validi. Browser a320/390/1280px: banner distinti e cambio scheda, didascalia rimossa, grafico caricato, font della telemetria/descrizioni almeno18px, liste montati/magazzino e tutorial aggiornato, nessuno scorrimento orizzontale o errore JavaScript. Per il magazzino la QA usa tre ricambi reali in una copia locale dello stato mostrato, senza comprarli. Tutte le scritture intercettate/bloccate: zero chiamate di modifica pubbliche. Schermate/report .preview/garage-readability-qa. Istanza unica5174/gateway5184 riavviati dal postbuild, health verificata; nessuna migrazione o reset.
+
+Aggiornamento successivo: Consumo stimato spostato in fondo all’intero dettaglio auto, sotto banco/telemetria e gestione dei ricambi, a larghezza completa.

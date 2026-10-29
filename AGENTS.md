@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Carburante: docs/PERCORRENZA_CARBURANTE.md aggiorna i consumi alla versione3: litri×4 per nuove gare reali mediante percorrenza convenzionale, stime km/l invariate. Versioni1/2 e campionati già iscritti congelati; scuola e sfide virtuali rimangono alle proprie condizioni precedenti senza consumi reali. Tempi separati fra tutte e tre le versioni; non cancellare record o moltiplicare consumptionEstimate. Consumo stimato ora in fondo al dettaglio auto.
+
 - Garage leggibile e banco illustrativo: docs/GARAGE_LEGGIBILITA_E_BANCO.md. Pilota usa setting.png come Strumenti; Auto/dettagli conservano garage.png. Niente didascalia duplicata prima dei punti abilità. Telemetria e descrizioni ricambi18px, nomi20px senza troncamenti, pulsanti grandi. DynoChart è solo uno schema dai picchi CV/Nm, non RPM omologati o fisica di gara; non usarlo per ricalibrare il motore. Andrea aggiornato.
 
 - Indici di presentazione: docs/INDICI_AUTO_E_PILOTA.md. IP invariato e più visibile; IG0–100 derivato dalle otto abilità con rendimento decrescente in shared/driverIndex.mjs. Non sommare IP+IG né assegnare bonus fisici. Confronto clandestino con quattro valori e stima di percorso esistente, nuove soglie solo visive; non cambiare easy/premi/offerte. Rivali dei campionati attivi derivati dal contratto congelato, non dal catalogo corrente.

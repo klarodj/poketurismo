@@ -30,3 +30,10 @@ test('fuel version one retains the old formula and existing tactical states keep
 test('preview and actual consumption agree for both conserved and aggressive new races',()=>{
  for(const pace of['save','balanced','attack']){let state=makeRace({seed:13});state.meetTrial=true;state.incidentPlan=null;const initial=state.car.currentFuel;let consumed=0;while(!state.finished){const decision={...DEFAULT_DECISION,pace},preview=decisionPreview(state,decision);state=advanceTacticalRace(state,null,decision);assert.ok(Math.abs(preview.fuel-state.logs.at(-1).fuel)<1e-8);consumed+=state.logs.at(-1).fuel;}assert.ok(Math.abs(initial-state.car.currentFuel-consumed)<0.001);}
 });
+
+test('extended fuel distance multiplies litres by four while estimates and v2 remain unchanged',()=>{
+ const car={...stock},estimate=consumptionEstimate(car),section=road(5000,.02);
+ for(const pace of ['save','balanced','attack']){const old=sectorFuel(car,section,{pace},null,2),current=sectorFuel(car,section,{pace},null,3);assert.equal(current,old*4);assert.deepEqual(consumptionEstimate(car),estimate);}
+ assert.equal(sectorFuel(car,road(1000),{},null,2),estimate.balanced/100);
+ const state=makeRace({seed:13});state.fuelModelVersion=3;state.meetTrial=true;state.incidentPlan=null;const preview=decisionPreview(state,DEFAULT_DECISION),next=advanceTacticalRace(state,null,DEFAULT_DECISION);assert.equal(next.logs[0].fuel,preview.fuel);
+});
