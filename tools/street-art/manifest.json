@@ -1,0 +1,46 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Nearest-neighbour only; native inputs preserved",
+  "assets": [
+    {
+      "id": "parking",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/street-zones/parking.png",
+      "sourceSha256": "b21efc2063c99bb190b4e35f9b81eb9c1c0d68f59a72f6e4a9ba7221894625a4",
+      "sha256": "e2a3f9b89b0ffeaa94a82496d251607f9ee42a44a2cdcc52c794c22d712577d7"
+    },
+    {
+      "id": "industrial",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/street-zones/industrial.png",
+      "sourceSha256": "0c3129ba15bca6d9b9989095e2f15f1416d53bd82f45ab7545260ad8bd4959eb",
+      "sha256": "9af5d2e48a0b136e702c43f73e9886725431bafbcd33f1a97ccf2b4f44e2d420"
+    },
+    {
+      "id": "coast",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/street-zones/coast.png",
+      "sourceSha256": "317754798c7b4123aaa893b245f7fd7e3155a0b3eb67c8c93801acc353c85cc9",
+      "sha256": "cafd24781b6136cc8b94f12c4b364ffbfee855b9a6baa902922a54ca5a92d777"
+    },
+    {
+      "id": "mountain",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/street-zones/mountain.png",
+      "sourceSha256": "2c292d8342927553a32a27e60f9559ae90fc24b3c11006736182efc0eeee42d0",
+      "sha256": "5feb5bdd62d477ca107d20511d632100bf678fa163b35253a324f0d53b9433be"
+    },
+    {
+      "id": "highway",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/street-zones/highway.png",
+      "sourceSha256": "62013aa6f261b96500f70c958f234df7f4ba9ffb4e760cbcfc4c862548da43cb",
+      "sha256": "20a02a24d3cb99ae24810f56cbff57246937ab6e8bbb49a41d9c285d895b8943"
+    }
+  ]
+}

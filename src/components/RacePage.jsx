@@ -1,3 +1,4 @@
+import {streetZoneImage} from '../../shared/streetVisuals.mjs';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import ChampionshipTable from './ChampionshipTable';
 import React, { useEffect, useState } from 'react';
@@ -35,6 +36,7 @@ export default function RacePage({ mode }) {
   const { equippedCarId } = useGameStore();
   const { race } = useRaceStore();
   const pending = useRequestStore(state => state.pending);
+  const [streetLocation,setStreetLocation]=useState(null);
   const [tracks, setTracks] = useState([]);
   const [customTracks, setCustomTracks] = useState([]);
   const [opponents, setOpponents] = useState([]);
@@ -93,11 +95,11 @@ export default function RacePage({ mode }) {
   const previewDistance = selectedTrack ? Math.max(1, Number(selectedTrack.lenght || previewSource.length) / (Number(selectedTrack.lenght) >= 100 ? 1000 : 1)) : 0;
   const previewSections = trackChoice === 'demo' ? DEMO_TRACK.sections : previewSource.length ? buildTacticalTrack(previewSource.map(item => item.section), previewDistance, previewProfile) : [];
 
-  return <Win98Window guideId={!race ? mode === 'street' ? 'street' : 'autodrome' : undefined} title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? '/images/world/street.png' : '/images/world/track.png') : undefined}>{!race&&mode==='street'&&car?.racePrepared&&<p className="period-notice"><strong>Auto da gara: solo pista.</strong> Per le clandestine scegli una vettura stradale dal <a href="/garage/auto">garage</a>, oppure vai all’<a href="/autodrome">autodromo</a>.</p>}
+  return <Win98Window guideId={!race ? mode === 'street' ? 'street' : 'autodrome' : undefined} title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? streetZoneImage(streetLocation?.id)||'/images/world/street.png' : '/images/world/track.png') : undefined}>{!race&&mode==='street'&&car?.racePrepared&&<p className="period-notice"><strong>Auto da gara: solo pista.</strong> Per le clandestine scegli una vettura stradale dal <a href="/garage/auto">garage</a>, oppure vai all’<a href="/autodrome">autodromo</a>.</p>}
     <div className={`${race ? 'p-1 sm:p-3' : 'p-4'} space-y-4 text-black`}>
       {error && <div role="alert" className="bg-red-100 border border-red-500 p-3">{error} <button className="underline" onClick={() => window.location.reload()}>Ricarica salvataggio</button></div>}
       {!loaded || !userId ? <p>Caricamento gara e salvataggio…</p> : !race ? mode === 'street' && !entryId ? <>
-        <StreetMeetups onStarted={data => {setParams({raceId:data.race.id},{replace:true});setError('');}} />
+        <StreetMeetups onLocationChange={setStreetLocation} onStarted={data => {setParams({raceId:data.race.id},{replace:true});setError('');}} />
         {(customTracks.length > 0 || opponents.length > 0) && <details className="border border-gray-500 p-3"><summary className="cursor-pointer font-bold">Prove personalizzate · senza premi e scommesse</summary><div className="space-y-3 mt-3"><label className="block">Percorso<select className="block w-full p-2 bg-white border" value={trackChoice} onChange={event=>setTrackChoice(event.target.value)}><option value="">Percorso casuale per allenamento</option>{tracks.map(track=><option key={track.id} value={`db-${track.id}`}>{track.name}</option>)}{customTracks.map(track=><option key={track.id} value={`custom-${track.id}`}>{track.name}</option>)}</select></label><label className="block">Rivale<select className="block w-full p-2 bg-white border" value={opponentChoice} onChange={event=>setOpponentChoice(event.target.value)}><option value="similar">Auto simile per allenamento</option>{opponents.map(opponent=><option key={opponent.id} value={`custom-${opponent.id}`}>{opponent.name}</option>)}</select></label><button className={button} disabled={!car||pending>0||(!trackChoice.startsWith('custom-')&&!opponentChoice.startsWith('custom-'))} onClick={begin}>Avvia prova personalizzata</button></div></details>}
       </> : <>
         <h1 className="font-bold text-2xl">{entryId ? 'Round del campionato' : timeTrial ? 'Prova a tempo' : mode === 'street' ? 'Prepara la sfida' : 'Gara singola'}</h1>

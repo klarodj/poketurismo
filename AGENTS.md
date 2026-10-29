@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Cinque ritrovi clandestini con immagini proprie: docs/IMMAGINI_RITROVI.md. Prompt e input in tools/street-art, PNG320×180 in public/images/world/street-zones, mapping shared/streetVisuals.mjs. Anteprime nel selettore e banner unico sostituito entrando; ritorno senza preselezione. Non cambiare ID/requisiti né rimuovere il banner generale conservato.
+
 - Allenamenti mirati e barre pilota: leggere docs/ALLENAMENTI_MIRATI.md. Tre abilità, tre difficoltà, quattro esercizi con auto in prestito e costo server, 100 pratica = +1 fino100. Namespace trainingCourses.targetedV1 e flag statTrainingVersion1 per nuove gare, niente migrazione/reset. PilotStats condiviso Casa/profilo con barre Win98 e pratica. Non assegnare bonus ai checkpoint storici o alle sfide virtuali.
 
 - Progressione corretta 29 ottobre: +3 alle otto abilità per livello, tetto100, funzione comune server/pilotProgression.js per gare e allenamenti. Recupero una tantum già eseguito con scripts/repair-pilot-levels.cjs, ricevuta pilot-level-stats-v1; non riassegnare manualmente. Nuove griglie campionati progressive e secondo trofeo75–120CV; contratti esistenti immutati. Leggere docs/PROGRESSIONE_E_CAMPIONATI.md.

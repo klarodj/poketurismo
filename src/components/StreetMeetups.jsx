@@ -1,3 +1,4 @@
+import {streetZoneImage} from '../../shared/streetVisuals.mjs';
 import {Link} from 'react-router-dom';
 import React, {useEffect,useState} from 'react';
 import {fetchStreetHub,findStreetOpponent,startRace} from '../services/api';
@@ -28,7 +29,7 @@ function EncounterCard({offer,zone,userId,money,onNext,onStarted,onError}){
     <div className="street-actions"><button className="street-button street-button-primary" disabled={pending>0} onClick={challenge}>Sfida {offer.rival.name}{wager>0?` · ${euros(wager)}`:' · senza puntata'}</button><button className="street-button" disabled={pending>0} onClick={onNext}>Cerca un altro avversario · gratis</button></div>
   </section>;
 }
-export default function StreetMeetups({onStarted}){
+export default function StreetMeetups({onStarted,onLocationChange}){
   const {id:userId,money,level}=usePlayerStore();
   const pending=useRequestStore(state=>state.pending);
   const [hub,setHub]=useState(null),[stage,setStage]=useState('locations');
@@ -36,6 +37,7 @@ export default function StreetMeetups({onStarted}){
   const [error,setError]=useState('');
   useEffect(()=>{let cancelled=false;fetchStreetHub(userId).then(data=>{if(!cancelled)setHub(data);}).catch(error=>{if(!cancelled)setError(error.message);});return()=>{cancelled=true;};},[userId]);
   const zone=hub?.zones.find(item=>item.id===zoneId)||null;
+  useEffect(()=>{onLocationChange?.(stage==='opponent'?zone:null);},[stage,zone,onLocationChange]);
   const encounter=async(selected=zone,replace=true)=>{try{setError('');const data=await findStreetOpponent(userId,{zoneId:selected.id,...(replace&&selected.offer?{replace:true,offerId:selected.offer.id}:{})});setHub(data.street);}catch(error){setError(error.message);}};
   const choose=async selected=>{
     setZoneId(selected.id);setError('');
@@ -46,7 +48,7 @@ export default function StreetMeetups({onStarted}){
   return <div className="street-meetups"><header className="street-header"><p className="street-eyebrow">Corse clandestine · {stage==='locations'?'1. Scegli il luogo':'2. Scegli l’avversario'}</p><h1>{stage==='locations'?'Dove si corre stasera?':zone?.name||'Il ritrovo'}</h1><p>{stage==='locations'?'Scegli un ritrovo per incontrare i piloti della zona.':'Guarda chi c’è, scegli se sfidarlo e decidi la puntata.'}</p><div className="street-player"><span>Livello {level}</span><span>La tua auto: IP {hub?.performance??'—'}</span></div></header>
     {error&&<p role="alert" className="street-error">{error} <button className="underline" onClick={()=>{setError('');fetchStreetHub(userId).then(setHub).catch(e=>setError(e.message));}}>Aggiorna ritrovi</button></p>}
     {!hub?<p>Caricamento dei ritrovi…</p>:stage==='locations'||!zone?<>
-      <nav className="street-zones" aria-label="Scegli il ritrovo">{hub.zones.map(item=><button type="button" disabled={pending>0} key={item.id} className={`street-zone ${zone?.id===item.id?'street-zone-selected':''}`} aria-pressed={zone?.id===item.id} onClick={()=>choose(item)}><span>{item.unlocked?'● Aperto':'Da sbloccare'}</span><strong>{item.name}</strong><small>Liv. {item.minLevel} · IP {item.minPerformance}+</small><small>{item.description}</small><small>Reputazione {item.reputation} · {item.wins} vittorie</small></button>)}</nav>
+      <nav className="street-zones" aria-label="Scegli il ritrovo">{hub.zones.map(item=><button type="button" disabled={pending>0} key={item.id} className={`street-zone ${zone?.id===item.id?'street-zone-selected':''}`} aria-pressed={zone?.id===item.id} onClick={()=>choose(item)}><img className="street-zone-preview" src={streetZoneImage(item.id)} alt="" width="320" height="180" loading="lazy" decoding="async"/><span>{item.unlocked?'● Aperto':'Da sbloccare'}</span><strong>{item.name}</strong><small>Liv. {item.minLevel} · IP {item.minPerformance}+</small><small>{item.description}</small><small>Reputazione {item.reputation} · {item.wins} vittorie</small></button>)}</nav>
       {zone&&!zone.unlocked&&<section className="street-locked"><h2>{zone.name} · per accedere ti manca:</h2><ul>{zone.reasons.map(reason=><li key={reason}>{reason}</li>)}</ul></section>}
       <Link className="street-button" to="/tracks">Atlante del club · piste e strade</Link>
     </>:<>
