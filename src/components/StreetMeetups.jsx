@@ -1,3 +1,4 @@
+import OpponentComparison from './OpponentComparison';
 import {streetZoneImage} from '../../shared/streetVisuals.mjs';
 import {Link} from 'react-router-dom';
 import React, {useEffect,useState} from 'react';
@@ -18,9 +19,10 @@ function EncounterCard({offer,zone,userId,money,onNext,onStarted,onError}){
   const sections=buildTacticalTrack(track.builds.map(build=>build.section),track.distanceKm,routeProfileFor('street'));
   const challenge=async()=>{try{const data=await startRace(userId,{mode:'street',zoneId:zone.id,offerId:offer.id,wager});onStarted(data);}catch(error){onError(error.message);}};
   return <section className="street-encounter" aria-label="Avversario incontrato">
-    <div className="street-encounter-heading"><div><p className="street-eyebrow">Hai incontrato</p><h3>{offer.rival.name}</h3><p>{offer.rival.style} · abilità {offer.rival.skill}</p></div><span className={`street-challenge ${offer.easy?'street-challenge-easy':''}`}>{offer.challenge}</span></div>
-    <div className="street-rival-grid"><div className="street-rival-car"><RaceCarArtwork car={offer.rival.car}/><strong>{offer.rival.car.brand} {offer.rival.car.name}</strong><p>{offer.rival.car.cv} CV · {offer.rival.car.kg} kg · IP {offer.rival.car.performance} · motore {offer.rival.car.engineHealth}% · gomme {offer.rival.car.tireGrip}%</p></div>
-      <div className="street-route"><h4>Percorso della sfida</h4><strong>{track.name}</strong><p>{track.distanceKm.toLocaleString('it-IT')} km · {weatherNames[track.weather]||track.weather}</p><p>Precedenti: {offer.record.wins} vittorie · {offer.record.losses} sconfitte · {offer.record.draws} pareggi</p><p>Vittoria: fino a <strong>{offer.winXp} XP</strong> e <strong>+{offer.winReputation} reputazione</strong>.</p><p className="street-small">La valutazione considera auto, piloti e percorso. Le tue scelte possono cambiare l’esito.</p></div></div>
+    <div className="street-encounter-heading"><div><p className="street-eyebrow">Hai incontrato</p><h3>{offer.rival.name}</h3><p>{offer.rival.style}</p></div>{!offer.comparison&&<span className={`street-challenge ${offer.easy?'street-challenge-easy':''}`}>{offer.challenge}</span>}</div>
+    <div className="street-rival-grid"><div className="street-rival-car"><RaceCarArtwork car={offer.rival.car}/><strong>{offer.rival.car.brand} {offer.rival.car.name}</strong><p>{offer.rival.car.cv} CV · {offer.rival.car.kg} kg · motore {offer.rival.car.engineHealth}% · gomme {offer.rival.car.tireGrip}%</p></div>
+      <div className="street-route"><h4>Percorso della sfida</h4><strong>{track.name}</strong><p>{track.distanceKm.toLocaleString('it-IT')} km · {weatherNames[track.weather]||track.weather}</p><p>Precedenti: {offer.record.wins} vittorie · {offer.record.losses} sconfitte · {offer.record.draws} pareggi</p><p>Vittoria: fino a <strong>{offer.winXp} XP</strong> e <strong>+{offer.winReputation} reputazione</strong>.</p>{!offer.comparison&&<p className="street-small">La valutazione considera auto, piloti e percorso. Le tue scelte possono cambiare l’esito.</p>}</div></div>
+    <OpponentComparison comparison={offer.comparison}/>
     <details className="street-map"><summary>Esamina i settori prima di accettare</summary><TrackPreview trackName={track.name} sections={sections} profile={routeProfileFor('street')}/></details>
     {(offer.races>0||offer.easy)&&<p className="street-notice">{offer.easy?'Il rivale è nettamente inferiore: ricompense e puntate ridotte. ':''}{offer.races>0?'Le sfide ripetute con lo stesso rivale riducono XP, reputazione e puntata massima. ':''}{offer.rewardFactor===0?'Questo confronto è ormai assimilato: puoi correre solo senza puntata, senza altri XP o reputazione.':''}</p>}
     <fieldset className="street-wagers" disabled={pending>0}><legend>Scommessa facoltativa</legend><div>{offer.wagers.map(value=><label key={value} className={wager===value?'street-wager-selected':''}><input type="radio" name="street-wager" checked={wager===value} onChange={()=>setWager(value)}/>{value===0?'Senza puntata':euros(value)}</label>)}</div></fieldset>
@@ -30,7 +32,7 @@ function EncounterCard({offer,zone,userId,money,onNext,onStarted,onError}){
   </section>;
 }
 export default function StreetMeetups({onStarted,onLocationChange}){
-  const {id:userId,money,level}=usePlayerStore();
+  const {id:userId,money}=usePlayerStore();
   const pending=useRequestStore(state=>state.pending);
   const [hub,setHub]=useState(null),[stage,setStage]=useState('locations');
   const [zoneId,setZoneId]=useState(null);
@@ -45,7 +47,7 @@ export default function StreetMeetups({onStarted,onLocationChange}){
     setStage('opponent');
     if(!selected.offer)await encounter(selected,false);
   };
-  return <div className="street-meetups"><header className="street-header"><p className="street-eyebrow">Corse clandestine · {stage==='locations'?'1. Scegli il luogo':'2. Scegli l’avversario'}</p><h1>{stage==='locations'?'Dove si corre stasera?':zone?.name||'Il ritrovo'}</h1><p>{stage==='locations'?'Scegli un ritrovo per incontrare i piloti della zona.':'Guarda chi c’è, scegli se sfidarlo e decidi la puntata.'}</p><div className="street-player"><span>Livello {level}</span><span>La tua auto: IP {hub?.performance??'—'}</span></div></header>
+  return <div className="street-meetups"><header className="street-header"><p className="street-eyebrow">Corse clandestine · {stage==='locations'?'1. Scegli il luogo':'2. Scegli l’avversario'}</p><h1>{stage==='locations'?'Dove si corre stasera?':zone?.name||'Il ritrovo'}</h1><p>{stage==='locations'?'Scegli un ritrovo per incontrare i piloti della zona.':'Guarda chi c’è, scegli se sfidarlo e decidi la puntata.'}</p></header>
     {error&&<p role="alert" className="street-error">{error} <button className="underline" onClick={()=>{setError('');fetchStreetHub(userId).then(setHub).catch(e=>setError(e.message));}}>Aggiorna ritrovi</button></p>}
     {!hub?<p>Caricamento dei ritrovi…</p>:stage==='locations'||!zone?<>
       <nav className="street-zones" aria-label="Scegli il ritrovo">{hub.zones.map(item=><button type="button" disabled={pending>0} key={item.id} className={`street-zone ${zone?.id===item.id?'street-zone-selected':''}`} aria-pressed={zone?.id===item.id} onClick={()=>choose(item)}><img className="street-zone-preview" src={streetZoneImage(item.id)} alt="" width="320" height="180" loading="lazy" decoding="async"/><span>{item.unlocked?'● Aperto':'Da sbloccare'}</span><strong>{item.name}</strong><small>Liv. {item.minLevel} · IP {item.minPerformance}+</small><small>{item.description}</small><small>Reputazione {item.reputation} · {item.wins} vittorie</small></button>)}</nav>

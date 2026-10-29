@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Indici di presentazione: docs/INDICI_AUTO_E_PILOTA.md. IP invariato e più visibile; IG0–100 derivato dalle otto abilità con rendimento decrescente in shared/driverIndex.mjs. Non sommare IP+IG né assegnare bonus fisici. Confronto clandestino con quattro valori e stima di percorso esistente, nuove soglie solo visive; non cambiare easy/premi/offerte. Rivali dei campionati attivi derivati dal contratto congelato, non dal catalogo corrente.
+
 - Progressione attuale: docs/PUNTI_ABILITA.md supera il vecchio +3 automatico. Sei punti per livello guadagnato, cap cumulativo per abilità2×(livello−1), massimo100. Spesa esplicita nel profilo tramite operazione server serializzabile. Persistenza trainingCourses.levelAllocationV1.spent, allenamenti separati. Recupero vecchi bonus già applicato una volta con scripts/migrate-pilot-points.cjs e ricevuta tecnica globale -1; repair-pilot-levels.cjs ritirato. Non riapplicare vecchi bonus.
 
 - Cinque ritrovi clandestini con immagini proprie: docs/IMMAGINI_RITROVI.md. Prompt e input in tools/street-art, PNG320×180 in public/images/world/street-zones, mapping shared/streetVisuals.mjs. Anteprime nel selettore e banner unico sostituito entrando; ritorno senza preselezione. Non cambiare ID/requisiti né rimuovere il banner generale conservato.

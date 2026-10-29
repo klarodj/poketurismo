@@ -1,3 +1,4 @@
+import PerformanceBadge from './PerformanceBadge';
 import {partName,partDescription} from '../logic/partLabels.mjs';
 import React from 'react';
 import RaceCarArtwork from './RaceCarArtwork';
@@ -30,7 +31,7 @@ export default function UsedCarDetails({ listing }) {
       <div className="border-t border-[#7799CC] p-3 space-y-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-white border border-gray-300 p-3 flex items-center justify-center min-h-40">
-            {listing.racePrepared&&<p className="period-notice">Auto da gara · solo pista. Trasformazione definitiva, componenti di livello 3 vincolati.</p>}<RaceCarArtwork car={{...car,racePrepared:listing.racePrepared,paintColour:listing.paintColour}} large/>
+            {listing.racePrepared&&<p className="period-notice">Auto da gara · solo pista. Trasformazione definitiva, componenti di livello 3 vincolati.</p>}<PerformanceBadge car={listing}/><RaceCarArtwork car={{...car,racePrepared:listing.racePrepared,paintColour:listing.paintColour}} large/>
           </div>
           <div>
             <h3 className="font-bold text-[#006699] mb-2">Scheda dell’auto in vendita</h3>

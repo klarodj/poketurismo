@@ -689,7 +689,7 @@ async function modernCup(){
   const response=await post(`/championships/${championship.id}/enter`,{});assert.equal(response.status,200,JSON.stringify(response.data));return response.data.entry;
 }
 test('new championships freeze the complete calendar, cars and rewards and score eight entrants',async()=>{
-  const entry=await modernCup();assert.equal(entry.format,'grid');assert.equal(entry.standings.length,8);assert.equal(entry.championship.rounds.length,3);
+  const entry=await modernCup();assert.equal(entry.format,'grid');assert.equal(entry.participants.length,7);assert(entry.participants.every(d=>Number.isInteger(d.performanceIndex)&&Number.isInteger(d.driverIndex)));assert.equal(entry.standings.length,8);assert.equal(entry.championship.rounds.length,3);
   await prisma.championship.update({where:{id:championship.id},data:{rewardMoney:999999,minCv:9000}});
   await prisma.championshipRace.updateMany({where:{championshipId:championship.id},data:{opponentCarName:'Missing car'}});
   let last;
@@ -1308,4 +1308,20 @@ test('pilot points preserve practice records, reject cap overflow and cannot be 
  assert.equal((await get('/state/1')).data.development.statPractice.turn,60);
  await post('/races',{mode:'track'});
  assert.equal((await post('/driver/points',{allocations:{clean:1}})).status,409);
+});
+
+test('driver summary reflects diminishing abilities without level, moves or car bonuses',()=>{
+ const {driverIndex,referenceAssessment}=require('../shared/driverIndex.mjs');const stats=n=>Object.fromEntries(PILOT_STATS.map(k=>[k,n]));
+ assert.equal(driverIndex(stats(0)),0);assert.equal(driverIndex(stats(100)),100);assert.equal(driverIndex(null),null);
+ assert(driverIndex(stats(20))-driverIndex(stats(10))>driverIndex(stats(90))-driverIndex(stats(80)));
+ assert.equal(driverIndex({...stats(15),level:999,moves:[{bonus:9999}]}),driverIndex(stats(15)));
+ assert.equal(referenceAssessment(1),'Sfida equilibrata');assert.equal(referenceAssessment(.9),'Rivale favorito');assert.equal(referenceAssessment(1.1),'Sei favorito');
+});
+test('street comparisons expose separate current car and driver indices without changing offers or wallets',async()=>{
+ const {driverIndex}=require('../shared/driverIndex.mjs'),{performanceIndex}=require('../shared/vehiclePerformance.mjs');await streetSetup(0);
+ const money=await wallet(),before=await prisma.playerProgress.findUnique({where:{userId:1}}),hub=(await get('/street/1')).data,c=hub.zones[0].offer.comparison;
+ assert.equal(c.playerIG,driverIndex(await prisma.user.findUnique({where:{id:1}})));
+ assert.equal(c.playerIP,performanceIndex(await prisma.garage.findUnique({where:{id:garage.id},include:{car:true}})));
+ assert(Number.isInteger(c.opponentIG));assert(Number.isInteger(c.opponentIP));assert(c.assessment);
+ assert.equal((await prisma.playerProgress.findUnique({where:{userId:1}})).streetState,before.streetState);assert.equal(await wallet(),money);
 });

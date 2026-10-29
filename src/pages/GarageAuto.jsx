@@ -1,10 +1,10 @@
+import PerformanceBadge from '../components/PerformanceBadge';
 import {carArtwork} from '../../shared/carArtwork.mjs';
 import {paintFor,paintName} from '../../shared/carPaint.mjs';
 import ClubRecoveryHint from '../components/ClubRecoveryHint';
 import RaceDetailDialog from '../components/RaceDetailDialog';
 import useRaceStore from '../store/raceStore';
 import useRequestStore from '../store/requestStore';
-import {performanceIndex} from '../../shared/vehiclePerformance.mjs';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import usePlayerStore from '../store/playerStore';
@@ -28,7 +28,6 @@ export default function GarageAuto() {
 
   const selectedCar = cars.find(c => c.id === selectedCarId) || cars.find(c => c.id === equippedCarId) || cars[0];
   const raceStats = selectedCar ? getCarStats(selectedCar.id) : null;
-  const perfIndex = performanceIndex(selectedCar);
   
   const estimatedValue = selectedCar?.resaleValue ?? 0;
 
@@ -75,7 +74,7 @@ export default function GarageAuto() {
                      <div className="truncate pr-2 text-base">
                        <span className="mr-2">{car.id === equippedCarId ? '✔️' : '🚗'}</span>
                        {car.brand} {car.name}
-                     </div>
+                     </div><PerformanceBadge car={car}/>
                   </button>
                ))}
              {cars.length === 0 && <p className="italic text-gray-500 text-sm">Nessuna auto disponibile.</p>}
@@ -88,7 +87,7 @@ export default function GarageAuto() {
             <div className="flex flex-col h-full">
                <h2 className="text-xl font-bold bg-win98-blue text-white px-2 py-1 mb-2 flex justify-between">
                  <span>{selectedCar.brand} {selectedCar.name}{selectedCar.racePrepared?' · DA GARA · SOLO PISTA':''}</span>
-                 <span className="text-yellow-300">IP: {perfIndex}</span>
+                 <PerformanceBadge car={selectedCar}/>
                </h2>
                
                {/* Big Image & Quick Stats */}

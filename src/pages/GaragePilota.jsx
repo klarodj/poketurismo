@@ -1,3 +1,4 @@
+import PerformanceBadge from '../components/PerformanceBadge';
 import PilotPointAllocation from '../components/PilotPointAllocation';
 import useDevelopmentStore from '../store/developmentStore';
 import PilotStats from '../components/PilotStats';
@@ -47,6 +48,7 @@ export default function GaragePilota() {
                  <PilotAvatar avatar={avatar} size={96} alt={`Avatar di ${username}`}/>
                  <div className="flex-1 min-w-0 text-base font-bold flex flex-col justify-center">
                    <p className="text-xl break-words">Utente: {username}</p>
+                   <PerformanceBadge kind="IG" pilot={stats}/>
                    <ExperienceProgress xp={xp}/>
                  </div>
               </div>

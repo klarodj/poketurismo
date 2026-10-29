@@ -1,3 +1,4 @@
+import PerformanceBadge from './PerformanceBadge';
 import FuelGauge from './FuelGauge';
 import ChampionshipCockpit from './ChampionshipCockpit';
 import TrackIllustration from './TrackIllustration';
@@ -13,12 +14,13 @@ import { formatRaceTime, conditionLabel } from '../logic/racePresentation';
 import { DEMO_TRACK } from '../../shared/trackGeometry.mjs';
 import { routeProfileFor } from '../../shared/raceContext.mjs';
 
-function CarCard({ car, label, pilot, rival, onClick }) {
+function CarCard({ car, label, pilot, abilities, rival, onClick }) {
   const brand = typeof car.brand === 'string' ? car.brand : car.brand?.name;
   return <button type="button" className={`race-car-card ${rival ? 'race-car-rival' : ''}`} onClick={onClick} aria-label={`Apri dettaglio: ${label}`}>
     <span className="race-eyebrow">{label} <span aria-hidden="true">↗</span></span>
     <RaceCarArtwork car={car} />
     <span className="race-car-name">{brand} {car.name}</span>
+    <span><PerformanceBadge car={car}/><PerformanceBadge kind="IG" pilot={abilities}/></span>
     <span className="race-car-spec">{car.cv} CV · {car.kg} kg</span>
     <span className="race-car-status"><span>{Number(car.currentFuel || 0).toFixed(1)} L{!rival&&<FuelGauge currentFuel={car.currentFuel} compact/>}</span><span>Gomme {Math.round(car.tireGrip ?? 100)}%</span></span>
     {rival && <span className="race-car-spec">{pilot}</span>}
@@ -55,14 +57,14 @@ export default function RaceDashboard({ race, pending, onAbandon, children }) {
       <p className="race-route-current" aria-live="polite">{section?`Ora: ${trackSectionLabel(section.name)}${next?` · Poi: ${trackSectionLabel(next.name)}`:' · Poi: traguardo'}`:'Traguardo raggiunto'}</p>
     </section>}
     <section className={`race-stage ${race.mode === 'street' ? 'race-stage-street' : ''} ${(race.timeTrial||race.meetTrial) ? 'race-stage-trial' : ''}`} aria-label="Duello e posizione">
-      <CarCard car={race.car} label="La tua auto" onClick={() => setDetail('player')} />
+      <CarCard car={race.car} abilities={race.pilot} label="La tua auto" onClick={() => setDetail('player')} />
       <button type="button" className={`race-position ${gap < -level ? 'race-position-behind' : ''}`} onClick={() => setDetail('timing')} aria-label="Apri dettaglio: tempi e distacco">
         <span className="race-eyebrow">{(race.timeTrial||race.meetTrial) ? 'Tempo personale' : position}</span>
         <strong aria-live="polite">{(race.timeTrial||race.meetTrial) ? race.playerTime.toFixed(3) : Math.abs(gap).toFixed(tactical ? 3 : 0)} <small>{tactical ? 's' : 'm'}</small></strong>
         <span className="race-timing-mini">{tactical ? formatRaceTime(race.playerTime) : 'Sfida in corso'}</span>
         <span className="race-detail-link">Tempi e confronto ↗</span>
       </button>
-      {!(race.timeTrial||race.meetTrial) && <CarCard car={race.opponent.car} label="Auto rivale" pilot={race.opponent.name} rival onClick={() => setDetail('opponent')} />}
+      {!(race.timeTrial||race.meetTrial) && <CarCard car={race.opponent.car} abilities={race.opponent.pilot} label="Auto rivale" pilot={race.opponent.name} rival onClick={() => setDetail('opponent')} />}
     </section>
     <nav className="race-instruments" aria-label="Esplora i dettagli della gara">
       <button type="button" onClick={() => setDetail('track')}><span>Pista ↗</span><strong>{race.distanceKm.toFixed(2)} km</strong></button>

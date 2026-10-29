@@ -1,3 +1,4 @@
+import PerformanceBadge from './PerformanceBadge';
 import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import React from 'react';
 import RaceCarArtwork from './RaceCarArtwork';
@@ -9,6 +10,7 @@ const value = (number, decimals = 0, unit = '') => Number.isFinite(Number(number
 export function CarDetail({ car, pilot, name }) {
   const specs = { cc: ['Cilindrata',0,' cm³'], cv: ['Potenza', 0, ' CV'], nm: ['Coppia', 0, ' Nm'], kg: ['Peso a secco', 0, ' kg'], velMax: ['Velocità nominale', 0, ' km/h'], zeroToHundred: ['0–100 km/h', 1, ' s'], currentFuel: ['Carburante', 2, ' L'], tireGrip: ['Gomme', 1, '%'], engineHealth: ['Motore', 1, '%'], km: ['Chilometraggio', 2, ' km'], serviceKm: ['Ultimo tagliando', 0, ' km'] };
   return <div className="space-y-4">
+    <PerformanceBadge car={car}/><PerformanceBadge kind="IG" pilot={pilot}/>
     <RaceCarArtwork car={car} large />
     <p className="text-xl font-bold">{typeof car.brand === 'string' ? car.brand : car.brand?.name} {car.name}</p>
     <dl className="race-specs">{Object.entries(specs).map(([key, [label, decimals, unit]]) => <div key={key}><dt>{label}</dt><dd>{value(car[key], decimals, unit)}</dd></div>)}<div><dt>Trazione</dt><dd>{car.driveType || '—'}</dd></div><div><dt>Tipo carburante</dt><dd>{car.fuelType || '—'}</dd></div><div><dt>Rapporto potenza/peso</dt><dd>{car.kg > 0 ? value(car.cv / car.kg * 1000, 0, ' CV/t') : '—'}</dd></div></dl>

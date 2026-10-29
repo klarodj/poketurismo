@@ -1,3 +1,5 @@
+const {performanceIndex}=require('../shared/vehiclePerformance.mjs');
+const {driverIndex}=require('../shared/driverIndex.mjs');
 const {cupAliases}=require('../shared/periodWorld.mjs');
 const {CHAMPIONSHIP_CATALOG,championshipInfo,gridClassification,gridStandings}=require('../shared/championshipCatalog.mjs');
 const {PILOT_STATS}=require('./raceEngine');
@@ -7,7 +9,7 @@ const {fail}=require('./gameRules');
 const {seededPaint}=require('./carPaint');
 const trackInclude={type:true,surface:true,meteo:true,builds:{include:{section:true},orderBy:{ord:'asc'}}};
 function readContract(entry){return JSON.parse(entry.contract||'{}');}
-function publicEntry(entry){if(!entry)return null;const contract=readContract(entry);const results=typeof entry.results==='string'?JSON.parse(entry.results):entry.results;const {contract:_,...safe}=entry;return require('./periodWorld').presentPeriodEntry({...safe,results,...(contract.version===1?{championship:contract.championship,format:'grid',standings:gridStandings(results,[{id:'player',name:contract.playerName},...contract.drivers.map(d=>({id:d.id,name:d.name,carName:d.car.name}))])}:{format:'duel'})});}
+function publicEntry(entry){if(!entry)return null;const contract=readContract(entry);const results=typeof entry.results==='string'?JSON.parse(entry.results):entry.results;const {contract:_,...safe}=entry;return require('./periodWorld').presentPeriodEntry({...safe,results,...(contract.version===1?{championship:contract.championship,format:'grid',participants:contract.drivers.map(d=>({id:d.id,name:d.name,carName:d.car.name,performanceIndex:performanceIndex(d.car),driverIndex:driverIndex(d.pilot)})),standings:gridStandings(results,[{id:'player',name:contract.playerName},...contract.drivers.map(d=>({id:d.id,name:d.name,carName:d.car.name}))])}:{format:'duel'})});}
 async function createContract(tx,user,championship){
  const spec=championshipInfo(championship.name);if(!spec)return '{}';
  const cars=await tx.car.findMany({include:{brand:true}});

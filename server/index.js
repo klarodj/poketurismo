@@ -1,3 +1,4 @@
+const {performanceIndex}=require('../shared/vehiclePerformance.mjs');
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -205,7 +206,7 @@ mutate('/api/training-sessions/:id/complete', 'training', async (tx, userId, bod
 });
 const championshipInclude = { championship: { include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } } } };
 const serializeEntry = publicEntry;
-app.get('/api/championships', endpoint(async () => (await prisma.championship.findMany({ include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } }, orderBy: { id: 'asc' } })).filter(cup => championshipInfo(cup.name)).map(cup => {const info=championshipInfo(cup.name);return {...cup,format:'grid',rules:{drives:info.drives,engineTypes:info.engineTypes,brands:info.brands},drivers:info.rivals};})));
+app.get('/api/championships', endpoint(async () => {const [cups,cars]=await Promise.all([prisma.championship.findMany({include:{rounds:{include:{track:{include:{type:true,surface:true,meteo:true}}},orderBy:{ord:'asc'}}},orderBy:{id:'asc'}}),prisma.car.findMany()]);return cups.filter(cup=>championshipInfo(cup.name)).map(cup=>{const info=championshipInfo(cup.name);return {...cup,format:'grid',rules:{drives:info.drives,engineTypes:info.engineTypes,brands:info.brands},drivers:info.rivals.map(r=>{const car=cars.find(c=>c.name===r.carName);return {...r,performanceIndex:car?performanceIndex({...car,engineHealth:r.engineHealth,tireGrip:r.tireGrip,currentFuel:35,km:0}):null,driverIndex:require('../shared/driverIndex.mjs').driverIndex(Object.fromEntries(PILOT_STATS.map(k=>[k,r.skill])))};})};});}));
 app.get('/api/championship-entries/active/:userId', endpoint(async req => serializeEntry(await prisma.championshipEntry.findFirst({ where: { userId: accounts.playerId(req, req.params.userId), status: 'active' }, include: championshipInclude, orderBy: { createdAt: 'desc' } }))));
 app.get('/api/championship-entries/history/:userId', endpoint(async req => (await prisma.championshipEntry.findMany({where:{userId:accounts.playerId(req,req.params.userId),status:'completed'},include:championshipInclude,orderBy:{createdAt:'desc'},take:20})).map(serializeEntry)));
 app.get('/api/championship-entries/:entryId', endpoint(async req => {
