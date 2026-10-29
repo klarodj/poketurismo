@@ -26,6 +26,7 @@ function presentRace(row) {
   delete state.rng;
   delete state.incidentPlan;
   delete state.gridSeed;
+  delete state.gridRunners;delete state.gridPlayerName;delete state.opponentRng;
   for(const section of state.sections||[]){delete section.trainingCorrect;delete section.trainingExplanation;}
   return { ...state, ...(state.rulesVersion === 3 ? { decisionOptions: DECISION_OPTIONS, preview: decisionPreview(state), nextSectionName: state.sections[state.index + 1]?.name || null } : {}), id: row.id, mode: row.mode, status: row.status, version: row.version };
 }
@@ -172,6 +173,7 @@ async function startRace(tx, userId, body) {
     ...(gridMatch ? {gridOpponentId:gridMatch.driver.id,gridSeed:seed} : {}),
     ...(streetMatch ? { street: streetMatch.street } : {})
   };
+  if(gridMatch&&rulesVersion===3)require('../shared/gridRace.mjs').initializeGrid(state,gridMatch.contract);
   const race = await tx.raceSession.create({ data: { userId, garageId: garage.id, mode, seed, state: JSON.stringify(state) } });
   await require('./carMeet').withdrawForDrive(tx,userId,garage.id);
   return snapshot(tx, userId, race);
@@ -206,7 +208,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     if (body.moveId !== null && typeof body.moveId !== 'string') fail(400, 'Scegli una mossa o la guida normale');
     const question=state.sections[state.index]?.trainingQuestion;
     if(body.trainingAnswer!==undefined&&(!question||!question.options.some(o=>o.id===body.trainingAnswer)))fail(400,'Risposta all’esercizio non valida');
-    try { state = advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
+    try { state = state.gridTacticsVersion===1?require('../shared/gridRace.mjs').advanceGridRace(state,body.moveId,body.decision):advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
   }
   if(state.targetedTrainingVersion===2&&!abandon&&state.logs.length>previousLogCount&&body.trainingAnswer!==undefined)state.logs.at(-1).trainingAnswer=body.trainingAnswer;
   if (state.lesson) {

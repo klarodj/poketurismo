@@ -1113,9 +1113,11 @@ test('stored model restrictions remain binding after free-choice invitations are
  assert.equal((await post('/meet/challenge/respond',{userId:2,challengeId:challenge.id,action:'accept',garageId:otherGarage.id,quoteKey:quote})).status,400);assert.equal((await prisma.meetChallenge.findUnique({where:{id:challenge.id}})).status,'pending');assert.ok(other.cars.length);
 });
 
-test('grid checkpoints update on every sector, survive reads/retries and match final scoring without changing physics',async()=>{
+test('legacy grid checkpoints keep frozen single-rival physics and final scoring',async()=>{
  const curve=await prisma.trackSection.create({data:{name:'Slow Left Turn',image:'',carStat:'turnSlow',carTech:'traction',driverStat:'turn',driverTech:'brake'}});await prisma.trackBuild.create({data:{trackId:track.id,sectionId:curve.id,level:1,ord:2}});
  const entry=await modernCup(),race=await begin('championship',{entryId:entry.id});assert.ok(race.sections.length>1);assert.equal(race.gridTiming.total,8);assert.equal(race.gridTiming.position,null);assert.equal(race.gridTiming.started,false);let expected=JSON.parse((await prisma.raceSession.findUnique({where:{id:race.id}})).state),current=race;
+ for(const key of ['gridTacticsVersion','actorRngVersion','gridPlayerName','gridRunners','tacticalRivalId','tacticalRivalChanged','opponentRng','soloDrive'])delete expected[key];
+ await prisma.raceSession.update({where:{id:race.id},data:{state:JSON.stringify(expected)}});
  while(current.status==='active'){
   expected=advanceRace(expected,null,{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'});const key=randomUUID(),version=current.version,result=await post(`/races/${race.id}/turns`,{version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'}},key);assert.equal(result.status,200);current=result.data.race;
   assert.equal(current.gridTiming.sector,current.index);assert.equal(current.gridTiming.rows.length,8);assert.equal(current.logs.at(-1).gridTiming.position,current.gridTiming.position);assert.deepEqual(current.car,expected.car);assert.equal(current.playerTime,expected.playerTime);assert.equal(current.opponentTime,expected.opponentTime);
@@ -1341,4 +1343,24 @@ test('all eight targeted specialties require their actual exercise answer and pr
   for(let i=0;i<4;i++){const race=response.data.race,raw=JSON.parse((await prisma.raceSession.findUnique({where:{id:race.id}})).state),section=raw.sections[raw.index];assert.equal(race.sections[i].trainingCorrect,undefined);const body={version:race.version,moveId:null,decision:section.goal,trainingAnswer:section.trainingCorrect};if(i===0){assert.equal((await post(`/races/${race.id}/turns`,{...body,trainingAnswer:'forged'})).status,400);body.trainingAnswer=section.trainingQuestion.options.find(o=>o.id!==section.trainingCorrect).id;}response=await post(`/races/${race.id}/turns`,body);assert.equal(response.status,200);}
   assert.equal(response.data.race.developmentSummary.statPractice[stat],60);assert.equal(response.data.race.reward.xp,0);assert.equal(response.data.player[stat],before[stat]);
  }
+});
+
+
+test('dynamic grid API persists all entrants, selects nearest each checkpoint and freezes final actual times',async()=>{
+ const section=await prisma.trackSection.findFirst();await prisma.trackBuild.create({data:{trackId:track.id,sectionId:section.id,ord:2,level:1}});
+ const entry=await modernCup(),race=await begin('championship',{entryId:entry.id});assert.equal(race.gridTacticsVersion,1);let current=race;
+ while(current.status==='active'){
+  const before=await prisma.raceSession.findUnique({where:{id:race.id}}),raw=JSON.parse(before.state);
+  const decision={pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'},expected=require('../shared/gridRace.mjs').advanceGridRace(raw,null,decision),key=randomUUID();
+  const result=await post(`/races/${race.id}/turns`,{version:current.version,moveId:null,decision},key);assert.equal(result.status,200,JSON.stringify(result.data));
+  assert.deepEqual((await post(`/races/${race.id}/turns`,{version:current.version,moveId:null,decision},key)).data,result.data);current=result.data.race;
+  assert.equal(current.playerTime,expected.playerTime);assert.equal(current.opponentTime,expected.opponentTime);assert.equal(current.tacticalRivalId,expected.tacticalRivalId);
+  for(const key of ['gridRunners','rng','gridSeed','opponentRng','incidentPlan'])assert(!(key in current),key);
+  if(current.status==='active'){
+   const runners=current.gridTiming.rows.filter(r=>!r.player&&!r.failure),my=current.gridTiming.rows.find(r=>r.player),min=Math.min(...runners.map(r=>Math.abs(r.timeMs-my.timeMs)));
+   assert.equal(Math.abs(runners.find(r=>r.id===current.tacticalRivalId).timeMs-my.timeMs),min);
+  }else{for(const row of current.championship.classification)assert.equal(row.timeMs,require('../shared/gridRace.mjs').gridRows(expected).find(r=>r.id===row.id).timeMs);assert.equal(current.outcome,current.championship.position===1?'win':'loss');}
+  const saved=await prisma.raceSession.findUnique({where:{id:race.id}});await get(`/races/${race.id}?userId=1`);assert.deepEqual(await prisma.raceSession.findUnique({where:{id:race.id}}),saved);
+ }
+ assert.equal((await get(`/championship-entries/${entry.id}?userId=1`)).data.results.length,1);
 });

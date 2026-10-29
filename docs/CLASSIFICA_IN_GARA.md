@@ -1,3 +1,5 @@
+Aggiornamento 29 ottobre: [Rivale tattico dinamico](RIVALE_TATTICO_DINAMICO.md) supera il riferimento fisso per le nuove gare. Le descrizioni precedenti sotto rimangono valide per le sessioni storiche senza flag.
+
 # Classifica durante i campionati
 
 Il pannello in stile Windows 98 mostra posizione su otto, nomi e auto di chi precede e segue, distacchi positivi in secondi, tempo personale e distacco dal primo. La tabella evidenzia il giocatore e distingue distacco dal leader e intervallo dal precedente. I tempi sono cumulati allo stesso fine settore, non distanze fisiche fra auto in tempo reale.

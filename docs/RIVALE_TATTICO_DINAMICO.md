@@ -1,0 +1,21 @@
+# Rivale tattico dinamico · 29 ottobre 2026
+
+Le nuove gare di campionato con otto partecipanti usano `gridTacticsVersion:1`. Dopo ogni settore il server sceglie fra i sette piloti ancora in corsa quello col minor distacco assoluto dal giocatore, misurato allo stesso rilevamento e arrotondato al millisecondo come la classifica. Può essere davanti o dietro. A parità esatta conserva il rivale corrente; al via, con tutti a zero, mantiene il primo abbinamento del contratto. La scelta resta fissa per tutto il settore successivo.
+
+Il pilota davanti al giocatore offre opportunità di scia, preparazione e sorpasso; quello dietro permette la difesa. Restano le soglie esistenti: contatto entro1,2 secondi, preparazione entro3 secondi quando il settore successivo lo consente; spazio e visibilità sono verificati dal motore. In curva la difesa si sceglie con Traiettoria / difesa → Chiudi l’interno, sul tratto privo di curve con Difendi la posizione. Fuori contatto il riferimento resta visibile ma le manovre non disponibili vengono escluse. Se tutti gli avversari si ritirano, nessun duello fantasma.
+
+La scheda dei comandi mostra nome, posizione, davanti/dietro, distacco e scelta corrente; un cambio è indicato da Nuovo rivale. La preparazione al sorpasso non si trasferisce su un altro pilota. I comandi ripartono da Mantieni il ritmo a ogni nuovo settore, come prima; nessuna scelta passa involontariamente a un altro bersaglio. Lo storico conserva il nome e il distacco del rivale effettivamente affrontato nel settore. Elena spiega la nuova logica.
+
+## Simulazione e persistenza
+
+`shared/gridRace.mjs` conserva nel checkpoint privato un avanzamento compatto per ciascun avversario: vettura e condizioni, tempo cumulato, velocità d’uscita, preparazione, ritiro, stato casuale, settore e imprevisto. Tutti avanzano una volta per settore. Il rivale selezionato viene simulato dal motore del duello, gli altri continuano il proprio passo autonomo senza interazioni di traffico fra NPC. Non è una simulazione fisica condivisa di otto vetture.
+
+Le penalità di difesa e le conseguenze di un attacco restano nei tempi effettivi del pilota coinvolto. Il suo stato continua anche quando viene selezionato qualcun altro; ritornando sullo stesso rivale non vengono rigenerati tempi, carburante, gomme, velocità o errori. `actorRngVersion:1` separa il flusso casuale di ogni pilota: cambiare bersaglio non rigenera gli eventi degli altri. Gli stessi avanzamenti alimentano sia la classifica intermedia sia l’ordine d’arrivo. Se il giocatore si ritira, gli altri completano la propria simulazione per la classifica, senza attribuire al giocatore distanza o premi da arrivo.
+
+Il server non pubblica gridRunners, semi, opponentRng o piani di incidente. Il client invia scelte, versione e operazione, mai il bersaglio; server e transazione rimangono autoritativi. GET non riscrive le sessioni e i retry non avanzano due settori. Nessun cambio di schema, nessuna migrazione o reset. Le gare già iniziate senza flag proseguono con il rivale fisso e la stessa sequenza precedente; risultati già congelati e contratti non vengono ricalcolati. Anche nei campionati già iscritti, le gare avviate dopo il rilascio adottano il nuovo sistema conservando gli altri termini del contratto, compresa la versione consumi.
+
+## Verifica
+
+Test selezione davanti/dietro, ritiri, parità, distanza, difesa in curva, attacco non consentito da davanti, effetti reali sui tempi, indipendenza degli altri sei, ritorno su rivale precedente, ripresa da JSON, solitaria, abbandono, proiezioni private e compatibilità senza flag. API testate su SQLite temporaneo: classifica finale dai checkpoint reali, GET senza scritture, retry, premi e completamento campionato. Lint e build passati.
+
+Su clone PostgreSQL dedicato: tre round,22 settori e12 cambi di rivale nel collaudo registrato, sempre al distacco minimo; classifiche e tempi persistiti coerenti, retry e letture verificati. Interfaccia su320/390/1280px con rilevamenti catturati dal collaudo: attacco, difesa, invio manovra, reset e nessun rivale, senza overflow o errori JavaScript. Nessuna gara eseguita sulle partite pubbliche. Rapporti e schermate in `.preview/dynamic-rival-qa`.

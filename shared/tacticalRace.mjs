@@ -88,9 +88,9 @@ function simulateBlock(car, pilot, move, decision, section, nextSection, entrySp
   if (decision.manoeuvre === 'overtake') time += 0.08;
   return { time, exitSpeed: speed, peakSpeed: peak * 3.6, cornerSpeed: peakCorner * 3.6, model, skill, shiftLoss, familiarity };
 }
-function random(state) { state.rng = (Math.imul(1664525, state.rng >>> 0) + 1013904223) >>> 0; return state.rng / 4294967296; }
+function random(state,side) { const key=state.actorRngVersion===1&&side==='opponent'?'opponentRng':'rng';state[key]=(Math.imul(1664525,state[key]>>>0)+1013904223)>>>0;return state[key]/4294967296; }
 function aiDecision(state) {
-  if(state.meetTrial)return DEFAULT_DECISION;
+  if(state.meetTrial||state.soloDrive)return DEFAULT_DECISION;
   const context = tacticalContext(state, 'opponent');
   const section = state.sections[state.index];
   // Protecting every apex on a flowing combination costs more than the position is worth.
@@ -117,7 +117,7 @@ function drive(state, side, move, decision, section, next) {
   const curve = section.segments.some(segment => segment.radiusM > 0) || (next?.segments[0]?.radiusM || 0) > 0, skill = result.skill;
   const lateRisk = curve && decision.braking === 'late' ? 0.09 * (1 - skill.brake) : 0;
   const errorChance = mistakeRisk(skill, decision, section, next, state.environment, result.familiarity);
-  const errorRoll = random(state), severity = random(state), variation = random(state);
+  const errorRoll = random(state,side), severity = random(state,side), variation = random(state,side);
   const mistake = errorRoll < errorChance ? 0.25 + severity * (0.5 + 2.2 * (1 - (skill.reflex + skill.clean) / 2)) + (lateRisk > 0 ? 0.8 * (1 - skill.brake) : 0) : 0;
   const lateExitLoss = curve && decision.braking === 'late' ? (1 - skill.brake) * (1 - skill.clean) * 0.38 * (1 - result.familiarity * 0.12) : 0;
   const variance = (variation - 0.5) * 0.06 * (1 - skill.clean) * Math.sqrt(section.riskExposure ?? 1);
@@ -131,7 +131,7 @@ function drive(state, side, move, decision, section, next) {
   const wear = 1 - clamp(car.engineHealth / 100, 0, 1);
   const perKmFailure=clamp((0.00002 + wear ** 3 * 0.012)*aggression,0,0.2);
   const failureChance=section.layoutVersion===2?1-(1-perKmFailure)**km:clamp(km*perKmFailure,0,0.2);
-  const failureRoll = random(state);
+  const failureRoll = random(state,side);
   const broken = !state.meetTrial && !state.lesson && failureRoll < failureChance;
   return { ...result, time, potentialTime: ideal.time, driverLoss: Math.max(0, result.time - ideal.time), mistake: recoveryLoss, errorChance, lateExitLoss, fuel, tires, engine, km, broken,
     exitSpeed: result.exitSpeed * (mistake > 0 ? 0.88 + 0.08 * skill.acro : 1) * (lateExitLoss > 0 ? 0.97 : 1), decision };
@@ -155,6 +155,7 @@ function decisionPreview(state, decision = DEFAULT_DECISION, moveId = null) {
 function advanceTacticalRace(input, moveId, rawDecision) {
   const state = structuredClone(input), section = state.sections[state.index];
   if (!section || state.finished) throw new Error('Gara già terminata');
+  const duels=!state.meetTrial&&!state.soloDrive;
   const requested = validateDecision(rawDecision);
   const decision = contextualDecision(state, requested);
   if (requested.manoeuvre === 'overtake' && state.gapSeconds > 0.01) throw new Error('Sei già davanti: scegli il ritmo o prepara la difesa');
@@ -178,30 +179,30 @@ function advanceTacticalRace(input, moveId, rawDecision) {
       log.incident = { kind: cue.kind, playerSeconds: playerLoss, opponentSeconds: opponentLoss };
       log.explanations.push(`${cue.description} Imprevisto esterno: tu +${playerLoss.toFixed(2)} s, rivale +${opponentLoss.toFixed(2)} s. Il ritmo prudente riduce la perdita.`);
     }
-    if (!state.meetTrial && decision.manoeuvre === 'defend' && decision.line !== 'defend') { player.time += 0.12; opponent.time += 0.2; log.explanations.push('Hai difeso la linea: entrambi perdete tempo, senza bloccare un’auto molto più veloce.'); }
-    if (!state.meetTrial && opponentDecision.manoeuvre === 'defend' && opponentDecision.line !== 'defend') { opponent.time += 0.12; player.time += 0.2; log.explanations.push('Il rivale ha difeso la linea, sacrificando parte del suo passo.'); }
+    if (duels && decision.manoeuvre === 'defend' && decision.line !== 'defend') { player.time += 0.12; opponent.time += 0.2; log.explanations.push('Hai difeso la linea: entrambi perdete tempo, senza bloccare un’auto molto più veloce.'); }
+    if (duels && opponentDecision.manoeuvre === 'defend' && opponentDecision.line !== 'defend') { opponent.time += 0.12; player.time += 0.2; log.explanations.push('Il rivale ha difeso la linea, sacrificando parte del suo passo.'); }
     const opponentOutOfFuel = state.opponent.car.currentFuel + 0.000001 < opponent.fuel;
     // Defending only slows an opponent who is actually close; it costs the defender time too.
-    if (!state.meetTrial && previousGap > 0 && previousGap < 1.2 && decision.line === 'defend') { player.time += 0.08; opponent.time += 0.24; log.explanations.push('Hai protetto l’interno: il rivale vicino ha dovuto aspettare.'); }
-    if (!state.meetTrial && previousGap < 0 && previousGap > -1.2 && opponentDecision.line === 'defend') { opponent.time += 0.08; player.time += 0.24; log.explanations.push('Il rivale ha chiuso l’interno, rallentando il tuo tentativo.'); }
+    if (duels && previousGap > 0 && previousGap < 1.2 && decision.line === 'defend') { player.time += 0.08; opponent.time += 0.24; log.explanations.push('Hai protetto l’interno: il rivale vicino ha dovuto aspettare.'); }
+    if (duels && previousGap < 0 && previousGap > -1.2 && opponentDecision.line === 'defend') { opponent.time += 0.08; player.time += 0.24; log.explanations.push('Il rivale ha chiuso l’interno, rallentando il tuo tentativo.'); }
     const previousPlayerTime = state.playerTime || 0, previousOpponentTime = state.opponentTime || 0;
     state.playerTime = previousPlayerTime + player.time;
     state.opponentTime = previousOpponentTime + opponent.time;
     let gap = state.opponentTime - state.playerTime;
     const passingSpace = sectionFeatures(section, next, state.routeProfile).passingSpace;
     const wide = passingSpace && section.segments.some(segment => segment.widthM >= 10 && segment.lengthM >= 150);
-    if (!state.meetTrial && previousGap < 0 && gap > 0 && !(wide && (decision.manoeuvre === 'overtake' || gap > 0.65))) {
+    if (duels && previousGap < 0 && gap > 0 && !(wide && (decision.manoeuvre === 'overtake' || gap > 0.65))) {
       if (decision.manoeuvre !== 'overtake' || !passingSpace) { state.playerTime = state.opponentTime + 0.12; gap = -0.12; log.explanations.push('Hai raggiunto il rivale, ma senza spazio o tentativo resti dietro.'); }
     }
-    if (!state.meetTrial && previousGap > 0 && gap < 0 && !(wide && (opponentDecision.manoeuvre === 'overtake' || gap < -0.65))) {
+    if (duels && previousGap > 0 && gap < 0 && !(wide && (opponentDecision.manoeuvre === 'overtake' || gap < -0.65))) {
       if (opponentDecision.manoeuvre !== 'overtake' || !passingSpace) { state.opponentTime = state.playerTime + 0.12; gap = 0.12; log.explanations.push('Il rivale ti ha raggiunto, ma non ha completato il sorpasso.'); }
     }
     const openStraight = section.segments.some(segment => !segment.radiusM && segment.widthM >= 10 && segment.lengthM >= 250);
     const defendingCurve = section.segments.some(segment => segment.radiusM > 0);
-    if (!state.meetTrial && !openStraight && defendingCurve && previousGap > 0 && previousGap < 1.2 && decision.line === 'defend' && gap < 0 && gap > -0.8) {
+    if (duels && !openStraight && defendingCurve && previousGap > 0 && previousGap < 1.2 && decision.line === 'defend' && gap < 0 && gap > -0.8) {
       state.opponentTime = state.playerTime + 0.12; gap = 0.12; log.explanations.push('La traiettoria interna ha chiuso il varco: mantieni la posizione, sacrificando tempo sul giro.');
     }
-    if (!state.meetTrial && !openStraight && defendingCurve && previousGap < 0 && previousGap > -1.2 && opponentDecision.line === 'defend' && gap > 0 && gap < 0.8) {
+    if (duels && !openStraight && defendingCurve && previousGap < 0 && previousGap > -1.2 && opponentDecision.line === 'defend' && gap > 0 && gap < 0.8) {
       state.playerTime = state.opponentTime + 0.12; gap = -0.12; log.explanations.push('La difesa del rivale ha chiuso il varco: dovrai preparare un altro attacco.');
     }
     state.gapSeconds = round(gap); state.gap = Math.round(state.gapSeconds * 1000);
@@ -221,12 +222,12 @@ function advanceTacticalRace(input, moveId, rawDecision) {
     log.potentialSeconds = round(player.potentialTime); log.driverLossSeconds = round(player.driverLoss); log.mistakeSeconds = round(player.mistake);
     log.peakKmh = round(player.peakSpeed, 1); log.exitKmh = round(player.exitSpeed * 3.6, 1); log.opponentPeakKmh = round(opponent.peakSpeed, 1);
     if (player.mistake > 0) log.explanations.push(`Piccolo errore di guida: +${player.mistake.toFixed(2)} s. ${decision.braking === 'late' ? 'La staccata tardiva ha richiesto più precisione.' : 'Riflessi e pulizia riducono queste perdite.'}`);
-    if (!state.meetTrial && opponent.mistake > 0) log.explanations.push(`Il rivale ha commesso un errore: +${opponent.mistake.toFixed(2)} s.`);
+    if (duels && opponent.mistake > 0) log.explanations.push(`Il rivale ha commesso un errore: +${opponent.mistake.toFixed(2)} s.`);
     if (player.lateExitLoss > 0.03) log.explanations.push(`Staccata tardiva: ingresso meno composto, +${player.lateExitLoss.toFixed(2)} s e uscita più lenta.`);
     if (decision.line === 'defend' && !(previousGap > 0 && previousGap < 1.2)) log.explanations.push('Chiudere l’interno senza un rivale vicino ha sacrificato il rilancio senza aiutarti.');
     if (decision.manoeuvre === 'prepare') log.explanations.push('Hai lasciato 0,12 s per preparare il prossimo rilancio.');
     log.explanations.push(`Il pilota ha lasciato ${player.driverLoss.toFixed(2)} s rispetto al potenziale stimato della stessa auto.`);
-    if (!state.meetTrial && opponent.peakSpeed > player.peakSpeed + 8) log.explanations.push('La velocità della vettura rivale si è fatta sentire in questo tratto.');
+    if (duels && opponent.peakSpeed > player.peakSpeed + 8) log.explanations.push('La velocità della vettura rivale si è fatta sentire in questo tratto.');
   }
   state.index += 1;
   if(state.meetTrial){state.gapSeconds=0;state.gap=0;}

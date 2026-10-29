@@ -8,8 +8,9 @@ function references(contract,state){
  cache.set(key,rows);if(cache.size>64)cache.delete(cache.keys().next().value);return rows;
 }
 function project(contract,state){
- const sector=Math.min(state.index,state.sections.length),options={sector,totalSectors:state.sections.length,featuredId:state.gridOpponentId,finished:!!state.finished};
+ const sector=Math.min(state.index,state.sections.length),options={sector,totalSectors:state.sections.length,featuredId:state.gridTacticsVersion===1?state.tacticalRivalId:state.gridOpponentId,finished:!!state.finished};
  if(state.championship?.format==='grid'&&state.championship.classification)return gridTiming(state.championship.classification,options);
+ if(state.gridTacticsVersion===1)return gridTiming(require('../shared/gridRace.mjs').gridRows(state),options);
  if(!contract?.drivers?.length)return null;
  const rows=references(contract,state).map(reference=>{
   const driver=contract.drivers.find(d=>d.id===reference.id);
@@ -22,7 +23,7 @@ function project(contract,state){
 }
 async function read(tx,userId,state){
  if(!state.gridOpponentId)return null;
- if(state.championship?.format==='grid'&&state.championship.classification)return project(null,state);
+ if(state.gridTacticsVersion===1||state.championship?.format==='grid'&&state.championship.classification)return project(null,state);
  const entry=await tx.championshipEntry.findFirst({where:{id:state.entryId,userId},select:{contract:true}});
  if(!entry)return null;
  return project(JSON.parse(entry.contract||'{}'),state);

@@ -23,7 +23,7 @@ function tacticalContext(state, side = 'player') {
   const gap = (state.gapSeconds || 0) * (side === 'player' ? 1 : -1);
   const behind = gap < -0.01, ahead = gap > 0.01, alongside = !behind && !ahead;
   const close = Math.abs(gap) <= 1.2;
-  const allowDuels = !state.meetTrial && !state.timeTrial && !state.opponentFailure && (!state.lesson || state.trainingDuel);
+  const allowDuels = !state.soloDrive && !state.meetTrial && !state.timeTrial && !state.opponentFailure && (!state.lesson || state.trainingDuel);
   const canDefend = allowDuels && ahead && close && features.visibilityM >= 80;
   const manoeuvres = ['hold'];
   if (allowDuels && behind && Math.abs(gap) <= 3 && next && features.nextStraight) manoeuvres.push('prepare');

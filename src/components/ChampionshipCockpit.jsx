@@ -20,7 +20,7 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
   const section = race.sections[race.index];
   const next = race.sections[race.index + 1];
   const paths = race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null);
-  const featured = race.gridTiming?.rows.find(row => row.id === race.gridOpponentId);
+  const featured = race.gridTiming?.rows.find(row => row.id === (race.gridTacticsVersion===1?race.tacticalRivalId:race.gridOpponentId));
   const titles = {player:'La tua auto e il pilota', sector:'Settore da affrontare', track:'Pista e condizioni', timing:'Classifica e rilevamenti', history:'Cronaca della gara', opponent:'Confronto tattico', session:'Sessione e opzioni'};
   useEffect(() => {
     const advanced = previous.current.id === race.id && race.index > previous.current.index;
@@ -62,7 +62,7 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
       <button type="button" className="race-button" onClick={() => setDetail('timing')}>Classifica e settori</button>
       <button type="button" className="race-button" onClick={() => setDetail('history')}>Cronaca</button>
       <button type="button" className="race-button" onClick={() => setDetail('track')}>Pista e meteo</button>
-      <button type="button" className="race-button" onClick={() => setDetail('opponent')}>Confronto tattico</button>
+      <button type="button" className="race-button" disabled={race.gridTacticsVersion===1&&!race.tacticalRivalId} onClick={() => setDetail('opponent')}>Rivale tattico</button>
     </nav>
     <footer className="race-session-bar"><span>{active ? 'Nessun timer · puoi riprendere la gara' : 'Risultato salvato'}</span><button type="button" onClick={() => setDetail('session')}>Opzioni ↗</button></footer>
     {detail && <RaceDetailDialog title={titles[detail]} onClose={() => setDetail(null)}>
@@ -71,7 +71,7 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
       {detail === 'track' && <><p>{conditionLabel(race.environment.weather)} · {conditionLabel(race.environment.surface)} · {race.distanceKm.toFixed(2)} km</p><TrackPreview trackName={race.trackName} sections={race.sections} paths={paths} index={race.index} profile={race.routeProfile || routeProfileFor(race.mode)}/></>}
       {detail === 'timing' && <div className="space-y-3"><GridRaceTiming timing={race.gridTiming}/><h3 className="font-bold">Posizione e distacchi per settore</h3>{race.logs.length ? <ol className="grid-sector-history">{race.logs.map((log, i) => <li key={i}><strong>Settore {i + 1} · {trackSectionLabel(log.section)}</strong>{log.gridTiming ? <GridSectorSummary timing={log.gridTiming}/> : <p>Rilevamento non registrato nel vecchio salvataggio.</p>}</li>)}</ol> : <p>Il primo rilevamento arriva alla fine del primo settore.</p>}</div>}
       {detail === 'history' && <RaceHistory race={race}/>}
-      {detail === 'opponent' && <><p className="championship-tactical-note">{race.opponent.name}{featured?.position ? ` · ${featured.position}° posto` : ''} è il rivale delle manovre tattiche. La tua posizione e i tuoi vicini sono indicati nel cruscotto.</p><CarDetail car={race.opponent.car} pilot={race.opponent.pilot} name={race.opponent.name}/></>}
+      {detail === 'opponent' && <><p className="championship-tactical-note">{race.opponent.name}{featured?.position ? ` · ${featured.position}° posto` : ''} {race.gridTacticsVersion===1?'è il pilota in corsa più vicino al precedente rilevamento, davanti o dietro di te. Il confronto cambia soltanto dopo un settore completato.':'è il rivale delle manovre tattiche di questa gara precedente.'}</p><CarDetail car={race.opponent.car} pilot={race.opponent.pilot} name={race.opponent.name}/></>}
       {detail === 'session' && <div className="space-y-4"><p>Puoi uscire dalla pagina e riprendere la sessione. Durante la gara le modifiche a pilota e vetture sono bloccate. I premi sono assegnati secondo il contratto del campionato.</p>{active && <button type="button" className="race-button race-abandon" disabled={pending > 0} onClick={() => {setDetail(null); onAbandon();}}>Abbandona gara</button>}</div>}
     </RaceDetailDialog>}
   </div>;
