@@ -55,6 +55,7 @@ async function startRace(tx, userId, body) {
   const pilot = { ...Object.fromEntries(PILOT_STATS.map(key => [key, user[key]])), fundamentals: fundamentals(growth) };
   if (body.lesson !== undefined) {
     if (mode !== 'track' || typeof body.lesson !== 'string' || Object.keys(body).some(key => !['mode', 'lesson'].includes(key))) fail(400, 'Prova didattica non valida');
+    if(body.lesson.startsWith('practice-')){const state=await require('./targetedTraining').start(tx,user,growth,body.lesson,pilot,randomInt(1,2147483647));const race=await tx.raceSession.create({data:{userId,garageId:0,mode:'track',seed:state.rng,state:JSON.stringify(state)}});return snapshot(tx,userId,race);}
     const technique = requireTrial(growth, user.level, body.lesson);
     const seed = randomInt(1, 2147483647);
     const state = createTechniqueLesson(technique, pilot, seed);
@@ -158,7 +159,7 @@ async function startRace(tx, userId, body) {
   const raceSections = rulesVersion === 3 ? demo ? structuredClone(DEMO_TRACK.sections) : buildTacticalTrack(sections, distanceKm, routeProfile) : sections;
   const plan = incidentPlan(seed, rulesVersion === 3 ? raceSections.length : 0, routeProfile);
   const state = {
-    rulesVersion, fuelModelVersion:rulesVersion!==3?1:gridMatch?(gridMatch.contract.fuelModelVersion||1):2, developmentVersion: 1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
+    rulesVersion, fuelModelVersion:rulesVersion!==3?1:gridMatch?(gridMatch.contract.fuelModelVersion||1):2, developmentVersion: 1, statTrainingVersion:1, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
     car: carSnapshot(garage), pilot,
     opponent: { name: opponentName, car: { ...opponentCar, paintColour:opponentCar.paintColour||seededPaint('race:'+seed+':'+opponentName),name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
@@ -205,7 +206,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     try { state = advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
   }
   if (state.lesson) {
-    if (!abandon) state.logs.at(-1).instructor = state.courseTechniqueId ? techniqueLessonFeedback(state) : lessonFeedback(state);
+    if (!abandon) state.logs.at(-1).instructor = state.targetedCourseId ? require('../shared/targetedTraining.mjs').trainingFeedback(state) : state.courseTechniqueId ? techniqueLessonFeedback(state) : lessonFeedback(state);
     if (state.courseTechniqueId && !state.finished) state.gapSeconds = state.sections[state.index].scenarioGap;
   } else if(!state.meetTrial) {
     const garage = await tx.garage.findFirst({ where: { id: race.garageId, userId } });

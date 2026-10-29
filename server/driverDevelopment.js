@@ -4,7 +4,7 @@ const { PRACTICE_FIELDS, PRACTICE_CAP, TECHNIQUE_CAP, TECHNIQUE_ID, LESSON_ID, p
 async function development(tx, userId) {
   const row = await tx.driverDevelopment.findUnique({ where: { userId } });
   const user = await tx.user.findUnique({ where: { id: userId } });
-  return { ...publicDevelopment(row), curriculum: publicCurriculum(row, user.level) };
+  return { ...publicDevelopment(row), targetedTraining: require('../shared/targetedTraining.mjs').trainingList(row,user.level), statPractice: require('../shared/targetedTraining.mjs').trainingRecord(row).practice, curriculum: publicCurriculum(row, user.level) };
 }
 async function readLesson(tx, userId, body) {
   if (Object.keys(body).length) fail(400, 'La lezione non accetta statistiche o progressi dal browser');
@@ -18,6 +18,7 @@ async function settleDevelopment(tx, userId, state) {
     return summary;
   }
   const row = await tx.driverDevelopment.upsert({ where: { userId }, create: { userId }, update: {} });
+  if(state.targetedCourseId){await require('./targetedTraining').settle(tx,userId,state,row,summary);return summary;}
   if (state.courseTechniqueId) return settleTechniqueCourse(tx, userId, state, row, summary);
   if (state.lesson === LESSON_ID) {
     const exercises = state.logs.map((_, index) => lessonFeedback(state, index));
@@ -68,6 +69,7 @@ async function settleDevelopment(tx, userId, state) {
     : 'Hai fatto pratica nelle zone di frenata realmente affrontate.';
   summary.techniqueGains = await practiceTechniques(tx, userId, row, state);
   if (Object.values(summary.techniqueGains).some(gain => gain > 0)) summary.message += ' Hai consolidato le tecniche effettivamente usate.';
+  await require('./targetedTraining').settle(tx,userId,state,await tx.driverDevelopment.findUnique({where:{userId}}),summary);
   const lateErrors = state.logs.filter(log => log.decision?.braking === 'late' && ((log.mistakeSeconds || 0) > 0 || (log.explanations || []).some(text => text.startsWith('Staccata tardiva:')))).length;
   if (lateErrors) summary.advice = 'Le staccate tardive hanno compromesso alcuni ingressi: confrontale con la frenata al riferimento.';
   return summary;

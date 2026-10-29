@@ -1,3 +1,4 @@
+import PilotStats from '../components/PilotStats';
 import {carArtwork} from '../../shared/carArtwork.mjs';
 import {paintFor,paintName} from '../../shared/carPaint.mjs';
 import PilotAvatar from '../components/PilotAvatar';
@@ -28,12 +29,7 @@ export default function GarageHome() {
                <p>Saldo: €{money.toLocaleString()}</p>
              </div>
           </div>
-          <div className="bg-win98-gray p-2 border border-gray-400 font-bold text-xs space-y-1">
-             <div className="flex justify-between"><span>Brave (Coraggio):</span> <span>{stats.brave}</span></div>
-             <div className="flex justify-between"><span>Clean (Pulizia):</span> <span>{stats.clean}</span></div>
-             <div className="flex justify-between"><span>Reflex (Riflessi):</span> <span>{stats.reflex}</span></div>
-             <div className="flex justify-between"><span>Shift (Cambiata):</span> <span>{stats.shift}</span></div>
-          </div>
+          <PilotStats stats={stats}/>
         </div>
 
         {/* Right: Garage Inventory */}

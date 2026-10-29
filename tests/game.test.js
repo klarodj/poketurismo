@@ -1260,3 +1260,35 @@ test('level rewards cover multiple levels, cap abilities and never duplicate the
  const again=experienceReward({...u,...first,exp:3050},20);assert.equal(again.turn,first.turn);
  assert.equal(experienceReward({...u,turn:99},100).turn,100);
 });
+
+test('targeted school courses charge once, award specific practice, and preserve the real car and XP',async()=>{
+ const before=await prisma.garage.findUnique({where:{id:garage.id}}),exp=(await prisma.user.findUnique({where:{id:1}})).exp;
+ const locked=await post('/races',{mode:'track',lesson:'practice-brake-3'});assert.equal(locked.status,403);
+ for(let run=0;run<2;run++){
+  const key=randomUUID(),body={mode:'track',lesson:'practice-brake-1'};
+  let response=await post('/races',body,key);assert.equal(response.status,200);
+  await post('/races',body,key);
+  const id=response.data.race.id;
+  for(let i=0;i<4;i++){const race=response.data.race;response=await post(`/races/${id}/turns`,{version:race.version,moveId:null,decision:{pace:'balanced',braking:race.sections[i].goal.braking,line:'exit',manoeuvre:'hold'}});assert.equal(response.status,200);}
+  assert.equal(response.data.race.developmentSummary.statPractice.brake,80);
+ }
+ const u=await prisma.user.findUnique({where:{id:1}});assert.equal(u.brake,pilot.brake+1);assert.equal(u.turn,pilot.turn);assert.equal(u.exp,exp);assert.equal(u.moneyCents,10000000-60000);
+ assert.deepEqual(await prisma.garage.findUnique({where:{id:garage.id}}),before);
+ const d=(await get('/state/1')).data.development;assert.equal(d.statPractice.brake,60);
+});
+test('targeted practice caps stats and validates the actual executed exercise decisions',()=>{
+ const {trainingLesson,trainingFeedback,addPractice,TRAINING_COURSES}=require('../shared/targetedTraining.mjs');const state=trainingLesson(TRAINING_COURSES[0],pilot,123,0);
+ state.logs=[{decision:{...state.sections[0].goal,pace:'attack',manoeuvre:'hold'}}];assert.equal(trainingFeedback(state,0).correct,false);
+ const r={practice:{brake:90},attempts:{},routes:{}};assert.equal(addPractice({...pilot,brake:99},r,{brake:250}).data.brake,100);assert.equal(r.practice.brake,0);
+});
+
+test('targeted course repetitions diminish and stop; an abandoned session gives no practice',async()=>{
+ const gains=[];
+ for(let run=0;run<9;run++){
+  let response=await post('/races',{mode:'track',lesson:'practice-turn-1'});assert.equal(response.status,200);const id=response.data.race.id;
+  for(let i=0;i<4;i++){const race=response.data.race;response=await post(`/races/${id}/turns`,{version:race.version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:race.sections[i].goal.line,manoeuvre:'hold'}});}
+  gains.push(response.data.race.developmentSummary.statPractice.turn);
+ }
+ assert.deepEqual(gains,[80,80,80,40,40,40,20,20,20]);assert.equal((await post('/races',{mode:'track',lesson:'practice-turn-1'})).status,409);
+ let r=await post('/races',{mode:'track',lesson:'practice-brake-1'});r=await post(`/races/${r.data.race.id}/abandon`,{version:r.data.race.version});assert.equal(r.status,200);assert.deepEqual(r.data.development.statPractice.brake||0,0);
+});
