@@ -1,4 +1,6 @@
 import {conditionLabel} from '../logic/racePresentation';
+import PerformanceBadge from './PerformanceBadge';
+import {sectionFeatures} from '../../shared/raceContext.mjs';
 import FuelGauge from './FuelGauge';
 import React, {useEffect, useRef, useState} from 'react';
 import GridRaceTiming, {GridRaceSnapshot, GridSectorSummary} from './GridRaceTiming';
@@ -11,6 +13,22 @@ import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import {DEMO_TRACK} from '../../shared/trackGeometry.mjs';
 import {routeProfileFor} from '../../shared/raceContext.mjs';
 
+function CarPreview({car,pilot,label,driver,onClick,player=false,relation}) {
+ return <button type="button" className={`championship-entry-card${player?' is-player':' is-rival'}`} onClick={onClick} aria-label={`Apri dettaglio: ${player?'La tua auto':'Auto del rivale tattico'}`}>
+  <span className="championship-entry-label">{label} <span aria-hidden="true">↗</span></span>
+  <RaceCarArtwork car={car}/>
+  <strong className="championship-entry-model">{car.name}</strong>
+  <span className="championship-entry-indices"><PerformanceBadge car={car}/><PerformanceBadge kind="IG" pilot={pilot}/></span>
+  {player?<span className="championship-entry-condition"><span className="championship-entry-fuel">Benzina <b>{Number(car.currentFuel||0).toFixed(1)} L</b><FuelGauge currentFuel={car.currentFuel} compact/></span><span>Gomme <b>{Math.round(car.tireGrip??100)}%</b> · Motore <b>{Math.round(car.engineHealth??100)}%</b></span></span>:<span className="championship-entry-driver"><b>{driver}</b><span>{relation}</span></span>}
+ </button>;
+}
+function SectorBrief({race,onDetail}) {
+ const section=race.sections[race.index],next=race.sections[race.index+1];
+ const features=sectionFeatures(section,next,race.routeProfile),corners=(section.segments||[]).filter(s=>s.radiusM>0),distance=(section.segments||[]).reduce((sum,s)=>sum+s.lengthM,0);
+ const shape=!section.segments?'Caratteristiche nel dettaglio tecnico':corners.length?Math.min(...corners.map(s=>s.radiusM))<=40?'Curve lente e rilancio':'Curve e tratti veloci':'Rettilineo';
+ return <section className="championship-sector-brief" aria-label="Settore da affrontare"><header><h2>Settore da affrontare</h2><button type="button" className="race-text-button" onClick={onDetail}>Dati tecnici ↗</button></header><strong>{trackSectionLabel(section.name)}</strong><p>{section.segments?`${Math.round(distance)} m · `:''}{shape}</p>{section.segments&&<p>{features.hasBrakingZone?features.brakingAhead?'Staccata in fondo al rettilineo.':'Frenata e traiettoria contano nel prossimo tratto.':'Tratto senza staccate.'} {features.passingSpace?'Spazio per un attacco, se sei a contatto.':'Poco spazio per superare.'}</p>}<small>{next?`Poi: ${trackSectionLabel(next.name)}`:'Poi: traguardo'}</small></section>;
+}
+
 export default function ChampionshipCockpit({race, pending, onAbandon, children}) {
   const [detail, setDetail] = useState(null);
   const timingRef = useRef(null);
@@ -18,9 +36,11 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
   const previous = useRef({id:race.id, index:race.index});
   const active = race.status === 'active';
   const section = race.sections[race.index];
-  const next = race.sections[race.index + 1];
   const paths = race.trackMap || (race.demo ? DEMO_TRACK.mapPaths : null);
   const featured = race.gridTiming?.rows.find(row => row.id === (race.gridTacticsVersion===1?race.tacticalRivalId:race.gridOpponentId));
+  const hasRival=race.gridTacticsVersion!==1||!!race.tacticalRivalId;
+  const relation=race.gapSeconds>0.01?'Dietro di te':race.gapSeconds<-.01?'Davanti a te':'Affiancato';
+  const hasAlerts=!!race.incidentCue||race.car.currentFuel<2||race.car.tireGrip<45||race.car.engineHealth<30||/rain|piogg|wet|bagn|snow|neve/.test(race.environment.weather.toLowerCase());
   const titles = {player:'La tua auto e il pilota', sector:'Settore da affrontare', track:'Pista e condizioni', timing:'Classifica e rilevamenti', history:'Cronaca della gara', opponent:'Confronto tattico', session:'Sessione e opzioni'};
   useEffect(() => {
     const advanced = previous.current.id === race.id && race.index > previous.current.index;
@@ -40,17 +60,14 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
     </header>
     <section className="championship-route" aria-label="Mappa e ambientazione durante la gara">
       <TrackIllustration name={race.trackName} sections={race.sections} index={race.index} paths={paths} cockpit/>
-      <button type="button" className="championship-roadbook" onClick={() => setDetail(active ? 'sector' : 'track')}>
-        <strong>{section ? trackSectionLabel(section.name) : 'Traguardo raggiunto'} <span aria-hidden="true">↗</span></strong>
-        {section && <span>{section.segments ? `${Math.round(section.segments.reduce((sum, segment) => sum + segment.lengthM, 0))} m · ` : ''}{next ? `Poi: ${trackSectionLabel(next.name)}` : 'Poi: traguardo'}</span>}
-      </button>
     </section>
-    <button type="button" className="championship-player-car" onClick={() => setDetail('player')} aria-label="Apri dettaglio: La tua auto">
-      <RaceCarArtwork car={race.car}/>
-      <span><strong>{race.car.name}</strong><span className="championship-car-gauges"><span>Benz. <b>{Number(race.car.currentFuel || 0).toFixed(1)} L</b><FuelGauge currentFuel={race.car.currentFuel} compact/></span><span>Gomme <b>{Math.round(race.car.tireGrip ?? 100)}%</b></span><span>Motore <b>{Math.round(race.car.engineHealth ?? 100)}%</b></span></span></span>
-    </button>
+    <section className="championship-cars" aria-label="La tua auto e il rivale tattico">
+      <CarPreview player car={race.car} pilot={race.pilot} label="La tua auto" onClick={()=>setDetail('player')}/>
+      {hasRival?<CarPreview car={race.opponent.car} pilot={race.opponent.pilot} label={race.tacticalRivalChanged?'Nuovo rivale tattico':'Rivale tattico'} driver={race.opponent.name} relation={`${featured?.position?`${featured.position}° · `:''}${relation}`} onClick={()=>setDetail('opponent')}/>:<div className="championship-entry-card championship-entry-empty"><strong>Pista libera</strong><p>Gli altri piloti si sono ritirati. Nessun rivale tattico.</p></div>}
+    </section>
     {active && <div ref={timingRef} tabIndex={-1} className="championship-checkpoint"><GridRaceSnapshot timing={race.gridTiming}/></div>}
-    {active && <div className="race-alerts" aria-label="Avvisi di gara">
+    {active && section && <SectorBrief race={race} onDetail={()=>setDetail('sector')}/>}
+    {active && hasAlerts && <div className="race-alerts" aria-label="Avvisi di gara">
       {race.incidentCue && <p role="status">⚠ {race.incidentCue.description} «Conserva» lascia più margine.</p>}
       {race.car.currentFuel < 2 && <p role="status">Carburante basso: {race.car.currentFuel.toFixed(2)} L rimasti.</p>}
       {race.car.tireGrip < 45 && <p role="status">Gomme usurate: {race.car.tireGrip.toFixed(1)}%. Lascia più margine.</p>}
@@ -62,7 +79,6 @@ export default function ChampionshipCockpit({race, pending, onAbandon, children}
       <button type="button" className="race-button" onClick={() => setDetail('timing')}>Classifica e settori</button>
       <button type="button" className="race-button" onClick={() => setDetail('history')}>Cronaca</button>
       <button type="button" className="race-button" onClick={() => setDetail('track')}>Pista e meteo</button>
-      <button type="button" className="race-button" disabled={race.gridTacticsVersion===1&&!race.tacticalRivalId} onClick={() => setDetail('opponent')}>Rivale tattico</button>
     </nav>
     <footer className="race-session-bar"><span>{active ? 'Nessun timer · puoi riprendere la gara' : 'Risultato salvato'}</span><button type="button" onClick={() => setDetail('session')}>Opzioni ↗</button></footer>
     {detail && <RaceDetailDialog title={titles[detail]} onClose={() => setDetail(null)}>
