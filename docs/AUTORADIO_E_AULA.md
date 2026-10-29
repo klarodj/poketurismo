@@ -17,3 +17,5 @@ Generazione con `image_gen` integrato: aula `public/images/world/sections/school
 ## Verifica
 
 300 test gioco inclusi5 casi del lettore (preferenze senza autoplay, controlli e riproduzione, fine brano/errori, dati corrotti, promise Play seguita da Pausa), lint e build superati. Browser su320/390/1280px: riproduzione media reale, controlli, cambio percorso senza interruzioni, chiusura/Escape, reload senza autoplay, cambio banner. Collaudo API in sola lettura; nessuna modifica alle partite pubbliche. Rapporti locali in `.preview/car-radio-qa`.
+
+Pubblicato sulla singola istanza5174 con gateway5184, dopo backup completo Auth/gioco e build precedente in `/home/klaro/.backups/poketurismo/car-radio-20261029T162700Z`. Nessuna migrazione o scrittura di gioco. Servizi riavviati e health verificato; file musicali serviti con supporto alle richieste Range.
