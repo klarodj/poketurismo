@@ -7,3 +7,6 @@
 .club-visitors{margin:14px 0 20px;padding-bottom:12px;border-bottom:2px groove #fff}
 
 .club-story-activity{padding:12px;margin:12px 0;background:#c0c0c0;border:2px groove #fff;font-size:20px;line-height:1.25}.club-story-activity h2{font-size:24px;font-weight:bold}.club-story-activity .story-identity img{image-rendering:pixelated;border:2px inset #fff}.club-story-activity>p{margin:8px 0}.club-story-activity>details{margin-top:10px}.club-story-activity select{max-width:100%;min-width:0;background:#fff;border:2px inset #fff}.club-story-activity .meet-display-actions{align-items:flex-start}
+
+.club-reputation{padding:10px;background:#c0c0c0;border:2px groove #fff;margin-bottom:12px;font-size:20px}.club-reputation h2{font-size:24px;font-weight:bold}.club-reputation-domains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}.club-reputation article{min-width:0;display:grid;gap:4px}.club-reputation small{font-size:18px}.club-reputation-bar{height:18px;background:#fff;border:2px inset #fff}.club-reputation-bar i{display:block;height:100%;background:repeating-linear-gradient(90deg,#000080 0 8px,#c0c0c0 8px 10px)}@media(max-width:620px){.club-reputation-domains{grid-template-columns:1fr}}
+.club-reputation>summary{cursor:pointer;color:#000080;font-size:20px;font-weight:bold}.club-reputation>h2{margin-top:10px}

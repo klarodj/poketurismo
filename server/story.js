@@ -22,16 +22,16 @@ async function summary(tx, userId) {
   return { unread: unread.length, latest: unread.slice(-5).reverse().map(({ id, senderId, createdAt }) => ({ id, senderId, createdAt, name: storyCharacter(senderId).shortName })) };
 }
 async function hub(tx, userId) {
-  const value = await load(tx, userId), record = value.missions[INTRO_MISSION.id];
-  return { version: STORY_VERSION, characters: STORY_CHARACTERS.map(character => ({ ...Object.fromEntries(Object.entries(character).filter(([key]) => !['chapters', 'voice'].includes(key))), known: value.known.includes(character.id) })),
-    missions: [{ id: INTRO_MISSION.id, version: record?.version || INTRO_MISSION.version, senderId: INTRO_MISSION.senderId, title: INTRO_MISSION.title, objective: INTRO_MISSION.objective, destination: INTRO_MISSION.destination, destinationLabel: INTRO_MISSION.destinationLabel, rewardMoney: record?.rewardMoney ?? INTRO_MISSION.rewardMoney, rewardXp: 0, status: record?.status || 'available', completedAt: record?.completedAt || null }, ...require('./clubStory').publicEpisodes(value)],
+  const value = await load(tx, userId), record = value.missions[INTRO_MISSION.id], reputation=await require('./clubReputation').read(tx,userId,value);
+  return { version: STORY_VERSION, reputation, characters: STORY_CHARACTERS.map(character => ({ ...Object.fromEntries(Object.entries(character).filter(([key]) => !['chapters', 'voice'].includes(key))), known: value.known.includes(character.id) })),
+    missions: [{ id: INTRO_MISSION.id, version: record?.version || INTRO_MISSION.version, senderId: INTRO_MISSION.senderId, title: INTRO_MISSION.title, objective: INTRO_MISSION.objective, destination: INTRO_MISSION.destination, destinationLabel: INTRO_MISSION.destinationLabel, rewardMoney: record?.rewardMoney ?? INTRO_MISSION.rewardMoney, rewardXp: 0, status: record?.status || 'available', completedAt: record?.completedAt || null }, ...require('./clubStory').publicEpisodes(value),...reputation.invites.filter(e=>e.unlocked)],
     messages: messageList(value).reverse(), unread: messageList(value).filter(message => !message.readAt).length };
 }
 function addMessage(value, id, text) {
   if (!value.messages[id]) value.messages[id] = { id, senderId: INTRO_MISSION.senderId, missionId: INTRO_MISSION.id, text, createdAt: new Date().toISOString(), readAt: null };
 }
 async function respond(tx, userId, body) {
-  if(require('../shared/clubStory.mjs').clubEpisode(body.missionId)){const value=await load(tx,userId);await require('./clubStory').respond(tx,userId,body,value,save);return {story:await hub(tx,userId)};}
+  if(require('./clubStory').clubEpisode(body.missionId)){const value=await load(tx,userId);await require('./clubStory').respond(tx,userId,body,value,save);return {story:await hub(tx,userId)};}
   if (body.missionId !== INTRO_MISSION.id || !['accept', 'pause', 'resume'].includes(body.choice)) fail(400, 'Risposta all’incarico non valida');
   const value = await load(tx, userId), previous = value.missions[INTRO_MISSION.id];
   if (previous?.status === 'completed') fail(409, 'Incarico già concluso: il bonus è unico');

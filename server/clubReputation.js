@@ -1,0 +1,3 @@
+const {clubReputation}=require('../shared/clubReputation.mjs');
+async function read(tx,userId,narrative){const [progress,races,championships]=await Promise.all([tx.playerProgress.findUnique({where:{userId}}),tx.raceSession.findMany({where:{userId,status:'completed',mode:{in:['track','championship']}},select:{mode:true,state:true},orderBy:[{createdAt:'asc'},{id:'asc'}]}),tx.championshipEntry.findMany({where:{userId,status:'completed'},select:{championshipId:true,status:true}})]);return clubReputation({street:JSON.parse(progress?.streetState||'{}'),narrative,races,championships});}
+module.exports={read};

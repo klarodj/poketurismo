@@ -1,6 +1,6 @@
 # Roadmap: carriera, persone e provincia nel 2002
 
-Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03–B10 da iniziare.
+Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03 in prova; B04–B10 da iniziare.
 
 Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B03**, dopo il playtest di B02; non l'intera roadmap in un solo rilascio.
 
@@ -23,7 +23,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 |---|---|---|---|
 | B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Completato |
 | B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | Completato |
-| B03 | Reputazione autodromo, clandestine e raduni | B02 | Da iniziare |
+| B03 | Reputazione autodromo, clandestine e raduni | B02 | In prova |
 | B04 | Eventi a tema e motivi per usare auto diverse | B03 | Da iniziare |
 | B05 | Album del pilota e memoria delle vetture | B02, B04 | Da iniziare |
 | B06 | Scelte di ruolo e soluzioni alternative agli incarichi | B03, B04 | Da iniziare |
@@ -70,11 +70,11 @@ Prima tappa di prodotto: B01–B03, un mondo con persone che riconoscono il gioc
 
 ## B03 — Reputazione e relazioni
 
-- [ ] Introdurre tre ambiti leggibili: autodromo, clandestine e raduni. Mostrare pochi gradi nominati, con avanzamento e prossima opportunità consultabili nei dettagli.
-- [ ] Riutilizzare la reputazione clandestina già salvata: definire una proiezione compatibile o una conversione versionata che non cancelli né riattribuisca i punti storici.
-- [ ] Separare reputazione pubblica e relazione con i tre rivali: conosciuto, fidato, rivale sportivo sono stati narrativi, non nuove abilità da massimizzare.
-- [ ] Definire una prima tabella di sblocchi: incarichi, inviti e servizi con condizioni esplicite. Nessun malus automatico in autodromo per aver partecipato alle clandestine.
-- [ ] Impedire accumulo illimitato con lo stesso incarico o avversario; nessuna reputazione guadagnata inviando SMS o richieste di amicizia ripetute.
+- [x] Introdurre tre ambiti leggibili: autodromo, clandestine e raduni. Mostrare pochi gradi nominati, con avanzamento e prossima opportunità consultabili nei dettagli.
+- [x] Riutilizzare la reputazione clandestina già salvata: definire una proiezione compatibile o una conversione versionata che non cancelli né riattribuisca i punti storici.
+- [x] Separare reputazione pubblica e relazione con i tre rivali: conosciuto, fidato, rivale sportivo sono stati narrativi, non nuove abilità da massimizzare.
+- [x] Definire una prima tabella di sblocchi: incarichi, inviti e servizi con condizioni esplicite. Nessun malus automatico in autodromo per aver partecipato alle clandestine.
+- [x] Impedire accumulo illimitato con lo stesso incarico o avversario; nessuna reputazione guadagnata inviando SMS o richieste di amicizia ripetute.
 
 **Completamento:** B02 alimenta reputazione e relazioni senza doppioni; ogni sblocco ha una fonte consultabile, IG/IP e fisica invariati. Primo playtest dell'arco B01–B03 prima di ampliare i contenuti.
 
@@ -189,3 +189,5 @@ Prossima azione concreta:
 - B02 in prova: sei episodi implementati con auto propria/prestito come scelto dall’utente. 345 test gioco, 13 accessi, arco completo SQLite/browser e PostgreSQL con richieste simultanee; vedi rapporto B02. Pubblicazione ancora da verificare.
 
 - B02 completato e pubblicato il 30 ottobre 2026: sorgenti 6ee26c9. Intero arco verificato con API reali in SQLite e PostgreSQL dedicati, incluso saldo zero/garage vuoto e richieste simultanee; frontend distribuito a 320/390/1280 su API di collaudo. 345 test gioco, 13 account, lint/build superati. Backup e confronto delle 32 tabelle: tutte le righe esistenti identiche. Prossimo blocco B03 dopo il playtest; non ancora iniziato.
+
+- B03 in prova: reputazioni derivate da risultati salvati, rapporti e ricordi, due serie facoltative da tre confronti senza premi economici. Su richiesta aggiunta verifica e copertura delle otto abilità nelle nuove gare, cap16 pratica/gara e checkpoint precedenti preservati. Rapporto [B03_REPUTAZIONE_E_PRATICA.md](B03_REPUTAZIONE_E_PRATICA.md).
