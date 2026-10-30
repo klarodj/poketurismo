@@ -22,3 +22,9 @@ Comandi uniformi: Guida il settore, ritmo, staccata/traiettoria pertinenti, tecn
 Browser isolato a 320/390/1280 px su snapshot sintetici generati dal motore locale: gara singola, strada, cronometro, fantasma disponibile/in attesa, allenamento gratuito, personalizzata, scuola tecnica, scuola di duello, allenamento con domande, campionato attivo/concluso, storico, rivale ritirato e avvisi critici con nomi lunghi. Verificati ordine, foto affiancate, tutti i popup, Escape/focus, assenza di overflow, comandi inviati e reset a settore successivo, risultati finali e compatibilità del cruscotto campionato. Report e schermate in `.preview/all-races-qa`; le API del browser sono intercettate e nessuna partita pubblica viene giocata nel collaudo.
 
 Nessun nuovo asset: tutte le immagini approvate riutilizzate, incluso il piazzale della scuola. Nessuna modifica a server, motore, regolamenti, premi, consumi, checkpoint, database o salvataggi. Nessuna migrazione o seed da applicare.
+
+## Pubblicazione verificata
+
+Rilasciato da `88c2058` sull’unica istanza 5174 e gateway 5184. Backup completo Auth/gioco e build precedente in `/home/klaro/.backups/poketurismo/all-races-20261030T001645Z`. Audit a servizi fermi: tutte le righe delle 32 tabelle identiche prima e dopo; nessuna scrittura, migrazione o azzeramento.
+
+Controllate sulla build pubblicata sei modalità a 390/1280 px con sole risposte sintetiche intercettate in lettura. Health, immagine esistente del piazzale e primi 4 KiB JS/CSS confrontati con successo su entrambi i Funnel 443/8443. Servizi attivi, anteprima 5197 fermata e nessun listener legacy 5173/3001. Test esteso isolato: 15 scenari, 18 invii di comandi, tutti i popup e focus, nessun errore JavaScript o overflow.
