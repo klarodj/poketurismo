@@ -1,5 +1,7 @@
 # Cruscotto campionati ordinato · 29 ottobre 2026
 
+Aggiornamento successivo: il layout è ora condiviso da tutte le modalità, descritto in [CRUSCOTTO_GARA_UNIFICATO.md](CRUSCOTTO_GARA_UNIFICATO.md).
+
 Ordine richiesto: titolo, cartolina e minimappa; due anteprime auto affiancate (giocatore a sinistra, rivale tattico attuale a destra); classifica con posizione e vicini; settore da affrontare; comandi di guida e comportamento tattico; approfondimenti finali. Tema Win98 e immagini pixel art approvate conservati.
 
 Le due schede auto sono pulsanti con immagine, modello, IP/IG e sintesi essenziale. La propria vettura conserva benzina con indicatore grafico, gomme e motore; il rivale mostra nome del pilota, posizione e lato del confronto. I distacchi si leggono nel riepilogo sottostante. Foto e scheda aprono i dettagli completi già esistenti di veicolo e pilota. Se non ci sono rivali attivi la destra indica Pista libera, senza foto di un avversario ritirato.

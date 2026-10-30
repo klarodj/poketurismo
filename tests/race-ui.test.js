@@ -62,7 +62,7 @@ test('cockpit shows both real car images and keeps technical data out of the mai
   const markup = renderToStaticMarkup(React.createElement(Dashboard, { race, pending: 0, onAbandon() {} }, 'CONTROLLI'));
   assert.ok(markup.includes(carArtwork(race.car))); assert.ok(markup.includes(carArtwork(race.opponent.car)));
   assert.ok(markup.includes('Apri dettaglio: La tua auto')); assert.ok(markup.includes('Apri dettaglio: Auto rivale'));
-  assert.ok(markup.includes('Apri dettaglio: tempi e distacco')); assert.ok(markup.includes('Settore attuale'));
+  assert.ok(markup.includes('Tempi e settori')); assert.ok(markup.includes('Settore da affrontare'));
   assert.ok(markup.includes('CONTROLLI'));
   assert.ok(!markup.includes('<dialog')); assert.ok(!markup.includes('Geometria dei tratti')); assert.ok(!markup.includes('<table'));
   assert.ok(!markup.includes('Abbandona gara'));
@@ -91,9 +91,9 @@ test('cockpit keeps critical warnings visible and tolerates a finished or legacy
   race.index = race.sections.length; race.status = 'completed';
   markup = renderToStaticMarkup(React.createElement(Dashboard, { race, pending: 0, onAbandon() {} }));
   assert.ok(markup.includes('Gara conclusa')); assert.ok(!markup.includes('Carburante basso'));
-  delete race.rulesVersion; race.gap = -100; race.sections = [{ name: 'Vecchio settore' }]; race.index = 0;
+  delete race.rulesVersion; race.gap = -100; race.sections = [{ name: 'Vecchio settore' }]; race.index = 1;
   markup = renderToStaticMarkup(React.createElement(Dashboard, { race, pending: 0, onAbandon() {} }));
-  assert.ok(markup.includes('100')); assert.ok(markup.includes('Sei dietro'));
+  assert.ok(markup.includes('100')); assert.ok(markup.includes('Ritardo:'));
 });
 
 
@@ -151,7 +151,7 @@ test('meet challenge cards explain frozen conditions, consent, time results and 
  const wrong=renderToStaticMarkup(React.createElement(Card,{challenge,userId:1,peerName:'Rivale',cars:[{...car,modelId:2}],garageId:1,disabled:false}));assert.ok(wrong.includes('disabled=""'));assert.ok(wrong.includes('non rispetta'));
 });
 test('meet cockpit shows a personal clock and honest ghost rather than a live fictional rival',async()=>{
- const Dashboard=await component('RaceDashboard');const race=makeRace();Object.assign(race,{status:'active',mode:'track',trackName:'Tsukuba',meetTrial:true,meetChallenge:{otherName:'Marta'},meetGhost:{splits:[30000],totalMs:60000}});const markup=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon(){}}));assert.ok(markup.includes('Sfida asincrona'));assert.ok(markup.includes('Fantasma disponibile'));assert.ok(markup.includes('Tempo personale'));assert.ok(!markup.includes('Auto rivale'));assert.ok(!markup.includes('Affiancati'));
+ const Dashboard=await component('RaceDashboard');const race=makeRace();Object.assign(race,{status:'active',mode:'track',trackName:'Tsukuba',meetTrial:true,meetChallenge:{otherName:'Marta'},meetGhost:{splits:[30000],totalMs:60000}});const markup=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon(){}}));assert.ok(markup.includes('Sfida asincrona'));assert.ok(markup.includes('Fantasma cronometrico'));assert.ok(markup.includes('Il tuo tempo'));assert.ok(!markup.includes('Auto rivale'));assert.ok(!markup.includes('Affiancati'));
 });
 
 test('mechanic previews show all four pixel art service pictures alongside their real quotes',async()=>{
@@ -181,7 +181,7 @@ test('track sector names are Italian in previews, map titles, progress and saved
 });
 
 test('active race always shows scene, live minimap and highlighted sector without opening a dialog',async()=>{
- const Dashboard=await component('RaceDashboard'),race=makeRace();race.trackName='Lario · statale del lago';race.status='active';race.index=2;const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));assert.ok(html.includes('Mappa e ambientazione durante la gara'));assert.ok(html.includes('/images/world/tracks/lario.png'));assert.ok(html.includes('settore 3 evidenziato'));assert.ok(html.includes('Esamina tutti i settori'));assert.ok(!html.includes('<dialog'));
+ const Dashboard=await component('RaceDashboard'),race=makeRace();race.trackName='Lario · statale del lago';race.status='active';race.index=2;const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon:()=>{}}));assert.ok(html.includes('Mappa e ambientazione durante la gara'));assert.ok(html.includes('/images/world/tracks/lario.png'));assert.ok(html.includes('settore 3 evidenziato'));assert.ok(html.includes('Pista e meteo'));assert.ok(!html.includes('<dialog'));
 });
 
 test('avatar picker renders twenty labelled choices and selected local image with a safe legacy fallback',async()=>{
@@ -237,4 +237,20 @@ test('compact fuel gauge and XP progress expose meaningful accessible values',as
 test('tuning fuel comparison displays km per litre and marks greater fuel use as worse',async()=>{
  const Panel=await component('TuningPreview'),part={name:'Exhaust System',description:'Basic sport exhaust',level:1,price:100,image:'e.png',ownedQuantity:0,preview:{before:{fuelConsumption:8},after:{fuelConsumption:10},championships:[],zones:[],advice:[]}};
  const html=renderToStaticMarkup(React.createElement(Panel,{part,money:500}));assert.ok(html.includes('Scarico'));assert.ok(html.includes('Scarico sportivo'));assert.ok(html.includes('km/l'));assert.ok(html.includes('tuning-negative'));assert.ok(html.includes('-2,5'));assert.ok(!html.includes('L/100'));
+});
+
+test('every race mode shares cars, checkpoint, sector and controls without a fictitious solo duel',async()=>{
+ const Dashboard=await component('RaceDashboard'),Controls=await component('TacticalControls');
+ for(const extra of [{mode:'street'},{mode:'track'},{mode:'track',timeTrial:true},{mode:'track',meetTrial:true,meetChallenge:{otherName:'Marta'}},{mode:'track',lesson:'practice',targetedCourseId:'practice-clean-1'}]){
+  const race={...makeRace(),status:'active',trackName:'Pistino di San Rocco · Pavese',...extra};race.car.image='106.png';race.opponent.name='Rivale visibile';
+  const html=renderToStaticMarkup(React.createElement(Dashboard,{race,pending:0,onAbandon(){}},React.createElement(Controls,{race,pending:0,onTurn(){},showAlerts:false})));
+  const blocks=['race-heading','championship-route','championship-cars','championship-checkpoint','championship-sector-brief','race-action-area','championship-tools'];let prior=-1;for(const block of blocks){const at=html.indexOf(`class="${block}`);assert(at>prior,block);prior=at;}
+  assert(html.includes('role="meter"'));assert(html.includes('Guida il settore'));assert(!html.includes('race-instruments'));assert(!html.includes('race-stage'));
+  if(race.timeTrial||race.meetTrial||race.lesson){assert(!html.includes('Rivale visibile'));assert(!html.includes('Affiancati'));assert(!html.includes('Confronto con'));}else assert(html.includes('Apri dettaglio: Auto rivale'));
+ }
+});
+test('ghost checkpoint compares milliseconds at completed sectors, never an unfinished future reference',async()=>{
+ const {ghostCheckpoint}=await import('../src/logic/racePresentation.js');const race={meetTrial:true,meetGhost:{splits:[30000,20000]},index:1,playerTime:29.5};
+ assert.equal(ghostCheckpoint(race),500);assert.equal(ghostCheckpoint({...race,playerTime:30.5}),-500);assert.equal(ghostCheckpoint({...race,index:2,playerTime:50.0004}),0);
+ for(const change of [{index:0},{index:3},{playerTime:NaN},{meetGhost:null},{meetGhost:{splits:[NaN]}},{meetTrial:false}])assert.equal(ghostCheckpoint({...race,...change}),null);
 });

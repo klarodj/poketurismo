@@ -1,5 +1,4 @@
 import {streetZoneImage} from '../../shared/streetVisuals.mjs';
-import {trackSectionLabel} from '../../shared/trackSectionLabels.mjs';
 import ChampionshipTable from './ChampionshipTable';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -132,9 +131,8 @@ export default function RacePage({ mode }) {
         <button className={button} disabled={!car || pending > 0} onClick={begin}>Inizia gara</button>
       </> : <RaceDashboard race={race} pending={pending} onAbandon={abandon}>
         {race.status === 'active' && section ? <>
-          {race.rulesVersion === 3 ? <TacticalControls key={`${race.id}:${race.index}`} race={race} pending={pending} onTurn={turn} showAlerts={false} /> : <>
-          <h2 className="font-bold text-xl">{trackSectionLabel(section.name)} · {trackSectionLabel(getSectionType(section))}</h2>
-          <p>Auto: {CAR_STAT_LABELS[section.carStat]} + {CAR_STAT_LABELS[section.carTech]} · Pilota: {PILOT_STAT_LABELS[section.driverStat]} + {PILOT_STAT_LABELS[section.driverTech]}</p>
+          {race.rulesVersion === 3 ? <TacticalControls key={`${race.id}:${race.index}`} race={race} pending={pending} onTurn={turn} showAlerts={false} /> : <section className="race-controls">
+          <h2 className="font-bold text-xl">Guida il settore</h2>
           <div className="flex flex-wrap gap-2"><button disabled={pending > 0} className={button} onClick={() => turn(null)}>Guida normale</button>
             {race.moves.map(move => <button key={move.id} disabled={pending > 0 || !canPlay(move, section, race.gap)} className={button} onClick={() => turn(move.id)}>
               {move.name}<span className="block text-xs">{Object.entries(move.bonus).map(([key, value]) => `+${value} ${labels[key] || key}`).join(' · ')}</span>
@@ -142,7 +140,7 @@ export default function RacePage({ mode }) {
             </button>)}
           </div>
           <p className="text-sm">Le mosse migliorano soltanto le statistiche richieste dal settore. Peso e carburante influenzano le prestazioni; pioggia, neve e sterrato riducono l’aderenza. Le mosse aggressive aumentano consumo e rischio motore.</p>
-          </>}
+          </section>}
         </> : <div className="bg-yellow-100 border border-yellow-600 p-4 space-y-3">
           <h2 className="text-2xl font-bold">{race.meetTrial ? 'Tentativo del Meet concluso' : race.lesson ? race.developmentSummary?.lesson?.passed ? 'Prova superata!' : 'Prova da ripetere' : race.timeTrial && !race.failure ? 'Prova a tempo completata' : race.championship?.format === 'grid' ? `Round concluso · posizione ${race.championship.position}` : race.outcome === 'win' ? 'Vittoria!' : race.outcome === 'draw' ? 'Pareggio' : 'Sconfitta'}</h2>
           {race.failure && <p>{race.failure==='expired'?'Tempo scaduto: tentativo ritirato.':race.failure==='cancelled'?'Sfida annullata.':race.failure === 'engine' ? 'Motore fuori uso.' : race.failure === 'fuel' ? 'Carburante insufficiente.' : 'Gara abbandonata.'}</p>}
