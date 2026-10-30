@@ -22,7 +22,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 | Blocco | Risultato giocabile | Dipende da | Stato |
 |---|---|---|---|
 | B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Completato |
-| B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | In corso |
+| B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | In prova |
 | B03 | Reputazione autodromo, clandestine e raduni | B02 | Da iniziare |
 | B04 | Eventi a tema e motivi per usare auto diverse | B03 | Da iniziare |
 | B05 | Album del pilota e memoria delle vetture | B02, B04 | Da iniziare |
@@ -60,11 +60,11 @@ Prima tappa di prodotto: B01–B03, un mondo con persone che riconoscono il gioc
 | 5. La rivincita | Ritrovo clandestino | Incontro con un rivale noto, senza puntata obbligatoria e con limiti della vettura verificati |
 | 6. La domenica del club | Autodromo | Concludere una prova accessibile; prima accoglienza nel club, non vittoria obbligatoria |
 
-- [ ] Introdurre i tre rivali gradualmente: uno preparatore di utilitarie, una specialista della pista e un veterano. Assegnare auto e identità nel cast B01.
-- [ ] Variare dialoghi e incontri successivi secondo risultati e aiuti precedenti. La sconfitta apre una risposta o una rivincita; non blocca l'intera storia.
-- [ ] Distribuire ricompense soprattutto in contatti NPC, inviti, servizi o ricambi limitati. Preventivare soldi e XP per l'intero arco prima di assegnarli.
-- [ ] Le prove su auto in prestito non consumano carburante o ricambi della vettura personale. Nessuna modifica alle sfide virtuali esistenti.
-- [ ] Riconoscere soltanto progressi storici affidabili per i piloti già avviati; offrire una prova equivalente quando manca una registrazione verificabile. Nessun risultato inventato o pagamento retroattivo indiscriminato.
+- [x] Introdurre i tre rivali gradualmente: uno preparatore di utilitarie, una specialista della pista e un veterano. Assegnare auto e identità nel cast B01.
+- [x] Variare dialoghi e incontri successivi secondo risultati e aiuti precedenti. La sconfitta apre una risposta o una rivincita; non blocca l'intera storia.
+- [x] Distribuire ricompense soprattutto in contatti NPC, inviti, servizi o ricambi limitati. Preventivare soldi e XP per l'intero arco prima di assegnarli.
+- [x] Le prove su auto in prestito non consumano carburante o ricambi della vettura personale. Nessuna modifica alle sfide virtuali esistenti.
+- [x] Riconoscere soltanto progressi storici affidabili per i piloti già avviati; offrire una prova equivalente quando manca una registrazione verificabile. Nessun risultato inventato o pagamento retroattivo indiscriminato.
 
 **Completamento:** tutti e sei gli episodi percorribili da un nuovo pilota e da uno già avviato; percorso praticabile con budget basso; chi perde o rinuncia può riprendere. Notifiche discrete, nessuna interruzione della guida e nessun blocco delle gare normali.
 
@@ -185,3 +185,5 @@ Prossima azione concreta:
 - 30 ottobre 2026, B01 completato e pubblicato: commit sorgenti `b8fe6fe`; 338 test gioco, 13 account/gateway, 5 migrazioni SQLite, lint/build, concorrenza PostgreSQL e browser desktop/mobile superati. Verificate risposte lente e frontend pubblicato con sole API di collaudo. Backup prima del rilascio; confronto delle 32 tabelle: righe esistenti intatte, solo nuova colonna narrativa vuota e registrazione della migrazione. Servizi unici attivi e 22 controlli HTTP sui due Funnel superati. Prossima azione: playtest del prologo da Cellulare → Incarichi; poi B02 con il cast e il flusso definiti nel rapporto.
 
 - Avvio B02: impostazione dei sei episodi e budget di progetto in [B02_PRIMA_STORIA.md](B02_PRIMA_STORIA.md). In attesa della preferenza sulle auto delle gare narrative prima di congelare i contratti. Nessun episodio nuovo pubblicato.
+
+- B02 in prova: sei episodi implementati con auto propria/prestito come scelto dall’utente. 345 test gioco, 13 accessi, arco completo SQLite/browser e PostgreSQL con richieste simultanee; vedi rapporto B02. Pubblicazione ancora da verificare.

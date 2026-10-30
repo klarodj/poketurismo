@@ -138,3 +138,5 @@ export const allocatePilotPoints=(userId,allocations)=>action('/driver/points',{
 export const fetchStory = userId => request(`/story/${userId}`);
 export const respondStory = (userId, missionId, choice) => action('/story/respond', { userId, missionId, choice });
 export const readStoryMessage = (userId, messageId) => action('/story/read', { userId, messageId });
+
+export const clubStoryActivity=(userId,body)=>action('/story/activity',{userId,...body});

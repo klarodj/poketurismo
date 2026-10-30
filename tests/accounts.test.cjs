@@ -44,7 +44,7 @@ before(async () => {
   app.get('/api/phone/:userId/notifications',endpoint(req=>({id:playerId(req,req.params.userId)})));
   app.get('/api/phone/:userId',endpoint(req=>({id:playerId(req,req.params.userId)})));
   app.get('/api/story/:userId',endpoint(req=>({id:playerId(req,req.params.userId)})));
-  for(const path of ['/api/story/read','/api/story/respond'])app.post(path,endpoint(req=>({id:playerId(req,req.body.userId)})));
+  for(const path of ['/api/story/read','/api/story/respond','/api/story/activity'])app.post(path,endpoint(req=>({id:playerId(req,req.body.userId)})));
   app.get('/api/dev/opponents', endpoint(async () => []));
   app.post('/api/player/:id/avatar',endpoint(req=>{const{userId,...body}=req.body;return require('../server/pilotProfile').changeAvatar(prisma,playerId(req,userId),body,req.params);}));
   app.post('/api/meet/friendship',endpoint(req=>({id:playerId(req,req.body.userId)})));
@@ -121,5 +121,5 @@ test('friendship writes require the verified owner, including while another pilo
 
 test('narrative inbox, reads and responses require the verified save owner',async()=>{
  assert.equal((await request('/story/2')).status,401);assert.equal((await request('/story/2','valid-token-two')).status,403);assert.equal((await request('/story/2','valid-token-one')).status,200);
- for(const path of ['/story/read','/story/respond']){const body={userId:2,messageId:'club-invite',missionId:'club-first-finish',choice:'accept'};assert.equal((await request(path,null,body)).status,401);assert.equal((await request(path,'unverified-token',body)).status,401);assert.equal((await request(path,'valid-token-two',body)).status,403);assert.equal((await request(path,'valid-token-one',body)).status,200);}
+ for(const path of ['/story/read','/story/respond','/story/activity']){const body={userId:2,messageId:'club-invite',missionId:'club-first-finish',choice:'accept'};assert.equal((await request(path,null,body)).status,401);assert.equal((await request(path,'unverified-token',body)).status,401);assert.equal((await request(path,'valid-token-two',body)).status,403);assert.equal((await request(path,'valid-token-one',body)).status,200);}
 });

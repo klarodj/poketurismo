@@ -1,3 +1,4 @@
+import ClubStoryActivity from '../components/ClubStoryActivity';
 import SectionTabs from '../components/SectionTabs';
 import TrainingSchoolPanel from '../components/TrainingSchoolPanel';
 import React from 'react';
@@ -29,7 +30,7 @@ export default function DrivingSchool() {
   return <Win98Window guideId="school" title="Scuola guida — Autoscuola del club" imageUrl={tab==='allenamenti'?'/images/world/sections/school-training.png':'/images/world/sections/school-classroom.png'}>
     <div className="flex flex-col bg-win98-gray text-black">
       <SectionTabs label="Sezioni della scuola guida" value={tab} onChange={id=>setSearch(id==='tecniche'?{}:{sezione:id},{replace:true})} items={[{id:'tecniche',label:'Tecniche',icon:'book'},{id:'allenamenti',label:'Allenamenti',icon:'practice'}]}/>
-      <div className="p-4">
+      <div className="p-4"><ClubStoryActivity place="school"/>
         {tab==='allenamenti'?<TrainingSchoolPanel development={development} pending={pending} activeRace={activeRace} money={money} onStart={course=>beginLesson({lessonId:course.id})}/>:<div aria-label="Tecniche">
         <TechniqueSchoolPanel development={development} pending={pending} activeRace={activeRace} onRead={techniqueId => readTechniqueLesson(userId, techniqueId)} onStart={beginLesson} />
         <p className="mt-3 text-sm text-gray-700">Le tecniche apprese si equipaggiano nella scheda Pilota.</p>

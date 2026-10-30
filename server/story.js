@@ -14,7 +14,7 @@ async function save(tx, userId, value) {
   await tx.playerProgress.upsert({ where: { userId }, create: { userId, narrativeState }, update: { narrativeState } });
 }
 function messageList(value) {
-  return [{ id: OFFER_ID, senderId: INTRO_MISSION.senderId, missionId: INTRO_MISSION.id, text: INTRO_MISSION.offer, createdAt: null, readAt: value.offerReadAt || null }, ...Object.values(value.messages)];
+  return [{ id: OFFER_ID, senderId: INTRO_MISSION.senderId, missionId: INTRO_MISSION.id, text: INTRO_MISSION.offer, createdAt: null, readAt: value.offerReadAt || null }, ...Object.values(value.messages), ...(value.campaign?require('./clubStory').invitation(value):[])];
 }
 async function summary(tx, userId) {
   const value = await load(tx, userId);
@@ -24,13 +24,14 @@ async function summary(tx, userId) {
 async function hub(tx, userId) {
   const value = await load(tx, userId), record = value.missions[INTRO_MISSION.id];
   return { version: STORY_VERSION, characters: STORY_CHARACTERS.map(character => ({ ...Object.fromEntries(Object.entries(character).filter(([key]) => !['chapters', 'voice'].includes(key))), known: value.known.includes(character.id) })),
-    missions: [{ id: INTRO_MISSION.id, version: record?.version || INTRO_MISSION.version, senderId: INTRO_MISSION.senderId, title: INTRO_MISSION.title, objective: INTRO_MISSION.objective, destination: INTRO_MISSION.destination, destinationLabel: INTRO_MISSION.destinationLabel, rewardMoney: record?.rewardMoney ?? INTRO_MISSION.rewardMoney, rewardXp: 0, status: record?.status || 'available', completedAt: record?.completedAt || null }],
+    missions: [{ id: INTRO_MISSION.id, version: record?.version || INTRO_MISSION.version, senderId: INTRO_MISSION.senderId, title: INTRO_MISSION.title, objective: INTRO_MISSION.objective, destination: INTRO_MISSION.destination, destinationLabel: INTRO_MISSION.destinationLabel, rewardMoney: record?.rewardMoney ?? INTRO_MISSION.rewardMoney, rewardXp: 0, status: record?.status || 'available', completedAt: record?.completedAt || null }, ...require('./clubStory').publicEpisodes(value)],
     messages: messageList(value).reverse(), unread: messageList(value).filter(message => !message.readAt).length };
 }
 function addMessage(value, id, text) {
   if (!value.messages[id]) value.messages[id] = { id, senderId: INTRO_MISSION.senderId, missionId: INTRO_MISSION.id, text, createdAt: new Date().toISOString(), readAt: null };
 }
 async function respond(tx, userId, body) {
+  if(require('../shared/clubStory.mjs').clubEpisode(body.missionId)){const value=await load(tx,userId);await require('./clubStory').respond(tx,userId,body,value,save);return {story:await hub(tx,userId)};}
   if (body.missionId !== INTRO_MISSION.id || !['accept', 'pause', 'resume'].includes(body.choice)) fail(400, 'Risposta all’incarico non valida');
   const value = await load(tx, userId), previous = value.missions[INTRO_MISSION.id];
   if (previous?.status === 'completed') fail(409, 'Incarico già concluso: il bonus è unico');
@@ -52,6 +53,7 @@ async function read(tx, userId, body) {
   if (!message) fail(404, 'SMS del club inesistente');
   if (!message.readAt) {
     if (message.id === OFFER_ID) value.offerReadAt = new Date().toISOString();
+    else if(message.id.endsWith('-v1-offer')){value.campaign.readOffers||={};value.campaign.readOffers[message.missionId]=new Date().toISOString();}
     else value.messages[message.id].readAt = new Date().toISOString();
     await save(tx, userId, value);
   }
@@ -79,4 +81,4 @@ async function settleRace(tx, userId, race, state) {
   await save(tx, userId, value);
   return { id: INTRO_MISSION.id, title: INTRO_MISSION.title, money: mission.rewardMoney, xp: 0 };
 }
-module.exports = { hub, summary, respond, read, bindRace, settleRace };
+module.exports = { load,save,hub, summary, respond, read, bindRace, settleRace };

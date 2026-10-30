@@ -1,6 +1,6 @@
 # B02 — Un posto nel club: impostazione del lavoro
 
-Stato: in corso, definizione dei contratti; nessun episodio nuovo pubblicato. Il prologo B01 e i suoi premi restano invariati.
+Stato: implementato, in verifica prima della pubblicazione. Il prologo B01 e i suoi premi restano invariati.
 
 ## Sei episodi e condizioni
 
@@ -23,4 +23,17 @@ Verificare nuovo pilota senza auto, veterano con auto da gara, portafoglio vuoto
 
 ## Decisione richiesta
 
-Richiesta al giocatore: nelle gare narrative usare la propria auto con alternativa in prestito oppure vetture sempre assegnate. La scelta determina i contratti gara; le prove scuola/collaudo restano in prestito in entrambi i casi. Requisiti di potenza, preparazione e griglie saranno definiti sul formato scelto, senza adattamento automatico delle statistiche al pilota.
+Scelta confermata dal giocatore: auto propria con alternativa gratuita in prestito nelle due gare narrative. Contratti versione 1; le prove scuola/collaudo restano in prestito in entrambi i casi. Requisiti di potenza, preparazione e griglie saranno definiti sul formato scelto, senza adattamento automatico delle statistiche al pilota.
+
+
+## Implementazione e collaudo
+
+Sei episodi versionati in shared/clubStory.mjs, gestione autorevole in server/clubStory.js e namespace campaign dentro narrativeState esistente. Prologo B01 conservato e indipendente; nessuna migrazione o recupero retroattivo inventato. L’episodio corrente è accessibile dal telefono e da un riquadro nel luogo pertinente; presentazione a Lele sempre disponibile, indipendentemente dalle presenze casuali.
+
+Le prove sono percorsi brevi illustrati dal roadbook dei quattro esercizi effettivi, senza inventare minimappe di circuiti reali. Prove di precisione, collaudo e aiuto usano solo vetture in prestito e almeno tre scelte corrette su quattro. Rivincita con Lele: Cinquecento gialla, pilota fisso a 11 per abilità, stradale propria fino a 120 CV o prestito. Finale con Giada e Integra bianca, pilota fisso a 13, propria vettura fino a 160 CV o prestito; conta completare anche perdendo. Le auto proprie richiedono motore/gomme almeno 50% e 8 L; hanno consumi/usura reali, si ritirano dal raduno se esposte. Le auto in prestito non toccano garage, esposizione o sviluppo del pilota.
+
+Alternativa al lavoro gratuito: consegna esplicita di un ricambio canonico Brake livello 1 già posseduto, consumato una volta sola. Risposte di Lele diverse per aiuto con pezzo/prove e per vittoria/sconfitta. Incontri, SMS, pausa/ripresa e completamenti persistono per account. I personaggi nel piazzale commentano l’incarico attuale.
+
+Il premio finale unico è 500 euro lordi, con normale trattenuta per Franco; 0 XP e nessun punto pratica/tecnica aggiuntivo. Le prove narrative non assegnano premi ordinari e non entrano nei tempi. Il turno finale chiude episodio, messaggio e accredito nella stessa transazione serializzabile; i retry restituiscono lo stato attuale.
+
+345 test di gioco e 13 account/gateway superati, lint/build validi. Test specifici: intero arco senza auto e con saldo zero, nessuna crescita o usura in prestito, episodio fuori ordine/luogo errato, ritiri e prove fallite recuperabili, ricambio consegnato esattamente una volta, limiti e consumi dell’auto propria. Su PostgreSQL dedicato con soli cataloghi copiati: arco intero, accettazioni e turni finali simultanei, saldo finale 500 euro, abilità e XP invariati. Browser reale: sei episodi su 390 px con API reali di collaudo e controlli desktop 1280, senza auto o soldi iniziali. Rapporti e catture .preview/b02-qa.

@@ -56,6 +56,7 @@ function TimingDetail({race}) {
 function sessionDescription(race) {
  if(race.meetTrial)return `Scadenza del tentativo: ${new Date(race.meetChallenge.expiresAt).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}. Unico tentativo asincrono: nessun premio o XP, nessun consumo o usura sulla vettura di carriera. Il tempo viene salvato nella sfida del Meet, separato dai record personali.`;
  if(race.targetedCourseId)return 'Allenamento su auto scuola in prestito: migliori la pratica dell’abilità indicata, secondo esercizi corretti e rendimento del corso. Nessun XP o usura sulla tua vettura.';
+ if(race.storyCampaign)return race.storyCampaign.loan?'Prova narrativa su vettura del club: nessun consumo o usura sulla tua auto, nessun XP aggiuntivo. Il premio unico arriva solo alla fine della storia.':'Prova narrativa con la tua auto: carburante e usura reali, nessuna puntata o XP aggiuntivo. Il premio unico arriva alla fine della storia.';
  if(race.lesson)return 'Prova su auto scuola in prestito: la tua vettura rimane invariata. Promozione, tecnica e premi seguono il corso; ripetere una prova già superata non concede di nuovo il premio.';
  if(race.timeTrial)return 'Prova a tempo personale: nessun premio o XP. Un tempo valido entra nel registro personale. Consumi e usura sono reali.';
  if(race.championship)return 'I premi e i risultati seguono il contratto del campionato accettato all’iscrizione.';
@@ -80,7 +81,7 @@ export default function RaceCockpit({race, pending, onAbandon, children}) {
   const hasRival=!!race.opponent&&!solo;
   const rivalRetired=!!race.opponentFailure;
   const opponentLabel=grid?'Auto del rivale tattico':'Auto rivale';
-  const heading=grid?'Campionato':race.meetTrial?'Meet · Sfida asincrona':race.targetedCourseId?'Scuola guida · Allenamento':race.lesson?'Scuola guida · Prova pratica':race.timeTrial?'Prova a tempo personale':race.mode==='street'?'Sfida su strada':'Autodromo · Gara singola';
+  const heading=race.storyCampaign?'Storia del club':grid?'Campionato':race.meetTrial?'Meet · Sfida asincrona':race.targetedCourseId?'Scuola guida · Allenamento':race.lesson?'Scuola guida · Prova pratica':race.timeTrial?'Prova a tempo personale':race.mode==='street'?'Sfida su strada':'Autodromo · Gara singola';
   const gap=tactical?race.gapSeconds||0:race.gap||0;
   const relation=rivalRetired?'Ritirato':gap>(tactical ? 0.01 : 0)?'Dietro di te':gap<-(tactical ? 0.01 : 0)?'Davanti a te':'Affiancato';
   const hasAlerts=!!race.incidentCue||race.car.currentFuel<2||race.car.tireGrip<45||race.car.engineHealth<30||/rain|piogg|wet|bagn|snow|neve/.test(race.environment.weather.toLowerCase());

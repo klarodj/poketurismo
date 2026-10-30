@@ -67,6 +67,7 @@ app.get('/api/market', endpoint(() => transaction(prisma,async tx => {
   return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item),listingSource:players.has(item.id)?'player':stock.listingIds.includes(item.id)?'daily':'existing',marketDay:stock.day })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
 })));
 app.get('/api/story/:userId', endpoint(req => transaction(prisma, tx => require('./story').hub(tx, accounts.playerId(req, req.params.userId)))));
+mutate('/api/story/activity','story-activity',async(tx,id,body)=>{const story=require('./story'),value=await story.load(tx,id),race=await require('./clubStory').act(tx,id,body,value,story.save);return {...await snapshot(tx,id,race),story:await story.hub(tx,id)};});
 mutate('/api/story/respond', 'story-respond', require('./story').respond);
 mutate('/api/story/read', 'story-read', require('./story').read, 'post', false);
 app.get('/api/phone/:userId/notifications',endpoint(req=>transaction(prisma,tx=>require('./phone').notifications(tx,accounts.playerId(req,req.params.userId)))));

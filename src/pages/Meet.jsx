@@ -1,3 +1,4 @@
+import ClubStoryActivity from '../components/ClubStoryActivity';
 import usePhoneStore from '../store/phoneStore';
 import TrackIllustration from '../components/TrackIllustration';
 import React,{useState,useEffect} from 'react';
@@ -39,7 +40,7 @@ function MeetContents({userId}){
  const tabs=[{id:'showroom',label:'Piazzale',icon:'car'},{id:'club',label:'Gente del club',icon:'pilot'},{id:'challenges',label:invites?`Sfide · ${invites} inviti`:'Sfide',icon:'race'},{id:'times',label:'Tempi in pista',icon:'book'}];
  return <Win98Window guideId="meet" title="Raduno — Club Motori del Nord" imageUrl="/images/world/meet.png">
   <SectionTabs items={tabs} value={tab} onChange={changeTab} label="Sezioni del raduno"/>
-  <div className="meet-page">
+  <div className="meet-page"><ClubStoryActivity place="meet"/>
    <div className="meet-toolbar"><span>Il venerdì sera al parcheggio del club.</span><div><button type="button" className="win98-btn" onClick={()=>usePhoneStore.getState().menu('inbox')}>SMS{phoneUnread?` · ${phoneUnread} nuovi`:''}</button><button type="button" className="win98-btn" onClick={()=>usePhoneStore.getState().menu('contacts')}>Rubrica</button><button type="button" className="win98-btn" onClick={refresh}>Aggiorna</button>{isAdmin&&<button type="button" className="win98-btn" aria-pressed={tab==='reports'} onClick={()=>changeTab('reports')}>Segnalazioni</button>}</div></div>
    {error&&<p role="alert" className="meet-error">{error} <button type="button" className="win98-btn" onClick={refresh}>Riprova</button></p>}{notice&&<p role="status" className="meet-notice">{notice}</p>}
    {tab==='showroom'&&<>

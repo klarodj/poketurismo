@@ -216,15 +216,16 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     try { state = state.gridTacticsVersion===1?require('../shared/gridRace.mjs').advanceGridRace(state,body.moveId,body.decision):advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
   }
   if(state.targetedTrainingVersion===2&&!abandon&&state.logs.length>previousLogCount&&body.trainingAnswer!==undefined)state.logs.at(-1).trainingAnswer=body.trainingAnswer;
-  if (state.lesson) {
+  if (state.lesson && !state.storyCampaign) {
     if (!abandon) state.logs.at(-1).instructor = state.targetedCourseId ? require('../shared/targetedTraining.mjs').trainingFeedback(state) : state.courseTechniqueId ? techniqueLessonFeedback(state) : lessonFeedback(state);
     if (state.courseTechniqueId && !state.finished) state.gapSeconds = state.sections[state.index].scenarioGap;
-  } else if(!state.meetTrial) {
+  } else if(!state.meetTrial && !state.storyCampaign?.loan) {
     const garage = await tx.garage.findFirst({ where: { id: race.garageId, userId } });
     if (!garage) fail(409, 'La vettura della gara non è più disponibile');
     await tx.garage.update({ where: { id: garage.id }, data: { km: Math.round(state.car.km), currentFuel: state.car.currentFuel, tireGrip: state.car.tireGrip, engineHealth: state.car.engineHealth } });
   }
   if(state.finished&&state.meetTrial){await require('./meetSocial').settleAttempt(tx,userId,state,race.id);state.reward={money:0,xp:0};}
+  else if(state.finished&&state.storyCampaign){const narrative=require('./story'),value=await narrative.load(tx,userId),reward=await require('./clubStory').settle(tx,userId,race,state,value,narrative.save);await withholdReward(tx,userId,state,reward);await tx.user.update({where:{id:userId},data:{moneyCents:{increment:cents(reward.money)}}});state.reward=reward;}
   else if (state.finished) {
     let reward = { money: 0, xp: 0 };
     if (state.street) reward = await settleStreet(tx, userId, state);
