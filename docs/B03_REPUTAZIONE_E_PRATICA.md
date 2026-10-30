@@ -1,6 +1,6 @@
 # B03 — Reputazione, rapporti e pratica di gara
 
-Stato: implementato, in verifica per la pubblicazione. Nessuna migrazione, cancellazione o conversione dei progressi precedenti.
+Stato: completato e pubblicato. Nessuna migrazione, cancellazione o conversione dei progressi precedenti.
 
 ## Reputazione e prove storiche
 
@@ -52,3 +52,6 @@ Il riepilogo finale mostra soltanto le abilità effettivamente allenate e gli ev
 353 test gioco e 13 account/gateway superati, lint/build validi. Test su: retrocompatibilità pratica1, copertura delle otto abilità, assenza di bonus fuori contesto/settori con errore, tetto complessivo e allowance esaurite; reputazione storica e clandestina preservata, nessun progresso da letture, requisiti degli inviti, tre completamenti massimi, nessun denaro/XP extra.
 
 Su PostgreSQL dedicato con sole copie dei cataloghi: tre confronti con ciascun rivale, accettazioni e turni finali simultanei, contatori una volta sola, quarto invito rifiutato, ricordi di Sergio e Tommaso sbloccati, saldo/XP/garage e reputazione clandestina invariati. Browser reale 320/390/1280: reputazione, tre barre, ricordi, inviti nei luoghi corretti e rivincita completa in prestito. Rapporti in .preview/b03-qa.
+
+
+Pubblicato il 30 ottobre 2026, commit sorgenti f646263, unica istanza 5174/gateway5184. Backup /home/klaro/.backups/poketurismo/b03-20261030T190714Z e servizio completo Auth+gioco. Confronto delle 32 tabelle: tutte le righe esistenti identiche, nessuna migrazione o reset. Health e servizi attivi; frontend distribuito verificato a 320/390/1280 con tutte le API reindirizzate al database temporaneo, nessuna azione sui giocatori pubblici.
