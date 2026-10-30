@@ -41,3 +41,9 @@ Il calo dell’IG rende il confronto più accessibile ma non annulla la differen
 Iscrizioni e gare già salvate mantengono integralmente i contratti congelati, i piloti e le classifiche; il nuovo assetto riguarda le nuove iscrizioni. Nessuna migrazione, seed o riscrittura di risultati. Un test modifica il catalogo dopo l’iscrizione e verifica che proiezione, partenza e piloti salvati conservino le vecchie abilità.
 
 330 test gioco e12account/gateway passati, lint/build riusciti. Controllati i quattro profili del livello2 con il budget attuale, PNG/favicon, trasparenza, compatibilità dei contratti e tutti i controlli esistenti. Browser a320/390/1280: logo, Google ancora disponibile, tre favicon caricate, lista campionati con mediaIG34 nel secondo, nessun errore JavaScript/asset o overflow. Richieste browser soltanto in lettura e intercettate con dati sintetici. Report in `.preview/brand-balance-qa`.
+
+## Pubblicazione verificata
+
+Rilasciato da `2667c54` sull’istanza unica5174/gateway5184. Backup completo Auth/gioco e build precedente in `/home/klaro/.backups/poketurismo/brand-balance-20261030T041334Z`. Audit delle32tabelle a servizi fermi: tutte le righe identiche prima/dopo. Nessuna iscrizione o statistica modificata.
+
+Confermati sulla build pubblicata logo/login, favicon e IG34 del secondo campionato con risposte sintetiche intercettate in lettura. Ulteriore costruzione di un contratto non salvato sui dati effettivi: sette rivali, mediaIG34. Health, logo, favicon16/32/48 e primi4KiB JS/CSS verificati su entrambi i Funnel443/8443. Servizi attivi, nessun listener5173/3001/5197. Copertine e badge già pubblicati nel rilascio precedente restano attivi.
