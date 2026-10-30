@@ -1,8 +1,8 @@
 # Roadmap: carriera, persone e provincia nel 2002
 
-Data: 30 ottobre 2026. Stato: B01 implementato e in verifica per la pubblicazione; B02–B10 da iniziare.
+Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02–B10 da iniziare.
 
-Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il lavoro attivo è **B01**, non l'intera roadmap in un solo rilascio.
+Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B02**, dopo il playtest di B01; non l'intera roadmap in un solo rilascio.
 
 ## Direzione e vincoli
 
@@ -21,7 +21,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 
 | Blocco | Risultato giocabile | Dipende da | Stato |
 |---|---|---|---|
-| B01 | Fondamenta narrative e schede dei personaggi | Base attuale | In prova |
+| B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Completato |
 | B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | Da iniziare |
 | B03 | Reputazione autodromo, clandestine e raduni | B02 | Da iniziare |
 | B04 | Eventi a tema e motivi per usare auto diverse | B03 | Da iniziare |
@@ -181,3 +181,5 @@ Prossima azione concreta:
 - 30 ottobre 2026: roadmap iniziale salvata su richiesta dell'utente. Tutti i blocchi ancora da iniziare. Prossima azione: B01, censimento dei personaggi e definizione del cast e del flusso dei sei episodi; nessuna nuova funzione attivata da questo documento.
 
 - 30 ottobre 2026, B01 in prova: quattro nuovi personaggi con ritratti dedicati e auto fisse, telefono con Incarichi/SMS del club e prologo a premio unico. Rapporto: [B01_PERSONAGGI_E_INCARICHI.md](B01_PERSONAGGI_E_INCARICHI.md). I tre rivali principali e Tommaso come conoscenza futura rispettano la nuova indicazione dell’utente; nessun episodio B02 dichiarato implementato.
+
+- 30 ottobre 2026, B01 completato e pubblicato: commit sorgenti `b8fe6fe`; 338 test gioco, 13 account/gateway, 5 migrazioni SQLite, lint/build, concorrenza PostgreSQL e browser desktop/mobile superati. Verificate risposte lente e frontend pubblicato con sole API di collaudo. Backup prima del rilascio; confronto delle 32 tabelle: righe esistenti intatte, solo nuova colonna narrativa vuota e registrazione della migrazione. Servizi unici attivi e 22 controlli HTTP sui due Funnel superati. Prossima azione: playtest del prologo da Cellulare → Incarichi; poi B02 con il cast e il flusso definiti nel rapporto.
