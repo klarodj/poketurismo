@@ -1206,7 +1206,7 @@ test('cosmetic paint keeps meet preparation keys and time-trial setup unchanged'
 
 test('street rival keeps the advertised paint when the encounter becomes a race',async()=>{
  const setup=await streetSetup(0),hub=(await get('/street/1')).data,offer=hub.zones.find(z=>z.id===setup.zoneId).offer;
- const started=await post('/races',setup);assert.equal(started.status,200);assert.equal(started.data.race.opponent.car.paintColour,offer.rival.car.paintColour);
+ const started=await post('/races',setup);assert.equal(started.status,200);assert.equal(started.data.race.opponent.car.paintColour,offer.rival.car.paintColour);assert.equal(started.data.race.opponent.avatar,offer.rival.avatar);assert.ok(offer.rival.avatar);
 });
 
 async function raceReady(){

@@ -1,3 +1,4 @@
+import {streetRivalAvatar} from './streetAvatarCatalog.mjs';
 import {periodTrackName,periodTrackLocation} from './periodWorld.mjs';
 import {performanceIndex} from './vehiclePerformance.mjs';
 // Fixed identities and catalogue cars: no opponent scaling with the player's upgrades.
@@ -13,7 +14,7 @@ const definitions = [
   ['highway','L’area di servizio in tangenziale','Caffè al distributore e cofani aperti: qui si trovano le auto grosse e i piloti esperti.',6,48,'mountain',40,2000,['Riviera di Levante · statale costiera'],
     [['Lo Zero','Skyline GTR R32','tecnico',50],['Ari','Supra mk4','aggressivo',52],['Viola','M3 E46','preciso',53],['Mirko','Rx-7 FD','tecnico',54],['Il Fantasma','Corvette C5 Z06','aggressivo',56],['Eva','996 GT3','preciso',58],['V12','F355','prudente',60],['Rea','993 GT2','tecnico',62]]],
 ];
-export const STREET_ZONES=definitions.map(([id,name,description,minLevel,minPerformance,previousZone,minReputation,maxWager,tracks,rivals])=>({id,name,description,minLevel,minPerformance,previousZone,minReputation,maxWager,tracks,technique:id==='mountain'?'progressive-release':null,rivals:rivals.map(([name,carName,style,skill],index)=>({id:`${id}-${index+1}`,name,carName,style,skill,engineHealth:id==='parking'?[84,86,86,95,86,92,80,90][index]:96,tireGrip:id==='parking'?[78,80,80,92,80,88,74,80][index]:96}))}));
+export const STREET_ZONES=definitions.map(([id,name,description,minLevel,minPerformance,previousZone,minReputation,maxWager,tracks,rivals])=>({id,name,description,minLevel,minPerformance,previousZone,minReputation,maxWager,tracks,technique:id==='mountain'?'progressive-release':null,rivals:rivals.map(([name,carName,style,skill],index)=>({id:`${id}-${index+1}`,name,carName,style,skill,avatar:streetRivalAvatar(`${id}-${index+1}`),engineHealth:id==='parking'?[84,86,86,95,86,92,80,90][index]:96,tireGrip:id==='parking'?[78,80,80,92,80,88,74,80][index]:96}))}));
 export const STREET_STYLES={prudente:'Prudente',preciso:'Preciso',tecnico:'Specialista delle curve',aggressivo:'Aggressivo'};
 export const streetPerformance=performanceIndex;
 export function streetPilot(rival){const pilot=Object.fromEntries(['brave','clean','reflex','acro','turn','brake','throttle','shift'].map(key=>[key,rival.skill]));const bonuses={prudente:{clean:4,brake:3,brave:-2},preciso:{clean:4,reflex:3},tecnico:{turn:5,throttle:3},aggressivo:{brave:5,shift:3,clean:-3}};for(const[key,bonus]of Object.entries(bonuses[rival.style]||{}))pilot[key]=Math.max(1,pilot[key]+bonus);return pilot;}

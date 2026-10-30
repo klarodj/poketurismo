@@ -23,6 +23,7 @@ function presentRace(row) {
   const state = JSON.parse(row.state);
   state.trackName=require('../shared/periodWorld.mjs').periodTrackName(state.trackName);
   if(state.street){const zone=require('../shared/streetCatalog.mjs').STREET_ZONES.find(zone=>zone.id===state.street.zoneId);if(zone)state.street.zoneName=zone.name;}
+  if(state.street && state.opponent)state.opponent.avatar=require('../shared/streetAvatarCatalog.mjs').streetRivalAvatar(state.street.rivalId);
   delete state.rng;
   delete state.incidentPlan;
   delete state.gridSeed;
@@ -164,7 +165,7 @@ async function startRace(tx, userId, body) {
     rulesVersion, fuelModelVersion:rulesVersion!==3?1:gridMatch?(gridMatch.contract.fuelModelVersion||1):3, developmentVersion: 1, statTrainingVersion:2, demo, routeProfile, trackMap: demo ? DEMO_TRACK.mapPaths : null, incidentPlan: plan, incidentCue: incidentCue(plan, 0), trackName: track.name, trackId, sections: raceSections, geometrySource: demo ? 'authored' : 'inferred', environment: { weather: track.meteo?.name || 'Asciutto', surface: track.surface?.name || 'Asfalto' },
     distanceKm, playerTime: 0, opponentTime: 0, gapSeconds: 0, playerSpeed: 0, opponentSpeed: 0,
     car: carSnapshot(garage), pilot,
-    opponent: { name: opponentName, car: { ...opponentCar, paintColour:opponentCar.paintColour||seededPaint('race:'+seed+':'+opponentName),name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
+    opponent: { name: opponentName, ...(streetMatch?{avatar:streetMatch.opponentAvatar}:{}), car: { ...opponentCar, paintColour:opponentCar.paintColour||seededPaint('race:'+seed+':'+opponentName),name: opponentCar.name, engineHealth: 100, tireGrip: 100, km: 0, serviceKm: 0, currentFuel: 20, fuelType: 'Normale', ...(gridMatch ? {engineHealth:opponentCar.engineHealth,tireGrip:opponentCar.tireGrip,currentFuel:opponentCar.currentFuel} : {}), ...(streetMatch?.opponentCondition || {}) }, pilot: opponentPilot },
     moves: inv.moves.filter(move => inv.equippedMoves.includes(move.id)), index: 0, gap: 0, logs: [], rng: seed,
     ...(mode === 'track' && !sandbox ? {clubRewardVersion:CLUB_REWARDS.version} : {}),
     finished: false, sandbox, entryId: entry?.id || null, round: round?.ord || null,

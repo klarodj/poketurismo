@@ -1,4 +1,5 @@
 import {conditionLabel,formatRaceTime,isSoloRace,ghostCheckpoint} from '../logic/racePresentation';
+import StreetRivalPortrait from './StreetRivalPortrait';
 import PerformanceBadge from './PerformanceBadge';
 import {sectionFeatures} from '../../shared/raceContext.mjs';
 import FuelGauge from './FuelGauge';
@@ -15,13 +16,13 @@ import {routeProfileFor} from '../../shared/raceContext.mjs';
 import {RaceTiming} from './RaceTiming';
 import {trackVisual,TRACK_SECTOR_COLORS} from '../../shared/trackVisuals.mjs';
 
-function CarPreview({car,pilot,label,driver,onClick,player=false,relation,opponentLabel='Auto rivale'}) {
+function CarPreview({car,pilot,label,driver,avatar,onClick,player=false,relation,opponentLabel='Auto rivale'}) {
  return <button type="button" className={`championship-entry-card${player?' is-player':' is-rival'}`} onClick={onClick} aria-label={`Apri dettaglio: ${player?'La tua auto':opponentLabel}`}>
   <span className="championship-entry-label">{label} <span aria-hidden="true">↗</span></span>
   <RaceCarArtwork car={car}/>
   <strong className="championship-entry-model">{car.name}</strong>
   <span className="championship-entry-indices"><PerformanceBadge car={car}/><PerformanceBadge kind="IG" pilot={pilot}/></span>
-  {player?<span className="championship-entry-condition"><span className="championship-entry-fuel">Benzina <b>{Number(car.currentFuel||0).toFixed(1)} L</b><FuelGauge currentFuel={car.currentFuel} compact/></span><span>Gomme <b>{Math.round(car.tireGrip??100)}%</b> · Motore <b>{Math.round(car.engineHealth??100)}%</b></span></span>:<span className="championship-entry-driver"><b>{driver}</b><span>{relation}</span></span>}
+  {player?<span className="championship-entry-condition"><span className="championship-entry-fuel">Benzina <b>{Number(car.currentFuel||0).toFixed(1)} L</b><FuelGauge currentFuel={car.currentFuel} compact/></span><span>Gomme <b>{Math.round(car.tireGrip??100)}%</b> · Motore <b>{Math.round(car.engineHealth??100)}%</b></span></span>:<span className="championship-entry-driver"><span className="street-rival-name"><StreetRivalPortrait compact avatar={avatar} name={driver}/><b>{driver}</b></span><span>{relation}</span></span>}
  </button>;
 }
 function SectorBrief({race,onDetail}) {
@@ -108,7 +109,7 @@ export default function RaceCockpit({race, pending, onAbandon, children}) {
     </section>
     <section className="championship-cars" aria-label={hasRival?grid?"La tua auto e il rivale tattico":"La tua auto e il rivale":"La tua auto e la sessione"}>
       <CarPreview player car={race.car} pilot={race.pilot} label="La tua auto" onClick={()=>setDetail('player')}/>
-      {hasRival?<CarPreview car={race.opponent.car} pilot={race.opponent.pilot} opponentLabel={opponentLabel} label={grid?race.tacticalRivalChanged?'Nuovo rivale tattico':'Rivale tattico':'Auto rivale'} driver={race.opponent.name} relation={`${featured?.position?`${featured.position}° · `:''}${relation}`} onClick={()=>setDetail('opponent')}/>:<div className="championship-entry-card championship-entry-empty race-solo-card"><strong>{grid?'Pista libera':race.meetTrial?'Fantasma cronometrico':race.lesson?'Auto scuola in prestito':'Contro il cronometro'}</strong><p>{grid?'Gli altri piloti si sono ritirati. Nessun rivale tattico.':race.meetTrial?race.meetChallenge.otherName:race.lesson?'Conta eseguire la consegna dell’istruttore.':'Il tuo giro, settore dopo settore.'}</p>{race.meetTrial&&<p>{race.meetGhost?`Tempo da battere: ${formatRaceTime(race.meetGhost.totalMs/1000)}`:'L’altro pilota non ha ancora un tempo valido.'}</p>}</div>}
+      {hasRival?<CarPreview car={race.opponent.car} pilot={race.opponent.pilot} opponentLabel={opponentLabel} label={grid?race.tacticalRivalChanged?'Nuovo rivale tattico':'Rivale tattico':'Auto rivale'} driver={race.opponent.name} avatar={race.opponent.avatar} relation={`${featured?.position?`${featured.position}° · `:''}${relation}`} onClick={()=>setDetail('opponent')}/>:<div className="championship-entry-card championship-entry-empty race-solo-card"><strong>{grid?'Pista libera':race.meetTrial?'Fantasma cronometrico':race.lesson?'Auto scuola in prestito':'Contro il cronometro'}</strong><p>{grid?'Gli altri piloti si sono ritirati. Nessun rivale tattico.':race.meetTrial?race.meetChallenge.otherName:race.lesson?'Conta eseguire la consegna dell’istruttore.':'Il tuo giro, settore dopo settore.'}</p>{race.meetTrial&&<p>{race.meetGhost?`Tempo da battere: ${formatRaceTime(race.meetGhost.totalMs/1000)}`:'L’altro pilota non ha ancora un tempo valido.'}</p>}</div>}
     </section>
     {(active||!grid)&&<div ref={timingRef} tabIndex={-1} className="championship-checkpoint">{grid?<GridRaceSnapshot timing={race.gridTiming}/>:<SessionSnapshot race={race}/>}</div>}
     {active && section && <SectorBrief race={race} onDetail={()=>setDetail('sector')}/>}

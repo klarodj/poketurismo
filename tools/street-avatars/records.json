@@ -1,0 +1,242 @@
+[
+  {
+    "id": "barista-man",
+    "label": "Il barista",
+    "gender": "uomo",
+    "description": "26-year-old man, short black wavy hair, small moustache, dark burgundy cafe polo and plain apron neck strap, calm friendly expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 26-year-old man, short black wavy hair, small moustache, dark burgundy cafe polo and plain apron neck strap, calm friendly expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c677ee7f-d6ac-4b88-99fc-78db4e444a23.png"
+  },
+  {
+    "id": "elettricista-man",
+    "label": "L’elettricista",
+    "gender": "uomo",
+    "description": "24-year-old man, close cropped brown hair, lightly tanned face, blue work jacket with a yellow shoulder stripe, a pencil tucked behind ear.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 24-year-old man, close cropped brown hair, lightly tanned face, blue work jacket with a yellow shoulder stripe, a pencil tucked behind ear.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ead98cf0-b181-49a7-8262-badb0383293d.png"
+  },
+  {
+    "id": "rappresentante-man",
+    "label": "Il rappresentante",
+    "gender": "uomo",
+    "description": "38-year-old man, neat side-part dark hair, narrow rectangular wire glasses, cream business shirt and loosened navy tie, tired amused expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 38-year-old man, neat side-part dark hair, narrow rectangular wire glasses, cream business shirt and loosened navy tie, tired amused expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-9f5de7ec-e022-45fe-a8a7-a1f0b245fc02.png"
+  },
+  {
+    "id": "itis-man",
+    "label": "Lo studente dell’ITIS",
+    "gender": "uomo",
+    "description": "20-year-old adult student, floppy chestnut fringe, round glasses, olive corduroy overshirt and dark crew-neck tee, curious thoughtful face.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 20-year-old adult student, floppy chestnut fringe, round glasses, olive corduroy overshirt and dark crew-neck tee, curious thoughtful face.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e1d02ea3-22e4-435b-93b3-21fcffa264bf.png"
+  },
+  {
+    "id": "portiere-notte-man",
+    "label": "Il portiere di notte",
+    "gender": "uomo",
+    "description": "45-year-old man, receding black hair, broad face and thick moustache, dark navy uniform sweater over pale blue shirt, patient expression, no badges.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 45-year-old man, receding black hair, broad face and thick moustache, dark navy uniform sweater over pale blue shirt, patient expression, no badges.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-5b22d111-6082-4aa4-aa08-56011b49f902.png"
+  },
+  {
+    "id": "corriere-man",
+    "label": "Il corriere",
+    "gender": "uomo",
+    "description": "29-year-old Italian man of North African family background, short black curls, light stubble, plain orange lightweight delivery vest over grey sweatshirt, lively expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 29-year-old Italian man of North African family background, short black curls, light stubble, plain orange lightweight delivery vest over grey sweatshirt, lively expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-af4cfbe2-57f0-4251-ad7c-7688aa7e621f.png"
+  },
+  {
+    "id": "dj-man",
+    "label": "Il disc jockey",
+    "gender": "uomo",
+    "description": "27-year-old Black Italian man, very short textured hair, small goatee, plain red track jacket, chunky wired over-ear headphones resting around neck, easy smile, no modern earbuds.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 27-year-old Black Italian man, very short textured hair, small goatee, plain red track jacket, chunky wired over-ear headphones resting around neck, easy smile, no modern earbuds.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d4096dd1-de6d-492c-81a6-ca0cbec18c2c.png"
+  },
+  {
+    "id": "ciclista-man",
+    "label": "Il ciclista urbano",
+    "gender": "uomo",
+    "description": "25-year-old man, medium brown hair, narrow face, simple faded green cycle cap with short brim, navy windbreaker, relaxed expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 25-year-old man, medium brown hair, narrow face, simple faded green cycle cap with short brim, navy windbreaker, relaxed expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e1ab88ae-8439-437f-8bc7-0cf849daeb73.png"
+  },
+  {
+    "id": "alpinista-man",
+    "label": "L’escursionista",
+    "gender": "uomo",
+    "description": "40-year-old man, thick auburn beard and wavy hair, sun-weathered face, dark green fleece with orange zip collar, practical cheerful expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 40-year-old man, thick auburn beard and wavy hair, sun-weathered face, dark green fleece with orange zip collar, practical cheerful expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-143d4fb8-6614-4ded-9434-aa0a45425cf3.png"
+  },
+  {
+    "id": "papa-kart-man",
+    "label": "Il papà del kartodromo",
+    "gender": "uomo",
+    "description": "44-year-old man, round face, short salt-and-pepper hair, blue baseball cap and beige quilted vest over check shirt, warm proud expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 44-year-old man, round face, short salt-and-pepper hair, blue baseball cap and beige quilted vest over check shirt, warm proud expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-f0cfcdc5-7f55-4933-8a58-c7177e5bd251.png"
+  },
+  {
+    "id": "camionista-man",
+    "label": "Il camionista",
+    "gender": "uomo",
+    "description": "48-year-old man, stocky broad face, black moustache with grey ends, maroon baseball cap and worn blue denim jacket, reassuring half-smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 48-year-old man, stocky broad face, black moustache with grey ends, maroon baseball cap and worn blue denim jacket, reassuring half-smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-98a3551d-b0e6-48bf-a6c5-76e37f68caf6.png"
+  },
+  {
+    "id": "collezionista-man",
+    "label": "Il collezionista",
+    "gender": "uomo",
+    "description": "52-year-old man, swept-back grey hair, thin metal-frame glasses, camel-colour jacket over a dark brown turtleneck, thoughtful confident face.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 52-year-old man, swept-back grey hair, thin metal-frame glasses, camel-colour jacket over a dark brown turtleneck, thoughtful confident face.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ceb67cd6-90e2-41bf-8216-bd96221b41fd.png"
+  },
+  {
+    "id": "ferroviere-man",
+    "label": "Il ferroviere",
+    "gender": "uomo",
+    "description": "34-year-old man, short dark hair and prominent eyebrows, blue knit work pullover over light blue shirt, small plain chest pen pocket, no insignia, measured smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 34-year-old man, short dark hair and prominent eyebrows, blue knit work pullover over light blue shirt, small plain chest pen pocket, no insignia, measured smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c6062fab-78e2-4153-8c42-0c84fa4fc40f.png"
+  },
+  {
+    "id": "benzinaio-man",
+    "label": "Il benzinaio",
+    "gender": "uomo",
+    "description": "32-year-old man, curly dark blond hair and faint stubble, green zip work vest over cream polo, tiny old-fashioned plain work cap, friendly expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 32-year-old man, curly dark blond hair and faint stubble, green zip work vest over cream polo, tiny old-fashioned plain work cap, friendly expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-e6b5b9c0-ba5d-46e6-b09d-e067cb99ebfe.png"
+  },
+  {
+    "id": "saldatore-man",
+    "label": "Il saldatore",
+    "gender": "uomo",
+    "description": "36-year-old man, shaved head, close dark beard, sturdy brown work jacket with dark leather apron shoulder straps, safety goggles pushed up on forehead.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 36-year-old man, shaved head, close dark beard, sturdy brown work jacket with dark leather apron shoulder straps, safety goggles pushed up on forehead.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-62324927-58e2-4b2b-9343-2a51bbf0d37f.png"
+  },
+  {
+    "id": "turnista-woman",
+    "label": "La turnista",
+    "gender": "donna",
+    "description": "30-year-old woman, short practical auburn pixie hair, pale face with faint freckles, navy factory work jacket over muted red T-shirt, self-assured tired smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 30-year-old woman, short practical auburn pixie hair, pale face with faint freckles, navy factory work jacket over muted red T-shirt, self-assured tired smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ee300c1d-d161-4a72-95cd-f01398afcebb.png"
+  },
+  {
+    "id": "informatica-woman",
+    "label": "L’informatica",
+    "gender": "donna",
+    "description": "28-year-old woman, straight black chin-length bob, slim oval wire glasses, purple zip cardigan over grey crew tee, focused friendly expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 28-year-old woman, straight black chin-length bob, slim oval wire glasses, purple zip cardigan over grey crew tee, focused friendly expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-5ddff8c1-d570-4f45-b801-20c46107098b.png"
+  },
+  {
+    "id": "itis-woman",
+    "label": "La studentessa dell’ITIS",
+    "gender": "donna",
+    "description": "20-year-old adult woman student, dark brown hair in loose short ponytail with fringe, simple green sweatshirt and faded denim collar, inquisitive expression.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 20-year-old adult woman student, dark brown hair in loose short ponytail with fringe, simple green sweatshirt and faded denim collar, inquisitive expression.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-cdfda7ca-96a6-4fd0-8d6c-f70b234b1391.png"
+  },
+  {
+    "id": "soccorritrice-woman",
+    "label": "La volontaria del soccorso",
+    "gender": "donna",
+    "description": "31-year-old woman, brown hair tied back, pale blue collared shirt under a plain orange high-visibility vest, warm steady face, no medical symbols, no text.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 31-year-old woman, brown hair tied back, pale blue collared shirt under a plain orange high-visibility vest, warm steady face, no medical symbols, no text.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-93208cb5-9292-4f7f-958c-de7279a65b8d.png"
+  },
+  {
+    "id": "tassista-woman",
+    "label": "La tassista",
+    "gender": "donna",
+    "description": "39-year-old woman, curly black shoulder-length hair, narrow oval face, beige windbreaker over navy polo, alert amused expression, no taxi sign.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 39-year-old woman, curly black shoulder-length hair, narrow oval face, beige windbreaker over navy polo, alert amused expression, no taxi sign.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c941e78b-9e96-493f-9fe6-4667a6b65d27.png"
+  },
+  {
+    "id": "commessa-woman",
+    "label": "La commessa",
+    "gender": "donna",
+    "description": "25-year-old woman, shoulder-length dark blond layered hair, dark red fine-knit top and small plain silver hoop earrings, confident approachable smile, period styling.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 25-year-old woman, shoulder-length dark blond layered hair, dark red fine-knit top and small plain silver hoop earrings, confident approachable smile, period styling.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-96609f7d-da02-492e-bdbe-9439b1b2f8be.png"
+  },
+  {
+    "id": "skater-woman",
+    "label": "La skater",
+    "gender": "donna",
+    "description": "22-year-old adult woman, dark brown shoulder-length hair beneath a backwards navy baseball cap, loose orange hoodie, a playful determined smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 22-year-old adult woman, dark brown shoulder-length hair beneath a backwards navy baseball cap, loose orange hoodie, a playful determined smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6b487d92-09c1-488f-a43f-6f2850b4d76d.png"
+  },
+  {
+    "id": "fotografa-woman",
+    "label": "La fotografa dei rally",
+    "gender": "donna",
+    "description": "33-year-old woman, short tousled brown hair, sun freckles, cream multi-pocket photographer vest over green crew neck shirt, black camera neck strap, no camera visible.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 33-year-old woman, short tousled brown hair, sun freckles, cream multi-pocket photographer vest over green crew neck shirt, black camera neck strap, no camera visible.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-67942a21-320c-4e9e-ba35-d7120bf30fc0.png"
+  },
+  {
+    "id": "universitaria-woman",
+    "label": "La ricercatrice",
+    "gender": "donna",
+    "description": "29-year-old woman, dark curly hair tied up loosely, small round black glasses, moss green wool cardigan and white T-shirt, thoughtful gentle smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 29-year-old woman, dark curly hair tied up loosely, small round black glasses, moss green wool cardigan and white T-shirt, thoughtful gentle smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-8a1451c7-38f4-4c09-bca1-b753cc7da758.png"
+  },
+  {
+    "id": "tecnica-diesel-woman",
+    "label": "La tecnica diesel",
+    "gender": "donna",
+    "description": "35-year-old woman with medium-brown skin, dark hair in tight low braid, dark blue work overalls with red collar trim, clear steady gaze, no tools, no logos.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 35-year-old woman with medium-brown skin, dark hair in tight low braid, dark blue work overalls with red collar trim, clear steady gaze, no tools, no logos.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1d92e6c8-c960-4457-863c-6ca47291d7bf.png"
+  },
+  {
+    "id": "restauratrice-woman",
+    "label": "La restauratrice",
+    "gender": "donna",
+    "description": "34-year-old woman, copper-red hair tied with a cream bandana, faded ochre work shirt and dark brown apron strap, light freckles, contemplative smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 34-year-old woman, copper-red hair tied with a cream bandana, faded ochre work shirt and dark brown apron strap, light freckles, contemplative smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-75524acf-4a60-4f1f-9e26-9b67011c35cc.png"
+  },
+  {
+    "id": "studentessa-arte-woman",
+    "label": "La studentessa d’arte",
+    "gender": "donna",
+    "description": "23-year-old adult woman, asymmetrical short dark hair and straight fringe, cobalt blue lightweight scarf over faded black denim jacket, small silver stud earring, lively eyes.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 23-year-old adult woman, asymmetrical short dark hair and straight fringe, cobalt blue lightweight scarf over faded black denim jacket, small silver stud earring, lively eyes.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2cac41fe-0454-4063-a22e-b74717525264.png"
+  },
+  {
+    "id": "commissaria-woman",
+    "label": "La commissaria di percorso",
+    "gender": "donna",
+    "description": "43-year-old woman, short greying dark hair, rectangular glasses, plain yellow-orange marshal vest over navy sweater, firm fair expression, no police insignia.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 43-year-old woman, short greying dark hair, rectangular glasses, plain yellow-orange marshal vest over navy sweater, firm fair expression, no police insignia.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-6926a671-0563-4be3-ab9d-0d0feb000812.png"
+  },
+  {
+    "id": "architetta-woman",
+    "label": "L’architetta",
+    "gender": "donna",
+    "description": "37-year-old woman, smooth chestnut bob tucked behind one ear, narrow rectangular glasses, grey blazer over a dark red turtleneck, wry confident smile.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 37-year-old woman, smooth chestnut bob tucked behind one ear, narrow rectangular glasses, grey blazer over a dark red turtleneck, wry confident smile.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-95b3bc53-0fda-4044-8c76-51b5c700ab26.png"
+  },
+  {
+    "id": "cuoca-woman",
+    "label": "La cuoca del bar",
+    "gender": "donna",
+    "description": "41-year-old woman, dark hair gathered in a low bun, cream bandana headband, white work shirt with dark green apron straps, round friendly face, no tall chef hat.",
+    "prompt": "Use case: stylized-concept. Asset type: one original NPC portrait for Poketurismo, a car racing RPG set in provincial Northern Italy in 1998–2002. Strict authentic low-resolution pixel art drawn on a logical 64x64 grid, square pixels, hard edges, clear compact colour clusters, limited 24-colour palette, like a 1990s PC racing-game character portrait. Single head-and-shoulders, whole hair and upper shoulders in frame, centered, slight three-quarter turn, natural adult human proportions. Plain uniform muted grey-blue background. No text, logo, border, other people, car, scenery, watermark, photorealism, smooth shading, anime, chibi or modern fashion/accessories. Facial identity and hair silhouette must be distinctive. 41-year-old woman, dark hair gathered in a low bun, cream bandana headband, white work shirt with dark green apron straps, round friendly face, no tall chef hat.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-1405ec5f-e7f5-4967-afce-40e0f0c52176.png"
+  }
+]

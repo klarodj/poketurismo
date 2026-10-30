@@ -1,3 +1,4 @@
+import StreetRivalPortrait from './StreetRivalPortrait';
 import OpponentComparison from './OpponentComparison';
 import {streetZoneImage} from '../../shared/streetVisuals.mjs';
 import React, {useEffect,useState} from 'react';
@@ -18,7 +19,7 @@ function EncounterCard({offer,zone,userId,money,onNext,onStarted,onError}){
   const sections=buildTacticalTrack(track.builds.map(build=>build.section),track.distanceKm,routeProfileFor('street'));
   const challenge=async()=>{try{const data=await startRace(userId,{mode:'street',zoneId:zone.id,offerId:offer.id,wager});onStarted(data);}catch(error){onError(error.message);}};
   return <section className="street-encounter" aria-label="Avversario incontrato">
-    <div className="street-encounter-heading"><div><p className="street-eyebrow">Hai incontrato</p><h3>{offer.rival.name}</h3><p>{offer.rival.style}</p></div>{!offer.comparison&&<span className={`street-challenge ${offer.easy?'street-challenge-easy':''}`}>{offer.challenge}</span>}</div>
+    <div className="street-encounter-heading"><div className="street-rival-identity"><StreetRivalPortrait avatar={offer.rival.avatar} name={offer.rival.name}/><div><p className="street-eyebrow">Hai incontrato</p><h3>{offer.rival.name}</h3><p>{offer.rival.style}</p></div></div>{!offer.comparison&&<span className={`street-challenge ${offer.easy?'street-challenge-easy':''}`}>{offer.challenge}</span>}</div>
     <div className="street-rival-grid"><div className="street-rival-car"><RaceCarArtwork car={offer.rival.car}/><strong>{offer.rival.car.brand} {offer.rival.car.name}</strong><p>{offer.rival.car.cv} CV · {offer.rival.car.kg} kg · motore {offer.rival.car.engineHealth}% · gomme {offer.rival.car.tireGrip}%</p></div>
       <div className="street-route"><h4>Percorso della sfida</h4><strong>{track.name}</strong><p>{track.distanceKm.toLocaleString('it-IT')} km · {weatherNames[track.weather]||track.weather}</p><p>Precedenti: {offer.record.wins} vittorie · {offer.record.losses} sconfitte · {offer.record.draws} pareggi</p><p>Vittoria: fino a <strong>{offer.winXp} XP</strong> e <strong>+{offer.winReputation} reputazione</strong>.</p>{!offer.comparison&&<p className="street-small">La valutazione considera auto, piloti e percorso. Le tue scelte possono cambiare l’esito.</p>}</div></div>
     <OpponentComparison comparison={offer.comparison}/>

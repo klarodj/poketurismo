@@ -1,0 +1,276 @@
+{
+  "tool": "image_gen (built-in)",
+  "preparation": "Nearest-neighbour 64x64 resize, no repainting or changes to existing assets",
+  "assets": [
+    {
+      "id": "barista-man",
+      "input": "tools/street-avatars/inputs/barista-man.png",
+      "sourceSha256": "e5310f2b1d159242ae7364835ec4b9929273b1f676f69733f0e855ef06b6b068",
+      "output": "public/images/street-avatars/barista-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "8aeb2dd0bc5a1c1f1f742d65d9848d8eee49dae6eb4b77fa156b6b24676bdc04"
+    },
+    {
+      "id": "elettricista-man",
+      "input": "tools/street-avatars/inputs/elettricista-man.png",
+      "sourceSha256": "92df50a73893eb9254f6622c0c774393efe99bc79361db9756475bc297485f78",
+      "output": "public/images/street-avatars/elettricista-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "6ad6a4392df9cc09234dc620bb4d83669a53cfb1b5fb69fa138116be11f939d5"
+    },
+    {
+      "id": "rappresentante-man",
+      "input": "tools/street-avatars/inputs/rappresentante-man.png",
+      "sourceSha256": "9df7766fd1eb41a5bb8f236089254962c1e8c927cf78b017ce719d4381bfb807",
+      "output": "public/images/street-avatars/rappresentante-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "d9095b3f1eef43a051b5c072774dc95d466e071ed26e8100f4f02539f4e3b2d3"
+    },
+    {
+      "id": "itis-man",
+      "input": "tools/street-avatars/inputs/itis-man.png",
+      "sourceSha256": "2c0cd6280de9fb8db0cba94c42793fedfacdb188d2ee8c5f41f1adaaa687c454",
+      "output": "public/images/street-avatars/itis-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "052e085e1dcfa2f5a4894663c3f4af2c67a7527454ed2fc7ddbc2f54f3d18dd2"
+    },
+    {
+      "id": "portiere-notte-man",
+      "input": "tools/street-avatars/inputs/portiere-notte-man.png",
+      "sourceSha256": "8131eb515da42c76bfa8b2c145e77bbb60d725186df9c6e47fecbe784a6e5bb9",
+      "output": "public/images/street-avatars/portiere-notte-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "cd794c06ff22aaf471c642cf0121dda840e61649e3dac70923e878c0175db8f2"
+    },
+    {
+      "id": "corriere-man",
+      "input": "tools/street-avatars/inputs/corriere-man.png",
+      "sourceSha256": "0e07c6d7c3c8ab46a1fc2e905951730cc03d617db345f1a641c1857ca68b3073",
+      "output": "public/images/street-avatars/corriere-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "4b4c9edfe4ecbdb3d7b3955d923820ca1300dd6f812f9795480da76d79755091"
+    },
+    {
+      "id": "dj-man",
+      "input": "tools/street-avatars/inputs/dj-man.png",
+      "sourceSha256": "381bcb32c13cc6ca082c55b69346c60324eaf12d19517ee021dae868139e6490",
+      "output": "public/images/street-avatars/dj-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "a0ee82a32572444bb54fc44762dd3d4831a6183f71947f65834a8849f0e0eac1"
+    },
+    {
+      "id": "ciclista-man",
+      "input": "tools/street-avatars/inputs/ciclista-man.png",
+      "sourceSha256": "8f839effb4f991b0cac9f4d2e5b52363b998bca4267ccc7082d798dc5cca57f0",
+      "output": "public/images/street-avatars/ciclista-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "2b13f79e648810425b4f46848373cecd5ea4e067ca5146c757997378c9039635"
+    },
+    {
+      "id": "alpinista-man",
+      "input": "tools/street-avatars/inputs/alpinista-man.png",
+      "sourceSha256": "5d165024322713c4cc4fae8b8d195bec0220a5c0d017402d04367ba8a6c9cee3",
+      "output": "public/images/street-avatars/alpinista-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "85a04fe23a268a4de8417caaa3a9f8b77ce7111aa1857ab0ae958c4c859added"
+    },
+    {
+      "id": "papa-kart-man",
+      "input": "tools/street-avatars/inputs/papa-kart-man.png",
+      "sourceSha256": "4b2dd7845648434d3790183c32801773f101344dcfedf3b39a41141e4d38c663",
+      "output": "public/images/street-avatars/papa-kart-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "784c66ac1eaf6b3e80f507ef515bc8a3735ec616ec49110158238c004adf8d32"
+    },
+    {
+      "id": "camionista-man",
+      "input": "tools/street-avatars/inputs/camionista-man.png",
+      "sourceSha256": "b77dd8c7ec07c2f441008a4ca5cbe2be7d70969701efaf78e42d0fbde59ff14c",
+      "output": "public/images/street-avatars/camionista-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "381bdd5c3dfd9e2e6e85c87524bf5df0f768a7455147fcb989b9ae330a58bd62"
+    },
+    {
+      "id": "collezionista-man",
+      "input": "tools/street-avatars/inputs/collezionista-man.png",
+      "sourceSha256": "30ba02298edbabef5902d336f64b7fe83271bc84b98a0435f1b2686855f6151c",
+      "output": "public/images/street-avatars/collezionista-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "ffbce55141819e9fc445860c9226bdc00ad291731d1f183ca0ba245a928f4621"
+    },
+    {
+      "id": "ferroviere-man",
+      "input": "tools/street-avatars/inputs/ferroviere-man.png",
+      "sourceSha256": "eb1936f849e83859b3f65a775fbc905e628f262c1bb834a061a1b6478cb70b30",
+      "output": "public/images/street-avatars/ferroviere-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "07ea214601983d83c5fac27fdec4d0aa9164e0006c0a707726ea25fc5888fd8f"
+    },
+    {
+      "id": "benzinaio-man",
+      "input": "tools/street-avatars/inputs/benzinaio-man.png",
+      "sourceSha256": "74fadc5bcb24803bacf7c2cb79fd1c36ad1e8df8242ea41881e7f099f912b584",
+      "output": "public/images/street-avatars/benzinaio-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "760299e359784dc032bb03786d99bbed42f447539e669c0526af3244f0213ffd"
+    },
+    {
+      "id": "saldatore-man",
+      "input": "tools/street-avatars/inputs/saldatore-man.png",
+      "sourceSha256": "00d8aee464b07ef70709966dbdf532bdb666f15ff35c037da149f2836fe45c2a",
+      "output": "public/images/street-avatars/saldatore-man.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "74111fa084c9ea52197d9e97dbaadc0d3a5df050e398e3173759ea70aa417d97"
+    },
+    {
+      "id": "turnista-woman",
+      "input": "tools/street-avatars/inputs/turnista-woman.png",
+      "sourceSha256": "089ecffd44e13d9559c2a6234a111d8c96262953dec3cdc0e83b25f52f5cb4cc",
+      "output": "public/images/street-avatars/turnista-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "b29b68812320dfed9ac865dc9ab89bff563ae7d0e522bd6025af5e057066c2cc"
+    },
+    {
+      "id": "informatica-woman",
+      "input": "tools/street-avatars/inputs/informatica-woman.png",
+      "sourceSha256": "064b0fce299f9c1ae0d533cb4fe8171653d2385219b80a540310dcd32081c524",
+      "output": "public/images/street-avatars/informatica-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "12c1a722a91bd815ea37a922183a97e20746e895c030730bd8b80309cea38035"
+    },
+    {
+      "id": "itis-woman",
+      "input": "tools/street-avatars/inputs/itis-woman.png",
+      "sourceSha256": "fabc56ecae27f94a401361a181155b455834b3786bbab9029674a6d125af58ac",
+      "output": "public/images/street-avatars/itis-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "e8f4d990bb7e05e33e50a99bce482d30af344cd7a03f48fba301b690569c24de"
+    },
+    {
+      "id": "soccorritrice-woman",
+      "input": "tools/street-avatars/inputs/soccorritrice-woman.png",
+      "sourceSha256": "d025c3d838caff2cf10350b8ef6e0c2984d813f53b618bb948bc588cdef45df6",
+      "output": "public/images/street-avatars/soccorritrice-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "6d0c1f34e6cb38a2d50d2a38c320bc79c4ed3977f24567c7d82f28d036aff494"
+    },
+    {
+      "id": "tassista-woman",
+      "input": "tools/street-avatars/inputs/tassista-woman.png",
+      "sourceSha256": "b9965dd43a7668e094f818ba69acd28747aaef4542caf5b20e954c3830b901c5",
+      "output": "public/images/street-avatars/tassista-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "f65e57bcf4477ff18d8f053f652b8801a2bac388be585dacae349458eb13f2e4"
+    },
+    {
+      "id": "commessa-woman",
+      "input": "tools/street-avatars/inputs/commessa-woman.png",
+      "sourceSha256": "701e1b4f6ac48d56649e14a04002e3788ca8580dac75eec6cf04af401271b29f",
+      "output": "public/images/street-avatars/commessa-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "1495a5f5da8ead7266311c06e6937d22e5c7b3e80b43c348fe7e2c947f41907f"
+    },
+    {
+      "id": "skater-woman",
+      "input": "tools/street-avatars/inputs/skater-woman.png",
+      "sourceSha256": "8d6fd49b985b2f3f2ed846e9782bac89b83f60079c9a91d426c009647265c8d9",
+      "output": "public/images/street-avatars/skater-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "e94bbb00f61a44eaeca0b1dc176ac7eedc749615bf2840c246695fae62f3d1a6"
+    },
+    {
+      "id": "fotografa-woman",
+      "input": "tools/street-avatars/inputs/fotografa-woman.png",
+      "sourceSha256": "f517102a775efd56153aeb0cb00c6f8c0a77316f0f1169a4847d6c08517f91b4",
+      "output": "public/images/street-avatars/fotografa-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "7019e62d2458d12a66df12c8cb816103536daa77b5fd24d6cddab727971559e6"
+    },
+    {
+      "id": "universitaria-woman",
+      "input": "tools/street-avatars/inputs/universitaria-woman.png",
+      "sourceSha256": "4a8f706eab9a8b3365c933581ad32a3ffc2f03190c2f6ac399d8dbcad692fc2b",
+      "output": "public/images/street-avatars/universitaria-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "44063c14bfcbda0b8ac2cfe379e00554fdedc9b9c98eee2024feff24d379c46c"
+    },
+    {
+      "id": "tecnica-diesel-woman",
+      "input": "tools/street-avatars/inputs/tecnica-diesel-woman.png",
+      "sourceSha256": "f57ea4bd205ffb244cefe50520d718e59d6da41d34f0d035484b45a4ea24c8b8",
+      "output": "public/images/street-avatars/tecnica-diesel-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "f26d2489183a0a49cfcb79efc0e9e83db4f4172f6dbee5ce942f6efeb0c408ef"
+    },
+    {
+      "id": "restauratrice-woman",
+      "input": "tools/street-avatars/inputs/restauratrice-woman.png",
+      "sourceSha256": "6e9731718da423ba8b4277fac60bc9585abaf14df9320d2702d0877bc40773b3",
+      "output": "public/images/street-avatars/restauratrice-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "3fc023a65cfca104c8d260687989a8cf47172852835236ff2062609193c28223"
+    },
+    {
+      "id": "studentessa-arte-woman",
+      "input": "tools/street-avatars/inputs/studentessa-arte-woman.png",
+      "sourceSha256": "493f480e662e7005e4bc6a588b528a7fc222986d9c622ae56a31fb36735ef060",
+      "output": "public/images/street-avatars/studentessa-arte-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "aa96353a56f2fa1dd45cb42bfa566407ad01c19c511cf06e62b2e5291ecaa7d4"
+    },
+    {
+      "id": "commissaria-woman",
+      "input": "tools/street-avatars/inputs/commissaria-woman.png",
+      "sourceSha256": "eefed8bb892dcd770c2a7b4083f866c11534e0e3972d16d5dfcc333e108a9e7f",
+      "output": "public/images/street-avatars/commissaria-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "aa3ef55a418265eab396af0f72fde74f7748cebec26d1d7f3241695e1322fdaa"
+    },
+    {
+      "id": "architetta-woman",
+      "input": "tools/street-avatars/inputs/architetta-woman.png",
+      "sourceSha256": "3a2695a2c6893d1c12d10adcfffa4a4eed535ae656704ebe15fe057eae2225f8",
+      "output": "public/images/street-avatars/architetta-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "a695ae25455392d7168d8c2351db85dcb4a6718fa4952cb0c122012986259f08"
+    },
+    {
+      "id": "cuoca-woman",
+      "input": "tools/street-avatars/inputs/cuoca-woman.png",
+      "sourceSha256": "2f0dfa7472a1bee65adf8d14c0f0ac82e4777c687ac76454f09c3aeed69a758b",
+      "output": "public/images/street-avatars/cuoca-woman.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "642f11fd13285058ebc5db9b3818ad00d03c39472e651522ff81509cf94e7a5f"
+    }
+  ]
+}

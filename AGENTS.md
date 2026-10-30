@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Volti clandestini: docs/RIVALI_CLANDESTINI_AVATAR.md. Trenta nuovi NPC64×64 in images/street-avatars, mapping esplicito shared/streetAvatarCatalog.mjs per40rivali, stabile e soltanto cosmetico. Ritratti in incontro e RaceCockpit; vecchi checkpoint proiettati senza riscrivere. Non aggiungere al selettore giocatore o confondere con NPC B01. Originali/prompt/hash tools/street-avatars.
+
 - B03: docs/B03_REPUTAZIONE_E_PRATICA.md. Reputazione privata derivata da risultati/campioni distinti, streetState nativo e capitoli reali, nessuna scrittura dai GET. Rapporti e ricordi in Gente del club/telefono. Inviti facoltativi Lele/Giada, tre completamenti ciascuno, contatori in campaign.episodes, +4/+2/+1 reputazione/rapporto, nessun denaro/XP/pratica. Versioni e transazione narrativa esistenti, vecchi contratti intatti. Nuove gare statTrainingVersion2: tutte8abilità secondo contesto reale, max6/abilità e16/gara, stesse allowance per percorso; flag1 invariato. Non inventare selezione marce: shift deriva dalla coordinazione negli allunghi.
 
 - Pulizia raduno richiesta: rimossa intera barra SMS/Rubrica/Aggiorna/Segnalazioni. Non reintrodurla: usare cellulare globale e aggiornamento automatico. Conservare Riprova sugli errori e vecchio URL amministrativo protetto.
