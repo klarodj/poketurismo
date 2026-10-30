@@ -1,0 +1,129 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Centered aspect crop if necessary, nearest-neighbour resize, no recolouring; native inputs retained",
+  "assets": [
+    {
+      "id": "aci-1600",
+      "cup": "Trofeo Turismo 1600 · ACI CSAI",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/aci-1600.png",
+      "sourceSha256": "19f78cabd98896d35594429ff441232e3de4977f26b8c62d6f7ff9c168d2c369",
+      "sha256": "90b8c9a6c007f39148330fa5d13bd6b10d6ef9a55a424d099f2d9092d5ad0815"
+    },
+    {
+      "id": "aci-2000",
+      "cup": "Coppa Superproduzione 2000 · ACI CSAI",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/aci-2000.png",
+      "sourceSha256": "baf11fff9183c23fdaaaf8eedf17fee45bf1f492620ffae61714e419bf909828",
+      "sha256": "022022f2102fa210b90ef50cb5cf9452f1cb13168abb73c86231f123fe87be1f"
+    },
+    {
+      "id": "aci-gt",
+      "cup": "Coppa Gran Turismo · ACI CSAI",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/aci-gt.png",
+      "sourceSha256": "b57cca2f38c7718308a8e7f8444cd9343a3266b34a4f15132f74f357795d9692",
+      "sha256": "a48e0fd3317da9a28ffc99bef21691a7a8409559555be6699048b651a6abcbc7"
+    },
+    {
+      "id": "aci-piccole",
+      "cup": "Coppa Piccole Turismo · ACI CSAI",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/aci-piccole.png",
+      "sourceSha256": "b9ec3a8a37c6a89316b098e52a1068dd6de453d42752416d7831412702b21e52",
+      "sha256": "023130cf3b70381f171727a7b5090f8da0d78f44567373bc67543aa0f5d778c0"
+    },
+    {
+      "id": "aci-superturismo",
+      "cup": "Trofeo Superturismo · ACI CSAI",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/aci-superturismo.png",
+      "sourceSha256": "bade7a3ad03ecf7a4ba3ab59979c13957525fa82b069d4ee46d393817a661bdf",
+      "sha256": "36b71df4efcab90705c26ae68e5e8b15e9948aa168288bb4a133180903d98668"
+    },
+    {
+      "id": "aspirato",
+      "cup": "Trofeo Aspirato · Club",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/aspirato.png",
+      "sourceSha256": "73f34ce99f41f9a0acbb4be6991f923aa98292ab01771db1756d89ca606067f9",
+      "sha256": "31beb59ddeb816574d41f56664db67faafce72490e887ff80a214c6a1eec86a8"
+    },
+    {
+      "id": "gt-280",
+      "cup": "Trofeo GT 280 · Nord Italia",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/gt-280.png",
+      "sourceSha256": "067fb6a74fb97af0c298ff67d2b74294ebb4f49607da02dd381dbff724d5a99a",
+      "sha256": "04ffe11c67ac972cb619e9667ee3146359c92745823e8f38b8fa5f2c192b2de1"
+    },
+    {
+      "id": "gt-club",
+      "cup": "Coppa Gran Turismo · Club del Nord",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/gt-club.png",
+      "sourceSha256": "c5d568b3a89be797f424b41eee72fe95c965eaf9e747fed194520ce087fe7ba2",
+      "sha256": "9d0f4221d5017442d5df6c7522dcddacd6ad3018898916173faedfb39858fecc"
+    },
+    {
+      "id": "italiane",
+      "cup": "Coppa Italiane · Passione",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/italiane.png",
+      "sourceSha256": "80c87af691c6e3d68d600d0a1ef5f85c61aa2e456b088de5de0e89f259bbd990",
+      "sha256": "e41e03849c187b6251c8d675cd9d704dc78f0b2b9458180f5a5be92e181c93cb"
+    },
+    {
+      "id": "menu-aci",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/autodrome-aci-v2.png",
+      "sourceSha256": "46cd4e89308dcf49e81b7b40f3090fb9a91b18813e32ae02e6a0ab527cc6486b",
+      "sha256": "5f8436b7a578a5fcfbe3a556560b0a7a433dc4eef383032e44996c495fff9bb6"
+    },
+    {
+      "id": "menu-northern",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/autodrome-cups-v2.png",
+      "sourceSha256": "8f4e3677ccf094ac2532c19631ffe52fefc44555877d2d50b784fdff41042dda",
+      "sha256": "366ff61213a1ef4161355ef82874be3092fe1dc2159b8ce9e79b0442e76a19f6"
+    },
+    {
+      "id": "menu-single",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/sections/autodrome-race-v2.png",
+      "sourceSha256": "05758910d3012aaed85e64710729983e4fe1868a38d693524ea6b49f423362e5",
+      "sha256": "a11b0dc32b25a75224c84bf4f790239252bbc758e2417d4316cf995553d75658"
+    },
+    {
+      "id": "posteriore",
+      "cup": "Trofeo Trazione Posteriore",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/posteriore.png",
+      "sourceSha256": "e902767188d14bffe6551503ed4d5d900337d34a7de91429ce8b81baf2ae6b58",
+      "sha256": "9629a37683988cbc304d3697795282ca6b91e80bbbc5bb18e9fb6d7e6fba0047"
+    },
+    {
+      "id": "primi-giri",
+      "cup": "Coppa Primi Giri",
+      "width": 320,
+      "height": 180,
+      "output": "public/images/world/championships/primi-giri.png",
+      "sourceSha256": "0f96b6317db368cbdb9004258b2e69a9edd471eadbbfff040a8f36563972a123",
+      "sha256": "4801d95e028ab952869ced6c8c52d9867836d2ad05ce144caf251a876adaa380"
+    }
+  ]
+}

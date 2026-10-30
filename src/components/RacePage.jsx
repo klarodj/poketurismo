@@ -1,3 +1,4 @@
+import {AUTODROME_IMAGES} from '../../shared/championshipVisuals.mjs';
 import {streetZoneImage} from '../../shared/streetVisuals.mjs';
 import ChampionshipTable from './ChampionshipTable';
 import React, { useEffect, useState } from 'react';
@@ -95,7 +96,7 @@ export default function RacePage({ mode }) {
   const previewDistance = selectedTrack ? Math.max(1, Number(selectedTrack.lenght || previewSource.length) / (Number(selectedTrack.lenght) >= 100 ? 1000 : 1)) : 0;
   const previewSections = trackChoice === 'demo' ? DEMO_TRACK.sections : previewSource.length ? buildTacticalTrack(previewSource.map(item => item.section), previewDistance, previewProfile) : [];
 
-  return <Win98Window guideId={!race ? mode === 'street' ? 'street' : 'autodrome' : undefined} title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? streetZoneImage(streetLocation?.id)||'/images/world/street.png' : '/images/world/track.png') : undefined}>{!race&&mode==='street'&&car?.racePrepared&&<p className="period-notice"><strong>Auto da gara: solo pista.</strong> Per le clandestine scegli una vettura stradale dal <a href="/garage/auto">garage</a>, oppure vai all’<a href="/autodrome">autodromo</a>.</p>}
+  return <Win98Window guideId={!race ? mode === 'street' ? 'street' : 'autodrome' : undefined} title={race?.mode === 'street' || mode === 'street' ? 'Corse clandestine' : 'Autodromo'} imageUrl={!race ? (mode === 'street' ? streetZoneImage(streetLocation?.id)||'/images/world/street.png' : timeTrial?AUTODROME_IMAGES.times:AUTODROME_IMAGES.single) : undefined}>{!race&&mode==='street'&&car?.racePrepared&&<p className="period-notice"><strong>Auto da gara: solo pista.</strong> Per le clandestine scegli una vettura stradale dal <a href="/garage/auto">garage</a>, oppure vai all’<a href="/autodrome">autodromo</a>.</p>}
     <div className={`${race ? 'p-1 sm:p-3' : 'p-4'} space-y-4 text-black`}>
       {error && <div role="alert" className="bg-red-100 border border-red-500 p-3">{error} <button className="underline" onClick={() => window.location.reload()}>Ricarica salvataggio</button></div>}
       {!loaded || !userId ? <p>Caricamento gara e salvataggio…</p> : !race ? mode === 'street' && !entryId ? <>

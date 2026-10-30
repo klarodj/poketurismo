@@ -1,3 +1,4 @@
+import {AUTODROME_IMAGES,championshipCover} from '../../shared/championshipVisuals.mjs';
 import PerformanceBadge from '../components/PerformanceBadge';
 import {trackVisual} from '../../shared/trackVisuals.mjs';
 import TrackIllustration from '../components/TrackIllustration';
@@ -37,8 +38,8 @@ function checkPilotRequirements(stats, level, champ) {
 
 function ChampionshipCard({champ,equippedCar,playerStats,playerLevel,playerMoney,activeEntry,joining,onEnter}){
  const isActive=activeEntry?.championshipId===champ.id,drivers=isActive?activeEntry.participants:champ.drivers,knownIP=(drivers||[]).map(d=>d.performanceIndex).filter(Number.isFinite),knownIG=(drivers||[]).map(d=>d.driverIndex).filter(Number.isFinite),mean=values=>values.length?Math.round(values.reduce((a,b)=>a+b,0)/values.length):undefined,errors=[...checkCarRequirements(equippedCar,champ),...checkPilotRequirements(playerStats,playerLevel,champ)];
- const canEnter=isActive||(!activeEntry&&!errors.length&&playerMoney>=champ.entryFee),visual=trackVisual(champ.rounds?.[0]?.track?.name);
- return <article className="championship-listing"><h2>{champ.name}</h2><p>Preparazione media avversari: <PerformanceBadge value={mean(knownIP)}/><PerformanceBadge kind="IG" value={mean(knownIG)}/></p><div className="championship-listing-overview">{visual&&<img src={visual.image} alt={visual.name} loading="lazy" width="144" height="96"/>}<div><p><strong>{champ.rounds?.length||0} gare</strong> · livello {champ.minLevel}+</p><p>{champ.minCv}–{champ.maxCv} CV · {champ.category}</p><p>Iscrizione <strong>€{champ.entryFee.toLocaleString('it-IT')}</strong></p></div></div><p className="championship-prize">Titolo: €{champ.rewardMoney.toLocaleString('it-IT')} · {champ.rewardXp} XP</p>
+ const canEnter=isActive||(!activeEntry&&!errors.length&&playerMoney>=champ.entryFee),cover=championshipCover(champ.name)||trackVisual(champ.rounds?.[0]?.track?.name)?.image;
+ return <article className="championship-listing"><h2>{champ.name}</h2>{cover&&<img className="championship-cover" src={cover} alt={`Copertina: ${champ.name}`} loading="lazy" width="320" height="180"/>}<p>Preparazione media avversari: <PerformanceBadge value={mean(knownIP)}/><PerformanceBadge kind="IG" value={mean(knownIG)}/></p><div className="championship-listing-overview"><div><p><strong>{champ.rounds?.length||0} gare</strong> · livello {champ.minLevel}+</p><p>{champ.minCv}–{champ.maxCv} CV · {champ.category}</p><p>Iscrizione <strong>€{champ.entryFee.toLocaleString('it-IT')}</strong></p></div></div><p className="championship-prize">Titolo: €{champ.rewardMoney.toLocaleString('it-IT')} · {champ.rewardXp} XP</p>
  {!canEnter&&<p className="period-notice">{activeEntry?'Concludi prima il campionato in corso.':errors[0]||`Mancano €${(champ.entryFee-playerMoney).toLocaleString('it-IT')} per l’iscrizione.`}</p>}
  <button type="button" className="win98-btn" disabled={!canEnter||joining} onClick={()=>onEnter(champ)}>{joining?'Iscrizione…':isActive?`Continua · round ${activeEntry.currentRound}`:canEnter?'Iscriviti · €'+champ.entryFee.toLocaleString('it-IT'):'Iscrizione non disponibile'}</button>
  <details className="period-details"><summary>Calendario, rivali e regolamento</summary><p>{champ.description}</p><p>{champ.format==='grid'?'Otto piloti · punti 10–8–6–5–4–3–2–1. Premi finali: 100% / 60% / 35% sul podio, 15% agli altri classificati.':'Campionato storico a duelli.'}</p>{champ.rules?.racePrepared&&<p><strong>Vetture da gara obbligatorie</strong>{champ.rules.maxCc?` · massimo ${champ.rules.maxCc} cm³`:''}</p>}<p>Trazione: {champ.allowedDrive==='any'?'libera':champ.allowedDrive}{champ.rules?.engineTypes?' · solo aspirati':''}{champ.rules?.brands?' · marchi italiani':''}{champ.rules?.drives?` · ${champ.rules.drives.join(', ')}`:''}</p>{errors.length>0&&<ul>{errors.map(e=><li key={e}>{e}</li>)}</ul>}
@@ -129,7 +130,7 @@ export default function Racing() {
   const filteredChamps = effectiveCategory === 'all' ? seriesCups : seriesCups.filter(c => c.category === effectiveCategory);
 
   return (
-    <Win98Window guideId="autodrome" title={`Autodromo — ${title}`} imageUrl="/images/world/track.png">
+    <Win98Window guideId="autodrome" title={`Autodromo — ${title}`} imageUrl={AUTODROME_IMAGES[series]}>
       <div className="racing-page flex flex-col bg-win98-gray text-black">
 
         <button className="win98-btn m-2" onClick={()=>navigate('/autodrome')}>Torna all’Autodromo</button>

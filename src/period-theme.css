@@ -67,3 +67,15 @@
 .hud-profile .hud-profile-identity{display:flex;align-items:center;gap:5px;min-width:0}.hud-profile-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.hud-profile .hud-profile-level{flex-shrink:0;color:#404040;font-size:inherit}.hud-profile>.performance-badge{overflow:visible;font-size:.8rem;flex-shrink:0}@media(max-width:620px){.hud-profile{max-width:160px}.hud-profile .hud-profile-identity{gap:3px}.hud-profile>.performance-badge{font-size:.75rem}}
 
 .period-activity img[src$="/autodrome-aci.png"]{object-fit:contain;background:#c0c0c0}
+
+/* Landscape artwork is shared by the autodrome menu and its destination window. */
+.period-activity img[src*="/autodrome-"][src$="-v2.png"]{object-fit:cover;aspect-ratio:16/9}
+.championship-listing>.championship-cover{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;image-rendering:pixelated;background:#808080;border:2px inset #fff}
+.championship-listing-overview>div{width:100%;display:flex;flex-wrap:wrap;gap:4px 14px}
+/* The avatar badge follows the same square blue notification style as the phone. */
+.hud-profile>.hud-avatar-notification{position:relative;display:inline-flex;overflow:visible;flex-shrink:0;margin:3px 3px 0 0}
+.hud-avatar-notification .hud-level-badge{position:absolute;top:-5px;right:-5px;min-width:16px;padding:1px 3px;border:1px solid #fff;background:#000080;color:#fff;text-align:center;font-size:13px;font-weight:bold;line-height:1;z-index:1}
+.hud-profile>.sr-only{position:absolute;overflow:hidden;width:1px;height:1px}
+.autodrome-activities .period-activity{align-items:center}
+.autodrome-activities .period-activity img{height:auto;aspect-ratio:16/9;object-fit:cover}
+.game-window-scene img[src*="/autodrome-"][src$="-v2.png"]{height:auto;aspect-ratio:16/9;max-height:240px;object-fit:contain;object-position:center}
