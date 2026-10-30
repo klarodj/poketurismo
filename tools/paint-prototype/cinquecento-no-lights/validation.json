@@ -1,0 +1,16 @@
+[
+  {
+    "id": "road",
+    "changedPixels": 55,
+    "allowedPixels": 61,
+    "alphaIdentical": true,
+    "outsideLampIdentical": true
+  },
+  {
+    "id": "race",
+    "changedPixels": 104,
+    "allowedPixels": 104,
+    "alphaIdentical": true,
+    "outsideLampIdentical": true
+  }
+]

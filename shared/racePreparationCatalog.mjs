@@ -298,7 +298,7 @@ export const RACE_PREPARATIONS={
     "key": "cinquecento",
     "name": "Cinquecento Trofeo",
     "profile": "rally",
-    "revision": 2
+    "revision": 3
   },
   "coupe.png": {
     "key": "coupe",

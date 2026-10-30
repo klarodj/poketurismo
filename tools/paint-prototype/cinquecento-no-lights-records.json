@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen built-in",
+  "records": [
+    {
+      "id": "road",
+      "prompt": "Use case: precise-object-edit. Remove ALL visible REAR TAIL LIGHTS from this exact Fiat Cinquecento sprite. Rear lights are hidden on the rear face from this front-left three-quarter camera. There must be NO red amber white or black rectangular rear lamp on the rear side quarter panel, no lamp stripe up the rear pillar. Fill removed rear lamp areas with contiguous matching body paint (green for road; matching red/yellow livery for race). Do NOT remove front headlights or small front-fender indicator. Preserve all other image content exactly: body geometry, perspective, windows, wheels, wheel arches, bumpers, door, stripe graphics, all sponsors, number97, pixel art, transparency, canvas and position. Only remove rear lamps, never add a lamp anywhere. NO redesign.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-c93756df-e480-40a4-bb90-2abd016502b5.png"
+    },
+    {
+      "id": "race",
+      "prompt": "Use case: precise-object-edit. Remove ALL visible REAR TAIL LIGHTS from this exact Fiat Cinquecento sprite. Rear lights are hidden on the rear face from this front-left three-quarter camera. There must be NO red amber white or black rectangular rear lamp on the rear side quarter panel, no lamp stripe up the rear pillar. Fill removed rear lamp areas with contiguous matching body paint (green for road; matching red/yellow livery for race). Do NOT remove front headlights or small front-fender indicator. Preserve all other image content exactly: body geometry, perspective, windows, wheels, wheel arches, bumpers, door, stripe graphics, all sponsors, number97, pixel art, transparency, canvas and position. Only remove rear lamps, never add a lamp anywhere. NO redesign.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2b30e4b9-ef9a-407e-b967-4673e125045f.png"
+    }
+  ]
+}

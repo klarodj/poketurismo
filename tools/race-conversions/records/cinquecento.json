@@ -31,7 +31,7 @@
   "sha256": "2534f974afba5eb939724c53b246b31a0ababd9460c28f28d75be85e3f7fd2fb",
   "width": 320,
   "height": 128,
-  "revision": 2,
+  "revision": 3,
   "preparation": "Aspect-preserving nearest-neighbour, transparent 320x128, whole car with margin",
   "referenceHashes": [
     {
