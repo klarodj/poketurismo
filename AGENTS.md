@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Roadmap carriera e immersione approvata come piano il 30 ottobre 2026: leggere docs/ROADMAP_CARRIERA_E_IMMERSIONE.md per i blocchi B01–B10, dipendenze, checklist e registro di avanzamento. La creazione del documento non implementa le feature. Prossimo blocco B01: censimento NPC e fondamenta narrative; riusare SMS/ciceroni/reputazione esistenti, preservare bilanciamento e salvataggi. Aggiornare stato e diario a ogni blocco verificato, senza dichiarare completato lavoro solo progettato.
+
 - Allineamento completo livelli: scripts/championship-level-audit.mjs verifica tutti11campionati, quattro profili reali e punti spesi legalmente senza allenamenti. Medie Settentrionali31/34/37/36/38/41, ACI37/38/40/41/43: massimo+2IG sul profilo meno favorevole al livello minimo. Solo sei griglie ritoccate, crescita/requisiti/auto/premi e contratti esistenti intatti. Vedere appendice docs/LOGO_E_BILANCIAMENTO_PILOTI.md.
 
 - Logo e griglie: docs/LOGO_E_BILANCIAMENTO_PILOTI.md. LogoPT image_gen trasparente in images/brand (256, favicon16/32/48, Apple180), prompt/input tools/brand-art; login conserva scena e auth. Skill rivali fisse in shared/championshipDifficulty.mjs, tarate sui6punti/livello: secondo Settentrionale IG34 invece46. Nessun aumento crescita, modifica requisiti/premi/auto o adattamento al giocatore. Nuove iscrizioni soltanto; vecchi contratti congelati intatti. Diagnostica read-only scripts/championship-progression-balance.mjs, non tocca risultati/usura. Nessuna migrazione o seed.

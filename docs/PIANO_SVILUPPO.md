@@ -1,5 +1,7 @@
 # Poketurismo: stato e prossime priorità
 
+Priorità dal 30 ottobre 2026: seguire la [roadmap carriera e immersione](ROADMAP_CARRIERA_E_IMMERSIONE.md), con blocchi B01–B10 e registro aggiornabile. Il piano sotto conserva la storia delle prime fasi e alcune descrizioni sono superate dai rapporti di pubblicazione successivi; non usarle per ricreare funzioni già presenti.
+
 Aggiornamento del 21 ottobre 2026: il playtest coinvolge un amico, quindi **identità personale e isolamento dei salvataggi precedono l'espansione della carriera**. Prima consolidare sviluppo/test sulla 5174 e salvare il lavoro in Git; poi migrare a un solo PostgreSQL per Auth e gioco. Procedura, limiti operativi e criteri di verifica sono in [AMBIENTE_UNICO.md](AMBIENTE_UNICO.md). Gli account e la migrazione non sono ancora implementati.
 
 ## Direzione

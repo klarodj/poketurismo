@@ -2,6 +2,8 @@
 
 Gestionale automobilistico con gare tattiche a turni, garage, tuning e campionati. Interfaccia ispirata a Windows 98, Nokia e forum automobilistici dei primi anni 2000.
 
+La [roadmap carriera e immersione](docs/ROADMAP_CARRIERA_E_IMMERSIONE.md), del 30 ottobre 2026, raccoglie i prossimi dieci blocchi: rivali, incarichi, reputazione, eventi speciali, album, scelte di ruolo, PC, rivista e calendario. Contiene dipendenze, criteri di completamento e stato del lavoro; le sezioni storiche sotto non ne sostituiscono le priorità.
+
 React/Vite/Tailwind/Zustand per il frontend; Express/Prisma/SQLite per il backend. Una sola implementazione delle regole in `shared/raceEngine.mjs`: il server decide e salva i turni; il browser mostra le scelte e i confronti.
 
 Dal 21 ottobre 2026 la direzione di lavoro è una sola istanza sviluppo/test sulla **5174**, seguita dalla migrazione a un PostgreSQL condiviso da Supabase Auth e gioco. Il [piano di consolidamento](docs/AMBIENTE_UNICO.md) distingue configurazione attuale, operazioni ancora da eseguire e migrazione futura. Il checkout legacy va conservato anche dopo lo spegnimento dei suoi container.
