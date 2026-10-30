@@ -3,6 +3,7 @@ import TrackIllustration from '../components/TrackIllustration';
 import React,{useState,useEffect} from 'react';
 import {useNavigate,useSearchParams} from 'react-router-dom';
 import MeetSocial from '../components/MeetSocial';
+import ClubVisitors from '../components/ClubVisitors';
 import ClubPeople from '../components/ClubPeople';
 import SectionTabs from '../components/SectionTabs';
 import Win98Window from '../components/Win98Window';
@@ -43,6 +44,7 @@ function MeetContents({userId}){
    {error&&<p role="alert" className="meet-error">{error} <button type="button" className="win98-btn" onClick={refresh}>Riprova</button></p>}{notice&&<p role="status" className="meet-notice">{notice}</p>}
    {tab==='showroom'&&<>
     {data?<section className="meet-display"><div className="meet-parking-status"><strong>{displayedCar?`La tua esposizione: ${displayedCar.brand} ${displayedCar.name}`:data.myGarageId?'La tua auto è esposta':'Il tuo posto è libero'}</strong>{data.myGarageId&&<span>Resta qui finché non la usi o la ritiri.</span>}</div><details key={data.myGarageId||'empty'} className="period-details meet-parking-controls" open={!data.myGarageId}><summary>{data.myGarageId?'Cambia auto o ritira l’esposizione':'Parcheggia un’auto'}</summary>{cars.length?<div className="meet-display-actions"><label>Auto da esporre<select value={chosenGarageId} onChange={event=>setGarageId(event.target.value)}>{cars.map(car=><option key={car.id} value={car.id}>{car.brand} {car.name}</option>)}</select></label><button type="button" className="win98-btn" disabled={pending>0||!chosenGarageId} onClick={()=>save(Number(chosenGarageId))}>{data.myGarageId?'Aggiorna esposizione':'Esponi auto'}</button>{data.myGarageId&&<button type="button" className="win98-btn" disabled={pending>0} onClick={()=>save(null)}>Ritira dal raduno</button>}</div>:<button type="button" className="win98-btn" onClick={()=>navigate('/used-cars')}>Trova la tua prima auto</button>}<p className="meet-small">Con l’esposizione condividi vettura, ricambi e tempi. I tuoi record personali restano salvati anche dopo il ritiro.</p></details></section>:<p role="status">Caricamento del piazzale…</p>}
+    <ClubVisitors key={userId} userId={userId} revision={revision}/>
     <header className="meet-section-heading"><div><h2>Auto dei giocatori</h2><p>{data?`${data.showcases.length} auto parcheggiate. Il pilota può essere assente.`:'Le esposizioni degli iscritti al club.'}</p></div></header>
     {data&&<div className="meet-grid">{data.showcases.length?data.showcases.map(showcase=><MeetShowcaseCard key={showcase.pilot.id} showcase={showcase} mine={showcase.pilot.id===userId} onOpen={()=>setSelected(showcase)}/>):<p className="meet-empty">Il piazzale è vuoto. Puoi esporre la tua auto oppure conoscere i personaggi in «Gente del club».</p>}</div>}
    </>}
