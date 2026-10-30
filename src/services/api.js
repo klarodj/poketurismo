@@ -134,3 +134,7 @@ export const repaintCar=(garageId,userId,paintColour,quoteKey)=>action(`/garage/
 export const prepareCarForRace=(garageId,userId,quoteKey)=>action(`/garage/${garageId}/race-preparation`,{userId,quoteKey,confirmPermanent:true,confirmTrackOnly:true});
 
 export const allocatePilotPoints=(userId,allocations)=>action('/driver/points',{userId,allocations});
+
+export const fetchStory = userId => request(`/story/${userId}`);
+export const respondStory = (userId, missionId, choice) => action('/story/respond', { userId, missionId, choice });
+export const readStoryMessage = (userId, messageId) => action('/story/read', { userId, messageId });

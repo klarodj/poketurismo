@@ -1,0 +1,34 @@
+[
+  {
+    "id": "lele",
+    "prompt": "Use case: stylized-concept. Asset type: original game NPC avatar for Poketurismo, Northern Italy in 2002. Create ONE square head-and-shoulders portrait, centered face, facing slightly three quarters towards viewer. Crisp authentic low-resolution 64x64 pixel art enlarged with nearest-neighbor square pixels, limited 24-color palette, hard pixel clusters, no anti-aliasing, no painting or smooth gradients. Simple solid muted grey-blue background, entire hair and shoulders inside image, no text, no logos, no border, no car, no other people. Fictional person. Emanuele 'Lele' Riva, 23-year-old Italian apprentice electrician from the lower Bergamo province. Slim face, short chestnut hair casually spiked with 2000-era gel, thick eyebrows, faint friendly grin. Navy blue work jacket with yellow shoulder piping over a white T-shirt. Enthusiastic and approachable utilitaria enthusiast, visibly a young working adult, not a child.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-84115da7-c037-4cce-b63a-45f635b99255.png",
+    "tool": "image_gen (built-in)",
+    "useCase": "stylized-concept",
+    "revision": 1
+  },
+  {
+    "id": "giada",
+    "prompt": "Use case: stylized-concept. Asset type: original game NPC avatar for Poketurismo, Northern Italy in 2002. Create ONE square head-and-shoulders portrait, centered face, facing slightly three quarters towards viewer. Crisp authentic low-resolution 64x64 pixel art enlarged with nearest-neighbor square pixels, limited 24-color palette, hard pixel clusters, no anti-aliasing, no painting or smooth gradients. Simple solid muted grey-blue background, entire hair and shoulders inside image, no text, no logos, no border, no car, no other people. Fictional person. Giada Bellini, 28-year-old Italian woman from Brescia, industrial technical drafter and precise club circuit driver. Oval face, brown eyes, dark brown straight hair tied into a low ponytail, a short side-swept fringe. Calm confident expression, burgundy zip-neck racing undersuit with light grey collar, no helmet. Practical, not glamorous; no jewelry, no headphones.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-ae4f1592-0663-49ca-8d4e-563772b4bfdd.png",
+    "tool": "image_gen (built-in)",
+    "useCase": "stylized-concept",
+    "revision": 1
+  },
+  {
+    "id": "sergio",
+    "prompt": "Use case: stylized-concept. Asset type: original game NPC avatar for Poketurismo, Northern Italy in 2002. Create ONE square head-and-shoulders portrait, centered face, facing slightly three quarters towards viewer. Crisp authentic low-resolution 64x64 pixel art enlarged with nearest-neighbor square pixels, limited 24-color palette, hard pixel clusters, no anti-aliasing, no painting or smooth gradients. Simple solid muted grey-blue background, entire hair and shoulders inside image, no text, no logos, no border, no car, no other people. Fictional person. Sergio Brambilla, 47-year-old Italian factory maintenance technician from Brianza, veteran Alfa Romeo enthusiast. Broad slightly weathered face, salt-and-pepper short hair receding at temples, dark moustache, thoughtful brown eyes, subtle smile. Forest green zip-up work sweater over a beige polo collar. Realistic ordinary northern Italian man, no caricature.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d5288bd8-cb30-4fd5-b0ad-b694393cf2c9.png",
+    "tool": "image_gen (built-in)",
+    "useCase": "stylized-concept",
+    "revision": 1
+  },
+  {
+    "id": "tommaso",
+    "prompt": "Use case: stylized-concept. Asset type: original game NPC avatar for Poketurismo, Northern Italy in 2002. Create ONE square head-and-shoulders portrait, centered face, facing slightly three quarters towards viewer. Crisp authentic low-resolution 64x64 pixel art enlarged with nearest-neighbor square pixels, limited 24-color palette, hard pixel clusters, no anti-aliasing, no painting or smooth gradients. Simple solid muted grey-blue background, entire hair and shoulders inside image, no text, no logos, no border, no car, no other people. Fictional person. Tommaso Villa, 31-year-old Italian man from the Como area, manages orders in his family's small furniture business and drives a cherished Ferrari F355. Wavy neatly combed dark blond hair, clean-shaven, narrow face, slightly self-assured but warm expression. Dark blue 1990s polo with a cream collar and red lightweight jacket open at shoulders. No sunglasses, no brands, no luxurious background.",
+    "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-2b9d255f-1a1e-4ccc-9fd2-065d495521cb.png",
+    "tool": "image_gen (built-in)",
+    "useCase": "stylized-concept",
+    "revision": 1
+  }
+]

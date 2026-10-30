@@ -1,0 +1,52 @@
+// Fictional club members, separate from player accounts and the fixed street roster.
+// Cars are visual identities, not generated garages or adaptive race opponents.
+export const STORY_VERSION = 1;
+export const STORY_CHARACTERS = [
+  { id: 'lele-riva', name: 'Emanuele Riva', shortName: 'Lele', nickname: 'Lele_900', age: 23,
+    role: 'L’utilitaria fatta in casa', location: 'Bassa bergamasca · parcheggio del club',
+    avatar: '/images/story/lele.png', car: { name: 'Cinquecento Sporting', brand: 'Fiat', image: 'cinquecento.png', paintColour: 'giallo' },
+    description: 'Apprendista elettricista, arriva al piazzale dopo il turno con la stessa Cinquecento gialla. Si segna i pezzi su un quaderno e cerca gli usati con Roby. Parla tanto, ma quando qualcuno resta a piedi è il primo ad aprire il cofano.',
+    motivation: 'Dimostrare che si può imparare a correre senza cambiare macchina a ogni sconfitta.',
+    voice: 'Frasi brevi, entusiasmo e battute da officina. Non finge di sapere tutto.',
+    signature: 'Cinquecento gialla, giacca da lavoro blu e quaderno dei ricambi.',
+    quote: 'Prima la facciamo andare bene. Poi, se avanza qualcosa, la facciamo andare forte.',
+    chapters: ['Una sera al piazzale: auto quasi originale e voglia di confrontarsi.', 'Le prime domeniche: stessa vettura, manutenzione e preparazione leggera dichiarata.', 'Trofeo delle piccole: stessa Cinquecento, scelta consapevole di una preparazione pista.'] },
+  { id: 'giada-bellini', name: 'Giada Bellini', shortName: 'Giada', nickname: 'G_Bellini', age: 28,
+    role: 'La precisione sul giro', location: 'Brescia · paddock del club',
+    avatar: '/images/story/giada.png', car: { name: 'Integra', brand: 'Honda', image: 'integra.png', paintColour: 'bianco' },
+    description: 'Disegnatrice tecnica in un’officina meccanica, tiene i tempi su fogli quadrettati. La sua Integra bianca arriva in pista pulita e senza adesivi improvvisati. Ascolta prima di dare un consiglio; le sfide su strada non le interessano.',
+    motivation: 'Preparare una stagione regolare e trovare compagni affidabili per le giornate in circuito.',
+    voice: 'Diretta e paziente, riferimenti concreti a frenate e costanza; mai una lezione non richiesta.',
+    signature: 'Integra bianca, sottotuta bordeaux e cartellina con i tempi.',
+    quote: 'Un giro buono capita. Prova a farne tre uguali.',
+    chapters: ['Primi riferimenti: Integra stradale e confronto sulla pulizia.', 'Una stagione insieme: stessa auto, gomme e assetto adeguati al trofeo.', 'Il salto in pista: eventuale conversione permanente della stessa Integra, solo nei capitoli dedicati.'] },
+  { id: 'sergio-brambilla', name: 'Sergio Brambilla', shortName: 'Sergio', nickname: 'Sergio75', age: 47,
+    role: 'L’esperienza del club', location: 'Brianza · officina e autodromo',
+    avatar: '/images/story/sergio.png', car: { name: '75 Quadrifoglio', brand: 'Alfa Romeo', image: '75.png', paintColour: 'argento' },
+    description: 'Manutentore in fabbrica, negli anni ha fatto assistenza agli amici negli slalom di provincia. Non racconta vittorie leggendarie: ricorda soprattutto le domeniche passate a riparare. La 75 argento è con lui da anni, e non ha intenzione di venderla.',
+    motivation: 'Passare ai nuovi del club il gusto di preparare bene una macchina e tornare a casa con tutto intero.',
+    voice: 'Poche parole, ironia asciutta e consigli pratici. Nessuna caricatura dialettale.',
+    signature: '75 argento, maglia verde da lavoro e baffi brizzolati.',
+    quote: 'Se per correre domenica non ti resta il pieno, il conto l’hai fatto male sabato.',
+    chapters: ['Il giro di controllo: conoscere la stessa 75 e rispettarne i limiti.', 'La squadra della domenica: aiutare gli altri, senza comprare la fiducia.', 'La coppa del club: sfida sportiva con la stessa Alfa, preparazione esplicita e griglia fissa.'] },
+  { id: 'tommaso-villa', name: 'Tommaso Villa', shortName: 'Tommaso', nickname: 'Tom_GT', age: 31,
+    role: 'La gran turismo del lago', location: 'Comasco · raduno e circuito',
+    avatar: '/images/story/tommaso.png', car: { name: 'F355', brand: 'Ferrari', image: '355.png', paintColour: 'rosso' },
+    description: 'Segue gli ordini nel mobilificio di famiglia e custodisce una F355 rossa acquistata usata. All’inizio sembra distante, poi resta a parlare di macchine fino alla chiusura del bar. Il portafoglio aiuta in garage; sul giro sa di avere ancora da imparare.',
+    motivation: 'Essere riconosciuto per come guida e per come si comporta, oltre che per la Ferrari.',
+    voice: 'Educato, un po’ sicuro di sé; ammette gli errori quando il cronometro lo smentisce.',
+    signature: 'F355 rossa, polo blu e giacca leggera rossa.',
+    quote: 'La macchina la riconoscono tutti. Mi piacerebbe che imparassero anche il mio nome.',
+    chapters: ['Una conoscenza al lago: nessuna sfida da supercar imposta ai principianti.', 'Giornata in circuito: stesso modello e confronto senza puntate obbligatorie.', 'Invito gran turismo: incontro futuro facoltativo, requisiti e preparazione dichiarati.'] },
+];
+export const storyCharacter = id => STORY_CHARACTERS.find(item => item.id === id);
+export const INTRO_MISSION = Object.freeze({
+  id: 'club-first-finish', version: 1, senderId: 'lele-riva', title: 'Un giro per conoscerci',
+  objective: 'Dopo aver accettato, completa una nuova gara singola del club in autodromo. Basta arrivare al traguardo: non serve vincere.',
+  destination: '/track-race', destinationLabel: 'Gara singola del club', rewardMoney: 100, rewardXp: 0,
+  offer: 'Ciao, sono Lele, quello della Cinquecento gialla. Teo mi ha passato il tuo contatto del club. Ti va una domenica in autodromo? Fai una gara singola fino in fondo, senza pensare al podio: il club mette 100 euro in più per il primo giro insieme. Se ti va, rispondi qui. Nessuna fretta.',
+  accepted: 'Affare fatto. Quando hai auto, benzina e gomme a posto, vai alla gara singola del club. Vale una gara nuova, da adesso. Se devi prima sistemarti, metti pure in pausa: non scade.',
+  paused: 'Va bene, nessuna corsa contro il calendario. Quando sei pronto riprendi l’incarico da qui; il bonus resta uno solo.',
+  completed: 'Sei arrivato in fondo, è quello che contava! Il club ha aggiunto il bonus di 100 euro al premio della gara, con l’eventuale rimborso a Franco. Ci si vede al piazzale. — Lele',
+});
+export const STORY_STATUS = { available: 'Da accettare', accepted: 'Accettato', 'in-progress': 'In corso', paused: 'In pausa', completed: 'Concluso' };

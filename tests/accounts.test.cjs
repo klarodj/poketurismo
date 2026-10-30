@@ -43,6 +43,8 @@ before(async () => {
   app.get('/api/state/:userId', endpoint(req => ({ id: playerId(req, req.params.userId) })));
   app.get('/api/phone/:userId/notifications',endpoint(req=>({id:playerId(req,req.params.userId)})));
   app.get('/api/phone/:userId',endpoint(req=>({id:playerId(req,req.params.userId)})));
+  app.get('/api/story/:userId',endpoint(req=>({id:playerId(req,req.params.userId)})));
+  for(const path of ['/api/story/read','/api/story/respond'])app.post(path,endpoint(req=>({id:playerId(req,req.body.userId)})));
   app.get('/api/dev/opponents', endpoint(async () => []));
   app.post('/api/player/:id/avatar',endpoint(req=>{const{userId,...body}=req.body;return require('../server/pilotProfile').changeAvatar(prisma,playerId(req,userId),body,req.params);}));
   app.post('/api/meet/friendship',endpoint(req=>({id:playerId(req,req.body.userId)})));
@@ -115,3 +117,9 @@ test('twenty cosmetic avatars are advertised and profile changes require the ver
 test('phone inbox and notification URLs require the verified owner',async()=>{for(const route of ['/phone/2','/phone/2/notifications']){assert.equal((await request(route)).status,401);assert.equal((await request(route,'valid-token-two')).status,403);assert.equal((await request(route,'valid-token-one')).status,200);}});
 
 test('friendship writes require the verified owner, including while another pilot is targeted',async()=>{const body={userId:2,peerId:3,action:'request'};assert.equal((await request('/meet/friendship',null,body)).status,401);assert.equal((await request('/meet/friendship','unverified-token',body)).status,401);assert.equal((await request('/meet/friendship','valid-token-two',body)).status,403);assert.equal((await request('/meet/friendship','valid-token-one',body)).status,200);});
+
+
+test('narrative inbox, reads and responses require the verified save owner',async()=>{
+ assert.equal((await request('/story/2')).status,401);assert.equal((await request('/story/2','valid-token-two')).status,403);assert.equal((await request('/story/2','valid-token-one')).status,200);
+ for(const path of ['/story/read','/story/respond']){const body={userId:2,messageId:'club-invite',missionId:'club-first-finish',choice:'accept'};assert.equal((await request(path,null,body)).status,401);assert.equal((await request(path,'unverified-token',body)).status,401);assert.equal((await request(path,'valid-token-two',body)).status,403);assert.equal((await request(path,'valid-token-one',body)).status,200);}
+});

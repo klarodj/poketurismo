@@ -39,7 +39,7 @@ async function operation(prisma, userId, key, kind, payload, action, idle = true
         entry = await tx.championshipEntry.findUnique({ where: { id: saved.entry.id }, include: { championship: { include: { rounds: { include: { track: { include: { type: true, surface: true, meteo: true } } }, orderBy: { ord: 'asc' } } } } } });
         if (entry) entry = require('./championships').publicEntry(entry);
       }
-      return { ...saved, ...fresh, ...(saved.friendshipStatus!==undefined?{friendshipStatus:friendship?.status||'removed'}:{}), ...(saved.meet ? { meet: await require('./carMeet').meet(tx, userId) } : {}), ...(saved.street ? { street: await require('./streetRacing').streetHub(tx, userId) } : {}), ...(saved.user ? { user: fresh.player } : {}), ...(entry ? { entry } : {}) };
+      return { ...saved, ...fresh, ...(saved.story ? {story:await require('./story').hub(tx,userId)} : {}), ...(saved.friendshipStatus!==undefined?{friendshipStatus:friendship?.status||'removed'}:{}), ...(saved.meet ? { meet: await require('./carMeet').meet(tx, userId) } : {}), ...(saved.street ? { street: await require('./streetRacing').streetHub(tx, userId) } : {}), ...(saved.user ? { user: fresh.player } : {}), ...(entry ? { entry } : {}) };
     }
     if (!await tx.user.findUnique({ where: { id: userId } })) fail(404, 'Giocatore inesistente');
     if (idle) await assertIdle(tx, userId);
@@ -47,6 +47,7 @@ async function operation(prisma, userId, key, kind, payload, action, idle = true
     // Cache references and operation-specific receipts, not a growing copy of every race log.
     const receipt = { ...result };
     for (const field of ['player', 'garage', 'inventory', 'activeRace', 'development']) delete receipt[field];
+    if (result.story) receipt.story = true;
     if (result.race) receipt.race = { id: result.race.id };
     if (result.entry) receipt.entry = { id: result.entry.id };
     if (result.user) receipt.user = true;

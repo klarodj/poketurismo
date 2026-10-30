@@ -66,6 +66,9 @@ app.get('/api/market', endpoint(() => transaction(prisma,async tx => {
   const cars = await tx.garage.findMany({ where: { userId: -1 }, include: garageInclude });
   return cars.map(item => ({ ...publicMarketItem(item), ...restoredHandlingStats(item),listingSource:players.has(item.id)?'player':stock.listingIds.includes(item.id)?'daily':'existing',marketDay:stock.day })).sort((a,b) => a.sellPrice-b.sellPrice || a.id-b.id);
 })));
+app.get('/api/story/:userId', endpoint(req => transaction(prisma, tx => require('./story').hub(tx, accounts.playerId(req, req.params.userId)))));
+mutate('/api/story/respond', 'story-respond', require('./story').respond);
+mutate('/api/story/read', 'story-read', require('./story').read, 'post', false);
 app.get('/api/phone/:userId/notifications',endpoint(req=>transaction(prisma,tx=>require('./phone').notifications(tx,accounts.playerId(req,req.params.userId)))));
 app.get('/api/phone/:userId',endpoint(req=>transaction(prisma,tx=>require('./phone').inbox(tx,accounts.playerId(req,req.params.userId)))));
 app.get('/api/meet', endpoint(req => transaction(prisma, tx => carMeet.meet(tx, accounts.playerId(req, req.query.userId)))));

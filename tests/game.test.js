@@ -965,7 +965,7 @@ test('avatar does not invalidate a meet preparation or change frozen race contra
 
 test('phone notifications are recipient-only, bounded and never mark SMS as read',async()=>{
  await socialSetup();const sent=await post('/meet/message',{peerId:2,text:'Ci vediamo al piazzale.'});assert.equal(sent.status,200);
- const before=await prisma.meetMessage.findMany();assert.deepEqual((await get('/phone/1/notifications')).data,{unread:0,latest:[],friendRequests:[],challengeInviteCount:0,challengeInvites:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
+ const before=await prisma.meetMessage.findMany();const {story:clubNotice,...socialNotices}=(await get('/phone/1/notifications')).data;assert.equal(clubNotice.unread,1);assert.deepEqual(socialNotices,{unread:0,latest:[],friendRequests:[],challengeInviteCount:0,challengeInvites:[]});const alert=(await get('/phone/2/notifications')).data;assert.equal(alert.unread,1);assert.equal(alert.latest[0].sender.id,1);assert.equal(alert.latest[0].sender.name,'Test');assert.deepEqual(Object.keys(alert.latest[0]).sort(),['createdAt','id','sender']);assert.ok(!JSON.stringify(alert).includes('piazzale'));assert.ok(!JSON.stringify(alert).includes('private@example'));
  const inbox=(await get('/phone/2')).data;assert.equal(inbox.conversations[0].lastMessage.id,sent.data.message.id);assert.deepEqual(await prisma.meetMessage.findMany(),before);
  await prisma.meetMessage.createMany({data:Array.from({length:7},()=>({senderId:1,recipientId:2,text:'Altro SMS'}))});assert.equal((await get('/phone/2/notifications')).data.latest.length,5);
 });
@@ -1414,4 +1414,81 @@ test('rebalancing the catalog changes future grids without rewriting an enrolled
   const race=await begin('championship',{entryId:entry.id});assert.equal(race.opponent.pilot.brave,original);assert.equal(race.opponent.pilot.brake,original);
   const contract=JSON.parse((await prisma.championshipEntry.findUnique({where:{id:entry.id}})).contract);assert.equal(contract.drivers[0].pilot.brave,original);
  }finally{spec.rivals[0].skill=original;}
+});
+
+const storyMissionId = 'club-first-finish';
+const storyAccept = key => post('/story/respond', {missionId:storyMissionId,choice:'accept'}, key);
+async function finishStoryRace(race) {
+  let response;
+  while (race.status === 'active') {
+    response = await post(`/races/${race.id}/turns`, {version:race.version,moveId:null});
+    assert.equal(response.status,200,JSON.stringify(response.data));
+    race = response.data.race;
+  }
+  return response;
+}
+test('story preview is read-only, NPC identities use dedicated art and no real user accounts',async()=>{
+ const users=await prisma.user.findMany(),cars=await prisma.garage.findMany();
+ const first=(await get('/story/1')).data,second=(await get('/story/1')).data;
+ assert.deepEqual(first,second);assert.equal(first.characters.length,4);assert(first.characters.every(c=>c.avatar.startsWith('/images/story/')));assert.equal(first.missions[0].status,'available');
+ assert.equal(await prisma.playerProgress.count(),0);assert.deepEqual(await prisma.user.findMany(),users);assert.deepEqual(await prisma.garage.findMany(),cars);
+ const notices=(await get('/phone/1/notifications')).data;assert.equal(notices.story.unread,1);assert(!JSON.stringify(notices.story).includes('text'));assert(!JSON.stringify(notices.story).includes('Ciao'));
+ assert.equal((await get('/phone/1')).data.conversations.length,0);assert.equal(await prisma.meetMessage.count(),0);
+});
+test('story acceptance is idempotent, survives a new DB client and retry returns current state',async()=>{
+ const key=randomUUID(),before=await wallet();let a=await storyAccept(key);assert.equal(a.status,200);assert.equal(a.data.story.missions[0].status,'accepted');
+ assert.equal((await storyAccept(key)).data.story.missions[0].status,'accepted');assert.equal((await storyAccept()).status,409);assert.equal(await wallet(),before);
+ const another=new PrismaClient({datasources:{db:{url:process.env.DATABASE_URL}}});try{const row=await another.playerProgress.findUnique({where:{userId:1}});assert.equal(JSON.parse(row.narrativeState).missions[storyMissionId].status,'accepted');}finally{await another.$disconnect();}
+ a=await post('/story/respond',{missionId:storyMissionId,choice:'pause'});assert.equal(a.data.story.missions[0].status,'paused');
+ assert.equal((await storyAccept(key)).data.story.missions[0].status,'paused');
+ const resumed=await post('/story/respond',{missionId:storyMissionId,choice:'resume'});assert.equal(resumed.status,200);assert.equal(resumed.data.story.missions[0].status,'accepted');
+ assert.equal((await get('/story/2')).data.missions[0].status,'available');assert.equal(await prisma.playerProgress.count({where:{userId:2}}),0);
+});
+test('opening the quest list does not read SMS; explicit acknowledgement affects only that message and owner',async()=>{
+ await storyAccept();const data=(await get('/story/1')).data;assert.equal(data.unread,2);
+ assert.equal((await get('/story/1')).data.unread,2);const id=data.messages[0].id;
+ const r=await post('/story/read',{messageId:id});assert.equal(r.status,200);assert.equal(r.data.story.unread,1);
+ assert.equal((await post('/story/read',{messageId:id})).data.story.unread,1);
+ assert.equal((await request('/story/read',{userId:2,messageId:id})).status,404);
+ assert.equal((await get('/story/2')).data.unread,1);assert.equal((await post('/story/read',{messageId:'invented'})).status,404);
+ assert.equal(await prisma.meetMessage.count(),0);
+});
+test('only an accepted new complete club race pays the once-only narrative bonus, including lost races',async()=>{
+ const old=await begin('track');await finishStoryRace(old);assert.equal((await get('/story/1')).data.missions[0].status,'available');
+ await storyAccept();const before=await wallet(),race=await begin('track'),key=randomUUID();
+ const saved=JSON.parse((await prisma.raceSession.findUnique({where:{id:race.id}})).state);assert.equal(saved.storyObjective.id,storyMissionId);
+ // The test fixture gives the rival enough ability to ensure a loss; completion, not victory, is the objective.
+ saved.opponent.pilot=Object.fromEntries(PILOT_STATS.map(k=>[k,100]));saved.opponent.car.speed=500;saved.opponent.car.acceleration=500;
+ await prisma.raceSession.update({where:{id:race.id},data:{state:JSON.stringify(saved)}});
+ let current=(await get(`/races/${race.id}?userId=1`)).data.race;
+ let result,finalBody;
+ while(current.status==='active'){finalBody={version:current.version,moveId:null};result=await post(`/races/${race.id}/turns`,finalBody,key);current=result.data.race;if(current.status==='active')throw new Error('Fixture expected a single-sector race');}
+ assert.equal(result.status,200);assert.equal(current.outcome,'loss');assert.equal(current.storyResult.money,100);assert.equal(current.reward.money,200);assert.equal(await wallet(),before+20000);
+ assert.equal((await get('/story/1')).data.missions[0].status,'completed');
+ assert.equal((await post(`/races/${race.id}/turns`,finalBody,key)).data.player.moneyCents,await wallet());assert.equal(await wallet(),before+20000);
+ assert.equal((await storyAccept()).status,409);const again=await finishStoryRace(await begin('track'));assert.equal(again.data.race.storyResult,undefined);
+});
+test('narrative objective ignores time trials, school, sandbox and abandoned races; retry next club race remains possible',async()=>{
+ await storyAccept();
+ await prisma.track.update({where:{id:track.id},data:{name:'Autodromo di Monza'}});
+ const trial=await begin('track',{timeTrial:true});assert.equal(JSON.parse((await prisma.raceSession.findUnique({where:{id:trial.id}})).state).storyObjective,undefined);
+ await finishStoryRace(trial);assert.equal((await get('/story/1')).data.missions[0].status,'accepted');
+ const demo=await begin('track',{demo:true,scenario:'equal'});assert.equal(JSON.parse((await prisma.raceSession.findUnique({where:{id:demo.id}})).state).storyObjective,undefined);await post(`/races/${demo.id}/abandon`,{version:0});
+ await post('/driver/lesson',{});const lesson=await post('/races',{mode:'track',lesson:'braking-basics'});assert.equal(lesson.status,200);assert.equal(lesson.data.race.storyObjective,undefined);await post(`/races/${lesson.data.race.id}/abandon`,{version:0});
+ const race=await begin('track');assert.equal((await post('/story/respond',{missionId:storyMissionId,choice:'pause'})).status,409);await post(`/races/${race.id}/abandon`,{version:0});
+ assert.equal((await get('/story/1')).data.missions[0].status,'in-progress');
+ const done=await finishStoryRace(await begin('track'));assert.equal(done.data.race.storyResult.money,100);
+});
+test('client cannot fabricate narrative completion, payment or accept an already running race',async()=>{
+ for(const body of [{missionId:storyMissionId,choice:'complete',rewardMoney:99999},{missionId:'missing',choice:'accept'}])assert.equal((await post('/story/respond',body)).status,400);
+ const race=await begin('track');assert.equal((await storyAccept()).status,409);await post(`/races/${race.id}/abandon`,{version:0});
+ await post('/story/respond',{missionId:storyMissionId,choice:'accept',rewardMoney:99999,status:'completed'});
+ const done=await finishStoryRace(await begin('track'));assert.equal(done.data.race.storyResult.money,100);
+});
+test('narrative bonus shares workshop repayment in the final transaction and preserves unrelated progress',async()=>{
+ await prisma.playerProgress.create({data:{userId:1,recoveryState:JSON.stringify({debtCents:100000,carIds:[garage.id]}),streetState:'{"parking":{"reputation":19}}',equippedMoves:'[]'}});
+ await storyAccept();const before=await wallet(),done=await finishStoryRace(await begin('track')),state=done.data.race;
+ assert.equal(state.storyResult.money,100);assert.equal(state.recoveryRepayment.grossPrizeCents,state.reward.money*200);assert.equal(await wallet(),before+state.reward.money*100);
+ const progress=await prisma.playerProgress.findUnique({where:{userId:1}});assert.equal(progress.streetState,'{"parking":{"reputation":19}}');assert.equal(JSON.parse(progress.recoveryState).debtCents,100000-state.recoveryRepayment.paidCents);
+ const beforeAgain=await wallet();await get('/story/1');assert.equal(await wallet(),beforeAgain);
 });

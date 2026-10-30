@@ -424,3 +424,5 @@ CREATE TABLE "MeetFriendship" (
 CREATE INDEX "MeetFriendship_lowId_status_idx" ON "MeetFriendship"("lowId", "status");
 CREATE INDEX "MeetFriendship_highId_status_idx" ON "MeetFriendship"("highId", "status");
 CREATE INDEX "MeetFriendship_requestedBy_createdAt_idx" ON "MeetFriendship"("requestedBy", "createdAt");
+
+ALTER TABLE "PlayerProgress" ADD COLUMN "narrativeState" TEXT NOT NULL DEFAULT '{}';

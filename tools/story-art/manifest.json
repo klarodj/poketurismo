@@ -1,0 +1,42 @@
+{
+  "tool": "image_gen (built-in)",
+  "preparation": "Nearest-neighbour 64x64 resize, no repainting or changes to existing assets",
+  "assets": [
+    {
+      "id": "lele",
+      "input": "tools/story-art/inputs/lele.png",
+      "sourceSha256": "0e495922bde78eb5936de1d8ca75ecd39994503b1a2132df38fac29be26d0981",
+      "output": "public/images/story/lele.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "51b0b0ec085074b5e385e6e9063d14f53342dd53d067c120654102fb97e7bc4f"
+    },
+    {
+      "id": "giada",
+      "input": "tools/story-art/inputs/giada.png",
+      "sourceSha256": "4cd15d8f15dabf00b86756bcbfab19374692189d61fef4af2a4c282149393b78",
+      "output": "public/images/story/giada.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "8f2334cd087280df4794542c8067a33441de0cbcecbad17981a9471028b2fe0f"
+    },
+    {
+      "id": "sergio",
+      "input": "tools/story-art/inputs/sergio.png",
+      "sourceSha256": "ef42f26f590d8712ed57416e84e7d5e4a60249ef18d8a32fd8123a12390b9926",
+      "output": "public/images/story/sergio.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "10c158634b837fc9bf1b1fba6065587a488a6bd2fa5d7ef4c2114285c415ef97"
+    },
+    {
+      "id": "tommaso",
+      "input": "tools/story-art/inputs/tommaso.png",
+      "sourceSha256": "a3f774c943189183102125e553473b33d8ea7842b2c59e98767d64883bdfd3db",
+      "output": "public/images/story/tommaso.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "15a88ed9945d566d63601a36a1cc79c255b7dcc12f32361835ee865895d5a895"
+    }
+  ]
+}

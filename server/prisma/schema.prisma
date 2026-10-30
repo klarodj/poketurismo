@@ -362,6 +362,7 @@ model PlayerProgress {
   learnedMoves     String @default("[]")
   equippedMoves    String @default("[]")
   streetState      String @default("{}")
+  narrativeState   String @default("{}")
   showcaseGarageId Int?
   recoveryState    String @default("{}")
 }

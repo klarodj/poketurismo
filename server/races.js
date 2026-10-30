@@ -175,6 +175,11 @@ async function startRace(tx, userId, body) {
   };
   if(gridMatch&&rulesVersion===3)require('../shared/gridRace.mjs').initializeGrid(state,gridMatch.contract);
   const race = await tx.raceSession.create({ data: { userId, garageId: garage.id, mode, seed, state: JSON.stringify(state) } });
+  await require('./story').bindRace(tx,userId,mode,state,race.id);
+  if(state.storyObjective) {
+    race.state = JSON.stringify(state);
+    await tx.raceSession.update({where:{id:race.id},data:{state:race.state}});
+  }
   await require('./carMeet').withdrawForDrive(tx,userId,garage.id);
   return snapshot(tx, userId, race);
 }
@@ -231,6 +236,8 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     // Participation XP is smaller than a win and excludes sandboxes, failures and incomplete races.
     if (!state.street && state.developmentVersion === 1 && !state.sandbox && !state.failure && state.index === state.sections.length && reward.xp === 0) reward.xp = 20;
     reward.xp += growth.xp;
+    const storyReward = await require('./story').settleRace(tx,userId,race,state);
+    if (storyReward) { reward.money += storyReward.money; state.storyResult = storyReward; }
     await withholdReward(tx,userId,state,reward);
     const user = await tx.user.findUnique({ where: { id: userId } });
     await tx.user.update({ where: { id: userId }, data: { moneyCents: { increment: cents(reward.money) }, ...require('./pilotProgression').experienceReward(user,reward.xp) } });

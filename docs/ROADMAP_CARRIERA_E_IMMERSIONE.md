@@ -1,8 +1,8 @@
 # Roadmap: carriera, persone e provincia nel 2002
 
-Data: 30 ottobre 2026. Stato: pianificazione salvata, nessuna nuova funzione di questa roadmap implementata.
+Data: 30 ottobre 2026. Stato: B01 implementato e in verifica per la pubblicazione; B02–B10 da iniziare.
 
-Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B01**, non l'intera roadmap in un solo rilascio.
+Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il lavoro attivo è **B01**, non l'intera roadmap in un solo rilascio.
 
 ## Direzione e vincoli
 
@@ -21,7 +21,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 
 | Blocco | Risultato giocabile | Dipende da | Stato |
 |---|---|---|---|
-| B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Da iniziare |
+| B01 | Fondamenta narrative e schede dei personaggi | Base attuale | In prova |
 | B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | Da iniziare |
 | B03 | Reputazione autodromo, clandestine e raduni | B02 | Da iniziare |
 | B04 | Eventi a tema e motivi per usare auto diverse | B03 | Da iniziare |
@@ -38,12 +38,12 @@ Prima tappa di prodotto: B01–B03, un mondo con persone che riconoscono il gioc
 
 **Obiettivo:** preparare il minimo necessario per una storia persistente, senza costruire subito un sistema narrativo universale.
 
-- [ ] Censire ciceroni, 40 rivali clandestini, reputazione esistente, avvisi e messaggi. Definire chi può tornare nella storia e chi resta solo una guida.
-- [ ] Preparare una breve scheda per tre rivali ricorrenti: identità, voce, auto, luogo, motivazione e progressione in tre capitoli. Preferire identità esistenti compatibili; nuovi nomi restano bozze fino alla definizione del cast.
-- [ ] Definire ID stabili e versioni di episodi, obiettivi, dialoghi e ricompense. Stati minimi: disponibile, accettato, in corso, concluso, rinunciato/riprendibile.
-- [ ] Collegare gli obiettivi soltanto ad azioni e risultati validati dal server. Ricompensa e completamento atomici, una volta sola anche dopo retry o richieste concorrenti.
-- [ ] Definire gli SMS narrativi come comunicazioni di NPC riconoscibili, con lettura e notifiche coerenti con il telefono attuale, senza duplicare o alterare gli SMS fra utenti.
-- [ ] Prevedere una piccola vista «Incarichi» nel telefono, con mittente, obiettivo corrente e luogo dove proseguire. Nessuna nuova barra globale.
+- [x] Censire ciceroni, 40 rivali clandestini, reputazione esistente, avvisi e messaggi. Definire chi può tornare nella storia e chi resta solo una guida.
+- [x] Preparare una breve scheda per tre rivali ricorrenti: identità, voce, auto, luogo, motivazione e progressione in tre capitoli. Su indicazione dell’utente, creare nuovi rivali con avatar dedicati e vetture riconoscibili; mantenere separati i ciceroni e i rivali esistenti.
+- [x] Definire ID stabili e versioni di episodi, obiettivi, dialoghi e ricompense. Stati minimi: disponibile, accettato, in corso, concluso, rinunciato/riprendibile.
+- [x] Collegare gli obiettivi soltanto ad azioni e risultati validati dal server. Ricompensa e completamento atomici, una volta sola anche dopo retry o richieste concorrenti.
+- [x] Definire gli SMS narrativi come comunicazioni di NPC riconoscibili, con lettura e notifiche coerenti con il telefono attuale, senza duplicare o alterare gli SMS fra utenti.
+- [x] Prevedere una piccola vista «Incarichi» nel telefono, con mittente, obiettivo corrente e luogo dove proseguire. Nessuna nuova barra globale.
 
 **Completamento:** un incarico di prova su database di collaudo sopravvive al logout, non avanza per eventi non validi e non paga due volte; due account restano isolati. Cast e flusso dei sei episodi di B02 documentati. Testo e eventuali ritratti nuovi verificabili prima dell'integrazione finale.
 
@@ -179,3 +179,5 @@ Prossima azione concreta:
 ## Diario
 
 - 30 ottobre 2026: roadmap iniziale salvata su richiesta dell'utente. Tutti i blocchi ancora da iniziare. Prossima azione: B01, censimento dei personaggi e definizione del cast e del flusso dei sei episodi; nessuna nuova funzione attivata da questo documento.
+
+- 30 ottobre 2026, B01 in prova: quattro nuovi personaggi con ritratti dedicati e auto fisse, telefono con Incarichi/SMS del club e prologo a premio unico. Rapporto: [B01_PERSONAGGI_E_INCARICHI.md](B01_PERSONAGGI_E_INCARICHI.md). I tre rivali principali e Tommaso come conoscenza futura rispettano la nuova indicazione dell’utente; nessun episodio B02 dichiarato implementato.
