@@ -11,3 +11,5 @@ Compatibilità: vecchi link `?view=times` e `?social=challenges` conservati; `?v
 Verifiche: 338 test di gioco, lint e build superati. Controlli browser e pubblicazione annotati a fine rilascio.
 
 Pubblicato il 30 ottobre 2026, sorgenti e49a1fa. Browser 320/390/1280 verificato anche sul frontend distribuito, con tutte le API simulate e nessuna azione sui giocatori reali. Backup /home/klaro/.backups/poketurismo/meet-layout-20261030T144000Z; confronto integrale delle 32 tabelle: tutte le righe identiche. Servizi 5174/5184 attivi e health positivo. Rapporti .preview/meet-layout-qa.
+
+Su richiesta dell’utente rimossa l’intera barra secondaria SMS/Rubrica/Aggiorna/Segnalazioni dal raduno. Cellulare globale e aggiornamento automatico restano disponibili; conservati Riprova in caso di errore e accesso amministrativo protetto tramite il precedente URL view=reports.

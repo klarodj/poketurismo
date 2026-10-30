@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Pulizia raduno richiesta: rimossa intera barra SMS/Rubrica/Aggiorna/Segnalazioni. Non reintrodurla: usare cellulare globale e aggiornamento automatico. Conservare Riprova sugli errori e vecchio URL amministrativo protetto.
+
 - B02 storia del club: docs/B02_PRIMA_STORIA.md. Sei episodi club-01…06 in shared/clubStory.mjs e server/clubStory.js; namespace narrativeState.campaign senza migrazioni. Attività esplicite nei luoghi e telefono; niente avanzamento da letture o presenze casuali. Prove gratuite in prestito, oppure auto propria per Lele <=120CV stradale/finale <=160CV, condizioni personali conservate e consumi reali. Brake L1 consegnabile in alternativa alla prova gratuita, consumo atomico. Reward finale500€ unico, 0XP/pratica, rimborso officina; replay/versioni/concorrenza verificati. Vecchi checkpoint e prologo B01 intatti. B03 reputazione resta successivo.
 
 - Presenze narrative nel piazzale: docs/PRESENZE_CLUB.md. ClubVisitors e shared/clubVisitors.mjs ruotano 0–2 NPC ogni30min, auto/colori B01 fissi. Solo GET story; Lele commenta lo stato effettivo, altri aneddoti. Nessuna scrittura di incontri/letture/premi/esposizioni e nessun account NPC. Conservare distinzione dalle auto dei giocatori.
