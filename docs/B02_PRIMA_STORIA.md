@@ -1,6 +1,6 @@
 # B02 — Un posto nel club: impostazione del lavoro
 
-Stato: implementato, in verifica prima della pubblicazione. Il prologo B01 e i suoi premi restano invariati.
+Stato: completato e pubblicato. Il prologo B01 e i suoi premi restano invariati.
 
 ## Sei episodi e condizioni
 
@@ -37,3 +37,12 @@ Alternativa al lavoro gratuito: consegna esplicita di un ricambio canonico Brake
 Il premio finale unico è 500 euro lordi, con normale trattenuta per Franco; 0 XP e nessun punto pratica/tecnica aggiuntivo. Le prove narrative non assegnano premi ordinari e non entrano nei tempi. Il turno finale chiude episodio, messaggio e accredito nella stessa transazione serializzabile; i retry restituiscono lo stato attuale.
 
 345 test di gioco e 13 account/gateway superati, lint/build validi. Test specifici: intero arco senza auto e con saldo zero, nessuna crescita o usura in prestito, episodio fuori ordine/luogo errato, ritiri e prove fallite recuperabili, ricambio consegnato esattamente una volta, limiti e consumi dell’auto propria. Su PostgreSQL dedicato con soli cataloghi copiati: arco intero, accettazioni e turni finali simultanei, saldo finale 500 euro, abilità e XP invariati. Browser reale: sei episodi su 390 px con API reali di collaudo e controlli desktop 1280, senza auto o soldi iniziali. Rapporti e catture .preview/b02-qa.
+
+
+## Pubblicazione
+
+Pubblicato il 30 ottobre 2026 sull’unica istanza 5174 tramite gateway 5184, commit sorgenti 6ee26c9. Backup /home/klaro/.backups/poketurismo/b02-20261030T174027Z, oltre al backup completo Auth+gioco eseguito dal servizio dedicato. Confronto integrale delle 32 tabelle prima/dopo: tutte le righe esistenti identiche. Nessuna migrazione, seed o azione di prova sui salvataggi pubblici.
+
+Health positivo e servizi attivi; POST attività senza sessione restituisce 401. Frontend effettivamente distribuito verificato a 320/390/1280 px con API reindirizzate esclusivamente al database di collaudo e zero scritture durante il controllo. Verificato anche che l’auto propria conservi chilometri preesistenti, condizioni, tinta e carburante effettivi prima di applicare consumi/usura. Giada mantiene l’Integra bianca.
+
+Playtest: Raduno → riquadro «Il primo numero» → Accetta → Presentati a Lele. Gli episodi seguenti indicano il luogo nel telefono; il riquadro del luogo permette accettazione, prestito gratuito, eventuale auto propria e consegna volontaria del ricambio. Il prologo precedente «Un giro per conoscerci» rimane indipendente e conserva il proprio premio unico di 100 euro. B03 reputazione non attivato.

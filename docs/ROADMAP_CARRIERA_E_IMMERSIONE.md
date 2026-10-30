@@ -1,8 +1,8 @@
 # Roadmap: carriera, persone e provincia nel 2002
 
-Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 in corso; B03–B10 da iniziare.
+Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03–B10 da iniziare.
 
-Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B02**, dopo il playtest di B01; non l'intera roadmap in un solo rilascio.
+Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B03**, dopo il playtest di B02; non l'intera roadmap in un solo rilascio.
 
 ## Direzione e vincoli
 
@@ -22,7 +22,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 | Blocco | Risultato giocabile | Dipende da | Stato |
 |---|---|---|---|
 | B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Completato |
-| B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | In prova |
+| B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | Completato |
 | B03 | Reputazione autodromo, clandestine e raduni | B02 | Da iniziare |
 | B04 | Eventi a tema e motivi per usare auto diverse | B03 | Da iniziare |
 | B05 | Album del pilota e memoria delle vetture | B02, B04 | Da iniziare |
@@ -187,3 +187,5 @@ Prossima azione concreta:
 - Avvio B02: impostazione dei sei episodi e budget di progetto in [B02_PRIMA_STORIA.md](B02_PRIMA_STORIA.md). In attesa della preferenza sulle auto delle gare narrative prima di congelare i contratti. Nessun episodio nuovo pubblicato.
 
 - B02 in prova: sei episodi implementati con auto propria/prestito come scelto dall’utente. 345 test gioco, 13 accessi, arco completo SQLite/browser e PostgreSQL con richieste simultanee; vedi rapporto B02. Pubblicazione ancora da verificare.
+
+- B02 completato e pubblicato il 30 ottobre 2026: sorgenti 6ee26c9. Intero arco verificato con API reali in SQLite e PostgreSQL dedicati, incluso saldo zero/garage vuoto e richieste simultanee; frontend distribuito a 320/390/1280 su API di collaudo. 345 test gioco, 13 account, lint/build superati. Backup e confronto delle 32 tabelle: tutte le righe esistenti identiche. Prossimo blocco B03 dopo il playtest; non ancora iniziato.
