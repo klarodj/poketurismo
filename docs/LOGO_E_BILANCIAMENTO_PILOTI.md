@@ -47,3 +47,10 @@ Iscrizioni e gare già salvate mantengono integralmente i contratti congelati, i
 Rilasciato da `2667c54` sull’istanza unica5174/gateway5184. Backup completo Auth/gioco e build precedente in `/home/klaro/.backups/poketurismo/brand-balance-20261030T041334Z`. Audit delle32tabelle a servizi fermi: tutte le righe identiche prima/dopo. Nessuna iscrizione o statistica modificata.
 
 Confermati sulla build pubblicata logo/login, favicon e IG34 del secondo campionato con risposte sintetiche intercettate in lettura. Ulteriore costruzione di un contratto non salvato sui dati effettivi: sette rivali, mediaIG34. Health, logo, favicon16/32/48 e primi4KiB JS/CSS verificati su entrambi i Funnel443/8443. Servizi attivi, nessun listener5173/3001/5197. Copertine e badge già pubblicati nel rilascio precedente restano attivi.
+
+
+## Allineamento completo successivo
+
+Ridotte le sei griglie ancora sopra il livello minimo. IG medi attuali: Settentrionali31/34/37/36/38/41; ACI37/38/40/41/43. Il confronto considera tutti i quattro profili iniziali e le distribuzioni legali dei punti, senza allenamenti: anche rispetto al profilo meno favorevole la media visualizzata dei rivali non supera +2IG. Crescita, auto, condizioni, requisiti e premi invariati; contratti già salvati conservati.
+
+Diagnostica offline ripetibile: `node scripts/championship-level-audit.mjs`. Usa i profili effettivi della registrazione, valida le assegnazioni con allocatePilotPoints e calcola gli indici con driverIndex. Il test su tutti gli undici campionati impedisce di reintrodurre lo scarto.

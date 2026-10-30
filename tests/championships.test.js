@@ -27,3 +27,9 @@ test('the second northern grid fits four level-two profiles without increasing t
  for(const profile of profiles){for(const k of ['brake','turn','throttle'])profile[k]+=2;assert(Math.abs(mean-driverIndex(profile))<=3);}
  assert(mean>=32&&mean<=36);assert(CHAMPIONSHIP_CATALOG[5].rivals.some(r=>r.skill>CHAMPIONSHIP_CATALOG[1].rivals.at(-1).skill));
 });
+
+test('all championship grids stay within two IG of legal entry-level profiles without training',async()=>{
+ const{championshipLevelAudit,entryLevelIG}=await import('../scripts/championship-level-audit.mjs');
+ const report=championshipLevelAudit();assert.equal(report.length,11);for(const cup of report)assert(cup.aligned,JSON.stringify(cup));
+ assert.deepEqual([entryLevelIG(3).min,entryLevelIG(3).max],[35,36]);assert.deepEqual([entryLevelIG(8).min,entryLevelIG(8).max],[41,43]);
+});
