@@ -1,5 +1,7 @@
 # Poketurismo: istruzioni di lavoro
 
+- Presenze narrative nel piazzale: docs/PRESENZE_CLUB.md. ClubVisitors e shared/clubVisitors.mjs ruotano 0–2 NPC ogni30min, auto/colori B01 fissi. Solo GET story; Lele commenta lo stato effettivo, altri aneddoti. Nessuna scrittura di incontri/letture/premi/esposizioni e nessun account NPC. Conservare distinzione dalle auto dei giocatori.
+
 - Raduno riorganizzato: docs/RADUNO_INTERFACCIA_CLUB.md. SectionTabs Piazzale/Gente del club/Sfide/Tempi; ClubPeople usa GET story e asset B01 senza registrare incontri o letture. Profili Win98 e passaggio al telefono; SMS/rubrica secondari. Sfide aperte/archivio, vecchi URL conservati, stato per account. Nessuna migrazione o nuova sfida NPC.
 
 - B01 carriera: docs/B01_PERSONAGGI_E_INCARICHI.md. Quattro NPC nuovi in shared/storyCatalog.mjs, ritratti image_gen64×64 in images/story e prompt/input tools/story-art. Tre rivali principali Lele/Cinquecento gialla, Giada/Integra bianca, Sergio/75 argento, Tommaso/F355 rossa per dopo: niente account NPC o avversari adattivi. PlayerProgress.narrativeState separato da streetState, migrazioni PG0011/SQLite0014 additive. Telefono Incarichi/SMS del club, lettura singola esplicita, reset account. Prologo club-first-finish: accettazione fuori gara, nuova gara singola club completata, +100€ unico/0XP extra prima del rimborso officina; marker gara/tentativo/versione e chiusura nella transazione finale. Vecchie gare senza marker intatte. B02 sei episodi e gare contro i nuovi rivali ancora da sviluppare.
