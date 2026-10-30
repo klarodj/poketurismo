@@ -1,0 +1,16 @@
+{
+  "tool": "image_gen built-in",
+  "reference": "https://www.cog-classics.com/en/fiat-cinquecento/original-condition-87-000-km-1",
+  "records": [
+    {
+      "id": "road",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the incorrect rear tail lamp of this existing Fiat Cinquecento pixel sprite. Image 1 is the exact edit target; Image 2 is a real rear photograph for LAMP ANATOMY ONLY. Preserve every other pixel, the canvas composition, transparent background, all body shapes, camera angle, all windows, bumpers, wheels, badges, stripes, sponsors, and existing paint. The current sprite incorrectly has a tall red/orange lamp going up beside the rear side window. Real Cinquecento tail lamps are LOW HORIZONTAL RECTANGLES immediately above the rear bumper, below the tailgate, NOT tall vertical lamps beside the window. Remove the erroneous vertical orange/red strip beside the rear window by restoring body paint there. Replace it with the foreshortened visible portion of the low horizontal rectangular factory rear lamp at the very back, near bumper height; red lenses and small pale outer segment, thin dark surround. Do not add any lamp on side panels. Keep tiny rear three-quarter visibility exactly as existing car; do not rotate the car or reveal more rear. Maintain low-resolution pixel art, 320x128 native proportions, clean transparent margins. Only lamp relocation/correction and paint restoration at old lamp are allowed. Preserve reserved GREEN paint palette; no green in lamp.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-cdd8fbca-bc71-4b99-bbf8-fc81e28a3646.png"
+    },
+    {
+      "id": "race",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the incorrect rear tail lamp of this existing Fiat Cinquecento pixel sprite. Image 1 is the exact edit target; Image 2 is a real rear photograph for LAMP ANATOMY ONLY. Preserve every other pixel, the canvas composition, transparent background, all body shapes, camera angle, all windows, bumpers, wheels, badges, stripes, sponsors, and existing paint. The current sprite incorrectly has a tall red/orange lamp going up beside the rear side window. Real Cinquecento tail lamps are LOW HORIZONTAL RECTANGLES immediately above the rear bumper, below the tailgate, NOT tall vertical lamps beside the window. Remove the erroneous vertical orange/red strip beside the rear window by restoring body paint there. Replace it with the foreshortened visible portion of the low horizontal rectangular factory rear lamp at the very back, near bumper height; red lenses and small pale outer segment, thin dark surround. Do not add any lamp on side panels. Keep tiny rear three-quarter visibility exactly as existing car; do not rotate the car or reveal more rear. Maintain low-resolution pixel art, 320x128 native proportions, clean transparent margins. Only lamp relocation/correction and paint restoration at old lamp are allowed. Preserve red Fiat competition livery and all sponsors exactly.",
+      "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-4cbfc5fd-b2d6-407a-8dfd-d014d4351f16.png"
+    }
+  ]
+}
