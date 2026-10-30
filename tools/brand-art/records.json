@@ -1,0 +1,14 @@
+{
+  "tool": "image_gen built-in",
+  "prompt": "Use case: logo-brand. Create an ORIGINAL compact pixel-art emblem for an Italian automotive racing role-playing PC game called POKETURISMO, set in Northern Italy around2002 with Windows98 and early-web mood. Square emblem on genuinely transparent background. Main symbol: bold interlocking block letters PT, P bright racing red and T deep cobalt blue, thick dark outlines with a few ivory pixel highlights, dynamic but highly legible. A small black-and-ivory chequered-flag corner flows behind the upper right of the monogram, and a very simple tiny 1990s red hatchback silhouette with two black wheels integrates along the lower edge. Keep the monogram dominant, very few shapes, strong recognisable silhouette down to32x32px, clean pixel clusters, no fine detail, no gradients, no blur, no antialiasing. Design as if a hand-drawn64x64 pixel game icon enlarged with nearest-neighbour. Centered full emblem with safe transparent margin on all sides. No full game name, no tagline, no background tile, no smartphone/modern car, no watermark. Do not copy an existing brand or game logo. Text must be exactly the two letters PT.",
+  "source": "/home/klaro/.codex/generated_images/01a16046-27b6-70f3-aa21-2e6cd07c20c2/exec-d83d8782-a494-4fc5-a8b5-5b63c65dd00e.png",
+  "input": "tools/brand-art/inputs/poketurismo-mark.png",
+  "transparent_background": true,
+  "outputs": [
+    "public/images/brand/poketurismo-mark.png",
+    "public/images/brand/favicon-16.png",
+    "public/images/brand/favicon-32.png",
+    "public/images/brand/favicon-48.png",
+    "public/images/brand/apple-touch-icon.png"
+  ]
+}

@@ -254,3 +254,9 @@ test('ghost checkpoint compares milliseconds at completed sectors, never an unfi
  assert.equal(ghostCheckpoint(race),500);assert.equal(ghostCheckpoint({...race,playerTime:30.5}),-500);assert.equal(ghostCheckpoint({...race,index:2,playerTime:50.0004}),0);
  for(const change of [{index:0},{index:3},{playerTime:NaN},{meetGhost:null},{meetGhost:{splits:[NaN]}},{meetTrial:false}])assert.equal(ghostCheckpoint({...race,...change}),null);
 });
+
+test('login mark and favicon sizes are real PNG assets while the document keeps Italian branding',()=>{
+ const html=readFileSync(resolve('index.html'),'utf8');assert(html.includes('lang="it"'));assert(html.includes('<title>Poketurismo</title>'));assert(!html.includes('href="/favicon.svg"'));
+ for(const [name,size]of [['poketurismo-mark',256],['favicon-16',16],['favicon-32',32],['favicon-48',48],['apple-touch-icon',180]]){const bytes=readFileSync(resolve('public/images/brand/'+name+'.png'));assert.equal(bytes.readUInt32BE(16),size);assert.equal(bytes.readUInt32BE(20),size);}
+ const manifest=JSON.parse(readFileSync(resolve('tools/brand-art/manifest.json')));assert(manifest.transparentSourcePixels>0);
+});

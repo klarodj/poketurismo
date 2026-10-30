@@ -116,7 +116,7 @@ export default function AccountGate({ children }) {
     <div className={'account-dialog' + (creatingPilot ? ' account-dialog-wide' : '')}>
       <Win98Window title={creatingPilot ? 'Poketurismo — Nuovo pilota' : 'Benvenuto in Poketurismo'} showControls={false} imageUrl={creatingPilot ? undefined : "/images/world/login.png"}>
         <div className="account-brand">
-          <div className="account-checkered" aria-hidden="true" />
+          <img className="account-game-logo" src="/images/brand/poketurismo-mark.png" width="96" height="96" alt="Logo Poketurismo · PT, utilitaria e bandiera a scacchi"/>
           <div><span className="account-brand-name">Poketurismo</span><span className="account-brand-caption">Il tuo posto al volante.</span></div>
         </div>
         <div className="account-body" aria-busy={busy}>

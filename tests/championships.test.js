@@ -19,3 +19,11 @@ test('each current cup has its own landscape cover and legacy names keep their v
  const covers=CHAMPIONSHIP_CATALOG.map(c=>championshipCover(c.name));assert(covers.every(Boolean));assert.equal(new Set(covers).size,CHAMPIONSHIP_CATALOG.length);assert.equal(championshipCover('GT 280 · Serie Internazionale'),championshipCover('Trofeo GT 280 · Nord Italia'));assert.equal(championshipCover('Campionato inesistente'),null);
  for(const file of [...covers,...Object.values(AUTODROME_IMAGES)]){const bytes=readFileSync(new URL('../public'+file,import.meta.url));assert.equal(bytes.readUInt32BE(16),320,file);assert.equal(bytes.readUInt32BE(20),180,file);}
 });
+
+test('the second northern grid fits four level-two profiles without increasing their point budget',async()=>{
+ const{driverIndex}=await import('../shared/driverIndex.mjs'),{POINTS_PER_LEVEL}=await import('../shared/pilotPoints.mjs');assert.equal(POINTS_PER_LEVEL,6);
+ const keys=['brave','clean','reflex','shift','acro','turn','brake','throttle'],profiles=[Object.fromEntries(keys.map(k=>[k,11])),{clean:14,brake:14},{brave:14,reflex:14},{shift:14,throttle:14}].map(p=>Object.fromEntries(keys.map(k=>[k,p[k]??10])));
+ const rivals=CHAMPIONSHIP_CATALOG[1].rivals.map(r=>driverIndex(Object.fromEntries(keys.map(k=>[k,r.skill])))),mean=rivals.reduce((s,x)=>s+x,0)/rivals.length;
+ for(const profile of profiles){for(const k of ['brake','turn','throttle'])profile[k]+=2;assert(Math.abs(mean-driverIndex(profile))<=3);}
+ assert(mean>=32&&mean<=36);assert(CHAMPIONSHIP_CATALOG[5].rivals.some(r=>r.skill>CHAMPIONSHIP_CATALOG[1].rivals.at(-1).skill));
+});

@@ -1,0 +1,38 @@
+{
+  "tool": "image_gen built-in",
+  "preparation": "Nearest-neighbour resize preserving generated alpha; no recolouring",
+  "sourceSha256": "c899f98fa2017e073fdf2fcb898e9d0c8bb3235df3a7bd6248309bf42d5a4f24",
+  "transparentSourcePixels": 904377,
+  "assets": [
+    {
+      "output": "public/images/brand/poketurismo-mark.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5ccb89278ad5c471909d99089818773fb1286f527db2b949638d2e08be0cfd1d"
+    },
+    {
+      "output": "public/images/brand/favicon-16.png",
+      "width": 16,
+      "height": 16,
+      "sha256": "7541cca0bd4d94aafd0a4d0819a514ab8fd9f5eb601110e3638f957ead8abb66"
+    },
+    {
+      "output": "public/images/brand/favicon-32.png",
+      "width": 32,
+      "height": 32,
+      "sha256": "5af8dc69dc983642c73289d55e0eaa35b549147cb1d030edd5e2eec10a904d9c"
+    },
+    {
+      "output": "public/images/brand/favicon-48.png",
+      "width": 48,
+      "height": 48,
+      "sha256": "6408260f6a75e414b3dc780c7e5a9945db313c32404242961395e0f0111174ae"
+    },
+    {
+      "output": "public/images/brand/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "sha256": "35f623c4ce2192cc8c1cedb5047bc68d162b227d69d4b919e0d36431b4ef38f8"
+    }
+  ]
+}

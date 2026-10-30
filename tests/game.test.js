@@ -1405,3 +1405,13 @@ test('ACI entry and every start require persisted race preparation, with frozen 
  await prisma.garage.update({where:{id:garage.id},data:{racePrepared:true}});
  const started=await post('/races',{mode:'championship',entryId:stored.id});assert.equal(started.status,200,JSON.stringify(started.data));assert.equal(started.data.race.car.racePrepared,true);assert.equal(started.data.race.opponent.car.racePrepared,true);
 });
+
+test('rebalancing the catalog changes future grids without rewriting an enrolled pilot roster',async()=>{
+ const {CHAMPIONSHIP_CATALOG}=await import('../shared/championshipCatalog.mjs'),entry=await modernCup(),spec=CHAMPIONSHIP_CATALOG[0],original=spec.rivals[0].skill;
+ spec.rivals[0].skill=original+20;
+ try{
+  const active=(await get('/championship-entries/active/1')).data;assert.deepEqual(active.participants,entry.participants);
+  const race=await begin('championship',{entryId:entry.id});assert.equal(race.opponent.pilot.brave,original);assert.equal(race.opponent.pilot.brake,original);
+  const contract=JSON.parse((await prisma.championshipEntry.findUnique({where:{id:entry.id}})).contract);assert.equal(contract.drivers[0].pilot.brave,original);
+ }finally{spec.rivals[0].skill=original;}
+});

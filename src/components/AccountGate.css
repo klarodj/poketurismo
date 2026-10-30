@@ -135,3 +135,5 @@
   .account-points > span { width: 100%; margin-left: 0; }
   .account-desktop .account-form-actions .win98-btn { width: 100%; }
 }
+.account-game-logo{width:96px;height:96px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}
+@media(max-width:480px){.account-game-logo{width:72px;height:72px}.account-brand{gap:10px}}

@@ -1,6 +1,6 @@
 # Progressione e campionati · 29 ottobre 2026
 
-**Aggiornamento successivo:** la parte +3 automatico descritta sotto è storica e superata da [PUNTI_ABILITA.md](PUNTI_ABILITA.md): sei punti da distribuire, limiti per abilità e recupero dei vecchi bonus già eseguito. Il bilanciamento delle griglie rimane valido.
+**Aggiornamento successivo:** la parte +3 automatico descritta sotto è storica e superata da [PUNTI_ABILITA.md](PUNTI_ABILITA.md): sei punti da distribuire, limiti per abilità e recupero dei vecchi bonus già eseguito. Anche le griglie sono state successivamente ritarate per i sei punti totali: vedere [LOGO_E_BILANCIAMENTO_PILOTI.md](LOGO_E_BILANCIAMENTO_PILOTI.md). Le cifre delle abilità riportate sotto sono storiche.
 
 Corretto il difetto che aggiornava soltanto livello/XP: ogni livello superato assegna +3 a tutte le otto abilità, fino a 100. La stessa funzione server vale per premi gara e allenamenti, gestisce soglie multiple e conserva gli incrementi specifici dell’allenamento. Nessun punto assegnato semplicemente ricaricando una pagina. La transazione e le ricevute esistenti impediscono doppie assegnazioni.
 
