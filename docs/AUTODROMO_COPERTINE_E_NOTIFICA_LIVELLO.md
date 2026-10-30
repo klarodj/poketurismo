@@ -28,3 +28,7 @@ Il badge compare immediatamente quando lo snapshot di una gara assegna il nuovo 
 327 test gioco e 12 account/gateway passati, lint e build riusciti. Test di copertura per undici immagini distinte, alias storici e formato PNG320×180 di copertine e banner. Browser isolato a320/390/1280px: menu e banner coerenti, undici copertine caricate, nessun errore JavaScript/asset o overflow; badge assente al livello iniziale, presente dopo un avanzamento ricevuto dalla gara, posizione nell’angolo dell’avatar, apertura profilo, spesa parziale/completa e persistenza al ricaricamento. Spese e gare intercettate su dati sintetici: nessuna partita pubblica modificata. Rapporti e schermate in `.preview/autodrome-art-qa`.
 
 Nessuna modifica a motore, premi, progressione, economia, campionati, database o salvataggi. Nessun seed o migrazione.
+
+## Pubblicazione verificata
+
+Rilasciato da `18ba1eb` sull’istanza5174/gateway5184. Backup completo Auth/gioco e build precedente in `/home/klaro/.backups/poketurismo/autodrome-art-20261030T014610Z`; tutte le righe delle 32 tabelle identiche prima/dopo. Le prove sulla build pubblicata, con API intercettate e dati sintetici, confermano menu, undici copertine, banner e badge ai tre formati 320/390/1280. Health, nuovo banner ACI e primi4KiB JS/CSS verificati su entrambi i Funnel443/8443. Nessuna immagine preesistente sovrascritta.
