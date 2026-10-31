@@ -1,8 +1,8 @@
 # Roadmap: carriera, persone e provincia nel 2002
 
-Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03 completato e pubblicato; B04 in prova; B05–B10 da iniziare.
+Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03 completato e pubblicato; B04 completato e pubblicato; B05–B10 da iniziare.
 
-Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B04**, dopo il playtest di B03; non l'intera roadmap in un solo rilascio.
+Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B05**, dopo il playtest di B04; non l'intera roadmap in un solo rilascio.
 
 ## Direzione e vincoli
 
@@ -24,7 +24,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 | B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Completato |
 | B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | Completato |
 | B03 | Reputazione autodromo, clandestine e raduni | B02 | Completato |
-| B04 | Eventi a tema e motivi per usare auto diverse | B03 | In prova |
+| B04 | Eventi a tema e motivi per usare auto diverse | B03 | Completato |
 | B05 | Album del pilota e memoria delle vetture | B02, B04 | Da iniziare |
 | B06 | Scelte di ruolo e soluzioni alternative agli incarichi | B03, B04 | Da iniziare |
 | B07 | PC di casa con forum, email e annunci | B05, B06 | Da iniziare |
@@ -80,12 +80,12 @@ Prima tappa di prodotto: B01–B03, un mondo con persone che riconoscono il gioc
 
 ## B04 — Eventi speciali e cultura dell'auto
 
-- [ ] Pubblicare un primo evento per ciascuna delle cinque famiglie: utilitarie, vetture originali, budget limitato, raduno nazionale con prova e regolarità.
-- [ ] Riutilizzare gare, cruscotto e contratti esistenti. Aggiungere soltanto le regole mancanti, condivise fra anteprima, iscrizione e partenza.
-- [ ] Per «originale» definire chiaramente ricambi ammessi e conversione esclusa; per «budget» usare un costo convenzionale dichiarato di auto e pezzi, non un prezzo storico mancante o manipolabile tramite rivendita.
-- [ ] Raduni e prove stradali escludono le conversioni da corsa; eventi pista possono prevedere una classe dedicata. La nazionalità tematica delle auto non cambia la collocazione italiana degli eventi.
-- [ ] Regolarità valutata su tempo obiettivo e scostamenti dichiarati, non sulla sola velocità. Risultati separati dai record di velocità esistenti.
-- [ ] Esporre requisiti, auto compatibili possedute, preparazione rivali, costi e premi. Nessun obbligo di acquistare una rara vettura disponibile un solo giorno.
+- [x] Pubblicare un primo evento per ciascuna delle cinque famiglie: utilitarie, vetture originali, budget limitato, raduno nazionale con prova e regolarità.
+- [x] Riutilizzare gare, cruscotto e contratti esistenti. Aggiungere soltanto le regole mancanti, condivise fra anteprima, iscrizione e partenza.
+- [x] Per «originale» definire chiaramente ricambi ammessi e conversione esclusa; per «budget» usare un costo convenzionale dichiarato di auto e pezzi, non un prezzo storico mancante o manipolabile tramite rivendita.
+- [x] Raduni e prove stradali escludono le conversioni da corsa; eventi pista possono prevedere una classe dedicata. La nazionalità tematica delle auto non cambia la collocazione italiana degli eventi.
+- [x] Regolarità valutata su tempo obiettivo e scostamenti dichiarati, non sulla sola velocità. Risultati separati dai record di velocità esistenti.
+- [x] Esporre requisiti, auto compatibili possedute, preparazione rivali, costi e premi. Nessun obbligo di acquistare una rara vettura disponibile un solo giorno.
 
 **Completamento:** cinque eventi verificati, incluso almeno uno interessante con un'auto iniziale; nessun guadagno sproporzionato rispetto alle attività esistenti e nessuna aggirabilità dei requisiti cambiando auto dopo l'iscrizione.
 
@@ -197,3 +197,5 @@ Prossima azione concreta:
 - Avvio B04: su richiesta dell’utente, nuova voce autonoma Eventi del club in Autodromo e selezione con schede come i campionati, cinque copertine e banner pixel art. Cinque eventi riusano il cruscotto con regolamenti server e premi limitati; regolarità a controlli con tempi imposti. Decisioni e verifiche in [B04_EVENTI_DEL_CLUB.md](B04_EVENTI_DEL_CLUB.md).
 
 - B04 in prova: cinque eventi giocabili,362 test gioco e13 accessi superati, collaudo PostgreSQL con richieste simultanee e browser320/390/1280. Sei nuove illustrazioni verificate, ripresa gara/regolarità e separazione record confermate. Pubblicazione da concludere.
+
+- 31 ottobre2026, B04 completato e pubblicato: sorgenti7d2b138. Cinque eventi del club giocabili dalla nuova voce autonoma dell’Autodromo, sei copertine/banner pixel art, regole e budget verificati dal server, regolarità con tempi imposti e attese ai controlli, premi limitati alle prime tre conclusioni.362 test gioco,13 account, lint/build, tutte5prove su PostgreSQL isolato e UI320/390/1280 anche sul frontend distribuito superati. Backup e confronto32tabelle: righe identiche. Rapporto[B04_EVENTI_DEL_CLUB.md](B04_EVENTI_DEL_CLUB.md). Prossimo B05 Album del pilota dopo il playtest; non ancora iniziato.

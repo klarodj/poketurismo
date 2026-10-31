@@ -1,6 +1,6 @@
 # B04 — Eventi del club
 
-Stato: in prova. Cinque eventi sempre disponibili, nuova voce autonoma dell’Autodromo, scelta sul modello dei campionati. Nessuna nuova destinazione nella mappa. Banner dedicato e cinque copertine pixel art 320×180, descrizioni narrative leggibili, filtri per attività, dettagli richiudibili con regolamento/percorso, scelta diretta della vettura posseduta, media IP/IG del rivale reale e storico privato dei risultati. Tutorial Elena aggiornato.
+Stato: completato e pubblicato il31ottobre2026. Cinque eventi sempre disponibili, nuova voce autonoma dell’Autodromo, scelta sul modello dei campionati. Nessuna nuova destinazione nella mappa. Banner dedicato e cinque copertine pixel art 320×180, descrizioni narrative leggibili, filtri per attività, dettagli richiudibili con regolamento/percorso, scelta diretta della vettura posseduta, media IP/IG del rivale reale e storico privato dei risultati. Tutorial Elena aggiornato.
 
 ## Attività
 
@@ -24,4 +24,10 @@ Originali/prompt/build/hash delle sei immagini in tools/club-events-art, asset i
 
 ## Verifiche
 
-362 test di gioco,13 accessi/account, lint/build. Regole, budget immune ai prezzi di vendita/usura, scelta auto/proprietà, preview read-only, impostazioni forgiate, tuning prima della partenza, attesa idempotente, premi decrescenti e limite dei tre completamenti, storico privato e assenza nei record di velocità. Copia PostgreSQL dedicata con soli cataloghi e utenti sintetici: tutte5prove completate con Cinquecento Sporting, primo evento vinto e regolarità superata, richieste simultanee ripetute senza doppie gare/premi, nessun progresso DriverDevelopment extra. Browser a320/390/1280: nuova voce, cinque immagini caricate, filtri, regolamento e nessun overflow; avvio regolarità, attesa4,1s registrata, ripresa e abbandono, ritorno agli eventi verificati. Pubblicazione da concludere.
+362 test di gioco,13 accessi/account, lint/build. Regole, budget immune ai prezzi di vendita/usura, scelta auto/proprietà, preview read-only, impostazioni forgiate, tuning prima della partenza, attesa idempotente, premi decrescenti e limite dei tre completamenti, storico privato e assenza nei record di velocità. Copia PostgreSQL dedicata con soli cataloghi e utenti sintetici: tutte5prove completate con Cinquecento Sporting, primo evento vinto e regolarità superata, richieste simultanee ripetute senza doppie gare/premi, nessun progresso DriverDevelopment extra. Browser a320/390/1280: nuova voce, cinque immagini caricate, filtri, regolamento e nessun overflow; avvio regolarità, attesa4,1s registrata, ripresa e abbandono, ritorno agli eventi verificati. Verifiche ripetute anche sul frontend pubblicato con tutte le API indirizzate al solo database di collaudo.
+
+## Pubblicazione
+
+Sorgenti `7d2b138`, rilascio sulla sola istanza di sviluppo/test5174, gateway5184. Backup completo prima del rilascio in `/home/klaro/.backups/poketurismo/b04-20261031T034227Z`. Confronto integrale delle32tabelle: tutte le righe identiche, nessuna migrazione o seed. Servizi attivi e health positivo, sei immagini controllate dal gateway e API personali senza sessione401. Fonte e documentazione salvate su Git. Database PostgreSQL di collaudo rimosso dopo le verifiche.
+
+Playtest: Autodromo → Eventi del club; prova Piccole pesti con un’utilitaria, esplora le altre locandine e la regolarità. Nei dettagli di ogni evento sono dichiarati vincoli, premi ridotti e valore della vettura. Prossimo blocco B05 dopo il feedback di gioco.
