@@ -27,4 +27,8 @@ Cornice Win98, VT323 del gioco, bordi squadrati, etichette su hover/focus o con 
 
 ## Verifiche
 
-Lint e build. Browser a320/390/768/1280/1440px: sei oggetti, quattro finestre, Escape/focus, etichette ed elenco, destinazioni reali di profilo e garage, frecce/tastiera e swipe touch nativo via Chromium. Nessun errore JavaScript o richiesta API. Controllo visivo della stanza e delle aree cliccabili su desktop e mobile. Pubblicazione ancora da verificare.
+Lint e build. Browser a320/390/768/1280/1440px: sei oggetti, quattro finestre, Escape/focus, etichette ed elenco, destinazioni reali di profilo e garage, frecce/tastiera e swipe touch nativo via Chromium. Nessun errore JavaScript o richiesta API. Controllo visivo della stanza e delle aree cliccabili su desktop e mobile. Verifiche ripetute sul gateway pubblicato, sempre senza richieste API.
+
+## Pubblicazione
+
+Pubblicata il 31 ottobre 2026, sorgenti `da16529`, alla sola URL nascosta `https://server-klaro.tail6c534c.ts.net/previews/casa/` (HTTP200 verificato). Casa e mappa attuali invariate. Servizi unici attivi, backup prima del rilascio in `/home/klaro/.backups/poketurismo/casa-20261031T095019Z`; confronto delle32tabelle superato con tutte le righe identiche. Nessuna migrazione o seed. B05 e attivazione della cameretta nel gioco restano da affrontare dopo la valutazione dell’utente.
