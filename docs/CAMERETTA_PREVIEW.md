@@ -32,3 +32,13 @@ Lint e build. Browser a320/390/768/1280/1440px: sei oggetti, quattro finestre, E
 ## Pubblicazione
 
 Pubblicata il 31 ottobre 2026, sorgenti `da16529`, alla sola URL nascosta `https://server-klaro.tail6c534c.ts.net/previews/casa/` (HTTP200 verificato). Casa e mappa attuali invariate. Servizi unici attivi, backup prima del rilascio in `/home/klaro/.backups/poketurismo/casa-20261031T095019Z`; confronto delle32tabelle superato con tutte le righe identiche. Nessuna migrazione o seed. B05 e attivazione della cameretta nel gioco restano da affrontare dopo la valutazione dell’utente.
+
+## Cameretta attivata nel gioco
+
+31 ottobre 2026, su approvazione dell’utente: `/garage` ora apre `HomeRoom` dentro Layout e Win98Window, con HUD, cellulare e autoradio esistenti. La mappa mostra Casa / Garage. Profilo e Auto conservano le proprie route e ricevono il link Torna alla cameretta. Il collegamento rapido all’avatar del pilota resta diretto al profilo.
+
+Rimossi intestazione territoriale, Torna al gioco e indicazione Prima versione; Elenco sezioni è un link compatto accanto a Mostra oggetti sulla stessa riga anche a320px. Scene e coordinate approvate conservate. `shared/homeRoom.mjs` contiene gli oggetti del menu; `public/previews/casa/objects.js` conserva la stessa copia per la pagina statica. PC, album, calendario e rivista dichiarano In preparazione, senza archivi o progressi fittizi. La preview storica resta disponibile e riceve la stessa semplificazione della barra.
+
+Implementazione React nativa, senza iframe o ricariche per navigare al garage. Stili confinati a home-room, listener e ResizeObserver rimossi allo smontaggio. Dialoghi con Escape e focus, swipe nativo e frecce da tastiera conservati. Nessuna nuova API, scrittura, migrazione o immagine. B05 non viene completato dall’attivazione del menu.
+
+Verifiche: lint e build; browser a320/390/768/1280px con API sintetiche, ingresso dalla mappa, sei oggetti, riga compatta, quattro dialoghi, profilo/garage e ritorno alla stanza, elenco alternativo, swipe touch e tastiera; nessun errore JavaScript e nessuna richiesta di scrittura. Pubblicazione da verificare.

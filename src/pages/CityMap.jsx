@@ -4,7 +4,7 @@ import useGameStore from '../store/gameStore';
 import Win98Window from '../components/Win98Window';
 
 const LOCATIONS = [
-  { path: '/garage',        name: 'Garage / Casa',      id: 'garage',    image: '/images/world/garage.png', desc: 'Il tuo quartier generale' },
+  { path: '/garage',        name: 'Casa / Garage',      id: 'garage',    image: '/images/world/garage.png', desc: 'Il tuo quartier generale' },
   { path: '/driving-school', name: 'Scuola guida', id: 'school', image: '/images/world/places/scuola-guida.png', desc: 'Lezioni e prove con l’istruttore' },
   { path: '/autodrome',    name: 'Autodromo',          id: 'track',     image: '/images/world/track.png', desc: 'Gare ufficiali in pista' },
   { path: '/street-racing', name: 'Corse Clandestine',  id: 'street',    image: '/images/world/street.png', desc: 'Solo per i coraggiosi' },

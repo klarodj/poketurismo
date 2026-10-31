@@ -10,6 +10,7 @@ import PartsShop from './pages/PartsShop';
 import GasStation from './pages/GasStation';
 import Racing from './pages/Racing';
 import ClubEvents from './pages/ClubEvents';
+import HomeRoom from './pages/HomeRoom';
 import Autodrome from './pages/Autodrome';
 import TimeTrials from './pages/TimeTrials';
 import TrackAtlas from './pages/TrackAtlas';
@@ -46,7 +47,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<CityMap />} />
           <Route path="map" element={<CityMap />} />
-          <Route path="garage" element={<Navigate to="/garage/pilota" replace />} />
+          <Route path="garage" element={<HomeRoom />} />
           <Route path="garage/pilota" element={<GaragePilota />} />
           <Route path="garage/auto" element={<GarageAuto />} />
           <Route path="driving-school" element={<DrivingSchool />} />
