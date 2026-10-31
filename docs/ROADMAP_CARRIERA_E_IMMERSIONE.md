@@ -1,6 +1,6 @@
 # Roadmap: carriera, persone e provincia nel 2002
 
-Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03 completato e pubblicato; B04–B10 da iniziare.
+Data: 30 ottobre 2026. Stato: B01 completato e pubblicato; B02 completato e pubblicato; B03 completato e pubblicato; B04 in prova; B05–B10 da iniziare.
 
 Documento operativo per integrare le idee discusse con il giocatore: scoperta e collezione, cultura automobilistica, rivali ricorrenti, incarichi e scelte di ruolo. Si procede nell'ordine indicato, un blocco verificabile alla volta. Il prossimo lavoro è **B04**, dopo il playtest di B03; non l'intera roadmap in un solo rilascio.
 
@@ -24,7 +24,7 @@ Stati ammessi: Da iniziare → In corso → In prova → Completato. Un blocco �
 | B01 | Fondamenta narrative e schede dei personaggi | Base attuale | Completato |
 | B02 | Prima storia in sei episodi, incarichi e tre rivali | B01 | Completato |
 | B03 | Reputazione autodromo, clandestine e raduni | B02 | Completato |
-| B04 | Eventi a tema e motivi per usare auto diverse | B03 | Da iniziare |
+| B04 | Eventi a tema e motivi per usare auto diverse | B03 | In prova |
 | B05 | Album del pilota e memoria delle vetture | B02, B04 | Da iniziare |
 | B06 | Scelte di ruolo e soluzioni alternative agli incarichi | B03, B04 | Da iniziare |
 | B07 | PC di casa con forum, email e annunci | B05, B06 | Da iniziare |
@@ -193,3 +193,7 @@ Prossima azione concreta:
 - B03 in prova: reputazioni derivate da risultati salvati, rapporti e ricordi, due serie facoltative da tre confronti senza premi economici. Su richiesta aggiunta verifica e copertura delle otto abilità nelle nuove gare, cap16 pratica/gara e checkpoint precedenti preservati. Rapporto [B03_REPUTAZIONE_E_PRATICA.md](B03_REPUTAZIONE_E_PRATICA.md).
 
 - B03 completato e pubblicato: sorgenti f646263; 353 test gioco, 13 account, concorrenza PostgreSQL e browser 320/390/1280 superati anche sul frontend distribuito con sole API di collaudo. Confronto delle 32 tabelle: righe esistenti identiche. Nuova pratica a otto abilità pubblicata nella stessa versione. B04 resta da iniziare; nuova richiesta successiva: trenta ritratti per i rivali clandestini.
+
+- Avvio B04: su richiesta dell’utente, nuova voce autonoma Eventi del club in Autodromo e selezione con schede come i campionati, cinque copertine e banner pixel art. Cinque eventi riusano il cruscotto con regolamenti server e premi limitati; regolarità a controlli con tempi imposti. Decisioni e verifiche in [B04_EVENTI_DEL_CLUB.md](B04_EVENTI_DEL_CLUB.md).
+
+- B04 in prova: cinque eventi giocabili,362 test gioco e13 accessi superati, collaudo PostgreSQL con richieste simultanee e browser320/390/1280. Sei nuove illustrazioni verificate, ripresa gara/regolarità e separazione record confermate. Pubblicazione da concludere.

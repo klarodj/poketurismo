@@ -1,5 +1,5 @@
 import {periodCupName} from './periodWorld.mjs';
-export const AUTODROME_IMAGES={northern:'/images/world/sections/autodrome-cups-v2.png','aci-csai':'/images/world/sections/autodrome-aci-v2.png',single:'/images/world/sections/autodrome-race-v2.png',times:'/images/world/places/cronometraggio.png'};
+export const AUTODROME_IMAGES={events:'/images/world/events/club-events.png',northern:'/images/world/sections/autodrome-cups-v2.png','aci-csai':'/images/world/sections/autodrome-aci-v2.png',single:'/images/world/sections/autodrome-race-v2.png',times:'/images/world/places/cronometraggio.png'};
 const covers={
  'Coppa Primi Giri':'primi-giri',
  'Trofeo Aspirato · Club':'aspirato',

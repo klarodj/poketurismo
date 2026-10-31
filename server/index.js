@@ -254,6 +254,7 @@ app.get('/api/races/:raceId', endpoint(async req => {
   return snapshot(prisma, userId, race);
 }));
 mutate('/api/races', 'start-race', startRace);
+app.get('/api/club-events/:userId', endpoint(req => transaction(prisma, tx => require('./clubEvents').hub(tx, accounts.playerId(req, req.params.userId)))));
 app.get('/api/street/:userId', endpoint(req => transaction(prisma, tx => streetHub(tx, accounts.playerId(req, req.params.userId)))));
 mutate('/api/street/encounter', 'street-encounter', encounter);
 mutate('/api/races/:raceId/turns', 'race-turn', (tx, userId, body, params) => turnRace(tx, userId, body, params.raceId), 'post', false);

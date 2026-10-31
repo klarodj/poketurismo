@@ -9,6 +9,7 @@ import Workshop from './pages/Workshop';
 import PartsShop from './pages/PartsShop';
 import GasStation from './pages/GasStation';
 import Racing from './pages/Racing';
+import ClubEvents from './pages/ClubEvents';
 import Autodrome from './pages/Autodrome';
 import TimeTrials from './pages/TimeTrials';
 import TrackAtlas from './pages/TrackAtlas';
@@ -57,6 +58,7 @@ function App() {
           <Route path="parts-shop" element={<PartsShop />} />
           <Route path="gas-station" element={<GasStation />} />
           <Route path="autodrome" element={<Autodrome />} />
+          <Route path="club-events" element={<ClubEvents />} />
           <Route path="tracks" element={<TrackAtlas />} />
           <Route path="time-trials" element={<TimeTrials />} />
           <Route path="racing" element={<Racing />} />

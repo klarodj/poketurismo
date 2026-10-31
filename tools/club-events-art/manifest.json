@@ -1,0 +1,60 @@
+{
+  "tool": "image_gen (built-in)",
+  "preparation": "Nearest-neighbour 320x180 resize, no repainting or changes to existing assets",
+  "assets": [
+    {
+      "id": "club-events",
+      "input": "tools/club-events-art/inputs/club-events.png",
+      "sourceSha256": "34b39791b9fa427cc91f1b0a73984c39b79a5175091dad64ef8bfd3dd3bb2bc9",
+      "output": "public/images/world/events/club-events.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "0a31301061b12134c9e402fdc70316c1aebd7d4b22e45fbe99f2c6ef2c215d72"
+    },
+    {
+      "id": "piccole-pesti",
+      "input": "tools/club-events-art/inputs/piccole-pesti.png",
+      "sourceSha256": "26c6848db84b24eecab620e09317c2210d6d6fb72f7baaecd85243f51a3eba87",
+      "output": "public/images/world/events/piccole-pesti.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "7c57aa8383d7e832899fa10e31e99a5125465c62f8bc525f7a16964212ad2b77"
+    },
+    {
+      "id": "originali",
+      "input": "tools/club-events-art/inputs/originali.png",
+      "sourceSha256": "13f0985f21186e9aa42a0cbd6f1977ef97c9f5fccfd26bb88b6f7374003752b5",
+      "output": "public/images/world/events/originali.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "0927a201eec78f03842010d76e283ba4c86eb169c4cefb3912dc5657cff4ff4d"
+    },
+    {
+      "id": "budget",
+      "input": "tools/club-events-art/inputs/budget.png",
+      "sourceSha256": "dc9553f161fac3ddf3abc540857476a5260b67398645c2cf1e336452e67ad35e",
+      "output": "public/images/world/events/budget.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "7e2e188cf4ccb10cc6288598fcd394adddcdd65fadf7c8cbe1f51f43d915f0fb"
+    },
+    {
+      "id": "italiane",
+      "input": "tools/club-events-art/inputs/italiane.png",
+      "sourceSha256": "4f3f43a301242e1496bcdd879e16f980d141200ec668e4d856dec71414666659",
+      "output": "public/images/world/events/italiane.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "3baf55c2c0233f7073c90c2a24c188dc307e9a8d03da90382fc539af3ae24e91"
+    },
+    {
+      "id": "regolarita",
+      "input": "tools/club-events-art/inputs/regolarita.png",
+      "sourceSha256": "689659e8a7911a28019bd5830d805cb1ffe2d8a780398cf0eeaf3fc66940fff4",
+      "output": "public/images/world/events/regolarita.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "8012b367c54029173effcfcc3d63483feae2f8b8ecdbe3026d13717434269294"
+    }
+  ]
+}

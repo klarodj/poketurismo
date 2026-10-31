@@ -1530,3 +1530,34 @@ test('B03 invitation requirements are enforced, optional rematches are bounded a
 test('practice version2 trains additional stats while legacy version1 stays frozen',async()=>{
  const initial=await begin('track');let saved=await prisma.raceSession.findUnique({where:{id:initial.id}}),s=JSON.parse(saved.state);assert.equal(s.statTrainingVersion,2);s.statTrainingVersion=1;await prisma.raceSession.update({where:{id:initial.id},data:{state:JSON.stringify(s)}});const old=await finishStoryRace(initial);assert.equal(old.data.race.developmentSummary.statPractice.clean,undefined);const modernStart=await begin('track');const modernRow=await prisma.raceSession.findUnique({where:{id:modernStart.id}}),modernState=JSON.parse(modernRow.state);for(let seed=1;seed<100;seed++){modernState.rng=seed;const preview=advanceRace(modernState,null);if(preview.logs.every(l=>!l.mistakeSeconds))break;}await prisma.raceSession.update({where:{id:modernStart.id},data:{state:JSON.stringify(modernState)}});const modern=await finishStoryRace(modernStart);assert(modern.data.race.developmentSummary.statPractice.clean>0,JSON.stringify({logs:modern.data.race.logs,version:modern.data.race.statTrainingVersion,summary:modern.data.race.developmentSummary}));assert(modern.data.race.developmentSummary.statPractice.shift>0);
 });
+
+async function eventSetup(id='piccole-pesti'){
+ const {clubEvent}=await import('../shared/clubEvents.mjs');const e=clubEvent(id);
+ await prisma.brand.update({where:{id:car.brandId},data:{name:'Fiat'}});
+ await prisma.car.update({where:{id:car.id},data:{name:e.rivalCar,cv:54,cc:1108,kg:735,price:8000,zeroToHundred:13.8,velMax:150}});
+ await prisma.garage.update({where:{id:garage.id},data:{cv:54,kg:735,currentFuel:45,engineHealth:100,tireGrip:100}});
+ await prisma.user.update({where:{id:1},data:{level:2}});
+ await prisma.track.update({where:{id:track.id},data:{name:e.trackName,lenght:2045}});
+ return {mode:'track',eventId:id,garageId:garage.id};
+}
+test('club event preview is read only, admission and race use the same chosen owned car and fixed rival',async()=>{
+ const setup=await eventSetup(),before=await wallet();const preview=await get('/club-events/1');assert.equal(preview.status,200);assert.equal(preview.data.events.length,5);assert.equal(await wallet(),before);assert.equal(await prisma.playerProgress.count(),0);
+ const e=preview.data.events.find(e=>e.id===setup.eventId);assert.deepEqual(e.cars.find(c=>c.id===garage.id).errors,[]);const key=randomUUID(),a=await post('/races',setup,key),b=await post('/races',setup,key);assert.equal(a.status,200);assert.equal(a.data.race.id,b.data.race.id);assert.equal(await prisma.raceSession.count(),1);assert.equal(a.data.race.car.id,garage.id);assert.equal(a.data.race.opponent.pilot.turn,8);assert.equal(a.data.race.clubEvent.factor,1);assert.equal(a.data.race.clubRewardVersion,undefined);
+ assert.equal((await post(`/races/${a.data.race.id}/turns`,{version:0,moveId:null,eventDelaySeconds:3})).status,400);
+});
+test('club events reject other players cars, forged settings and last moment noncompliant tuning',async()=>{
+ const setup=await eventSetup();assert.equal((await post('/races',{...setup,garageId:otherGarage.id})).status,404);assert.equal((await post('/races',{...setup,trackId:track.id})).status,400);await prisma.garage.update({where:{id:garage.id},data:{cv:101}});assert.equal((await post('/races',setup)).status,400);assert.equal(await prisma.raceSession.count(),0);await prisma.garage.update({where:{id:garage.id},data:{cv:54,racePrepared:true}});assert.equal((await post('/races',setup)).status,400);
+});
+test('regularity saves delay once, freezes target and settles independent of rival without speed records',async()=>{
+ const setup=await eventSetup('regolarita'),start=await post('/races',setup);assert.equal(start.status,200);let race=start.data.race;const initialFuel=race.car.currentFuel,key=randomUUID(),body={version:race.version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'},eventDelaySeconds:4.1};
+ const a=await post(`/races/${race.id}/turns`,body,key),b=await post(`/races/${race.id}/turns`,body,key);assert.equal(a.status,200);assert.equal(b.data.race.version,a.data.race.version);assert.equal(a.data.race.logs[0].eventDelaySeconds,4.1);assert(a.data.race.car.currentFuel<initialFuel);race=a.data.race;
+ for(let i=0;i<40&&race.status==='active';i++){const r=await post(`/races/${race.id}/turns`,{version:race.version,moveId:null,decision:{pace:'balanced',braking:'optimal',line:'exit',manoeuvre:'hold'},eventDelaySeconds:0});assert.equal(r.status,200);race=r.data.race;}
+ assert.notEqual(race.status,'active');assert(race.eventResult);assert.equal(race.reward.xp,race.failure?0:race.eventResult.passed?60:20);assert.equal(race.developmentSummary,undefined);const rows=(await get('/time-trials/1')).data;assert(!rows.some(r=>r.raceId===race.id));assert.equal((await get('/club-events/2')).data.history.length,0);
+});
+test('event completion prizes are bounded and retry never repeats a payment',async()=>{
+ const setup=await eventSetup();let total=0;
+ for(let n=0;n<4;n++){
+ await prisma.garage.update({where:{id:garage.id},data:{currentFuel:45,engineHealth:100,tireGrip:100}});const start=await post('/races',setup);assert.equal(start.status,200);let row=await prisma.raceSession.findUnique({where:{id:start.data.race.id}}),s=JSON.parse(row.state);s.sections=s.sections.slice(0,1);s.opponent.car.engineHealth=0;await prisma.raceSession.update({where:{id:row.id},data:{state:JSON.stringify(s)}});
+ const key=randomUUID(),body={version:0,moveId:null},before=await wallet(),a=await post(`/races/${row.id}/turns`,body,key);assert.equal(a.status,200);assert.equal(a.data.race.status,'completed');assert.equal(a.data.race.reward.money,Math.floor(300*([1,.5,.25,0][n])));const after=await wallet();await post(`/races/${row.id}/turns`,body,key);assert.equal(await wallet(),after);total+=after-before;
+ }assert.equal(total,52500);assert.equal((await get('/club-events/1')).data.events[0].rewardFactor,0);
+});

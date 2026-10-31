@@ -1,3 +1,4 @@
+import './club-events.css';
 import ClubStoryActivity from './ClubStoryActivity';
 import {AUTODROME_IMAGES} from '../../shared/championshipVisuals.mjs';
 import {streetZoneImage} from '../../shared/streetVisuals.mjs';
@@ -37,6 +38,7 @@ export default function RacePage({ mode }) {
   const { equippedCarId } = useGameStore();
   const { race } = useRaceStore();
   const pending = useRequestStore(state => state.pending);
+  const [eventDelay,setEventDelay]=useState(0);
   const [streetLocation,setStreetLocation]=useState(null);
   const [tracks, setTracks] = useState([]);
   const [customTracks, setCustomTracks] = useState([]);
@@ -75,7 +77,7 @@ export default function RacePage({ mode }) {
     } catch (error) { setError(error.message); }
   };
   const turn = async (moveId, decision, trainingAnswer) => {
-    try { await playRaceTurn(race.id, userId, race.version, moveId, decision, trainingAnswer); setError(''); }
+    try { await playRaceTurn(race.id, userId, race.version, moveId, decision, trainingAnswer,race.clubEvent?.regularity?Number(eventDelay):undefined);setEventDelay(0); setError(''); }
     catch (error) {
       setError(error.message);
       // Refresh checkpoints even when a response was lost after a successful save.
@@ -133,6 +135,7 @@ export default function RacePage({ mode }) {
         <button className={button} disabled={!car || pending > 0} onClick={begin}>Inizia gara</button>
       </> : <RaceDashboard race={race} pending={pending} onAbandon={abandon}>
         {race.status === 'active' && section ? <>
+          {race.clubEvent?.regularity&&<div className="event-regularity-control"><strong>Controllo {race.index+1} · tempo imposto {race.clubEvent.targets[race.index].toFixed(1)} s</strong>{race.logs.length>0&&<p>Ultimo controllo: scarto {(race.logs.at(-1).playerSeconds-race.clubEvent.targets[race.index-1]).toFixed(1)} s ({race.logs.at(-1).playerSeconds<race.clubEvent.targets[race.index-1]?'anticipo':'ritardo'}).</p>}<p>Conta lo scarto dal tempo imposto, anticipo o ritardo. L’attesa si somma alla guida del settore.</p><label>Attesa al controllo (secondi)<input aria-label="Attesa al controllo (secondi)" type="number" min="0" max="60" step="0.1" value={eventDelay} onChange={e=>setEventDelay(e.target.value)} disabled={pending>0}/></label></div>}
           {race.rulesVersion === 3 ? <TacticalControls key={`${race.id}:${race.index}`} race={race} pending={pending} onTurn={turn} showAlerts={false} /> : <section className="race-controls">
           <h2 className="font-bold text-xl">Guida il settore</h2>
           <div className="flex flex-wrap gap-2"><button disabled={pending > 0} className={button} onClick={() => turn(null)}>Guida normale</button>
@@ -144,9 +147,10 @@ export default function RacePage({ mode }) {
           <p className="text-sm">Le mosse migliorano soltanto le statistiche richieste dal settore. Peso e carburante influenzano le prestazioni; pioggia, neve e sterrato riducono l’aderenza. Le mosse aggressive aumentano consumo e rischio motore.</p>
           </section>}
         </> : <div className="bg-yellow-100 border border-yellow-600 p-4 space-y-3">
-          <h2 className="text-2xl font-bold">{race.campaignResult?race.campaignResult.passed?'Episodio concluso':'Prova da ripetere':race.meetTrial ? 'Tentativo del Meet concluso' : race.lesson ? race.developmentSummary?.lesson?.passed ? 'Prova superata!' : 'Prova da ripetere' : race.timeTrial && !race.failure ? 'Prova a tempo completata' : race.championship?.format === 'grid' ? `Round concluso · posizione ${race.championship.position}` : race.outcome === 'win' ? 'Vittoria!' : race.outcome === 'draw' ? 'Pareggio' : 'Sconfitta'}</h2>
+          <h2 className="text-2xl font-bold">{race.eventResult?race.eventResult.passed?'Obiettivo raggiunto!':'Prova del club conclusa':race.campaignResult?race.campaignResult.passed?'Episodio concluso':'Prova da ripetere':race.meetTrial ? 'Tentativo del Meet concluso' : race.lesson ? race.developmentSummary?.lesson?.passed ? 'Prova superata!' : 'Prova da ripetere' : race.timeTrial && !race.failure ? 'Prova a tempo completata' : race.championship?.format === 'grid' ? `Round concluso · posizione ${race.championship.position}` : race.outcome === 'win' ? 'Vittoria!' : race.outcome === 'draw' ? 'Pareggio' : 'Sconfitta'}</h2>
           {race.failure && <p>{race.failure==='expired'?'Tempo scaduto: tentativo ritirato.':race.failure==='cancelled'?'Sfida annullata.':race.failure === 'engine' ? 'Motore fuori uso.' : race.failure === 'fuel' ? 'Carburante insufficiente.' : 'Gara abbandonata.'}</p>}
           {race.campaignResult&&<p>{race.campaignResult.title}: {race.campaignResult.message}</p>}
+          {race.eventResult&&<div><p>{race.eventResult.title} · premi di questa partecipazione: {Math.round(race.eventResult.factor*100)}%.</p>{race.eventResult.regularity&&<><p>Scarto medio assoluto: {race.eventResult.regularity.meanDeviation??'—'} s · obiettivo entro 3 s.</p><details><summary>Tempi ai controlli</summary><table className="event-result-splits"><thead><tr><th>Settore</th><th>Imposto</th><th>Effettivo</th><th>Scarto</th></tr></thead><tbody>{race.eventResult.regularity.splits.map(s=><tr key={s.sector}><td>{s.sector}</td><td>{s.target.toFixed(1)} s</td><td>{s.actual.toFixed(1)} s</td><td>{s.delta>0?'+':''}{s.delta.toFixed(1)} s</td></tr>)}</tbody></table></details></>}</div>}
           {race.storyResult&&<p>Incarico concluso: {race.storyResult.title}. Bonus unico di €{race.storyResult.money} incluso nel premio complessivo.</p>}
           {race.meetTrial?<p>Tentativo salvato nel Meet. Nessun denaro, XP o usura della vettura di carriera. Torna alle sfide per il confronto con l’altro pilota.</p>:<p>Accreditati €{(race.reward?.money || 0).toFixed(2)} · +{race.reward?.xp || 0} XP. Risultato e condizioni della vettura salvati.</p>}
           {race.recoveryRepayment && <p className="bg-blue-50 border border-blue-500 p-3">Rimborsati €{(race.recoveryRepayment.paidCents/100).toLocaleString('it-IT')} dell’anticipo del meccanico. Residuo: €{(race.recoveryRepayment.debtCents/100).toLocaleString('it-IT')}. L’accredito indicato è già al netto del rimborso.</p>}
@@ -154,7 +158,7 @@ export default function RacePage({ mode }) {
           <DevelopmentSummary summary={race.developmentSummary} />
           {race.championship?.format === 'grid' && <><details className="championship-result-ledger"><summary>Ordine d’arrivo del round</summary><ChampionshipTable rows={race.championship.classification} round/></details><details className="championship-result-ledger"><summary>Classifica generale</summary><ChampionshipTable rows={race.championship.standings}/></details><p>{race.championship.completed ? `Campionato concluso: ${race.championship.championshipPosition}° posto.` : `Prossimo round: ${race.championship.nextRound}.`}</p></>}
           {race.championship && race.championship.format !== 'grid' && <p>Campionato: {race.championship.playerPoints}–{race.championship.opponentPoints}. {race.championship.completed ? race.championship.champion ? 'Sei il campione!' : 'Campionato concluso.' : `Prossimo round: ${race.championship.nextRound}.`}</p>}
-          <div className="flex flex-wrap gap-2">{race.championship&&!race.championship.completed&&race.entryId&&<button className={button} disabled={pending>0} onClick={nextChampionshipRace}>Prossima gara del campionato →</button>}<button className={button} onClick={() => navigate(race.storyCampaign?race.storyCampaign.destination:race.meetTrial ? '/meet?social=challenges' : race.lesson ? '/driving-school' : race.timeTrial ? '/time-trials' : race.mode === 'street' ? '/street-racing' : race.championship?'/racing':'/autodrome')}>{race.storyCampaign?'Torna alla storia del club':race.meetTrial ? 'Torna alle sfide del Meet' : race.lesson ? 'Torna alla scuola guida' : race.timeTrial ? 'I tuoi tempi' : race.mode === 'street' ? 'Torna al ritrovo' : race.championship?'Campionati e classifica':'Centro Corse'}</button>{!race.storyCampaign&&!race.meetTrial&&!race.championship&&<button className={button} onClick={newRace}>Nuova gara</button>}<button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
+          <div className="flex flex-wrap gap-2">{race.championship&&!race.championship.completed&&race.entryId&&<button className={button} disabled={pending>0} onClick={nextChampionshipRace}>Prossima gara del campionato →</button>}<button className={button} onClick={() => navigate(race.clubEvent?'/club-events':race.storyCampaign?race.storyCampaign.destination:race.meetTrial ? '/meet?social=challenges' : race.lesson ? '/driving-school' : race.timeTrial ? '/time-trials' : race.mode === 'street' ? '/street-racing' : race.championship?'/racing':'/autodrome')}>{race.clubEvent?'Torna agli eventi del club':race.storyCampaign?'Torna alla storia del club':race.meetTrial ? 'Torna alle sfide del Meet' : race.lesson ? 'Torna alla scuola guida' : race.timeTrial ? 'I tuoi tempi' : race.mode === 'street' ? 'Torna al ritrovo' : race.championship?'Campionati e classifica':'Centro Corse'}</button>{!race.clubEvent&&!race.storyCampaign&&!race.meetTrial&&!race.championship&&<button className={button} onClick={newRace}>Nuova gara</button>}<button className={button} onClick={() => navigate('/workshop')}>Officina</button></div>
         </div>}
       </RaceDashboard>}
 

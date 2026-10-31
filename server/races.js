@@ -49,7 +49,8 @@ function carSnapshot(garage) {
     ...(garage.racePrepared?{racePrepared:true}:{}),cc:garage.car.cc,engineType:garage.car.engineType,baseCv: garage.car.cv, baseKg: garage.car.kg, velMax: garage.car.velMax, zeroToHundred: garage.car.zeroToHundred, driveType: garage.car.driveType,
     id: garage.id, name: garage.car.name, brand: garage.car.brand?.name || '', image: garage.car.image,paintColour:paintFor(garage) };
 }
-async function startRace(tx, userId, body) {
+async function startRace(tx,userId,body){const match=body.eventId!==undefined?await require('./clubEvents').prepare(tx,userId,body):null;return createRace(tx,userId,match?{mode:'track'}:body,match);}
+async function createRace(tx, userId, body, eventMatch = null) {
   const mode = body.mode;
   if (!['street', 'track', 'championship'].includes(mode)) fail(400, 'Modalità gara non valida');
   if(body.timeTrial!==undefined&&(body.timeTrial!==true||mode!=='track'||body.demo||body.lesson||body.entryId))fail(400,'Prova a tempo non valida');
@@ -65,7 +66,7 @@ async function startRace(tx, userId, body) {
     const race = await tx.raceSession.create({ data: { userId, garageId: 0, mode: 'track', seed, state: JSON.stringify(state) } });
     return snapshot(tx, userId, race);
   }
-  let garage = await tx.garage.findFirst({ where: { id: user.carDrive, userId }, include: garageInclude });
+  let garage = await tx.garage.findFirst({ where: { id: eventMatch?.garage.id || user.carDrive, userId }, include: garageInclude });
   if (!garage) fail(400, 'Equipaggia prima una tua auto');
   garage = { ...garage, ...restoredHandlingStats(garage) };
   if(mode==='street'&&garage.racePrepared)fail(400,'Auto da gara: solo pista, non puoi partecipare alle clandestine');
@@ -90,7 +91,7 @@ async function startRace(tx, userId, body) {
   const rulesVersion = entry && JSON.parse(entry.results).some(result => result.gapMs === undefined) ? 2 : 3;
   const demo = body.demo === true && mode === 'track';
   let track;
-  if (gridMatch) {
+  if(eventMatch){track=eventMatch.track;trackId=track.id;} else if (gridMatch) {
     track=gridMatch.track;
   } else if (streetMatch) {
     track = streetMatch.track;
@@ -124,7 +125,7 @@ async function startRace(tx, userId, body) {
     if (!carKeys.every(key => CAR_STATS.includes(key)) || ![section.driverStat, section.driverTech].every(key => PILOT_STATS.includes(key))) fail(400, 'Il tracciato contiene statistiche non riconosciute');
   }
   let opponentCar, opponentPilot, opponentName, sandbox = demo || body.timeTrial===true;
-  if (gridMatch) {
+  if(eventMatch){opponentCar=eventMatch.rival;opponentPilot=eventMatch.pilot;opponentName='Pilota del club';} else if (gridMatch) {
     opponentCar=gridMatch.driver.car;
     opponentPilot=gridMatch.driver.pilot;
     opponentName=gridMatch.driver.name;
@@ -158,7 +159,7 @@ async function startRace(tx, userId, body) {
   const inv = await inventory(tx, userId);
   const seed = randomInt(1, 2147483647);
   const distanceKm = demo ? DEMO_TRACK.distanceKm : Math.max(1, Number(track.lenght || sections.length) / (Number(track.lenght) >= 100 ? 1000 : 1));
-  const routeProfile = routeProfileFor(mode, track.name);
+  const routeProfile = routeProfileFor(eventMatch?.event.road?'street':mode, track.name);
   const raceSections = rulesVersion === 3 ? demo ? structuredClone(DEMO_TRACK.sections) : buildTacticalTrack(sections, distanceKm, routeProfile) : sections;
   const plan = incidentPlan(seed, rulesVersion === 3 ? raceSections.length : 0, routeProfile);
   const state = {
@@ -174,6 +175,7 @@ async function startRace(tx, userId, body) {
     ...(gridMatch ? {gridOpponentId:gridMatch.driver.id,gridSeed:seed} : {}),
     ...(streetMatch ? { street: streetMatch.street } : {})
   };
+  if(eventMatch)require('./clubEvents').freeze(state,eventMatch);
   if(gridMatch&&rulesVersion===3)require('../shared/gridRace.mjs').initializeGrid(state,gridMatch.contract);
   const race = await tx.raceSession.create({ data: { userId, garageId: garage.id, mode, seed, state: JSON.stringify(state) } });
   await require('./story').bindRace(tx,userId,mode,state,race.id);
@@ -208,6 +210,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
   if (!Number.isSafeInteger(body.version) || race.version !== body.version) fail(409, 'Il settore è già stato giocato. Ricarica la gara.');
   let state = JSON.parse(race.state);
   const previousLogCount=state.logs.length;
+  const eventDelay=require('./clubEvents').delay(state,body);
   if(state.meetTrial&&+new Date(state.meetChallenge.expiresAt)<=Date.now()){state.finished=true;state.outcome='loss';state.failure='expired';}
   else if (abandon) { state.finished = true; state.outcome = 'loss'; state.failure = 'abandoned'; }
   else {
@@ -217,6 +220,7 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
     try { state = state.gridTacticsVersion===1?require('../shared/gridRace.mjs').advanceGridRace(state,body.moveId,body.decision):advanceRace(state, body.moveId, body.decision); } catch (error) { fail(400, error.message); }
   }
   if(state.targetedTrainingVersion===2&&!abandon&&state.logs.length>previousLogCount&&body.trainingAnswer!==undefined)state.logs.at(-1).trainingAnswer=body.trainingAnswer;
+  if(state.logs.length>previousLogCount)require('./clubEvents').applyDelay(state,eventDelay);
   if (state.lesson && !state.storyCampaign) {
     if (!abandon) state.logs.at(-1).instructor = state.targetedCourseId ? require('../shared/targetedTraining.mjs').trainingFeedback(state) : state.courseTechniqueId ? techniqueLessonFeedback(state) : lessonFeedback(state);
     if (state.courseTechniqueId && !state.finished) state.gapSeconds = state.sections[state.index].scenarioGap;
@@ -229,12 +233,13 @@ async function turnRace(tx, userId, body, raceId, abandon = false) {
   else if(state.finished&&state.storyCampaign){const narrative=require('./story'),value=await narrative.load(tx,userId),reward=await require('./clubStory').settle(tx,userId,race,state,value,narrative.save);await withholdReward(tx,userId,state,reward);await tx.user.update({where:{id:userId},data:{moneyCents:{increment:cents(reward.money)}}});state.reward=reward;}
   else if (state.finished) {
     let reward = { money: 0, xp: 0 };
-    if (state.street) reward = await settleStreet(tx, userId, state);
+    if(state.clubEvent)reward=require('./clubEvents').settle(state);
+    else if (state.street) reward = await settleStreet(tx, userId, state);
     else if (race.mode === 'championship') reward = await settleChampionship(tx, userId, state);
     else if (race.mode === 'track' && state.clubRewardVersion === 1) reward = clubReward(state);
     else if (!state.sandbox && state.outcome === 'win') reward = race.mode === 'street' ? { money: 1500, xp: 150 } : { money: 500, xp: 100 };
     else if (!state.sandbox && race.mode === 'street' && state.outcome === 'draw') reward = { money: 500, xp: 50 };
-    const growth = await settleDevelopment(tx, userId, state);
+    const growth = state.clubEvent?{xp:0}:await settleDevelopment(tx, userId, state);
     // Participation XP is smaller than a win and excludes sandboxes, failures and incomplete races.
     if (!state.street && state.developmentVersion === 1 && !state.sandbox && !state.failure && state.index === state.sections.length && reward.xp === 0) reward.xp = 20;
     reward.xp += growth.xp;
