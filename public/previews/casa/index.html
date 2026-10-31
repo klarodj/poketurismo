@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Poketurismo · Anteprima della cameretta</title><link rel="stylesheet" href="./room.css"></head><body>
+<main class="window" aria-labelledby="title"><header class="titlebar"><h1 id="title">▣ Poketurismo · La cameretta</h1><span aria-hidden="true" class="window-decoration">_ ▣ ×</span></header>
+<div class="menubar"><span>Casa · Provincia del Nord, 2002</span><a href="/map">Torna al gioco ↗</a></div>
+<div class="toolbar"><label><input type="checkbox" id="show-labels"> Mostra oggetti</label><button id="list-toggle" aria-expanded="false" aria-controls="room-list">Elenco delle sezioni</button><span class="preview-stamp">Anteprima · prima versione</span></div>
+<p class="instructions" id="instructions">Clicca gli oggetti per esplorare la stanza. <span class="pan-hint">Scorri lateralmente per guardarti intorno.</span></p>
+<div class="room-frame"><div class="room-scroll" id="room-scroll" role="region" aria-label="La cameretta, scena scorrevole" tabindex="0" aria-describedby="instructions"><div class="room-world" id="room-world"><img id="room-image" src="./cameretta-v1.png" alt="Cameretta di un appassionato di motori nel 2002: specchio, computer CRT, album, calendario, rivista e chiavi delle auto." width="1536" height="768" draggable="false"><nav class="hotspots" id="hotspots" aria-label="Oggetti nella cameretta"></nav></div></div><div class="pan-controls" aria-label="Spostati nella stanza"><button id="pan-left" aria-label="Guarda a sinistra">◀ Sinistra</button><span id="room-position" aria-live="polite">La cameretta</span><button id="pan-right" aria-label="Guarda a destra">Destra ▶</button></div></div>
+<nav id="room-list" class="room-list" aria-label="Elenco delle sezioni di casa" hidden></nav>
+<footer class="statusbar"><span id="status" role="status">Una stanza, le tue passioni.</span><span>Profilo e garage collegati al gioco · altri oggetti in anteprima</span></footer>
+</main>
+<dialog id="object-dialog" aria-labelledby="dialog-title"><div class="titlebar"><h2 id="dialog-title"></h2><button class="dialog-close" aria-label="Chiudi anteprima">×</button></div><div class="dialog-body"><p class="dialog-stamp">Oggetto in anteprima</p><h3 id="dialog-heading"></h3><p id="dialog-description"></p><p id="dialog-roadmap"></p><button class="dialog-close win-button">Torna alla cameretta</button></div></dialog>
+<script type="module" src="./room.js"></script></body></html>

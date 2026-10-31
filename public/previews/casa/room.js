@@ -1,0 +1,24 @@
+import {objects} from './objects.js';
+const $=id=>document.getElementById(id),viewport=$('room-scroll'),world=$('room-world'),dialog=$('object-dialog'),status=$('status');
+function openObject(object){$('dialog-title').textContent=object.name;$('dialog-heading').textContent=object.heading;$('dialog-description').textContent=object.description;$('dialog-roadmap').textContent='Questa è una prova dell’ambiente e della navigazione. Il contenuto di questa sezione arriverà con i prossimi aggiornamenti; qui non vengono creati progressi o ricordi di gioco.';dialog.showModal();}
+for(const object of objects){
+ const node=document.createElement(object.path?'a':'button');if(object.path)node.href=object.path;else{node.type='button';node.addEventListener('click',()=>openObject(object));node.setAttribute('aria-haspopup','dialog');}node.className='hotspot';node.dataset.object=object.id;node.setAttribute('aria-label',`${object.object} · ${object.name}${object.path?'':' · anteprima'}`);node.title=object.name;const[x,y,w,h]=object.bounds;Object.assign(node.style,{left:x+'%',top:y+'%',width:w+'%',height:h+'%'});const label=document.createElement('span');label.className='object-label';label.textContent=object.name;node.append(label);$('hotspots').append(node);
+ const listNode=document.createElement(object.path?'a':'button');if(object.path)listNode.href=object.path;else{listNode.type='button';listNode.addEventListener('click',()=>openObject(object));listNode.setAttribute('aria-haspopup','dialog');}listNode.append(document.createTextNode(object.name));const small=document.createElement('small');small.textContent=object.status;listNode.append(small);$('room-list').append(listNode);
+ node.addEventListener('pointerenter',()=>{status.textContent=`${object.object} · ${object.status}`;});node.addEventListener('pointerleave',()=>{status.textContent='Una stanza, le tue passioni.';});node.addEventListener('focus',()=>{status.textContent=`${object.object} · ${object.status}`;if(!node.matches(':focus-visible'))return;const left=node.offsetLeft,right=left+node.offsetWidth;if(left<viewport.scrollLeft+10||right>viewport.scrollLeft+viewport.clientWidth-10)viewport.scrollLeft=left+node.offsetWidth/2-viewport.clientWidth/2;});
+}
+$('show-labels').addEventListener('change',event=>world.classList.toggle('show-labels',event.target.checked));
+$('list-toggle').addEventListener('click',()=>{const open=$('room-list').hidden;$('room-list').hidden=!open;$('list-toggle').setAttribute('aria-expanded',String(open));});
+for(const button of document.querySelectorAll('.dialog-close'))button.addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();});
+const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
+function pan(direction){viewport.scrollBy({left:direction*Math.max(200,viewport.clientWidth*.7),behavior:reduced()?'instant':'smooth'});}
+$('pan-left').addEventListener('click',()=>pan(-1));$('pan-right').addEventListener('click',()=>pan(1));
+viewport.addEventListener('keydown',event=>{if(event.target!==viewport)return;if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();pan(event.key==='ArrowLeft'?-1:1);}});
+function measure(){const max=viewport.scrollWidth-viewport.clientWidth,hasPan=max>2;document.querySelector('.window').classList.toggle('can-pan',hasPan);$('pan-left').disabled=viewport.scrollLeft<=2;$('pan-right').disabled=viewport.scrollLeft>=max-2;$('room-position').textContent=!hasPan?'La cameretta':viewport.scrollLeft<max*.25?'Lato dello specchio':viewport.scrollLeft>max*.75?'Lato del letto e delle chiavi':'La scrivania';}
+viewport.addEventListener('scroll',measure,{passive:true});new ResizeObserver(measure).observe(viewport);
+let drag=null;
+viewport.addEventListener('pointerdown',event=>{if(event.pointerType!=='mouse'||event.button!==0||event.target.closest('a,button'))return;drag={x:event.clientX,left:viewport.scrollLeft,id:event.pointerId};viewport.setPointerCapture(event.pointerId);});
+viewport.addEventListener('pointermove',event=>{if(!drag)return;if(Math.abs(event.clientX-drag.x)>5)viewport.classList.add('is-dragging');viewport.scrollLeft=drag.left-(event.clientX-drag.x);});
+function endDrag(){if(drag&&viewport.hasPointerCapture(drag.id))viewport.releasePointerCapture(drag.id);drag=null;viewport.classList.remove('is-dragging');}viewport.addEventListener('pointerup',endDrag);viewport.addEventListener('pointercancel',endDrag);
+$('room-image').addEventListener('error',()=>{status.textContent='Immagine non disponibile. Puoi usare l’elenco delle sezioni.';$('room-list').hidden=false;$('list-toggle').setAttribute('aria-expanded','true');});
+requestAnimationFrame(()=>{viewport.scrollLeft=Math.max(0,viewport.scrollWidth*.36-viewport.clientWidth/2);measure();});

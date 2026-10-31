@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen (built-in)",
+  "input": "tools/bedroom-art/input-v1.png",
+  "output": "public/previews/casa/cameretta-v1.png",
+  "width": 1536,
+  "height": 768,
+  "logicalWidth": 768,
+  "logicalHeight": 384,
+  "preparation": "Nearest-neighbour on 768x384 logical grid, doubled pixels. No repainting.",
+  "sourceSha256": "c9a97a7e5dfc4a4b5e531730ad716d1bd55827f0606089e66ef3634dee0af161",
+  "sha256": "4ba840b3d84e62804fdcc2d3f0d9edde2723ce1e99fa4afefb02018e31b21bbb"
+}
