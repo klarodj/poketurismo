@@ -41,4 +41,6 @@ Rimossi intestazione territoriale, Torna al gioco e indicazione Prima versione; 
 
 Implementazione React nativa, senza iframe o ricariche per navigare al garage. Stili confinati a home-room, listener e ResizeObserver rimossi allo smontaggio. Dialoghi con Escape e focus, swipe nativo e frecce da tastiera conservati. Nessuna nuova API, scrittura, migrazione o immagine. B05 non viene completato dall’attivazione del menu.
 
-Verifiche: lint e build; browser a320/390/768/1280px con API sintetiche, ingresso dalla mappa, sei oggetti, riga compatta, quattro dialoghi, profilo/garage e ritorno alla stanza, elenco alternativo, swipe touch e tastiera; nessun errore JavaScript e nessuna richiesta di scrittura. Pubblicazione da verificare.
+Verifiche: lint e build; browser a320/390/768/1280px con API sintetiche, ingresso dalla mappa, sei oggetti, riga compatta, quattro dialoghi, profilo/garage e ritorno alla stanza, elenco alternativo, swipe touch e tastiera; nessun errore JavaScript e nessuna richiesta di scrittura. Pubblicata e verificata anche sul frontend distribuito, con API di collaudo sintetiche.
+
+Attivazione pubblicata: sorgenti `ab66623`, backup `/home/klaro/.backups/poketurismo/casa-live-20261031T142237Z`. Confronto delle32tabelle: tutte le righe identiche. Servizi unici attivi e health positivo; verifiche UI ripetute sul gateway5184 a320/390/768/1280 con sole risposte sintetiche. Nessuna prova sui dati reali.
